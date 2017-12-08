@@ -1,0 +1,15 @@
+<nav>
+    <ul class="footer-menu row">
+      {{ $currentPage := . }}
+      {{ range .Site.Menus.footer }}
+
+        <li>
+        <a href="{{.URL}}">
+            {{ .Pre }}
+            <span>{{ .Name }}</span>
+        </a>
+
+      </li>
+      {{end}}
+    </ul>
+</nav>

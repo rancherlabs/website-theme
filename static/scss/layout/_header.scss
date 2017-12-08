@@ -1,0 +1,74 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the header of the site/application.
+// -----------------------------------------------------------------------------
+
+header {
+  background-color: $primary;
+  padding: 0 1rem;
+
+  nav {
+    > ul.main-menu {
+      list-style: none;
+      padding: 0;
+      font-size: .95em;
+      margin: 0;
+
+      > li {
+        display: inline-block;
+        vertical-align: middle;
+
+        a.btn {
+          border-bottom: 0;
+          transition: ease-in-out .15s all;
+          color: white;
+          padding: 1.25rem;
+
+          &:hover {
+            color: $info;
+          }
+        }
+
+        &.sub-menu {
+
+          ul.sub {
+            list-style: none;
+            padding: 0;
+            font-size: .95em;
+            background-color: white;
+
+            a {
+              color: $link-color;
+              padding: 1rem;
+
+              &:hover {
+                background: $light-grey;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .social {
+    img {
+      filter: grayscale(100%) brightness(1000%);
+    }
+
+    .btn {
+      border: solid 2px rgba(255,255,255,.25);
+      color: white;
+      border-radius: 90px;
+      margin: 0 1rem;
+
+      &:hover {
+        background: rgba(255,255,255,.1);
+      }
+    }
+  }
+
+  .sub-header {
+    background: $primary-dark;
+    padding: 0 3rem;
+  }
+}

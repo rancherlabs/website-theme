@@ -1,0 +1,126 @@
+.darken {
+  background: $darken-helper;
+}
+
+.lighten {
+  background: $lighten-helper;
+}
+
+.text-default {
+  color: $text-color;
+}
+
+.text-disabled, .text-muted, .text-muted A {
+  color: mix($mid-grey, $light-grey);
+}
+
+.text-primary {
+  color: $primary;
+}
+
+.text-secondary {
+  color: $secondary;
+}
+
+.text-success {
+  color: $success;
+}
+
+.text-info {
+  color: $info;
+}
+
+.text-warning {
+  color: $warning;
+}
+
+.text-error {
+  color: $error;
+}
+
+.text-white {
+  color: white;
+}
+
+.text-black {
+  color: $black;
+}
+.help-block {
+  @extend .text-muted;
+  @extend .text-small;
+  margin: 5px 0 0 0;
+
+  a {
+    color: $link-color;
+  }
+}
+
+.bg-body {
+  background: $body-bg;
+}
+
+.bg-default {
+  background-color: $bg-default;
+
+  a {
+    color: $primary;
+
+      &:before {
+        background: rgba($primary, .2);
+      }
+  }
+}
+
+.bg-accent {
+  background-color: $accent;
+  color: white;
+}
+
+.bg-disabled {
+  background-color: $bg-disabled;
+  color: darken($bg-disabled, 30);
+}
+
+.bg-primary {
+  background-color: $bg-primary;
+}
+.bg-secondary {
+  background-color: $bg-secondary;
+  color: white;
+
+  h1, h2, h3, h4, h5, h6 {
+    color: $info;
+  }
+}
+.bg-success {
+  background-color: $bg-success;
+}
+.bg-info {
+  background-color: $bg-info;
+}
+.bg-warning {
+  background-color: $bg-warning;
+}
+.bg-error {
+  background-color: $bg-error;
+}
+.bg-link {
+  background-color: $link-color;
+  color: white;
+}
+.bg-white {
+  background-color: white;
+}
+
+.bg-transparent {
+  background-color: transparent;
+
+  a {
+    &:before {
+      display: none;
+    }
+
+    border-bottom: none;
+    padding: 0;
+  }
+}

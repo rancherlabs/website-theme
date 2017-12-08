@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en-US" prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb#">
+
+  <head>
+    <meta charset="utf-8">
+    <base href="{{ .Site.BaseURL }}">
+    <title> {{ .Title }}</title>
+    <link rel="canonical" href="{{ .Permalink }}"> {{ if .RSSLink }}
+    <link href="{{ .RSSLink }}" rel="alternate" type="application/rss+xml" title="{{ .Title }}" />{{ end }}
+    <link rel="stylesheet" href="/css/styles.css" />
+    <link href="https://fonts.googleapis.com/css?family=Prompt:100,300,600|Roboto+Condensed:700" rel="stylesheet" />
+    <!--icons https://material.io/icons/-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+  </head>
+
+<body lang="en">
+<div> <!--container ends in footer html-->
+    <header>
+    <div class="row middle-md p-a-sm"><!--top row-->
+        <div class="col-md">
+            <img src="{{ .Site.BaseURL }}/img/rancher-logo-horiz-white.svg" width="150">
+        </div>
+
+        <div class="row end-sm middle-md social">
+          <a href="" class="btn btn-sm bg-transparent"><i class="material-icons text-info text-small">cloud_download</i> download</a>
+        </div>
+    </div>
+
+    <div class="row start-md sub-header p-h-sm"><!--bottom row-->
+      <div class="col-md row start-md middle-md">
+            <div class="row start-md middle-md">{{ partial "main-nav.html" . }}</div>
+        </div>
+        <div class="col-md row end-md middle-md">
+            <a class="btn bg-transparent"><i class="material-icons">search</i></a>
+        </div>
+    </div>
+  </header>
+
+

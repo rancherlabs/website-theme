@@ -1,0 +1,113 @@
+/**
+ * Basic typography style for copy text
+ */
+
+html,
+body {
+    font-size: 10px;
+}
+
+body {
+    color: $text-color;
+    font: normal 150% / 1.4 $text-font-stack;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: $text-font-stack;
+    font-weight: 600;
+    font-style: normal;
+    letter-spacing: 0em;
+    margin: 0 0 1.3rem 0;
+}
+
+h1, h2, h3 {
+  font-family: 'Roboto Condensed', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+h1 {
+    font-size: 6em;
+    line-height: 7rem;
+}
+
+h2 {
+    font-size: 4em;
+    line-height: 5rem;
+    font-weight: 300;
+    color: $mid-grey;
+}
+
+h3 {
+    font-size: 3em;
+    line-height: 4rem;
+    color: $mid-grey;
+}
+
+h4 {
+    font-size: 2em;
+    line-height: 3rem;
+    text-transform: uppercase;
+    letter-spacing: .5px;
+    color: $mid-grey;
+}
+
+h5 {
+    font-size: 1.5em;
+    line-height: 2.5rem;
+    color: $mid-grey;
+}
+
+h6 {
+    font-size: 1.3em;
+    line-height: 3rem;
+    text-transform: uppercase;
+    letter-spacing: .5px;
+    color: $mid-grey;
+}
+
+p, ol, ul {
+    font-size: 1.3em;
+    line-height: 3rem;
+    margin: 0 0 1.3em 0;
+}
+
+pre {
+  background-color: $black;
+  padding: $spacer-sm;
+}
+
+code {
+  color: $success;
+}
+//icons
+.material-icons {
+    vertical-align: middle;
+}
+
+//alternative styles
+.lead {
+    p {
+        font-size: 2em;
+        line-height: 3rem;
+        font-weight: 100;
+        color: $info;
+        text-align: center;
+    }
+}
+
+
+//list helpers
+ul {
+  &.unstyled {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+}
+@media screen and (max-width: 720px) {}

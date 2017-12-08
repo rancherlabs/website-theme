@@ -1,0 +1,154 @@
+.hero {
+  padding: $spacer-lg;
+  color: white;
+  background: url(../img/containerfarm.svg);
+  background-size: cover;
+  background-position: center center;
+  text-align: center;
+
+  h1 {
+    text-shadow: 4px 4px 6px rgba(0,0,0,.45);
+  }
+  .byline {
+    padding: 1rem;
+    margin-top: 1rem;
+    display: inline-block;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 1px;
+  }
+}
+
+.box {
+  border: $light-grey  solid 3px;
+
+  h3 {
+    border-bottom: solid $light-grey 2px;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+  }
+
+  > .bg-default {
+    background: rgba($light-grey , .35);
+  }
+}
+
+.border-right {
+  border-right: solid 2px $light-grey;
+}
+
+.main-content {
+  p {
+    margin-bottom: 1.75em;
+  }
+
+  a {
+    border-bottom: solid 2px $light-grey;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+      a {
+        border-bottom: none;
+      }
+  }
+
+  h2 {
+    color: $primary;
+  }
+
+  ul {
+    list-style-type: none;
+    li {
+      background: lighten($info, 30%);
+      color: $mid-grey;
+      margin-bottom: .75em;
+      display: flex;
+
+      &:before {
+        font-family: 'Material Icons';
+        content: "label";
+        color: $info;
+        padding: 0 10px;
+        margin-right: 10px;
+        background: lighten($info, 20%);
+        display: inline-block;
+        vertical-align: middle;
+      }
+    }
+  }
+
+  ol {
+    li {
+      counter-increment: step-counter;
+      color: $mid-grey;
+      padding: 5px 5px 5px 0;
+      display: flex;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center;
+
+
+      &:before {
+        content: counter(step-counter);
+        margin-right: 10px;
+        border: solid 2px lighten($info, 20%);
+        color: $info;
+        padding: 10px;
+        border-radius: 50%;
+        height: 40px;
+        width: 40px;
+        font-size: .75em;
+        display: flex;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        text-align: center;
+      }
+    }
+  }
+
+  .hero {
+    padding: $spacer-lg;
+    color: white;
+    background: url(../img/containerfarm.svg);
+    background-size: cover;
+    background-position: center center;
+  }
+}
+
+table {
+  border-spacing: 0;
+  border-top: solid $light-grey 2px;
+  border-bottom: solid $light-grey 2px;
+  min-width: 75%;
+  margin: 0 auto;
+
+  thead {
+    color: $dark-grey;
+
+    tr {
+      th {
+        text-align: left;
+        padding: 10px 5px;
+      }
+    }
+  }
+
+  tbody {
+    background: $light-grey;
+
+    tr {
+      &:nth-child(even) {
+        background: lighten($light-grey, 5%);
+      }
+
+      td {
+        text-align: left;
+        padding: 12px 9px;
+      }
+    }
+  }
+}

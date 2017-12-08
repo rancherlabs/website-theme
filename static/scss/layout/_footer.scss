@@ -1,0 +1,82 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the footer of the site/application.
+// -----------------------------------------------------------------------------
+
+footer {
+  padding: 0 1rem;
+
+  nav {
+    ul.footer-menu {
+      margin: 0;
+      list-style-type: none;
+      padding: 0;
+
+      li {
+        padding-right: $spacer-sm;
+
+        a {
+          border: 0;
+          display: block;
+          text-align: center;
+          text-transform: uppercase;
+          font-weight: 700;
+          font-size: .65em;
+          letter-spacing: 1px;
+          color: rgba($accent, .75);
+
+          i {
+            display: block;
+            border: solid 4px transparent;
+            background: $accent;
+            color: white;
+            width: 50px;
+            height: 50px;
+            line-height: 43px;
+            border-radius: 90px;
+            margin: 0 auto;
+            transition: ease-in-out all .25s;
+          }
+
+          &:hover {
+            color: $accent;
+            i {
+              background: transparent;
+              border: solid 4px $accent;
+              color: $accent;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .hbspt-form {
+    > form {
+      -webkit-box-pack: end;
+      -ms-flex-pack: end;
+      justify-content: flex-end;
+      text-align: end;
+      width: 100%;
+
+      label {
+        display: none;
+      }
+
+      .hbspt-form .hs-form-field {
+        background-color: red;
+      }
+    }
+
+    .hs-input, .input {
+      width: 100%;
+    }
+  }
+
+  .hbspt-form .hs-form-field {
+    width: 100%;
+  }
+
+  h6 {
+    margin: 0;
+  }
+}

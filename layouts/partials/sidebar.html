@@ -1,0 +1,14 @@
+<h4>Blog</h4>
+{{ range first 5 (where .Site.Pages "Section" "blog") }}
+    <div class="row aside-item">
+      <div class="bg-accent col-md row middle-md center-md"><i class="material-icons">question_answer</i></div>
+      <div class="col-md aside-info">
+        <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+        {{ .Date.Format "02 Jan, 2006" }}
+      </div>
+    </div>
+{{ end }}
+
+
+<h4 class="p-t-md">Events</h4>
+<div id="events-list-injected"> </div>

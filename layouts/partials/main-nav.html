@@ -1,0 +1,24 @@
+<nav>
+  <ul class="main-menu row middle-md">
+    {{ $currentPage := . }}
+    {{ range .Site.Menus.main }}
+    {{ if .HasChildren }}
+
+    <li class="dropdown col-md sub-menu{{if $currentPage.HasMenuCurrent "main" . }} active{{end}}">
+      <a href="" class="btn">
+        {{ .Pre }}
+        <span>{{ .Name }}</span>
+        <i class="material-icons">keyboard_arrow_down</i>
+      </a>
+
+      <ul class="sub dropdown-menu">
+        {{ range .Children }}
+          <li{{if $currentPage.IsMenuCurrent "main" . }} class="active"{{end}}>
+            <a href="{{.URL}}"> {{ .Name }} </a>
+          </li>
+        {{ end }}
+      </ul>
+      {{end}}
+    {{end}}
+  </ul>
+</nav>

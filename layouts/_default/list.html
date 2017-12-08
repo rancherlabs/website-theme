@@ -1,0 +1,45 @@
+{{ define "title" }}
+  {{ .Title }} – {{ .Site.Title }}
+{{ end }}
+
+{{ define "hero" }}
+  <section class="hero">
+    {{ with .Params.Title }}
+      <h1>{{ . }}</h1>
+    {{end}}
+
+    {{ with .Params.Author }}
+      <span class="byline bg-link">{{ . }}</span>
+    {{end}}
+  </section>
+{{ end }}
+
+{{ define "main" }}
+  <div class="p-a-lg">
+    <div class="row">
+      <article class="main-content col-lg-8 col-md-7 col-xs-12">
+      {{ .Content }}
+        {{ range .Pages }}
+          <div class="box m-b-md">
+              <div class="p-a-sm">
+                <h3><a href="{{.URL}}">{{.Title}}</a></h3>
+                {{.Summary | safeHTML}}
+              </div>
+              <div class="bg-default">
+                <div class="row">
+                  <div class="text-muted p-a-sm"><i class="material-icons">person_outline</i> By: {{ .Params.Author }}</div>
+                  <div class="text-muted p-a-sm"><i class="material-icons">timer</i> Read Time: {{.ReadingTime}} minutes</div>
+                </div>
+              </div>
+          </div>
+        {{ end }}
+      </article>
+
+      <aside class="col-lg-4 col-md-5 col-xs-12">
+        <div class=" bg-default p-a-md">
+          {{ partial "sidebar.html" . }}
+        </div>
+      </aside>
+    </div>
+  </div>
+{{ end }}

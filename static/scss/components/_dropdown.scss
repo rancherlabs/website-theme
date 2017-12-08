@@ -1,0 +1,10 @@
+.dropdown {
+  position: relative;
+  .dropdown-menu {
+    display: none;
+    &.dropdown-show {
+      display: block;
+      position: absolute;
+    }
+  }
+}
