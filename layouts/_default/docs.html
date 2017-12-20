@@ -1,0 +1,84 @@
+{{ define "title" }}
+  {{ .Title }} – {{ .Site.Title }}
+{{ end }}
+
+{{ define "hero" }}
+  <section class="hero">
+    {{ with .Params.Title }}
+      <h1>{{ . }}</h1>
+    {{end}}
+
+    {{ with .Params.Author }}
+      <span class="byline bg-link">{{ . }}</span>
+    {{end}}
+  </section>
+{{ end }}
+
+{{ define "main" }}
+  <div class="p-a-lg">
+    {{ partial "breadcrumbs.html" . }}
+    <nav>
+      <ul class="tabs">
+        {{ range .Site.Sections }}
+          <li hugo-nav="section">
+            <a href="">{{ .Title }}</a>
+          </li>
+        {{ end }}
+      </ul>
+    </nav>
+    <div class="row p-t-sm">
+      <aside class="docs-sidebar col-lg-4 col-md-5 col-xs-12">
+        <p>LANG</p>
+        <p>VERSION</p>
+        <div class=" bg-default p-a-md">
+          <!--docs sidebar-->
+          <h4>{{ .Section }}</h4>
+          {{ $page := . }}
+          <ul>
+          {{ range where .Site.Pages "Section" .Section }}
+            {{ $child := . }}
+            {{ if .IsDescendant $page }}
+              <li class="row aside-item">
+                <div class="bg-accent col-md row middle-md center-md"><i class="material-icons">folder</i></div>
+                <div class="col-md aside-info">
+                  <a href="{{ .URL }}">{{ .Title }}
+                  {{ if .IsAncestor $child }}
+                      <i class="material-icons pull-right">keyboard_arrow_down</i>
+                  {{ end }}
+                  </a>
+                </div>
+                <ul>
+                  {{ range where .Site.Pages "Section" .Section }}
+                    {{ if .IsDescendant $child }}
+                      <li><a href="{{ .URL }}">{{.Title}}</a></li>
+                    {{ end }}
+                  {{ end }}
+                </ul>
+
+              </li>
+            {{ end }}
+          {{ end }}
+        </div>
+
+      </aside>
+
+      <article class="main-content col-lg-8 col-md-7 col-xs-12">
+      {{ .Content }}
+        {{ range .Pages }}
+          <div class="box m-b-md">
+              <div class="p-a-sm">
+                <h3><a href="{{.URL}}">{{.Title}}</a></h3>
+                {{.Summary | safeHTML}}
+              </div>
+              <div class="bg-default">
+                <div class="row">
+                  <div class="text-muted p-a-sm"><i class="material-icons">person_outline</i> By: {{ .Params.Author }}</div>
+                  <div class="text-muted p-a-sm"><i class="material-icons">timer</i> Read Time: {{.ReadingTime}} minutes</div>
+                </div>
+              </div>
+          </div>
+        {{ end }}
+      </article>
+    </div>
+  </div>
+{{ end }}

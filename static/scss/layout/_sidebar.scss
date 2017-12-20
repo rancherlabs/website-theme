@@ -33,4 +33,24 @@ aside {
         }
       }
     }
+
+    &.docs-sidebar {
+    nav {
+      ul {
+        font-size: 1em;
+        list-style: none;
+        text-align: left;
+        padding: 0;
+        margin: 0;
+
+        li {
+
+        }
+
+        ul {
+          list-style: none;
+        }
+      }
+    }
+  }
 }

@@ -1,0 +1,14 @@
+ul.tabs {
+  list-style-type: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+  border-bottom: solid $light-grey ;
+
+  li {
+    a {
+      padding: 10px;
+      display: block;
+    }
+  }
+}

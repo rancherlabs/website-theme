@@ -5,6 +5,7 @@
   background-size: cover;
   background-position: center center;
   text-align: center;
+  background-attachment: fixed;
 
   h1 {
     text-shadow: 4px 4px 6px rgba(0,0,0,.45);
@@ -108,14 +109,6 @@
         text-align: center;
       }
     }
-  }
-
-  .hero {
-    padding: $spacer-lg;
-    color: white;
-    background: url(../img/containerfarm.svg);
-    background-size: cover;
-    background-position: center center;
   }
 }
 

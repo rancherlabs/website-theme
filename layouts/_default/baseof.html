@@ -15,6 +15,7 @@
     {{ end }}
     <!-- Code that all your templates share, like a header -->
     {{ block "hero" .}}
+      {{ partial "main-nav.html" . }}
     {{ end }}
 
     <div class="">

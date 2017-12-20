@@ -3,8 +3,9 @@
 // -----------------------------------------------------------------------------
 
 header {
-  background-color: $primary;
+  border-bottom: solid $info 3px;
   padding: 0 1rem;
+  background: #123;
 
   nav {
     > ul.main-menu {

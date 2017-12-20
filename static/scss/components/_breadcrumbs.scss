@@ -1,0 +1,23 @@
+.breadcrumbs {
+  display: flex;
+  list-style: none;
+  font-size: .75em;
+  padding: 0;
+  margin: 0;
+  line-height: 0;
+
+  li {
+    &:after {
+      content: "keyboard_arrow_right";
+      font-family: 'Material Icons';
+      padding: 0 5px;
+      font-size: 1em;
+      line-height: 1;
+      display: inline-block;
+    }
+
+    &:last-child:after {
+      content: "";
+    }
+  }
+}
