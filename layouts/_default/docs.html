@@ -39,14 +39,12 @@
             {{ $child := . }}
             {{ if .IsDescendant $page }}
               <li class="row aside-item">
-                <div class="bg-accent col-md row middle-md center-md"><i class="material-icons">folder</i></div>
-                <div class="col-md aside-info">
-                  <a href="{{ .URL }}">{{ .Title }}
-                  {{ if .IsAncestor $child }}
-                      <i class="material-icons pull-right">keyboard_arrow_down</i>
-                  {{ end }}
-                  </a>
-                </div>
+                <i class="material-icons pull-left">folder</i>
+                <a href="{{ .URL }}">{{ .Title }}
+                {{ if .IsAncestor $child }}
+                    <i class="material-icons pull-right">keyboard_arrow_down</i>
+                {{ end }}
+                </a>
                 <ul>
                   {{ range where .Site.Pages "Section" .Section }}
                     {{ if .IsDescendant $child }}
