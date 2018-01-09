@@ -15,7 +15,7 @@
 {{ end }}
 
 {{ define "main" }}
-  <div class="p-a-lg">
+  <div class="wrapper">
     {{ partial "breadcrumbs.html" . }}
     <nav>
       <ul class="tabs">
@@ -39,18 +39,20 @@
             {{ $child := . }}
             {{ if .IsDescendant $page }}
               <li class="row aside-item">
-                <i class="material-icons pull-left">folder</i>
-                <a href="{{ .URL }}">{{ .Title }}
-                {{ if .IsAncestor $child }}
-                    <i class="material-icons pull-right">keyboard_arrow_down</i>
-                {{ end }}
-                </a>
-                <ul>
-                  {{ range where .Site.Pages "Section" .Section }}
-                    {{ if .IsDescendant $child }}
-                      <li><a href="{{ .URL }}">{{.Title}}</a></li>
-                    {{ end }}
+                <div class="bg-accent col-md row middle-md center-md"><i class="material-icons">folder</i></div>
+                <div class="col-md aside-info">
+                  <a href="{{ .URL }}">{{ .Title }}
+                  {{ if .IsAncestor $child }}
+                      <i class="material-icons pull-right">keyboard_arrow_down</i>
                   {{ end }}
+                  </a>
+                </div>
+                <ul>
+                {{ range where .Site.Pages "Section" .Section }}
+                  {{ if .IsDescendant $child }}
+                    <li><a href="{{ .URL }}">{{.Title}}</a></li>
+                  {{ end }}
+                {{ end }}
                 </ul>
 
               </li>

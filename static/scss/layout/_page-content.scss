@@ -1,5 +1,5 @@
 .hero {
-  padding: $spacer-lg;
+  padding-bottom: $spacer-lg;
   color: white;
   background: url(../img/containerfarm.svg);
   background-size: cover;
@@ -8,7 +8,7 @@
   background-attachment: fixed;
 
   h1 {
-    text-shadow: 4px 4px 6px rgba(0,0,0,.45);
+    text-shadow: 4px 4px 6px rgba(0, 0, 0, .45);
   }
   .byline {
     padding: 1rem;
@@ -21,7 +21,7 @@
 }
 
 .box {
-  border: $light-grey  solid 3px;
+  border: $light-grey solid 3px;
 
   h3 {
     border-bottom: solid $light-grey 2px;
@@ -29,8 +29,8 @@
     margin-bottom: 20px;
   }
 
-  > .bg-default {
-    background: rgba($light-grey , .35);
+  >.bg-default {
+    background: rgba($light-grey, .35);
   }
 }
 
@@ -41,72 +41,143 @@
 .main-content {
   p {
     margin-bottom: 1.75em;
+
+    code {
+      background-color: rgba($success, .15);
+      padding: 2px 4px;
+    }
   }
 
-  a {
-    border-bottom: solid 2px $light-grey;
+  /* Links: replicate underline that clears descenders */
+  a:link,
+  a:visited {
+    color: $link-color;
   }
 
-  h1, h2, h3, h4, h5, h6 {
-      a {
-        border-bottom: none;
-      }
+  a:link {
+    border-bottom: solid 4px $light-grey;
+  }
+
+  a:link::selection {
+    text-shadow: 0.03em 0 #b4d5fe, -0.03em 0 #b4d5fe, 0 0.03em #b4d5fe, 0 -0.03em #b4d5fe, 0.06em 0 #b4d5fe, -0.06em 0 #b4d5fe, 0.09em 0 #b4d5fe, -0.09em 0 #b4d5fe, 0.12em 0 #b4d5fe, -0.12em 0 #b4d5fe, 0.15em 0 #b4d5fe, -0.15em 0 #b4d5fe;
+    background: #b4d5fe;
+  }
+
+  a:link::-moz-selection {
+    text-shadow: 0.03em 0 #b4d5fe, -0.03em 0 #b4d5fe, 0 0.03em #b4d5fe, 0 -0.03em #b4d5fe, 0.06em 0 #b4d5fe, -0.06em 0 #b4d5fe, 0.09em 0 #b4d5fe, -0.09em 0 #b4d5fe, 0.12em 0 #b4d5fe, -0.12em 0 #b4d5fe, 0.15em 0 #b4d5fe, -0.15em 0 #b4d5fe;
+    background: #b4d5fe;
   }
 
   h2 {
     color: $primary;
   }
 
-  ul {
+  > ul {
     list-style-type: none;
-    li {
-      background: lighten($info, 30%);
-      color: $mid-grey;
-      margin-bottom: .75em;
-      display: flex;
+    >li {
 
       &:before {
         font-family: 'Material Icons';
         content: "label";
-        color: $info;
-        padding: 0 10px;
+        color: $link-color;
         margin-right: 10px;
-        background: lighten($info, 20%);
         display: inline-block;
         vertical-align: middle;
+        float: left;
       }
+    }
+
+    li:not(:first-child) {
+      margin-top: 0.25rem;
+    }
+
+    ul {
+      list-style: none;
+
+      > li {
+        &:before {
+          font-family: 'Material Icons';
+          content: "label";
+          font-size: .75em;
+          color: lighten($link-color, 25%);
+          margin-right: 10px;
+          display: inline-block;
+          vertical-align: middle;
+          float: left;
+        }
+      }
+    }
+
+    > ol {
+      font-size: 1em;
+      list-style-type: upper-alpha;
     }
   }
 
   ol {
-    li {
+    >li {
       counter-increment: step-counter;
-      color: $mid-grey;
       padding: 5px 5px 5px 0;
-      display: flex;
-      -webkit-box-align: center;
-      -ms-flex-align: center;
-      align-items: center;
+      list-style-type: none;
 
 
       &:before {
         content: counter(step-counter);
-        margin-right: 10px;
-        border: solid 2px lighten($info, 20%);
-        color: $info;
-        padding: 10px;
-        border-radius: 50%;
-        height: 40px;
-        width: 40px;
-        font-size: .75em;
-        display: flex;
-        -webkit-box-align: center;
-        -ms-flex-align: center;
-        align-items: center;
-        -webkit-box-pack: center;
-        -ms-flex-pack: center;
-        justify-content: center;
-        text-align: center;
+        color: $link-color;
+        padding-right: 10px;
+        font-weight: 100;
+        display: inline-block;
+        vertical-align: middle;
+        text-align: right;
+      }
+
+      >ul,
+      ol {
+        list-style-type: none;
+        font-size: 1em;
+        border-left: solid;
+        border-color: $light-grey;
+        padding: 0 $spacer-sm;
+        margin: 1rem $spacer-sm;
+
+        li {
+          position: relative;
+
+          &:before {
+            content: "";
+            height: 3px;
+            width: 15px;
+            background: $light-grey;
+            position: absolute;
+            left: -28px;
+            top: 12px;
+          }
+        }
+      }
+    }
+  }
+
+  blockquote {
+    background: lighten($light-grey, 3%);
+    color: $mid-grey;
+    padding: $spacer-sm;
+    margin: $spacer-sm;
+    font-weight: 100;
+    font-style: italic;
+
+    h4 {
+      color: $mid-grey;
+      border-bottom: $light-grey solid 2px;
+      font-weight: 100;
+      font-style: initial;
+      margin-top: 0;
+    }
+
+    p {
+      font-size: 1em;
+
+      &:last-child {
+        margin-bottom: 0;
       }
     }
   }

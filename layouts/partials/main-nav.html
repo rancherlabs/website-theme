@@ -1,4 +1,4 @@
-<nav>
+<!-- <nav>
   <ul class="main-menu row middle-md">
     {{ $currentPage := . }}
     {{ range .Site.Menus.main }}
@@ -21,4 +21,33 @@
       {{end}}
     {{end}}
   </ul>
+</nav>
+ -->
+<nav class="row between-xs middle-md center-md">
+  <div class="col-xs">
+    <a class="btn bg-primary">Download</a>
+  </div>
+  <div class="col-xs">
+    <a href="">link</a>
+  </div>
+  <div class="col-xs">
+    <a href="">link</a>
+  </div>
+  <div class="col-xs">
+    <a href="">link</a>
+  </div>
+  <div class="col-xs">
+    <a href="/">
+      <img src="{{ .Site.BaseURL }}/img/rancher-logo-horiz-white.svg" width="150">
+    </a>
+  </div>
+  <div class="col-xs">
+    <a href="">link</a>
+  </div>
+  <div class="col-xs">
+    <a href="">link</a>
+  </div>
+  <div class="col-xs">
+    <a class="btn bg-transparent"><i class="material-icons">search</i>Search</a>
+  </div>
 </nav>

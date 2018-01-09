@@ -21,8 +21,11 @@ aside {
           a {
             display: block;
             color: $link-color;
-            font-size: 1.25em;
           }
+
+        + ul {
+          display: block;
+        }
       }
 
       &:hover {

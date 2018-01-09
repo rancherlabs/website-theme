@@ -17,7 +17,7 @@
     }
 
     &:last-child:after {
-      content: "";
+      color: transparent;
     }
   }
 }
