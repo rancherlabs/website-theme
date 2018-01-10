@@ -81,10 +81,10 @@ article {
   position: relative;
 }
 
-section {
-  padding-top: 1rem;
-  padding-bottom: 1rem;
-}
+// section {
+//   padding-top: 1rem;
+//   padding-bottom: 1rem;
+// }
 
 p,
 ol,
@@ -137,20 +137,20 @@ blockquote {
 // blockquote footer { width: 55%;
 //                     font-size: 1.1rem;
 //                     text-align: right; }
-section>p,
-section>footer,
-section>table {
-  width: 55%;
-}
+// section>p,
+// section>footer,
+// section>table {
+//   width: 55%;
+// }
 
 
 /* 50 + 5 == 55, to be the same width as paragraph */
 
-section>ol,
-section>ul {
-  width: 50%;
-  -webkit-padding-start: 5%;
-}
+// section>ol,
+// section>ul {
+//   width: 50%;
+//   -webkit-padding-start: 5%;
+// }
 
 figure {
   padding: 0;
@@ -189,8 +189,7 @@ img {
 }
 
 .sidenote,
-.marginnote,
-blockquote {
+.marginnote {
   float: right;
   clear: right;
   margin-right: -60%;
@@ -279,14 +278,15 @@ code {
   font-style: initial;
 }
 
-pre.code {
+pre code {
   font-size: 0.9rem;
   width: 52.5%;
   margin-left: 2.5%;
   overflow-x: auto;
+  background: transparent;
 }
 
-pre.code.fullwidth {
+pre code.fullwidth {
   width: 90%;
 }
 
@@ -334,20 +334,20 @@ label.margin-toggle:not(.sidenote-number) {
     padding-left: 8%;
     padding-right: 8%;
   }
-  section>p,
-  section>footer,
-  section>table {
-    width: 100%;
-  }
+  // section>p,
+  // section>footer,
+  // section>table {
+  //   width: 100%;
+  // }
   pre.code {
     width: 97%;
   }
-  section>ol {
-    width: 90%;
-  }
-  section>ul {
-    width: 90%;
-  }
+  // section>ol {
+  //   width: 90%;
+  // }
+  // section>ul {
+  //   width: 90%;
+  // }
   figure {
     max-width: 90%;
   }

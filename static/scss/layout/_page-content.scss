@@ -9,6 +9,7 @@
 
   h1 {
     text-shadow: 4px 4px 6px rgba(0, 0, 0, .45);
+    margin: 0;
   }
   .byline {
     padding: 1rem;
@@ -41,11 +42,6 @@
 .main-content {
   p {
     margin-bottom: 1.75em;
-
-    code {
-      background-color: rgba($success, .15);
-      padding: 2px 4px;
-    }
   }
 
   /* Links: replicate underline that clears descenders */
@@ -161,12 +157,14 @@
     background: lighten($light-grey, 3%);
     color: $mid-grey;
     padding: $spacer-sm;
-    margin: $spacer-sm;
     font-weight: 100;
     font-style: italic;
+    border-left: solid 5px $link-color;
 
-    h4 {
+    strong {
+      display: block;
       color: $mid-grey;
+      padding-bottom: .75em;
       border-bottom: $light-grey solid 2px;
       font-weight: 100;
       font-style: initial;
@@ -181,6 +179,11 @@
       }
     }
   }
+}
+
+code {
+  background-color: rgba($success, .15);
+  padding: 2px 4px;
 }
 
 table {

@@ -28,8 +28,41 @@
     </nav>
     <div class="row p-t-sm">
       <aside class="docs-sidebar col-lg-4 col-md-5 col-xs-12">
-        <p>LANG</p>
-        <p>VERSION</p>
+        <h3>Table of Contents</h3>
+
+        {{.TableOfContents}}
+
+
+        <ul class="unstyled main-menu row middle-md m-v-sm">
+
+          <li class="dropdown sub-menu">
+            <a href="" class="btn bg-link">
+              <span>Lang</span>
+              <i class="material-icons">keyboard_arrow_down</i>
+            </a>
+
+            <ul class="sub dropdown-menu">
+                <li>
+                  <a href="{{.URL}}">pick language</a>
+                </li>
+            </ul>
+        </ul>
+
+        <ul class="unstyled main-menu row middle-md m-v-sm">
+
+          <li class="dropdown sub-menu">
+            <a href="" class="btn bg-link">
+              <span>Version</span>
+              <i class="material-icons">keyboard_arrow_down</i>
+            </a>
+
+            <ul class="sub dropdown-menu">
+                <li>
+                  <a href="{{.URL}}">pick version</a>
+                </li>
+            </ul>
+        </ul>
+
         <div class=" bg-default p-a-md">
           <!--docs sidebar-->
           <h4>{{ .Section }}</h4>
@@ -59,7 +92,6 @@
             {{ end }}
           {{ end }}
         </div>
-
       </aside>
 
       <article class="main-content col-lg-8 col-md-7 col-xs-12">
