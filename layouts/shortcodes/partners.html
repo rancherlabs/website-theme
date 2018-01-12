@@ -1,0 +1,16 @@
+<div class="row">
+  {{ range .Site.Data.partners.partner }}
+  <div class="col-md box m-r-sm m-v-sm">
+    <div class="m-a-sm">
+    <img src="{{ .Site.BaseURL }}/img/{{.logo}}" height="50">
+    <h3>{{.name}}</h3>
+    <p>{{.description}}</p>
+    <span class="row">
+      {{ range .type }}
+          <span class="bg-accent tag">{{ . }}</span>
+      {{ end }}
+    </span>
+    </div>
+  </div>
+  {{ end }}
+</div>
