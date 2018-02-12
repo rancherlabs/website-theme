@@ -34,7 +34,7 @@ select {
     line-height: 24px;
     &:not([multiple]) {
       position: relative;
-      background-image: url(images/dropdown-arrow.svg);
+      background-image: url(img/dropdown-arrow.svg);
       background-repeat: no-repeat;
       background-size: 15px 10px;
       background-position: calc(100% - 10px) center;
