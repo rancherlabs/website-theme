@@ -1,71 +1,82 @@
   <footer class="bg-default p-t-lg p-h-sm">
     <div class="container-fluid">
-      <div class="row middle-md">
+      <div class="row">
 <!--         <div class="col-lg-5 col-xs-12 start-md">
           {{ partial "footer-nav.html" . }}
         </div> -->
-        <div class="row col-lg-5 col-xs-12 start-md">
-          <div class="col-lg-4 col-xs-12">
-            <h3>Company</h3>
+        <div class="row col-lg-8 col-xs-12 start-md">
+          <div class="col-lg-2 col-md-4 col-xs-12">
+            <h3>Products</h3>
             <ul class="unstyled">
-              <li><a href="">About Us</a></li>
-              <li><a href="">Blog</a></li>
-              <li><a href="">News</a></li>
-              <li><a href="">Careers</a></li>
-              <li><a href="">Contact</a></li>
+              <li><a href="/rancher">Rancher 2.0 Beta</a></li>
+              <li><a href="/rancher-os">RancherOS</a></li>
             </ul>
           </div>
-          <div class="col-lg-4 col-xs-12">
+
+          <div class="col-lg-2 col-md-4 col-xs-12">
             <h3>Docs</h3>
             <ul class="unstyled">
-              <li><a href="">Rancher Docs</a></li>
-              <li><a href="">Rancher 2.0 Docs</a></li>
-              <li><a href="">RancherOS Docs</a></li>
-              <li><a href="">Longhorn Docs</a></li>
+              <li><a href="/rancher">Kubernetes</a></li>
+              <li><a href="/rancher-os">Upgrade</a></li>
             </ul>
           </div>
-          <div class="col-lg-4 col-xs-12">
+
+          <div class="col-lg-2 col-md-4 col-xs-12">
+            <h3>About</h3>
+            <ul class="unstyled">
+              <li><a href="/About">About Us</a></li>
+              <li><a href="/blog">Blog</a></li>
+              <li><a href="/news">Press</a></li>
+              <li><a href="/careers">Careers</a></li>
+            </ul>
+          </div>
+
+          <div class="col-lg-2 col-md-4 col-xs-12">
+            <h3>Support</h3>
+            <ul class="unstyled">
+              <li><a href="/contact">Contact</a></li>
+              <li><a href="/contact">Support Ticket</a></li>
+              <li><a href="/contact">Slack</a></li>
+              <li><a href="/contact">Forums</a></li>
+            </ul>
+          </div>
+
+          <div class="col-lg-2 col-md-4 col-xs-12">
             <h3>Legal</h3>
             <ul class="unstyled">
               <li><a href="">EULA</a></li>
-              <li><a href="">Terms of Service Agreement</a></li>
-              <li><a href="">Privacy</a></li>
+              <li><a href="/support-maintenance-terms">Terms of Service Agreement</a></li>
+              <li><a href="/privacy">Privacy</a></li>
             </ul>
           </div>
         </div>
 
-        <div class="col-lg-7 col-xs-12 end-md">
-          <div class="row middle-md">
-            <div class="col-md"><h3>Get the latest news & offers</h3></div>
-            <div class="col-md">
-              <!--[if lte IE 8]>
-              <script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/v2-legacy.js"></script>
-              <![endif]-->
-              <script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/v2.js"></script>
-              <script>
-                hbspt.forms.create({
-                  css: '',
-                  portalId: '468859',
-                  formId: '8beed251-ecf0-49fc-93a1-fa9b1446110f'
-                });
-              </script>
-            </div>
-            </div>
-        </div>
-      </div>
+        <div class="col-lg-4 col-xs-12 end-md">
+          <h3>Get the latest news & offers</h3>
+          <!--[if lte IE 8]>
+          <script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/v2-legacy.js"></script>
+          <![endif]-->
+          <script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/v2.js"></script>
+          <script>
+            hbspt.forms.create({
+              css: '',
+              portalId: '468859',
+              formId: '8beed251-ecf0-49fc-93a1-fa9b1446110f'
+            });
+          </script>
 
-      <div class="row end-sm middle-md social">
-        <a class="col-md" href=""><img src="{{ .Site.BaseURL }}/img/icon-slack.svg" height="20" width="20"></a>
-        <a class="col-md" href=""><img src="{{ .Site.BaseURL }}/img/icon-github.svg" height="20" width="20"></a>
-        <a class="col-md" href=""><img src="{{ .Site.BaseURL }}/img/icon-twitter.svg" height="20" width="20"></a>
-        <a class="col-md" href=""><img src="{{ .Site.BaseURL }}/img/icon-facebook.svg" height="20" width="20"></a>
-        <a class="col-md" href=""><img src="{{ .Site.BaseURL }}/img/icon-linkedin.svg" height="20" width="20"></a>
+          <div class="row end-sm middle-md social">
+            <a class="p-a-sm" href="https://slack.rancher.io/"><img src="{{ .Site.BaseURL }}/img/icon-slack.svg" height="20" width="20"></a>
+            <a class="p-a-sm" href="https://github.com/rancher/rancher"><img src="{{ .Site.BaseURL }}/img/icon-github.svg" height="20" width="20"></a>
+            <a class="p-a-sm" href="https://twitter.com/Rancher_Labs"><img src="{{ .Site.BaseURL }}/img/icon-twitter.svg" height="20" width="20"></a>
+            <a class="p-a-sm" href="https://www.facebook.com/rancherlabs/"><img src="{{ .Site.BaseURL }}/img/icon-facebook.svg" height="20" width="20"></a>
+            <a class="p-a-sm" href="https://www.linkedin.com/groups/6977008/profile"><img src="{{ .Site.BaseURL }}/img/icon-linkedin.svg" height="20" width="20"></a>
+          </div>
+        </div>
       </div>
 
       <div class="text-small text-muted text-center p-a-sm">© 2015-2017 RANCHER LABS, INC. ALL RIGHTS RESERVED.</div>
     </div>
-
-
   </footer>
 </div><!--end of container that starts in header.html-->
 

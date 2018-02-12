@@ -1,0 +1,20 @@
+<div class="testimonials">
+  <div class="row">
+    {{ range .Site.Data.testimonials.testimonial }}
+    <div id="{{.company}}" class="testimonial">
+      <h3>{{.company}}</h3>
+      <p>{{.quote}}</p>
+      <p>{{.source}}, {{.position}}</p>
+    </div>
+    {{ end }}
+  </div>
+
+
+  <div class="row">
+    {{ range .Site.Data.testimonials.testimonial }}
+      <div id="{{.company}}" class="col-md-2">
+        <img src="{{ .Site.BaseURL }}/img/quotelogos/{{.logo}}" height="50">
+      </div>
+    {{ end }}
+  </div>
+</div>

@@ -1,50 +1,62 @@
+<!-- <nav>
+  <ul class="main-menu row middle-md">
+    {{ $currentPage := . }}
+    {{ range .Site.Menus.main }}
+      {{ if .HasChildren }}
+
+      <li class="dropdown col-md sub-menu{{if $currentPage.HasMenuCurrent "main" . }} active{{end}}">
+        <a href="" class="btn">
+          {{ .Pre }}
+          <span>{{ .Name }}</span>
+          <i class="material-icons">keyboard_arrow_down</i>
+        </a>
+
+        <ul class="sub dropdown-menu">
+          {{ range .Children }}
+            <li{{if $currentPage.IsMenuCurrent "main" . }} class="active"{{end}}>
+              <a href="{{.URL}}"> {{ .Name }} </a>
+            </li>
+          {{ end }}
+        </ul>
+      </li>
+      {{end}}
+    {{end}}
+  </ul>
+</nav>-->
+
+
+
+
 <nav>
   <ul class="main-menu row middle-md">
     {{ $currentPage := . }}
     {{ range .Site.Menus.main }}
-    {{ if .HasChildren }}
-
-    <li class="dropdown col-md sub-menu{{if $currentPage.HasMenuCurrent "main" . }} active{{end}}">
-      <a href="" class="btn">
-        {{ .Pre }}
-        <span>{{ .Name }}</span>
-        <i class="material-icons">keyboard_arrow_down</i>
-      </a>
-
-      <ul class="sub dropdown-menu">
-        {{ range .Children }}
-          <li{{if $currentPage.IsMenuCurrent "main" . }} class="active"{{end}}>
-            <a href="{{.URL}}"> {{ .Name }} </a>
-          </li>
-        {{ end }}
-      </ul>
+      {{ if .HasChildren }}
+        <li class="col-md dropdown sub-menu {{ if $currentPage.HasMenuCurrent "main" . }}active{{ end }}">
+          <a href="{{ .URL }}" class="btn">
+            <span>{{ .Name }}</span>
+            {{ .Pre }}
+          </a>
+          <ul class="sub dropdown-menu">
+            {{ range .Children }}
+              <li class="{{ if $currentPage.IsMenuCurrent "main" . }}active{{ end }}">
+                <a href="{{ .URL }}">{{ .Name }}</a>
+            {{ end }}
+          </ul>
+      {{else}}
+        <li class="col-md">
+          <a href="{{.URL}}" class="btn">
+            {{ .Pre }}
+            <span>{{ .Name }}</span>
+          </a>
+        </li>
       {{end}}
     {{end}}
+<!--     <li>
+      <a href="#" target="blank">Hardcoded Link 1</a>
+    </li>
+    <li>
+      <a href="#" target="blank">Hardcoded Link 2</a>
+    </li> -->
   </ul>
-</nav>
-
-<nav class="row between-xs middle-md center-md">
-  <div class="col-xs">
-    <a href="">link</a>
-  </div>
-  <div class="col-xs">
-    <a href="">link</a>
-  </div>
-  <div class="col-xs">
-    <a href="">link</a>
-  </div>
-  <div class="col-xs">
-    <a href="/">
-      <img src="{{ .Site.BaseURL }}/img/rancher-logo-horiz-white.svg" width="150">
-    </a>
-  </div>
-  <div class="col-xs">
-    <a href="">link</a>
-  </div>
-  <div class="col-xs">
-    <a href="">link</a>
-  </div>
-  <div class="col-xs">
-    <a class="btn bg-transparent"><i class="material-icons">search</i>Search</a>
-  </div>
 </nav>

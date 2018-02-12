@@ -1,7 +1,7 @@
 .hero {
   padding-bottom: $spacer-lg;
   color: white;
-  background: url(../img/containerfarm.svg);
+  background: url(../img/login-container-farm.svg);
   background-size: cover;
   background-position: center center;
   text-align: center;
@@ -42,16 +42,24 @@
 .main-content {
   p {
     margin-bottom: 1.75em;
+
+    a:link {
+      border-bottom: solid 4px $light-grey;
+    }
   }
 
   /* Links: replicate underline that clears descenders */
-  a:link,
-  a:visited {
+  a:link {
     color: $link-color;
+
+    &.btn {
+      border-bottom: none;
+      color: white;
+    }
   }
 
-  a:link {
-    border-bottom: solid 4px $light-grey;
+  a:visited  {
+
   }
 
   a:link::selection {
@@ -62,6 +70,15 @@
   a:link::-moz-selection {
     text-shadow: 0.03em 0 #b4d5fe, -0.03em 0 #b4d5fe, 0 0.03em #b4d5fe, 0 -0.03em #b4d5fe, 0.06em 0 #b4d5fe, -0.06em 0 #b4d5fe, 0.09em 0 #b4d5fe, -0.09em 0 #b4d5fe, 0.12em 0 #b4d5fe, -0.12em 0 #b4d5fe, 0.15em 0 #b4d5fe, -0.15em 0 #b4d5fe;
     background: #b4d5fe;
+  }
+
+  h1 a:link,
+  h2 a:link,
+  h3 a:link,
+  h4 a:link,
+  h4 a:link,
+  h6 a:link {
+    border: 0;
   }
 
   h2 {
@@ -204,7 +221,7 @@ table {
   border-spacing: 0;
   border-top: solid $light-grey 2px;
   border-bottom: solid $light-grey 2px;
-  min-width: 75%;
+  min-width: 100%;
   margin: 0 auto;
 
   thead {

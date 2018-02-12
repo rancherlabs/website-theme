@@ -5,50 +5,59 @@
 footer {
   padding: 0 1rem;
 
-  nav {
-    ul.footer-menu {
-      margin: 0;
-      list-style-type: none;
-      padding: 0;
-
-      li {
-        padding-right: $spacer-sm;
-
-        a {
-          border: 0;
-          display: block;
-          text-align: center;
-          text-transform: uppercase;
-          font-weight: 700;
-          font-size: .65em;
-          letter-spacing: 1px;
-          color: rgba($accent, .75);
-
-          i {
-            display: block;
-            border: solid 4px transparent;
-            background: $accent;
-            color: white;
-            width: 50px;
-            height: 50px;
-            line-height: 43px;
-            border-radius: 90px;
-            margin: 0 auto;
-            transition: ease-in-out all .25s;
-          }
-
-          &:hover {
-            color: $accent;
-            i {
-              background: transparent;
-              border: solid 4px $accent;
-              color: $accent;
-            }
-          }
-        }
+  ul {
+    li {
+      a {
+        font-size: .75em;
+        font-weight: light;
       }
     }
   }
+
+  // nav {
+  //   ul.footer-menu {
+  //     margin: 0;
+  //     list-style-type: none;
+  //     padding: 0;
+
+  //     li {
+  //       padding-right: $spacer-sm;
+
+  //       a {
+  //         border: 0;
+  //         display: block;
+  //         text-align: center;
+  //         text-transform: uppercase;
+  //         font-weight: 700;
+  //         font-size: .65em;
+  //         letter-spacing: 1px;
+  //         color: rgba($accent, .75);
+
+  //         i {
+  //           display: block;
+  //           border: solid 4px transparent;
+  //           background: $accent;
+  //           color: white;
+  //           width: 50px;
+  //           height: 50px;
+  //           line-height: 43px;
+  //           border-radius: 90px;
+  //           margin: 0 auto;
+  //           transition: ease-in-out all .25s;
+  //         }
+
+  //         &:hover {
+  //           color: $accent;
+  //           i {
+  //             background: transparent;
+  //             border: solid 4px $accent;
+  //             color: $accent;
+  //           }
+  //         }
+  //       }
+  //     }
+  //   }
+  // }
 
   .hbspt-form {
     > form {

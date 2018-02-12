@@ -1,0 +1,17 @@
+// -----------------------------------------------------------------------------
+// This file contains styles that are specific to the testimonials page and partial page.
+// -----------------------------------------------------------------------------
+
+.testimonials {
+  position: relative;
+
+  img {
+    max-height: 75px;
+    filter: grayscale(100%);
+    transition: ease-in-out all .3s;
+
+    &:hover {
+      filter: grayscale(0);
+    }
+  }
+}

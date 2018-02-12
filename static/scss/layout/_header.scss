@@ -11,7 +11,6 @@ header {
     > ul.main-menu {
       list-style: none;
       padding: 0;
-      font-size: .95em;
       margin: 0;
 
       > li {
@@ -23,6 +22,10 @@ header {
           transition: ease-in-out .15s all;
           color: white;
           padding: 1.25rem;
+          text-transform: uppercase;
+          font-weight: bold;
+          text-shadow: 3px 3px 0px rgba($info, 0.2);
+          letter-spacing: 1px;
 
           &:hover {
             color: $info;
@@ -34,8 +37,10 @@ header {
           ul.sub {
             list-style: none;
             padding: 0;
-            font-size: .95em;
+            font-size: .85em;
             background-color: white;
+            text-align: left;
+            box-shadow: 0px 3px 15px rgba(0,0,0,0.2);
 
             a {
               color: $link-color;

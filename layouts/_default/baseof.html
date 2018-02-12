@@ -18,11 +18,11 @@
 
     {{ end }}
 
-    <div class="">
+    <section class="wrapper">
       {{ block "main" . }}
         <!-- The part of the page that begins to differ between templates -->
       {{ end }}
-    </div>
+    </section>
 
     {{ block "footer" . }}
     <!-- More shared code, perhaps a footer but that can be overridden if need be in  -->

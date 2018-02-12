@@ -15,7 +15,7 @@
 {{ end }}
 
 {{ define "main" }}
-  <div class="wrapper">
+  <div class="main-content">
     {{ partial "breadcrumbs.html" . }}
     <nav>
       <ul class="tabs">
@@ -63,7 +63,7 @@
             </ul>
         </ul>
 
-        <div class=" bg-default p-a-md">
+        <div class="bg-default p-a-md">
           <!--docs sidebar-->
           <h4>{{ .Section }}</h4>
           {{ $page := . }}

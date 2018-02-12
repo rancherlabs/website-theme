@@ -12,16 +12,14 @@
 
 {{ define "main" }}
   {{ partial "breadcrumbs.html" . }}
-  <div class="wrapper">
+  <div class="main-content">
     <div class="row">
       <article class="main-content col-lg-8 col-md-7 col-xs-12">
         {{ .Content }}
-
-        <a href="">S H A R E  L I N K S</a>
       </article>
 
       <aside class="col-md-4">
-        <div class=" bg-default p-a-md">
+        <div class="bg-default p-h-md p-v-sm">
           {{ partial "sidebar.html" . }}
         </div>
       </aside>
