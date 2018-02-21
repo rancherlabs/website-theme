@@ -19,6 +19,10 @@ aside {
 
     .aside-info {
       padding: 1rem;
+        h4 {
+          margin: 0 0 5px 0;
+        }
+
         a {
           display: block;
           color: $link-color;
