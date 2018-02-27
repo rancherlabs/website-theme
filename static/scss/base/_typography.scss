@@ -28,7 +28,6 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 {
-  font-weight: 300;
   margin-bottom: 1.5rem;
   font-size: 3.2rem;
   line-height: 1;
@@ -389,19 +388,19 @@ label.margin-toggle:not(.sidenote-number) {
 }
 
 //icons
-.material-icon {
-  font-family: "Material Icons";
-  text-rendering: optimizeLegibility;
-  font-feature-settings: 'liga' 1;
-  font-style: normal;
-  text-transform: none;
-  line-height: 1;
-  font-size: 24px;
-  width: 24px;
-  height: 24px;
-  display: inline-block;
-  overflow: hidden;
-  -webkit-font-smoothing: antialiased;
+.material-icons {
+  // font-family: "Material Icons";
+  // text-rendering: optimizeLegibility;
+  // font-feature-settings: 'liga' 1;
+  // font-style: normal;
+  // text-transform: none;
+  // line-height: 1;
+  // font-size: 24px;
+  // width: 24px;
+  // height: 24px;
+  // display: inline-block;
+  // overflow: hidden;
+  // -webkit-font-smoothing: antialiased;
   vertical-align: middle;
 }
 
@@ -414,6 +413,10 @@ label.margin-toggle:not(.sidenote-number) {
     color: $info;
     text-align: center;
   }
+}
+
+.light {
+  font-weight: light;
 }
 
 

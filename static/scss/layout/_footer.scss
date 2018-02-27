@@ -5,10 +5,17 @@
 footer {
   padding: 0 1rem;
 
-  ul {
+  h3 {
+    border-bottom: solid 2px lighten($mid-grey, 30);
+        padding-bottom: 5px;
+    margin-bottom: 10px;
+  }
+
+  ul.unstyled {
     li {
       a {
         font-size: .75em;
+        line-height: 1em;
         font-weight: light;
       }
     }

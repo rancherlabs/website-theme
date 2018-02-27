@@ -92,6 +92,37 @@
   font-weight: $bold-weight;
 }
 
+//xs padding
+.p-a-xs {
+  padding: $spacer-xs;
+}
+
+.p-t-xs {
+  padding-top: $spacer-xs;
+}
+
+.p-r-xs {
+  padding-right: $spacer-xs;
+}
+
+.p-b-xs {
+  padding-bottom: $spacer-xs;
+}
+
+.p-l-xs {
+  padding-left: $spacer-xs;
+}
+
+.p-h-xs {
+  padding-left: $spacer-xs;
+  padding-right: $spacer-xs;
+}
+
+.p-v-xs {
+  padding-top: $spacer-xs;
+  padding-bottom: $spacer-xs;
+}
+
 //sml padding
 .p-a-sm {
   padding: $spacer-sm;

@@ -20,16 +20,16 @@ header {
         a.btn {
           border-bottom: 0;
           transition: ease-in-out .15s all;
-          color: white;
+          // color: white;
+          color: $link-color;
           padding: 1.25rem;
           text-transform: uppercase;
           font-weight: bold;
-          font-size: .75em;
-          text-shadow: 3px 3px 0px rgba($info, 0.2);
+          font-size: .65em;
           letter-spacing: 1px;
 
           &:hover {
-            color: $info;
+            color: darken($info, 15%);
           }
         }
 
