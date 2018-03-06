@@ -23,6 +23,14 @@
   }
 }
 
+.homepage {
+  .hero {
+     background: url(../../img/header-placeholder.svg);
+     color: $link-color;
+    }
+}
+
+//accents
 .box {
   border: $light-grey solid 3px;
 
@@ -265,4 +273,38 @@ table {
       }
     }
   }
+}
+
+//lists
+ul {
+  &.checklist {
+    list-style-type: none;
+    color: $text-color;
+    font-weight: 300;
+    text-align: left;
+    margin: 0;
+
+    li {
+      @extend .p-v-xs;
+      display: flex;
+      align-items: center;
+
+      &:before {
+        content: "check";
+        font-family: 'Material Icons';
+        color: $accent;
+        font-size: 1.5em;
+        padding-right: .25em;
+      }
+
+      strong {
+        color: $accent;
+      }
+    }
+  }
+}
+
+//styling helpers
+.shadow {
+  box-shadow: 0 0 15px rgba(0,0,0,.15);
 }

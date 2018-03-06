@@ -63,35 +63,6 @@
   float: left !important;
 }
 
-//text
-.text-left {
-  text-align: left;
-}
-
-.text-center {
-  text-align: center;
-}
-
-.text-right {
-  text-align: right;
-}
-
-.text-small {
-  font-size: .8em;
-}
-
-.text-normal {
-  font-weight: normal;
-}
-
-.text-italic {
-  font-style: italic;
-}
-
-.text-bold {
-  font-weight: $bold-weight;
-}
-
 //xs padding
 .p-a-xs {
   padding: $spacer-xs;

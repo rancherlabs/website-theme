@@ -6,7 +6,7 @@
 /* Tufte CSS styles */
 
 html {
-  font-size: 14px;
+  font-size: 12px;
 }
 
 body {
@@ -29,21 +29,19 @@ h1, h2, h3, h4, h5, h6 {
 
 h1 {
   margin-bottom: 1.5rem;
-  font-size: 3.2rem;
+  font-size: 5rem;
   line-height: 1;
 
 }
 
 h2 {
-  font-weight: 300;
   margin-top: 2.1rem;
   margin-bottom: 0;
-  font-size: 2.2rem;
+  font-size: 4rem;
   line-height: 1;
 }
 
 h3 {
-  font-weight: 300;
   font-size: 1.7rem;
   margin-top: 2rem;
   margin-bottom: 0;
@@ -133,6 +131,18 @@ div.epigraph>blockquote>footer>cite {
 
 blockquote {
   font-size: 1.4rem;
+  font-weight: 300;
+  line-height: 2rem;
+}
+
+cite {
+  display: block;
+  font-family: 'Roboto Condensed', sans-serif;
+  font-weight: 300;
+  font-style: normal;
+  padding-top: 10px;
+  letter-spacing: .5px;
+  color: $mid-grey;
 }
 
 // blockquote p { width: 55%;
@@ -404,6 +414,38 @@ label.margin-toggle:not(.sidenote-number) {
   vertical-align: middle;
 }
 
+
+//list helpers
+ul {
+  &.unstyled {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+}
+
+@media screen and (max-width: 720px) {}
+
+//text helpers
+.text-sm {
+  font-size: 1rem;
+  line-height: 1.5;
+  font-weight: 300;
+}
+
+.text-md {
+  font-size: 2rem;
+  line-height: 3rem;
+  font-weight: 100;
+  color: $info;
+  text-align: center;
+}
+
+.text-lg {
+  font-size: 3rem;
+  line-height: 4;
+}
+
 //alternative styles
 .lead {
   p {
@@ -419,14 +461,31 @@ label.margin-toggle:not(.sidenote-number) {
   font-weight: light;
 }
 
-
-//list helpers
-ul {
-  &.unstyled {
-    margin: 0;
-    padding: 0;
-    list-style: none;
-  }
+//text
+.text-left {
+  text-align: left!important;
 }
 
-@media screen and (max-width: 720px) {}
+.text-center {
+  text-align: center!important;
+}
+
+.text-right {
+  text-align: right!important;
+}
+
+.text-small {
+  font-size: .8em;
+}
+
+.text-normal {
+  font-weight: normal;
+}
+
+.text-italic {
+  font-style: italic;
+}
+
+.text-bold {
+  font-weight: $bold-weight;
+}

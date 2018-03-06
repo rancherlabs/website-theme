@@ -3,6 +3,7 @@
 {{ end }}
 
 {{ define "hero" }}
+theme/layouts/_default/list.html
   <section class="hero">
     {{ with .Params.Title }}
       <h1>{{ . }}</h1>
@@ -15,10 +16,12 @@
 {{ end }}
 
 {{ define "main" }}
-  {{ partial "breadcrumbs.html" . }}
-  <div class="">
+  <div class="wrapper">
+    {{ partial "breadcrumbs.html" . }}
+
     <div class="row">
       <article class="main-content col-sm-8 col-xs-12">
+
       {{ .Content }}
         {{ range .Pages }}
           <div class="box m-b-md">
@@ -37,9 +40,7 @@
       </article>
 
       <aside class="col-sm-4 col-xs-12">
-        <div class="bg-default p-h-md p-v-sm">
-          {{ partial "sidebar.html" . }}
-        </div>
+        {{ partial "sidebar.html" . }}
       </aside>
     </div>
   </div>

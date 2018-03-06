@@ -61,14 +61,6 @@
 
 .bg-default {
   background-color: $bg-default;
-
-  a {
-    color: $primary;
-
-      &:before {
-        background: rgba($primary, .2);
-      }
-  }
 }
 
 .bg-accent {
@@ -106,7 +98,9 @@
 }
 .bg-link {
   background-color: $link-color;
-  color: white;
+  > * {
+    color: white;
+  }
 }
 .bg-white {
   background-color: white;

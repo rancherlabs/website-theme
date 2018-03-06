@@ -1,4 +1,4 @@
-.breadcrumbs {
+ol.breadcrumbs {
   display: flex;
   list-style: none;
   font-size: .75em;
@@ -7,6 +7,11 @@
   padding-left: 0;
 
   li {
+    list-style-type: none;
+    &:before {
+      display: none;
+    }
+
     &:after {
       content: "keyboard_arrow_right";
       font-family: 'Material Icons';

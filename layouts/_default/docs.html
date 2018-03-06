@@ -15,8 +15,7 @@
 {{ end }}
 
 {{ define "main" }}
-  <div class="main-content">
-    {{ partial "breadcrumbs.html" . }}
+  <div class="">
     <nav>
       <ul class="tabs">
         {{ range .Site.Sections }}
@@ -34,7 +33,6 @@
 
 
         <ul class="unstyled main-menu row middle-md m-v-sm">
-
           <li class="dropdown sub-menu">
             <a href="" class="btn bg-link">
               <span>Lang</span>
@@ -49,7 +47,6 @@
         </ul>
 
         <ul class="unstyled main-menu row middle-md m-v-sm">
-
           <li class="dropdown sub-menu">
             <a href="" class="btn bg-link">
               <span>Version</span>
@@ -95,6 +92,7 @@
       </aside>
 
       <article class="main-content col-sm-8 col-xs-12">
+      {{ partial "breadcrumbs.html" . }}
       {{ .Content }}
         {{ range .Pages }}
           <div class="box m-b-md">

@@ -1,24 +1,28 @@
-<h3 class="m-t-0 m-b-sm">Blog</h3>
-{{ range first 5 (where .Site.Pages "Section" "blog") }}
-    <div class="row aside-item">
-      <div class="bg-accent col-md row middle-md center-md"><i class="material-icons">question_answer</i></div>
-      <div class="col-md aside-info">
-        <h3 class="light"><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
-        {{ .Date.Format "02 Jan, 2006" }}
+<div class="bg-default p-h-md p-v-sm">
+  <h3 class="m-t-0 m-b-sm">Recent Posts</h3>
+  {{ range first 5 (where .Site.Pages "Section" "blog") }}
+      <div class="row aside-item">
+        <div class="bg-accent col-md row middle-md center-md"><i class="material-icons">question_answer</i></div>
+        <div class="col-md aside-info">
+          <h3><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
+          {{ .Date.Format "02 Jan, 2006" }}
+        </div>
       </div>
-    </div>
-{{ end }}
+  {{ end }}
+</div>
 
 
-<h3 class="m-t-0 m-b-sm p-t-md">Events</h3>
-<div id="events-list-injected"> </div>
+<div class="bg-default p-h-md p-v-sm m-t-sm">
+  <h3 class="m-t-0 m-b-sm">Upcoming Events</h3>
+  <div id="events-list-injected"> </div>
 
-{{ range first 5 (where .Site.Pages "Section" "events") }}
-    <div class="row aside-item">
-      <div class="bg-accent col-md row middle-md center-md"><i class="material-icons">event</i></div>
-      <div class="col-md aside-info">
-        <h3 class="light"><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
-        {{ .Date.Format "02 Jan, 2006" }}
+  {{ range first 5 (where .Site.Pages "Section" "events") }}
+      <div class="row aside-item">
+        <div class="bg-accent col-md row middle-md center-md"><i class="material-icons">event</i></div>
+        <div class="col-md aside-info">
+          <h3><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
+          {{ .Date.Format "02 Jan, 2006" }}
+        </div>
       </div>
-    </div>
-{{ end }}
+  {{ end }}
+</div>

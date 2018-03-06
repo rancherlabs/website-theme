@@ -3,9 +3,7 @@
 // -----------------------------------------------------------------------------
 
 header {
-  border-bottom: solid $info 3px;
   padding: 0 1rem;
-  // background: #123;
 
   nav {
     > ul.main-menu {
@@ -20,8 +18,7 @@ header {
         a.btn {
           border-bottom: 0;
           transition: ease-in-out .15s all;
-          // color: white;
-          color: $link-color;
+          color: white;
           padding: 1.25rem;
           text-transform: uppercase;
           font-weight: bold;
@@ -29,7 +26,7 @@ header {
           letter-spacing: 1px;
 
           &:hover {
-            color: darken($info, 15%);
+            color: rgba(255,255,255,.5);
           }
         }
 
