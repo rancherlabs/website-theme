@@ -18,7 +18,13 @@
 
     {{ end }}
 
-    <section class="wrapper">
+
+<!--     <p>Layout: {{ printf "%#v" .Layout }}</p>
+    <p>Kind: {{ printf "%#v" .Kind }}</p>
+    <p>Type: {{ printf "%#v" .Type }}</p> -->
+
+
+    <section class="p-v-sm">
       {{ block "main" . }}
         <!-- The part of the page that begins to differ between templates -->
       {{ end }}

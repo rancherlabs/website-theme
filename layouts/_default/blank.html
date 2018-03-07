@@ -1,0 +1,15 @@
+{{ define "hero" }}
+  <section class="hero bg-link">
+    {{ with .Params.pageHeader }}
+      <h1>{{ . }}</h1>
+    {{end}}
+
+    {{ with .Params.subTitle }}
+      <p class="p-t-md">{{ . }}</p>
+      {{end}}
+  </section>
+{{ end }}
+
+{{ define "main" }}
+  {{ .Content }}
+{{ end }}

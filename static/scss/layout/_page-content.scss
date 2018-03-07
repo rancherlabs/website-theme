@@ -1,11 +1,13 @@
 .hero {
   padding-bottom: $spacer-lg;
   color: white;
-  background: url(../../img/login-container-farm.svg);
-  background-size: cover;
-  background-position: center center;
+  background: url(../../img/header-farm.svg);
+  background-color: #a0d9dd;
+  // background: url(../../img/header-dark.svg);
+  background-position: bottom right;
   text-align: center;
   background-attachment: fixed;
+  background-repeat: no-repeat;
 
   h1 {
     text-shadow: 4px 4px 6px rgba(0, 0, 0, .45);
@@ -39,6 +41,20 @@
   border-right: solid 2px $light-grey;
 }
 
+.cloud {
+  background-image: url(../../img/cloud-band.svg);
+  background-repeat: repeat-x;
+  background-position: bottom;
+  padding-bottom: 14rem;
+}
+
+.desks {
+  background-image: url(../../img/desks.svg);
+  background-repeat: no-repeat;
+  background-position: right center;
+}
+
+//main content
 .main-content {
   p {
     margin-bottom: 1.75em;
