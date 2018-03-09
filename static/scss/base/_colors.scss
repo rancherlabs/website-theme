@@ -60,7 +60,7 @@
 }
 
 .bg-default {
-  background-color: $bg-default;
+  background-color: lighten($bg-default, 2%);
 }
 
 .bg-accent {

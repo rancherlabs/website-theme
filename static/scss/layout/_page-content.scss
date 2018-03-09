@@ -1,5 +1,5 @@
 .hero {
-  padding-bottom: $spacer-lg;
+  padding: $spacer-lg 0;
   color: white;
   background: url(../../img/header-farm.svg);
   background-color: #a0d9dd;
@@ -34,6 +34,12 @@
 .box {
   border: $light-grey solid 3px;
 
+  h2 {
+    font-size: 2em;
+    font-family: "Prompt", "Helvetica Neue Light", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+    font-weight: 300;
+  }
+
   h3 {
     border-bottom: solid $light-grey 2px;
     padding-bottom: 10px;
@@ -64,6 +70,8 @@
 
 //main content
 .main-content {
+  font-weight: 300;
+
   p {
     margin-bottom: 1.75em;
 

@@ -280,10 +280,11 @@ h3>code {
 }
 
 pre {
-  background-color: $secondary;
+  background-color: $bg-default;
   padding: $spacer-sm;
   white-space: pre-wrap;
   word-wrap: break-word;
+  font-size: 1.8em;
 }
 
 code {
