@@ -429,7 +429,7 @@ ul {
 
 //text helpers
 .text-sm {
-  font-size: 1rem;
+  font-size: .8rem;
   line-height: 1.5;
   font-weight: 300;
 }
@@ -473,10 +473,6 @@ ul {
 
 .text-right {
   text-align: right!important;
-}
-
-.text-small {
-  font-size: .8em;
 }
 
 .text-normal {

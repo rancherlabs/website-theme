@@ -1,13 +1,14 @@
 .hero {
   padding: $spacer-lg 0;
   color: white;
-  background: url(../../img/header-farm.svg);
-  background-color: #a0d9dd;
+  background: url(../../img/header-5.svg);
+  // background-color: #a0d9dd;
   // background: url(../../img/header-dark.svg);
   background-position: bottom right;
   text-align: center;
-  background-attachment: fixed;
+  // background-attachment: fixed;
   background-repeat: no-repeat;
+  background-size: cover;
 
   h1 {
     text-shadow: 4px 4px 6px rgba(0, 0, 0, .45);

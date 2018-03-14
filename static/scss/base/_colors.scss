@@ -47,7 +47,7 @@
 }
 .help-block {
   @extend .text-muted;
-  @extend .text-small;
+  @extend .text-sm;
   margin: 5px 0 0 0;
 
   a {

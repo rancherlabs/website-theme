@@ -14,4 +14,10 @@
       filter: grayscale(0);
     }
   }
+
+  .testimonial {
+    text-align: left;
+    font-size: .8rem;
+    @extend .shadow;
+  }
 }
