@@ -13,6 +13,7 @@ body {
   font-family: $text-font-stack;
   color: $text-color;
   counter-reset: sidenote-counter;
+  font-weight: 300;
   letter-spacing: .03em;
 }
 
@@ -46,7 +47,6 @@ h3 {
   margin-top: 2rem;
   margin-bottom: 0;
   line-height: 1;
-  text-transform: uppercase;
   letter-spacing: .5px;
   color: $mid-grey;
   font-weight: bold;
@@ -143,6 +143,7 @@ cite {
   padding-top: 10px;
   letter-spacing: .5px;
   color: $mid-grey;
+  font-size: 1.5em;
 }
 
 // blockquote p { width: 55%;
@@ -449,13 +450,10 @@ ul {
 
 //alternative styles
 .lead {
-  p {
-    font-size: 2em;
-    line-height: 3rem;
-    font-weight: 100;
-    color: $info;
-    text-align: center;
-  }
+  font-size: 2em;
+  line-height: 3rem;
+  font-weight: 100;
+  color: $info;
 }
 
 .light {

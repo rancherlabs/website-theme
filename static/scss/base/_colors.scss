@@ -98,12 +98,17 @@
 }
 .bg-link {
   background-color: $link-color;
-  > * {
+
+  * {
     color: white;
   }
 }
 .bg-white {
   background-color: white;
+}
+
+.bg-white-transparent {
+  background-color: rgba(255,255,255,.3);
 }
 
 .bg-transparent {
