@@ -188,6 +188,10 @@ fieldset[disabled] .btn {
       border-radius: 0 1.5px 1.5px 0;
     }
 
+    > span {
+      display: inline-block;
+    }
+
      .btn, .btn-xs{
         position: relative;
         display: inline-block;
@@ -207,6 +211,11 @@ fieldset[disabled] .btn {
             z-index: 2;
         }
     }
+}
+
+//other button styles
+.border-btn {
+  border: solid thin;
 }
 
 //hubspot

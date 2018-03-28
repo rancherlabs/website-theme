@@ -48,8 +48,9 @@ h3 {
   margin-bottom: 0;
   line-height: 1;
   letter-spacing: .5px;
+  font-family: $text-font-stack;
   color: $mid-grey;
-  font-weight: bold;
+  font-weight: 100;
 }
 
 hr {
@@ -414,6 +415,12 @@ label.margin-toggle:not(.sidenote-number) {
   // overflow: hidden;
   // -webkit-font-smoothing: antialiased;
   vertical-align: middle;
+
+  &.dot {
+    border: solid 3px;
+    border-radius: 50%;
+
+  }
 }
 
 
@@ -439,13 +446,12 @@ ul {
   font-size: 2rem;
   line-height: 3rem;
   font-weight: 100;
-  color: $info;
-  text-align: center;
 }
 
 .text-lg {
   font-size: 3rem;
-  line-height: 4;
+  line-height: 4rem;
+  font-weight: 100;
 }
 
 //alternative styles

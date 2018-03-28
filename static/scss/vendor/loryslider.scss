@@ -5,7 +5,7 @@
 .slider {
     position: relative;
     // width: 320px;
-    // margin: 0 auto 40px;
+    margin: 0 auto 40px;
     -webkit-user-select: none;
     -khtml-user-select: none;
     -moz-user-select: -moz-none;
@@ -34,6 +34,11 @@
 
 .slides {
     display: inline-block;
+
+    li {
+    position: relative;
+    display: inline-block;
+  }
 }
 
 .simple > .frame li,
@@ -176,10 +181,10 @@
      * Slider specific styles
      */
 
-    // .slider {
-    //     width: 640px;
-    //     margin: 0 auto 20px;
-    // }
+    .slider {
+        // width: 640px;
+        margin: 0 auto 20px;
+    }
 
     .simple > .frame li,
     .rewind > .frame li,
@@ -203,28 +208,28 @@
      * Demo Page Styles
      */
 
-    .examplecode {
-        width: 880px;
-    }
+     .examplecode {
+         width: 880px;
+     }
 
     /**
      * Slider specific styles
      */
 
-    // .slider {
-    //     width: 980px;
-    //     margin: 0 auto 20px;
-    // }
+     .slider {
+         // width: 980px;
+         margin: 0 auto 20px;
+     }
 
     .frame,
     .events_log {
-        width: 880px;
+       width: 880px;
     }
 
     .simple > .frame li,
     .rewind > .frame li,
     .events > .frame li {
-        width: 880px;
+      width: 880px;
     }
 
     .variablewidth li {

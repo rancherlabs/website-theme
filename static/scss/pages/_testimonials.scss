@@ -21,3 +21,25 @@
     @extend .shadow;
   }
 }
+
+
+//homepage testimonials
+.hp-testimonials {
+  position: relative;
+
+
+  img {
+    max-height: 75px;
+    filter: grayscale(100%);
+    transition: ease-in-out all .3s;
+
+    &:hover {
+      filter: grayscale(0);
+    }
+  }
+
+  .testimonial, .testimonial blockquote {
+    text-align: left;
+    color: $link-color;
+  }
+}

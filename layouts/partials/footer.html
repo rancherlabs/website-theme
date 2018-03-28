@@ -93,20 +93,8 @@
 <!-- <script async="async" charset="utf-8" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/izimodal/1.5.1/js/iziModal.min.js"></script> -->
 <script charset="utf-8" type="text/javascript" src="{{ .Site.BaseURL }}js/vendor.js"></script>
 <script charset="utf-8" type="text/javascript" src="{{ .Site.BaseURL }}js/app.js"></script>
-<script type="text/javascript">
 
-  var _gaq = _gaq || [];
-  _gaq.push(['_setAccount', 'UA-XYSYXYSY-X']);
-  _gaq.push(['_trackPageview']);
+{{ partial "tracking.html" . }}
 
-  (function() {
-    var ga = document.createElement('script');
-    ga.src = ('https:' == document.location.protocol ? 'https://ssl' :
-        'http://www') + '.google-analytics.com/ga.js';
-    ga.setAttribute('async', 'true');
-    document.documentElement.firstChild.appendChild(ga);
-  })();
-
-</script>
 </body>
 </html>

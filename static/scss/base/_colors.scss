@@ -98,13 +98,19 @@
 }
 .bg-link {
   background-color: $link-color;
+  color: white;
 
   * {
     color: white;
   }
+
+  .border-right > * {
+    border-right: solid 2px darken($link-color, 5%);
+  }
 }
 .bg-white {
   background-color: white;
+  color: $text-color;
 }
 
 .bg-white-transparent {

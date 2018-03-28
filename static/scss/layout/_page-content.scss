@@ -52,8 +52,12 @@
   }
 }
 
-.border-right {
+.border-right > * {
   border-right: solid 2px $light-grey;
+
+  &:last-child {
+    border-right: none;
+  }
 }
 
 .cloud {
@@ -61,6 +65,23 @@
   background-repeat: repeat-x;
   background-position: bottom;
   padding-bottom: 14rem;
+}
+
+.cloud-after {
+  position: relative;
+
+  &:after {
+    content: url(../../img/cloud-band.svg);
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -3px;
+  }
+
+  div {
+    position: relative;
+    // z-index: 3;
+  }
 }
 
 .desks {
