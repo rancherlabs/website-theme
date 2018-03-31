@@ -216,6 +216,12 @@ fieldset[disabled] .btn {
 //other button styles
 .border-btn {
   border: solid thin;
+
+  &:hover {
+    border: solid thin;
+    color: inherit;
+    background-color: rgba(255,255,255,.25);
+  }
 }
 
 //hubspot

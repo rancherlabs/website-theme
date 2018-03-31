@@ -18,7 +18,8 @@ a {
   transition: ease-in-out all .25s;
 
   @include on-event {
-    color: $text-color;
+    // color: $text-color;
+    opacity: .5;
     text-decoration: underline;
   }
 

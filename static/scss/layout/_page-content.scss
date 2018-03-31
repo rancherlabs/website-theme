@@ -1,17 +1,16 @@
 .hero {
   padding: $spacer-lg 0;
-  color: $link-color;
-  background: url(../../img/header-6.svg);
-  // background-color: #a0d9dd;
-  // background: url(../../img/header-dark.svg);
-  background-position: bottom right;
+  color: white;
+  background: url(../../img/farm-k8s.svg);
+  background-size: cover;
+  background-position: center;
   text-align: center;
   // background-attachment: fixed;
   background-repeat: no-repeat;
   background-color: #f5fafd;
 
   h1 {
-    // text-shadow: 4px 4px 6px rgba(0, 0, 0, .45);
+    text-shadow: 4px 4px 6px rgba(0, 0, 0, .25);
     margin: 0;
   }
   .byline {
