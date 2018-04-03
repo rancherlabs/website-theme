@@ -8,6 +8,7 @@
   // background-attachment: fixed;
   background-repeat: no-repeat;
   background-color: #f5fafd;
+  // min-height: 350px;
 
   h1 {
     text-shadow: 4px 4px 6px rgba(0, 0, 0, .25);
@@ -336,4 +337,20 @@ ul {
 //styling helpers
 .shadow {
   box-shadow: 0 0 15px rgba(0,0,0,.15);
+}
+
+//pagination
+.pagination {
+  display: flex;
+  list-style: none;
+
+  li {
+    @extend .btn;
+    @extend .bg-default;
+    margin: 0 3px;
+
+    &.active {
+      @extend .bg-link;
+    }
+  }
 }

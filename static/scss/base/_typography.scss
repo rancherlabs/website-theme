@@ -50,7 +50,8 @@ h3 {
   letter-spacing: .5px;
   font-family: $text-font-stack;
   color: $mid-grey;
-  font-weight: 100;
+  // font-weight: 100;
+  text-transform: uppercase;
 }
 
 hr {
@@ -445,20 +446,17 @@ ul {
 .text-md {
   font-size: 2rem;
   line-height: 3rem;
-  font-weight: 100;
 }
 
 .text-lg {
   font-size: 3rem;
   line-height: 4rem;
-  font-weight: 100;
 }
 
 //alternative styles
 .lead {
   font-size: 2em;
   line-height: 3rem;
-  font-weight: 100;
   color: $info;
 }
 

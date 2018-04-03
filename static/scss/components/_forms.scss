@@ -342,11 +342,15 @@ footer {
 }
 
 .hbspt-form  form, .hbspt-form .hs-form-field {
-  width: 100%;
-  display: flex;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+  // width: 100%;
+  // display: flex;
+  // -webkit-box-align: center;
+  // -ms-flex-align: center;
+  // align-items: center;
+
+  div {
+    padding-bottom: $spacer-xs;
+  }
 
   .input {
     width: 100%;
@@ -359,6 +363,7 @@ footer {
 
 fieldset {
   width: 100%;
+  max-width: 100% !important;
 
   .input {
     width: 100%;
@@ -369,6 +374,8 @@ body .hs-button.primary,
 body input[type="submit"],
 body input[type="button"] {
   @extend .btn;
+  border-radius: 0;
+  padding: .5rem;
 }
 
 body .hs-button.primary:hover,

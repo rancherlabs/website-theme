@@ -20,10 +20,11 @@
     {{ partial "breadcrumbs.html" . }}
 
     <div class="row">
-      <article class="main-content col-sm-8 col-xs-12 p-r-lg">
+      <article class="col-sm-8 col-xs-12 p-r-lg">
+        <div class="main-content ">
 
       {{ .Content }}
-        {{ range .Pages }}
+        {{ range (.Paginator 5).Pages }}
           <div class="box m-b-md">
               <div class="p-a-sm">
                 <h3><a href="{{.URL}}">{{.Title}}</a></h3>
@@ -42,6 +43,8 @@
               </div>
           </div>
         {{ end }}
+      </div>
+        {{ template "_internal/pagination.html" . }}
       </article>
 
       <aside class="col-sm-4 col-xs-12">
