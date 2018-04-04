@@ -85,15 +85,16 @@ header {
   visibility: visible;
 }
 
-.ml-stack-nav-toggle,
-  .ml-stack-nav-1 {
-    visibility: hidden;
-  }
-}
+ .ml-stack-nav-toggle,
+ .ml-stack-nav-1 {
+     visibility: hidden !important;
+   }
+ 
 
 .ml-stack-nav__menu {
   list-style: none;
   background: $accent;
+  border: 0;
 }
 
 .ml-stack-nav__item {
