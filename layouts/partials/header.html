@@ -22,17 +22,18 @@
   {{ partial "mobile-nav.html" . }}
 <div> <!--container ends in footer html-->
   <header class="p-h-sm">
-    <div class="row middle-md"><!--top row-->
-        <div class="col-md-2">
-          <a href="/"><img src="/img/rancher-logo-horiz-white.svg" width="250" height="37"></a>
+    <div class="row middle-md between-md">
+        <div class="pull-left">
+          <a href="/"><img src="/img/rancher-logo-horiz-white.svg" width="150" height="22"></a>
         </div>
-        <div class="col-md">
+        <div class="">
           {{ partial "main-nav.html" . }}
         </div>
 
-        <div class="col-md text-right">
-          <a href="/quick-start" class="btn"><i class="material-icons">cloud_upload</i> Deploy Rancher</a>
-          <a href="/support" class="btn"><i class="material-icons">chat</i> Get Support</a>
+        <div class="pull-right">
+          <a href="/quick-start" class="text-white p-r-sm"><i class="material-icons">cloud_upload</i> Deploy Rancher</a>
+          <a href="/support" class="text-white"><i class="material-icons">chat</i> Get Support</a>
         </div>
-    </div>
+      </div>
+ 
   </header>
