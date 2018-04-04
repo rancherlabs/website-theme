@@ -21,7 +21,7 @@
 <body lang="en">
   {{ partial "mobile-nav.html" . }}
 <div> <!--container ends in footer html-->
-  <header class="p-h-lg bg-link">
+  <header class="p-h-sm">
     <div class="row middle-md"><!--top row-->
         <div class="col-md-2">
           <a href="/"><img src="/img/rancher-logo-horiz-white.svg" width="250" height="37"></a>
@@ -30,7 +30,9 @@
           {{ partial "main-nav.html" . }}
         </div>
 
-        <a href="/quick-start" class="btn"><i class="material-icons">flight_takeoff</i> Deploy Rancher</a>
-        <a href="/support" class="btn"><i class="material-icons">perm_phone_msg</i> Get Support</a>
+        <div class="col-md text-right">
+          <a href="/quick-start" class="btn"><i class="material-icons">cloud_upload</i> Deploy Rancher</a>
+          <a href="/support" class="btn"><i class="material-icons">chat</i> Get Support</a>
+        </div>
     </div>
   </header>
