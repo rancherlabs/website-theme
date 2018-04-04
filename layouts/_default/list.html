@@ -28,7 +28,7 @@
           <div class="box m-b-md">
               <div class="p-a-sm">
                 <h3><a href="{{.URL}}">{{.Title}}</a></h3>
-                {{ .Summary | safeHTML }}
+                <p>{{ .Summary | safeHTML }}</p>
                 {{ if .Truncated }}
                 <div>
                   <a href="{{ .RelPermalink }}">Read More…</a>

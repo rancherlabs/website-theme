@@ -1,0 +1,52 @@
+<a href="#ml-stack-nav-1" class="ml-stack-nav-toggle btn bg-accent" aria-controls="ml-stack-nav-1" title="Toggle the navigation">
+    <span class="ml-stack-nav-toggle__line"></span>
+    <span class="ml-stack-nav-toggle__line"></span>
+    <span class="ml-stack-nav-toggle__line"></span>
+</a>
+
+<!--no js toggle-->
+<!-- <div class="mobile-header">
+    <a href="#ml-stack-nav-1" class="ml-stack-nav-toggle btn bg-accent" aria-controls="ml-stack-nav-1" title="Toggle the navigation">menu toggle</a>
+</div>
+ -->
+<nav id="ml-stack-nav-1" class="ml-stack-nav js-ml-stack-nav" aria-expanded="false">
+<ul class="ml-stack-nav__menu">
+
+{{ $currentPage := . }}
+    {{ range .Site.Menus.main }}
+      {{ if .HasChildren }}
+        <li class="ml-stack-nav__item">
+            <div class="ml-stack-nav__item-inner">
+                <a href="{{ .URL }}" class="ml-stack-nav__link">
+                    {{ .Name }}
+                </a>
+                <button class="btn bg-link ml-stack-nav__next js-ml-stack-nav-next" type="button" title="Go to the next level"><i class="material-icons">keyboard_arrow_right</i></button>
+            </div>
+
+
+            <ul class="ml-stack-nav__menu">
+                <li class="ml-stack-nav__item">
+                    <button class="btn bg-link ml-stack-nav__back js-ml-stack-nav-back" type="button" title="Go to the previous level"><i class="material-icons">keyboard_arrow_left</i> Back</button>
+                </li>
+            {{ range .Children }}
+
+                <li class="ml-stack-nav__item">
+                    <div class="ml-stack-nav__item-inner">
+                        <a href="{{ .URL }}" class="ml-stack-nav__link">
+                            {{ .Name }}
+                        </a>
+                </li>
+             {{ end }}
+          </ul>
+          {{else}}
+            <li class="ml-stack-nav__item">
+              <a href="{{.URL}}" class="btn">
+                {{ .Pre }}
+                <span>{{ .Name }}</span>
+              </a>
+            </li>
+        </li>
+    {{end}}
+{{end}}
+</ul>
+</nav>

@@ -1,7 +1,22 @@
-  <footer class="bg-default p-v-md p-h-sm">
+  <footer class="bg-default p-t-md p-b-sm p-h-sm">
     <div class="container-fluid">
+      <div class="row col-lg-7 col-xs-12 middle-md end-md">
+        <p class="col-md text-md m-a-0 p-a-0">Get the latest news & offers</p>
+        <div class="col-md">
+          <!--[if lte IE 8]>
+          <script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/v2-legacy.js"></script>
+          <![endif]-->
+          <script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/v2.js"></script>
+          <script>
+            hbspt.forms.create({
+              css: '',
+              portalId: '468859',
+              formId: '8beed251-ecf0-49fc-93a1-fa9b1446110f'
+            });
+          </script>
+        </div>
+      </div>
       <div class="row">
-        <div class="row col-lg-8 col-xs-12 start-md">
           <div class="col-lg-2 col-md-4 col-xs-12">
             <h3>Products</h3>
             <ul class="unstyled">
@@ -23,7 +38,7 @@
             <ul class="unstyled">
               <li><a href="https://info.rancher.com/schedule-a-rancher-demo" target="blank">Schedule a demo</a></li>
               <li><a href="/training">Rancher Kubernetes Training</a></li>
-              <li><a href="/learn">Learning Resources</a></li>
+              <!-- <li><a href="/learn">Learning Resources</a></li> -->
           </ul>
           </div>
 
@@ -33,8 +48,8 @@
             <ul class="unstyled">
               <li><a href="/about">About Us</a></li>
               <li><a href="/blog">Blog</a></li>
-              <li><a href="/news">Press</a></li>
-              <li><a href="/careers">Careers</a></li>
+<!--               <li><a href="/news">Press</a></li>
+ -->          <li><a href="/careers">Careers</a></li>
             </ul>
           </div>
 
@@ -57,33 +72,24 @@
               <li><a href="/privacy">Privacy</a></li>
             </ul>
           </div>
-        </div>
-
-        <div class="col-lg-4 col-xs-12 end-md">
-          <h3>Get the latest news & offers</h3>
-          <!--[if lte IE 8]>
-          <script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/v2-legacy.js"></script>
-          <![endif]-->
-          <script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/v2.js"></script>
-          <script>
-            hbspt.forms.create({
-              css: '',
-              portalId: '468859',
-              formId: '8beed251-ecf0-49fc-93a1-fa9b1446110f'
-            });
-          </script>
-
-          <div class="row end-sm middle-md social">
-            <a class="p-a-sm" href="https://slack.rancher.io/"><img src="{{ .Site.BaseURL }}/img/icon-slack.svg" height="20" width="20"></a>
-            <a class="p-a-sm" href="https://github.com/rancher/rancher"><img src="{{ .Site.BaseURL }}/img/icon-github.svg" height="20" width="20"></a>
-            <a class="p-a-sm" href="https://twitter.com/Rancher_Labs"><img src="{{ .Site.BaseURL }}/img/icon-twitter.svg" height="20" width="20"></a>
-            <a class="p-a-sm" href="https://www.facebook.com/rancherlabs/"><img src="{{ .Site.BaseURL }}/img/icon-facebook.svg" height="20" width="20"></a>
-            <a class="p-a-sm" href="https://www.linkedin.com/groups/6977008/profile"><img src="{{ .Site.BaseURL }}/img/icon-linkedin.svg" height="20" width="20"></a>
-          </div>
-        </div>
       </div>
 
-      <div class="text-small text-muted text-center p-a-sm">© 2015-{{ .Now.Year }} RANCHER LABS, INC. ALL RIGHTS RESERVED.</div>
+      <hr/>
+
+      <div class="row between-md middle-md">
+        <div class="row social">
+          <a class="p-a-xs" href="https://slack.rancher.io/"><img src="{{ .Site.BaseURL }}/img/icon-slack.svg" height="20" width="20"></a>
+          <a class="p-a-xs" href="https://github.com/rancher/rancher"><img src="{{ .Site.BaseURL }}/img/icon-github.svg" height="20" width="20"></a>
+          <a class="p-a-xs" href="https://twitter.com/Rancher_Labs"><img src="{{ .Site.BaseURL }}/img/icon-twitter.svg" height="20" width="20"></a>
+          <a class="p-a-xs" href="https://www.facebook.com/rancherlabs/"><img src="{{ .Site.BaseURL }}/img/icon-facebook.svg" height="20" width="20"></a>
+          <a class="p-a-xs" href="https://www.linkedin.com/groups/6977008/profile"><img src="{{ .Site.BaseURL }}/img/icon-linkedin.svg" height="20" width="20"></a>
+          </div>
+
+          <div class="text-small text-muted text-center">© 2015-{{ .Now.Year }} RANCHER LABS, INC. ALL RIGHTS RESERVED.</div>
+        
+      </div>
+
+      
     </div>
   </footer>
 </div><!--end of container that starts in header.html-->
@@ -95,6 +101,5 @@
 <script charset="utf-8" type="text/javascript" src="{{ .Site.BaseURL }}js/app.js"></script>
 
 {{ partial "tracking.html" . }}
-
 </body>
 </html>
