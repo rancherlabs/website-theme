@@ -81,28 +81,15 @@ header {
 
 
 //mobile nav
-header {
-  visibility: visible;
+.ml-stack-nav-toggle {
+  width: 50px;
+
+    &__line {
+      background: #fff;
+    }
 }
-
- .ml-stack-nav-toggle,
- .ml-stack-nav-1 {
-     visibility: hidden !important;
-   }
- 
-
-.ml-stack-nav__menu {
-  list-style: none;
-  background: $accent;
-  border: 0;
-}
-
-.ml-stack-nav__item {
-  width: 100%
-}
-
 .ml-stack-nav {
-  margin-top: 50px;
+  top: 75px;
   right: 0;
   bottom: 0;
   left: 0;
@@ -111,32 +98,21 @@ header {
 
   &__menu {
     list-style: none;
+    border: none;
+    box-shadow: 0px 0px 10px rgba(0,0,0,.25);
+    background: #fff;
   }
-
   &__link {
     display: block;
-    padding: 0.5em 80px 0.5em 1.5em;
-    text-decoration: none;
-    color: white;
-
-    &:focus,
-    &:hover {
-      opacity: 0.5;
-    }
+    padding: 1.5em 80px 1.5em 1.5em;
   }
 
-  &__back {
-    width: 100%;
-    border: 0;
-    text-align: left;
-    cursor: pointer;
-
-    &:focus,
-    &:hover {
-      opacity: 0.5;
-    }
+  &__item {
+    border-bottom: solid thin $border;
   }
-
+  &__item-inner {
+    position: relative;
+  }
   &__next {
     position: absolute;
     top: 0;
@@ -146,19 +122,9 @@ header {
     cursor: pointer;
     width: 70px;
     text-align: center;
-
-    &:focus,
-    &:hover {
-      opacity: 0.5;
-    }
+    background: $link-color;
   }
-
-  &--slide-left {
-    &.is-open,
-    .is-open {
-      > .ml-stack-nav__menu {
-        box-shadow: 5px 0 10px 0 rgba(#000, 0.25);
-      }
-    }
+  &__back {
+    width: 100%;
   }
 }

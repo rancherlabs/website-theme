@@ -1,15 +1,6 @@
 ///768
 @media only screen and (max-width: map-get($breakpoints, medium)) {
-  body {
-    background: maroon;
-  }
-
   header {
-    visibility: hidden;
-  }
-
-  .ml-stack-nav-toggle,
-  .ml-stack-nav-1 {
-    visibility: visible !important;
+    display: none;  
   }
 }
