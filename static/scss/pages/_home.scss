@@ -18,3 +18,7 @@
   background-image: url(../img/testimonial-bg.png);
   background-size: contain;
 }
+
+.testimonial:before {
+  content: "";
+}
