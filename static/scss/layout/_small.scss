@@ -13,7 +13,7 @@
 // }
 
 /*695-959*/
-@media (max-width: map-get($breakpoints, small)) {
+@media all and (min-width: map-get($breakpoints, small)) {
   .border-right > * {
     border-bottom: solid 2px $light-grey;
     border-right: none;
@@ -22,5 +22,9 @@
   .bg-link .border-right > * {
     border-bottom: solid 2px #268bcf;
     border-right: none;
+  }
+
+  .hidden-xs {
+    display: none;
   }
 }
