@@ -1,5 +1,5 @@
 ///768
-@media (max-width: map-get($breakpoints, medium)) {
+@media all and (max-width: map-get($breakpoints, medium)) {
   header {
     display: none;  
   }
