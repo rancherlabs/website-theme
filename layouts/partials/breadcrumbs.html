@@ -1,4 +1,4 @@
-{{ $url := replace .Permalink ( printf "%s" .Site.BaseURL) "" }}
+<!-- {{ $url := replace .Permalink ( printf "%s" .Site.BaseURL) "" }}
 {{ $.Scratch.Add "path" .Site.BaseURL }}
 <ol class="row middle-xs breadcrumbs">
   <li><a href="/">home</a></li>
@@ -9,4 +9,22 @@
       {{ $.Scratch.Add "path" "/" }}
       {{ end }}
   {{ end }}
+</ol> -->
+
+<ol class="row middle-xs breadcrumbs">
+  {{ template "breadcrumb" dict "currentPage" .Page "id" .UniqueID }}
 </ol>
+
+<!-- templates -->
+{{ define "breadcrumb" }}
+  {{ if .currentPage.Parent }}
+    {{ template "breadcrumb" dict "currentPage" .currentPage.Parent }}
+  {{ end }}
+  <li>
+    {{ if eq .id .currentPage.UniqueID }}
+      {{ .currentPage.Title }}
+    {{ else }}
+      <a href="{{ .currentPage.URL }}">{{ .currentPage.Title }}</a>
+    {{ end }}
+  </li>
+{{ end }}
