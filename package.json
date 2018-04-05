@@ -1,6 +1,6 @@
 {
     "name": "rancher-website-theme",
-    "version": "1.0.1",
+    "version": "1.0.3",
     "description": "UI theme used on Rancher Marketing sites",
     "repository": "https://github.com/rancherlabs/website-theme.git",
     "author": "Rancher Labs, Inc.",
