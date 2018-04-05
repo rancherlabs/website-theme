@@ -14,17 +14,8 @@
 
 /*695-959*/
 @media all and (min-width: map-get($breakpoints, small)) {
-  .border-right > * {
-    border-bottom: solid 2px $light-grey;
-    border-right: none;
-  }
 
-  .bg-link .border-right > * {
-    border-bottom: solid 2px #268bcf;
-    border-right: none;
-  }
-
-  .hidden-xs {
+  .hidden-sm {
     display: none;
   }
 }

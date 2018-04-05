@@ -11,4 +11,18 @@
   .hidden-md {
     display: none;
   }
+    .border-right > * {
+    border-bottom: solid 2px $light-grey;
+    border-right: none;
+  }
+
+  .bg-link .border-right > * {
+    border-bottom: solid 2px #268bcf;
+    border-right: none;
+  }
+
+  //homepage
+  .add-cluster {
+    background-image: url()!important;
+  }
 }
