@@ -25,4 +25,9 @@
   .add-cluster {
     background-image: url()!important;
   }
+
+  section .wrapper {
+    width: 100%;
+    padding: $spacer-sm;
+  }
 }
