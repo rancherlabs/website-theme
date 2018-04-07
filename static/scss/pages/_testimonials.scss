@@ -14,14 +14,13 @@
       filter: grayscale(0);
     }
   }
-
-  .testimonial {
-    text-align: left;
-    font-size: .8rem;
-    @extend .shadow;
-  }
 }
 
+.testimonial {
+  border: solid thin $light-grey;
+  box-shadow: 0 0 15px $shadow;
+  background-color: white;
+}
 
 //homepage testimonials
 .hp-testimonials {

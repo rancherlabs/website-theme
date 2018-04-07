@@ -11,7 +11,7 @@ $lg-padding: 1.25rem 1.5rem;
 // This file contains all styles related to the button component.
 // -----------------------------------------------------------------------------
 button {
-  background: $bg-default;
+  -webkit-appearance: none;
 }
 
 .btn,
@@ -222,6 +222,10 @@ fieldset[disabled] .btn {
     color: inherit;
     background-color: rgba(255,255,255,.25);
   }
+}
+
+//modals
+.modal-open {
 }
 
 //hubspot
