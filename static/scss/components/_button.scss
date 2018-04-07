@@ -229,6 +229,10 @@ fieldset[disabled] .btn {
 .modal-open {
 }
 
+.tingle-btn {
+  @extend .bg-link;
+}
+
 //hubspot
 .hs-button.primary {
   background-color: $primary;
