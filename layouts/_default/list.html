@@ -37,8 +37,23 @@
               </div>
               <div class="bg-default">
                 <div class="row">
-                  <div class="p-h-sm p-v-xs"><i class="material-icons">person_outline</i> By: {{ .Params.Author }}</div>
-                  <div class="p-h-sm p-v-xs"><i class="material-icons">timer</i> Read Time: {{.ReadingTime}} minutes</div>
+                 
+                  {{ with .Params.Author }}
+                    <div class="p-h-sm p-v-xs"><i class="material-icons">person_outline</i> By: {{ . }}</div>
+                  {{end}}
+
+                  {{ with .Params.Date }}
+                    <div class="p-h-sm p-v-xs"><i class="material-icons">event</i> By: {{ .Format "January 2, 2006" }}</div>
+                  {{end}}
+                  
+                  {{ if eq .Section "blog" }}
+                    <div class="p-h-sm p-v-xs"><i class="material-icons">timer</i> Read Time: {{.ReadingTime}} minutes</div>
+                  {{end}}
+
+                  {{ with .Params.Location }}
+                    <div class="p-h-sm p-v-xs"><i class="material-icons">location_on</i> {{ . }}</div>
+                  {{end}}
+
                 </div>
               </div>
           </div>
