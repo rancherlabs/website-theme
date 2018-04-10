@@ -25,7 +25,8 @@ body {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: 'Roboto Condensed', sans-serif;
+  font-family: $text-font-header;
+  font-weight: 600;
 }
 
 h1 {
@@ -141,7 +142,7 @@ blockquote {
 
 cite {
   display: block;
-  font-family: 'Roboto Condensed', sans-serif;
+  font-family: 'Barlow', sans-serif;
   font-weight: 300;
   font-style: normal;
   padding-top: 10px;
