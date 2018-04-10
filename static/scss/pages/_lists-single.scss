@@ -1,0 +1,26 @@
+// -----------------------------------------------------------------------------
+// This file contains styles that are specific to list pages
+// -----------------------------------------------------------------------------
+
+//lists
+.thumbnail {
+    width: 250px;
+    height: 250px;
+    overflow: hidden;
+    background: red;
+    float: left;
+    margin-right: 20px;
+
+    img {
+      overflow: hidden;
+      height: 250px;
+      width: 666px;
+      max-width: 666px;
+      margin: -240px -207px;
+    }
+}
+
+//single
+img.feat-img {
+  width: 100%;
+}

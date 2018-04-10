@@ -28,6 +28,11 @@
           <div class="box m-b-md">
               <div class="p-a-sm">
                 <h3><a href="{{.URL}}">{{.Title}}</a></h3>
+
+                {{ if .Params.Image }}
+                  <div class="thumbnail"><img src="{{ .Params.Image }}" alt="{{ .Params.Title }}"></div>
+                {{end}}
+
                 <p>{{ .Summary | safeHTML }}</p>
                 {{ if .Truncated }}
                 <div>

@@ -1,13 +1,15 @@
 {{ define "hero" }}
   <section class="hero">
     <div class="wrapper p-h-lg">
-      {{ with .Params.Title }}
+      <div class="col-md-8">
+        {{ with .Params.Title }}
         <h1>{{ . }}</h1>
       {{end}}
 
       {{ with .Params.Author }}
         <span class="byline bg-link">{{ . }}</span>
       {{end}}
+    </div>
     </div>
   </section>
 {{ end }}
@@ -19,7 +21,7 @@
       <article class="main-content col-sm-8 col-xs-12 p-r-lg">
         
         {{ if .Params.Image }}
-          <img src="{{ .Params.Image }}" alt="{{ .Params.Title }}">
+          <img class="feat-img" src="{{ .Params.Image }}" alt="{{ .Params.Title }}">
         {{end}}
 
 
