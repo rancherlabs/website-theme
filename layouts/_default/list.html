@@ -47,9 +47,21 @@
                     <div class="p-h-sm p-v-xs"><i class="material-icons">person_outline</i> By: {{ . }}</div>
                   {{end}}
 
-                  {{ with .Params.Date }}
-                    <div class="p-h-sm p-v-xs"><i class="material-icons">event</i> By: {{ .Format "January 2, 2006" }}</div>
+                  {{ if eq .Section "events" }}
+                    {{ with .Params.EventDate }}
+                      <div class="p-h-sm p-v-xs"><i class="material-icons">event</i> {{ . }}</div>
+                    {{end}} 
+                  
+                  {{ else }}
+                    
+                    {{ with .Params.Date }}
+                      <div class="p-h-sm p-v-xs"><i class="material-icons">event</i> {{ .Format "January 2, 2006" }}</div>
+                    {{end}} 
                   {{end}}
+
+<!--                   {{ with .Params.Date }}
+                    <div class="p-h-sm p-v-xs"><i class="material-icons">event</i> By: {{ .Format "January 2, 2006" }}</div>
+                  {{end}} -->
                   
                   {{ if eq .Section "blog" }}
                     <div class="p-h-sm p-v-xs"><i class="material-icons">timer</i> Read Time: {{.ReadingTime}} minutes</div>
