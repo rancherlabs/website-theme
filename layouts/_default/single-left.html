@@ -15,6 +15,7 @@
 {{ end }}
 
 {{ define "main" }}
+
   <div class="wrapper">
     <nav>
       <ul class="tabs">
@@ -27,12 +28,7 @@
     </nav>
     <div class="row p-t-sm">
       <aside class="docs-sidebar col-lg-4 col-md-5 col-xs-12">
-        <h3>Table of Contents</h3>
-
-        {{.TableOfContents}}
-
-
-        <ul class="unstyled main-menu row middle-md m-v-sm">
+      <ul class="unstyled main-menu row middle-md m-b-sm">
           <li class="dropdown sub-menu">
             <a href="" class="btn bg-link">
               <span>Lang</span>
@@ -46,7 +42,7 @@
             </ul>
         </ul>
 
-        <ul class="unstyled main-menu row middle-md m-v-sm">
+        <ul class="unstyled main-menu row middle-md">
           <li class="dropdown sub-menu">
             <a href="" class="btn bg-link">
               <span>Version</span>
@@ -60,8 +56,34 @@
             </ul>
         </ul>
 
-        <div class="bg-default p-a-md">
-          <!--docs sidebar-->
+        {{ $page := . }}
+          <ul>
+          {{ range where .Site.Pages "Section" .Section }}
+            {{ $child := . }}
+            {{ if .IsDescendant $page }}
+              <li class="row aside-item">
+                <div class="bg-accent col-md row middle-md center-md"><i class="material-icons">folder</i></div>
+                <div class="col-md aside-info">
+                  <a href="{{ .URL }}">{{ .Title }}
+                  {{ if .IsAncestor $child }}
+                      <i class="material-icons pull-right">keyboard_arrow_down</i>
+                  {{ end }}
+                  </a>
+                </div>
+                <ul>
+                {{ range where .Site.Pages "Section" .Section }}
+                  {{ if .IsDescendant $child }}
+                    <li><a href="{{ .URL }}">{{.Title}}</a></li>
+                  {{ end }}
+                {{ end }}
+                </ul>
+
+              </li>
+            {{ end }}
+          {{ end }}
+
+        <!--sideanv-->
+<!--         <div class="bg-default p-a-md">
           <h4>{{ .Section }}</h4>
           {{ $page := . }}
           <ul>
@@ -88,7 +110,9 @@
               </li>
             {{ end }}
           {{ end }}
-        </div>
+        </div> -->
+
+        {{.TableOfContents}}
       </aside>
 
       <article class="main-content col-sm-8 col-xs-12 p-r-lg">

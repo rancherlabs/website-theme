@@ -15,12 +15,11 @@
 {{ end }}
 
 {{ define "main" }}
-
-  <div class="">
+  <h1>Docs list</h1>
+  <div class="wrapper">
     <div class="row">
       <aside class="docs-sidebar col-lg-4 col-xs-12">
         Docs Side Nav
-        <!-- {{ partial "docs-nav.html" . }} -->
         {{ $sectionPages := where .Site.Pages "Section" .Section }}
         {{ if ge (len $sectionPages) 1 }}
           <ul>
@@ -38,6 +37,7 @@
         {{ end }}
         </ul>
       </aside>
+
       <article class="main-content col-sm-8 col-xs-12 p-r-lg">
       {{ partial "breadcrumbs.html" . }}
       {{ .Content }}

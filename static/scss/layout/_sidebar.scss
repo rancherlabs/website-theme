@@ -47,22 +47,30 @@ aside {
   }
 
   &.docs-sidebar {
-  nav {
-    ul {
-      font-size: 1em;
-      list-style: none;
-      text-align: left;
-      padding: 0;
-      margin: 0;
-
-      li {
-
-      }
-
+    nav {
       ul {
+        font-size: 1em;
         list-style: none;
+        text-align: left;
+        padding: 0;
+        margin: 0;
+
+        li {
+
+        }
+
+        ul {
+          list-style: none;
+        }
       }
     }
   }
-}
+
+  //docs
+  .tree-nav {
+    ul {
+      list-style-type: none;
+      padding: $spacer-xs 0 $spacer-xs $spacer-xs;
+    }
+  }
 }
