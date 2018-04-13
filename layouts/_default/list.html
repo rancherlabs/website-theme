@@ -68,16 +68,6 @@
       </div>
       {{ template "_internal/pagination.html" . }}
 
-<!--       {{ if eq .Section "events" }}
-        <h2>Past Events</h2>
-        {{ range (.Paginator 5).Pages }}
-            <div>
-              {{ if .Date.Before now }}
-                <a href="{{ .RelPermalink }}">{{ .Title }}</a>
-              {{end}}    
-            </div>
-        {{end}}
-      {{end}} -->
 
       </article>
 
