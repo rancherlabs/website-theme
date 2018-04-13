@@ -49,19 +49,9 @@
 
                   {{ if eq .Section "events" }}
                     {{ with .Params.Date }}
-                      <div class="p-h-sm p-v-xs"><i class="material-icons">event</i> {{ . }}</div>
-                    {{end}} 
-                  
-                  {{ else }}
-                    
-                    {{ with .Params.Date }}
                       <div class="p-h-sm p-v-xs"><i class="material-icons">event</i> {{ .Format "January 2, 2006" }}</div>
-                    {{end}} 
+                    {{end}}  
                   {{end}}
-
-<!--                   {{ with .Params.Date }}
-                    <div class="p-h-sm p-v-xs"><i class="material-icons">event</i> By: {{ .Format "January 2, 2006" }}</div>
-                  {{end}} -->
                   
                   {{ if eq .Section "blog" }}
                     <div class="p-h-sm p-v-xs"><i class="material-icons">timer</i> Read Time: {{.ReadingTime}} minutes</div>
