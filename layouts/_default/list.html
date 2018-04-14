@@ -5,11 +5,11 @@
 {{ define "hero" }}
 <!-- theme/layouts/_default/list.html-->
 <section class="hero">
-    {{ with .Params.Title }}
+    {{ with .Params.title }}
       <h1>{{ . }}</h1>
     {{end}}
 
-    {{ with .Params.Author }}
+    {{ with .Params.author }}
       <span class="byline bg-link">{{ . }}</span>
     {{end}}
   </section>
@@ -29,8 +29,8 @@
               <div class="p-a-sm">
                 <h3><a href="{{.URL}}">{{.Title}}</a></h3>
 
-                {{ if .Params.Image }}
-                  <div class="thumbnail"><img src="{{ .Params.Image }}" alt="{{ .Params.Title }}"></div>
+                {{ if .Params.image }}
+                  <div class="thumbnail"><img src="{{ .Params.image }}" alt="{{ .Params.title }}"></div>
                 {{end}}
 
                 <p>{{ .Summary | safeHTML }}</p>
@@ -43,12 +43,12 @@
               <div class="bg-default">
                 <div class="row">
                  
-                  {{ with .Params.Author }}
+                  {{ with .Params.author }}
                     <div class="p-h-sm p-v-xs"><i class="material-icons">person_outline</i> By: {{ . }}</div>
                   {{end}}
 
                   {{ if eq .Section "events" }}
-                    {{ with .Params.Date }}
+                    {{ with .Params.date }}
                       <div class="p-h-sm p-v-xs"><i class="material-icons">event</i> {{ .Format "January 2, 2006" }}</div>
                     {{end}}  
                   {{end}}
@@ -57,7 +57,7 @@
                     <div class="p-h-sm p-v-xs"><i class="material-icons">timer</i> Read Time: {{.ReadingTime}} minutes</div>
                   {{end}}
 
-                  {{ with .Params.Location }}
+                  {{ with .Params.location }}
                     <div class="p-h-sm p-v-xs"><i class="material-icons">location_on</i> {{ . }}</div>
                   {{end}}
 

@@ -2,11 +2,11 @@
   <section class="hero">
     <div class="wrapper p-h-lg row center-xs">
       <div class="col-md-8">
-        {{ with .Params.Title }}
+        {{ with .Params.title }}
         <h1>{{ . }}</h1>
       {{end}}
 
-      {{ with .Params.Author }}
+      {{ with .Params.author }}
         <span class="byline bg-link">{{ . }}</span>
       {{end}}
     </div>
@@ -20,8 +20,8 @@
     <div class="row">
       <article class="main-content col-sm-8 col-xs-12 p-r-lg">
         
-        {{ if .Params.Image }}
-          <img class="feat-img" src="{{ .Params.Image }}" alt="{{ .Params.Title }}">
+        {{ if .Params.image }}
+          <img class="feat-img" src="{{ .Params.image }}" alt="{{ .Params.title }}">
         {{end}}
         
         {{ .Content }}

@@ -4,11 +4,11 @@
 
 {{ define "hero" }}
   <section class="hero">
-    {{ with .Params.Title }}
+    {{ with .Params.title }}
       <h1>{{ . }}</h1>
     {{end}}
 
-    {{ with .Params.Author }}
+    {{ with .Params.author }}
       <span class="byline bg-link">{{ . }}</span>
     {{end}}
   </section>
@@ -103,7 +103,7 @@
               </div>
               <div class="bg-default">
                 <div class="row">
-                  <div class="text-muted p-a-sm"><i class="material-icons">person_outline</i> By: {{ .Params.Author }}</div>
+                  <div class="text-muted p-a-sm"><i class="material-icons">person_outline</i> By: {{ .Params.author }}</div>
                   <div class="text-muted p-a-sm"><i class="material-icons">timer</i> Read Time: {{.ReadingTime}} minutes</div>
                 </div>
               </div>
