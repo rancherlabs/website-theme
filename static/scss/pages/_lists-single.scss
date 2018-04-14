@@ -3,20 +3,30 @@
 // -----------------------------------------------------------------------------
 
 //lists
+// .thumbnail {
+//     width: 250px;
+//     height: 250px;
+//     overflow: hidden;
+//     background: $light-grey;
+//     float: left;
+//     margin-right: 20px;
+
+//     img {
+//       overflow: hidden;
+//       height: 250px;
+//       width: 666px;
+//       max-width: 666px;
+//       margin: -240px -207px;
+//     }
+// }
+
 .thumbnail {
     width: 250px;
-    height: 250px;
-    overflow: hidden;
-    background: $light-grey;
     float: left;
     margin-right: 20px;
 
     img {
-      overflow: hidden;
-      height: 250px;
-      width: 666px;
-      max-width: 666px;
-      margin: -240px -207px;
+      max-width: 100%;
     }
 }
 
