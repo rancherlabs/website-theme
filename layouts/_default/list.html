@@ -24,8 +24,8 @@
         <div class="main-content ">
 
       {{ .Content }}
-        
-        {{ range (where .Data.Pages.ByDate ".Date.Unix" ">=" now.Unix)}}
+        {{ $paginator := .Paginate (where .Data.Pages.ByDate.Reverse ".Date.Unix" "<" now.Unix) 10 }}
+        {{ range $paginator.Pages }}
           <div class="box m-b-md">
               <div class="p-a-sm">
                 <h3><a href="{{.URL}}">{{.Title}}</a></h3>
@@ -67,17 +67,6 @@
           </div>
         {{ end }}
       </div>
-      
-
-      {{ if eq .Section "events" }}
-        <h2>Past Events</h2>
-        {{ $paginator := .Paginate (where .Data.Pages.ByDate.Reverse ".Date.Unix" "<" now.Unix) 3 }}
-        {{range $paginator.Pages}}
-            <h3><a href="{{.URL}}">{{.Title}}</a></h3>
-            <p>{{ .Date.Format "January 2, 2006"  }}</p>
-            <hr/>
-        {{end}}
-      {{ end }}
       {{ template "_internal/pagination.html" . }}
       </article>
 
