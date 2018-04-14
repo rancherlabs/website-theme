@@ -4,7 +4,7 @@
 
 $label-color                    : $dark-grey !default;
 $input-color-placeholder        : lighten($mid-grey, 5) !default;
-$input-bg                       : lighten($light-grey, 2) !default;
+$input-bg                       : lighten($light-grey, 5) !default;
 $input-bg-hover                 : $mid-grey !default;
 $input-bg-disabled              : lighten($mid-grey, 15%) !default;
 $input-color                    : $secondary !default;
@@ -312,6 +312,37 @@ input.input-lg,
 
 
 //hubspot
+/* Labels (selects field labels and error messages) */
+.hs-form label,
+.hs-form .hs-form-field > label {
+  margin-bottom: $spacer-xs!important;
+}
+
+.hs-form-field {
+    width: 95%!important;
+    float: none!important;
+}
+
+.hs-form input[type="text"],
+.hs-form input[type="password"], 
+.hs-form input[type="datetime"], 
+.hs-form input[type="datetime-local"], 
+.hs-form input[type="date"], 
+.hs-form input[type="month"], 
+.hs-form input[type="time"], 
+.hs-form input[type="week"], 
+.hs-form input[type="number"], 
+.hs-form input[type="email"], 
+.hs-form input[type="url"], 
+.hs-form input[type="search"], 
+.hs-form input[type="tel"], 
+.hs-form input[type="color"],
+.hs-form input[type="file"],
+.hs-form textarea,
+.hs-form select {
+    width: 100%!important;
+}
+
 ul.hs-error-msgs {
   list-style-type: none;
   li label {
@@ -370,22 +401,22 @@ fieldset {
   }
 }
 
+
 body .hs-button.primary,
 body input[type="submit"],
-body input[type="button"] {
+body input[type="button"],
+body .hs-button.primary:hover,
+body input[type="submit"]:hover,
+body input[type="button"]:hover,
+body .hs-button.primary:focus,
+body input[type="submit"]:focus,
+body input[type="button"]:focus {
   @extend .btn;
-  border-radius: 0;
-  padding: .5rem;
+  @extend .bg-accent;
 }
 
 body .hs-button.primary:hover,
 body input[type="submit"]:hover,
 body input[type="button"]:hover {
-  @extend .btn;
-}
-
-body .hs-button.primary:focus,
-body input[type="submit"]:focus,
-body input[type="button"]:focus {
-  @extend .btn;
+  background: darken ($accent, 5);
 }

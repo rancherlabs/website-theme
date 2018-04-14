@@ -333,6 +333,10 @@ ul {
 .pagination {
   display: flex;
   list-style: none;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  text-align: center;
 
   li {
     @extend .btn;
