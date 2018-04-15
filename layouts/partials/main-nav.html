@@ -5,20 +5,18 @@
       {{ if .HasChildren }}
         <li class="dropdown sub-menu {{ if $currentPage.HasMenuCurrent "main" . }}active{{ end }}">
           <a href="{{ .URL }}" class="btn">
-            <span>{{ .Name }}</span>
-            {{ .Pre }}
+            <span>{{ .Name }} {{ .Pre }}</span>
           </a>
           <ul class="sub dropdown-menu">
             {{ range .Children }}
               <li class="{{ if $currentPage.IsMenuCurrent "main" . }}active{{ end }}">
-                <a href="{{ .URL }}">{{ .Name }}</a>
+                <a href="{{ .URL }}">{{ .Name }} {{ .Pre }}</a>
             {{ end }}
           </ul>
       {{else}}
         <li class="">
           <a href="{{.URL}}" class="btn">
-            {{ .Pre }}
-            <span>{{ .Name }}</span>
+            <span>{{ .Name }} {{ .Pre }}</span>
           </a>
         </li>
       {{end}}

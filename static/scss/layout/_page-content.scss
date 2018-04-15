@@ -310,8 +310,8 @@ ul {
       align-items: center;
 
       &:before {
-        content: "check";
         font-family: 'Material Icons';
+        content: "\E876" ;
         color: $accent;
         font-size: 1.5em;
         padding-right: .25em;
