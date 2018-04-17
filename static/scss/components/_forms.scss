@@ -3,7 +3,7 @@
 // -----------------------------------------------------------------------------
 
 $label-color                    : $dark-grey !default;
-$input-color-placeholder        : lighten($mid-grey, 5) !default;
+$input-color-placeholder        : $mid-grey !default;
 $input-bg                       : lighten($light-grey, 5) !default;
 $input-bg-hover                 : $mid-grey !default;
 $input-bg-disabled              : lighten($mid-grey, 15%) !default;
@@ -288,8 +288,14 @@ input.input-lg,
   textarea {
     border-color: darken($input-bg, 15);
     background: $body-bg;
+
+    @include on-event {
+      opacity: 1;
+      text-decoration: underline;
+    }
   }
 }
+
 
 .box .input-group-addon.bg-default {
   background: darken($input-bg, 15);
@@ -419,4 +425,11 @@ body .hs-button.primary:hover,
 body input[type="submit"]:hover,
 body input[type="button"]:hover {
   background: darken ($accent, 5);
+}
+
+::-webkit-input-placeholder,
+:-moz-placeholder,
+::-moz-placeholder,
+:-ms-input-placeholder { 
+  color: $input-color-placeholder !important;
 }

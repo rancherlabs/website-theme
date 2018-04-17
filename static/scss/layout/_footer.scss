@@ -100,3 +100,39 @@ footer {
     margin: 0;
   }
 }
+
+.news {
+  form {
+    display: -ms-flexbox;
+    display: -webkit-box;
+    display: flex;
+    -ms-flex: 0 1 auto;
+    -webkit-box-flex: 0;
+    flex: 0 1 auto;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+  }
+
+  .hs-form label, .hs-form .hs-form-field > label {
+    display: inline-block;
+    margin-bottom: 0 !important;
+  }
+
+  .hbspt-form form div, .hbspt-form .hs-form-field div{
+    display: -ms-flexbox !important;
+    display: -webkit-box !important;
+    display: flex !important;
+    -ms-flex: 0 1 auto !important;
+    -webkit-box-flex: 0 !important;
+    flex: 0 1 auto !important;
+    -webkit-box-align: center !important;
+    -ms-flex-align: center !important;
+    align-items: center !important;
+    padding-bottom: 0 !important;
+  }
+
+  input.hs-button.primary.large {
+    padding: 6px 17px !important;
+  }
+}
