@@ -1,4 +1,29 @@
-  <footer class="bg-default p-t-md p-b-sm p-h-sm">
+<!--ctas-->
+<section class="p-a-lg">
+  <div class="wrapper row center-xs border-right">
+
+    <div class="col-md-4 p-a-sm">
+      <h3>The Rancher <br/>Difference</h3>
+      <p>Learn how Rancher is different from other solutions like GKE, EKS, AKS, Kops, Kubespray, OpenShift, and more.</p>
+      <a href="{{ .Site.BaseURL }}/what-is-rancher/how-is-rancher-different" class="btn bg-accent">Read More</a>
+    </div>
+
+    <div class="col-md-4 p-a-sm">
+      <h3>Rancher 2.0:<br/>Technical Architecture Guide</h3>
+      <p>Our technical architecture paper explains the features and functionality of the container management platform.</p>
+      <a href="http://info.rancher.com/rancher2-technical-architecture" class="btn bg-accent" target="_blank">Read More</a>
+    </div>
+
+    <div class="col-md-4 p-a-sm">
+      <h3>Register<br/>For Training</h3>
+      <p>Join us in this monthly training as we discuss basic Kubernetes concepts and demonstrate how to deploy and manage an application.</p>
+      <a href="{{ .Site.BaseURL }}/training
+      " class="btn bg-accent" target="_blank">Sign Up</a>
+    </div>
+  </div>
+</section>
+
+<footer class="bg-default p-t-md p-b-sm p-h-sm">
     <div class="container-fluid">
 <!--       <div class="row col-lg-7 col-xs-12 middle-md end-md">
         <p class="col-md text-md m-a-0 p-a-0">Get the latest news & offers</p>
@@ -88,11 +113,7 @@
 
           <div class="text-small text-muted text-center p-a-sm">© 2014-{{ now.Format "2006" }} RANCHER LABS, INC. ALL RIGHTS RESERVED.</div>        
       </div>
-
-
-     
-
-    </div>
+</div>
   </footer>
 </div><!--end of container that starts in header.html-->
 

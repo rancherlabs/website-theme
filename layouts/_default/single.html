@@ -1,7 +1,7 @@
 {{ define "hero" }}
   <section class="hero">
     <div class="wrapper p-h-lg row center-xs">
-      <div class="col-md-8">
+      <div class="col-md-6">
         {{ with .Params.title }}
         <h1>{{ . }}</h1>
       {{end}}
@@ -17,8 +17,8 @@
 {{ define "main" }}
   <div class="wrapper">
     {{ partial "breadcrumbs.html" . }}
-    <div class="row">
-      <article class="main-content col-sm-8 col-xs-12 p-r-lg">
+    <div class="row between-md">
+      <article class="main-content col-sm-6 col-md-7 col-xs-12 p-r-lg">
         
         {{ if .Params.image }}
           <img class="feat-img" src="{{ .Params.image }}" alt="{{ .Params.title }}">
@@ -28,7 +28,7 @@
 
       </article>
 
-      <aside class="col-sm-4 col-xs-12">
+      <aside class="col-sm-5 col-xs-12">
         {{ partial "sidebar.html" . }}
       </aside>
     </div>
