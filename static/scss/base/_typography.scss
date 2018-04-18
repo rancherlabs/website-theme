@@ -24,9 +24,15 @@ body {
   max-width: 1400px;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1, h2 {
   font-family: $text-font-header;
   font-weight: 600;
+}
+
+h3, h4, h5, h6 {
+  font-family: $text-font-stack;
+  color: $dark-grey;
+  letter-spacing: .3px;
 }
 
 h1 {
@@ -38,24 +44,26 @@ h1 {
 }
 
 h2 {
+  font-size: 3em;
+  line-height: 1.05em;
   margin-top: 2.1rem;
   margin-bottom: 0;
-  font-size: 4rem;
-  line-height: 1;
   text-transform: capitalize;
 }
 
 h3 {
-  font-size: 1.7rem;
+  font-size: 2rem;
+  line-height: 1.14384615;
   margin-top: 2rem;
   margin-bottom: 0;
-  line-height: 1;
-  letter-spacing: .5px;
-  font-family: $text-font-stack;
-  color: $mid-grey;
-  // font-weight: 100;
   text-transform: uppercase;
 }
+
+h4 {
+  font-size: 1.5rem;
+  line-height: 2rem;
+}
+
 
 hr {
   display: block;
@@ -70,11 +78,6 @@ article {
   position: relative;
 }
 
-// section {
-//   padding-top: 1rem;
-//   padding-bottom: 1rem;
-// }
-
 p,
 ol,
 ul,
@@ -87,7 +90,7 @@ p {
   vertical-align: baseline;
   font-size: 1.4rem;
   line-height: 2rem;
-  margin-top: 1.4rem;
+  margin-top: .7rem;
   margin-bottom: 1.4rem;
   padding-right: 0;
   vertical-align: baseline;
