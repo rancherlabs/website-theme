@@ -288,6 +288,7 @@ input.input-lg,
   textarea {
     border-color: darken($input-bg, 15);
     background: $body-bg;
+    color : $text-color;
 
     @include on-event {
       opacity: 1;
