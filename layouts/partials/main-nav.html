@@ -1,26 +1,34 @@
-<nav>
-  <ul class="main-menu row middle-md">
-    {{ $currentPage := . }}
-    {{ range .Site.Menus.main }}
-      {{ if .HasChildren }}
-        <li class="dropdown sub-menu {{ if $currentPage.HasMenuCurrent "main" . }}active{{ end }}">
-          <a href="{{ .URL }}" class="btn">
-            <span>{{ .Name }} {{ .Pre }}</span>
-          </a>
-          <ul class="sub dropdown-menu">
-            {{ range .Children }}
-              <li class="{{ if $currentPage.IsMenuCurrent "main" . }}active{{ end }}">
-                <a href="{{ .URL }}">{{ .Name }} {{ .Pre }}</a>
-            {{ end }}
-          </ul>
-      {{else}}
-        <li class="">
-          <a href="{{.URL}}" class="btn">
-            <span>{{ .Name }} {{ .Pre }}</span>
-          </a>
-        </li>
-      {{end}}
-    {{end}}
-  </ul>
-</nav>
-
+<header class="p-h-sm">
+    <div class="row middle-md between-md">
+        <div class="pull-left">
+            <a href="/"><img src="/img/rancher-logo-horiz-white.svg" width="150" height="22"></a>
+        </div>
+        <div class="">
+            <nav>
+                <ul class="main-menu row middle-md">
+                    {{ $currentPage := . }} {{ range .Site.Menus.main }} {{ if .HasChildren }}
+                    <li class="dropdown sub-menu {{ if $currentPage.HasMenuCurrent " main " . }}active{{ end }}">
+                        <a href="{{ .URL }}" class="btn">
+                    <span>{{ .Name }} {{ .Pre }}</span>
+                  </a>
+                        <ul class="sub dropdown-menu">
+                            {{ range .Children }}
+                            <li class="{{ if $currentPage.IsMenuCurrent " main " . }}active{{ end }}">
+                                <a href="{{ .URL }}">{{ .Name }} {{ .Pre }}</a> {{ end }}
+                        </ul>
+                        {{else}}
+                        <li class="">
+                            <a href="{{.URL}}" class="btn">
+                    <span>{{ .Name }} {{ .Pre }}</span>
+                  </a>
+                        </li>
+                        {{end}} {{end}}
+                </ul>
+            </nav>
+        </div>
+        <div class="pull-right">
+            <a href="/quick-start" class="text-white p-r-sm"><i class="material-icons">cloud_upload</i> Deploy Rancher</a>
+            <a href="/support" class="text-white"><i class="material-icons">chat</i> Get Support</a>
+        </div>
+    </div>
+</header>

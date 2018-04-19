@@ -1,41 +1,9 @@
 <!DOCTYPE html>
 <html class="" lang="en-US" prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb#">
 
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width">
-    <title>{{ .Title }}</title>
-    <link rel="icon" href="{{ .Site.BaseURL }}/img/favicon.png">
-
-    <link rel="canonical" href="{{ .Permalink }}"> {{ if .RSSLink }}
-    <link href="{{ .RSSLink }}" rel="alternate" type="application/rss+xml" title="{{ .Title }}" />{{ end }}
-
-    <link rel="stylesheet" type="text/css" href="{{ .Site.BaseURL }}/css/app.css" />
-    <link href="https://fonts.googleapis.com/css?family=Prompt:300,600|Barlow:400,600" rel="stylesheet" />
-    <!--icons https://material.io/icons/-->
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/izimodal/1.5.1/css/iziModal.min.css" rel="stylesheet" />
-
-    <!-- <script src="//code.jquery.com/jquery-3.3.1.min.js"></script> -->
-
-    {{ partial "seo.html" . }}
-  </head>
+{{ partial "head.html" . }}
 
 <body lang="en">
   {{ partial "mobile-nav.html" . }}
 <div> <!--container ends in footer html-->
-  <header class="p-h-sm">
-    <div class="row middle-md between-md">
-        <div class="pull-left">
-          <a href="/"><img src="/img/rancher-logo-horiz-white.svg" width="150" height="22"></a>
-        </div>
-        <div class="">
-          {{ partial "main-nav.html" . }}
-        </div>
-
-        <div class="pull-right">
-          <a href="/quick-start" class="text-white p-r-sm"><i class="material-icons">cloud_upload</i> Deploy Rancher</a>
-          <a href="/support" class="text-white"><i class="material-icons">chat</i> Get Support</a>
-        </div>
-      </div>
-  </header>
+  {{ partial "main-nav.html" . }}
