@@ -3,7 +3,12 @@
   header {
     display: none;  
   }
-
+  h1, h2, h3, h4, h5, h6 {
+    max-width: 100%;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    hyphens: auto;
+  }
   .mobile-header {
     display: flex;
   }
@@ -21,9 +26,26 @@
     border-right: none;
   }
 
+  //spacing
+  *[class*="p-"] {
+    padding: $spacer-xs;
+  }
+
+  *[class*="m-"] {
+    margin: $spacer-xs;
+  }
+
+  *[class*="text-"] {
+    text-align: left;
+  }
+  
   //homepage
   .add-cluster {
     background-image: url()!important;
+  }
+
+  .add-cluster .wrapper .p-v-lg {
+    padding: $spacer-sm 0;
   }
 
   section .wrapper {

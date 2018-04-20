@@ -8,7 +8,9 @@
     {{ template "breadcrumb" dict "currentPage" .currentPage.Parent }}
   {{ end }}
   <li>
-    {{ if eq .id .currentPage.UniqueID }}
+    {{ if not .currentPage.Parent}}
+      <a href="{{ .currentPage.URL }}">Home</a>
+    {{else if eq .id .currentPage.UniqueID }}
       {{ .currentPage.Title }}
     {{ else }}
       <a href="{{ .currentPage.URL }}">{{ .currentPage.Title }}</a>
