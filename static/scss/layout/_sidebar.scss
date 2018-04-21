@@ -36,14 +36,6 @@ aside {
         display: block;
       }
     }
-
-    &:hover {
-      background: white;
-      .bg-accent {
-        padding: 10px 20px;
-        max-width: 60px;
-      }
-    }
   }
 
   &.docs-sidebar {
