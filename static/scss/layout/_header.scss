@@ -84,7 +84,6 @@ header {
   display: none;
 }
 .ml-stack-nav-toggle {
-  width: 50px;
 
     &__line {
       background: #fff;
@@ -124,9 +123,14 @@ header {
     cursor: pointer;
     width: 70px;
     text-align: center;
-    background: $link-color;
+    padding: 1.5em;
+    // background: $link-color;
   }
   &__back {
     width: 100%;
   }
+}
+
+.ml-stack-nav__item-inner {
+  margin: 0!important;
 }

@@ -12,7 +12,7 @@ $lg-padding: 1.25rem 1.5rem;
 // -----------------------------------------------------------------------------
 button {
   -webkit-appearance: none;
-  background-color: transparent!important;
+  background-color: transparent;
 }
 
 .btn,
@@ -230,7 +230,15 @@ fieldset[disabled] .btn {
 }
 
 .tingle-btn {
-  @extend .bg-link;
+  background-color: $link-color;
+
+  .tingle-btn--primary {
+    background-color: $link-color;
+  }
+}
+
+button.tingle-btn--primary {
+  background-color: $link-color;
 }
 
 //hubspot

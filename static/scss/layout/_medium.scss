@@ -5,10 +5,14 @@
   }
   h1, h2, h3, h4, h5, h6 {
     max-width: 100%;
-    overflow-wrap: break-word;
-    word-wrap: break-word;
-    hyphens: auto;
+    overflow-wrap: normal;
+    word-wrap: normal;
   }
+
+  h1 {
+    font-size: 4em;
+  }
+
   .mobile-header {
     display: flex;
   }
@@ -35,8 +39,20 @@
     margin: $spacer-xs;
   }
 
-  *[class*="text-"] {
+  *[class*="text-"],
+  *[class*="text-"] > *,
+  ol,
+  ul,
+  table {
+    font-size: 1.25em;
+    line-height: 1.25em;
+  }
+
+  .text-right {
     text-align: left;
+    > * {
+      text-align: left;
+    }
   }
   
   //homepage
@@ -51,5 +67,9 @@
   section .wrapper {
     width: 100%;
     padding: $spacer-sm;
+  }
+
+  .logo-bg {
+    display: none;
   }
 }
