@@ -1,0 +1,13 @@
+.tree-nav {
+  ul {
+    li {
+      a { 
+        padding: $spacer-xs;
+      }
+
+      ul {
+        display: none;
+      }
+    }
+  }
+}
