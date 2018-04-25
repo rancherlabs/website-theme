@@ -21,25 +21,6 @@
 
     <div class="row">
       <article class="col-sm-8 col-xs-12 p-r-lg">
-      <!--   {{ if eq .Section "partners" }}
-          <div class="m-b-sm">
-            <ul class="unstyled">
-            <li class="dropdown sub-menu">
-              <a href="" class="btn bg-link">
-                <span>Location</span>
-                <i class="material-icons">keyboard_arrow_down</i>
-              </a>
-              <ul class="sub dropdown-menu bg-white unstyled p-a-xs">
-                {{range .Pages}}
-                  {{ with .Params.location }}
-                    <li><a href="">{{ . }}</a></li>
-                  {{ end }}
-                {{ end }}
-              </ul>
-            </li>
-          </ul> 
-          </div>  
-        {{end}} -->
         <div class="main-content ">
 
       {{ .Content }}
@@ -67,12 +48,10 @@
                   {{ with .Params.author }}
                     <div class="p-h-sm p-v-xs"><i class="material-icons">person_outline</i> By: {{ . }}</div>
                   {{end}}
-
-                  {{ if eq .Section "events" }}
-                    {{ with .Params.date }}
-                      <div class="p-h-sm p-v-xs"><i class="material-icons">event</i> {{ .Format "January 2, 2006" }}</div>
-                    {{end}}  
-                  {{end}}
+      
+                  {{ with .Params.date }}
+                    <div class="p-h-sm p-v-xs"><i class="material-icons">event</i> {{ .Format "January 2, 2006" }}</div>
+                  {{end}}  
                   
                   {{ if eq .Section "blog" }}
                     <div class="p-h-sm p-v-xs"><i class="material-icons">timer</i> Read Time: {{.ReadingTime}} minutes</div>
