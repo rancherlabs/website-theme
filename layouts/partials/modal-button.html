@@ -1,0 +1,9 @@
+<button class="modal-open btn border-btn" data-launch-id="{{.Get `modalContentId`}}">{{.Get "buttonText"}}</button>
+<div class="modal-content" id="{{.Get `modalContentId`}}">
+  <div class="content">{{.Inner}}</div>
+  <div class="footer-button-label" data-footer-label="{{.Get `modalFooterButtonLabel`}}"></div>
+  <div class="css-classes" data-css-classes="{{.Get `modalCssClasses`}}"></div>
+  <div class="close-label" data-close-label="{{.Get `modalCloseLabel`}}"></div>
+  <div class="include-footer" data-include-footer="{{.Get `includeFooter`}}"></div>
+  <div class="sticky-footer" data-sticky-footer="{{.Get `stickyFooter`}}"></div>
+</div>

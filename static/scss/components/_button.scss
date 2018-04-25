@@ -201,12 +201,13 @@ fieldset[disabled] .btn {
 
 //other button styles
 .border-btn {
-  border: solid thin;
+  border: solid thin rgba(255,255,255,.3);
+  background-color: rgba(255,255,255,.15);
 
   &:hover {
     border: solid thin;
     color: inherit;
-    background-color: rgba(255,255,255,.25);
+    background-color: rgba(255,255,255,.4);
   }
 }
 
