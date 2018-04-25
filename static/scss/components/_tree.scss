@@ -1,12 +1,66 @@
 .tree-nav {
   ul {
-    li {
-      a { 
-        padding: $spacer-xs;
-      }
+    list-style-type: none;
+    padding: 0;
+  }
 
-      ul {
+  .tree-nav-item {
+    border: solid 1.5px rgba($light-grey, .5);
+    margin-bottom: $spacer-xs;
+    position: relative;
+    
+    &:before {
+      content: "";
+      background: $secondary;
+      width: 3px;
+      position: absolute;
+      top: 0;
+      bottom: 0;
+    }
+
+    .tree-nav-item {
+      &:before {
+        background: rgba($secondary, .75);
+        border-left: 0;
+        border-right: 0;
+      }
+      .tree-nav-item {
+        &:before {
+          background: rgba($secondary, .5);
+          border-left: 0;
+          border-right: 0;
+        }
+        .tree-nav-item {
+          &:before {
+            background: rgba($secondary, .25);
+            border-left: 0;
+            border-right: 0;
+          }
+        }
+      }
+    }
+
+    a, i {
+      display: inline-block;
+      vertical-align: middle;
+      padding: $spacer-xs;
+    }
+
+    i {
+      border-left: solid 1.5px rgba($light-grey, .5);
+    }
+
+    .tree-nav-sublist {
+      margin: $spacer-xs 0 $spacer-xs $spacer-xs;
+
+      &.hide {
         display: none;
+      }
+    }
+
+    &.open {
+      >.expand-more {
+        transform: rotate(180deg);
       }
     }
   }

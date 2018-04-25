@@ -176,24 +176,24 @@ h3>code {
 }
 
 pre {
-  background-color: $bg-default;
-  padding: $spacer-sm;
+  background-color: $dark-grey;
+  padding: $spacer-xs;
   white-space: pre-wrap;
   word-wrap: break-word;
-  font-size: 1.8em;
+  border-radius: 3px;
+
+  code {
+    font-size: 0.9rem;
+    width: 52.5%;
+    margin-left: $spacer-xs;
+    overflow-x: auto;
+    background: transparent;
+  }
 }
 
 code {
   color: $success;
   font-style: initial;
-}
-
-pre code {
-  font-size: 0.9rem;
-  width: 52.5%;
-  margin-left: 2.5%;
-  overflow-x: auto;
-  background: transparent;
 }
 
 //icons
