@@ -5,49 +5,42 @@
   }
 
   .tree-nav-item {
-    border: solid 1.5px rgba($light-grey, .5);
     margin-bottom: $spacer-xs;
     position: relative;
-    
-    &:before {
-      content: "";
-      background: $secondary;
-      width: 3px;
-      position: absolute;
-      top: 0;
-      bottom: 0;
-    }
-
-    .tree-nav-item {
-      &:before {
-        background: rgba($secondary, .75);
-        border-left: 0;
-        border-right: 0;
-      }
-      .tree-nav-item {
-        &:before {
-          background: rgba($secondary, .5);
-          border-left: 0;
-          border-right: 0;
-        }
-        .tree-nav-item {
-          &:before {
-            background: rgba($secondary, .25);
-            border-left: 0;
-            border-right: 0;
-          }
-        }
-      }
-    }
+    background-color: $light-grey;
+    border-left: 2px $link-color solid;
 
     a, i {
       display: inline-block;
       vertical-align: middle;
       padding: $spacer-xs;
+      color: $link-color;
     }
 
-    i {
-      border-left: solid 1.5px rgba($light-grey, .5);
+    .tree-nav-item {
+      a, i {
+        padding: calc ($spacer-xs / 2);
+      }
+
+      &:before {
+          content: "";
+          position: absolute;
+          left: -1.25rem;
+          top: 2rem;
+          width: 1.25rem;
+          height: 2px;
+          background-color: $link-color;
+        }
+      }
+
+    .tree-nav-item {
+      background-color: mix($light-grey, $mid-grey, 95%);
+      .tree-nav-item {
+        background-color: mix($light-grey, $mid-grey, 85%);
+        .tree-nav-item {
+          background-color: mix($light-grey, $mid-grey, 75%);
+        }
+      }
     }
 
     .tree-nav-sublist {

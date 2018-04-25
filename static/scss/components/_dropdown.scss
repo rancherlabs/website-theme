@@ -1,5 +1,7 @@
 .dropdown {
   position: relative;
+  z-index: 1000;
+  
   .dropdown-menu {
     display: none;
     &.dropdown-show {
