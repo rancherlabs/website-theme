@@ -38,6 +38,7 @@ aside {
     }
   }
 
+  //docs
   &.docs-sidebar {
     nav {
       ul {
@@ -53,6 +54,20 @@ aside {
 
         ul {
           list-style: none;
+        }
+      }
+    }
+  }
+
+  nav#TableOfContents {
+    ul {
+      list-style-type: none;
+      margin: 0;
+      padding-left: $spacer-xs;
+
+      li {
+        a {
+          font-size: .95em;
         }
       }
     }
