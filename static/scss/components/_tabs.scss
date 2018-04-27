@@ -10,5 +10,11 @@ ul.tabs {
       padding: 10px;
       display: block;
     }
+
+    &.active {
+      font-weight: bold;
+      border: 2px solid $light-grey;
+      border-radius: 4px;
+    }
   }
 }
