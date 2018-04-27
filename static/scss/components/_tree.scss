@@ -1,14 +1,25 @@
 .tree-nav {
+  &.invisible {
+    visibility: hidden;
+  }
+
   ul {
     list-style-type: none;
     padding: 0;
   }
 
   .tree-nav-item {
+    cursor: pointer;
+    cursor: hand;
+
     margin-bottom: $spacer-xs;
     position: relative;
     background-color: $light-grey;
     border-left: 2px $link-color solid;
+
+    &.active > A {
+      font-weight: bold;
+    }
 
     a, i {
       display: inline-block;
@@ -23,15 +34,15 @@
       }
 
       &:before {
-          content: "";
-          position: absolute;
-          left: -1.25rem;
-          top: 2rem;
-          width: 1.25rem;
-          height: 2px;
-          background-color: $link-color;
-        }
+        content: "";
+        position: absolute;
+        left: -1.25rem;
+        top: 2rem;
+        width: 1.25rem;
+        height: 2px;
+        background-color: $link-color;
       }
+    }
 
     .tree-nav-item {
       background-color: mix($light-grey, $mid-grey, 95%);
