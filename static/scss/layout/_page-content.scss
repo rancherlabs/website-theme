@@ -50,6 +50,40 @@
   }
 }
 
+/*box list*/
+.box-list {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
+}
+.box-list-item {
+  display: flex; 
+  padding: 0.5em;
+  width: 100%;
+}
+@media all and (min-width: 40em) {
+  .box-list-item {
+    width: 50%;
+  }
+}
+@media all and (min-width: 60em) {
+  .box-list-item {
+    width: 33.33%;
+  }
+}
+.box-list-content {
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  padding: 1em;
+  width: 100%;
+}
+.box-list-content p {
+  flex: 1 0 auto;
+}
+
+
 .border-right > * {
   border-right: solid 2px $light-grey;
 
