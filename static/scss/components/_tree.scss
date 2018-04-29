@@ -11,14 +11,57 @@
   .tree-nav-item {
     cursor: pointer;
     cursor: hand;
-
-    margin-bottom: $spacer-xs;
+    margin: 0 $spacer-xs $spacer-xs 0;
     position: relative;
-    background-color: $light-grey;
-    border-left: 2px $link-color solid;
+    background-color: white;
+    border: 1px $light-grey solid;
+    border-left: 3px $light-grey solid;
+    border-radius: 3px;
+    transition: ease-in-out all .25s;
 
-    &.active > A {
-      font-weight: bold;
+    // .tree-nav-item {
+    //   background-color: mix($light-grey, $mid-grey, 95%);
+    //   .tree-nav-item {
+    //     background-color: mix($light-grey, $mid-grey, 85%);
+    //     .tree-nav-item {
+    //       background-color: mix($light-grey, $mid-grey, 75%);
+    //     }
+    //   }
+    // }
+
+    i {
+      opacity: .5;
+      transition: ease-in-out all .25s;
+      font-size: .95em;
+      margin-top: 5px;
+    }
+    
+    .tree-nav-item {
+      &:before {
+        content: "";
+        position: absolute;
+        left: -1.25rem;
+        top: 2rem;
+        width: 1.25rem;
+        height: 2px;
+        background-color: $light-grey;
+      }
+    }
+
+    &.open > i {
+      opacity: 1;
+    }
+
+    &.active {
+      background-color: rgba($accent, .1);
+      border-color: $accent;
+
+      > a {
+        color: $accent;
+      }
+      &:before {
+        background-color: $accent;
+      }
     }
 
     a, i {
@@ -28,34 +71,10 @@
       color: $link-color;
     }
 
-    .tree-nav-item {
-      a, i {
-        padding: calc ($spacer-xs / 2);
-      }
-
-      &:before {
-        content: "";
-        position: absolute;
-        left: -1.25rem;
-        top: 2rem;
-        width: 1.25rem;
-        height: 2px;
-        background-color: $link-color;
-      }
-    }
-
-    .tree-nav-item {
-      background-color: mix($light-grey, $mid-grey, 95%);
-      .tree-nav-item {
-        background-color: mix($light-grey, $mid-grey, 85%);
-        .tree-nav-item {
-          background-color: mix($light-grey, $mid-grey, 75%);
-        }
-      }
-    }
 
     .tree-nav-sublist {
       margin: $spacer-xs 0 $spacer-xs $spacer-xs;
+      font-size: .85em;
 
       &.hide {
         display: none;
@@ -63,6 +82,8 @@
     }
 
     &.open {
+      border-left-color: $accent;
+
       >.expand-more {
         transform: rotate(180deg);
       }
