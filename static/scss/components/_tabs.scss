@@ -3,7 +3,10 @@ ul.tabs {
   display: flex;
   margin: 0;
   padding: 0;
-  border-bottom: solid $light-grey ;
+  // background-color: $light-grey ;
+  // background-size: 100% 2px;
+  // background-position: bottom;
+  box-shadow: 0 2px 0 $light-grey;
 
   li {
     a {
@@ -12,9 +15,18 @@ ul.tabs {
     }
 
     &.active {
-      font-weight: bold;
-      border: 2px solid $light-grey;
-      border-radius: 4px;
+      box-shadow: 0 2px 0 $link-color;
+      position: relative;
+
+      &:after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: calc(50% - 5px);
+        border-left: 5px solid transparent;
+        border-right: 5px solid transparent;
+        border-bottom: 5px solid $link-color;
+      }
     }
   }
 }
