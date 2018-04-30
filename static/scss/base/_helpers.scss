@@ -289,3 +289,9 @@
 .p-0 {
   padding: 0;
 }
+
+.sticky {
+  position: fixed;
+  z-index: -1;
+  top: 0;
+}

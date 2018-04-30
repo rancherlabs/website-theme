@@ -4,23 +4,30 @@
   
   .dropdown-menu {
     display: none;
+
     &.dropdown-show {
       display: block;
       position: absolute;
+      left: 0;
+      right: 0;
     }
   }
 }
 
 .dropdown-menu {
-    min-width: 150px;
+    border: solid thin $light-grey;
+    display: block;
 
     &.hidden {
         display: none;
     }
     li {
+      padding: 0 $spacer-xs;
         a {
             text-decoration: none;
             display: block;
+            padding: $spacer-xs 0;
+            border-bottom: solid thin $light-grey;
         }
     }
 }
