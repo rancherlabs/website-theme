@@ -28,12 +28,17 @@
     //     }
     //   }
     // }
-
+    a {
+      max-width: calc(100% - 40px);
+    }
     i {
       opacity: .5;
       transition: ease-in-out all .25s;
       font-size: .95em;
       margin-top: 5px;
+      position: absolute;
+      right: 0;
+      top: 0;
     }
     
     .tree-nav-item {
