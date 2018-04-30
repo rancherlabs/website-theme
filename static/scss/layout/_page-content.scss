@@ -171,8 +171,8 @@
 
   > ul {
     list-style-type: none;
+    
     >li {
-
       &:before {
         font-family: 'Material Icons';
         content: "label";
@@ -186,6 +186,10 @@
 
     li:not(:first-child) {
       margin-top: 0.25rem;
+    }
+
+    p {
+      margin: .7rem 0;
     }
 
     ul {
@@ -207,53 +211,55 @@
 
     > ol {
       font-size: 1em;
-      list-style-type: upper-alpha;
+      list-style-type: lower-alpha;
     }
   }
 
   ol {
     padding: 0;
 
-    >li {
+    > li {
       counter-increment: step-counter;
-      // display: flex;
       list-style-type: none;
-      border: solid thin rgba($light-grey, .75);
+      border: solid thin darken($light-grey, 5%);
       margin-bottom: $spacer-xs;
-      padding-right: $spacer-xs;
+      padding: $spacer-sm;
+      position: relative;
 
       &:before {
         content: counter(step-counter);
         background-color: $light-grey;
         color: $link-color;
         padding: $spacer-xs;
-        margin-right: $spacer-xs;
         font-weight: 100;
         display: inline-block;
         vertical-align: middle;
         text-align: right;
+        position: absolute;
+        left: -20px;
+        top: $spacer-xs;
+        width: 40px;
+        height: 35px;
+        line-height: .8em;
+        font-size: .85em;
+        text-align: center;
       }
 
-      > ul,
-      > ol {
+      p {
+        margin: .7rem 0;
+      }
+
+      ol {
+        counter-reset: item;
         list-style-type: none;
-        font-size: 1em;
-        border-left: solid;
-        border-color: $light-grey;
-        padding: 0 $spacer-sm;
-        margin: 1rem $spacer-sm;
 
         li {
-          position: relative;
+          background-color: $light-grey;
 
           &:before {
-            content: "";
-            height: 3px;
-            width: 15px;
-            background: $light-grey;
-            position: absolute;
-            left: -28px;
-            top: 12px;
+            content: counter(step-counter, lower-alpha);
+            background-color: white;
+            border: solid thin $light-grey;
           }
         }
       }
