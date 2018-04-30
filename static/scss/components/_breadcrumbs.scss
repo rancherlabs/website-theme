@@ -20,6 +20,8 @@ ol.breadcrumbs {
       font-size: 1em;
       line-height: 1;
       display: inline-block;
+      position: relative;
+      top: 2px;
     }
 
     &:last-child:after {
