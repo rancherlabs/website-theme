@@ -76,7 +76,7 @@
   background-color: #fff;
   display: flex;
   flex-direction: column;
-  padding: 1em;
+  padding: $spacer-sm;
   width: 100%;
 }
 .box-list-content p {
@@ -216,7 +216,7 @@
 
     >li {
       counter-increment: step-counter;
-      display: flex;
+      // display: flex;
       list-style-type: none;
       border: solid thin rgba($light-grey, .75);
       margin-bottom: $spacer-xs;

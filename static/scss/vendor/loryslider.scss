@@ -89,9 +89,10 @@
 }
 
 .variablewidth li {
-    width: 280px;
+    width: 200px;
     margin-right: 10px;
-
+    display: inline-block;
+    vertical-align: middle;
 }
 
 .multipleelements li, .multislides li, .ease li {
