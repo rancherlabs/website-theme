@@ -255,7 +255,7 @@
       }
 
       ol {
-        counter-reset: item;
+        counter-reset: step-counter;
         list-style-type: none;
 
         li {
@@ -267,6 +267,28 @@
             background-color: white;
             color: $link-color;
             border: solid thin $light-grey;
+          }
+        }
+      }
+
+      ul {
+        padding-left: $spacer-sm;
+        list-style-type: none;
+
+        li {
+          &:before {
+            content: "-";
+            color: darken($light-grey, 5%);
+            display: inline-block;
+            float: left;
+            padding-right: .5em;
+          }
+
+          ul li:before {
+            content: "subdirectory_arrow_right";
+            font-family: 'Material Icons';
+            font-size: .75em;
+            line-height: 1.5em;
           }
         }
       }
