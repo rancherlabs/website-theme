@@ -30,6 +30,10 @@
 }
 
 //accents
+.shadow {
+  box-shadow: 0 0 15px rgba(0,0,0,.15);
+}
+
 .box {
   border: $light-grey solid 3px;
 
@@ -225,11 +229,12 @@
       margin-bottom: $spacer-xs;
       padding: $spacer-sm;
       position: relative;
+      @extend .shadow;
 
       &:before {
         content: counter(step-counter);
-        background-color: $light-grey;
-        color: $link-color;
+        background-color: $link-color;
+        color: white;
         padding: $spacer-xs;
         font-weight: 100;
         display: inline-block;
@@ -240,7 +245,7 @@
         top: $spacer-xs;
         width: 40px;
         height: 35px;
-        line-height: .8em;
+        line-height: .75em;
         font-size: .85em;
         text-align: center;
       }
@@ -255,10 +260,12 @@
 
         li {
           background-color: $light-grey;
+          box-shadow: none;
 
           &:before {
             content: counter(step-counter, lower-alpha);
             background-color: white;
+            color: $link-color;
             border: solid thin $light-grey;
           }
         }
@@ -366,11 +373,6 @@ ul {
       }
     }
   }
-}
-
-//styling helpers
-.shadow {
-  box-shadow: 0 0 15px rgba(0,0,0,.15);
 }
 
 //pagination
