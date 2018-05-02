@@ -17,17 +17,17 @@
 .dropdown-menu {
     border: solid thin $light-grey;
     display: block;
+    font-size: .85em;
 
     &.hidden {
         display: none;
     }
     li {
-      padding: 0 $spacer-xs;
-        a {
-            text-decoration: none;
-            display: block;
-            padding: $spacer-xs 0;
-            border-bottom: solid thin $light-grey;
-        }
+      a {
+          text-decoration: none;
+          display: block;
+          padding: $spacer-xs 0;
+          border-bottom: solid thin $light-grey;
+      }
     }
 }
