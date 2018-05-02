@@ -22,3 +22,19 @@
 .testimonial:before {
   content: "";
 }
+
+.announcment-sticker {
+    background-color: $info;
+    padding: 6em 0;
+    width: 300px;
+    border-radius: 50%;
+    left: 10%;
+    position: absolute;
+    margin-top: -200px;
+    box-shadow: 0 0 60px rgba(0,0,0,.3);
+    transform: rotate(-10deg);
+
+    h3 {
+      color: white;
+    }
+  }
