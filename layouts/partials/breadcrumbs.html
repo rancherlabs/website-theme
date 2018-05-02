@@ -7,13 +7,16 @@
   {{ if .currentPage.Parent }}
     {{ template "breadcrumb" dict "currentPage" .currentPage.Parent }}
   {{ end }}
-  <li>
-    {{ if not .currentPage.Parent}}
-      <a href="{{ .currentPage.URL }}">Home</a>
-    {{else if eq .id .currentPage.UniqueID }}
-      {{ .currentPage.Title }}
-    {{ else }}
-      <a href="{{ .currentPage.URL }}">{{ .currentPage.Title }}</a>
-    {{ end }}
-  </li>
+  {{ if (eq .currentPage.Params.showbreadcrumb false ) }}
+  {{else}}
+    <li>
+      {{ if not .currentPage.Parent}}
+        <a href="{{ .currentPage.URL }}">Home</a>
+      {{else if eq .id .currentPage.UniqueID }}
+        {{ .currentPage.Title }}
+      {{ else }}
+        <a href="{{ .currentPage.URL }}">{{ .currentPage.Title }}</a>
+      {{ end }}
+    </li>
+    {{end}}
 {{ end }}
