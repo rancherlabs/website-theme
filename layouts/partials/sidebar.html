@@ -8,32 +8,6 @@
   </div>
 </div>
 
-<!-- <div class="bg-default p-h-md p-v-sm">
-  <ul class="box-list">
-    {{range (where .Site.Pages.ByDate ".Date.Unix" "ge" now.Unix)}}
-      {{if (eq .Params.subtype "training")}}
-      <li class="box-list-item">
-        <div class="box box-list-content">
-          <h4 class="bg-default m-a-0 p-a-xs">{{ .Date.Format "Jan 2, 2006" }}</h4>
-          <h3 class="">{{ .Title }}</h3>
-          {{ with .Params.technician }}
-            <span class="text-muted">Technician:</span> {{ . }}
-          {{end}}
-          <br/>
-          {{ with .Params.host }}
-            <span class="text-muted">Host:</span> {{ . }}
-          {{end}}
-        </p>
-        {{ with .Params.link }}
-            <a href="{{ . }}" class="btn bg-link" target="_blank">Register Here</a>
-        {{end}}
-        </div>
-      </li>
-      {{end}}
-    {{end}}
-  </ul>
-</div> -->
-
 <div class="bg-default p-h-md p-v-sm">
   <h3 class="m-t-0 m-b-sm">Recent Posts</h3>
   {{ range first 5 (where .Site.Pages "Section" "blog") }}
