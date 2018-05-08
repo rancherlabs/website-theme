@@ -86,11 +86,16 @@
   flex-direction: column;
   padding: $spacer-sm;
   width: 100%;
-}
-.box-list-content p {
-  flex: 1 0 auto;
-}
 
+  p {
+    flex: 1 0 auto;
+  }
+
+  img {
+    height: 50px;
+    margin: 0 auto;
+  }
+}
 
 .border-right > * {
   border-right: solid 2px $light-grey;
