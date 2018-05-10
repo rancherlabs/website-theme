@@ -3,8 +3,12 @@
     <div class="wrapper p-h-lg row center-xs">
       <div class="col-md-9">
         {{ with .Params.title }}
-        <h1>{{ . }}</h1>
-      {{end}}
+          <h1>{{ . }}</h1>
+        {{end}}
+
+        {{ with .Params.subTitle }}
+          <p class="p-t-sm">{{ . }}</p>
+        {{end}}
 
       {{ with .Params.author }}
         <span class="byline bg-link">{{ . }}</span>
@@ -28,6 +32,10 @@
         {{end}}
         
         {{ .Content }}
+        
+        {{ if eq .Section "careers" }}
+          <p><a class="btn bg-link" href="mailto:jobs@rancher.com?subject={{ .Title }}">Apply Now</a></p>
+        {{end}}
 
       </article>
 

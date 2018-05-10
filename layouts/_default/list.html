@@ -8,6 +8,10 @@
     {{ with .Params.title }}
       <h1>{{ . }}</h1>
     {{end}}
+    
+    {{ with .Params.subTitle }}
+      <p class="p-t-sm">{{ . }}</p>
+    {{end}}
 
     {{ with .Params.author }}
       <span class="byline bg-link">{{ . }}</span>
@@ -49,8 +53,12 @@
                     <div class="p-h-sm p-v-xs"><i class="material-icons">person_outline</i> By: {{ . }}</div>
                   {{end}}
       
-                  {{ with .Params.date }}
+                  {{ if eq .Section "careers" }}
+
+                  {{else}}
+                    {{ with .Params.date }}
                     <div class="p-h-sm p-v-xs"><i class="material-icons">event</i> {{ .Format "January 2, 2006" }}</div>
+                    {{end}}
                   {{end}}  
                   
                   {{ if eq .Section "blog" }}
@@ -59,6 +67,10 @@
 
                   {{ with .Params.location }}
                     <div class="p-h-sm p-v-xs"><i class="material-icons">location_on</i> {{ . }}</div>
+                  {{end}}
+
+                  {{ if eq .Section "careers" }}
+                    <div class="p-h-sm p-v-xs"><i class="material-icons">work</i>{{ .Params.Department }}</div>
                   {{end}}
 
                 </div>
