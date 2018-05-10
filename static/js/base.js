@@ -280,11 +280,17 @@ const bootstrapScrollSpy = function () {
   scrollHandler();
 }
 
-$(document).ready(() => {
+const bootstrapApp = function() {
   bootstrapNav();
   bootstrapDropdowns();
   bootstrapModals();
   bootstrapSorts();
   bootstrapSlider();
   bootstrapScrollSpy();
+}
+
+$(document).ready(() => {
+  bootstrapApp();
 });
+
+export default bootstrapApp;
