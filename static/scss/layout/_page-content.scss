@@ -235,8 +235,8 @@
       counter-increment: step-counter;
       list-style-type: none;
       border: solid thin darken($light-grey, 5%);
-      margin-bottom: $spacer-xs;
-      padding: $spacer-sm;
+      margin-bottom: $spacer-sm;
+      padding: $spacer-xs $spacer-xs $spacer-xs $spacer-sm;
       position: relative;
       @extend .shadow;
 
@@ -310,7 +310,7 @@
     border-left: 4px solid $link-color;
     border-top-right-radius: 2px;
     margin: 2em 0;
-    padding: 12px 24px 12px 30px;
+    padding: $spacer-xs $spacer-sm;
     position: relative;
 
 
