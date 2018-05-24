@@ -216,6 +216,10 @@ ul {
     padding: 0;
     list-style: none;
   }
+
+  li {
+    margin-bottom: 15px;
+  }
 }
 
 @media screen and (max-width: 720px) {}
