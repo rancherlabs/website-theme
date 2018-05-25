@@ -7,6 +7,11 @@ header {
   width: 100%;
 
   nav {
+    ul {
+      li {
+        margin: 0;
+      }
+    }
     > ul.main-menu {
       list-style: none;
       padding: 0;
@@ -15,6 +20,7 @@ header {
       > li {
         display: inline-block;
         vertical-align: middle;
+        margin: 0;
 
         a.btn {
           border-bottom: 0;

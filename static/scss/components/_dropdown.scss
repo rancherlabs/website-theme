@@ -14,7 +14,7 @@
   }
 }
 
-.dropdown-menu {
+ul.dropdown-menu {
     border: solid thin $light-grey;
     display: block;
     font-size: .85em;
@@ -23,6 +23,7 @@
         display: none;
     }
     li {
+      margin-bottom: 0;
       a {
           text-decoration: none;
           display: block;
