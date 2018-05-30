@@ -285,11 +285,13 @@ const bootstrapSearch = function() {
   $(window).on('keyup', e => {
     if (e.which === 27 && $('.container-search').hasClass('open')) {
       $('.container-search').toggleClass('open');
+      $('.overlay-search').toggleClass('open');
     }
   })
 
   $('.container-search').on('click', '#search-cancel', e => {
     var container = $('.container-search');
+    let overlay   = $('.overlay-search');
     var query = $('#search').value;
 
     // debugger;
@@ -298,6 +300,7 @@ const bootstrapSearch = function() {
       $('#search').val('');
     } else {
       container.toggleClass('open');
+      overlay.toggleClass('open');
     }
   });
 
@@ -308,6 +311,7 @@ const bootstrapSearch = function() {
     let header    = $(e.currentTarget).closest('header');
 
     container.toggleClass('open');
+    overlay.toggleClass('open');
 
     if (container.hasClass('open')) {
       $('input#search').focus();

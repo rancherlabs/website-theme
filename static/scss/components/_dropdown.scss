@@ -13,23 +13,21 @@
     }
   }
 }
-
 ul.dropdown-menu {
-    border: solid thin $light-grey;
-    display: block;
-    font-size: .85em;
+  border: solid thin $light-grey;
+  display: block;
+  font-size: .85em;
 
-    &.hidden {
-        display: none;
-    }
-    li {
-      margin-bottom: 0;
-      a {
-          text-decoration: none;
-          display: block;
-          padding: $spacer-xs 0;
-          border-bottom: solid thin $light-grey;
-      }
+  &.hidden {
+    display: none;
+  }
+  li {
+    margin-bottom: 0;
+    a {
+      text-decoration: none;
+      display: block;
+      padding: $spacer-xs 0;
+      border-bottom: solid thin $light-grey;
     }
   }
 }
