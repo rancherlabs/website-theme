@@ -1,0 +1,68 @@
+.container-search {
+  display: none;
+
+  &.open {
+    display: block;
+
+    .overlay-search {
+      display: block;
+    }
+  }
+  .search-input {
+
+  }
+
+  .overlay-search {
+    background-color: rgba(0,0,0,0.8);
+    display: none;
+    height: 100vmin;
+    left: 0;
+    // overflow-y: scroll;
+    position: absolute;
+    width: 100%;
+    z-index: 1000;
+
+    > .search-results {
+      border: 0;
+
+      td {
+        padding: 20px;
+
+        h3 {
+          margin-top: 0;
+        }
+
+        .date {
+          display: none;
+        }
+      }
+    }
+  }
+
+  .search-input-group {
+    position: relative;
+
+    i {
+      color: white;
+      position: absolute;
+      right: 10px;
+      top: 10px;
+      cursor: pointer;
+    }
+  }
+
+
+  .search-input {
+    border: 0;
+    border-color: white;
+    color: white;
+    font-size: 1.5em;
+    background-color: transparent;
+    border-bottom: 1px solid white;
+
+    &:focus {
+      background-color: transparent;
+      outline: none;
+    }
+  }
+}

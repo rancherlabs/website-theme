@@ -280,6 +280,49 @@ const bootstrapScrollSpy = function () {
   scrollHandler();
 }
 
+const bootstrapSearch = function() {
+
+  $(window).on('keyup', e => {
+    if (e.which === 27 && $('.container-search').hasClass('open')) {
+      $('.container-search').toggleClass('open');
+    }
+  })
+
+  $('.container-search').on('click', '#search-cancel', e => {
+    var container = $('.container-search');
+    var query = $('#search').value;
+
+    // debugger;
+    if ($('#search').val()) {
+      $('#searchResults').empty();
+      $('#search').val('');
+    } else {
+      container.toggleClass('open');
+    }
+  });
+
+  $('header').on('click', '#button-search', e => {
+
+    let container = $('.container-search');
+    let overlay   = $('.overlay-search');
+    let header    = $(e.currentTarget).closest('header');
+
+    container.toggleClass('open');
+
+    if (container.hasClass('open')) {
+      $('input#search').focus();
+    } else {
+
+    }
+
+    // height after open
+    let cHeight = header.height();
+
+    overlay.css({top: cHeight + 10});
+  });
+
+}
+
 const bootstrapApp = function() {
   bootstrapNav();
   bootstrapDropdowns();
@@ -287,6 +330,7 @@ const bootstrapApp = function() {
   bootstrapSorts();
   bootstrapSlider();
   bootstrapScrollSpy();
+  bootstrapSearch();
 }
 
 $(document).ready(() => {

@@ -1,32 +1,47 @@
 <header class="p-h-sm">
-    <div class="row middle-md between-md">
-        <div class="pull-left">
-            <a href="/"><img src="/img/rancher-logo-horiz-white.svg" width="150" height="22"></a>
-        </div>
-        <div class="">
-            <nav>
-                <ul class="main-menu row middle-md">
-                    {{ $currentPage := . }} {{ range .Site.Menus.main }} {{ if .HasChildren }}
-                    <li class="dropdown sub-menu {{ if $currentPage.HasMenuCurrent " main " . }}active{{ end }}">
-                        <a href="{{ .URL }}" class="btn"><span>{{ .Name }} {{ .Pre }}</span></a>
-                        <ul class="sub dropdown-menu">
-                            {{ range .Children }}
-                            <li class="{{ if $currentPage.IsMenuCurrent " main " . }}active{{ end }}">
-                                <a href="{{ .URL }}">{{ .Name }} {{ .Pre }}</a> 
-                            {{ end }}
-                        </ul>
-                        {{else}}
-                        <li class="">
-                            <a href="{{.URL}}" class="btn"><span>{{ .Name }} {{ .Pre }}</span></a>
-                        </li>
-                        {{end}} 
-                        {{end}}
-                </ul>
-            </nav>
-        </div>
-        <div class="pull-right">
-            <a href="/quick-start" class="text-white p-r-sm"><i class="material-icons">cloud_upload</i> Deploy Rancher</a>
-            <a href="/support" class="text-white"><i class="material-icons">chat</i> Get Support</a>
-        </div>
+  <div class="row middle-md between-md">
+    <div class="pull-left">
+      <a href="/"><img src="/img/rancher-logo-horiz-white.svg" width="150" height="22"></a>
     </div>
+    <div class="">
+      <nav>
+        <ul class="main-menu row middle-md">
+          {{ $currentPage := . }} {{ range .Site.Menus.main }} {{ if .HasChildren }}
+          <li class="dropdown sub-menu {{ if $currentPage.HasMenuCurrent " main " . }}active{{ end }}">
+            <a href="{{ .URL }}" class="btn"><span>{{ .Name }} {{ .Pre }}</span></a>
+            <ul class="sub dropdown-menu">
+              {{ range .Children }}
+              <li class="{{ if $currentPage.IsMenuCurrent " main " . }}active{{ end }}">
+                <a href="{{ .URL }}">{{ .Name }} {{ .Pre }}</a>
+                {{ end }}
+            </ul>
+            {{else}}
+            <li class="">
+              <a href="{{.URL}}" class="btn"><span>{{ .Name }} {{ .Pre }}</span></a>
+            </li>
+            {{end}}
+            {{end}}
+        </ul>
+      </nav>
+    </div>
+    <div class="pull-right">
+      <a class="text-white p-r-xs" href="#" id="button-search"><i class="material-icons">search</i></a>
+      <a href="/quick-start" class="text-white p-r-sm"><i class="material-icons">cloud_upload</i> Deploy Rancher</a>
+      <a href="/support" class="text-white"><i class="material-icons">chat</i> Get Support</a>
+    </div>
+  </div>
+  <div class="container-search">
+    <row>
+      <form id="searchForm">
+        <div class="search-input-group">
+          <input type="search" class='search-input' id='search' autocomplete="off" placeholder="Search..."></input>
+          <i class="material-icons" id="search-cancel">cancel</i>
+          <!-- <i id="searchSpinner" class="fa fa-spinner fa-spin" aria-hidden="true"></i> -->
+        </div>
+      </form>
+    </row>
+    <div class="overlay-search">
+      <table class="search-results" id="searchResults"></table>
+    </div>
+  </div>
 </header>

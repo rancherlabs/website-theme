@@ -1,3 +1,4 @@
+{{ $cache :=  now.Unix }}
 <!-- LinkedIn Tracking Code -->
 <script type="text/javascript">
   _linkedin_data_partner_id = "287004";
@@ -31,12 +32,15 @@
 
 <!-- Hotjar Tracking Code for www.rancher.com -->
 <script>
-    (function(h,o,t,j,a,r){
-        h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
-        h._hjSettings={hjid:745525,hjsv:6};
-        a=o.getElementsByTagName('head')[0];
-        r=o.createElement('script');r.async=1;
-        r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
-        a.appendChild(r);
-    })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
+ (function(h,o,t,j,a,r){
+     h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+     h._hjSettings={hjid:745525,hjsv:6};
+     a=o.getElementsByTagName('head')[0];
+     r=o.createElement('script');r.async=1;
+     r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+     a.appendChild(r);
+ })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
 </script>
+
+<script charset="utf-8" type="text/javascript" src="{{ .Site.BaseURL }}/js/search-index.min.js?{{ $cache}}"></script>
+<script charset="utf-8" type="text/javascript" src="{{ .Site.BaseURL }}/js/search.min.js?{{ $cache}}" data-search-index="/search_index"></script>

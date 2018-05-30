@@ -1,7 +1,7 @@
 .dropdown {
   position: relative;
-  z-index: 1000;
-  
+  z-index: 1001;
+
   .dropdown-menu {
     display: none;
 
@@ -31,4 +31,11 @@ ul.dropdown-menu {
           border-bottom: solid thin $light-grey;
       }
     }
+  }
+}
+
+.main {
+  .dropdown {
+    z-index: 999 !important;
+  }
 }
