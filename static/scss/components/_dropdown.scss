@@ -1,7 +1,7 @@
 .dropdown {
   position: relative;
-  z-index: 1000;
-  
+  z-index: 1001;
+
   .dropdown-menu {
     display: none;
 
@@ -13,22 +13,27 @@
     }
   }
 }
-
 ul.dropdown-menu {
-    border: solid thin $light-grey;
-    display: block;
-    font-size: .85em;
+  border: solid thin $light-grey;
+  display: block;
+  font-size: .85em;
 
-    &.hidden {
-        display: none;
+  &.hidden {
+    display: none;
+  }
+  li {
+    margin-bottom: 0;
+    a {
+      text-decoration: none;
+      display: block;
+      padding: $spacer-xs 0;
+      border-bottom: solid thin $light-grey;
     }
-    li {
-      margin-bottom: 0;
-      a {
-          text-decoration: none;
-          display: block;
-          padding: $spacer-xs 0;
-          border-bottom: solid thin $light-grey;
-      }
-    }
+  }
+}
+
+.main {
+  .dropdown {
+    z-index: 999 !important;
+  }
 }

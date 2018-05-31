@@ -5,6 +5,7 @@ header {
   padding: 0 1rem;
   background-color: #2980B8;
   width: 100%;
+  z-index: 1001;
 
   nav {
     ul {
@@ -42,7 +43,7 @@ header {
             padding: 0;
             background-color: white;
             text-align: left;
-            box-shadow: 0px 3px 15px rgba(0,0,0,0.2);            
+            box-shadow: 0px 3px 15px rgba(0,0,0,0.2);
             min-width: 250px;
             z-index: 1000;
 
@@ -89,12 +90,14 @@ header {
 .mobile-header {
   display: none;
 }
+
 .ml-stack-nav-toggle {
 
     &__line {
       background: #fff;
     }
 }
+
 .ml-stack-nav {
   top: 75px;
   right: 0;
