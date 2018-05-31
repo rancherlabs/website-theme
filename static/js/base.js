@@ -287,14 +287,20 @@ const bootstrapSearch = function() {
       $('.container-search').toggleClass('open');
       $('.overlay-search').toggleClass('open');
     }
-  })
+  });
+
+  $('.overlay-search').on('click', e => {
+    if ($('.overlay-search').hasClass('open') && $('#searchResults').children().length <= 0) {
+      $('.container-search').toggleClass('open');
+      $('.overlay-search').toggleClass('open');
+    }
+  });
 
   $('.container-search').on('click', '#search-cancel', e => {
-    var container = $('.container-search');
-    let overlay   = $('.overlay-search');
-    var query = $('#search').value;
+    const container = $('.container-search');
+    const overlay   = $('.overlay-search');
+    const query = $('#search').value;
 
-    // debugger;
     if ($('#search').val()) {
       $('#searchResults').empty();
       $('#search').val('');
