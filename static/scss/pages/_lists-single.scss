@@ -4,19 +4,20 @@
 
 //lists
 .thumbnail {
-    width: 250px;
-    height: 250px;
+    width: 200px;
+    height: 200px;
     overflow: hidden;
     background: $light-grey;
     float: left;
     margin-right: 20px;
+    border-radius: 4px;
 
     img {
       overflow: hidden;
-      height: 250px;
-      width: 666px;
-      max-width: 666px;
-      margin: -240px -207px;
+      height: 200px;
+      width: 533px;
+      max-width: 533px;
+      margin: -188px -165px;
     }
 }
 
