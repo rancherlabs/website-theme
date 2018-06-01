@@ -1,24 +1,26 @@
 {{ define "hero" }}
-  <section class="hero">
-    <div class="wrapper p-h-lg row center-xs">
-      <div class="col-md-9">
-        {{ with .Params.title }}
-          <h1>{{ . }}</h1>
-        {{end}}
+  <section>
+    <div class="wrapper">
 
-        {{ with .Params.subTitle }}
-          <p class="p-t-sm">{{ . }}</p>
-        {{end}}
+      {{ with .Params.title }}
+        <h1>{{ . }}</h1>
+      {{end}}
+
+      {{ with .Params.subTitle }}
+        <p class="p-t-sm">{{ . }}</p>
+      {{end}}
 
       {{ with .Params.author }}
-        <span class="byline bg-link">{{ . }}</span>
+        <span class="byline">by: {{ . }}</span>
       {{end}}
+
       {{ with .Params.date }}
-        <div class="p-h-sm p-v-xs">{{ .Format "January 2, 2006" }}</div>
+        <div class="date p-v-xs">{{ .Format "January 2, 2006" }}</div>
       {{end}}
-    </div>
+      <hr/>
     </div>
   </section>
+
 {{ end }}
 
 {{ define "main" }}
@@ -26,20 +28,20 @@
     {{ partial "breadcrumbs.html" . }}
     <div class="row between-md">
       <article class="main-content col-sm-6 col-md-7 col-xs-12 p-r-lg">
-        
+
         {{ if .Params.image }}
           <img class="feat-img" src="{{ .Params.image }}" alt="{{ .Params.title }}">
         {{end}}
-        
+
         {{ .Content }}
-        
+
         {{ if eq .Section "careers" }}
           <p><a class="btn bg-link" href="mailto:jobs@rancher.com?subject={{ .Title }}">Apply Now</a></p>
         {{end}}
 
       </article>
 
-      <aside class="col-sm-5 col-xs-12 hidden-md">
+      <aside class="col-sm-4 col-xs-12 hidden-md">
         {{ partial "sidebar.html" . }}
       </aside>
     </div>

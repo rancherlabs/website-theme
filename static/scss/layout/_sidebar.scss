@@ -6,15 +6,21 @@ aside {
   .aside-item {
     background: rgba(255,255,255,.5);
     margin-bottom: 1rem;
+    padding: $spacer-xs;
     display: flex;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
 
-    .bg-accent {
-      padding: 10px;
-      transition: ease-in-out all .25s;
-      text-align: center;
-      max-width: 50px;
-      margin-right: 1rem;
-      margin-left: 0;
+    .thumbnail {
+      width: 100px;
+      height: 100px;
+
+      img {
+        overflow: hidden;
+        height: 100px;
+        width: 265px;
+        max-width: 666px;
+        margin: -89px -82px;
+      }
     }
 
     .aside-info {

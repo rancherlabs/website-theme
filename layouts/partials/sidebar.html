@@ -8,11 +8,18 @@
   </div>
 </div>
 
-<div class="bg-default p-h-md p-v-sm">
+<div class="">
   <h3 class="m-t-0 m-b-sm">Recent Posts</h3>
   {{ range first 5 (where .Site.Pages "Section" "blog") }}
       <div class="row aside-item">
-        <div class="bg-accent col-md row middle-md center-md"><i class="material-icons">question_answer</i></div>
+
+
+        {{ if .Params.image }}
+          <div class="thumbnail"><img src="{{ .Params.image }}" alt="{{ .Params.title }}"></div>
+          {{ else }}
+          <div class="thumbmail bg-default p-a-xs"><i class="material-icons">question_answer</i></div>
+        {{end}}
+
         <div class="col-md aside-info">
           <h3><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
           {{ .Date.Format "Jan 02, 2006" }}
@@ -22,13 +29,20 @@
 </div>
 
 
-<div class="bg-default p-h-md p-v-sm m-t-sm">
+<div class="m-t-sm">
   <h3 class="m-t-0 m-b-sm">Upcoming Events</h3>
   <div id="events-list-injected"> </div>
 
   {{ range first 5 (where .Site.Pages "Section" "events") }}
       <div class="row aside-item">
-        <div class="bg-accent col-md row middle-md center-md"><i class="material-icons">event</i></div>
+
+
+        {{ if .Params.image }}
+          <div class="thumbnail"><img src="{{ .Params.image }}" alt="{{ .Params.title }}"></div>
+          {{ else }}
+          <div class="thumbmail bg-default p-a-xs"><i class="material-icons">event</i></div>
+        {{end}}
+
         <div class="col-md aside-info">
           <h3><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
           {{ .Date.Format "Jan 02, 2006" }}
