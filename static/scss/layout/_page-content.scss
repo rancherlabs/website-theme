@@ -174,18 +174,22 @@
     color: $primary;
   }
 
-  > ul {
+  ul {
     list-style-type: none;
 
     >li {
+      // text-indent: -0.75em;
+      position: relative;
+
       &:before {
         font-family: 'Material Icons';
         content: "label";
         color: $link-color;
-        margin-right: 10px;
-        display: inline-block;
-        vertical-align: middle;
-        float: left;
+        padding-right: 15px;
+        // display: inline-block;
+        // float: left;
+        position: absolute;
+        left: -30px;
       }
     }
 

@@ -2,9 +2,6 @@
  * Basic typography style for copy text
  */
 
-
-/* Tufte CSS styles */
-
 html {
   font-size: 13px;
 }
@@ -181,6 +178,8 @@ pre {
   white-space: pre-wrap;
   word-wrap: break-word;
   border-radius: 3px;
+  font-size: $base-font-size;
+  line-height: $base-line-height;
 
   code {
     font-size: 0.9rem;
