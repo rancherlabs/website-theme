@@ -10,13 +10,20 @@
         <p class="p-t-sm">{{ . }}</p>
       {{end}}
 
-      {{ with .Params.author }}
-        <span class="byline">by: {{ . }}</span>
+      <div class="row middle-xs between-md">
+      {{ if and (.Params.author) (eq .Section "blog") }}
+        {{ with index .Site.Data.authors .Params.author }}
+          <div class="row middle-xs p-l-sm p-a-xs">
+            <img src="{{.pic}}" alt="{{.name}}" height="35" width="35" />
+            <span class="byline p-l-xs">{{ .name }}</span>
+          </div>
+        {{end}}
       {{end}}
 
       {{ with .Params.date }}
-        <div class="date p-v-xs">{{ .Format "January 2, 2006" }}</div>
+        <div class="date">{{ .Format "January 2, 2006" }}</div>
       {{end}}
+       </div>
       <hr/>
     </div>
   </section>
@@ -39,14 +46,44 @@
           <p><a class="btn bg-link" href="mailto:jobs@rancher.com?subject={{ .Title }}">Apply Now</a></p>
         {{end}}
 
+        <div class="row middle p-v-sm">
+          <span>{{ partial "addthis" . }}</span>
+        </div>
+
+        {{ if and (.Params.author) (eq .Section "blog") }}
+        <div class="bio p-t-lg">
+          {{ with index .Site.Data.authors .Params.author }}
+            <div class="row middle-xs m-l-0">
+              <img src="{{.pic}}" alt="{{.name}}" height="100" width="100" class="m-r-sm" />
+              <div class="byline m-t-0">
+                <p class="m-a-0">
+                  {{.name}}
+                  <br/> {{.title}}
+                </p>
+                <div class="row middle-xs m-l-0">
+                  {{ with .git }}
+                    <a href="https://github.com/{{.}}" target="_blank"><img src="/img/icon-github.svg" width="30" height="30" class="m-r-sm"></a>
+                  {{ end }}
+                  {{ with .twitter }}
+                    <a href="https://twitter.com/{{.}}" target="_blank"><img src="/img/icon-twitter.svg" width="30" height="30"></a>
+                  {{ end }}
+                </div>
+              </div>
+
+            </div>
+            <hr/>
+            {{ with .bio }}
+              <p>{{.}}</p>
+            {{end}}
+          {{ end }}
+        </div>
+        {{ end }}
+
       </article>
 
       <aside class="col-sm-4 col-xs-12 hidden-md">
         {{ partial "sidebar.html" . }}
       </aside>
-    </div>
-    <div class="p-v-md">
-      {{ partial "addthis" . }}
     </div>
   </div>
 {{ end }}

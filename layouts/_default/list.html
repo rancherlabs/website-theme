@@ -8,13 +8,9 @@
     {{ with .Params.title }}
       <h1>{{ . }}</h1>
     {{end}}
-    
+
     {{ with .Params.subTitle }}
       <p class="p-t-sm">{{ . }}</p>
-    {{end}}
-
-    {{ with .Params.author }}
-      <span class="byline bg-link">{{ . }}</span>
     {{end}}
   </section>
 {{ end }}
@@ -47,30 +43,34 @@
               </div>
 
               <div class="bg-default">
-                <div class="row">
-                 
-                  {{ with .Params.author }}
-                    <div class="p-h-sm p-v-xs"><i class="material-icons">person_outline</i> By: {{ . }}</div>
+                <div class="row middle-xs">
+                  {{ if and (.Params.author) (eq .Section "blog") }}
+                    {{ with index .Site.Data.authors .Params.author }}
+
+                      <div class="p-l-sm p-a-xs"><img src="{{.pic}}" alt="{{.name}}" height="35" width="35" /></div>
+                      <div class="p-r-xs p-v-xs"><span class="">{{ .name }}</span></div>
+
+                    {{end}}
                   {{end}}
-      
+
                   {{ if eq .Section "careers" }}
 
                   {{else}}
                     {{ with .Params.date }}
-                    <div class="p-h-sm p-v-xs"><i class="material-icons">event</i> {{ .Format "January 2, 2006" }}</div>
+                    <div class="p-h-xs p-v-xs"><i class="material-icons">event</i> {{ .Format "January 2, 2006" }}</div>
                     {{end}}
-                  {{end}}  
-                  
+                  {{end}}
+
                   {{ if eq .Section "blog" }}
-                    <div class="p-h-sm p-v-xs"><i class="material-icons">timer</i> Read Time: {{.ReadingTime}} minutes</div>
+                    <div class="p-h-xs p-v-xs"><i class="material-icons">timer</i> Read Time: {{.ReadingTime}} minutes</div>
                   {{end}}
 
                   {{ with .Params.location }}
-                    <div class="p-h-sm p-v-xs"><i class="material-icons">location_on</i> {{ . }}</div>
+                    <div class="p-h-xs p-v-xs"><i class="material-icons">location_on</i> {{ . }}</div>
                   {{end}}
 
                   {{ if eq .Section "careers" }}
-                    <div class="p-h-sm p-v-xs"><i class="material-icons">work</i>{{ .Params.Department }}</div>
+                    <div class="p-h-xs p-v-xs"><i class="material-icons">work</i>{{ .Params.Department }}</div>
                   {{end}}
 
                 </div>
