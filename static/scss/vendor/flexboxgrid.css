@@ -197,7 +197,6 @@
   -ms-flex-pack: center;
   -webkit-box-pack: center;
   justify-content: center;
-  text-align: center;
 }
 
 .end-xs {
@@ -411,7 +410,6 @@
     -ms-flex-pack: center;
     -webkit-box-pack: center;
     justify-content: center;
-    text-align: center;
   }
 
   .end-sm {
@@ -626,7 +624,6 @@
     -ms-flex-pack: center;
     -webkit-box-pack: center;
     justify-content: center;
-    text-align: center;
   }
 
   .end-md {
@@ -841,7 +838,6 @@
     -ms-flex-pack: center;
     -webkit-box-pack: center;
     justify-content: center;
-    text-align: center;
   }
 
   .end-lg {
