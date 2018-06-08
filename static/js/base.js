@@ -3,6 +3,7 @@ import moment from 'moment';
 import {lory} from 'lory.js';
 import tingle from 'tingle.js';
 import mlStackNav from 'ml-stack-nav';
+import { Features, Zoom, ZoomDOM, ZoomListener } from 'zoom.ts';
 
 const defaults = {
   sortOrder: 'desc'
@@ -333,6 +334,24 @@ const bootstrapSearch = function() {
 
 }
 
+const bootstrapImgZoom = function() {
+  let features = Features.of(document.body.style); // (1)
+  let image = document.querySelector('.zoom__image'); // (2)
+
+  if (image) {
+    image.addEventListener('click', new ZoomListener(dom => { // (3)
+      let zoom = new Zoom(dom, features); // (4)
+
+      zoom.expand(); // (5)
+
+      // this probably isn't required at this point because its not a single page app but lets be safe
+      setTimeout(() => {
+        zoom.destroy(); // (6)
+      }, 5000);
+    }));
+  }
+}
+
 const bootstrapApp = function() {
   bootstrapNav();
   bootstrapDropdowns();
@@ -341,6 +360,7 @@ const bootstrapApp = function() {
   bootstrapSlider();
   bootstrapScrollSpy();
   bootstrapSearch();
+  bootstrapImgZoom();
 }
 
 $(document).ready(() => {
