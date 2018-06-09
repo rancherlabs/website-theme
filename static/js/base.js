@@ -3,7 +3,7 @@ import moment from 'moment';
 import {lory} from 'lory.js';
 import tingle from 'tingle.js';
 import mlStackNav from 'ml-stack-nav';
-import { Features, Zoom, ZoomDOM, ZoomListener } from 'zoom.ts';
+//import { Features, Zoom, ZoomDOM, ZoomListener } from 'zoom.ts';
 
 const defaults = {
   sortOrder: 'desc'
@@ -360,7 +360,7 @@ const bootstrapApp = function() {
   bootstrapSlider();
   bootstrapScrollSpy();
   bootstrapSearch();
-  bootstrapImgZoom();
+  //bootstrapImgZoom();
 }
 
 $(document).ready(() => {
