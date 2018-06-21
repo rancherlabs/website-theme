@@ -178,7 +178,9 @@ h3>code {
 pre {
   background-color: $dark-grey;
   padding: $spacer-xs;
-  white-space: pre-wrap;
+  // white-space: pre-wrap;
+  white-space: pre;
+  overflow: scroll;
   word-wrap: break-word;
   border-radius: 3px;
   font-size: $base-font-size;
