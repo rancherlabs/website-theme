@@ -1,7 +1,7 @@
 ///768
 @media all and (max-width: map-get($breakpoints, medium)) {
   header {
-    display: none;  
+    display: none;
   }
   h1, h2, h3, h4, h5, h6 {
     max-width: 100%;
@@ -11,6 +11,11 @@
 
   h1 {
     font-size: 4em;
+  }
+
+  p {
+    font-size: 1.25rem;
+    line-height: 1.75rem;
   }
 
   .mobile-header {
@@ -25,6 +30,12 @@
     border-right: none;
   }
 
+
+  .cta-banner {
+    text-align: center;
+    padding: $spacer-xs;
+  }
+
   .bg-link .border-right > * {
     border-bottom: solid 2px #268bcf;
     border-right: none;
@@ -35,7 +46,7 @@
   *[class*="p-v-"],
   *[class*="p-h-"],
   *[class*="p-t-"],
-  *[class*="p-b-"], 
+  *[class*="p-b-"],
   *[class*="p-l-"],
   *[class*="p-r-"]     {
     padding: $spacer-xs;
@@ -45,15 +56,15 @@
   *[class*="m-v-"],
   *[class*="m-h-"],
   *[class*="m-t-"],
-  *[class*="m-b-"], 
+  *[class*="m-b-"],
   *[class*="m-l-"],
   *[class*="m-r-"]     {
     margin: $spacer-xs;
   }
 
-  *[class^="text-"],
-  *[class^="text-"] > *,
-  ol,
+  // *[class^="text-"],
+  // *[class^="text-"] > *,
+  // ol,
   ul,
   table {
     font-size: 1.25em;
@@ -75,7 +86,7 @@
   }
 
   .add-cluster .wrapper .p-v-lg {
-    padding: $spacer-sm 0;
+    padding: $spacer-xs 0;
   }
 
   section .wrapper {

@@ -9,6 +9,10 @@ ol.breadcrumbs {
 
   li {
     list-style-type: none;
+    box-shadow: none;
+    border: none;
+    padding: 0;
+
     &:before {
       display: none;
     }

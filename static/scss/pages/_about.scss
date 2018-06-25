@@ -1,0 +1,46 @@
+// -----------------------------------------------------------------------------
+// This file contains styles that are specific to the about page.
+// -----------------------------------------------------------------------------
+
+.team-member {
+  position: relative;
+  display: block;
+
+  > * {
+    transition: ease-in-out all 300ms;
+  }
+
+  img {
+    z-index: 1;
+  }
+
+
+  .team-info {
+    font-family: $text-font-header;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    opacity: 0;
+    z-index: 3;
+    color: white;
+    width: 100%;
+
+    p {
+      margin: 0;
+    }
+  }
+
+  &:hover {
+    opacity: 1;
+
+    .team-info {
+      opacity: 1;
+    }
+
+    img {
+      filter: brightness(.3);
+    }
+  }
+}
