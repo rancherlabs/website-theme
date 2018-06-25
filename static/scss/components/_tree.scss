@@ -1,4 +1,5 @@
 .tree-nav {
+
   &.invisible {
     visibility: hidden;
   }
@@ -11,23 +12,12 @@
   .tree-nav-item {
     cursor: pointer;
     cursor: hand;
-    margin: 0 $spacer-xs $spacer-xs 0;
     position: relative;
-    background-color: white;
-    border: 1px $light-grey solid;
-    border-left: 3px $light-grey solid;
+    border-bottom: 1px $light-grey solid;
     border-radius: 3px;
     transition: ease-in-out all .25s;
+    font-size: 14px;
 
-    // .tree-nav-item {
-    //   background-color: mix($light-grey, $mid-grey, 95%);
-    //   .tree-nav-item {
-    //     background-color: mix($light-grey, $mid-grey, 85%);
-    //     .tree-nav-item {
-    //       background-color: mix($light-grey, $mid-grey, 75%);
-    //     }
-    //   }
-    // }
     a {
       max-width: calc(100% - 40px);
     }
@@ -40,14 +30,19 @@
       right: 0;
       top: 0;
     }
-    
+
     .tree-nav-item {
+      border-bottom: none;
+
+      a {
+        padding: .25em 0 .25em $spacer-sm;
+      }
+
       &:before {
         content: "";
         position: absolute;
-        left: -1.25rem;
-        top: 2rem;
-        width: 1.25rem;
+        top: 16px;
+        width: $spacer-xs;
         height: 2px;
         background-color: $light-grey;
       }
@@ -58,7 +53,7 @@
     }
 
     &.active {
-      background-color: rgba($accent, .1);
+      background-color: rgba($accent, .05);
       border-color: $accent;
 
       > a {
@@ -78,8 +73,10 @@
 
 
     .tree-nav-sublist {
-      margin: $spacer-xs 0 $spacer-xs $spacer-xs;
-      font-size: .85em;
+      // font-size: .85em;
+      border-left: 1px $light-grey solid;
+      margin-left: $spacer-sm;
+      margin-bottom: $spacer-sm;
 
       &.hide {
         display: none;

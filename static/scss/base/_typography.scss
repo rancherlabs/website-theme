@@ -21,48 +21,46 @@ h1, h2 {
 
 h3, h4, h5, h6 {
   font-family: $text-font-header;
-  color: $dark-grey;
-  letter-spacing: .3px;
-  margin-top: 3rem;
-  margin-bottom: 1rem;
+  color: $mid-grey;
+  // margin-top: 3rem;
+  // margin-bottom: 1rem;
 
 }
 
 h1 {
   // margin-bottom: 1.5rem;
-  font-size: 6rem;
+  font-size: 5rem;
   line-height: 1;
   text-transform: capitalize;
 
 }
 
 h2 {
-  font-size: 3em;
+  font-size: 2em;
   line-height: 1.05em;
   margin-top: 4rem;
-  margin-bottom: 1.5rem;
+  margin-bottom: .7rem;
   text-transform: capitalize;
 }
 
 h3 {
-  font-size: 2rem;
+  font-size: 1.5rem;
   line-height: 1.14384615;
-  // margin-top: 2rem;
-  // margin-bottom: 0;
+  margin-top: 2rem;
+  margin-bottom: 0;
 }
 
 h4 {
-  font-size: 1.5rem;
+  font-size: 1.4rem;
   line-height: 2rem;
   color: $mid-grey;
 }
 
 h5, h6 {
-  font-size: 1.4rem;
+  font-size: 1.3rem;
   line-height: 2rem;
   color: $mid-grey;
-  // margin-bottom: .7rem;
-  // margin-top: 1.4rem;
+  text-transform: uppercase;
 }
 
 hr {
@@ -215,7 +213,7 @@ ul {
   }
 
   li {
-    margin-bottom: 15px;
+    margin-bottom: calc($spacer-xs / 2);
   }
 }
 
@@ -236,6 +234,11 @@ ul {
 .text-lg {
   font-size: 3rem;
   line-height: 4rem;
+}
+
+.text-huge {
+  font-size: 8rem;
+  margin: 0;
 }
 
 //alternative styles

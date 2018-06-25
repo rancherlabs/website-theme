@@ -49,7 +49,7 @@
 
   h2 {
     font-size: 2em;
-    font-family: "Prompt", "Helvetica Neue Light", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+    font-family: $text-font-stack;
     font-weight: 300;
   }
 
@@ -196,7 +196,6 @@
     list-style-type: none;
 
     >li {
-      // text-indent: -0.75em;
       position: relative;
 
       &:before {
@@ -204,15 +203,13 @@
         content: "label";
         color: $link-color;
         padding-right: 15px;
-        // display: inline-block;
-        // float: left;
         position: absolute;
         left: -30px;
       }
     }
 
     li:not(:first-child) {
-      margin-top: 0.25rem;
+      margin-top: 1rem;
     }
 
     p {
@@ -244,33 +241,26 @@
 
   ol {
     padding: 0;
+    border: solid thin darken($light-grey, 5%);
+    padding: $spacer-md;
+    @extend .shadow;
 
     > li {
       counter-increment: step-counter;
       list-style-type: none;
-      border: solid thin darken($light-grey, 5%);
-      margin-bottom: $spacer-sm;
-      padding: $spacer-xs $spacer-xs $spacer-xs $spacer-sm;
+      border-bottom: solid thin $light-grey;
       position: relative;
-      @extend .shadow;
+      padding: $spacer-xs 0;
+
 
       &:before {
-        content: counter(step-counter);
-        background-color: $link-color;
-        color: white;
-        padding: $spacer-xs;
-        font-weight: 100;
+        content: counter(step-counter) ":";
         display: inline-block;
-        vertical-align: middle;
-        text-align: right;
-        position: absolute;
-        left: -20px;
-        top: $spacer-xs;
-        width: 40px;
-        height: 35px;
-        line-height: .75em;
-        font-size: .85em;
-        text-align: center;
+        float: left;
+        vertical-align: top;
+        margin: .7rem 0;
+        padding-right: $spacer-xs;
+        color: $mid-grey;
       }
 
       p {
@@ -331,13 +321,9 @@
     strong {
       display: block;
       color: $mid-grey;
-      padding-bottom: .75em;
-      border-bottom: $light-grey solid 2px;
-      font-weight: 100;
       font-style: initial;
-      margin: 0 0 1em 0;
       font-family: $text-font-header;
-      font-weight: 400;
+      font-weight: 600;
 
     }
 

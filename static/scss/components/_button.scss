@@ -34,6 +34,7 @@ button,
     font-size: 1.4rem;
     line-height: 1.5;
     color: white;
+    font-family: $text-font-header;
 
     &.bg-transparent {
         color: darken($link-color, 5);
