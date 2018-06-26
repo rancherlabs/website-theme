@@ -44,3 +44,13 @@
     }
   }
 }
+
+
+.locations {
+  position: relative;
+  .map {
+    position: absolute;
+    z-index: -1;
+    opacity: .3;
+  }
+}

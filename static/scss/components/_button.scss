@@ -2,7 +2,7 @@
 // This file contains all styles related to the button component.
 // -----------------------------------------------------------------------------
 
-$btn-padding: 1rem 1.25rem;
+$btn-padding: .75rem 1.25rem;
 $xs-padding: .25rem .5rem;
 $sm-padding: .5rem .75rem;
 $lg-padding: 1.25rem 1.5rem;
@@ -29,12 +29,9 @@ button,
     user-select: none;
     border: 0 solid transparent;
     padding: $btn-padding;
-    letter-spacing: .5px;
     border-radius: 1.5px;
     font-size: 1.4rem;
-    line-height: 1.5;
     color: white;
-    font-family: $text-font-header;
 
     &.bg-transparent {
         color: darken($link-color, 5);

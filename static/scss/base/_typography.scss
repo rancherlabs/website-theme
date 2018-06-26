@@ -22,8 +22,8 @@ h1, h2 {
 h3, h4, h5, h6 {
   font-family: $text-font-header;
   color: $mid-grey;
-  // margin-top: 3rem;
-  // margin-bottom: 1rem;
+  margin-top: 0;
+  margin-bottom: 0;
 
 }
 
@@ -237,7 +237,7 @@ ul {
 }
 
 .text-huge {
-  font-size: 8rem;
+  font-size: 6rem;
   margin: 0;
 }
 
