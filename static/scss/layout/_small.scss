@@ -1,6 +1,10 @@
 /*695-959*/
-@media all and (min-width: map-get($breakpoints, small)) {
+@media all and (max-width: map-get($breakpoints, small)) {
   .hidden-sm {
+    display: none;
+  }
+
+  .map {
     display: none;
   }
 }
