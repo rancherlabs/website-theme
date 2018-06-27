@@ -3,65 +3,77 @@
  */
 
 html {
-  font-size: 13px;
+  font-size: 11px;
 }
 
 body {
   font-family: $text-font-stack;
   color: $text-color;
   counter-reset: sidenote-counter;
-  font-weight: 300;
+  font-weight: 400;
   letter-spacing: .03em;
 }
 
-h1, h2 {
-  font-family: $text-font-header;
-  font-weight: 600;
-}
-
-h3, h4, h5, h6 {
-  font-family: $text-font-header;
-  color: $mid-grey;
-  margin-top: 0;
-  margin-bottom: 0;
-
-}
-
 h1 {
-  // margin-bottom: 1.5rem;
-  font-size: 5rem;
-  line-height: 1;
-  text-transform: capitalize;
-
+  margin-bottom: 1rem;
+  font-family: $text-font-header;
+  font-size: 4rem;
+  line-height: 5rem;
+  font-weight: 600;
+  font-style: normal;
+  color: $text-color;
 }
 
 h2 {
-  font-size: 2em;
-  line-height: 1.05em;
-  margin-top: 4rem;
-  margin-bottom: .7rem;
-  text-transform: capitalize;
+  margin-bottom: 1rem;
+  font-family: $text-font-header;
+  font-size: 3rem;
+  line-height: 4rem;
+  font-weight: 600;
+  font-style: normal;
+  color: lighten($text-color, 10%);
 }
 
 h3 {
-  font-size: 1.5rem;
-  line-height: 1.14384615;
-  margin-top: 2rem;
-  margin-bottom: 0;
+  margin-bottom: 1rem;
+  font-family: $text-font-header;
+  font-size: 2rem;
+  line-height: 3rem;
+  font-weight: 600;
+  font-style: normal;
+  color: lighten($text-color, 30%);
 }
 
 h4 {
-  font-size: 1.4rem;
-  line-height: 2rem;
-  color: $mid-grey;
+  margin-bottom: 1rem;
+  font-family: $text-font-header;
+  font-size: 2rem;
+  line-height: 3rem;
+  font-weight: 600;
+  font-style: normal;
+  color: lighten($text-color, 50%);
 }
 
-h5, h6 {
-  font-size: 1.3rem;
-  line-height: 2rem;
-  color: $mid-grey;
-  text-transform: uppercase;
+h5 {
+  margin-bottom: 1rem;
+  font-family: $text-font-header;
+  font-size: 1.5rem;
+  line-height: 2.75rem;
+  font-weight: 600;
+  font-style: normal;
+  color: lighten($text-color, 55%);
 }
+
+h6 {
+  margin-bottom: 1rem;
+  font-family: $text-font-header;
+  font-size: 1.25rem;
+  line-height: 2.5rem;
+  font-weight: 600;
+  font-style: normal;
+  color: lighten($text-color, 60%);
+}
+
 
 hr {
   display: block;
@@ -87,7 +99,7 @@ table {
 p {
   vertical-align: baseline;
   font-size: 1.4rem;
-  line-height: 2rem;
+  line-height: 2.4rem;
   margin-top: .7rem;
   margin-bottom: 1.4rem;
   padding-right: 0;
@@ -237,7 +249,7 @@ ul {
 }
 
 .text-huge {
-  font-size: 6rem;
+  font-size: 5rem;
   margin: 0;
 }
 

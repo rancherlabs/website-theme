@@ -18,60 +18,66 @@
 {{ define "main" }}
   <div class="wrapper">
     <div class="row center-xs">
-      <article class="main-content col-md-9">
+
+    <div class="col-md-9">
       {{ partial "breadcrumbs.html" . }}
+    </div>
+
+      <article class="main-content col-md-9">
+
 
       {{ .Content }}
         {{ $paginator := .Paginate (where .Data.Pages.ByDate.Reverse ".Date.Unix" "<" now.Unix) 10 }}
         {{ range $paginator.Pages }}
+        <div class="p-v-xs">
 
+            <h2 class="m-t-0"><a href="{{.URL}}">{{.Title}}</a></h2>
 
-                <h3 class="m-t-0"><a href="{{.URL}}">{{.Title}}</a></h3>
+            {{ if .Params.image }}
+              <div class="thumbnail"><img src="{{ .Params.image }}" alt="{{ .Params.title }}"></div>
+            {{end}}
 
-                <div class="row middle-xs">
-                  {{ if and (.Params.author) (eq .Section "blog") }}
-                    {{ with index .Site.Data.authors .Params.author }}
+            <p>
+              {{ .Summary | safeHTML }}
 
-                      <div class="p-l-xs p-a-xs"><img src="{{.pic}}" class="circle" alt="{{.name}}" height="35" width="35" /></div>
-                      <div class="p-r-xs p-v-xs"><span class="">{{ .name }}</span></div>
+              {{ if .Truncated }}
+                <a href="{{ .RelPermalink }}">Read More…</a>
+              {{ end }}
+            </p>
 
-                    {{end}}
-                  {{end}}
+            <div class="row middle-xs">
+              {{ if and (.Params.author) (eq .Section "blog") }}
+                {{ with index .Site.Data.authors .Params.author }}
 
-                  {{ if eq .Section "careers" }}
+                  <div class="p-l-xs p-a-xs"><img src="{{.pic}}" class="circle" alt="{{.name}}" height="35" width="35" /></div>
+                  <div class="p-r-xs p-v-xs"><span class="">{{ .name }}</span></div>
 
-                  {{else}}
-                    {{ with .Params.date }}
-                    <div class="p-h-xs p-v-xs"><i class="material-icons text-muted">event</i> {{ .Format "January 2, 2006" }}</div>
-                    {{end}}
-                  {{end}}
-
-                  {{ if eq .Section "blog" }}
-                    <div class="p-h-xs p-v-xs"><i class="material-icons text-muted">timer</i> Read Time: {{.ReadingTime}} minutes</div>
-                  {{end}}
-
-                  {{ with .Params.location }}
-                    <div class="p-h-xs p-v-xs"><i class="material-icons text-muted">location_on</i> {{ . }}</div>
-                  {{end}}
-
-                  {{ if eq .Section "careers" }}
-                    <div class="p-h-xs p-v-xs"><i class="material-icons text-muted">work</i>{{ .Params.Department }}</div>
-                  {{end}}
-                </div>
-
-
-                {{ if .Params.image }}
-                  <div class="thumbnail"><img src="{{ .Params.image }}" alt="{{ .Params.title }}"></div>
                 {{end}}
+              {{end}}
 
-                <p>{{ .Summary | safeHTML }}</p>
-                {{ if .Truncated }}
-                <div>
-                  <a href="{{ .RelPermalink }}">Read More…</a>
-                </div>
-                {{ end }}
+              {{ if eq .Section "careers" }}
 
-              <hr/>
+              {{else}}
+                {{ with .Params.date }}
+                <div class="p-h-xs p-v-xs"><i class="material-icons text-muted">event</i> {{ .Format "January 2, 2006" }}</div>
+                {{end}}
+              {{end}}
+
+              {{ if eq .Section "blog" }}
+                <div class="p-h-xs p-v-xs"><i class="material-icons text-muted">timer</i> Read Time: {{.ReadingTime}} minutes</div>
+              {{end}}
+
+              {{ with .Params.location }}
+                <div class="p-h-xs p-v-xs"><i class="material-icons text-muted">location_on</i> {{ . }}</div>
+              {{end}}
+
+              {{ if eq .Section "careers" }}
+                <div class="p-h-xs p-v-xs"><i class="material-icons text-muted">work</i>{{ .Params.Department }}</div>
+              {{end}}
+            </div>
+
+         </div>
+         <hr/>
 
         {{ end }}
       </div>
