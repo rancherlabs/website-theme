@@ -18,6 +18,13 @@
     line-height: 1.75rem;
   }
 
+  //images in col
+  *[class*=" col-"] {
+    img {
+      width: 100%;
+    }
+  }
+
   .mobile-header {
     display: flex;
   }
