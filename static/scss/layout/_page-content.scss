@@ -191,7 +191,7 @@
       &:before {
         font-family: 'Material Icons';
         content: "label";
-        color: $link-color;
+        color: $mid-grey;
         padding-right: 15px;
         position: absolute;
         left: -30px;
@@ -248,7 +248,7 @@
         display: inline-block;
         float: left;
         vertical-align: top;
-        margin: .7rem 0;
+        // margin: .7rem 0;
         padding-right: $spacer-xs;
         color: $mid-grey;
       }
@@ -256,9 +256,9 @@
       &:first-child {
         padding-top: 0;
 
-        &:before {
-          margin-bottom: 1.4rem;
-        }
+        // &:before {
+        //   margin-bottom: 1.4rem;
+        // }
       }
 
       &:last-child {
