@@ -281,59 +281,6 @@ const bootstrapScrollSpy = function () {
   scrollHandler();
 }
 
-const bootstrapSearch = function() {
-
-  $(window).on('keyup', e => {
-    if (e.which === 27 && $('.container-search').hasClass('open')) {
-      $('.container-search').toggleClass('open');
-      $('.overlay-search').toggleClass('open');
-    }
-  });
-
-  $('.overlay-search').on('click', e => {
-    if ($('.overlay-search').hasClass('open') && $('#searchResults').children().length <= 0) {
-      $('.container-search').toggleClass('open');
-      $('.overlay-search').toggleClass('open');
-    }
-  });
-
-  $('.container-search').on('click', '#search-cancel', e => {
-    const container = $('.container-search');
-    const overlay   = $('.overlay-search');
-    const query = $('#search').value;
-
-    if ($('#search').val()) {
-      $('#searchResults').empty();
-      $('#search').val('');
-    } else {
-      container.toggleClass('open');
-      overlay.toggleClass('open');
-    }
-  });
-
-  $('header').on('click', '#button-search', e => {
-
-    let container = $('.container-search');
-    let overlay   = $('.overlay-search');
-    let header    = $(e.currentTarget).closest('header');
-
-    container.toggleClass('open');
-    overlay.toggleClass('open');
-
-    if (container.hasClass('open')) {
-      $('input#search').focus();
-    } else {
-
-    }
-
-    // height after open
-    let cHeight = header.height();
-
-    overlay.css({top: cHeight + 10});
-  });
-
-}
-
 const bootstrapImgZoom = function() {
   let features = Features.of(document.body.style); // (1)
   let image = document.querySelector('.zoom__image'); // (2)
@@ -359,7 +306,6 @@ const bootstrapApp = function() {
   bootstrapSorts();
   bootstrapSlider();
   bootstrapScrollSpy();
-  bootstrapSearch();
   //bootstrapImgZoom();
 }
 
