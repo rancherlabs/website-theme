@@ -1,6 +1,6 @@
 <div class="row middle-xs between-xs m-a-0 p-a-xs mobile-header bg-link">
     <div class="col-xs-4">
-        <a href="/"><img src="/img/rancher-logo-horiz-white.svg"></a>
+        <a href="/"><img src="/img/rancher-logo-horiz-white.svg" alt="rancher logo"></a>
     </div>
     <div class="col-xs text-right">
         <a href="#ml-stack-nav-1" class="ml-stack-nav-toggle m-a-sm" aria-controls="ml-stack-nav-1" title="Toggle the navigation">
@@ -17,43 +17,36 @@
 </div>
  -->
 <nav id="ml-stack-nav-1" class="ml-stack-nav js-ml-stack-nav" aria-expanded="false">
-<ul class="ml-stack-nav__menu">
+  <ul class="ml-stack-nav__menu">
+  {{ $currentPage := . }}
+      {{ range .Site.Menus.main }}
+        {{ if .HasChildren }}
+          <li class="ml-stack-nav__item">
+              <div class="ml-stack-nav__item-inner">
+                  <a href="{{ .URL }}" class="ml-stack-nav__link">{{ .Name }}</a>
+                  <a class="ml-stack-nav__next js-ml-stack-nav-next" title="Go to the next level"><i class="material-icons">keyboard_arrow_right</i></a>
+              </div>
 
-{{ $currentPage := . }}
-    {{ range .Site.Menus.main }}
-      {{ if .HasChildren }}
-        <li class="ml-stack-nav__item">
-            <div class="ml-stack-nav__item-inner">
-                <a href="{{ .URL }}" class="ml-stack-nav__link">
-                    {{ .Name }}
+              <ul class="ml-stack-nav__menu">
+                  <li class="ml-stack-nav__item">
+                      <a class="btn bg-link ml-stack-nav__back js-ml-stack-nav-back" title="Go to the previous level"><i class="material-icons">keyboard_arrow_left</i> Back</a>
+                  </li>
+              {{ range .Children }}
+                  <li class="ml-stack-nav__item">
+                      <div class="ml-stack-nav__item-inner">
+                          <a href="{{ .URL }}" class="ml-stack-nav__link">{{ .Name }}</a>
+                  </li>
+               {{ end }}
+            </ul>
+            {{else}}
+              <li class="ml-stack-nav__item">
+                <a href="{{.URL}}" class="btn">
+                  {{ .Pre }}
+                  <span>{{ .Name }}</span>
                 </a>
-                <a class="ml-stack-nav__next js-ml-stack-nav-next" title="Go to the next level"><i class="material-icons">keyboard_arrow_right</i></a>
-            </div>
-
-
-            <ul class="ml-stack-nav__menu">
-                <li class="ml-stack-nav__item">
-                    <a class="btn bg-link ml-stack-nav__back js-ml-stack-nav-back" title="Go to the previous level"><i class="material-icons">keyboard_arrow_left</i> Back</a>
-                </li>
-            {{ range .Children }}
-
-                <li class="ml-stack-nav__item">
-                    <div class="ml-stack-nav__item-inner">
-                        <a href="{{ .URL }}" class="ml-stack-nav__link">
-                            {{ .Name }}
-                        </a>
-                </li>
-             {{ end }}
-          </ul>
-          {{else}}
-            <li class="ml-stack-nav__item">
-              <a href="{{.URL}}" class="btn">
-                {{ .Pre }}
-                <span>{{ .Name }}</span>
-              </a>
-            </li>
-        </li>
-    {{end}}
-{{end}}
-</ul>
+              </li>
+          </li>
+      {{end}}
+  {{end}}
+  </ul>
 </nav>

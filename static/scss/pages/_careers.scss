@@ -1,0 +1,80 @@
+.photo-bubbles {
+    margin: 0 auto;
+    min-height: calc(#{$spacer-lg} + 400px);
+    max-width: 1440px;
+    position: relative;
+
+  img {
+    border-radius: 50%;
+    width: 250px;
+    position: absolute;
+
+    &:nth-child(2n+0) {
+      width: 150px;
+    }
+
+    &:nth-child(3n+0) {
+      width: 75px;
+    }
+
+    &:nth-child(1) {
+      top: -75px;
+      left: -40px;
+    }
+
+    &:nth-child(2) {
+      top: 170px;
+      left: 240px;
+    }
+
+    &:nth-child(3) {
+      top: 50px;
+      left: 240px;
+    }
+
+    &:nth-child(4) {
+      top: 20px;
+      left: 335px;
+    }
+
+    &:nth-child(5) {
+      top: 85px;
+      left: 480px;
+    }
+
+    &:nth-child(6) {
+      top: -20px;
+      left: 560px;
+    }
+
+    &:nth-child(7) {
+      top: 58px;
+      left: 774px;
+    }
+
+    &:nth-child(8) {
+      top: -20px;
+      left: 1022px;
+    }
+
+    &:nth-child(9) {
+      top: 39px;
+      left: 709px;
+    }
+
+    &:nth-child(10) {
+      top: 175px;
+      left: 1105px;
+    }
+
+    &:nth-child(11) {
+      top: -75px;
+      left: 1189px;
+    }
+
+    &:nth-child(12) {
+      top: 230px;
+    left: 1395px;
+    }
+  }
+}
