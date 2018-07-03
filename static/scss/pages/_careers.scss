@@ -1,8 +1,9 @@
 .photo-bubbles {
     margin: 0 auto;
     min-height: calc(#{$spacer-lg} + 400px);
-    max-width: 1440px;
+    max-width: 1439px;
     position: relative;
+    overflow: hidden;
 
   img {
     border-radius: 50%;
@@ -18,13 +19,13 @@
     }
 
     &:nth-child(1) {
-      top: -75px;
+      top: 0;
       left: -40px;
     }
 
     &:nth-child(2) {
       top: 170px;
-      left: 240px;
+      left: 215px;
     }
 
     &:nth-child(3) {
@@ -38,37 +39,37 @@
     }
 
     &:nth-child(5) {
-      top: 85px;
+      top: 150px;
       left: 480px;
     }
 
     &:nth-child(6) {
-      top: -20px;
+      top: 50px;
       left: 560px;
     }
 
     &:nth-child(7) {
-      top: 58px;
+      top: 125px;
       left: 774px;
     }
 
     &:nth-child(8) {
-      top: -20px;
+      top: 0;
       left: 1022px;
     }
 
     &:nth-child(9) {
-      top: 39px;
+      top: 105px;
       left: 709px;
     }
 
     &:nth-child(10) {
       top: 175px;
-      left: 1105px;
+      left: 1050px;
     }
 
     &:nth-child(11) {
-      top: -75px;
+      top: 0;
       left: 1189px;
     }
 

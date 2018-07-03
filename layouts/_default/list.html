@@ -24,8 +24,6 @@
     </div>
 
       <article class="main-content col-md-9">
-
-
       {{ .Content }}
         {{ $paginator := .Paginate (where .Data.Pages.ByDate.Reverse ".Date.Unix" "<" now.Unix) 10 }}
         {{ range $paginator.Pages }}
@@ -57,10 +55,11 @@
 
               {{ if eq .Section "careers" }}
 
-              {{else}}
-                {{ with .Params.date }}
-                <div class="p-h-xs p-v-xs"><i class="material-icons text-muted">event</i> {{ .Format "January 2, 2006" }}</div>
-                {{end}}
+                {{else}}
+                  {{ with .Params.date }}
+                    <div class="p-h-xs p-v-xs"><i class="material-icons text-muted">event</i> {{ .Format "January 2, 2006" }}</div>
+                  {{end}}
+
               {{end}}
 
               {{ if eq .Section "blog" }}
@@ -85,7 +84,7 @@
 
 
       <div class="row center-xs p-v-lg">
-        <div class="box col-md-9">
+        <div class="box">
           <div class="row middle-xs">
             <div class="col-md-4 p-a-md">
               <img src="/img/spot/spot-training.svg" alt="training">
