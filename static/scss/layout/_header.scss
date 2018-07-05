@@ -104,7 +104,6 @@ header {
   bottom: 0;
   left: 0;
   height: auto;
-  font-size: 16px;
 
   &__menu {
     list-style: none;
@@ -114,7 +113,7 @@ header {
   }
   &__link {
     display: block;
-    padding: 1.5em 80px 1.5em 1.5em;
+    padding: $spacer-xs;
   }
 
   &__item {
@@ -132,7 +131,7 @@ header {
     cursor: pointer;
     width: 70px;
     text-align: center;
-    padding: 1.5em;
+    padding: $spacer-xs;
     // background: $link-color;
   }
   &__back {

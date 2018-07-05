@@ -61,12 +61,16 @@
 
       .body,
       h3 {
+        font-size: 1.5rem;
+        line-height: 2.5rem;
         em {
           font-weight: bold;
-          background-color: yellow;
+          background-color: rgba($accent, .5);
           font-style: normal;
         };
       }
+     font-size: 1.4rem;
+    line-height: 2rem;
     }
   }
   .ais-infinite-hits__empty {

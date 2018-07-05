@@ -19,72 +19,98 @@
   <div class="wrapper">
     <div class="row center-xs">
 
-    <div class="col-md-9">
+    <div class="col-md-8">
       {{ partial "breadcrumbs.html" . }}
     </div>
 
-      <article class="main-content col-md-9">
+    <article class="col-md-8">
       {{ .Content }}
-        {{ $paginator := .Paginate (where .Data.Pages.ByDate.Reverse ".Date.Unix" "<" now.Unix) 10 }}
-        {{ range $paginator.Pages }}
-        <div class="p-v-xs">
 
+      {{ if eq .Section "events" }}
+        <!-- event list -->
+        {{ range (where .Data.Pages.ByDate ".Date.Unix" "ge" now.Unix)}}
+          <div class="p-v-xs">
             <h2 class="m-t-0"><a href="{{.URL}}">{{.Title}}</a></h2>
-
             {{ if .Params.image }}
               <div class="thumbnail"><img src="{{ .Params.image }}" alt="{{ .Params.title }}"></div>
             {{end}}
 
             <p>
               {{ .Summary | safeHTML }}
-
               {{ if .Truncated }}
                 <a href="{{ .RelPermalink }}">Read More…</a>
               {{ end }}
             </p>
 
-            <div class="row middle-xs">
-              {{ if and (.Params.author) (eq .Section "blog") }}
-                {{ with index .Site.Data.authors .Params.author }}
-
-                  <div class="p-l-xs p-a-xs"><img src="{{.pic}}" class="circle" alt="{{.name}}" height="35" width="35" /></div>
-                  <div class="p-r-xs p-v-xs"><span class="">{{ .name }}</span></div>
-
-                {{end}}
+            <div class="row">
+              {{ with .Params.author }}
+                <div class="p-h-xs p-v-xs"><i class="material-icons text-muted">person_outline</i> By: {{ . }}</div>
               {{end}}
 
-              {{ if eq .Section "careers" }}
-
-                {{else}}
-                  {{ with .Params.date }}
-                    <div class="p-h-xs p-v-xs"><i class="material-icons text-muted">event</i> {{ .Format "January 2, 2006" }}</div>
-                  {{end}}
-
-              {{end}}
-
-              {{ if eq .Section "blog" }}
-                <div class="p-h-xs p-v-xs"><i class="material-icons text-muted">timer</i> Read Time: {{.ReadingTime}} minutes</div>
+              {{ with .Params.date }}
+                <div class="p-h-xs p-v-xs"><i class="material-icons text-muted">event</i> {{ .Format "January 2, 2006" }}</div>
               {{end}}
 
               {{ with .Params.location }}
                 <div class="p-h-xs p-v-xs"><i class="material-icons text-muted">location_on</i> {{ . }}</div>
               {{end}}
-
-              {{ if eq .Section "careers" }}
-                <div class="p-h-xs p-v-xs"><i class="material-icons text-muted">work</i>{{ .Params.Department }}</div>
-              {{end}}
             </div>
+            <hr/>
+          </div>
+          {{ end }}
+        {{else}}
+        <!-- non event lists -->
+        {{ $paginator := .Paginate (where .Data.Pages.ByDate.Reverse ".Date.Unix" "<" now.Unix) 10 }}
+        {{ range $paginator.Pages }}
+          <div class="p-v-xs">
+            <h2 class="m-t-0"><a href="{{.URL}}">{{.Title}}</a></h2>
 
-         </div>
-         <hr/>
+              {{ if .Params.image }}
+                <div class="thumbnail"><img src="{{ .Params.image }}" alt="{{ .Params.title }}"></div>
+              {{end}}
 
-        {{ end }}
-      </div>
-      {{ template "_internal/pagination.html" . }}
+              <p>
+                {{ .Summary | safeHTML }}
+                {{ if .Truncated }}
+                  <a href="{{ .RelPermalink }}">Read More…</a>
+                {{ end }}
+              </p>
 
+              <div class="row middle-xs">
+                {{ if and (.Params.author) (eq .Section "blog") }}
+                  {{ with index .Site.Data.authors .Params.author }}
+                    <div class="p-l-xs p-a-xs"><img src="{{.pic}}" class="circle" alt="{{.name}}" height="35" width="35" /></div>
+                    <div class="p-r-xs p-v-xs"><span class="">{{ .name }}</span></div>
+                  {{end}}
+                {{end}}
 
-      <div class="row center-xs p-v-lg">
-        <div class="box">
+                {{ if eq .Section "careers" }}
+                  {{else}}
+                    {{ with .Params.date }}
+                      <div class="p-h-xs p-v-xs"><i class="material-icons text-muted">event</i> {{ .Format "January 2, 2006" }}</div>
+                    {{end}}
+                {{end}}
+
+                {{ if eq .Section "blog" }}
+                  <div class="p-h-xs p-v-xs"><i class="material-icons text-muted">timer</i> Read Time: {{.ReadingTime}} minutes</div>
+                {{end}}
+
+                {{ with .Params.location }}
+                  <div class="p-h-xs p-v-xs"><i class="material-icons text-muted">location_on</i> {{ . }}</div>
+                {{end}}
+
+                {{ if eq .Section "careers" }}
+                  <div class="p-h-xs p-v-xs"><i class="material-icons text-muted">work</i>{{ .Params.Department }}</div>
+                {{end}}
+              </div>
+             </div>
+           <hr/>
+          {{ end }}
+
+        {{ template "_internal/pagination.html" . }}
+      {{end}}
+
+        <div class="box m-v-lg">
           <div class="row middle-xs">
             <div class="col-md-4 p-a-md">
               <img src="/img/spot/spot-training.svg" alt="training">
@@ -96,10 +122,9 @@
           </div>
         </div>
       </div>
+    </article>
 
-      </article>
-
-<!--       <aside class="col-sm-4 col-xs-12 hidden-md">
+<!-- <aside class="col-sm-4 col-xs-12 hidden-md">
         {{ partial "sidebar.html" . }}
       </aside> -->
     </div>
