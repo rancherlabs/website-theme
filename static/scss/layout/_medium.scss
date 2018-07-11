@@ -39,13 +39,14 @@
 
 
   .cta-banner {
-    text-align: center;
+    margin: $spacer-xs auto;
     padding: $spacer-xs;
   }
 
   .bg-link .border-right > * {
     border-bottom: solid 2px #268bcf;
     border-right: none;
+    padding: $spacer-sm 0;
   }
 
   //spacing

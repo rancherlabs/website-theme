@@ -12,7 +12,6 @@
   h1 {
     text-shadow: 4px 4px 6px rgba(0, 0, 0, .25);
     margin: 0;
-    font-size: 5rem;
     color: white;
   }
 }
@@ -437,4 +436,10 @@ ul {
     color: $mid-grey;
     font-family: $text-font-header;
     font-weight: light;
+  }
+
+//cta
+  .cta-banner {
+    text-align: center;
+    margin: -40px auto;
   }
