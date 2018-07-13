@@ -244,20 +244,10 @@
 
       &:before {
         content: counter(step-counter) ":";
-        display: inline-block;
         float: left;
-        vertical-align: top;
-        // margin: .7rem 0;
+        margin: .55em 0;
         padding-right: $spacer-xs;
         color: $mid-grey;
-      }
-
-      &:first-child {
-        padding-top: 0;
-
-        // &:before {
-        //   margin-bottom: 1.4rem;
-        // }
       }
 
       &:last-child {
@@ -429,7 +419,7 @@ ul {
 }
 
 // single pages
-.byline, .date  {
+.detail  {
     text-transform: uppercase;
     font-weight: bold;
     letter-spacing: 1px;
@@ -441,5 +431,5 @@ ul {
 //cta
   .cta-banner {
     text-align: center;
-    margin: -40px auto;
+    transform: translateY(-40px);
   }

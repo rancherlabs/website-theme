@@ -11,21 +11,50 @@
           <p class="p-t-sm">{{ . }}</p>
         {{end}}
 
-        <div class="row middle-xs">
-        {{ if and (.Params.author) (eq .Section "blog") }}
-          {{ with index .Site.Data.authors .Params.author }}
-            <div class="row middle-xs p-l-sm p-a-xs">
-              <img src="{{.pic}}" class="circle" alt="{{.name}}" height="35" width="35" />
-              <span class="byline p-l-xs">{{ .name }}</span>
+
+        {{ if eq .Section "events" }}
+            <div class="row middle-xs">
+                {{ with .Params.date }}
+                  <span class="detail p-h-xs">
+                    {{.Format "Monday January 2, 2006"}}
+
+                {{end}}
+                {{ with .Params.enddate }}
+                  - {{ . | dateFormat "Monday, Jan 2, 2006" }}
+                {{end}}
+              </span>
+
+              <span class="detail p-h-xs">{{ .Params.time }}</span>
+
+              {{ with .Params.location }}
+                <span class="detail p-h-xs">{{ . }}</span>
+              {{end}}
             </div>
-          {{end}}
+
+            <div class="m-t-sm">
+              {{ with .Params.link }}
+                  <a href="{{ . }}" class="btn bg-accent" target="_blank">Register Here</a>
+              {{end}}
+            </div>
+
+            {{ else }}
+
+            <div class="row middle-xs">
+              {{ if and (.Params.author) (eq .Section "blog") }}
+                {{ with index .Site.Data.authors .Params.author }}
+                  <div class="row middle-xs p-l-sm p-a-xs">
+                    <img src="{{.pic}}" class="circle" alt="{{.name}}" height="35" width="35" />
+                    <span class="detail p-l-xs">{{ .name }}</span>
+                  </div>
+                {{end}}
+              {{end}}
+
+              {{ with .Params.date }}
+                <div class="detail"><span class="p-h-xs"></span>{{ .Format "January 2, 2006" }}</div>
+              {{end}}
+            </div>
         {{end}}
 
-        {{ with .Params.date }}
-
-          <div class="date"><span class="p-h-xs">|</span>{{ .Format "January 2, 2006" }}</div>
-        {{end}}
-         </div>
       </div>
     </div>
   <hr/>
@@ -56,7 +85,7 @@
           <p><a class="btn bg-link" href="mailto:jobs@rancher.com?subject={{ .Title }}">Apply Now</a></p>
         {{end}}
 
-        {{ if eq .Section "events" }}
+       <!--  {{ if eq .Section "events" }}
           <div>
               {{ with .Params.date }}
                 <h3>When:</h3>
@@ -82,7 +111,7 @@
           {{ with .Params.link }}
               <a href="{{ . }}" class="btn bg-link" target="_blank">Register Here</a>
           {{end}}
-        {{end}}
+        {{end}} -->
 
         <div class="row middle p-v-sm">
           <span>{{ partial "addthis" . }}</span>
