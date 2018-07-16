@@ -49,6 +49,10 @@
     padding: $spacer-sm 0;
   }
 
+  .pagination li {
+    padding: .5em;
+  }
+
   //spacing
   *[class*="p-a-"],
   *[class*="p-v-"],

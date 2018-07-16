@@ -44,21 +44,23 @@
 
             <div class="row">
               {{ with .Params.author }}
-                <div class="p-h-xs p-v-xs"><i class="material-icons text-muted">person_outline</i> By: {{ . }}</div>
+                <div class="p-h-xs p-v-xs col-xs-12"><i class="material-icons text-muted">person_outline</i> By: {{ . }}</div>
               {{end}}
 
               {{ with .Params.date }}
-                <div class="p-h-xs p-v-xs"><i class="material-icons text-muted">event</i> {{ .Format "January 2, 2006" }}</div>
+                <div class="p-h-xs p-v-xs col-xs-12"><i class="material-icons text-muted">event</i> {{ .Format "January 2, 2006" }}</div>
               {{end}}
 
               {{ with .Params.location }}
-                <div class="p-h-xs p-v-xs"><i class="material-icons text-muted">location_on</i> {{ . }}</div>
+                <div class="p-h-xs p-v-xs col-xs-12"><i class="material-icons text-muted">location_on</i> {{ . }}</div>
               {{end}}
             </div>
             <hr/>
           </div>
-          {{ end }}
+        {{ end }}
+
         {{else}}
+
         <!-- non event lists -->
         {{ $paginator := .Paginate (where .Data.Pages.ByDate.Reverse ".Date.Unix" "<" now.Unix) 10 }}
         {{ range $paginator.Pages }}
