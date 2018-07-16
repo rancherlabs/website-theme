@@ -245,7 +245,7 @@
       &:before {
         content: counter(step-counter) ":";
         float: left;
-        margin: .55em 0;
+        margin: .15em 0;
         padding-right: $spacer-xs;
         color: $mid-grey;
       }
@@ -256,7 +256,7 @@
       }
 
       p {
-        margin: .7rem 0;
+        margin: 0 0 .7rem 0;
       }
 
       ol {
