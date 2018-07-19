@@ -1,4 +1,7 @@
-<meta name="description" content="{{ .Description }}"/>
+  <meta name="description" content="{{ .Description }}"/>
+  {{ with .Keywords}}
+  <meta name="keywords" content="{{ delimit . ", " }}"/>
+  {{end}}
   <meta name="robots" content="noodp"/>
   <link rel="canonical" href="{{ .Permalink }}" />
 

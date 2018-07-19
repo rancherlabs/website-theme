@@ -3,7 +3,16 @@
 
 {{ partial "head.html" . }}
 
-<body lang="en">
+{{ $.Scratch.Set "topLevel" . }}
+{{ range $page := $.Site.Sections }}
+  {{if $.CurrentSection}}
+    {{ if $page.IsAncestor $.CurrentSection }}
+      {{ $.Scratch.Set "topLevel" . }}
+    {{end}}
+  {{end}}
+{{end}}
+
+<body lang="en" class="{{ replaceRE "/.*" "" ($.Scratch.Get "topLevel").Dir }}">
   {{ partial "mobile-nav.html" . }}
 <div class="main"> <!--container ends in footer html-->
   {{ partial "main-nav.html" . }}
