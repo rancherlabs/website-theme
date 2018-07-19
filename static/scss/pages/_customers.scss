@@ -16,39 +16,45 @@
 
   //single
   .main-content {
-    blockquote {
-      position: relative;
-      background: white;
-      padding: $spacer-sm;
-      border-left: 0;
-      border-top: solid thin $border;
-      border-bottom: solid thin $border;
-      text-align: center;
-      padding: $spacer-lg;
-      @extend .text-lg;
-
-      p {
-        line-height: 1.25em;
-      }
-
-      &:before {
-        content: "";
-        display: inline-block;
-        position: absolute;
-        height: 50px;
-        width: 50px;
-        top: -25px;
-        border-radius: 50%;
-        background-color: $accent;
-        background-image: url(/img/quote-white.svg);
-        background-size: 50%;
-        background-repeat: no-repeat;
-        background-position: center;
-      }
-    }
-
     h2 {
       margin-top: 0;
+    }
+  }
+
+  blockquote {
+    position: relative;
+    background: white;
+    padding: $spacer-sm;
+    border-left: 0;
+    border-top: solid thin $border;
+    border-bottom: solid thin $border;
+    text-align: center;
+    padding: $spacer-lg;
+    @extend .text-md;
+
+    p {
+      line-height: 1.25em;
+    }
+
+    &:before {
+      content: "";
+      display: inline-block;
+      position: absolute;
+      height: 50px;
+      width: 50px;
+      top: -25px;
+      border-radius: 50%;
+      background-color: $accent;
+      background-image: url(/img/quote-white.svg);
+      background-size: 50%;
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+  }
+
+  .slider {
+    img {
+      max-height: 60px;
     }
   }
 
