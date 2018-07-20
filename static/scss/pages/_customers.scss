@@ -21,6 +21,13 @@
     }
   }
 
+  aside {
+    .feat-img {
+      max-height: 75px;
+      max-width: 100%;
+      width: auto;
+    }
+  }
   blockquote {
     position: relative;
     background: white;
