@@ -1,0 +1,9 @@
+.news {
+  column-width: 300px;
+  column-gap: $spacer-md;
+  column-rule: $border solid 1px;
+
+  .news-item {
+    break-inside: avoid-column;
+  }
+}

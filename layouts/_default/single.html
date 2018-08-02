@@ -67,7 +67,6 @@
     <div class="row center-xs">
       <article class="main-content col-md-8">
 
-
         {{ with .Params.youtubeId }}
           <div style="position: relative; padding-bottom: 56.25%; padding-top: 30px; height: 0; overflow: hidden;">
             <iframe src="//www.youtube.com/embed/{{.}}" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" allowfullscreen frameborder="0" title="YouTube Video"></iframe>
@@ -85,37 +84,24 @@
           <p><a class="btn bg-link" href="mailto:jobs@rancher.com?subject={{ .Title }}">Apply Now</a></p>
         {{end}}
 
-       <!--  {{ if eq .Section "events" }}
-          <div>
-              {{ with .Params.date }}
-                <h3>When:</h3>
-                <p>
-                  {{.Format "Monday January 2, 2006"}}
+      {{ if eq .Section "events" }}
+        <!--[if lte IE 8]>
+        <script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/v2-legacy.js"></script>
+        <![endif]-->
+        <script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/v2.js"></script>
+        <script>
+          hbspt.forms.create({
+          portalId: "468859",
+          formId: "{{ .Params.formId }}",
+          css: "",
+          sfdcCampaignId: "{{ .Params.sfdcCampaignId }}"
+        });
+        </script>
+      {{end}}
 
-              {{end}}
-              {{ with .Params.enddate }}
-                - {{ . | dateFormat "Monday, Jan 2, 2006" }}
-              {{end}}
-            </p>
-
-              <br/>
-              <p>{{ .Params.time }}</p>
-
-
-            {{ with .Params.location }}
-              <h3>Where:</h3>
-              <p>{{ . }}</p>
-            {{end}}
-          </div>
-
-          {{ with .Params.link }}
-              <a href="{{ . }}" class="btn bg-link" target="_blank">Register Here</a>
-          {{end}}
-        {{end}} -->
-
-        <div class="row middle p-v-sm">
-          <span>{{ partial "addthis" . }}</span>
-        </div>
+      <div class="row middle p-v-sm">
+        <span>{{ partial "addthis" . }}</span>
+      </div>
 
         {{ if and (.Params.author) (eq .Section "blog") }}
         <div class="bio p-t-lg">
@@ -146,7 +132,7 @@
         </div>
         {{ end }}
 
-        <!-- cta -->
+      <!-- cta -->
        <div class="box m-v-lg">
         <div class="row middle-xs">
           <div class="col-md-4 p-a-md">

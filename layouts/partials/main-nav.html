@@ -1,14 +1,13 @@
-<header class="p-h-sm">
-  <div class="row middle-md between-md">
-    <div class="pull-left">
-      <a href="/"><img src="/img/rancher-logo-horiz-white.svg" width="150" height="22" alt="rancher logo"></a>
-    </div>
-    <div class="">
-      <nav>
-        <ul class="main-menu row middle-md">
+<header>
+  <div class="">
+    <nav>
+      <div class="sticky-header row middle-xs between-xs">
+        <ul class="main-menu row">
+          <a href="/"><img src="/img/rancher-logo-horiz-white.svg" width="150" height="22" alt="rancher logo"></a>
+
           {{ $currentPage := . }} {{ range .Site.Menus.main }} {{ if .HasChildren }}
           <li class="dropdown sub-menu {{ if $currentPage.HasMenuCurrent " main " . }}active{{ end }}">
-            <a href="{{ .URL }}" class="btn"><span>{{ .Name }} {{ .Pre }}</span></a>
+            <a href="{{ .URL }}" class="text-white p-a-xs"><span>{{ .Name }} {{ .Pre }}</span></a>
             <ul class="sub dropdown-menu">
               {{ range .Children }}
               <li class="{{ if $currentPage.IsMenuCurrent " main " . }}active{{ end }}">
@@ -17,19 +16,26 @@
             </ul>
             {{else}}
             <li class="">
-              <a href="{{.URL}}" class="btn"><span>{{ .Name }} {{ .Pre }}</span></a>
+              <a href="{{.URL}}" class="text-white"><span>{{ .Name }} {{ .Pre }}</span></a>
             </li>
             {{end}}
-            {{end}}
+          {{end}}
         </ul>
-      </nav>
-    </div>
-    <div class="pull-right">
-      <a class="text-white p-r-xs" href="#" id="button-search"><i class="material-icons">search</i></a>
-      <a href="/quick-start" class="text-white p-r-sm"><i class="material-icons">cloud_upload</i> Deploy Rancher</a>
-      <a href="/support" class="text-white"><i class="material-icons">chat</i> Get Support</a>
-    </div>
+        <div>
+          <a class="text-white" href="#" id="button-search"><i class="material-icons">search</i></a>
+        </div>
+      </div>
+
+
+      <ul class="cta-header row middle-xs end-xs unstyled">
+        <li><a href="" class="btn">Pricing</a></li>
+        <li><a href="/quick-start" class="btn">Deploy</a></li>
+        <li><a href="/support" class="btn">Support</a></li>
+        <li><a href="" class="btn bg-warning p-a-xs">Request a Demo</a></li>
+      </ul>
+    </nav>
   </div>
+
   <div class="container-search">
     <form id="searchForm"><input type="search" class='' id='search-box' autocomplete="off"></input></form>
   </div>

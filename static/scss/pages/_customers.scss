@@ -50,12 +50,14 @@
       height: 50px;
       width: 50px;
       top: -25px;
+      left: calc(50% - 25px);
       border-radius: 50%;
       background-color: $accent;
       background-image: url(/img/quote-white.svg);
       background-size: 50%;
       background-repeat: no-repeat;
       background-position: center;
+
     }
   }
 

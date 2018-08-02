@@ -8,16 +8,19 @@ header {
   z-index: 1001;
 
   nav {
-    ul {
-      li {
-        margin: 0;
-      }
+    .sticky-header {
+      background-color: #2980B8;
+      position: fixed;
+      width: 100%;
+      top: 0;
+      z-index: 10;
     }
-    > ul.main-menu {
-      list-style: none;
-      padding: 0;
-      margin: 0;
 
+    .cta-header {
+      margin-top: 58px;
+    }
+
+    ul.main-menu {
       > li {
         display: inline-block;
         vertical-align: middle;
@@ -27,7 +30,6 @@ header {
           border-bottom: 0;
           transition: ease-in-out .15s all;
           color: white;
-          padding: 1.25rem;
 
           &:hover {
             color: rgba(255,255,255,.5);
