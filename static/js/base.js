@@ -30,13 +30,18 @@ const bootstrapModals = function() {
     let wrapper = $(`#${wrapperId}`);
 
     let content = wrapper.find('div.content');
+    let classes = wrapper.find('.css-classes').data('css-classes');
+    let classList = [];
+    if ( classes && classes.length ) {
+      classList = classes.split(',');
+    }
 
     var modal = new tingle.modal({
       footer: wrapper.find('.include-footer').data('include-footer'),
       stickyFooter: wrapper.find('.include-footer').data('sticky-footer'),
       closeMethods: ['overlay', 'button', 'escape'],
       closeLabel: wrapper.find('.include-footer').data('close-label'),
-      cssClass: wrapper.find('.css-classes').data('css-classes').split(','),
+      cssClass: classList,
       onOpen: () => {
         console.log('Modal opened');
       },

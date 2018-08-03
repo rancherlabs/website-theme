@@ -85,8 +85,13 @@
   padding: $spacer-sm;
   width: 100%;
 
+  h2 {
+    margin: 1rem 0;
+  }
+
   p {
-    flex: 1 0 auto;
+    // flex: 1 0 auto;
+    margin: 0 0 1.25rem;
   }
 
   .img-wrap {
@@ -97,6 +102,10 @@
       max-height: 60px;
       max-width: 80%;
     }
+  }
+
+  footer {
+    margin-top: auto;
   }
 }
 
@@ -478,3 +487,19 @@ ul {
     text-align: center;
     transform: translateY(-40px);
   }
+
+
+//responsive video
+.video-responsive{
+    overflow:hidden;
+    padding-bottom:56.25%;
+    position:relative;
+    height:0;
+}
+.video-responsive iframe{
+    left:0;
+    top:0;
+    height:100%;
+    width:100%;
+    position:absolute;
+}
