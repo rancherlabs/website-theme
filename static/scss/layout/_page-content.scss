@@ -315,16 +315,21 @@
       ol {
         counter-reset: step-counter;
         list-style-type: none;
+        box-shadow: none;
+        border: none;
+        padding: 0;
+        margin-left: $spacer-md;
+        padding-left: $spacer-sm;
+        border-left: solid thin $border;
 
         li {
-          background-color: $light-grey;
           box-shadow: none;
 
           &:before {
             content: counter(step-counter, lower-alpha);
-            background-color: white;
+
             color: $link-color;
-            border: solid thin $light-grey;
+
           }
         }
       }
