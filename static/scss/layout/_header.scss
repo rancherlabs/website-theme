@@ -120,6 +120,12 @@ header {
 
   &__item {
     border-bottom: solid thin $border;
+    font-size: 12px;
+
+    a.btn {
+      color: $link-color;
+      font-size: 12px;
+    }
   }
   &__item-inner {
     position: relative;
