@@ -2,14 +2,20 @@
 // This file contains all styles related to the footer of the site/application.
 // -----------------------------------------------------------------------------
 
-.btn.contact-btn {
+.fixed-buttons {
   position: fixed;
   bottom: 0;
   right: $spacer-xs;
   z-index: 9;
-  font-size: 2rem;
-  padding: $spacer-xs $spacer-sm;
-  border-radius: 5px 5px 0 0;
+
+  a.btn {
+    border-radius: 5px 5px 0 0;
+
+    &.contact-btn {
+      padding: $spacer-xs $spacer-sm;
+      margin-right: 5px;
+    }
+  }
 }
 
 footer {
