@@ -3,13 +3,13 @@
 // -----------------------------------------------------------------------------
 header {
   padding: 0 1rem;
-  background-color: #2980B8;
+  background-color: #2470A2;
   width: 100%;
   z-index: 1001;
 
   nav {
     .sticky-header {
-      background-color: #2980B8;
+      background-color: #1F608B;
       position: fixed;
       width: 100%;
       top: 0;
@@ -17,10 +17,13 @@ header {
     }
 
     .cta-header {
-      margin-top: 58px;
+      margin: 58px 0 0 0;
+      padding: $spacer-xs;
+      list-style-type: none;
     }
 
     ul.main-menu {
+      padding: 0 $spacer-sm;
       > li {
         display: inline-block;
         vertical-align: middle;

@@ -3,7 +3,6 @@
 
   &.open {
     display: block;
-
   }
 
   .ais-search-box, {
@@ -11,13 +10,12 @@
     max-width: 100%;
   }
 
-
   .ais-search-box--input {
     border: 0;
     border-color: white;
     color: white;
+    font-family: $text-font-header;
     font-size: 1.9em;
-    font-weight: bold;
     background-color: transparent;
     border-bottom: 1px solid white;
     width: 50%;
