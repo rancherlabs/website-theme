@@ -188,6 +188,9 @@ pre {
   border-radius: 3px;
   font-size: $base-font-size;
   line-height: $base-line-height;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  text-align: justify;
 
   code {
     font-size: 0.9rem;
