@@ -30,3 +30,117 @@ ul.tabs {
     }
   }
 }
+
+.tabbed-content {
+  min-height: 250px;
+  position: relative;
+  width: 100%;
+  > div {
+    display: inline;
+    > a {
+      margin-left: -1px;
+      position: relative;
+      left: 1px;
+      text-decoration: none;
+      color: black;
+      background: white;
+      display: block;
+      float: left;
+      padding: 5px 10px;
+      border: 1px solid #ccc;
+      border-bottom: 1px solid white;
+    }
+    &:not(:target) > a {
+      border-bottom: 0;
+      background: -moz-linear-gradient(top, white, #eee);
+    }
+    &:target > a {
+      background: white;
+    }
+    > div {
+      background: white;
+      z-index: -2;
+      left: 0;
+      top: 30px;
+      bottom: 0;
+      right: 0;
+      padding: 20px;
+      border: 1px solid #ccc;
+    }
+    &:not(:target) > div {
+      position: absolute;
+    }
+    &:target > div {
+      position: absolute;
+      z-index: -1;
+    }
+  }
+}
+
+.content-tabs {
+  ul.nav-tabs {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    border-bottom: solid 2px $border;
+    font-family: $text-font-header;
+    font-weight: bold;
+
+    li {
+      padding: $spacer-xs;
+    }
+  }
+
+  .tab-content {
+    .tab-pane {
+      display: none;
+
+      &.active {
+        display: block;
+      }
+    }
+  }
+}
+
+@media (max-width: 700px) {
+  ul.nav-tabs {
+    border-bottom: 0;
+    overflow: hidden;
+    position: relative;
+
+    &::after {
+      content: "☰";
+      position: absolute;
+      top: 8px;
+      right: 15px;
+      z-index: 2;
+      pointer-events: none;
+    }
+    &.open {
+      a {
+        position: relative;
+        display: block;
+      }
+    }
+
+    li {
+      display: block;
+
+      a {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        &.active {
+          border: 0;
+          z-index: 1;
+          background: #666; /* fallback */
+          background: linear-gradient(#666, #222);
+        }
+      }
+    }
+  }
+}
+
