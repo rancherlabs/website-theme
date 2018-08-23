@@ -1,13 +1,12 @@
   <meta name="description" content="{{ .Description }}"/>
 
-  <meta name="keywords" content="rancher, kubernetes, manage, management, containers, kubernetes training"/>
-
-  {{ with .Keywords}}
-  <meta name="keywords" content="{{ delimit . ", " }}"/>
-  {{end}}
-
   <meta name="robots" content="noodp"/>
-  <link rel="canonical" href="{{ .Permalink }}" />
+
+ <link rel="canonical" href="{{ .Permalink }}">
+
+{{ if .RSSLink }}
+  <link href="{{ .RSSLink }}" rel="alternate" type="application/rss+xml" title="{{ .Title }}  | Rancher Labs" />
+{{ end }}
 
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary" />

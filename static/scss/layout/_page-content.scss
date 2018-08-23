@@ -161,6 +161,14 @@
   }
 }
 
+.border-bottom {
+  border-bottom: solid 2px $light-grey;
+
+  &:last-child {
+    border-bottom: none;
+  }
+}
+
 .cloud {
   background-image: url(../../img/cloud-band.svg);
   background-repeat: repeat-x;
