@@ -90,8 +90,9 @@
 }
 
 .variablewidth li {
-    width: 200px;
-    margin-right: 10px;
+    max-width: 200px;
+    width: auto;
+    margin-right: 50px;
     display: inline-block;
     vertical-align: middle;
 }
