@@ -1,15 +1,9 @@
 {{ block "header" .}}
-  {{ partial "header.html" . }}
+  {{- partial "header.html" . -}}
 {{ end }}
 
 {{ block "hero" .}}
 {{ end }}
-
-
-<!-- <p>Layout: {{ printf "%#v" .Layout }}</p>
-<p>Kind: {{ printf "%#v" .Kind }}</p>
-<p>Type: {{ printf "%#v" .Type }}</p>
- -->
 
 {{ block "main" . }}
   <!-- The part of the page that begins to differ between templates -->
@@ -17,5 +11,5 @@
 
 {{ block "footer" . }}
 <!-- More shared code, perhaps a footer but that can be overridden if need be in  -->
-  {{ partial "footer.html" . }}
+  {{- partial "footer.html" . -}}
 {{ end }}
