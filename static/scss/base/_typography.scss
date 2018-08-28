@@ -181,14 +181,11 @@ h3>code {
 pre {
   background-color: $dark-grey;
   padding: $spacer-xs;
-  // white-space: pre-wrap;
-  white-space: pre;
-  overflow: scroll;
+  overflow: auto;
   word-wrap: break-word;
   border-radius: 3px;
   font-size: $base-font-size;
   line-height: $base-line-height;
-  white-space: pre-wrap;
   word-wrap: break-word;
   text-align: justify;
 
