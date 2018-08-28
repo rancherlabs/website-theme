@@ -93,6 +93,14 @@ ul.tabs {
       margin-right: $spacer-xs;
       transition: ease-in-out all .25s;
 
+      &:before {
+        content: none;
+      }
+
+      &:not(:first-child) {
+        margin-top: 0;
+      }
+
       &.active {
         background-color: $link-color;
         > a {
@@ -110,6 +118,34 @@ ul.tabs {
         display: block;
       }
     }
+  }
+}
+
+.main-content {
+  .content-tabs {
+    margin: $spacer-md 0;
+
+      ul.nav-tabs {
+        border-bottom: none;
+
+        li {
+          padding: $spacer-xs $spacer-sm;
+          background-color: $light-grey;
+          color: darken($light-grey, 10%);
+
+          &.active {
+            background-color: $link-color;
+            > a {
+              color: white;
+            }
+          }
+        }
+      }
+  }
+
+  .tab-content {
+    border: solid $border thin;
+    padding: 0 $spacer-sm;
   }
 }
 
