@@ -72,7 +72,7 @@
 }
 
 .dots > li.active {
-    background-color: #41ABE5; // MAKE IT BLUE CAUSE ACTIVE!
+    background-color: $link-color; // MAKE IT BLUE CAUSE ACTIVE!
     box-shadow: inset 2px 0px 2px -2px #333; // Change the boxshadow inset... just cause
 }
 

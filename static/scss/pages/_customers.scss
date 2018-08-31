@@ -1,5 +1,42 @@
 .customers {
+  .hero {
+    background: transparent;
+    padding: $spacer-md 0;
+
+    h1 {
+      margin: $spacer-md 0;
+      text-shadow: none;
+      color: $text-color;
+    }
+  }
+
+  .customer-hero-graphics {
+    position: absolute;
+    left: 0;
+    right: 0;
+    overflow: hidden;
+    z-index: -1;
+    margin: 0;
+  }
+
   //list
+  .box-list-item {
+    width: 50%;
+  }
+
+  .slider {
+    // .variablewidth li {
+    //   max-height: 60px;
+    // }
+    img {
+      max-height: 60px;
+    }
+  }
+
+  .masonry.logo-grid {
+     column-count: 5!important;
+  }
+
   .row.featured-story{
     padding: 0;
     margin: 0;
@@ -16,9 +53,13 @@
 
   //single
   .main-content {
-    h2 {
-      margin-top: 0;
+    blockquote {
+      margin: $spacer-lg 0;
     }
+  }
+  .customer-details {
+    margin-top: (-$spacer-lg);
+    background-color: white;
   }
 
   aside {
@@ -28,46 +69,59 @@
       width: auto;
     }
   }
-  blockquote {
-    position: relative;
-    background: white;
-    padding: $spacer-sm;
-    border-left: 0;
-    border-top: solid thin $border;
-    border-bottom: solid thin $border;
-    text-align: center;
-    padding: $spacer-lg 0;
-    @extend .text-md;
 
-    p {
-      line-height: 1.25em;
+    blockquote {
+      position: relative;
+      background: white;
+      padding: $spacer-sm;
+      border-left: 0;
+      border-top: solid thin darken($border, 5%);
+      border-bottom: solid thin darken($border, 5%);
+      text-align: center;
+      padding: $spacer-lg $spacer-md;
+      color: $mid-grey;
+      @extend .text-md;
+
+      p {
+        line-height: 1.25em;
+      }
+
+      &:before {
+        content: "";
+        display: inline-block;
+        position: absolute;
+        height: 50px;
+        width: 50px;
+        top: -25px;
+        left: calc(50% - 25px);
+        border-radius: 50%;
+        background-color: $accent;
+        background-image: url(/img/quote-white.svg);
+        background-size: 50%;
+        background-repeat: no-repeat;
+        background-position: center;
+
+      }
     }
 
-    &:before {
-      content: "";
-      display: inline-block;
-      position: absolute;
-      height: 50px;
-      width: 50px;
-      top: -25px;
-      left: calc(50% - 25px);
-      border-radius: 50%;
-      background-color: $accent;
-      background-image: url(/img/quote-white.svg);
-      background-size: 50%;
-      background-repeat: no-repeat;
-      background-position: center;
 
+  //hero
+  .svg-container {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: -1;
+  }
+
+  .svg-curve {
+    path {
+      transition: .1s;
+    }
+
+    &:hover path {
+      d: path("M 800 300 Q 400 250 0 300 L 0 0 L 800 0 L 800 300 Z");
     }
   }
 
-  .slider {
-    img {
-      max-height: 60px;
-    }
-  }
-
-  .masonry.logo-grid {
-     column-count: 5!important;
-  }
 }

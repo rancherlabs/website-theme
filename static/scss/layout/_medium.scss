@@ -1,6 +1,6 @@
 ///768
 @media all and (max-width: map-get($breakpoints, medium)) {
-  header {
+  .desktop-header {
     display: none;
   }
   h1, h2, h3, h4, h5, h6 {
