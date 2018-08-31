@@ -35,10 +35,10 @@
     "url": "{{ .Permalink }}",
     "name": "{{ .Site.Title }}",
      "author": {
-        "@type": "Person",
-        "name": "{ .Site.Params.author }}"
+        "@type": "Organization",
+        "name": "Rancher Labs"
       },
-    "description": "{ .Site.Params.description }}",
+    "description": "{{ .Site.Params.description }}",
   }
   </script>
   {{ end }}
@@ -52,11 +52,13 @@
           "genre": "{{ range .Params.categories }}{{ . }}{{ end }}",
           "url": "{{ .Permalink }}",
           "datePublished": "{{ time .Date }}",
-          "description": "{{ .Description }}",
-          "author": {
-              "@type": "Person",
-              "name": "{{ .Site.Params.author }}"
-          }
+          {{ with index .Site.Data.authors .Params.author }}
+            "author": {
+                "@type": "Person",
+                "name": "{{ .name }}"
+            },
+          {{ end }}
+          "description": "{{ .Description }}"
        }
       {{ else }}
       {
@@ -64,11 +66,19 @@
         "@type": "WebSite",
         "url": "{{ .Permalink }}",
         "name": "{{ .Title }}",
-         "author": {
-            "@type": "Person",
-            "name": "{ .Site.Params.author }}"
+        {{ if .Params.author -}}
+          {{ $author := (index .Site.Data.authors .Params.author) }}
+          "author": {
+              "@type": "Person",
+              "name": "{{ $author.name }}"
           },
-        "description": "{ .Site.Params.description }}",
+        {{- else }}
+          "author": {
+            "@type": "Organization",
+            "name": "Rancher Labs"
+          },
+        {{- end }}
+        "description": "{{ .Site.Params.description }}",
       }
       </script>
       {{ end }}
