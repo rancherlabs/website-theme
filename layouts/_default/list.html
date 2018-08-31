@@ -59,10 +59,10 @@
           </div>
         {{ end }}
 
-        {{else}}
+      {{else}}
 
         <!-- non event lists -->
-        {{ $paginator := .Paginate (where .Data.Pages.ByDate.Reverse ".Date.Unix" "<" now.Unix) 10 }}
+        {{ $paginator := .Scratch.Get "paginator" }}
         {{ range $paginator.Pages }}
           <div class="p-v-xs">
             <h2 class="m-t-0"><a href="{{.URL}}">{{.Title}}</a></h2>
