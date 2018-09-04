@@ -21,7 +21,9 @@
 
   //list
   .box-list-item {
-    width: 50%;
+    footer {
+      padding: $spacer-sm 0 0 0;
+    }
   }
 
   .slider {
