@@ -249,12 +249,10 @@
       position: relative;
 
       &:before {
-        font-family: 'Material Icons';
-        content: "label";
+        content: "●";
         color: $mid-grey;
-        padding-right: 15px;
         position: absolute;
-        left: -30px;
+        left: -20px;
       }
     }
 
@@ -271,11 +269,8 @@
 
       > li {
         &:before {
-          font-family: 'Material Icons';
-          content: "label";
-          font-size: .75em;
-          color: lighten($link-color, 25%);
-          margin-right: 10px;
+          content: "◦";
+          color: $mid-grey;
           display: inline-block;
           vertical-align: middle;
           float: left;
@@ -325,10 +320,7 @@
         list-style-type: none;
         box-shadow: none;
         border: none;
-        padding: 0;
-        margin-left: $spacer-md;
-        padding-left: $spacer-sm;
-        border-left: solid thin $border;
+        padding: 0 0 0 $spacer-sm;
 
         li {
           box-shadow: none;
@@ -342,17 +334,31 @@
         }
       }
 
-      ul {
+      > ol {
+        padding: 0;
+        margin-left: $spacer-md;
         padding-left: $spacer-sm;
-        list-style-type: none;
+        border-left: solid thin $border;
 
         li {
+          box-shadow: none;
+
           &:before {
-            content: "-";
-            color: darken($light-grey, 5%);
+            content: counter(step-counter, lower-alpha);
+            color: $link-color;
+          }
+        }
+      }
+
+      ul {
+        li {
+          &:before {
+            content: "•";
+            color: $mid-grey;
             display: inline-block;
             float: left;
             padding-right: .5em;
+            left: -15px;
           }
 
           ul li:before {
