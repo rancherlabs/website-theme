@@ -70,7 +70,7 @@
 
   .main-content {
     blockquote {
-      margin: $spacer-lg 0;
+      margin: calc(#{$spacer-lg} + 25px) 0 $spacer-lg 0;
     }
   }
   .customer-details {
