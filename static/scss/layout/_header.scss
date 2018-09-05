@@ -119,6 +119,7 @@ header {
   &__link {
     display: block;
     padding: $spacer-xs;
+    color: $link-color;
   }
 
   &__item {
