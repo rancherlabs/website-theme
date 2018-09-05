@@ -409,13 +409,16 @@ code {
 
 table {
   border-spacing: 0;
-  border-top: solid $light-grey 2px;
-  border-bottom: solid $light-grey 2px;
+  border: solid darken($border, 5%) thin;
   min-width: 100%;
   margin: 0 auto;
+  border-radius: 3px;
 
   thead {
-    color: $dark-grey;
+    color: $mid-grey;
+    background-color: $light-grey;
+    font-family: $text-font-header;
+    font-weight: normal;
 
     tr {
       th {
@@ -426,16 +429,27 @@ table {
   }
 
   tbody {
-    background: $light-grey;
-
     tr {
+
       &:nth-child(even) {
-        background: lighten($light-grey, 5%);
+        background: lighten($light-grey, 4%);
       }
 
       td {
         text-align: left;
         padding: 12px 9px;
+        border-bottom: solid darken($border, 5%) thin;
+        border-right: dotted $border 2px;
+
+        &:last-child {
+          border-right: 0;
+        }
+      }
+
+      &:last-child {
+        td {
+          border-bottom: 0;
+        }
       }
     }
   }
