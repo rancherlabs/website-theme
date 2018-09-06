@@ -194,12 +194,14 @@ pre {
     margin-left: $spacer-xs;
     overflow-x: auto;
     background: transparent;
+    white-space: normal;
   }
 }
 
 code {
   color: $success;
   font-style: initial;
+  white-space: normal;
 }
 
 //icons
