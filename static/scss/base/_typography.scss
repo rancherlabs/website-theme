@@ -202,6 +202,10 @@ code {
   color: $success;
   font-style: initial;
   white-space: normal;
+  
+  &.language-yaml {
+    white-space: unset;
+  }
 }
 
 //icons
