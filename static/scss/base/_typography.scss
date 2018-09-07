@@ -177,30 +177,80 @@ h3>code {
   font-size: 0.80em;
 }
 
-pre {
-  background-color: $dark-grey;
-  padding: $spacer-xs;
-  overflow: auto;
-  word-wrap: break-word;
-  border-radius: 3px;
-  font-size: $base-font-size;
-  line-height: $base-line-height;
-  word-wrap: break-word;
-  text-align: justify;
+// pre {
+//   background-color: $dark-grey;
+//   padding: $spacer-xs;
+//   overflow: auto;
+//   word-wrap: break-word;
+//   border-radius: 3px;
+//   font-size: $base-font-size;
+//   line-height: $base-line-height;
+//   word-wrap: break-word;
+//   text-align: justify;
 
-  code {
-    font-size: 0.9rem;
-    width: 52.5%;
-    margin-left: $spacer-xs;
-    overflow-x: auto;
-    background: transparent;
-  }
+//   code {
+//     font-size: 0.9rem;
+//     width: 52.5%;
+//     margin-left: $spacer-xs;
+//     overflow-x: auto;
+//     background: transparent;
+//     white-space: normal;
+//   }
+// }
+
+// code {
+//   color: $success;
+//   font-style: initial;
+//   white-space: normal;
+// }
+
+.pre,
+pre {
+  overflow-x: auto;
+  overflow-y: hidden;
+  overflow: scroll;
 }
 
 code {
+  padding: .2em;
+  margin: 0;
+  font-size: 85%;
+  border-radius: 3px;
   color: $success;
-  font-style: initial;
+  background-color: rgba($success, .15);
+  padding: 2px 4px;
 }
+
+
+pre {
+  background-color: $dark-grey;
+  white-space: pre;
+  -webkit-hyphens: none;
+  -ms-hyphens: none;
+  hyphens: none;
+  position: relative;
+  border: 1px solid #ccc;
+
+  code {
+    display: block;
+    padding: 1.5em;
+    font-size: .875rem;
+    line-height: 2;
+    overflow-x: auto;
+    background: transparent;
+    overflow-x: auto;
+    overflow-y: hidden;
+    overflow: scroll;
+  }
+}
+
+.highlight pre {
+  background-color: inherit;
+  color: inherit;
+  padding: .5em;
+  font-size: .875rem;
+}
+
 
 //icons
 .material-icons {

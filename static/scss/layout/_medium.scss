@@ -1,8 +1,5 @@
-///768
+///991px
 @media all and (max-width: map-get($breakpoints, medium)) {
-  .desktop-header {
-    display: none;
-  }
   h1, h2, h3, h4, h5, h6 {
     max-width: 100%;
     overflow-wrap: normal;
@@ -26,7 +23,7 @@
      }
    }
 
-  a, p, pre, code, li > * {
+  a, p, li > * {
       /* These are technically the same, but use both */
       overflow-wrap: break-word;
       word-wrap: break-word;
@@ -44,14 +41,11 @@
       hyphens: auto;
   }
 
-  .mobile-header {
-    display: flex;
-  }
-
   .hidden-md {
     display: none;
   }
-    .border-right > * {
+
+  .border-right > * {
     border-bottom: solid 2px $light-grey;
     border-right: none;
   }

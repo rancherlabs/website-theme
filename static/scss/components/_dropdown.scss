@@ -13,10 +13,12 @@
     }
   }
 }
+
 ul.dropdown-menu {
   border: solid thin $light-grey;
   display: block;
   font-size: .85em;
+  background-color: white;
 
   &.hidden {
     display: none;
