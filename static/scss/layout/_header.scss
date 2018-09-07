@@ -52,15 +52,13 @@ nav[role="navigation"] {
   // min-height: 47px;
 }
 
-nav[role="navigation"].active {
-  max-height: 100vh;
-}
-
 nav[role="navigation"] ul {
   margin: 0;
   padding: 0;
   list-style-type: none;
 }
+
+
 
 nav[role="navigation"] li a {
   display: block;
@@ -117,5 +115,16 @@ nav[role="navigation"] li a {
   // }
   .cta-header {
     display: none;
+  }
+
+  nav[role="navigation"] ul {
+    display: none;
+  }
+
+  nav[role="navigation"].active {
+    max-height: 100vh;
+    ul {
+      display: block;
+    }
   }
 }
