@@ -177,34 +177,6 @@ h3>code {
   font-size: 0.80em;
 }
 
-// pre {
-//   background-color: $dark-grey;
-//   padding: $spacer-xs;
-//   overflow: auto;
-//   word-wrap: break-word;
-//   border-radius: 3px;
-//   font-size: $base-font-size;
-//   line-height: $base-line-height;
-//   word-wrap: break-word;
-//   text-align: justify;
-
-//   code {
-//     font-size: 0.9rem;
-//     width: 52.5%;
-//     margin-left: $spacer-xs;
-//     overflow-x: auto;
-//     background: transparent;
-//     white-space: normal;
-//   }
-// }
-
-// code {
-//   color: $success;
-//   font-style: initial;
-//   white-space: normal;
-// }
-
-
 code {
   padding: .2em;
   margin: 0;
@@ -233,7 +205,6 @@ pre {
     line-height: 2;
     overflow-x: auto;
     background: transparent;
-    white-space: normal;
   }
 }
 
