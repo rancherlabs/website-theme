@@ -1,9 +1,10 @@
 .hero {
   padding: $spacer-lg 0;
   color: white;
-  background-image: url(../../img/farm-k8s.svg);
+  background-image: url(../../img/farm-k8s-transparent.svg);
   // background-image: url(../../img/header-duotone.jpg);
-  background-color: #2980B9;
+  // background-color: #2980B9;
+  background-color: darken($link-color, 2%);
   background-size: cover;
   background-position: center 60px;
   text-align: center;
@@ -195,6 +196,7 @@
 
 //main content
 .main-content {
+  max-width: 100%;
 
   h3,
   h4,
@@ -402,9 +404,29 @@
   }
 }
 
-code {
-  background-color: rgba($success, .15);
-  padding: 2px 4px;
+.docs-body {
+  h1, h2, h3, h4, h5, h6 {
+    font-weight: 300;
+  }
+
+  > h3, > h2 {
+    border-top: solid thin $border;
+    padding-top: $spacer-md;
+    margin: $spacer-md 0 $spacer-xs 0;
+
+    &:first-of-type {
+      border-top: 0;
+      padding-top: 0;
+    }
+  }
+
+  h4, h5, h6 {
+    margin: $spacer-sm 0 $spacer-xs 0;
+  }
+
+  // h4, h5, h6 {
+  //   text-transform: uppercase;
+  // }
 }
 
 table {

@@ -37,21 +37,21 @@ h2 {
 h3 {
   margin-bottom: 1rem;
   font-family: $text-font-header;
-  font-size: 2rem;
+  font-size: 2.25rem;
   line-height: 3rem;
   font-weight: 600;
   font-style: normal;
-  color: lighten($text-color, 30%);
+  color: lighten($text-color, 20%);
 }
 
 h4 {
   margin-bottom: 1rem;
   font-family: $text-font-header;
-  font-size: 2rem;
+  font-size: 1.75rem;
   line-height: 3rem;
   font-weight: 600;
   font-style: normal;
-  color: lighten($text-color, 50%);
+  color: lighten($text-color, 30%);
 }
 
 h5 {
@@ -61,7 +61,7 @@ h5 {
   line-height: 2.5rem;
   font-weight: 600;
   font-style: normal;
-  color: lighten($text-color, 55%);
+  color: lighten($text-color, 40%);
 }
 
 h6 {
@@ -71,7 +71,7 @@ h6 {
   line-height: 2.5rem;
   font-weight: 600;
   font-style: normal;
-  color: lighten($text-color, 60%);
+  color: lighten($text-color, 50%);
 }
 
 
@@ -177,36 +177,73 @@ h3>code {
   font-size: 0.80em;
 }
 
-pre {
-  background-color: $dark-grey;
-  padding: $spacer-xs;
-  overflow: auto;
-  word-wrap: break-word;
+// pre {
+//   background-color: $dark-grey;
+//   padding: $spacer-xs;
+//   overflow: auto;
+//   word-wrap: break-word;
+//   border-radius: 3px;
+//   font-size: $base-font-size;
+//   line-height: $base-line-height;
+//   word-wrap: break-word;
+//   text-align: justify;
+
+//   code {
+//     font-size: 0.9rem;
+//     width: 52.5%;
+//     margin-left: $spacer-xs;
+//     overflow-x: auto;
+//     background: transparent;
+//     white-space: normal;
+//   }
+// }
+
+// code {
+//   color: $success;
+//   font-style: initial;
+//   white-space: normal;
+// }
+
+
+code {
+  padding: .2em;
+  margin: 0;
+  font-size: 85%;
   border-radius: 3px;
-  font-size: $base-font-size;
-  line-height: $base-line-height;
-  word-wrap: break-word;
-  text-align: justify;
+  color: $success;
+  background-color: rgba($success, .15);
+  padding: 2px 4px;
+}
+
+
+pre {
+  background-color: $dark-grey!important;
+  white-space: pre;
+  -webkit-hyphens: none;
+  -ms-hyphens: none;
+  hyphens: none;
+  position: relative;
+  max-height: 50vh;
+  border-radius: 3px;
 
   code {
-    font-size: 0.9rem;
-    width: 52.5%;
-    margin-left: $spacer-xs;
+    display: block;
+    padding: $spacer-xs;
+    font-size: .875rem;
+    line-height: 2;
     overflow-x: auto;
     background: transparent;
     white-space: normal;
   }
 }
 
-code {
-  color: $success;
-  font-style: initial;
-  white-space: normal;
-  
-  &.language-yaml {
-    white-space: unset;
-  }
+.highlight pre {
+  background-color: inherit;
+  color: inherit;
+  padding: .5em;
+  font-size: .875rem;
 }
+
 
 //icons
 .material-icons {

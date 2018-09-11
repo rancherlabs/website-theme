@@ -3,154 +3,214 @@
 // -----------------------------------------------------------------------------
 header {
   padding: 0 1rem;
-  background-color: #2470A2;
+  // background-color: #2470A2;
+  background-color: darken($link-color, 5%);
   width: 100%;
   z-index: 1001;
 
+  * {
+    font-family: $text-font-header;
+  }
+
   nav {
-    .sticky-header {
-      background-color: #1F608B;
+    &.sticky-header {
+      // background-color: #1F608B;
+      background-color: darken($link-color, 10%);
       position: fixed;
       width: 100%;
       top: 0;
+      left: 0;
+      right: 0;
+      padding: 0 $spacer-sm;
       z-index: 10;
     }
 
     .cta-header {
-      margin: 58px 0 0 0;
+      margin: 46px 0 0 0;
       padding: $spacer-xs;
       list-style-type: none;
     }
-
-    ul.main-menu {
-      padding: 0 $spacer-sm;
-      > li {
-        display: inline-block;
-        vertical-align: middle;
-        margin: 0;
-
-        a.btn {
-          border-bottom: 0;
-          transition: ease-in-out .15s all;
-          color: white;
-
-          &:hover {
-            color: rgba(255,255,255,.5);
-            background: darken($link-color, 5%);
-          }
-        }
-
-        &.sub-menu {
-
-          ul.sub {
-            @extend .unstyled;
-            list-style: none;
-            padding: 0;
-            background-color: white;
-            text-align: left;
-            box-shadow: 0px 3px 15px rgba(0,0,0,0.2);
-            min-width: 250px;
-            z-index: 1000;
-
-            a {
-              color: $link-color;
-              padding: .75rem 1rem;
-              border-bottom: solid thin $border;
-
-              &:hover {
-                background: $light-grey;
-              }
-            }
-          }
-        }
-      }
-    }
-  }
-
-  .social {
-    img {
-      filter: grayscale(100%) brightness(1000%);
-    }
-
-    .btn {
-      border: solid 2px rgba(255,255,255,.25);
-      color: white;
-      border-radius: 90px;
-      margin: 0 1rem;
-
-      &:hover {
-        background: rgba(255,255,255,.1);
-      }
-    }
-  }
-
-  .sub-header {
-    // background: $primary-dark;
-    padding: 0 3rem;
   }
 }
 
+//nav
+nav[role="navigation"] {
+  clear: both;
+  -webkit-transition: all 0.3s ease-out;
+  -moz-transition: all 0.3s ease-out;
+  -ms-transition: all 0.3s ease-out;
+  -o-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
 
-//mobile nav
-.mobile-header {
-  display: none;
-}
+  .dropdown .dropdown-menu {
+    min-width: 200px;
 
-.ml-stack-nav-toggle {
-
-    &__line {
-      background: #fff;
+    li {
+      display: block;
     }
+  }
 }
 
-.ml-stack-nav {
-  top: 75px;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  height: auto;
+.js nav[role="navigation"] {
+  // overflow: hidden;
+  // max-height: 0;
+  // min-height: 47px;
+}
 
-  &__menu {
-    list-style: none;
-    border: none;
-    box-shadow: 0px 0px 10px rgba(0,0,0,.25);
-    background: #fff;
-  }
-  &__link {
-    display: block;
-    padding: $spacer-xs;
+nav[role="navigation"] ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+nav[role="navigation"] li a {
+  display: block;
+  color: white;
+  padding: $spacer-xs;
+
+  + .sub li a {
     color: $link-color;
   }
+}
 
-  &__item {
-    border-bottom: solid thin $border;
-    font-size: 12px;
+.main-nav {
+  display: -ms-flexbox;
+  display: -webkit-box;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -ms-flex-align: center;
+  -webkit-box-align: center;
+  align-items: center;
+  -ms-flex-pack: justify;
+  -webkit-box-pack: justify;
+  justify-content: space-between;
+}
 
-    a.btn {
-      color: $link-color;
-      font-size: 12px;
-    }
+@media all and (min-width: map-get($breakpoints, medium)) {
+
+  a.menu-link {
+    display: none;
   }
-  &__item-inner {
-    position: relative;
+  .js nav[role="navigation"] {
+    max-height: none;
   }
-  &__next {
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
+  nav[role="navigation"] ul {
+    // margin: 0 0 0 -0.25em;
     border: 0;
-    cursor: pointer;
-    width: 70px;
-    text-align: center;
-    padding: $spacer-xs;
-    // background: $link-color;
   }
-  &__back {
-    width: 100%;
+
+  nav[role="navigation"] li {
+    display: inline-block;
+    // margin: 0 0.25em;
+  }
+  nav[role="navigation"] li a {
+    border: 0;
   }
 }
 
-.ml-stack-nav__item-inner {
-  margin: 0!important;
+
+//small screens
+@media all and (max-width: map-get($breakpoints, medium)) {
+  header {
+    padding: 0;
+
+    nav {
+      &.sticky-header {
+        position: relative;
+      }
+    }
+  }
+
+  .cta-header {
+    display: none;
+  }
+
+  a.menu-link {
+    // float: right;
+    display: inline-block;
+    font-family: $text-font-header;
+    padding: $spacer-xs;
+    font-size: 1.5rem;
+    color: white;
+  }
+
+  .nav-logo {
+    order: 1;
+  }
+  .toggle-search {
+    order: 2;
+  }
+
+  nav[role="navigation"] ul {
+    display: none;
+  }
+
+  nav[role="navigation"] li a {
+    padding: $spacer-xs 0;
+
+    .keyboard_arrow_down {
+      display: none;
+    }
+  }
+
+  nav[role="navigation"].active {
+    max-height: 100vh;
+
+    ul, .dropdown .dropdown-menu {
+      display: block;
+      background: transparent;
+      color: $link-color;
+      border: 0;
+      position: relative;
+      font-size: 1.5rem;
+
+      li a {
+        border: 0;
+        color: $link-color;
+        padding: $spacer-xs;
+
+        i {
+          display: none;
+        }
+      }
+    }
+
+    .dropdown .dropdown-menu li a {
+      padding: $spacer-xs 0 $spacer-xs $spacer-sm;
+    }
+
+    > ul {
+      display: block;
+      flex: 1 0 100%;
+      order: 3;
+      padding: $spacer-sm;
+      background-color: white;
+      border-radius: 6px;
+      position: relative;
+      margin-top: 20px;
+
+      &:before {
+        content: "";
+        position: absolute;
+        right: 20px;
+        top: -20px;
+        border-style: solid;
+        border-color: transparent;
+        border-bottom-color: white;
+        border-width: 10px;
+
+      }
+
+      > li {
+        border-top: solid thin $border;
+        padding: $spacer-xs 0;
+
+        &:first-of-type {
+          border-top: 0;
+          padding: 0 $spacer-xs 0 0;
+        }
+      }
+    }
+  }
 }

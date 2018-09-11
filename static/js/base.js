@@ -5,6 +5,8 @@ import tingle from 'tingle.js';
 import mlStackNav from 'ml-stack-nav';
 //import { Features, Zoom, ZoomDOM, ZoomListener } from 'zoom.ts';
 
+window.tingle = tingle;
+
 const defaults = {
   sortOrder: 'desc'
 };
@@ -37,11 +39,11 @@ const bootstrapModals = function() {
     }
 
     var modal = new tingle.modal({
-      footer: wrapper.find('.include-footer').data('include-footer'),
-      stickyFooter: wrapper.find('.include-footer').data('sticky-footer'),
+      footer: !!wrapper.find('.include-footer').data('include-footer'),
+      stickyFooter: !!wrapper.find('.include-footer').data('sticky-footer'),
       closeMethods: ['overlay', 'button', 'escape'],
-      closeLabel: wrapper.find('.include-footer').data('close-label'),
-      cssClass: classList,
+      closeLabel: wrapper.find('.include-footer').data('close-label') || "Close",
+      cssClass: classList || "",
       onOpen: () => {
         console.log('Modal opened');
       },

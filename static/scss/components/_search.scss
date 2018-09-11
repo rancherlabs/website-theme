@@ -1,91 +1,38 @@
-.container-search {
-  display: none;
-
-  &.open {
-    display: block;
-  }
-
-  .ais-search-box, {
-    position: relative;
-    max-width: 100%;
-  }
-
-  .ais-search-box--input {
-    border: 0;
-    border-color: white;
-    color: white;
-    font-family: $text-font-header;
-    font-size: 1.9em;
-    background-color: transparent;
-    border-bottom: 1px solid white;
-    width: 50%;
-    float: right;
-
-
-    &:focus {
-      background-color: transparent;
-      outline: none;
-    }
-  }
+.ais-search-box {
+  max-width: 100%;
 }
 
-.overlay-search {
-  &.open {
-    display: block;
-  }
-  background-color: rgba(255, 255, 255,0.79);
-  display: none;
-  left: 0;
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  z-index: 1000;
+.ais-search-box--input {
+  box-shadow: none;
+}
 
-  .search-results {
-    border: 0;
-
-    .ais-infinite-hits--item {
-      background-color: #ecf0f1;
-      padding: $spacer-md;
-
-      h3 {
-        margin-top: 0;
-      }
-      &:nth-child(even) {
-        background-color: white;
-      }
-
-      .body,
-      h3 {
-        font-size: 1.5rem;
-        line-height: 2.5rem;
-        em {
-          font-weight: bold;
-          background-color: rgba($accent, .5);
-          font-style: normal;
-        };
-      }
-     font-size: 1.4rem;
+.ais-infinite-hits--item {
+  h3 {
+    font-weight: 300;
+    font-size: 1.5rem;
     line-height: 2rem;
+    margin: $spacer-sm 0 0 0;
+    padding-top: $spacer-sm;
+    border-top: solid $border thin;
+
+    em {
+      font-style: normal;
+      text-decoration: underline;
+      font-weight: bold;
+      background-color: rgba($warning, .2);
     }
   }
-  .ais-infinite-hits__empty {
-    h3 {
-      text-align: center;
+
+  .body {
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+    color: $secondary;
+
+    em {
+      font-style: normal;
+      text-decoration: underline;
+      font-weight: bold;
+      background-color: rgba($warning, .2);
     }
-  }
-}
-
-.ais-infinite-hits--showmore {
-  background-color: #ecf0f1;
-  width: 100%;
-  text-align: center;
-
-  button {
-    @extend .btn;
-    @extend .bg-link;
-    margin: 15px 0;
   }
 }

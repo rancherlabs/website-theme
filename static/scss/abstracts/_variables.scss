@@ -127,7 +127,7 @@ $min-width                : 75% !default;
 /// @prop {Map} values - Values are actual breakpoints expressed in pixels
 $breakpoints              : (
 'small'                   : 414px, //small max
-'medium'                  : 767px, //med max
+'medium'                  : 991px, //med max
 'large'                   : 1440px, //large min
 ) !default;
 
