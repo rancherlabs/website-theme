@@ -4,13 +4,13 @@
 
 $label-color                    : $dark-grey !default;
 $input-color-placeholder        : $mid-grey !default;
-$input-bg                       : lighten($light-grey, 5) !default;
+$input-bg                       : white !default;
 $input-bg-hover                 : $mid-grey !default;
 $input-bg-disabled              : lighten($mid-grey, 15%) !default;
 $input-color                    : $secondary !default;
 $input-border                   : darken($light-grey, 5) !default;
 $input-group-addon-border-color : $input-border !default;
-$input-border-focus             : $info !default;
+$input-border-focus             : $link-color !default;
 $legend-color                   : $text-color !default;
 $legend-border-color            : $light-grey !default;
 $input-group-addon-bg           : $light-grey !default;
@@ -66,9 +66,9 @@ input[type='url'],
 textarea {
     display: block;
     box-sizing: border-box;
-    border-width: 1.25px;
+    border-width: 1.5px;
     border-color: $input-border;
-    border-radius: 0;
+    border-radius: 3px;
     border-style: solid;
     background: $input-bg;
     padding: 5px 10px;
@@ -101,8 +101,9 @@ textarea {
         }
     }
     &:focus {
-        background: rgba($input-border-focus, .2);
+        background: rgba($input-border-focus, .1);
         border-color: $input-border-focus;
+        box-shadow: 0 0 7px rgba($input-border-focus, .5);
         &::placeholder {
             color: $input-border-focus;
         }
@@ -331,18 +332,18 @@ input.input-lg,
 }
 
 .hs-form input[type="text"],
-.hs-form input[type="password"], 
-.hs-form input[type="datetime"], 
-.hs-form input[type="datetime-local"], 
-.hs-form input[type="date"], 
-.hs-form input[type="month"], 
-.hs-form input[type="time"], 
-.hs-form input[type="week"], 
-.hs-form input[type="number"], 
-.hs-form input[type="email"], 
-.hs-form input[type="url"], 
-.hs-form input[type="search"], 
-.hs-form input[type="tel"], 
+.hs-form input[type="password"],
+.hs-form input[type="datetime"],
+.hs-form input[type="datetime-local"],
+.hs-form input[type="date"],
+.hs-form input[type="month"],
+.hs-form input[type="time"],
+.hs-form input[type="week"],
+.hs-form input[type="number"],
+.hs-form input[type="email"],
+.hs-form input[type="url"],
+.hs-form input[type="search"],
+.hs-form input[type="tel"],
 .hs-form input[type="color"],
 .hs-form input[type="file"],
 .hs-form textarea,
@@ -431,6 +432,6 @@ body input[type="button"]:hover {
 ::-webkit-input-placeholder,
 :-moz-placeholder,
 ::-moz-placeholder,
-:-ms-input-placeholder { 
+:-ms-input-placeholder {
   color: $input-color-placeholder !important;
 }

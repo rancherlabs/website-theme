@@ -21,12 +21,12 @@
 
 <!--nav-->
 <header>
+
   <nav id="menu" role="navigation" class="main-nav sticky-header">
     <!--branding-->
-    <a href="/"><img src="/img/rancher-logo-horiz-white.svg" width="150" height="22" alt="rancher logo"></a>
-
-    <!--toggle-->
-    <a href="#menu" class="menu-link">Menu</a>
+    <div class="nav-logo">
+      <a href="/"><img src="/img/rancher-logo-horiz-white.svg" width="150" height="22" alt="rancher logo"></a>
+    </div>
 
     <ul>
       {{ $currentPage := . }} {{ range .Site.Menus.main }} {{ if .HasChildren }}
@@ -46,10 +46,14 @@
       {{end}}
     </ul>
 
-    <!--search-->
-    <div>
-      <a class="text-white" href="#" id="button-search"><i class="material-icons">search</i></a>
+    <div class="toggle-search">
+      <!--search-->
+      <button class="search-open text-white inline-block" data-launch-id="open-search"><i class="material-icons">search</i></button>
+
+      <!--toggle-->
+      <a href="#menu" class="menu-link inline-block">Menu</a>
     </div>
+
   </nav>
 
   <nav>
@@ -123,14 +127,23 @@
   </nav>
 
 
-  <div class="container-search">
-    <form id="searchForm"><input type="search" class='' id='search-box' autocomplete="off"></input></form>
-  </div>
+
 </header>
 
-<div class="overlay-search">
-  <div class="search-results" id="hits"></div>
+
+
+
+
+<div class="modal-content" id="open-search">
+  <div class="content search-modal">
+    <!--search input-->
+    <div class="container-search">
+      <form id="searchForm"><input type="search" id="search-box" autocomplete="off"></input></form>
+    </div>
+
+    <!--search results-->
+    <div class="overlay-search">
+      <div class="search-results" id="hits"></div>
+    </div>
+  </div>
 </div>
-
-
-

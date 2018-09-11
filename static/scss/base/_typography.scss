@@ -37,21 +37,21 @@ h2 {
 h3 {
   margin-bottom: 1rem;
   font-family: $text-font-header;
-  font-size: 2rem;
+  font-size: 2.25rem;
   line-height: 3rem;
   font-weight: 600;
   font-style: normal;
-  color: lighten($text-color, 30%);
+  color: lighten($text-color, 20%);
 }
 
 h4 {
   margin-bottom: 1rem;
   font-family: $text-font-header;
-  font-size: 2rem;
+  font-size: 1.75rem;
   line-height: 3rem;
   font-weight: 600;
   font-style: normal;
-  color: lighten($text-color, 50%);
+  color: lighten($text-color, 30%);
 }
 
 h5 {
@@ -61,7 +61,7 @@ h5 {
   line-height: 2.5rem;
   font-weight: 600;
   font-style: normal;
-  color: lighten($text-color, 55%);
+  color: lighten($text-color, 40%);
 }
 
 h6 {
@@ -71,7 +71,7 @@ h6 {
   line-height: 2.5rem;
   font-weight: 600;
   font-style: normal;
-  color: lighten($text-color, 60%);
+  color: lighten($text-color, 50%);
 }
 
 
@@ -204,13 +204,6 @@ h3>code {
 //   white-space: normal;
 // }
 
-.pre,
-pre {
-  overflow-x: auto;
-  overflow-y: hidden;
-  overflow: scroll;
-  max-height: 50vh;
-}
 
 code {
   padding: .2em;
@@ -224,24 +217,22 @@ code {
 
 
 pre {
-  background-color: $dark-grey;
+  background-color: $dark-grey!important;
   white-space: pre;
   -webkit-hyphens: none;
   -ms-hyphens: none;
   hyphens: none;
   position: relative;
-  border: 1px solid #ccc;
+  max-height: 50vh;
+  border-radius: 3px;
 
   code {
     display: block;
-    padding: 1.5em;
+    padding: $spacer-xs;
     font-size: .875rem;
     line-height: 2;
     overflow-x: auto;
     background: transparent;
-    overflow-x: auto;
-    overflow-y: hidden;
-    overflow: scroll;
   }
 }
 

@@ -3,13 +3,19 @@
 // -----------------------------------------------------------------------------
 header {
   padding: 0 1rem;
-  background-color: #2470A2;
+  // background-color: #2470A2;
+  background-color: darken($link-color, 5%);
   width: 100%;
   z-index: 1001;
 
+  * {
+    font-family: $text-font-header;
+  }
+
   nav {
     &.sticky-header {
-      background-color: #1F608B;
+      // background-color: #1F608B;
+      background-color: darken($link-color, 10%);
       position: fixed;
       width: 100%;
       top: 0;
@@ -20,7 +26,7 @@ header {
     }
 
     .cta-header {
-      margin: 47px 0 0 0;
+      margin: 46px 0 0 0;
       padding: $spacer-xs;
       list-style-type: none;
     }
@@ -28,15 +34,6 @@ header {
 }
 
 //nav
-
-a.menu-link {
-  float: right;
-  display: block;
-  padding: 1em;
-  font-size: 2rem;
-
-}
-
 nav[role="navigation"] {
   clear: both;
   -webkit-transition: all 0.3s ease-out;
@@ -44,11 +41,19 @@ nav[role="navigation"] {
   -ms-transition: all 0.3s ease-out;
   -o-transition: all 0.3s ease-out;
   transition: all 0.3s ease-out;
+
+  .dropdown .dropdown-menu {
+    min-width: 200px;
+
+    li {
+      display: block;
+    }
+  }
 }
 
 .js nav[role="navigation"] {
   // overflow: hidden;
-  max-height: 0;
+  // max-height: 0;
   // min-height: 47px;
 }
 
@@ -57,8 +62,6 @@ nav[role="navigation"] ul {
   padding: 0;
   list-style-type: none;
 }
-
-
 
 nav[role="navigation"] li a {
   display: block;
@@ -70,23 +73,22 @@ nav[role="navigation"] li a {
   }
 }
 
+.main-nav {
+  display: -ms-flexbox;
+  display: -webkit-box;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -ms-flex-align: center;
+  -webkit-box-align: center;
+  align-items: center;
+  -ms-flex-pack: justify;
+  -webkit-box-pack: justify;
+  justify-content: space-between;
+}
+
 @media all and (min-width: map-get($breakpoints, medium)) {
-  // body {
-  //   background: red;
-  // }
-  .main-nav {
-    display: -ms-flexbox;
-    display: -webkit-box;
-    display: flex;
-    -ms-flex-wrap: wrap;
-    flex-wrap: wrap;
-    -ms-flex-align: center;
-    -webkit-box-align: center;
-    align-items: center;
-    -ms-flex-pack: justify;
-    -webkit-box-pack: justify;
-    justify-content: space-between;
-  }
+
   a.menu-link {
     display: none;
   }
@@ -94,13 +96,13 @@ nav[role="navigation"] li a {
     max-height: none;
   }
   nav[role="navigation"] ul {
-    margin: 0 0 0 -0.25em;
+    // margin: 0 0 0 -0.25em;
     border: 0;
   }
 
   nav[role="navigation"] li {
     display: inline-block;
-    margin: 0 0.25em;
+    // margin: 0 0.25em;
   }
   nav[role="navigation"] li a {
     border: 0;
@@ -110,21 +112,105 @@ nav[role="navigation"] li a {
 
 //small screens
 @media all and (max-width: map-get($breakpoints, medium)) {
-  // body {
-  //   background: blue;
-  // }
+  header {
+    padding: 0;
+
+    nav {
+      &.sticky-header {
+        position: relative;
+      }
+    }
+  }
+
   .cta-header {
     display: none;
+  }
+
+  a.menu-link {
+    // float: right;
+    display: inline-block;
+    font-family: $text-font-header;
+    padding: $spacer-xs;
+    font-size: 1.5rem;
+    color: white;
+  }
+
+  .nav-logo {
+    order: 1;
+  }
+  .toggle-search {
+    order: 2;
   }
 
   nav[role="navigation"] ul {
     display: none;
   }
 
+  nav[role="navigation"] li a {
+    padding: $spacer-xs 0;
+
+    .keyboard_arrow_down {
+      display: none;
+    }
+  }
+
   nav[role="navigation"].active {
     max-height: 100vh;
-    ul {
+
+    ul, .dropdown .dropdown-menu {
       display: block;
+      background: transparent;
+      color: $link-color;
+      border: 0;
+      position: relative;
+      font-size: 1.5rem;
+
+      li a {
+        border: 0;
+        color: $link-color;
+        padding: $spacer-xs;
+
+        i {
+          display: none;
+        }
+      }
+    }
+
+    .dropdown .dropdown-menu li a {
+      padding: $spacer-xs 0 $spacer-xs $spacer-sm;
+    }
+
+    > ul {
+      display: block;
+      flex: 1 0 100%;
+      order: 3;
+      padding: $spacer-sm;
+      background-color: white;
+      border-radius: 6px;
+      position: relative;
+      margin-top: 20px;
+
+      &:before {
+        content: "";
+        position: absolute;
+        right: 20px;
+        top: -20px;
+        border-style: solid;
+        border-color: transparent;
+        border-bottom-color: white;
+        border-width: 10px;
+
+      }
+
+      > li {
+        border-top: solid thin $border;
+        padding: $spacer-xs 0;
+
+        &:first-of-type {
+          border-top: 0;
+          padding: 0 $spacer-xs 0 0;
+        }
+      }
     }
   }
 }
