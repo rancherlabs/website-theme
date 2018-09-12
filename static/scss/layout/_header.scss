@@ -126,14 +126,60 @@ nav[role="navigation"] li a {
     display: none;
   }
 
-  a.menu-link {
-    // float: right;
-    display: inline-block;
-    font-family: $text-font-header;
-    padding: $spacer-xs;
-    font-size: 1.5rem;
-    color: white;
+// start menu //
+
+a.menu-link {
+  position: relative;
+  display: inline-block;
+  height: 50px;
+  width: 50px;
+  transition: 0.3s;
+  span {
+    position: absolute;
+    top: 25px;
+    left: 12.5px;
+    height: 0;
+    width: 30px;
+    border: 1.5px solid white;
+    border-radius: 30px;
+    margin: -2px 0 0 -3px;
+    transition: 0.3s;
+    &:before, &:after {
+      content: '';
+      position: absolute;
+      width: 30px;
+      height: 3px;
+      background: white;
+      border-radius: 30px;
+      margin: 0 0 0 -1.5px;
+      transition: 0.3s;
+    }
+    &:before {
+      top: -10px;
+    }
+    &:after {
+      top: 6px;
+    }
   }
+  &.active span {
+    height: 30px;
+    margin: -15px 0 0 -6px;
+    border-width: 3px;
+    &:before, &:after {
+      top: 10px;
+      width: 20px;
+      margin: 0 0 0 1.65px;
+    }
+    &:before {
+      transform: rotate(-135deg);
+    }
+    &:after {
+      transform: rotate(135deg);
+    }
+  }
+}
+
+// end menu //
 
   .nav-logo {
     order: 1;
