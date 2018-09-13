@@ -41,6 +41,13 @@
   box-shadow: 0 0 5px $light-grey;
   border-radius: 6px;
 
+  .box-header {
+    border-radius: 6px 6px 0 0;
+    background: $light-grey;
+    color: $secondary;
+    padding: $spacer-xs;
+  }
+
   h2 {
     font-size: 2em;
     font-family: $text-font-stack;

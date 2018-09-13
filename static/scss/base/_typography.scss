@@ -48,7 +48,7 @@ h4 {
   margin-bottom: 1rem;
   font-family: $text-font-header;
   font-size: 1.75rem;
-  line-height: 3rem;
+  line-height: 2.75rem;
   font-weight: 600;
   font-style: normal;
   color: lighten($text-color, 30%);
@@ -197,6 +197,7 @@ pre {
   position: relative;
   max-height: 50vh;
   border-radius: 3px;
+  overflow: auto;
 
   code {
     display: block;
