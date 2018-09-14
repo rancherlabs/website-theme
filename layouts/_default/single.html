@@ -75,9 +75,11 @@
 
 
         <!--list tags-->
-        {{ partial "tag-list.html" . }}
+        {{ if eq .Section "events" }}
+          {{ else }}
 
-
+          {{ partial "tag-list.html" . }}
+        {{ end }}
 
       </div>
     </div>
