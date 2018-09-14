@@ -114,6 +114,14 @@
   padding: $spacer-sm;
 }
 
+.card-graphic {
+  text-align: center;
+
+  img {
+    max-width: 175px;
+    margin: 0 auto;
+  }
+}
 .card-image {
   background-position: center center;
   background-repeat: no-repeat;
@@ -272,6 +280,10 @@
   &:last-child {
     border-bottom: none;
   }
+}
+
+.border-top {
+  border-top: solid 2px $light-grey;
 }
 
 .cloud {
