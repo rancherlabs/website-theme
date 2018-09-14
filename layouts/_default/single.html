@@ -16,47 +16,18 @@
             {{end}}
         {{end}}
 
-        <!--author and date-->
-        <div class="row middle-xs">
-          {{ if and (.Params.author) (eq .Section "blog") }}
-            {{ with index .Site.Data.authors .Params.author }}
-              <div class="row middle-xs p-l-sm p-a-xs">
-                <img src="{{.pic}}" class="circle" alt="{{.name}}" height="35" width="35" />
-                <span class="detail p-l-xs">{{ .name }}</span>
-              </div>
-            {{end}}
-          {{end}}
-
-          {{ with .Params.date }}
-            <div class="detail"><span class="p-h-xs"></span>{{ .Format "January 2, 2006" }}</div>
-          {{end}}
-        </div>
-
-        <!--title and description-->
-        {{ with .Params.title }}
-          <h1 class="m-t-0">{{ . }}</h1>
-        {{end}}
-
-        {{ with .Params.subTitle }}
-          <p class="p-t-sm">{{ . }}</p>
-
-          {{ else }}
-
-          <p class="text-muted">{{ .Description }}</p>
-        {{end}}
-
-
-        {{ if eq .Section "events" }}
+        <!--event details or author and date-->
+         {{ if eq .Section "events" }}
           <div class="row middle-xs">
-              {{ with .Params.date }}
-                <span class="detail p-h-xs">
-                  {{.Format "Monday January 2, 2006"}}
+            {{ with .Params.date }}
+              <span class="detail p-h-xs">
+              {{.Format "Monday January 2, 2006"}}
 
-              {{end}}
+                {{end}}
               {{ with .Params.enddate }}
                 - {{ . | dateFormat "Monday, Jan 2, 2006" }}
               {{end}}
-            </span>
+              </span>
 
             <span class="detail p-h-xs">{{ .Params.time }}</span>
 
@@ -73,11 +44,40 @@
 
           {{ else }}
 
+          <div class="row middle-xs">
+            {{ if and (.Params.author) (eq .Section "blog") }}
+              {{ with index .Site.Data.authors .Params.author }}
+                <div class="row middle-xs p-l-sm p-a-xs">
+                  <img src="{{.pic}}" class="circle" alt="{{.name}}" height="35" width="35" />
+                  <span class="detail p-l-xs">{{ .name }}</span>
+                </div>
+              {{end}}
+            {{end}}
 
+            {{ with .Params.date }}
+              <div class="detail"><span class="p-h-xs"></span>{{ .Format "January 2, 2006" }}</div>
+            {{end}}
+          </div>
         {{end}}
+
+        <!--title and description-->
+        {{ with .Params.title }}
+          <h1 class="m-t-0">{{ . }}</h1>
+        {{end}}
+
+        {{ with .Params.subTitle }}
+          <p class="p-t-sm">{{ . }}</p>
+
+          {{ else }}
+
+          <p class="text-muted">{{ .Description }}</p>
+        {{end}}
+
 
         <!--list tags-->
         {{ partial "tag-list.html" . }}
+
+
 
       </div>
     </div>
