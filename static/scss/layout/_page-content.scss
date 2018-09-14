@@ -65,6 +65,23 @@
   }
 }
 
+.cta-box {
+  background-color: lighten($warning, 45%);
+  margin: 0 0 $spacer-xs $spacer-xs;
+  float: right;
+  border-radius: 6px;
+  padding: $spacer-sm;
+
+  @extend .col-md-4;
+
+  h5 {
+    font-weight: 300;
+    color: $warning;
+    padding-bottom: $spacer-sm;
+    border-bottom: solid thin $warning;
+  }
+}
+
 /*card list*/
 .cards {
   display: flex;
@@ -153,6 +170,8 @@
   flex: 1 1 auto;
 }
 /*end card list*/
+
+
 /*box list*/
 .box-list {
   // display: flex;

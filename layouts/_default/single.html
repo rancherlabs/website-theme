@@ -94,6 +94,17 @@
       <article class="main-content row center-xs">
         <div class="col-md-8 col-xs-12">
 
+          <!--cta defined in front matter-->
+          {{ if and (.Params.cta) (eq .Section "blog") }}
+            {{ with index .Site.Data.cta .Params.cta }}
+              <div class="cta-box">
+                <h5>{{ .header }}</h5>
+                  <p>{{ .copy }}</p>
+                  <a class="btn bg-warning" href="{{ .link }}" target="blank">{{ .button }}</a>
+              </div>
+            {{end}}
+          {{end}}
+
           {{ .Content }}
 
           {{ if eq .Section "careers" }}

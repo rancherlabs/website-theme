@@ -25,7 +25,7 @@ header {
       z-index: 10;
     }
 
-    .cta-header {
+    .secondary-nav {
       margin: 46px 0 0 0;
       padding: $spacer-xs;
       list-style-type: none;
@@ -122,7 +122,7 @@ nav[role="navigation"] li a {
     }
   }
 
-  .cta-header {
+  .secondary-nav {
     display: none;
   }
 
