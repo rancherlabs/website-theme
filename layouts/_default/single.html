@@ -16,6 +16,22 @@
             {{end}}
         {{end}}
 
+        <!--author and date-->
+        <div class="row middle-xs">
+          {{ if and (.Params.author) (eq .Section "blog") }}
+            {{ with index .Site.Data.authors .Params.author }}
+              <div class="row middle-xs p-l-sm p-a-xs">
+                <img src="{{.pic}}" class="circle" alt="{{.name}}" height="35" width="35" />
+                <span class="detail p-l-xs">{{ .name }}</span>
+              </div>
+            {{end}}
+          {{end}}
+
+          {{ with .Params.date }}
+            <div class="detail"><span class="p-h-xs"></span>{{ .Format "January 2, 2006" }}</div>
+          {{end}}
+        </div>
+
         <!--title and description-->
         {{ with .Params.title }}
           <h1 class="m-t-0">{{ . }}</h1>
@@ -26,57 +42,42 @@
 
           {{ else }}
 
-          <p class="p-t-sm">{{ .Description }}</p>
+          <p class="text-muted">{{ .Description }}</p>
         {{end}}
 
 
         {{ if eq .Section "events" }}
-            <div class="row middle-xs">
-                {{ with .Params.date }}
-                  <span class="detail p-h-xs">
-                    {{.Format "Monday January 2, 2006"}}
-
-                {{end}}
-                {{ with .Params.enddate }}
-                  - {{ . | dateFormat "Monday, Jan 2, 2006" }}
-                {{end}}
-              </span>
-
-              <span class="detail p-h-xs">{{ .Params.time }}</span>
-
-              {{ with .Params.location }}
-                <span class="detail p-h-xs">{{ . }}</span>
-              {{end}}
-            </div>
-
-            <div class="m-t-sm">
-              {{ with .Params.link }}
-                  <a href="{{ . }}" class="btn bg-accent" target="_blank">Register Here</a>
-              {{end}}
-            </div>
-
-            {{ else }}
-
-            <!--list tags-->
-            {{ partial "tag-list.html" . }}
-
-            <div class="row middle-xs between-xs">
-              {{ if and (.Params.author) (eq .Section "blog") }}
-                {{ with index .Site.Data.authors .Params.author }}
-                  <div class="row middle-xs p-l-sm p-a-xs">
-                    <img src="{{.pic}}" class="circle" alt="{{.name}}" height="35" width="35" />
-                    <span class="detail p-l-xs">{{ .name }}</span>
-                  </div>
-                {{end}}
-              {{end}}
-
+          <div class="row middle-xs">
               {{ with .Params.date }}
-                <div class="detail"><span class="p-h-xs"></span>{{ .Format "January 2, 2006" }}</div>
+                <span class="detail p-h-xs">
+                  {{.Format "Monday January 2, 2006"}}
+
               {{end}}
-            </div>
+              {{ with .Params.enddate }}
+                - {{ . | dateFormat "Monday, Jan 2, 2006" }}
+              {{end}}
+            </span>
+
+            <span class="detail p-h-xs">{{ .Params.time }}</span>
+
+            {{ with .Params.location }}
+              <span class="detail p-h-xs">{{ . }}</span>
+            {{end}}
+          </div>
+
+          <div class="m-t-sm">
+            {{ with .Params.link }}
+                <a href="{{ . }}" class="btn bg-accent" target="_blank">Register Here</a>
+            {{end}}
+          </div>
+
+          {{ else }}
 
 
         {{end}}
+
+        <!--list tags-->
+        {{ partial "tag-list.html" . }}
 
       </div>
     </div>
@@ -145,18 +146,10 @@
           </div>
           {{ end }}
 
-        <!-- cta -->
-         <div class="box m-v-lg">
-          <div class="row middle-xs">
-            <div class="col-md-4 p-a-md">
-              <img src="/img/spot/spot-training.svg" alt="training">
-            </div>
-            <div class="col-md-8 p-a-md">
-              <p class="text-md">Get <strong>free training</strong> from an expert through our classes on Kubernetes and Rancher</p>
-              <a href="{{ .Site.BaseURL }}/training" class="btn bg-accent">Sign Up Now</a>
-            </div>
-          </div>
-        </div>
+        <!-- related content -->
+        <div class="p-v-md">{{ partial "related-content.html" . }}</div>
+
+
         </div>
       </article>
 
