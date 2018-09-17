@@ -72,8 +72,6 @@
   border-radius: 6px;
   padding: $spacer-sm;
 
-  @extend .col-md-4;
-
   h5 {
     font-weight: 300;
     color: $warning;
@@ -578,10 +576,12 @@ table {
   border-radius: 3px;
 
   thead {
-    color: $mid-grey;
-    background-color: $light-grey;
     font-family: $text-font-header;
     font-weight: normal;
+    font-size: 1rem;
+    line-height: 1.3rem;
+    color: $mid-grey;
+    background-color: $light-grey;
 
     tr {
       th {
@@ -600,9 +600,9 @@ table {
 
       td {
         text-align: left;
-        padding: 12px 9px;
+        padding: 10px;
         border-bottom: solid darken($border, 5%) thin;
-        border-right: dotted $border 2px;
+        border-right: solid $border thin;
 
         &:last-child {
           border-right: 0;
