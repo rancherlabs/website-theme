@@ -67,16 +67,36 @@
 
 .cta-box {
   background-color: lighten($warning, 45%);
-  margin: 0 0 $spacer-xs $spacer-xs;
-  float: right;
   border-radius: 6px;
-  padding: $spacer-sm;
+  clear: both;
+  overflow: auto;
+
+  &.cta-right {
+    margin: 0 0 $spacer-xs $spacer-xs;
+    float: right;
+    padding: $spacer-sm;
+
+    @extend .col-md-4;
+  }
+
+  &.cta-inline {
+    margin: $spacer-md 0;
+    padding: $spacer-md;
+  }
 
   h5 {
     font-weight: 300;
     color: $warning;
     padding-bottom: $spacer-sm;
     border-bottom: solid thin $warning;
+  }
+
+  .cta-img {
+    float: left;
+    margin: 0 1rem 1rem 0;
+    max-width: 33.33%;
+    height: auto;
+    // object-fit: contain;
   }
 }
 
