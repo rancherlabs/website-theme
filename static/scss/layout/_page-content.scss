@@ -590,10 +590,11 @@
 
 table {
   border-spacing: 0;
-  border: solid darken($border, 5%) thin;
+  border: solid darken($border, 8%) thin;
   min-width: 100%;
   margin: 0 auto;
   border-radius: 3px;
+  background-color: white;
 
   thead {
     font-family: $text-font-header;
@@ -621,8 +622,8 @@ table {
       td {
         text-align: left;
         padding: 10px;
-        border-bottom: solid darken($border, 5%) thin;
-        border-right: solid $border thin;
+        border-bottom: solid darken($border, 8%) thin;
+        border-right: solid darken($border, 8%) thin;
 
         &:last-child {
           border-right: 0;

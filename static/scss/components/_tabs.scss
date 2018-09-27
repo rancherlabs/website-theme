@@ -130,13 +130,15 @@ ul.tabs {
 
         li {
           padding: $spacer-xs $spacer-sm;
-          background-color: $light-grey;
+          background-color: darken($light-grey, 5%);
+          border-top: solid 4px darken($light-grey, 8%);
           color: darken($light-grey, 10%);
 
           &.active {
-            background-color: $link-color;
+            background-color: lighten($light-grey, 3%);
+            border-top: solid 4px $link-color;
             > a {
-              color: white;
+              color: $link-color;
             }
           }
         }
@@ -144,7 +146,8 @@ ul.tabs {
   }
 
   .tab-content {
-    border: solid $border thin;
+    // border: solid darken($border, 5%) 1.5px;
+    background-color: lighten($light-grey, 3%);
     padding: 0 $spacer-sm;
   }
 }
