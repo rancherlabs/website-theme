@@ -78,13 +78,15 @@
         {{ range $paginator.Pages }}
           <div class="p-v-xs">
             <h2 class="m-t-0"><a href="{{.URL}}">{{.Title}}</a></h2>
-            {{ partial "tag-list.html" . }}
+            <div class="p-b-xs">
+              {{ partial "tag-list.html" . }}
+            </div>
 
               {{ if .Params.image }}
                 <div class="thumbnail"><img src="{{ .Params.image }}" alt="{{ .Params.title }}"></div>
               {{end}}
 
-              <p>
+              <p class="m-t-0">
                 {{ .Summary | safeHTML }}
                 {{ if .Truncated }}
                   <a href="{{ .RelPermalink }}">Read More…</a>
