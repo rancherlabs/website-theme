@@ -31,9 +31,9 @@
   <div class="wrapper">
     <div class="row center-xs">
 
-    <div class="col-md-8">
+<!--     <div class="col-md-8">
       {{ partial "breadcrumbs.html" . }}
-    </div>
+    </div> -->
 
     <article class="col-md-8">
       {{ .Content }}
@@ -78,6 +78,7 @@
         {{ range $paginator.Pages }}
           <div class="p-v-xs">
             <h2 class="m-t-0"><a href="{{.URL}}">{{.Title}}</a></h2>
+            {{ partial "tag-list.html" . }}
 
               {{ if .Params.image }}
                 <div class="thumbnail"><img src="{{ .Params.image }}" alt="{{ .Params.title }}"></div>
