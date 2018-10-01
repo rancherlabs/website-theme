@@ -78,9 +78,12 @@
         {{ range $paginator.Pages }}
           <div class="p-v-xs">
             <h2 class="m-t-0"><a href="{{.URL}}">{{.Title}}</a></h2>
-            <div class="p-b-xs">
-              {{ partial "tag-list.html" . }}
-            </div>
+              <!--list tags-->
+              {{ if eq .Section "events" }}
+                {{ else }}
+
+                {{ partial "tag-list.html" . }}
+              {{ end }}
 
               {{ if .Params.image }}
                 <div class="thumbnail"><img src="{{ .Params.image }}" alt="{{ .Params.title }}"></div>
