@@ -197,14 +197,14 @@ pre {
   -ms-hyphens: none;
   hyphens: none;
   position: relative;
-  max-height: 50vh;
+  max-height: 75vh;
   border-radius: 3px;
   overflow: auto;
 
   code {
     display: block;
     padding: $spacer-xs;
-    font-size: .875rem;
+    font-size: 1.25rem;
     line-height: 2;
     overflow-x: auto;
     background: transparent;
