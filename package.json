@@ -4,6 +4,6 @@
     "description": "UI theme used on Rancher Marketing sites",
     "repository": "https://github.com/rancherlabs/website-theme.git",
     "author": "Rancher Labs, Inc.",
-    "license": "UNLICENSED",
+    "license": "Apache-2.0",
     "private": true
 }
