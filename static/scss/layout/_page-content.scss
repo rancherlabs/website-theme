@@ -75,6 +75,8 @@
     margin: 0 0 $spacer-xs $spacer-xs;
     float: right;
     padding: $spacer-sm;
+    z-index: 1;
+    position: relative;
 
     @extend .col-md-4;
   }
