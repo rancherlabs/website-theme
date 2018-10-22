@@ -170,3 +170,45 @@
   }
 
 }
+
+/*masonry*/
+.masonry {
+   box-sizing: border-box;
+   column-gap: $spacer-sm;
+   position: relative;
+  column-count: 4;
+}
+
+.masonry * {
+   box-sizing: border-box;
+}
+
+@media (min-width: 768px) {
+   .masonry {
+     column-count: 2;
+  }
+}
+
+ @media (min-width: 992px) {
+   .masonry {
+     column-count: 4;
+  }
+}
+//  @media (min-width: 1500px) {
+//   .masonry {
+//     column-count: 4;
+//  }
+// }
+  .panel {
+  padding: $spacer-xs 0;
+}
+  .panel-content {
+   overflow: hidden;
+   width: 100%;
+}
+ @media (min-width: 768px) {
+   .panel {
+     break-inside: avoid;
+   }
+ }
+
