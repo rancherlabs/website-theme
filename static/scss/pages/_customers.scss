@@ -88,12 +88,14 @@
     background-color: white;
     position: relative;
     overflow: hidden;
-    text-align: center;
 
     .feat-img {
       max-height: 75px;
       max-width: 200px;
       width: auto;
+    }
+
+    .white-logo {
       filter: contrast(0) brightness(3);
     }
 
