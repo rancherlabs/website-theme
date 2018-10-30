@@ -17,7 +17,8 @@
 .frame,
 .events_log {
     position: relative;
-    width: 880px;
+    // width: 880px;
+    width: 87.5%;
     margin: 0 auto;
     font-size: 0;
     line-height: 0;
@@ -90,16 +91,32 @@
 }
 
 .variablewidth li {
-    max-width: 200px;
-    width: auto;
-    margin-right: 50px;
-    display: inline-block;
-    vertical-align: middle;
+  max-width: 200px;
+  width: auto;
+  margin-right: 50px;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.multislides .slides {
+  display: flex;
 }
 
 .multipleelements li, .multislides li, .ease li {
-    width: 300px;
-    margin-right: 20px;}
+  display: flex;
+  flex-direction: column;
+  flex-basis: 33.33%;
+  max-width: 33.33%;
+  box-sizing: border-box;
+  flex: 0 0 auto;
+  padding-right: .5rem;
+  padding-left: .5rem;
+  margin-right: $spacer-xs;
+}
+
+.multislides li p {
+  flex-grow: 1;
+}
 
 .simple > .frame li:last-child,
 .rewind > .frame li:last-child,
