@@ -108,6 +108,29 @@ ul.tabs {
         }
       }
     }
+
+    &.nav-tabs-clean {
+      border-bottom: none;
+
+      li {
+        background-color: transparent;
+        border-bottom: solid 2px $light-grey;
+
+        a {
+          opacity: .5;
+        }
+
+        &.active {
+          background-color: transparent;
+          border-bottom-color: $mid-grey;
+
+          > a {
+            color: $link-color;
+            opacity: 1;
+          }
+        }
+      }
+    }
   }
 
   .tab-content {
@@ -146,52 +169,10 @@ ul.tabs {
   }
 
   .tab-content {
-    // border: solid darken($border, 5%) 1.5px;
     background-color: lighten($light-grey, 3%);
     padding: 0 $spacer-sm;
   }
 }
-
-// @media (max-width: 700px) {
-//   ul.nav-tabs {
-//     border-bottom: 0;
-//     overflow: hidden;
-//     position: relative;
-
-//     &::after {
-//       content: "☰";
-//       position: absolute;
-//       top: 8px;
-//       right: 15px;
-//       z-index: 2;
-//       pointer-events: none;
-//     }
-//     &.open {
-//       a {
-//         position: relative;
-//         display: block;
-//       }
-//     }
-
-//     li {
-//       display: block;
-
-//       a {
-//         position: absolute;
-//         top: 0;
-//         left: 0;
-//         width: 100%;
-//         height: 100%;
-//         &.active {
-//           border: 0;
-//           z-index: 1;
-//           background: #666; /* fallback */
-//           background: linear-gradient(#666, #222);
-//         }
-//       }
-//     }
-//   }
-// }
 
 //accordion
 .accordion {
