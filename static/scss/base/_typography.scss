@@ -243,6 +243,17 @@ ul {
   li {
     margin-bottom: calc($spacer-xs / 2);
   }
+
+  &.underlined {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+
+    li {
+      border-bottom: $light-grey solid thin;
+      padding: $spacer-xs;
+    }
+  }
 }
 
 @media screen and (max-width: 720px) {}
