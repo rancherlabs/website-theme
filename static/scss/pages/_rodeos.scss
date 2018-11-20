@@ -1,9 +1,9 @@
 .rodeos {
   .hero {
-    background-image: none;
-    padding: $spacer-md 0;
-    background-position: right middle;
-    background-size: 50%;
+    background-image: url(../img/rodeos/header-rodeo.svg);
+    background-position: right center;
+    background-size: 40%;
+    background-repeat: no-repeat;
 
     h1 {
       margin: $spacer-md 0;
