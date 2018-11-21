@@ -11,4 +11,9 @@
   .map {
     display: none;
   }
+
+  .multipleelements li, .multislides li, .ease li {
+    flex-basis: 100%;
+    max-width: 100%;
+  }
 }
