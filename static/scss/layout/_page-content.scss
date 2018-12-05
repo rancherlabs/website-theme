@@ -102,6 +102,22 @@
   }
 }
 
+.hr-icon-wrap {
+  display: flex;
+
+  .hr-line {
+    width: 100%;
+    position: relative;
+    margin: 15px;
+    border-bottom: 1px solid $border;
+  }
+  .hr-icon {
+    position: relative;
+    top: 3px;
+    color: $secondary;
+  }
+}
+
 /*card list*/
 .cards {
   display: flex;
@@ -263,10 +279,12 @@
   }
 }
 
-
+.border {
+  border: solid 2px $border;
+}
 
 .border-right > * {
-  border-right: solid 2px $light-grey;
+  border-right: solid 2px $border;
 
   &:last-child {
     border-right: none;
@@ -274,7 +292,7 @@
 }
 
 .border-bottom {
-  border-bottom: solid 2px $light-grey;
+  border-bottom: solid 2px $border;
 
   &:last-child {
     border-bottom: none;
@@ -282,7 +300,7 @@
 }
 
 .border-top {
-  border-top: solid 2px $light-grey;
+  border-top: solid 2px $border;
 }
 
 .cloud {

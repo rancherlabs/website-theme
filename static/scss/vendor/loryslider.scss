@@ -178,89 +178,11 @@
     display: block;
 }
 
-// @media screen and (min-width: 640px ) {
-//     /**
-//      * Demo Page Styles
-//      */
-//     .examplecode, .frame, .events_log {
-//         width: 580px;
-//     }
-
-//     .testscreen {
-//         width: 500px;
-//     }
-
-//     table {
-//         width: 580px;
-//         margin: 0 auto;
-//     }
-
-//     tr {
-//         padding: 0;
-//     }
-
-//     /**
-//      * Slider specific styles
-//      */
-
-//     .slider {
-//         // width: 640px;
-//         margin: 0 auto 20px;
-//     }
-
-//     .simple > .frame li,
-//     .rewind > .frame li,
-//     .events > .frame li {
-//         width: 580px;
-//     }
-
-//     .variablewidth li {
-//         width: 280px;
-//         margin-right: 10px;
-//     }
-
-//     .multipleelements li, .multislides li, .ease li {
-//         width: 130px;
-//         margin-right: 20px;
-//     }
-// }
-
-// @media screen and (min-width: 980px ) {
-//     /**
-//      * Demo Page Styles
-//      */
-
-//      .examplecode {
-//          width: 880px;
-//      }
-
-//     /**
-//      * Slider specific styles
-//      */
-
-//      .slider {
-//          // width: 980px;
-//          margin: 0 auto 20px;
-//      }
-
-//     .frame,
-//     .events_log {
-//        width: 880px;
-//     }
-
-//     .simple > .frame li,
-//     .rewind > .frame li,
-//     .events > .frame li {
-//       width: 880px;
-//     }
-
-//     .variablewidth li {
-//         width: 280px;
-//         margin-right: 10px;
-//     }
-
-//     .multipleelements li, .multislides li, .ease li {
-//         width: 250px;
-//         margin-right: 20px;
-//     }
-// }
+.slider {
+  &.small-logo {
+    img {
+      max-height: 38px;
+      max-width: 140px;
+    }
+  }
+}

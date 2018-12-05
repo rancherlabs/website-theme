@@ -260,23 +260,23 @@ ul {
 
 //text helpers
 .text-sm {
-  font-size: 1rem;
+  font-size: 1rem !important;
   line-height: 1.5;
   font-weight: 300;
 }
 
 .text-md {
-  font-size: 2rem;
+  font-size: 2rem !important;
   line-height: 3rem;
 }
 
 .text-lg {
-  font-size: 3rem;
+  font-size: 3rem !important;
   line-height: 4rem;
 }
 
 .text-huge {
-  font-size: 5rem;
+  font-size: 5rem !important;
   line-height: 6rem;
   margin: 0;
 }

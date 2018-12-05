@@ -142,6 +142,39 @@ ul.tabs {
       }
     }
   }
+
+  &.vertical-tabs {
+    display: flex;
+
+    .vertical-tab-nav {
+      flex-basis: 30%;
+      max-width: 30%;
+
+      .nav-tabs {
+        display: block;
+        text-align: left;
+        border-bottom: none;
+
+        li {
+          background: $light-grey;
+          margin-bottom: $spacer-xs;
+          border-radius: 3px;
+
+          a {
+            color: $mid-grey;
+
+            &.active {
+              background-color: $link-color;
+            }
+          }
+        }
+      }
+    }
+    .tab-content {
+      flex-basis: 70%;
+      max-width: 70%;
+    }
+  }
 }
 
 .main-content {
