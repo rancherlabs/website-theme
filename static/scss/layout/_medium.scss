@@ -121,4 +121,22 @@
   .logo-bg {
     display: none;
   }
+
+  //vertical tabs
+  .content-tabs.vertical-tabs {
+    display: block;
+    padding: $spacer-md;
+  }
+
+  .content-tabs.vertical-tabs .vertical-tab-nav {
+    flex-basis: 100%;
+    max-width: 100%;
+  }
+  .content-tabs.vertical-tabs .tab-content {
+    flex-basis: 100%;
+    max-width: 100%;
+  }
+  .tab-page-image img {
+    display: none;
+  }
 }

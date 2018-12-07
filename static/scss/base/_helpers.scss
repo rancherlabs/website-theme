@@ -195,6 +195,37 @@
 }
 
 //sml margin
+.m-a-xs {
+  margin: $spacer-xs;
+}
+
+.m-t-xs {
+  margin-top: $spacer-xs;
+}
+
+.m-r-xs {
+  margin-right: $spacer-xs;
+}
+
+.m-b-xs {
+  margin-bottom: $spacer-xs;
+}
+
+.m-l-xs {
+  margin-left: $spacer-xs;
+}
+
+.m-h-xs {
+  margin-left: $spacer-xs;
+  margin-right: $spacer-xs;
+}
+
+.m-v-xs {
+  margin-top: $spacer-xs;
+  margin-bottom: $spacer-xs;
+}
+
+//sml margin
 .m-a-sm {
   margin: $spacer-sm;
 }

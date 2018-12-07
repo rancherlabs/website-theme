@@ -143,6 +143,24 @@ ul.tabs {
     }
   }
 
+  //k8s page
+  .tab-page-image {
+    position: relative;
+
+    img {
+      position: absolute;
+      z-index: -1;
+      opacity: .4;
+      top: $spacer-sm;
+      right: 0;
+      left: 0;
+      width: 300px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+
+
   &.vertical-tabs {
     display: flex;
 
@@ -162,9 +180,13 @@ ul.tabs {
 
           a {
             color: $mid-grey;
+            display: block;
+          }
 
-            &.active {
-              background-color: $link-color;
+          &.active {
+            background-color: $link-color;
+            a {
+              color: white;
             }
           }
         }
