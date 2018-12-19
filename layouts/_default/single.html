@@ -57,6 +57,10 @@
             {{ with .Params.date }}
               <div class="detail"><span class="p-h-xs"></span>{{ .Format "January 2, 2006" }}</div>
             {{end}}
+
+            {{ with .Params.LastMod }}
+              <div class="detail"><span class="p-h-xs"></span>Updated: {{ .Format "January 2, 2006" }}</div>
+            {{end}}
           </div>
         {{end}}
 
