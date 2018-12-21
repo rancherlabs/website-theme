@@ -54,8 +54,13 @@
               {{end}}
             {{end}}
 
-            {{ with .Params.date }}
-              <div class="detail"><span class="p-h-xs"></span>{{ .Format "January 2, 2006" }}</div>
+            {{ $published := .Date.Format "January 2, 2006" }}
+            {{ $updated := .Lastmod.Format "January 2, 2006" }}
+
+            <div class="detail"><span class="p-h-xs"></span>{{ $published }}</div>
+
+            {{ if ne $published $updated }}
+              <div class="detail pull-right"><span class="p-h-xs"></span>Updated: {{ $updated }}</div>
             {{end}}
           </div>
         {{end}}
