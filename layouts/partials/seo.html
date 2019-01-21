@@ -37,15 +37,15 @@
   <link rel="canonical" href="{{ $permalink }}">
 
   {{ if .RSSLink -}}
-    <link href="{{ .RSSLink }}" rel="alternate" type="application/rss+xml" title="{{ .Title }}  | Rancher Labs" />
+    <link href="{{ .RSSLink }}" rel="alternate" type="application/rss+xml" title="{{ .Title }}" />
   {{- end }}
 
-  <meta name="description" content="{{ .Description }}"/>
+  <meta name="description" content="{{ with .Params.metaDescription }}{{ . }}{{ else }}{{ .Description }}{{ end }}"/>
   <meta name="robots" content="noodp"/>
 
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:description" content="{{ .Description }}" />
+  <meta name="twitter:description" content="{{ with .Params.metaDescription }}{{ . }}{{ else }}{{ .Description }}{{ end }}" />
   <meta name="twitter:title" content="{{ .Title }}" />
   <meta name="twitter:site" content="{{ .Site.Params.twitter }}" />
   <meta name="twitter:creator" content="{{ .Site.Params.twitter }}" />
@@ -54,7 +54,7 @@
   <meta property="og:locale" content="en_US" />
   <meta property="og:type" content="{{ if .IsPage }}article{{ else }}website{{ end }}" />
   <meta property="og:title" content="{{ .Title }}">
-  <meta property="og:description" content="{{ .Description }}">
+  <meta property="og:description" content="{{ with .Params.metaDescription }}{{ . }}{{ else }}{{ .Description }}{{ end }}">
   <meta property="og:url" content="{{ $permalink }}" />
   <meta property="og:site_name" content="{{ .Site.Title }}" />
   <meta property="og:image" content="{{ if .Params.image }}{{ . }}{{ else }}{{.Site.BaseURL}}/img/logo-square.png{{ end }}" />
@@ -91,7 +91,7 @@
             "name": "{{ .name }}"
         },
       {{ end }}
-      "description": "{{ .Description }}"
+      "description": "{{ with .Params.metaDescription }}{{ . }}{{ else }}{{ .Description }}{{ end }}"
     }
   {{- else -}}
     {
