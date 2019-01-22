@@ -48,11 +48,8 @@
             {{end}}
 
             <p>
-              {{ .Summary | safeHTML }}
-              {{ if .Truncated }}
-                <a href="{{ .RelPermalink }}">Read More…</a>
-              {{ end }}
-            </p>
+              {{ .Description | default .Summary | safeHTML }}
+          </p>
 
             <div class="row">
               {{ with .Params.author }}
@@ -90,10 +87,7 @@
               {{end}}
 
               <p class="m-t-0">
-                {{ .Summary | safeHTML }}
-                {{ if .Truncated }}
-                  <a href="{{ .RelPermalink }}">Read More…</a>
-                {{ end }}
+                {{ .Description | default .Summary | safeHTML }}
               </p>
 
               <div class="row middle-xs">
