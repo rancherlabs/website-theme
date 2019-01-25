@@ -1,0 +1,13 @@
+// -----------------------------------------------------------------------------
+// This file contains styles that are specific to the training page and kubernetes-master-class pages.
+// -----------------------------------------------------------------------------
+
+.kubernetes-master-class {
+  .hero {
+    background-image: url(../img/featured-images/kubernetes-master-class.svg);
+    background-color: #F1C40F;
+    background-position: 140% center;
+    background-size: 70%;
+    background-repeat: no-repeat;
+  }
+}

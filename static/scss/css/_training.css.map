@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AAKE,8BAAM;EACJ,gBAAgB,EAAE,qEAAqE;EACvF,mBAAmB,EAAE,YAAY;EACjC,eAAe,EAAE,GAAG;EACpB,iBAAiB,EAAE,SAAS",
+"sources": ["../pages/_training.scss"],
+"names": [],
+"file": "_training.css"
+}
