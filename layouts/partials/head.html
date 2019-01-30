@@ -28,9 +28,5 @@
   {{ $appJs := slice $base $local  | resources.Concat "js/app.js" }}
   <script charset="utf-8" type="text/javascript" src="{{ $appJs.Permalink}}?{{ $cache}}"></script>
 
-  <link href="https://fonts.googleapis.com/css?family=Poppins:400,600|Roboto:400,900" rel="stylesheet">
-  <!--icons https://material.io/icons/-->
-  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-
   {{ partial "seo.html" . }}
 </head>
