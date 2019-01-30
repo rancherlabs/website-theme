@@ -1,12 +1,3 @@
-import $ from 'jquery';
-import moment from 'moment';
-import {lory} from 'lory.js';
-import tingle from 'tingle.js';
-import mlStackNav from 'ml-stack-nav';
-//import { Features, Zoom, ZoomDOM, ZoomListener } from 'zoom.ts';
-
-window.tingle = tingle;
-
 const defaults = {
   sortOrder: 'desc'
 };
@@ -44,12 +35,6 @@ const bootstrapModals = function() {
       closeMethods: ['overlay', 'button', 'escape'],
       closeLabel: wrapper.find('.include-footer').data('close-label') || "Close",
       cssClass: classList || "",
-      onOpen: () => {
-        console.log('Modal opened');
-      },
-      onClose: () => {
-        console.log('Modal closed');
-      },
       beforeClose: () => {
         content.detach()
         wrapper.append(content);
@@ -103,7 +88,7 @@ const bootstrapSlider = function() {
 
   $('.js_slider').each((idx, slider) => {
     if (slider) {
-      lory(slider, {
+      $(slider).lory({
         // options going here
         // infinite: 4,
         // slidesToScroll: 1,
@@ -196,7 +181,7 @@ const toggleNav = function(input, mode="toggle"/*show, hide*/) {
 const bootstrapNav = function () {
   // mobile nav
   // init-attaches to js object
-  mlStackNav();
+  $.fn.mlStackNav();
   // consume
   $(".js-ml-stack-nav").mlStackNav();
 
@@ -319,8 +304,6 @@ const bootstrapApp = function() {
 $(document).ready(() => {
   bootstrapApp();
 });
-
-export default bootstrapApp;
 
 //tab functionality
 $(document).ready(() => {

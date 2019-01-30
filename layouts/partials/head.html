@@ -6,14 +6,28 @@
 
   <link rel="icon" type="image/png" href="{{ "img/favicon.png" | relURL }}">
 
-  <link rel="stylesheet" type="text/css" href="{{ .Site.BaseURL }}/css/app.css?{{ $cache}}" />
+  {{- $opt := (dict "outputStyle" "compressed" "enableSourceMap" "true" "includePaths" (slice "/theme" "../../node_modules")) -}}
+  {{- $appCss := resources.Get "sass/app.scss" | toCSS $opt | minify }}
+  <link rel="stylesheet" type="text/css" href="{{ $appCss.Permalink }}?{{ $cache }}"/>
+
+  {{ $jquery := resources.Get "js/jquery.js" }}
+  {{ $instantsearch := resources.Get "js/instantsearch.js" }}
+  {{ $ml := resources.Get "js/ml-stack-nav.js" }}
+  {{ $lory := resources.Get "js/jquery.lory.js" }}
+  {{ $tingle := resources.Get "js/tingle.js" }}
+  {{ $moment := resources.Get "js/moment.js" }}
+
+  {{ $vendorJs := slice $jquery $instantsearch $ml $lory $tingle $moment | resources.Concat "js/vendor.js" }}
+  <script charset="utf-8" type="text/javascript" src="{{ $vendorJs.Permalink}}?{{ $cache }}"></script>
+
+  {{ $base := resources.Get "js/base.js" }}
+  {{ $local := resources.Get "js/app.js" }}
+  {{ $appJs := slice $base $local  | resources.Concat "js/app.js" }}
+  <script charset="utf-8" type="text/javascript" src="{{ $appJs.Permalink}}?{{ $cache}}"></script>
+
   <link href="https://fonts.googleapis.com/css?family=Poppins:400,600|Roboto:400,900" rel="stylesheet">
   <!--icons https://material.io/icons/-->
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/izimodal/1.5.1/css/iziModal.min.css" rel="stylesheet" />
-
-  <script charset="utf-8" type="text/javascript" src="{{ .Site.BaseURL }}/js/vendor.js?{{ $cache}}"></script>
-  <script charset="utf-8" type="text/javascript" src="{{ .Site.BaseURL }}/js/app.js?{{ $cache}}"></script>
 
   {{ partial "seo.html" . }}
 </head>
