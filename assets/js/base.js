@@ -23,6 +23,16 @@ const bootstrapModals = function() {
     let wrapper = $(`#${wrapperId}`);
 
     let content = wrapper.find('div.content');
+
+    let iframes = $('IFRAME[data-src]', content);
+    if ( iframes && iframes.length ) {
+      for ( let i = 0 ; i < iframes.length ; i++ ) {
+        let $el = $(iframes[i]);
+        $el.prop('src', $el.data('src'));
+        $el.removeData('src');
+      }
+    }
+
     let classes = wrapper.find('.css-classes').data('css-classes');
     let classList = [];
     if ( classes && classes.length ) {

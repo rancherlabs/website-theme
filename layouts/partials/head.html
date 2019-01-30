@@ -11,23 +11,22 @@
   <link rel="stylesheet" type="text/css" href="{{ $appCss.Permalink }}?{{ $cache }}"/>
 
   {{ $jquery := resources.Get "js/jquery.js" }}
-  {{ $instantsearch := resources.Get "js/instantsearch.js" }}
-  {{ $ml := resources.Get "js/ml-stack-nav.js" }}
   {{ $lory := resources.Get "js/jquery.lory.js" }}
+  {{ $ml := resources.Get "js/ml-stack-nav.js" }}
   {{ $tingle := resources.Get "js/tingle.js" }}
   {{ $moment := resources.Get "js/moment.js" }}
+  {{ $empty := resources.Get "js/empty.js" }}
 
-  {{ $vendorJs := slice $jquery $instantsearch $ml $lory $tingle $moment | resources.Concat "js/vendor.js" }}
+  {{ $vendorJs := slice $jquery $empty $ml $empty $lory $empty $tingle $empty $moment | resources.Concat "js/vendor.js" | minify }}
   <script charset="utf-8" type="text/javascript" src="{{ $vendorJs.Permalink}}?{{ $cache }}"></script>
+
+  {{ $instantsearch := resources.Get "js/instantsearch.js" | minify }}
+  <script defer charset="utf-8" type="text/javascript" src="{{ $instantsearch.Permalink}}?{{ $cache }}"></script>
 
   {{ $base := resources.Get "js/base.js" }}
   {{ $local := resources.Get "js/app.js" }}
   {{ $appJs := slice $base $local  | resources.Concat "js/app.js" }}
   <script charset="utf-8" type="text/javascript" src="{{ $appJs.Permalink}}?{{ $cache}}"></script>
-
-  <link href="https://fonts.googleapis.com/css?family=Poppins:400,600|Roboto:400,900" rel="stylesheet">
-  <!--icons https://material.io/icons/-->
-  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
   {{ partial "seo.html" . }}
 </head>
