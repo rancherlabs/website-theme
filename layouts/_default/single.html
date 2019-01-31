@@ -70,12 +70,8 @@
           <h1 class="m-t-0">{{ . }}</h1>
         {{end}}
 
-        {{ with .Params.subTitle }}
+        {{ with .Params.description }}
           <p class="p-t-sm">{{ . }}</p>
-
-          {{ else }}
-
-          <p class="text-muted">{{ .Description }}</p>
         {{end}}
 
 
