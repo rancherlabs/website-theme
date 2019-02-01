@@ -64,11 +64,6 @@
           <h1 class="m-t-0">{{ . }}</h1>
         {{end}}
 
-        {{ with .Params.description }}
-          <p class="p-t-sm">{{ . }}</p>
-        {{end}}
-
-
         <!--list tags-->
         {{ if eq .Section "events" }}
           {{ else }}
