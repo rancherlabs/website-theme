@@ -36,12 +36,6 @@
             {{end}}
           </div>
 
-          <div class="m-t-sm">
-            {{ with .Params.link }}
-                <a href="{{ . }}" class="btn bg-accent" target="_blank">Register Here</a>
-            {{end}}
-          </div>
-
           {{ else }}
 
           <div class="row middle-xs">
@@ -59,7 +53,7 @@
 
             <div class="detail"><span class="p-h-xs"></span>{{ $published }}</div>
 
-            {{ if ne $published $updated }}
+            {{ if and (ne $published $updated) (eq .Section "blog")}}
               <div class="detail pull-right"><span class="p-h-xs"></span>Updated: {{ $updated }}</div>
             {{end}}
           </div>
@@ -69,11 +63,6 @@
         {{ with .Params.title }}
           <h1 class="m-t-0">{{ . }}</h1>
         {{end}}
-
-        {{ with .Params.description }}
-          <p class="p-t-sm">{{ . }}</p>
-        {{end}}
-
 
         <!--list tags-->
         {{ if eq .Section "events" }}
@@ -106,7 +95,19 @@
             {{end}}
           {{end}}
 
-          {{ .Content }}
+          {{ with .Content }}
+          {{ . }}
+          {{ else }}
+          <p class="p-t-sm">{{ .Description }}</p>
+          {{ end }}
+
+          {{ if eq .Section "events" }}
+          <div class="m-t-sm">
+            {{ with .Params.link }}
+                <a href="{{ . }}" class="btn bg-accent" target="_blank">Register Here</a>
+            {{end}}
+          </div>
+          {{ end }}
 
           {{ if eq .Section "careers" }}
             <p><a class="btn bg-link" href="mailto:jobs@rancher.com?subject={{ .Title }}">Apply Now</a></p>
