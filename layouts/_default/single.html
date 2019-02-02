@@ -53,7 +53,7 @@
 
             <div class="detail"><span class="p-h-xs"></span>{{ $published }}</div>
 
-            {{ if ne $published $updated }}
+            {{ if and (ne $published $updated) (eq .Section "blog")}}
               <div class="detail pull-right"><span class="p-h-xs"></span>Updated: {{ $updated }}</div>
             {{end}}
           </div>
