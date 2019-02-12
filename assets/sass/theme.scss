@@ -1,64 +1,65 @@
 // 1. Configuration and helpers
 @import
-'rancher-website-theme/static/scss/abstracts/variables',
-'rancher-website-theme/static/scss/abstracts/functions',
-'rancher-website-theme/static/scss/abstracts/mixins';
+'abstracts/variables',
+'abstracts/functions',
+'abstracts/mixins';
 
 // 2. Vendors
 @import
-'rancher-website-theme/static/scss/vendor/normalize',
-'rancher-website-theme/static/scss/vendor/loryslider',
-'rancher-website-theme/static/scss/vendor/flexboxgrid';
+'vendor/normalize',
+'vendor/loryslider',
+'vendor/flexboxgrid';
 
 
 // 3. Base stuff
 @import
-'rancher-website-theme/static/scss/base/base',
-'rancher-website-theme/static/scss/base/fonts',
-'rancher-website-theme/static/scss/base/typography',
-'rancher-website-theme/static/scss/base/colors',
-'rancher-website-theme/static/scss/base/helpers';
+'base/base',
+'base/fonts',
+'base/typography',
+'base/colors',
+'base/helpers';
 
 // 4. Layout-related sections
 @import
-'rancher-website-theme/static/scss/layout/grid',
-'rancher-website-theme/static/scss/layout/header',
-'rancher-website-theme/static/scss/layout/footer',
-'rancher-website-theme/static/scss/layout/sidebar',
-'rancher-website-theme/static/scss/layout/page-content',
-'rancher-website-theme/static/scss/layout/extra-small',
-'rancher-website-theme/static/scss/layout/small',
-'rancher-website-theme/static/scss/layout/medium',
-'rancher-website-theme/static/scss/layout/large';
+'layout/grid',
+'layout/header',
+'layout/footer',
+'layout/sidebar',
+'layout/page-content',
+'layout/extra-small',
+'layout/small',
+'layout/medium',
+'layout/large';
 
 // 5. Components
 @import
-'rancher-website-theme/static/scss/components/breadcrumbs',
-'rancher-website-theme/static/scss/components/button',
-'rancher-website-theme/static/scss/components/dropdown',
-'rancher-website-theme/static/scss/components/forms',
-'rancher-website-theme/static/scss/components/tree',
-'rancher-website-theme/static/scss/components/tabs',
-'rancher-website-theme/static/scss/components/tags',
-'rancher-website-theme/static/scss/components/search';
+'components/breadcrumbs',
+'components/button',
+'components/dropdown',
+'components/forms',
+'components/tree',
+'components/tabs',
+'components/tags',
+'components/search';
 
 // 6. Page-specific styles
 @import
-'rancher-website-theme/static/scss/pages/home',
-'rancher-website-theme/static/scss/pages/404',
-'rancher-website-theme/static/scss/pages/lists-single',
-'rancher-website-theme/static/scss/pages/about',
-'rancher-website-theme/static/scss/pages/careers',
-'rancher-website-theme/static/scss/pages/news',
-'rancher-website-theme/static/scss/pages/partners',
-'rancher-website-theme/static/scss/pages/testimonials',
-'rancher-website-theme/static/scss/pages/customers',
-'rancher-website-theme/static/scss/pages/rodeos',
-'rancher-website-theme/static/scss/pages/brand-guidelines';
+'pages/home',
+'pages/404',
+'pages/lists-single',
+'pages/about',
+'pages/careers',
+'pages/news',
+'pages/partners',
+'pages/testimonials',
+'pages/customers',
+'pages/rodeos',
+'pages/training',
+'pages/brand-guidelines';
 
 // 7 break points
 @import
-'rancher-website-theme/static/scss/layout/extra-small',
-'rancher-website-theme/static/scss/layout/small',
-'rancher-website-theme/static/scss/layout/medium',
-'rancher-website-theme/static/scss/layout/large';
+'layout/extra-small',
+'layout/small',
+'layout/medium',
+'layout/large';
