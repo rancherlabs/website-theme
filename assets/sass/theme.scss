@@ -1,0 +1,65 @@
+// 1. Configuration and helpers
+@import
+'abstracts/variables',
+'abstracts/functions',
+'abstracts/mixins';
+
+// 2. Vendors
+@import
+'vendor/normalize',
+'vendor/loryslider',
+'vendor/flexboxgrid';
+
+
+// 3. Base stuff
+@import
+'base/base',
+'base/fonts',
+'base/typography',
+'base/colors',
+'base/helpers';
+
+// 4. Layout-related sections
+@import
+'layout/grid',
+'layout/header',
+'layout/footer',
+'layout/sidebar',
+'layout/page-content',
+'layout/extra-small',
+'layout/small',
+'layout/medium',
+'layout/large';
+
+// 5. Components
+@import
+'components/breadcrumbs',
+'components/button',
+'components/dropdown',
+'components/forms',
+'components/tree',
+'components/tabs',
+'components/tags',
+'components/search';
+
+// 6. Page-specific styles
+@import
+'pages/home',
+'pages/404',
+'pages/lists-single',
+'pages/about',
+'pages/careers',
+'pages/news',
+'pages/partners',
+'pages/testimonials',
+'pages/customers',
+'pages/rodeos',
+'pages/training',
+'pages/brand-guidelines';
+
+// 7 break points
+@import
+'layout/extra-small',
+'layout/small',
+'layout/medium',
+'layout/large';
