@@ -48,13 +48,13 @@
               {{end}}
             {{end}}
 
-            {{ $published := .Date.Format "January 2, 2006" }}
-            {{ $updated := .Lastmod.Format "January 2, 2006" }}
+            {{ $published := time (.Date.Format "2006-01-02") }}
+            {{ $updated := time (.Lastmod.Format "2006-01-02") }}
 
-            <div class="detail"><span class="p-h-xs"></span>{{ $published }}</div>
+            <div class="detail"><span class="p-h-xs"></span>{{ $published.Format "January 2, 2006" }}</div>
 
-            {{ if and (ne $published $updated) (eq .Section "blog")}}
-              <div class="detail pull-right"><span class="p-h-xs"></span>Updated: {{ $updated }}</div>
+            {{ if and ( $updated.After $published) (eq .Section "blog")}}
+              <div class="detail pull-right"><span class="p-h-xs"></span>Updated: {{ $updated.Format "January 2, 2006" }}</div>
             {{end}}
           </div>
         {{end}}
