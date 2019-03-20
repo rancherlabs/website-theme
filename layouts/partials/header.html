@@ -29,21 +29,45 @@
     </div>
 
     <ul>
-      {{ $currentPage := . }} {{ range .Site.Menus.main }} {{ if .HasChildren }}
-      <li class="dropdown sub-menu {{ if $currentPage.HasMenuCurrent " main " . }}active{{ end }}">
-        <a href="{{ .URL }}">{{ .Name }} {{ .Pre }}</a>
-        <ul class="sub dropdown-menu">
-          {{ range .Children }}
-          <li class="{{ if $currentPage.IsMenuCurrent " main " . }}active{{ end }}">
+      {{ $currentPage := . }}
+      {{ range .Site.Menus.main }}
+        {{ if .HasChildren }}
+          <li class="dropdown sub-menu {{ if $currentPage.HasMenuCurrent " main " . }}active{{ end }}">
             <a href="{{ .URL }}">{{ .Name }} {{ .Pre }}</a>
-            {{ end }}
-        </ul>
-        {{else}}
-        <li class="">
-          <a href="{{.URL}}">{{ .Name }} {{ .Pre }}</a>
-        </li>
+            <ul class="sub dropdown-menu">
+              {{ range .Children }}
+              <li class="{{ if $currentPage.IsMenuCurrent " main " . }}active{{ end }}">
+                <a href="{{ .URL }}">{{ .Name }} {{ .Pre }}</a>
+                {{ end }}
+            </ul>
+          </li>
+        {{else if .URL }}
+          <li class="">
+            <a href="{{.URL}}">{{ .Name }} {{ .Pre }}</a>
+          </li>
         {{end}}
       {{end}}
+
+      <li class="only-small dropdown sub-menu">
+        <a>More</a>
+        <ul class="sub dropdown-menu">
+          <li>
+            <a class="modal-open" data-launch-id="pricing">Pricing</a>
+          </li>
+          <li>
+            <a href="https://info.rancher.com/rancher-kubernetes-online-training" target="_blank" rel="noopener">Training</a></li>
+          </li>
+          <li>
+            <a href="/quick-start">Deploy</a></li>
+          </li>
+          <li>
+            <a class="modal-open" data-launch-id="support">Support</a>
+          </li>
+          <li>
+            <a class="modal-open" data-launch-id="demo">Request a Demo</a>
+          </li>
+        </ul>
+      </li>
     </ul>
 
     <div class="toggle-search inline-block">
@@ -79,6 +103,8 @@
           </div>
         </div>
       </li>
+
+      <li><a href="https://info.rancher.com/rancher-kubernetes-online-training" class="btn" target="_blank" rel="noopener">Training</a></li>
 
       <li><a href="/quick-start" class="btn">Deploy</a></li>
 
@@ -127,14 +153,7 @@
       </li>
     </ul>
   </nav>
-
-
-
 </header>
-
-
-
-
 
 <div class="modal-content" id="open-search">
   <div class="content search-modal">

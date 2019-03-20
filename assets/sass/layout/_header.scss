@@ -109,6 +109,10 @@ nav[role="navigation"] li a {
   }
 }
 
+.only-small {
+  display: none;
+}
+
 
 //small screens
 @media all and (max-width: map-get($breakpoints, medium)) {
@@ -120,6 +124,10 @@ nav[role="navigation"] li a {
         position: relative;
       }
     }
+  }
+
+  .only-small {
+    display: block;
   }
 
   .secondary-nav {
