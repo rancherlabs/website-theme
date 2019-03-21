@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html class="" lang="en-US" prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb#">
+{{ partial "head.html" . }}
+
+{{- $.Scratch.Set "topLevel" . -}}
+{{ range $page := $.Site.Sections }}
+  {{- if $.CurrentSection -}}
+    {{- if $page.IsAncestor $.CurrentSection -}}
+      {{- $.Scratch.Set "topLevel" . -}}
+    {{- end -}}
+  {{- end -}}
+{{- end -}}
+
+<body lang="en" class="{{ replaceRE "/.*" "" ($.Scratch.Get "topLevel").Dir }}">
+  <a name="top"></a>
+
+  <!-- {{ partial "mobile-nav.html" . }} -->
+<div class="main"> <!--container ends in footer html-->
+  <!-- {{ partial "main-nav.html" . }} -->
+
+
+<!--nav-->
+<header>
+
+  <nav id="menu" role="navigation" class="main-nav sticky-header">
+    <!--branding-->
+    <div class="nav-logo">
+      <a href="/"><img src="/img/rancher-logo-horiz-white.svg" width="150" height="22" alt="rancher logo"></a>
+    </div>
+
+    <ul>
+      {{ $currentPage := . }} {{ range .Site.Menus.main }} {{ if .HasChildren }}
+      <li class="dropdown sub-menu {{ if $currentPage.HasMenuCurrent " main " . }}active{{ end }}">
+        <a href="{{ .URL }}">{{ .Name }} {{ .Pre }}</a>
+        <ul class="sub dropdown-menu">
+          {{ range .Children }}
+          <li class="{{ if $currentPage.IsMenuCurrent " main " . }}active{{ end }}">
+            <a href="{{ .URL }}">{{ .Name }} {{ .Pre }}</a>
+            {{ end }}
+        </ul>
+        {{else}}
+        <li class="">
+          <a href="{{.URL}}">{{ .Name }} {{ .Pre }}</a>
+        </li>
+        {{end}}
+      {{end}}
+    </ul>
+
+    <div class="toggle-search inline-block">
+      <!--search-->
+      <button class="search-open text-white" data-launch-id="open-search"><i class="material-icons">search</i></button>
+
+      <!--toggle-->
+      <a href="#menu" class="menu-link">
+        <span></span>
+      </a>
+    </div>
+
+  </nav>
+
+  <nav>
+    <ul class="secondary-nav row middle-xs end-xs">
+      <li>
+        <button class="modal-open btn" data-launch-id="pricing">Pricing</button>
+        <div class="modal-content" id="pricing">
+          <div class="content">
+            <h3>Request Pricing</h3>
+            <hr/>
+            <div class="rnchr-hbspt-form">
+              <script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/v2.js"></script>
+              <script>
+                hbspt.forms.create({
+                  css: '',
+                  portalId: '468859',
+                  formId: 'bf52b40f-ddc4-4bbb-8464-59067b55565b'
+                });
+              </script>
+            </div>
+          </div>
+        </div>
+      </li>
+
+      <li><a href="/quick-start" class="btn">Deploy</a></li>
+
+      <li>
+        <button class="modal-open btn" data-launch-id="support">Support</button>
+        <div class="modal-content" id="support">
+          <div class="content">
+            <h3>Get Support</h3>
+            <hr/>
+            <div class="rnchr-hbspt-form">
+              <script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/v2.js"></script>
+              <script>
+                hbspt.forms.create({
+                  css: '',
+                  portalId: '468859',
+                  formId: '237d641d-a939-4f18-bb35-4c870bd85597'
+                });
+              </script>
+            </div>
+          </div>
+        </div>
+      </li>
+
+      <li>
+        <button class="modal-open btn border-btn p-a-xs" data-launch-id="demo">Request a Demo</button>
+        <div class="modal-content" id="demo">
+          <div class="content">
+            <h3>Request a Demo</h3>
+            <hr/>
+            <div class="rnchr-hbspt-form">
+              <!--[if lte IE 8]>
+              <script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/v2-legacy.js"></script>
+              <![endif]-->
+              <script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/v2.js"></script>
+              <script>
+                hbspt.forms.create({
+                portalId: "468859",
+                formId: "e0ee1553-4dd6-47bf-b078-ed09dfa5040a",
+                css: "",
+                sfdcCampaignId: "7010a000002uLIGAA2"
+              });
+              </script>
+            </div>
+          </div>
+        </div>
+      </li>
+    </ul>
+  </nav>
+
+
+
+</header>
+
+
+
+
+
+<div class="modal-content" id="open-search">
+  <div class="content search-modal">
+    <!--search input-->
+    <div class="container-search">
+      <form id="searchForm"><input type="search" id="search-box" autocomplete="off"></input></form>
+    </div>
+
+    <!--search results-->
+    <div class="overlay-search">
+      <div class="search-results" id="hits"></div>
+    </div>
+  </div>
+</div>

@@ -36,33 +36,223 @@
  * Spacers
  */
 @for $i from 0 through 3 {
-  $spacers: map-merge($spacers, (
-    $i: (
-      x: $spacer-x * $i,
-      y: $spacer-y * $i
+  $spacers: map-merge(
+    $spacers,
+    (
+      $i: (
+        x: $spacer-x * $i,
+        y: $spacer-y * $i
+      )
     )
-  )) 
+  );
 }
 
 @each $prop, $abbrev in (margin: m, padding: p) {
   @each $size, $lengths in $spacers {
-    $length-x:   map-get($lengths, x);
-    $length-y:   map-get($lengths, y);
+    $length-x: map-get($lengths, x);
+    $length-y: map-get($lengths, y);
 
-    .#{$abbrev}-a-#{$size} { #{$prop}:        $length-y $length-x !important; } // a = All sides
-    .#{$abbrev}-t-#{$size} { #{$prop}-top:    $length-y !important; }
-    .#{$abbrev}-r-#{$size} { #{$prop}-right:  $length-x !important; }
-    .#{$abbrev}-b-#{$size} { #{$prop}-bottom: $length-y !important; }
-    .#{$abbrev}-l-#{$size} { #{$prop}-left:   $length-x !important; }
+    .#{$abbrev}-a-#{$size} {
+      #{$prop}: $length-y $length-x !important;
+    } // a = All sides
+    .#{$abbrev}-t-#{$size} {
+      #{$prop}-top: $length-y !important;
+    }
+    .#{$abbrev}-r-#{$size} {
+      #{$prop}-right: $length-x !important;
+    }
+    .#{$abbrev}-b-#{$size} {
+      #{$prop}-bottom: $length-y !important;
+    }
+    .#{$abbrev}-l-#{$size} {
+      #{$prop}-left: $length-x !important;
+    }
 
     // Axes
     .#{$abbrev}-x-#{$size} {
-      #{$prop}-right:  $length-x !important;
-      #{$prop}-left:   $length-x !important;
+      #{$prop}-right: $length-x !important;
+      #{$prop}-left: $length-x !important;
     }
     .#{$abbrev}-y-#{$size} {
-      #{$prop}-top:    $length-y !important;
+      #{$prop}-top: $length-y !important;
       #{$prop}-bottom: $length-y !important;
     }
   }
+}
+
+//TODO: NEW
+$browser-context: 16;
+
+@mixin calCol($split) {
+  width: (100%- (2.3 * ($split - 1))) / $split;
+}
+@mixin calColMultiply($split, $multiply) {
+  width: (100%- (2.3 * ($split - 1))) / $split * $multiply;
+}
+@mixin calColPer($percent) {
+  width: 100% * $percent;
+  // width: (100%-(2.3*2))*$percent;
+}
+
+@mixin borderBox() {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  box-sizing: border-box;
+}
+@mixin borderRadius($radius) {
+  -webkit-border-radius: $radius;
+  -moz-border-radius: $radius;
+  -ms-border-radius: $radius;
+  -o-border-radius: $radius;
+  border-radius: $radius;
+}
+
+@mixin tPosition($x, $y, $important) {
+  @if $important == "y" {
+    position: absolute $important;
+
+    top: $y $important;
+    left: $x $important;
+
+    -webkit-transform: translate(-$x, -$y) $important;
+    transform: translate(-$x, -$y) $important;
+  } @else {
+    position: absolute;
+
+    top: $y;
+    left: $x;
+
+    -webkit-transform: translate(-$x, -$y);
+    transform: translate(-$x, -$y);
+  }
+}
+@mixin setPadding($t_b, $r_l) {
+  padding-top: $t_b;
+  padding-right: $r_l;
+  padding-bottom: $t_b;
+  padding-left: $r_l;
+}
+@mixin setMargin($t_b, $r_l) {
+  margin-top: $t_b;
+  margin-right: $r_l;
+  margin-bottom: $t_b;
+  margin-left: $r_l;
+}
+
+@mixin textElipsis($line, $lineHeight) {
+  display: -webkit-box;
+
+  width: 100%;
+  max-height: $line * $lineHeight * 1em;
+
+  line-height: $lineHeight;
+  text-overflow: ellipsis;
+  overflow: hidden;
+
+  -webkit-line-clamp: $line;
+  -webkit-box-orient: vertical;
+}
+
+@mixin clearFix() {
+  overflow: auto;
+  zoom: 1;
+}
+@mixin gradient($side, $from, $to) {
+  background: -ms-linear-gradient($side, rgba($from, 0) 0%, $to 100%);
+  background: linear-gradient(to $side, rgba($from, 0) 0%, $to 100%);
+}
+@mixin gradientDeg($direction, $color-stops...) {
+  // Direction has been omitted and happens to be a color-stop
+  @if is-direction($direction) == false {
+    $color-stops: $direction, $color-stops;
+    $direction: 180deg;
+  }
+
+  background: nth(nth($color-stops, 1), 1);
+  background: -webkit-linear-gradient(
+    legacy-direction($direction),
+    $color-stops
+  );
+  background: linear-gradient($direction, $color-stops);
+}
+@function legacy-direction($value) {
+  @if is-direction($value) == false {
+    @error "Cannot convert `#{$value}` to legacy syntax because it doesn't seem to be a direction.";
+  }
+
+  $conversion-map: (
+    to top: bottom,
+    to top right: bottom left,
+    to right top: left bottom,
+    to right: left,
+    to bottom right: top left,
+    to right bottom: left top,
+    to bottom: top,
+    to bottom left: top right,
+    to left bottom: right top,
+    to left: right,
+    to left top: right bottom,
+    to top left: bottom right
+  );
+
+  @if map-has-key($conversion-map, $value) {
+    @return map-get($conversion-map, $value);
+  }
+
+  @return 90deg - $value;
+}
+
+// convert to em, px
+@function em($pixels, $context: $browser-context) {
+  @if (unitless($pixels)) {
+    $pixels: $pixels * 1px;
+  }
+
+  @if (unitless($context)) {
+    $context: $context * 1px;
+  }
+
+  @return $pixels / $context * 1em;
+}
+
+// transform.
+@mixin transform($transform...) {
+  -webkit-transform: $transform;
+  -moz-transform: $transform;
+  -o-transform: $transform;
+  transform: $transform;
+}
+
+// transition.
+@mixin transition($transition...) {
+  -webkit-transition: $transition;
+  -moz-transition: $transition;
+  -o-transition: $transition;
+  transition: $transition;
+}
+@mixin transition-property($property...) {
+  -webkit-transition-property: $property;
+  -moz-transition-property: $property;
+  -o-transition-property: $property;
+  transition-property: $property;
+}
+@mixin transition-duration($duration...) {
+  -webkit-transition-property: $duration;
+  -moz-transition-property: $duration;
+  -o-transition-property: $duration;
+  transition-property: $duration;
+}
+@mixin transition-timing-function($timing...) {
+  -webkit-transition-timing-function: $timing;
+  -moz-transition-timing-function: $timing;
+  -o-transition-timing-function: $timing;
+  transition-timing-function: $timing;
+}
+@mixin transition-delay($delay...) {
+  -webkit-transition-delay: $delay;
+  -moz-transition-delay: $delay;
+  -o-transition-delay: $delay;
+  transition-delay: $delay;
 }

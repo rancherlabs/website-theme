@@ -1,0 +1,119 @@
+.twitter-box-container {
+  position: relative;
+
+  .tweet-item {
+    position: relative;
+
+    margin-bottom: 50px;
+
+    @media (max-width: 575.98px) {
+      margin-bottom: 25px;
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  .tweet-item:nth-child(2n+2) {
+    .user-infor {
+
+      .user-name,
+      .user-id {
+        text-align: right !important;
+      }
+    }
+  }
+
+  .tweet-text {
+    position: relative;
+
+    padding: 20px;
+
+    color: $c-gray;
+    font-size: 15px;
+    line-height: 1.665;
+
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 25px 25px 75px rgba($c-blue, .1);
+
+    @media (max-width: 575.98px) {
+      padding: 15px;
+
+      font-size: 12px;
+    }
+
+    &:after {
+      content: '';
+      position: absolute;
+
+      top: 100%;
+      left: 20px;
+
+      width: 0px;
+      height: 0px;
+
+      border-left: 7px solid transparent;
+      border-right: 7px solid transparent;
+      border-top: 7px solid #fff;
+
+      @media (max-width: 575.98px) {
+        top: calc(100% - 1px);
+
+        border-left: 5px solid transparent;
+        border-right: 5px solid transparent;
+        border-top: 5px solid #fff;
+      }
+    }
+  }
+
+  .tweet-user {
+    margin-top: 25px;
+
+    @media (max-width: 575.98px) {
+      margin-top: 20px;
+    }
+
+    .user-infor {
+      padding: 0;
+
+      .user-name {
+        font-size: 18px;
+
+        @media (max-width: 575.98px) {
+          font-size: 12px;
+        }
+      }
+
+      .user-id {
+        margin-top: 10px;
+
+        color: $c-green;
+        font-family: 'Poppins';
+        font-size: 12px;
+        font-weight: 700;
+        letter-spacing: .75px;
+
+        @media (max-width: 575.98px) {
+          margin-top: 5px;
+        }
+      }
+    }
+
+    .user-photo {
+      line-height: 0;
+
+      .photo {
+        position: relative;
+
+        width: 100%;
+        max-width: 75px;
+        height: auto;
+
+        background-color: $c-green;
+        border-radius: 50%;
+      }
+    }
+  }
+}

@@ -1,0 +1,60 @@
+{{ define "hero" }}
+<section class="hero-type2">
+    <div class="grid-container">
+        <div class="row set-ground">
+            <div class="col-xl-6 offset-xl-6">
+                <div class="decoration-container">
+                    <div class="kubernetes-rise">
+                        <img src="/imgs/why-kubernetes/logo-kubernetes.png">
+                    </div>
+                    <img class="ground-lower" src="/imgs/why-kubernetes/screen1-background-ground-lower.svg">
+                    <img class="ground-upper" src="/imgs/why-kubernetes/screen1-background-ground-upper.svg">
+                    <img class="cloud floating" src="/imgs/icon-cloud-white.svg">
+                </div>
+            </div>
+        </div>
+
+        <div class="row max-sized">
+            <div class="col-xl-7 texts-container">
+                <div class="texts-wrap">
+                    {{ with .Title }}
+                    <h1 class="title-label">
+                        {{ . }}
+                    </h1>
+                    {{end}}
+
+                    {{ with .Params.description }}
+                    <h4 class="description-label">
+                        {{ . }}
+                    </h4>
+                    {{end}}
+
+                    {{ with .Params.descriptionLower }}
+                    <h4 class="description-label bold">
+                        {{ . }}
+                    </h4>
+                    {{end}}
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{{ end }}
+
+{{ define "main" }}
+  <!--cta banner-->
+  {{ if and (.Params.ctaBanner) }}
+    {{ with index .Site.Data.cta .Params.ctaBanner }}
+      <div class="wrapper">
+        <div class="cta-banner row center-xs middle-xs bg-info shadow rounded-corners">
+          <h3 class="m-v-sm m-r-sm text-white">{{ .header }}</h3>
+          <a href="{{ .link }}" target="_blank" class="btn border-btn">{{ .button }}</a>
+        </div>
+      </div>
+    {{end}}
+  {{end}}
+
+  {{ .Content }}
+{{ end }}
+
+

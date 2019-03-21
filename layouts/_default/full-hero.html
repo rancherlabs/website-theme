@@ -1,0 +1,47 @@
+{{ define "hero" }}
+    <section class="hero-type1">
+        <div class="grid-container">
+            <div class="row">
+                <div class="col-xl-12 texts-container">
+                    <div class="decoration cloud-big">
+                        <img class="image" src="/imgs/decoration-cloud-big-white.svg">
+                    </div>
+
+                    <div class="texts-wrap">
+                        {{ with .Title }}
+                            <h1 class="title-label">{{ . }}</h1>
+                        {{end}}
+
+                        {{ with .Params.description }}
+                        <h4 class="description-label">
+                            {{ . }}
+                        </h4>
+                        {{end}}
+                    </div>
+
+                    <div class="decoration rancher-ground">
+                        <img class="ground" src="/imgs/decoration-rancher-ground.svg">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+{{ end }}
+
+{{ define "main" }}
+  <!--cta banner-->
+  {{ if and (.Params.ctaBanner) }}
+    {{ with index .Site.Data.cta .Params.ctaBanner }}
+      <div class="wrapper">
+        <div class="cta-banner row center-xs middle-xs bg-info shadow rounded-corners">
+          <h3 class="m-v-sm m-r-sm text-white">{{ .header }}</h3>
+          <a href="{{ .link }}" target="_blank" class="btn border-btn">{{ .button }}</a>
+        </div>
+      </div>
+    {{end}}
+  {{end}}
+
+  {{ .Content }}
+{{ end }}
+
+

@@ -1,0 +1,167 @@
+.hero-type1 {
+  background-color: $c-gray-base-light;
+
+  .decoration {
+    position: relative;
+
+    width: 100%;
+
+    margin-top: -40px;
+
+    line-height: 0;
+
+    &.cloud-big {
+      min-height: 130px;
+
+      background-color: #fff;
+
+      .image {
+        left: 50%;
+
+        max-width: 1162px;
+
+        margin-top: 8%;
+        margin-bottom: -114px;
+
+        @include transform(translateX(-50%));
+      }
+    }
+
+    &.rancher-ground {
+      .ground {
+        width: 100%;
+        height: auto;
+      }
+    }
+  }
+
+  .texts-container {
+    line-height: 0;
+
+    .texts-wrap {
+      z-index: 1;
+
+      max-width: 1010px;
+
+      margin-top: 150px;
+      margin-right: auto;
+      margin-left: auto;
+
+      .title-label {
+        color: #000;
+        font-size: 50px;
+        font-weight: 200;
+        text-align: center;
+      }
+
+      .description-label {
+        color: #000;
+        line-height: 1.4;
+        text-align: center;
+      }
+    }
+  }
+}
+
+.hero-type2 {
+  background-color: $c-gray-base-light;
+
+  .set-ground {
+    // position: absolute;
+
+    // top: 0;
+    // right: 0;
+    // bottom: 0;
+    // left: 0;
+
+    margin: 0;
+
+    .decoration-container {
+
+      >div,
+      >img {
+        position: absolute;
+      }
+
+      .ground-upper {
+        right: 0;
+        bottom: 0;
+
+        width: 60%;
+        height: auto;
+      }
+
+      .ground-lower {
+        bottom: 0;
+        left: -10%;
+
+        width: 90%;
+        height: auto;
+      }
+
+      .kubernetes-rise {
+        overflow: hidden;
+
+        right: 25%;
+        bottom: 10%;
+
+        width: 320px;
+        height: 320px;
+
+        background-color: #fff;
+        border-radius: 50%;
+        box-shadow: 20px 25px 50px rgba($c-blue-dark1, .15);
+
+        img {
+          position: absolute;
+
+          top: 50%;
+          left: 50%;
+
+          width: 70%;
+          height: auto;
+
+          @include transform(translate(-50%, -50%));
+        }
+      }
+
+      .cloud {
+        top: 120px;
+
+        width: 100%;
+        max-width: 270px;
+        height: auto;
+      }
+    }
+  }
+
+  .texts-container {
+    padding-top: 200px;
+    padding-left: 0;
+    padding-bottom: 180px;
+
+    line-height: 0;
+
+    .texts-wrap {
+      .title-label {
+        margin-bottom: 30px;
+
+        color: #000;
+        font-size: 50px;
+        font-weight: 200;
+      }
+
+      .description-label {
+        margin-top: 0;
+        margin-bottom: 30px;
+
+        color: #000;
+        line-height: 1.4;
+
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+}

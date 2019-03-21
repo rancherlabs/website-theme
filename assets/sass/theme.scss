@@ -1,65 +1,44 @@
 // 1. Configuration and helpers
-@import
-'abstracts/variables',
-'abstracts/functions',
-'abstracts/mixins';
+@import "abstracts/variables", "abstracts/functions", "abstracts/mixins";
+
+@import "variable/variable";
+@import "variable/color";
 
 // 2. Vendors
-@import
-'vendor/normalize',
-'vendor/loryslider',
-'vendor/flexboxgrid';
-
+@import "vendor/normalize", "vendor/loryslider", "vendor/flexboxgrid";
 
 // 3. Base stuff
-@import
-'base/base',
-'base/fonts',
-'base/typography',
-'base/colors',
-'base/helpers';
+@import "base/base", "base/fonts", "base/typography", "base/colors",
+"base/helpers";
+
+@import "base/animations";
 
 // 4. Layout-related sections
-@import
-'layout/grid',
-'layout/header',
-'layout/footer',
-'layout/sidebar',
-'layout/page-content',
-'layout/extra-small',
-'layout/small',
-'layout/medium',
-'layout/large';
+@import "layout/grid", "layout/header", "layout/footer", "layout/sidebar",
+"layout/page-content", "layout/extra-small", "layout/small", "layout/medium",
+"layout/large";
+
+@import "vendor/grid";
+@import "vendor/slick";
+@import "layout/general";
 
 // 5. Components
-@import
-'components/breadcrumbs',
-'components/button',
-'components/dropdown',
-'components/forms',
-'components/tree',
-'components/tabs',
-'components/tags',
-'components/search';
+@import "components/breadcrumbs", "components/button", "components/dropdown",
+"components/forms", "components/tree", "components/tabs", "components/tags",
+"components/search";
+
+@import "components/general";
+@import "components/tweet-box";
 
 // 6. Page-specific styles
-@import
-'pages/home',
-'pages/404',
-'pages/lists-single',
-'pages/about',
-'pages/careers',
-'pages/news',
-'pages/partners',
-'pages/testimonials',
-'pages/customers',
-'pages/rodeos',
-'pages/training',
-'pages/brand-guidelines';
+@import "pages/common";
+@import "pages/hero";
+@import "pages/index";
+@import "pages/why-rancher";
+
+@import "pages/home", "pages/404", "pages/lists-single", "pages/about",
+"pages/careers", "pages/news", "pages/partners", "pages/testimonials",
+"pages/customers", "pages/rodeos", "pages/training", "pages/brand-guidelines";
 
 // 7 break points
-@import
-'layout/extra-small',
-'layout/small',
-'layout/medium',
-'layout/large';
+@import "layout/extra-small", "layout/small", "layout/medium", "layout/large";
