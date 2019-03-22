@@ -14,7 +14,8 @@ span {
 }
 
 // default label.
-label {
+label,
+.label {
   position: relative;
   display: block;
 
@@ -42,6 +43,10 @@ label {
 
       &.emerald {
         color: $c-emerald;
+      }
+
+      &.black {
+        color: $c-gray;
       }
     }
   }
@@ -304,6 +309,30 @@ button {
             background-color: rgba($c-green, 0.35);
           }
         }
+      }
+
+      &.with-icon .icon {
+        margin-left: 0;
+      }
+      &.with-icon span {
+        font-size: 12px;
+        font-weight: 800;
+        font-weight: 900;
+        line-height: 0;
+        letter-spacing: 1.5px;
+        text-transform: uppercase;
+      }
+      &.with-icon span:before {
+        display: none;
+      }
+      &.with-icon.c-green .icon .svg-face {
+        fill: $c-green;
+      }
+      &.with-icon.c-green .icon.round {
+        border-color: $c-green;
+      }
+      &.with-icon.c-green span {
+        color: $c-green;
       }
     }
 

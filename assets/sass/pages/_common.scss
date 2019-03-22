@@ -109,6 +109,25 @@
     background-color: #fff;
   }
 }
+.background-white-side-right {
+  position: relative;
+
+  &:before {
+    z-index: 1;
+    content: "";
+    position: absolute;
+
+    top: 0;
+    left: 100%;
+
+    width: 50%;
+    height: 100%;
+
+    // margin-right: -1px;
+
+    background-color: #fff;
+  }
+}
 
 .background-base-gray-light {
   background-color: $c-gray-base-light;
