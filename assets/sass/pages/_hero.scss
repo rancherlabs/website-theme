@@ -165,3 +165,190 @@
     }
   }
 }
+
+.hero-type3 {
+
+  background-color: $c-gray-base-light;
+
+  .decoration {
+    position: relative;
+
+    width: 100%;
+
+    line-height: 0;
+
+    &.cloud-big {
+      min-height: 130px;
+
+      background-color: #fff;
+
+      .image {
+        position: absolute;
+
+        top: 100%;
+        left: 50%;
+
+        max-width: 1162px;
+
+        margin-top: -17px;
+
+        @include transform(translateX(-50%));
+      }
+    }
+  }
+
+  .texts-container {
+    line-height: 0;
+
+    .texts-wrap {
+      z-index: 1;
+
+      margin-top: 75px;
+      margin-bottom: 150px;
+
+      .title-label {
+        margin-bottom: 35px;
+        color: #000;
+        font-size: 50px;
+        font-weight: 200;
+      }
+
+      .description-label {
+        color: #000;
+        line-height: 1.4;
+      }
+    }
+  }
+
+  .lower-container {
+    height: 150px;
+
+    margin-top: -150px;
+
+    line-height: 0;
+
+    .decoration {
+      position: relative;
+
+      height: 100%;
+
+      &.ground {
+        .ground-lower {
+          position: relative;
+
+          width: auto;
+          height: 75px;
+
+          margin-top: 75px;
+          margin-left: 30%;
+        }
+
+        .ground-upper {
+          position: absolute;
+
+          bottom: 0;
+          left: 46.5%;
+
+          width: auto;
+          height: 130px;
+        }
+      }
+    }
+  }
+
+}
+
+.hero-type4 {
+  background-color: $c-gray-base-light;
+
+  .set-ground {
+    // position: absolute;
+
+    // top: 0;
+    // right: 0;
+    // bottom: 0;
+    // left: 0;
+
+    margin: 0;
+
+  }
+
+  .decoration-container {
+
+    >div,
+    >img {
+      position: absolute;
+    }
+
+  }
+
+  .ground-upper {
+    right: 0;
+    bottom: 0;
+
+    width: 60%;
+    height: auto;
+  }
+
+  .ground-lower {
+    bottom: 0;
+    left: -10%;
+
+    width: 90%;
+    height: auto;
+  }
+
+  .rancher-rise {
+    overflow: hidden;
+
+    right: 25%;
+    bottom: 10%;
+
+    width: 320px;
+    height: 320px;
+
+    background-color: #fff;
+    border-radius: 50%;
+    box-shadow: 20px 25px 50px rgba($c-blue-dark1, .15);
+
+    img {
+      position: absolute;
+
+      top: 50%;
+      left: 50%;
+
+      width: 60%;
+      height: auto;
+
+      @include transform(translate(-50%, -50%));
+    }
+  }
+
+  .cloud {
+    top: 120px;
+
+    width: 100%;
+    max-width: 270px;
+    height: auto;
+  }
+
+  .texts-container {
+    padding-top: 280px;
+    padding-left: 0;
+    padding-bottom: 180px;
+
+    line-height: 0;
+
+  }
+
+  .title-label {
+    color: #000;
+    font-size: 50px;
+    font-weight: 200;
+  }
+
+  .description-label {
+    color: #000;
+    line-height: 1.4;
+  }
+}

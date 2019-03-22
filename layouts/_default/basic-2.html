@@ -1,0 +1,48 @@
+{{ define "hero" }}
+        <section class="hero-type3">
+            <div class="grid-container">
+                <div class="row">
+                    <div class="col-xl-12 upper-container">
+                        <div class="decoration cloud-big">
+                            <img class="image" src="/imgs/decoration-cloud-big-white-products.svg">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row max-sized">
+                    <div class="col-xl-7 texts-container">
+                        <div class="texts-wrap">
+                            {{ with .Title }}
+                            <h1 class="title-label">
+                            {{ . }}
+                            </h1>
+                            {{ end }}
+
+                            {{ with .Params.description }}
+                            <h4 class="description-label">
+                            {{ . }}
+                            </h4>
+                            {{ end }}
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-xl-12 lower-container">
+                        <div class="decoration ground">
+                            <img class="ground-lower" src="/imgs/products/screen1-background-ground-lower.svg">
+                            <img class="ground-upper" src="/imgs/products/screen1-background-ground-upper.svg">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+{{ end }}
+
+{{ define "main" }}
+
+
+  {{ .Content }}
+{{ end }}
+
+

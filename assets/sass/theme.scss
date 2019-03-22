@@ -14,18 +14,12 @@
 @import "base/animations";
 
 // 4. Layout-related sections
-@import "layout/grid", "layout/header", "layout/footer", "layout/sidebar",
-"layout/page-content", "layout/extra-small", "layout/small", "layout/medium",
-"layout/large";
+@import "layout/grid", "layout/header", "layout/footer";
 
 @import "vendor/grid";
 @import "vendor/slick";
 @import "layout/general";
 
-// 5. Components
-@import "components/breadcrumbs", "components/button", "components/dropdown",
-"components/forms", "components/tree", "components/tabs", "components/tags",
-"components/search";
 
 @import "components/general";
 @import "components/tweet-box";
@@ -35,10 +29,6 @@
 @import "pages/hero";
 @import "pages/index";
 @import "pages/why-rancher";
-
-@import "pages/home", "pages/404", "pages/lists-single", "pages/about",
-"pages/careers", "pages/news", "pages/partners", "pages/testimonials",
-"pages/customers", "pages/rodeos", "pages/training", "pages/brand-guidelines";
-
-// 7 break points
-@import "layout/extra-small", "layout/small", "layout/medium", "layout/large";
+@import "pages/why-kubernetes";
+@import "pages/rancheros";
+@import "pages/rancher-difference";

@@ -1,0 +1,51 @@
+.why-kubernetes {
+  &-screen2 {
+    .set-ground {
+      z-indeX: -1;
+    }
+
+    .contents-container {
+      padding-top: 150px;
+
+      .contents-wrap {
+        background-color: $c-blue-dark1;
+      }
+
+
+      .texts-container {
+        padding-top: 100px;
+        padding-bottom: 100px;
+
+        .texts-wrap {
+          .title-label {
+            margin-bottom: 30px;
+
+            color: #fff;
+          }
+
+          .description-label {
+            color: rgba(#fff, .75);
+
+            &:last-child {
+              margin-bottom: 0;
+            }
+          }
+        }
+      }
+
+      .buttons-container {
+        .button {
+          width: 100%;
+          max-width: 100%;
+
+          color: #fff;
+
+          background-color: $c-blue;
+          box-shadow: 12px 25px 50px rgba($c-blue-dark3, .075);
+        }
+      }
+    }
+  }
+
+  &-screen3 {}
+}

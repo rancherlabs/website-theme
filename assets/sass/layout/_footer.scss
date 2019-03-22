@@ -2,8 +2,6 @@
 // This file contains all styles related to the footer of the site/application.
 // -----------------------------------------------------------------------------
 
-@charset 'UTF-8';
-
 // default footer.
 .footer-container {
   position: relative;
@@ -58,6 +56,12 @@
     }
   }
 
+  @media (max-width: 575.98px) {
+    .hs_email {
+      width: 100%;
+    }
+  }
+
   .hbspt-form form .input,
   .hbspt-form .hs-form-field .input {
     width: 100% !important;
@@ -85,7 +89,7 @@
     box-sizing: border-box;
 
     @media (max-width: 575.98px) {
-      max-width: calc(100% - 46px);
+      max-width: 100%;
       height: 46px;
 
       padding: 0 15px;
@@ -143,10 +147,7 @@
       @include transition(all 0.04s);
 
       @media (max-width: 575.98px) {
-        width: 62%;
-        height: auto;
-
-        margin: 19%;
+        transform: translate3d(-2px, -2px, 0);
       }
 
       .svg-linear {

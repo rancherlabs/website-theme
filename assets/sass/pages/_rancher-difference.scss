@@ -1,0 +1,256 @@
+.rancher-difference {
+  &-screen2 {
+    .anchor-dot-container {
+      padding-left: 0;
+
+    }
+
+    .selectable-list-container {
+      margin-top: -5px;
+
+    }
+
+    .button {
+      min-width: 0;
+      height: 40px;
+
+      background-color: transparent;
+      box-shadow: none;
+
+      color: transparent;
+      text-align: left;
+
+      &:before {
+        content: '';
+        position: absolute;
+
+        left: -2px;
+        top: 17px;
+
+        width: 5px;
+        height: 5px;
+
+        background-color: transparent;
+
+        border-radius: 50%;
+
+        @include transition(all .25s);
+      }
+
+      &:after {
+        content: '';
+        position: absolute;
+
+        left: -2px;
+        top: 17px;
+
+        width: 5px;
+        height: 5px;
+
+        background-color: $c-gray-mid-light;
+        border-radius: 50%;
+
+        @include borderBox();
+        @include transition(all .25s);
+      }
+
+      span {
+        line-height: 1.4;
+      }
+
+      &:hover {
+        color: $c-gray-mid-light;
+
+        &:before {
+          top: 7px;
+          left: -12px;
+
+          width: 25px;
+          height: 25px;
+
+          background-color: $c-gray-base-light;
+        }
+      }
+    }
+
+    .active {
+      .button {
+        color: $c-green;
+
+        &:after {
+          left: -6px;
+          top: 13px;
+
+          width: 13px;
+          height: 13px;
+
+          background-color: #fff;
+          border: 2px solid $c-green;
+        }
+      }
+    }
+
+
+    .article-container {
+      padding-top: 150px;
+
+      &:first-child {
+        padding-top: 200px;
+      }
+
+      &:last-child {
+        padding-bottom: 200px;
+      }
+
+    }
+
+    .title-label {
+      margin-bottom: 20px;
+    }
+
+    .description-label {
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+
+    .article-item-detail {
+      margin-top: 40px;
+      margin-left: 0;
+
+      .detail-container {
+        flex: 0 0 59.34%;
+
+        max-width: 59.34%;
+
+        padding: 70px 77px;
+
+        background-color: $c-gray-base-light;
+
+        p {
+          &:last-child {
+            margin-bottom: 0;
+          }
+        }
+      }
+
+      .image-container {
+        flex: 0 0 40.66%;
+
+        max-width: 40.66%;
+
+        background-color: $c-gray-mid-light;
+      }
+    }
+
+    .cards-container {
+      position: relative;
+
+      margin-top: 40px;
+      margin-right: -30px;
+      padding: 0;
+
+      @media (max-width: 1279px) {
+        padding-right: 30px;
+        padding-left: 30px;
+      }
+
+      @media (max-width: 575.98px) {
+        z-index: 1;
+
+        margin-top: 35px;
+        padding-right: $mobile-side-space;
+        padding-left: $mobile-side-space;
+
+        >.row {
+          >.col-6 {
+            margin-bottom: 20px;
+            padding-right: 8px;
+            padding-left: 8px;
+          }
+        }
+      }
+
+    }
+
+    .card-container {
+      position: relative;
+
+      height: 100%;
+
+      margin-top: 0;
+      margin-bottom: 0;
+      padding: 25px 0;
+
+      background-color: #fff;
+      border-radius: 10px;
+      box-shadow: 15px 25px 75px rgba($c-blue, .1);
+
+      text-align: center;
+
+      @include transition(margin .25s);
+
+      &:first-child {
+        margin-left: 1px;
+      }
+
+      &:last-child {
+        margin-right: 1px;
+      }
+
+      .image-container {
+        position: relative;
+        display: inline-block;
+        overflow: hidden;
+
+        width: 80%;
+        max-width: 175px;
+
+        margin-top: 35px;
+        margin-right: auto;
+        margin-left: auto;
+
+        background-color: $c-blue-gray;
+        border-radius: 50%;
+
+        img {
+          position: relative;
+          display: inline-block;
+
+          width: 100%;
+          height: auto;
+        }
+      }
+
+      .text-container {
+        padding: 25px 25px;
+
+        text-align: center;
+
+        @media (max-width: 575.98px) {
+          // padding: 35px 5px 30px;
+        }
+
+        .description-label {
+          margin: 0;
+          padding: 0;
+
+          color: $c-gray;
+          font-family: 'Poppins';
+          font-weight: 300;
+
+          cursor: default;
+
+          @media (max-width: 1279px) {
+            font-size: 1em;
+          }
+
+          @media (max-width: 575.98px) {
+            font-size: .8em;
+            font-weight: 500;
+          }
+        }
+      }
+    }
+  }
+}
