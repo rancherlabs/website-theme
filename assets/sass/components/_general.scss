@@ -310,6 +310,20 @@ button {
           }
         }
       }
+      &.c-emerald {
+        span {
+          color: $c-emerald;
+
+          &:before {
+            background-color: rgba($c-emerald, 0.1);
+          }
+        }
+        &:hover {
+          span:before {
+            background-color: rgba($c-emerald, 0.35);
+          }
+        }
+      }
 
       &.with-icon .icon {
         margin-left: 0;
@@ -334,6 +348,10 @@ button {
       &.with-icon.c-green span {
         color: $c-green;
       }
+    }
+
+    &.has-icon-right {
+      padding-right: 120px;
     }
 
     &.none {
