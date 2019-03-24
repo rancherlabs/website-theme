@@ -1,0 +1,222 @@
+.products-request-a-demo-cta-screen1 {
+    background-color: $c-gray-base-light;
+
+    .decoration {
+        position: relative;
+
+        width: 100%;
+
+        line-height: 0;
+    }
+
+    .texts-container {
+        padding-right: 0;
+        padding-left: 0;
+
+        line-height: 0;
+
+        .texts-wrap {
+            z-index: 1;
+
+            margin-top: 270px;
+            margin-bottom: 350px;
+
+            .title-label {
+                margin-bottom: 35px;
+                color: #000;
+                font-size: 50px;
+                font-weight: 200;
+            }
+            
+            .description-label {
+                color: #000;
+                font-size: 25px;
+                font-weight: 100;
+                line-height: 1.4;
+            }
+        }
+    }
+}
+
+.products-request-a-demo-cta-screen2 {
+    .contents-container {
+        padding-bottom: 200px;
+    }
+
+    .form-container {
+        margin-top: -690px;
+        padding-right: 0;
+        padding-left: 0;
+    }
+    .form-wrap {
+        padding: 90px 76px;
+
+        background-color: $c-blue-dark1;
+
+        .title-label {
+            margin-bottom: 15px;
+
+            color: #fff;
+            font-size: 25px;
+            font-weight: 400;
+        }
+
+        .description-label {
+            color: #fff;
+
+            margin-bottom: 40px;
+        }
+
+        .form-wrap {
+            margin-top: 50px;
+        }
+        .form-item {
+            position: relative;
+            display: inline-block;
+
+            width: 100%;
+            margin-bottom: 20px;
+
+            label {
+                z-index: 1;
+                position: absolute;
+                display: inline-block;
+
+                top: 50%;
+                left: 20px;
+
+                margin-bottom: 0;
+                padding-left: 0;
+
+                line-height: 50px;
+
+                color: $c-blue-gray;
+                font-size: 15px;
+                font-family: 'Roboto';
+                font-weight: 300;
+                text-transform: initial;
+                letter-spacing: 0;
+
+                @include transform(translateY(-50%));
+            }
+            &.required {
+                label:after {
+                    content: '*';
+                    position: relative;
+                    display: inline-block;
+                }
+            }
+
+            .input {
+                position: relative;
+                display: inline-block;
+
+                width: 100%;
+                height: 50px;
+
+                padding: 10px 30px;
+
+                color: $c-blue-dark1;
+                font-size: 15px;
+                line-height: 1;
+
+                background-color: $c-gray-base-light;
+                border-radius: 0;
+                border: 0;
+            }
+
+            .select-box {
+                position: relative;
+                display: inline-block;
+
+                width: 100%;
+                height: 50px;
+
+                padding: 0 30px;
+
+                color: $c-blue;
+                font-size: 15px;
+                line-height: 50px;
+
+                background-color: $c-gray-base-light;
+                border-radius: 0;
+                border: 0;
+
+                .icon {
+                    position: absolute;
+                    display: inline-block;
+
+                    top: 50%;
+                    right: 20px;
+
+                    width: 12px;
+                    height: auto;
+
+                    @include transform(translateY(-50%));
+                }
+                .svg-linear {
+                    fill: none;
+                    stroke: $c-blue;
+                }
+            }
+        }
+
+        .buttons-container {
+            margin-top: 30px;
+
+            text-align: left;
+
+            .button {
+                min-width: 175px;
+            }
+        }
+    }
+
+    .browser-container {
+        padding-right: 0;
+        padding-left: 0;
+
+        .browser-item {
+            margin-top: -270px;
+
+            width: 122.5%;
+        }
+    }
+}
+
+.products-request-a-demo-cta-screen3 {
+    .contents-container {
+        padding-bottom: 60px;
+    }
+
+    .texts-container {
+        color: $c-blue-dark1;
+        text-align: center;
+    }
+
+    .logos-container {
+        padding-top: 70px;
+        padding-right: 0;
+        padding-bottom: 120px;
+        padding-left: 0;
+    }
+
+    .logo-container {
+        margin: 40px 0;
+        padding: 0;
+    }
+
+    .logo-item {
+        line-height: 0;
+        text-align: center;
+
+        img {
+            position: relative;
+            display: inline-block;
+
+            width: 100%;
+            max-width: 180px;
+            height: auto;
+        }
+    }
+}

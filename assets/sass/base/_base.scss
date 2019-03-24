@@ -98,6 +98,21 @@ a {
         background-color: rgba($c-blue, 0.2);
       }
     }
+
+    &.normal {
+      font-weight: normal;
+    }
+
+    &.c-emerald {
+      color: $c-emerald;
+
+      span:before {
+        background-color: rgba($c-emerald, 0.1);
+      }
+      &:hover span:before {
+        background-color: rgba($c-emerald, 0.2);
+      }
+    }
   }
 
   &.disabled,
