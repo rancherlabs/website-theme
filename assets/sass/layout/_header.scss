@@ -110,7 +110,7 @@ nav[role="navigation"] li a {
 }
 
 .only-small {
-  display: none;
+  display: none !important;
 }
 
 
@@ -127,7 +127,7 @@ nav[role="navigation"] li a {
   }
 
   .only-small {
-    display: block;
+    display: block !important;
   }
 
   .secondary-nav {
