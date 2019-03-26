@@ -64,6 +64,7 @@ p {
   @media (max-width: 1279px) {
     font-size: 1.15em;
   }
+
   @media (max-width: 575.98px) {
     font-size: 1.05em;
     line-height: 1.5;
@@ -92,9 +93,11 @@ p {
     font-size: 15px;
   }
 }
+
 .italic {
   font-style: italic;
 }
+
 .capitalize {
   text-transform: capitalize;
 }
@@ -110,6 +113,7 @@ input {
 
   -webkit-appearance: none;
 }
+
 input {
   &::-webkit-input-placeholder {
     color: $c-blue-gray;
@@ -228,8 +232,7 @@ button {
 
       background-color: $c-blue;
 
-      &:hover {
-      }
+      &:hover {}
     }
 
     &.linear {
@@ -287,6 +290,7 @@ button {
           @include transition(all 0.25s);
         }
       }
+
       &:hover {
         span:before {
           bottom: -3px;
@@ -296,6 +300,7 @@ button {
           background-color: rgba($c-blue, 0.2);
         }
       }
+
       &.c-green {
         span {
           color: $c-green;
@@ -304,12 +309,14 @@ button {
             background-color: rgba($c-green, 0.1);
           }
         }
+
         &:hover {
           span:before {
             background-color: rgba($c-green, 0.35);
           }
         }
       }
+
       &.c-emerald {
         span {
           color: $c-emerald;
@@ -318,6 +325,7 @@ button {
             background-color: rgba($c-emerald, 0.1);
           }
         }
+
         &:hover {
           span:before {
             background-color: rgba($c-emerald, 0.35);
@@ -328,6 +336,7 @@ button {
       &.with-icon .icon {
         margin-left: 0;
       }
+
       &.with-icon span {
         font-size: 12px;
         font-weight: 800;
@@ -336,15 +345,19 @@ button {
         letter-spacing: 1.5px;
         text-transform: uppercase;
       }
+
       &.with-icon span:before {
         display: none;
       }
+
       &.with-icon.c-green .icon .svg-face {
         fill: $c-green;
       }
+
       &.with-icon.c-green .icon.round {
         border-color: $c-green;
       }
+
       &.with-icon.c-green span {
         color: $c-green;
       }
@@ -426,6 +439,7 @@ button {
 
         @include transition(all 0.25s);
       }
+
       .svg-linear {
         fill: none;
         stroke: $c-blue;
@@ -436,16 +450,19 @@ button {
         @include transition(all 0.25s);
       }
     }
+
     &.c-white,
     &.c-green,
     &.c-blue {
       .svg-face {
         fill: #fff;
       }
+
       .svg-linear {
         stroke: #fff;
       }
     }
+
     &:hover {
       .icon {
         &.right {
@@ -467,6 +484,7 @@ button {
 
           @include transition(all 0.25s);
         }
+
         .svg-linear {
           stroke: #fff;
         }
@@ -509,6 +527,10 @@ button {
     background-color: $c-blue-dark1;
   }
 
+  &.theme-white {
+    background-color: white;
+  }
+
   .rancher-logo {
     padding: 50px 0;
 
@@ -543,7 +565,7 @@ button {
     @media (max-width: 575.98px) {
       padding: 40px 0 10px;
 
-      > .grid-container > .row {
+      >.grid-container>.row {
         margin-right: 0;
         margin-left: 0;
       }
@@ -563,6 +585,7 @@ button {
     }
   }
 }
+
 .get-started-wrap {
   .title-label {
     vertical-align: middle;
@@ -640,7 +663,7 @@ button {
       line-height: 0;
     }
 
-    > div {
+    >div {
       position: relative;
       display: inline-block;
 
@@ -659,9 +682,11 @@ button {
       &.closer {
         background-color: #fff;
       }
+
       &.minimizer {
         background-color: $c-blue;
       }
+
       &.fullscreen {
         background-color: $c-blue-dark1;
       }
