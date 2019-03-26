@@ -566,6 +566,7 @@
     }
 
     .events-container {
+        margin-top: 75px;
         padding-right: 0;
         padding-left: 0;
     }
@@ -599,12 +600,12 @@
 
             .title-label {
                 margin-top: 0;
-                margin-bottom: 5px;
+                margin-bottom: 10px;
 
                 color: $c-blue-dark1;
                 font-size: 22px;
                 font-family: 'Poppins';
-                font-weight: 400;
+                font-weight: 500;
             }
 
             .description-label {
@@ -625,10 +626,85 @@
     .event-item {
         margin-top: 25px;
     }
+    .event-item-wrap {
+        padding: 35px 35px 30px;
+
+        color: #fff;
+
+        background-color: $c-gray;
+        border-radius: 10px;
+
+        .label {
+            margin-bottom: 25px;
+
+            line-height: 1;
+        }
+
+        .title-label {
+            min-height: 2.91em;
+
+            margin-top: 0;
+            margin-bottom: 0;
+
+            font-family: 'Poppins';
+            font-size: 22px;
+            font-weight: 400;
+            line-height: 1.455;
+
+            @include textElipsis(2, 1.455);
+        }
+
+        hr {
+            width: 90px;
+
+            margin: 1.75em 0;
+
+            border: 0px none rgba(#fff, .25);
+            border-top: 1px solid rgba(#fff, .25);
+        }
+
+        .date-label,
+        .location-label {
+            margin-top: 12px;
+
+            font-size: 12px;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+
+            line-height: 1;
+
+            .icon {
+                position: relative;
+                display: inline-block;
+
+                width: 15px;
+                height: 15px;
+
+                margin-right: 10px;
+                margin-bottom: -3px;
+            }
+        }
+    }
+    .rodeos {
+        .event-item-wrap {
+            background-color: $c-blue;
+        }
+    }
+    .online-training {
+        .event-item-wrap {
+            background-color: $c-gray;
+        }
+    }
+    .online-meetups {
+        .event-item-wrap {
+            background-color: $c-blue-dark1;
+        }
+    }
 
     .buttons-container {
-        padding-top: 60px;
-        padding-bottom: 100px;
+        margin-top: 75px;
+        margin-bottom: 100px;
 
         text-align: center;
 
@@ -637,6 +713,111 @@
             display: inline-block;
 
             max-width: 310px;
+        }
+    }
+}
+
+.community-screen6 {
+    .texts-container {
+        padding-top: 200px;
+        padding-bottom: 250px;
+        padding-left: 0;
+
+        .texts-wrap {
+            width: 80%;
+
+            .title-label {
+                margin-bottom: 0;
+            }
+
+            .buttons-container {
+                margin-top: 50px;
+            }
+        }
+    }
+
+    .features-container {
+        padding-top: 200px;
+        padding-right: 0;
+        padding-bottom: 200px;
+        padding-left: 0;
+    }
+    .features-wrap {
+        margin-top: 50px;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+
+        .label {
+            color: $c-gray;
+        }
+    }
+    .feature-list {}
+    .feature-list-wrap {}
+    .feature-list-item {
+        position: relative;
+        display: flex;
+
+        flex-wrap: nowrap;
+
+        margin-bottom: 70px;
+
+        .title-label {
+            position: relative;
+            display: inline-block;
+
+            flex: 1;
+
+            color: $c-blue;
+
+            font-size: 22px;
+            line-height: 1.455
+        }
+
+        .button-container {
+            position: relative;
+            display: flex;
+
+            flex: 0 0 160px;
+
+            justify-content: center;
+            align-content: center;
+
+            max-width: 160px;
+
+            margin-left: 15px;
+
+            text-align: center;
+
+            .icon {
+                position: relative;
+                display: inline-block;
+                vertical-align: middle;
+
+                flex: 1;
+
+                width: 20px;
+                height: auto;
+                margin-right: 5px;
+            }
+
+            span {
+                position: relative;
+                display: inline-block;
+                vertical-align: middle;
+
+                flex: 1;
+
+                color: $c-blue;
+                font-size: 12px;
+                font-family: 'Poppins';
+                font-weight: bold;
+                letter-spacing: 1px;
+                text-transform: uppercase;
+
+                line-height: 20px;
+            }
         }
     }
 }
