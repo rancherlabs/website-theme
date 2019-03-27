@@ -474,10 +474,12 @@ button {
         stroke: #fff;
       }
     }
+
     &.c-sky-blue {
       .svg-face {
         fill: $c-sky-blue;
       }
+
       .svg-linear {
         stroke: $c-sky-blue;
       }
@@ -547,8 +549,8 @@ button {
     background-color: $c-blue-dark1;
   }
 
-  &.theme-white {
-    background-color: white;
+  &.theme-grey {
+    background-color: $c-gray-base-light;
   }
 
   .rancher-logo {
