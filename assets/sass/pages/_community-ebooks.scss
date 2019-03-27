@@ -1,0 +1,250 @@
+.community-ebooks-screen1 {
+    background-color: $c-gray-base-light;
+
+    .decoration {
+        position: relative;
+
+        width: 100%;
+
+        line-height: 0;
+    }
+
+    .texts-container {
+        padding-right: 0;
+        padding-left: 0;
+
+        line-height: 0;
+
+        .texts-wrap {
+            z-index: 1;
+
+            margin-top: 165px;
+            margin-bottom: 80px;
+
+            .title-label {
+                margin-bottom: 20px;
+
+                color: #000;
+                font-size: 50px;
+                font-weight: 200;
+            }
+            
+            .description-label {
+                color: #000;
+                line-height: 1.4;
+            }
+        }
+    }
+
+    .lower-container {
+        height: 120px;
+
+        margin-top: -120px;
+
+        line-height: 0;
+
+        .decoration {
+            position: relative;
+
+            height: 100%;
+
+            &.ground {
+                .ground-lower {
+                    position: relative;
+                    
+                    width: auto;
+                    height: 75px;
+
+                    margin-top: 45px;
+                    margin-left: 60%;
+                }
+
+                .ground-upper {
+                    position: absolute;
+
+                    bottom: 0;
+                    left: 77%;
+
+                    width: auto;
+                    height: 130px;
+                }
+            }
+        }
+    }
+}
+
+.community-ebooks-screen2,
+.community-ebooks-screen4 {
+    .texts-container {
+        padding-top: 150px;
+        padding-bottom: 100px;
+
+        text-align: center;
+
+        .title-label {
+            color: $c-blue-dark1;
+        }
+
+        .description-label {
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+    }
+
+    .ebook-list-container {
+        padding-top: 100px;
+    }
+    .ebook-list-wrap {
+        padding-right: 0;
+        padding-left: 0;
+    }
+    .ebook-item {
+        position: relative;
+        display: flex;
+
+        flex-wrap: wrap;
+
+        margin-bottom: 100px;
+
+        .thumbnail-container {
+            position: relative;
+            display: inline-block;
+            overflow: hidden;
+
+            flex: 1;
+
+            max-width: 125px;
+            margin-right: 20px;
+
+            background-color: #b9b9b9;
+            border-radius: 10px;
+
+            line-height: 0;
+
+            .thumbnail {
+                position: relative;
+                display: inline-block;
+
+                width: 100%;
+                height: auto;
+            }
+        }
+
+        .information-container {
+            position: relative;
+            display: inline-block;
+
+            flex: 1;
+
+            .title-label {
+                margin-top: -5px;
+                margin-bottom: 0;
+
+                font-size: 20px;
+                font-weight: 400;
+                line-height: 1.5;
+            }
+
+            .description-label {
+                min-height: 3.33em;
+
+                margin-top: 10px;
+                margin-bottom: 50px;
+
+                line-height: 1.665;
+
+                @include textElipsis(2, 1.665);
+            }
+
+            .button-container {
+                span {
+                    font-size: 18px;
+                }
+            }
+        }
+    }
+
+    .buttons-container {
+        width: 100%;
+
+        margin-bottom: 250px;
+
+        text-align: center;
+
+        .button {
+            min-width: 210px;
+
+            box-shadow: 12px 25px 50px rgba($c-blue-dark1, .15);
+        }
+    }
+}
+
+.floating-sign-up-form {
+    z-index: 2;
+    position: relative;
+
+    margin-top: -100px;
+    margin-bottom: -100px;
+}
+.sign-up-form-container {
+    height: 200px;
+
+    background-color: $c-blue;
+    border-radius: 10px;
+
+    .title-label {
+        margin-bottom: 0;
+
+        color: #fff;
+        font-family: 'Poppins';
+        font-size: 30px;
+        font-weight: 300;
+        line-height: 1.3333;
+    }
+
+    .form-container {
+        position: relative;
+        display: flex;
+
+        flex-wrap: nowrap;
+
+        .input {
+            position: relative;
+
+            flex: 1;
+
+            height: 50px;
+
+            margin: 0;
+            padding: 0 20px; 
+
+            border: 0;
+        }
+
+        .button {
+            position: relative;
+
+            flex: 1;
+
+            max-width: 154px;
+            height: 50px;
+
+            margin: 0;
+            padding-right: 20px;
+            padding-left: 20px;
+
+            text-align: left;
+
+            .icon {
+                &.right {
+                    right: 10px;
+                }
+
+                .svg-linear {
+                    stroke-width: 1.25px;
+                }
+            }
+        }
+    }
+}
