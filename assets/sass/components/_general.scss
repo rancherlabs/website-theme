@@ -235,6 +235,18 @@ button {
       &:hover {}
     }
 
+    &.c-sky-blue {
+      color: $c-sky-blue;
+
+      background-color: rgba($c-sky-blue, .1);
+
+      &:hover {
+        color: #fff;
+
+        background-color: rgba($c-sky-blue, .25);
+      }
+    }
+
     &.linear {
       color: $c-green;
 
@@ -460,6 +472,14 @@ button {
 
       .svg-linear {
         stroke: #fff;
+      }
+    }
+    &.c-sky-blue {
+      .svg-face {
+        fill: $c-sky-blue;
+      }
+      .svg-linear {
+        stroke: $c-sky-blue;
       }
     }
 

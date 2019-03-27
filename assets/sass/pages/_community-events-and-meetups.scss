@@ -1,0 +1,753 @@
+.community-events-and-meetups-screen1 {
+    background-color: $c-gray-base-light;
+
+    .decoration {
+        // position: relative;
+
+        // width: 100%;
+
+        // line-height: 0;
+    }
+
+    .texts-container {
+        padding-right: 0;
+        padding-left: 0;
+
+        line-height: 0;
+
+        .texts-wrap {
+            z-index: 1;
+
+            margin-top: 250px;
+            margin-bottom: 190px;
+
+            .title-label {
+                margin-bottom: 20px;
+
+                color: #000;
+                font-size: 50px;
+                font-weight: 200;
+            }
+            
+            .description-label {
+                color: #000;
+                line-height: 1.4;
+            }
+        }
+    }
+
+    .lower-container {
+        height: 120px;
+
+        margin-top: -120px;
+
+        line-height: 0;
+
+        .decoration {
+            position: relative;
+
+            height: 100%;
+
+            &.ground {
+                .ground-lower {
+                    position: relative;
+                    
+                    width: auto;
+                    height: 75px;
+
+                    margin-top: 45px;
+                    margin-left: 60%;
+                }
+
+                .ground-upper {
+                    position: absolute;
+
+                    bottom: 0;
+                    left: 77%;
+
+                    width: auto;
+                    height: 130px;
+                }
+            }
+        }
+    }
+}
+
+.community-events-and-meetups-screen2 {
+    .texts-container {
+        padding-right: 0;
+        padding-left: 0;
+    }
+    .texts-wrap {
+        padding-top: 150px;
+        padding-bottom: 150px;
+
+        .title-label {
+            color: #fff;
+        }
+
+        .description-label {
+            color: #fff;
+        }
+    }
+
+    .event-items-container {
+        padding-left: 8.6666%;
+
+        .event-item {
+            margin-bottom: 70px;
+
+            &:first-child {
+                margin-top: 150px;
+            }
+        }
+    }
+
+    .event-item {
+        position: relative;
+        display: flex;
+
+        flex-wrap: nowrap;
+
+        align-content: flex-start;
+        justify-content: flex-start;
+
+        .thumbnail-container {
+            position: relative;
+            display: inline-block;
+
+            flex: 1;
+
+            max-width: 180px;
+
+            margin-right: 30px;
+
+            .thumbnail {
+                position: relative;
+                display: inline-block;
+
+                width: 100%;
+                height: auto;
+            }
+        }
+
+        .information-container {
+            position: relative;
+            display: inline-block;
+
+            flex: 1;
+        }
+
+        .title-label {
+            margin-bottom: 0;
+
+            color: #fff;
+            font-weight: 400;
+            font-size: 25px;
+            line-height: 1.2;
+        }
+
+        .date-label,
+        .location-label {
+            position: relative;
+
+            margin-top: 20px;
+            padding-left: 25px;
+
+            color: $c-green;
+            font-size: 12px;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+
+            line-height: 1.2;
+
+            .icon {
+                position: absolute;
+                display: inline-block;
+
+                left: 0;
+
+                width: 15px;
+                height: 15px;
+
+                margin-right: 10px;
+            }
+        }
+
+        hr {
+            width: 100%;
+
+            margin: 1.5em 0;
+
+            border: 0px none rgba(#fff, .25);
+            border-top: 1px solid rgba(#fff, .25);
+        }
+
+        .description-label {
+            color: #fff;
+        }
+    }
+
+    .buttons-container {
+        margin-bottom: 150px;
+
+        .button {
+            max-width: 310px;
+        }
+    }
+}
+
+.community-events-and-meetups-screen3 {
+    .texts-container {
+        padding-top: 150px;
+        padding-bottom: 40px;
+
+        text-align: center;
+
+        .title-label {
+            color: $c-blue-dark1;
+        }
+    }
+
+    .cards-container {
+        padding-right: 0;
+        padding-bottom: 150px;
+        padding-left: 0;
+    }
+    .cards-wrap {
+        justify-content: center;
+    }
+    .card-container {
+        margin-bottom: 30px;
+    }
+    .card-item {
+        overflow: hidden;
+
+        background-color: $c-gray;
+
+        border-radius: 1em;
+
+        .thumbnail-wrap {
+            position: relative;
+            display: inline-block;
+
+            width: 100%;
+            height: auto;
+
+            line-height: 0;
+
+            &:after {
+                position: absolute;
+
+                bottom: 0;
+                width: 100%;
+                height: 1px;
+
+                background-color: rgba(#fff, .1);
+            }
+
+            .thumbnail {
+                position: relative;
+                display: inline-block;
+
+                width: 100%;
+                height: auto;
+            }
+        }
+
+        .texts-wrap {
+            padding: 40px 35px 50px;
+        }
+
+        .text-label {
+            position: relative;
+
+            margin-bottom: 0;
+
+            color: #fff;
+            font-family: 'Poppins';
+            font-size: 22px;
+            font-weight: 400;
+            line-height: 1.455;
+
+            @include textElipsis(1, 1.455);
+        }
+
+        hr {
+            width: 90px;
+
+            margin: 1.5em 0;
+
+            border: 0px none rgba(#fff, .25);
+            border-top: 1px solid rgba(#fff, .25);
+        }
+
+        .date-label {
+            color: $c-green;
+            font-size: 12px;
+            font-weight: 800;
+            letter-spacing: 1px;
+
+            .icon {
+                position: relative;
+                display: inline-block;
+                vertical-align: middle;
+
+                width: 15px;
+                height: 15px;
+
+                margin-top: -4px;
+                margin-right: 10px;
+            }
+        }
+
+        .buttons-container {
+            margin-top: 15px;
+        }
+    }
+}
+
+.community-events-and-meetups-screen4 {
+    .head-label {
+        padding-left: 0;
+
+        line-height: 100px;
+
+        .label {
+            margin-bottom: 0;
+        }
+    }
+
+    .contents-container {
+        padding-top: 100px;
+        padding-bottom: 100px;
+    }
+
+    .texts-container {
+        padding-left: 0;
+
+        .title-label {
+            color: $c-blue-dark1;
+        }
+
+        .description-label {
+            color: rgba($c-blue-dark1, .75);
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+
+        .buttons-container {
+            margin-top: 40px;
+
+            .button {
+                width: 210px;
+            }
+        }
+    }
+
+    .list-container {
+        > .buttons-container {
+            margin-top: 80px;
+            margin-bottom: 80px;
+
+            .button {
+                max-width: 310px;
+            }
+        }
+    }
+
+    .list-item {
+        margin-top: 40px;
+        padding-top: 40px;
+
+        border-top: 1px solid rgba($c-blue-dark1, .25);
+
+        &:first-child {
+            margin-top: 0;
+            padding-top: 0;
+
+            border-top: 0;
+        }
+
+        .title-label {
+            margin-top: 0;
+            margin-bottom: 0;
+
+            color: $c-blue-dark1;
+            font-size: 22px;
+            font-weight: 300;
+            line-height: 1.455;
+        }
+
+        .date-label {
+            margin-top: 15px;
+            margin-bottom: 15px;
+
+            color: $c-green;
+            font-size: 12px;
+            font-weight: 800;
+            letter-spacing: 1px;
+
+            .icon {
+                position: relative;
+                display: inline-block;
+                vertical-align: middle;
+
+                width: 15px;
+                height: 15px;
+
+                margin-top: -2px;
+                margin-right: 10px;
+            }
+        }
+
+        .buttons-container {
+            margin-top: 8px;
+        }
+    }
+}
+
+.community-events-and-meetups-screen5 {
+    .texts-container {
+        padding-top: 100px;
+        padding-bottom: 10px;
+
+        text-align: center;
+
+        .title-label {
+            margin-bottom: 0;
+        }
+
+        .description-label {
+            color: rgba($c-gray, .75);
+            font-weight: 300;
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+
+        .list-container {
+            margin-top: 50px;
+            padding-right: 8.6666%;
+            padding-left: 8.6666%;
+
+            text-align: left;
+        }
+        .list-wrap {}
+        .list-item {
+            margin-bottom: 40px;
+
+            .title-label {
+                color: $c-blue-dark1;
+                font-family: 'Poppins';
+                font-size: 22px;
+                font-weight: 300;
+                line-height: 1.455;
+            }
+
+            .date-label {
+                margin-bottom: 0;
+
+                color: $c-blue-gray;
+                font-size: 12px;
+                font-weight: 800;
+                text-transform: uppercase;
+            }
+        }
+
+        .buttons-container {
+            margin-top: 70px;
+            margin-bottom: 150px;
+
+            text-align: center;
+
+            .button {
+                max-width: 310px;
+            }
+        }
+    }
+
+    .contents-container.half.background-base-gray-side {
+        &:before,
+        &:after {
+            height: 150px;
+        }
+    }
+}
+
+.community-events-and-meetups-screen6 {
+    .head-label {
+        padding-left: 0;
+
+        line-height: 150px;
+
+        .label {
+            margin-bottom: 0;
+        }
+    }
+
+    .texts-container {
+        padding-right: 8.6666%;
+        padding-bottom: 90px;
+        padding-left: 40%;
+
+        border-right: 1px solid #fff;
+    }
+    .texts-wrap {
+        margin-top: -50px;
+
+        .title-label {
+            color: #fff;
+        }
+
+        .description-label {
+            color: rgba(#fff, .75);
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+    }
+
+    .slider-container {
+        padding-right: 15%;
+        padding-left: 0;
+
+        border-right: 1px solid #fff;
+
+        &:after {
+            z-index: 1;
+            content: "";
+            position: absolute;
+        
+            top: 0;
+            left: 100%;
+        
+            width: 50%;
+            height: 100%;
+        
+            // margin-right: -1px;
+        
+            background-color: #fff;
+          }
+    }
+    .slides-wrap {
+        .slick-list {
+            overflow: visible;
+        }
+    }
+    .slide-item {
+        margin-right: 30px;
+
+        .thumbnail-container {
+            position: relative;
+            display: inline-block;
+
+            width: 100%;
+            min-height: 250px;
+
+            margin-bottom: 30px;
+
+            background-color: $c-blue-gray;
+
+            line-height: 0;
+
+            .thumbnail {
+                position: relative;
+                display: inline-block;
+
+                width: 100%;
+                height: auto;
+            }
+        }
+
+        .information-container {
+            position: relative;
+            display: inline-block;
+        }
+
+        .title-label {
+            margin-bottom: 0;
+
+            color: #fff;
+            font-weight: 400;
+            font-size: 25px;
+            line-height: 1.2;
+        }
+
+        .date-label,
+        .location-label {
+            position: relative;
+
+            margin-top: 20px;
+            padding-left: 25px;
+
+            color: $c-green;
+            font-size: 12px;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+
+            line-height: 1.2;
+
+            .icon {
+                position: absolute;
+                display: inline-block;
+
+                left: 0;
+
+                width: 15px;
+                height: 15px;
+
+                margin-right: 10px;
+            }
+        }
+
+        hr {
+            width: 100%;
+
+            margin: 1.5em 0;
+
+            border: 0px none rgba(#fff, .25);
+            border-top: 1px solid rgba(#fff, .25);
+        }
+
+        .description-label {
+            color: #fff;
+        }
+    }
+
+    .slider-options {
+        margin-top: calc(90px + 75px);
+    }
+    .slider-pager {
+        position: absolute;
+        display: flex;
+        flex: 1;
+
+        justify-content: flex-end;
+
+        bottom: 0;
+        right: 0;
+
+        width: 100%;
+
+        @media (max-width: 575.98px) {
+            margin-top: 0;
+        }
+    }
+
+    .btn-prev,
+    .btn-next {
+        position: relative;
+        display: inline-block;
+        flex: 0 0 75px;
+
+        width: 75px;
+        max-width: 75px;
+        height: 75px;
+
+        cursor: pointer;
+
+        @include transition(background-color .25s);
+
+        @media (max-width: 575.98px) {
+            width: 45px;
+            height: 45px;
+        }
+
+        .icon {
+            width: 50%;
+
+            margin: 25%;
+        }
+
+        svg {
+            position: relative;
+
+            width: 50%;
+            height: auto;
+
+            margin: 25%;
+
+            .arw {
+                fill: none;
+                stroke: #fff;
+                stroke-linecap: round;
+                stroke-linejoin: round;
+                stroke-miterlimit: 10;
+
+                @include transition(stroke .25s);
+            }
+        }
+
+        &:hover,
+        &.active {
+            background-color: $c-green;
+
+            .arw {
+                stroke: #fff;
+            }
+        }
+    }
+}
+
+.community-events-and-meetups-screen7 {
+    .row.blank {
+        height: 150px;
+
+        &:last-child {
+            height: 250px;
+        }
+    }
+
+    .head-label {
+        .left {
+            padding: 0;
+
+            line-height: 150px;
+
+            label {
+            margin: 0;
+            }
+        }
+    }
+
+    .image-container {
+        position: relative;
+
+        padding-right: 0;
+        padding-left: 0;
+
+        .image {
+            position: absolute;
+
+            right: 0;
+
+            width: auto;
+            height: 100%;
+        }
+    }
+
+    .texts-container {
+        padding-right: 0;
+        padding-bottom: 150px;
+        padding-left: 100px;
+
+        .title-label {
+            margin-bottom: 20px;
+        }
+
+        .description-label {
+            margin-bottom: 15px;
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+    }
+}
