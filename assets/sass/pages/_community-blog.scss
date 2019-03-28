@@ -1,0 +1,119 @@
+.community-blog-main {
+    .article-item-container {
+        position: relative;
+        display: inline-block;
+    }
+    .article-item-wrap {
+        position: relative;
+        display: flex;
+
+        flex-wrap: wrap;
+
+        .thumbnail-container {
+            position: relative;
+            display: inline-block;
+
+            flex: 1;
+
+            max-width: 150px;
+
+            margin-right: 30px;
+        }
+
+        .detail-container {
+            position: relative;
+            display: inline-block;
+
+            flex: 1;
+
+            .title-label {
+                margin-bottom: 0;
+
+                color: $c-blue-dark1;
+                font-size: 18px;
+                font-weight: 400;
+                line-height: 1.665
+            }
+        }
+
+        .information-container {
+            .user-container {
+                position: relative;
+                display: flex;
+
+                justify-content: flex-start;
+                align-items: center;
+
+                .user-thumbnail {
+                    position: relative;
+                    display: inline-block;
+                    overflow: hidden;
+
+                    width: 32px;
+                    height: 32px;
+
+                    background-color: #777;
+                    border-radius: 50%;
+                }
+                .thumbnail {
+                    position: absolute;
+                    display: inline-block;
+
+                    top: 50%;
+                    left: 50%;
+
+                    width: 120%;
+                    height: auto;
+
+                    @include transform(translate(-50%, -50%));
+                }
+
+                .name-label {
+                    color: $c-blue-gray;
+                    font-size: 12px;
+                    font-weight: 800;
+                    letter-spacing: 1px;
+                    text-transform: uppercase;
+                }
+
+                .date-label {
+                    color: $c-blue-gray;
+                    font-size: 12px;
+                    font-weight: 800;
+                    letter-spacing: 1px;
+                    text-transform: uppercase;
+                }
+
+                .read-time-label {
+                    color: $c-blue-gray;
+                    font-size: 12px;
+                    font-weight: 800;
+                    letter-spacing: 1px;
+                    text-transform: uppercase;
+                }
+
+                .description-label {
+                    color: $c-blue-dark1;
+                    text-transform: uppercase;
+                }
+
+                .category-label {
+                    position: relative;
+                    display: flex;
+
+                    flex-wrap: wrap;
+
+                    justify-content: flex-start;
+                    align-content: flex-start;
+                }
+                .category-item {
+                    color: $c-green;
+                    font-size: 12px;
+                    font-weight: 800;
+                    letter-spacing: 1px;
+                    text-transform: uppercase;
+                }
+            }
+        }
+    }
+}
