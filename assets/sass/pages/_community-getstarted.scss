@@ -1,0 +1,296 @@
+.community-getstarted-screen1 {
+    background-color: $c-gray-base-light;
+
+    .decoration {
+        position: relative;
+
+        width: 100%;
+
+        line-height: 0;
+
+        &.cloud-big {
+            min-height: 130px;
+            max-height: 130px;
+
+            background-color: #fff;
+
+            .image {
+                position: absolute;
+
+                top: 100%;
+                left: 50%;
+
+                max-width: 1162px;
+
+                @include transform(translateX(-50%));
+            }
+        }
+    }
+
+    .texts-container {
+        padding-right: 0;
+        padding-left: 0;
+
+        line-height: 0;
+
+        .texts-wrap {
+            z-index: 1;
+
+            margin-top: 150px;
+            margin-bottom: calc(280px - 50px);
+
+            .title-label {
+                margin-bottom: 20px;
+                color: #000;
+                font-size: 50px;
+                font-weight: 200;
+                text-align: center;
+            }
+            
+            .description-label {
+                color: #000;
+                line-height: 1.4;
+                text-align: center;
+            }
+        }
+    }
+
+    .lower-container {
+        position: relative;
+
+        height: 240px;
+
+        margin-top: -240px;
+
+        line-height: 0;
+
+        .decoration {
+            position: relative;
+
+            height: 100%;
+
+            &.ground {
+                .community-ground {
+                    position: relative;
+                    
+                    left: 50%;
+                    
+                    width: auto;
+                    height: 100%;
+
+                    @include transform(translateX(-50%));
+                }
+            }
+        }
+    }
+}
+
+.community-getstarted-screen2 {
+    @media (max-width: 575.98px) {
+        z-index: 1;
+
+        margin-top: 36px;
+
+        background-color: transparent;
+    }
+
+    .label-container {
+        @media (max-width: 575.98px) {
+            background-color: transparent;
+
+            .head-label {
+                background-color: transparent;
+            }
+        }
+    }
+
+    .texts-container {
+        padding: 180px 0 220px;
+
+        @media (max-width: 575.98px) {
+            padding: 45px 0;
+
+            background-color: $c-blue-dark1;
+        }
+
+        &:first-child {
+            margin-bottom: 0;
+        }
+    }
+
+    .easy-steps {
+        padding-left: 0;
+
+        @media (max-width: 1279px) {
+            padding: 0;
+            padding-left: 30px;
+        }
+        @media (max-width: 575.98px) {
+            padding-right: $mobile-side-space;
+            padding-left: $mobile-side-space;
+        }
+
+        .title-label {
+            b {
+                font-weight: 400;
+            }
+        }
+
+        .description-label {
+            color: rgba($c-gray, .75);
+
+            @media (max-width: 575.98px) {
+                font-size: 1em;
+                font-weight: 400;
+                line-height: 1.6;
+            }
+        }
+
+        .description-label.more-container {
+            margin-top: 70px;
+
+            @media (max-width: 575.98px) {
+                margin-top: 15px;
+
+                color: #fff;
+
+                font-size: 0.925em;
+                line-height: 2.2;
+                font-weight: 400;
+            }
+        }
+    }
+    .a-underline {
+        font-weight: 400;
+
+        span::before {}
+    }
+    .a-underline:hover {
+        span:before {}
+    }
+    @media (max-width: 575.98px) {
+        .a-underline:first-child::after {
+            content: "";
+            display: block;
+
+            clear: both;
+        }
+    }
+
+    .easy-steps-detail {
+        padding-right: 50px;
+        padding-left: 50px;
+
+        @media (max-width: 1279px) {
+            padding: 0;
+            padding-right: 30px;
+        }
+        @media (max-width: 575.98px) {
+            margin-top: 35px;
+            padding-right: $mobile-side-space;
+            padding-left: $mobile-side-space;
+        }
+
+        .row {
+            margin-bottom: 25px;
+            padding-bottom: 25px;
+
+            border-bottom: 1px solid rgba($c-blue-gray, .25);
+
+            @media (max-width: 575.98px) {
+                margin-bottom: 25px;
+                padding-bottom: 0;
+
+                border-bottom: 0;
+            }
+
+            &:last-child {
+                margin-bottom: 0;
+                padding-bottom: 0;
+
+                border: 0;
+            }
+        }
+
+        .title-container {
+            padding-left: 0;
+
+            @media (max-width: 575.98px) {
+                padding-right: $mobile-side-space;
+                padding-left: $mobile-side-space;
+            }
+
+            .number-label {
+                position: absolute;
+
+                color: rgba($c-blue-gray, .1);
+                font-family: "Poppins";
+                font-size: 75px;
+                font-weight: 500;
+                line-height: 75px;
+
+                @media (max-width: 575.98px) {
+                    font-size: 3.25em;
+                    font-weight: 500;
+                    line-height: 1.5em;
+                }
+            }
+
+            .title-label {
+                margin-left: 30px;
+
+                font-family: "Poppins";
+                font-size: 25px;
+                font-weight: 400;
+                line-height: 75px;
+
+                @media (max-width: 575.98px) {
+                    margin-left: 20px;
+                    margin-bottom: 0;
+
+                    font-size: 1.4em;
+                    font-weight: 500;
+                }
+            }
+        }
+
+        .description-container {
+            padding-right: 0;
+            padding-left: 30px;
+
+            @media (max-width: 575.98px) {
+                margin-top: -5px;
+                padding-right: $mobile-side-space;
+                padding-left: 35px;
+            }
+
+            .description-label {
+                color: rgba($c-gray, .75);
+                font-size: 15px;
+                line-height: 1.6;
+
+                @media (max-width: 575.98px) {
+                    font-size: 1em;
+                    line-height: 1.75;
+                }
+            }
+            .description-label.code {
+                padding: 20px;
+
+                color: $c-blue;
+                font-family: "Source Code Pro", monospace;
+                font-size: 12px;
+                font-weight: 500;
+                line-height: 1.675;
+
+                background-color: $c-gray-base-light;
+                border-radius: 10px;
+
+                @media (max-width: 575.98px) {
+                color: #0075a8;
+                font-size: 0.9em;
+                }
+            }
+        }
+    }
+}
