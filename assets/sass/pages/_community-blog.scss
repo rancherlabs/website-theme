@@ -957,25 +957,25 @@
         background-color: $c-blue;
 
         @media (max-width: 575.98px) {
-        margin: 0;
-        padding: 30px 22px 40px;
+            margin: 0;
+            padding: 30px 22px 40px;
         }
 
         .button {
-        color: #fff;
+            color: #fff;
 
-        span:before {
-            bottom: -5px;
-
-            height: 1px;
-
-            background-color: rgba(#fff, 1);
-        }
-        &:hover {
             span:before {
-            background-color: rgba($c-sky-blue, 1);
+                bottom: -5px;
+
+                height: 1px;
+
+                background-color: rgba(#fff, 1);
             }
-        }
+            &:hover {
+                span:before {
+                background-color: rgba($c-sky-blue, 1);
+                }
+            }
         }
     }
 }
