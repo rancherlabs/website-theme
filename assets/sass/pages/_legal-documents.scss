@@ -1,0 +1,272 @@
+.legal-document-header {
+    .contents-container {
+        padding-top: 200px;
+        padding-bottom: 120px;
+    }
+
+    .texts-container {
+        .title-label {
+            font-size: 50px;
+            text-align: center;
+        }
+    }
+}
+
+.legal-document-content {
+    .contents-container {
+        padding-top: 150px;
+        padding-bottom: 250px;
+    }
+
+    .texts-container {
+        padding-right: 0;
+        padding-left: 0;
+    }
+
+    .wrap {
+        margin-bottom: 40px;
+    }
+
+    h2 {
+        margin-bottom: 20px;
+
+        font-size: 25px;
+        font-family: 'Poppins';
+        font-weight: 400;
+        line-height: 1.4
+    }
+
+    h3 {
+        margin-bottom: 10px;
+
+        font-size: 20px;
+        font-family: 'Poppins';
+        font-weight: 400;
+        line-height: 1.5
+    }
+
+    p {
+        margin-bottom: 30px;
+
+        font-size: 15px;
+        line-height: 1.665;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+
+        &.note {
+            margin-top: -20px;
+
+            font-size: 15px;
+            line-height: 1.5;
+        }
+    }
+
+    .table {
+        position: relative;
+
+        width: 100%;
+
+        margin-bottom: 50px;
+
+        background-color: #fff;
+        border: 1px solid $c-gray-mid-light;
+
+        border-collapse: collapse;
+
+        &.no-background {
+            background-color: transparent;
+        }
+
+        caption {
+            margin-top: 20px;
+            margin-bottom: 15px;
+
+            font-size: 15px;
+            font-weight: bold;
+            text-align: left;
+        }
+
+        thead, tbody {
+            width: 100%;
+        }
+
+        th, td,
+        tbody th {
+            position: relative;
+            vertical-align: top;
+
+            padding: 6px 20px;
+
+            color: $c-gray;
+            font-size: 15px;
+            font-weight: 300;
+            line-height: 1.665;
+
+            border: 1px solid $c-gray-mid-light;
+        }
+
+        th {
+            color: $c-blue;
+            font-size: 12px;
+            font-family: 'Poppins';
+            font-weight: 800;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            text-align: left;
+        }
+
+        th[scope] {
+            vertical-align: top;
+
+            width: 20%;
+
+            color: #313131;
+            font-size: 15px;
+            font-family: 'Roboto';
+            font-weight: 500;
+            letter-spacing: 0;
+            text-transform: initial;
+        }
+    }
+    .table-foot-caption {
+        margin-top: -30px;
+        margin-bottom: 50px;
+    }
+
+    ul {
+        position: relative;
+        display: inline-block;
+
+        width: 100%;
+
+        margin-top: 5px;
+        margin-left: 15px;
+
+        &.type-dot {
+            padding-left: 15px;
+        }
+    }
+    li {
+        position: relative;
+        display: block;
+
+        margin-bottom: 2px;
+
+        font-size: 15px;
+        font-weight: 300;
+        line-height: 1.665;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+
+        > ul {
+            margin-left: 10px;
+        }
+    }
+    .type-dot li:before {
+        content: '•';
+        position: absolute;
+
+        top: .05em;
+        left: -15px;
+    }
+
+    .fully-container {
+        padding-right: 0;
+        padding-left: 0;
+    }
+    .tab-container {
+        position: relative;
+    }
+    .tab-head {
+        position: relative;
+        display: flex;
+
+        justify-content: flex-start;
+        align-items: center;
+    }
+    .tab-item {
+        position: relative;
+        display: inline-block;
+
+        flex: 0 0 150px;
+
+        margin-right: 1px;
+        
+        color: #fff;
+        font-family: 'Poppins';
+        font-size: 12px;
+        font-weight: 800;
+        letter-spacing: 1px;
+        text-align: center;
+
+        background-color: $c-gray-mid-light;
+
+        line-height: 75px;
+
+        cursor: pointer;
+
+        @include transition(background-color .25s);
+
+        &.active,
+        &:hover {
+            background-color: $c-blue;
+        }
+    }
+    .tab-body {
+        position: relative;
+
+        padding: 100px;
+
+        background-color: $c-gray-base-light;
+
+        h1 {
+            margin-bottom: 40px;
+
+            color: #313131;
+            font-size: 40px;
+            font-family: 'Poppins';
+            font-weight: 400;
+            line-height: 1.25
+        }
+
+        .side-title {
+            position: relative;
+            display: flex;
+
+            justify-content: flex-start;
+            align-items: flex-start;
+
+            margin-bottom: 0;
+
+            .title-item {
+                position: relative;
+                display: inline-block;
+
+                flex: 0 0 210px;
+            }
+
+            .side-item {
+                position: relative;
+                display: inline-block;
+
+                flex: 0 0 calc(100% - 210px);
+
+                max-width: calc(100% - 210px);
+            }
+        }
+
+        .last-text {
+            margin-top: 40px;
+
+            text-align: center;
+
+            p {
+                font-size: 18px;
+            }
+        }
+    }
+}
