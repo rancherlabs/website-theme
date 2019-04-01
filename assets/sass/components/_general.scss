@@ -384,6 +384,10 @@ button {
       background-color: transparent;
       border-color: transparent;
       box-shadow: none;
+
+      &.c-green {
+        color: $c-green;
+      }
     }
 
     img {
