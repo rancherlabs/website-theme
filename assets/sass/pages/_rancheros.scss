@@ -399,7 +399,6 @@
     }
   }
 
-
   &-screen6 {
     .contents-container {
       padding-top: 70px;
@@ -787,6 +786,12 @@
       @media (max-width: 575.98px) {
         padding-right: $mobile-side-space;
         padding-left: $mobile-side-space;
+      }
+
+      .title-label {
+        b {
+          font-weight: 400;
+        }
       }
 
       .description-label {
