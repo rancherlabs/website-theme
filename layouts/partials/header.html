@@ -243,13 +243,15 @@
                             </ul>
                         </li>
                         <li class="back-to-the-top">
-                            <a href="#">
+                            <a href="#" class="submenu-indicator-close">
                                 Back to the top 
                                 <svg class="svg-icon" enable-background="new 0 0 34 34" viewBox="0 0 34 34" xmlns="http://www.w3.org/2000/svg">
                                     <g class="svg-linear" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10">
                                         <path d="m12 14.5 5-5 5 5"/><path d="m17 9.5v15"/>
                                     </g>
                                 </svg>
+
+                                <span class="submenu-indicator"><span class="object1"></span><span class="object2"></span><span class="object3"></span></span>
                             </a>
                         </li>
                     </ul>
@@ -290,6 +292,11 @@
                             $(this.element).children("ul").find("li").bind("click touchstart", function(e){
                                 e.stopPropagation(); 
                                 e.preventDefault();
+
+                                if ($(this).attr('class') === 'back-to-the-top') {
+                                    $('.mobile-header-container').scrollTop(0);
+                                }
+
                                 if($(this).children(".submenu").length > 0){
                                     if($(this).children(".submenu").css("display") == "none"){
                                         $(this).children(".submenu").delay(opts.showDelay).slideDown(opts.speed);
@@ -306,6 +313,7 @@
                                     }
                                     if($(this).children(".submenu").siblings("a").hasClass("submenu-indicator-minus")){
                                         $(this).children(".submenu").siblings("a").removeClass("submenu-indicator-minus");
+                                        $(this).removeClass("activate");
                                     }
                                 }
                                 window.location.href = $(this).children("a").attr("href");
@@ -365,14 +373,8 @@
                 mobileNavActivator.click(function() {
                     if (mobileNavContainer.hasClass('active')) {
                         mobileNavContainer.removeClass('active');
-                        mobileNavActivator.removeClass('active');
-
-                        console.debug('Close mobile menus!');
                     } else {
                         mobileNavContainer.addClass('active');
-                        mobileNavActivator.addClass('active');
-
-                        console.debug('Open mobile menus!');
                     }
                 });
             </script>

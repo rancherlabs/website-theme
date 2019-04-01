@@ -1353,7 +1353,7 @@
     top: 50%;
     left: 50%;
 
-    width: 50%;
+    width: 11px;
     height: 1px;
 
     background-color: $c-blue;
@@ -1383,7 +1383,7 @@
     top: 50%;
     left: 50%;
 
-    width: 50%;
+    width: 11px;
     height: 1px;
 
     background-color: $c-blue;
@@ -1392,6 +1392,9 @@
     @include transition(all .25s);
   }
 }
+.jquery-accordion-menu .submenu .submenu-indicator{
+  top: 10px;
+}
 .jquery-accordion-menu ul ul.submenu .submenu-indicator{
 	line-height: 16px;
 }
@@ -1399,13 +1402,13 @@
   background-color: rgba($c-blue, .1);
 
   .object1 {
-    width: 50%;
+    width: 11px;
 
     opacity: 0;
   }
 
   .object2 {
-    width: 50%;
+    width: 11px;
     height: 1px;
 
     opacity: 1;
@@ -1422,6 +1425,20 @@
 	// -moz-transform: rotate(45deg);
 	// -webkit-transform: rotate(45deg);
 	// transform: rotate(45deg);
+}
+.jquery-accordion-menu .submenu-indicator-close > .submenu-indicator{
+  top: 50%;
+
+  margin: 0;
+
+  @include transform(translateY(-50%));
+
+  .object1 {
+    @include transform(translate(-50%, -50%) rotate(-45deg));
+  }
+  .object3 {
+    @include transform(translate(-50%, -50%) rotate(45deg));
+  }
 }
 
 /* Submenu
