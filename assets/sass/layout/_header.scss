@@ -34,6 +34,7 @@
     }
   }
 }
+
 .header-primary-menus {
   position: relative;
   display: flex;
@@ -65,6 +66,7 @@
     }
   }
 }
+
 .primary-menus {
   position: relative;
   display: inline-block;
@@ -95,6 +97,7 @@
     @media (max-width: 1279px) {
       font-size: 13px;
     }
+
     @media (max-width: 1100px) {
       padding: 15px;
 
@@ -126,11 +129,11 @@
 
   text-align: left;
 
-  > li {
+  >li {
     position: relative;
     display: inline-block;
 
-    > a {
+    >a {
       &:after {
         z-index: 1;
         content: "";
@@ -149,13 +152,12 @@
         opacity: 0;
 
         @include transform(translateX(-50%));
-        @include transition(
-          all 0.3s ease-in-out 0s,
-          visibility 0s linear 0.3s,
-          z-index 0s linear 0.01s
-        );
+        @include transition(all 0.3s ease-in-out 0s,
+        visibility 0s linear 0.3s,
+        z-index 0s linear 0.01s);
       }
     }
+
     &.active,
     &:hover {
       a {
@@ -221,11 +223,9 @@
 
   opacity: 0;
 
-  @include transition(
-    all 0.3s ease-in-out 0s,
-    visibility 0s linear 0.3s,
-    z-index 0s linear 0.01s
-  );
+  @include transition(all 0.3s ease-in-out 0s,
+  visibility 0s linear 0.3s,
+  z-index 0s linear 0.01s);
 
   li {
     position: relative;
@@ -333,6 +333,7 @@
         }
       }
     }
+
     .box {
       padding: 10px;
 
@@ -440,6 +441,7 @@
         }
       }
     }
+
     &.split-half {
       position: relative;
       display: flex;
@@ -464,6 +466,7 @@
         &:nth-child(2n) {
           padding-right: 10px;
         }
+
         &:nth-child(2n + 1) {
           padding-left: 10px;
         }
@@ -565,6 +568,7 @@
 
           @include transition(all 0.4s);
         }
+
         .icon.right {
           position: absolute;
 
@@ -584,9 +588,11 @@
           @include transition(all 0.4s);
         }
       }
+
       &:hover .icon.right {
         right: -5px;
       }
+
       &:hover .icon .svg-linear {
         stroke: #fff;
       }
@@ -603,7 +609,7 @@
       right: -10px;
     }
 
-    > li {
+    >li {
       position: relative;
       display: inline-block;
 
@@ -625,8 +631,8 @@
     }
   }
 
-  > .grid-container {
-    > .row {
+  >.grid-container {
+    >.row {
       margin-right: 0;
       margin-left: 0;
     }
@@ -651,9 +657,9 @@
 }
 
 // &.active,
-.primary-menus-wrap > li:focus,
-.primary-menus-wrap > li:focus-within,
-.primary-menus-wrap > li:hover {
+.primary-menus-wrap>li:focus,
+.primary-menus-wrap>li:focus-within,
+.primary-menus-wrap>li:hover {
   &:before {
     content: "";
     position: absolute;
@@ -672,7 +678,7 @@
     }
   }
 
-  > .primary-menus-sub {
+  >.primary-menus-sub {
     z-index: 1;
     visibility: visible;
 
@@ -684,10 +690,11 @@
 
 // special cases.
 .menu-why_rancher {
-  > .primary-menus-sub {
+  >.primary-menus-sub {
     margin-left: 20px;
   }
 }
+
 .menu-products {
   .left {
     flex: 0 0 auto;
@@ -701,7 +708,7 @@
     max-width: 310px;
   }
 
-  > .primary-menus-sub {
+  >.primary-menus-sub {
     left: 50%;
 
     min-width: 1030px;
@@ -709,6 +716,7 @@
     @include transform(translateX(-50%));
   }
 }
+
 .menu-customers {
   .left {
     flex: 0 0 auto;
@@ -722,7 +730,7 @@
     max-width: 310px;
   }
 
-  > .primary-menus-sub {
+  >.primary-menus-sub {
     left: 50%;
 
     min-width: 820px;
@@ -730,6 +738,7 @@
     @include transform(translateX(-50%));
   }
 }
+
 .menu-community {
   .left {
     flex: 0 0 auto;
@@ -743,11 +752,11 @@
     max-width: 310px;
   }
 
-  > a::after {
+  >a::after {
     border-bottom-color: $c-blue-dark2;
   }
 
-  > .primary-menus-sub {
+  >.primary-menus-sub {
     left: 50%;
 
     min-width: 1030px;
@@ -757,12 +766,13 @@
     @include transform(translateX(-50%));
   }
 }
+
 .menu-company {
-  > a::after {
+  >a::after {
     border-bottom-color: $c-blue-dark2;
   }
 
-  > .primary-menus-sub {
+  >.primary-menus-sub {
     left: 50%;
 
     min-width: 310px;
@@ -816,6 +826,7 @@
     @media (max-width: 1279px) {
       font-size: 10px;
     }
+
     @media (max-width: 1100px) {
       letter-spacing: 0.75px;
     }
@@ -843,12 +854,10 @@
 
   opacity: 0;
 
-  @include transition(
-    top 0.6s,
-    max-height 0.6s,
-    background-color 0.6s,
-    opacity 0.6s
-  );
+  @include transition(top 0.6s,
+  max-height 0.6s,
+  background-color 0.6s,
+  opacity 0.6s);
 
   pointer-events: none;
 
@@ -873,6 +882,7 @@
     max-height: 100%;
   }
 }
+
 .mobile-nav-header {
   position: relative;
   display: flex;
@@ -1016,6 +1026,7 @@
         }
       }
     }
+
     .button:hover {
       color: #fff;
 
@@ -1097,12 +1108,14 @@
         top: 7px;
         right: 0;
       }
+
       &:nth-child(2) {
         top: 14px;
         right: 0;
 
         width: 60%;
       }
+
       &:nth-child(3) {
         bottom: 7px;
         right: 0;
@@ -1110,6 +1123,7 @@
     }
   }
 }
+
 .active .mobile-menu-opener {
   span:nth-child(1) {
     top: 13px;
@@ -1118,11 +1132,13 @@
 
     @include transform(rotate(45deg));
   }
+
   span:nth-child(2) {
     background-color: #c86464;
 
     @include transform(scale(0.1));
   }
+
   span:nth-child(3) {
     top: 13px;
 
@@ -1149,7 +1165,7 @@
       letter-spacing: 0;
     }
 
-    .activate > a {
+    .activate>a {
       font-weight: 700;
     }
 
@@ -1170,8 +1186,9 @@
   }
 
   .in-contents {
-    > a {
+    >a {
       .submenu-indicator {
+
         .object1,
         .object2,
         .object3 {
@@ -1193,7 +1210,7 @@
       }
     }
 
-    &.activate > .submenu-indicator-minus {
+    &.activate>.submenu-indicator-minus {
       .submenu-indicator {
         .object1 {
           width: 50%;
@@ -1203,9 +1220,11 @@
 
           @include transform(translate(-50%, -50%) rotate(0));
         }
+
         .object2 {
           opacity: 0;
         }
+
         .object3 {
           width: 50%;
           height: 2px;
@@ -1216,6 +1235,7 @@
     }
   }
 }
+
 .back-to-the-top {
   a {
     padding-top: 10px;
@@ -1252,96 +1272,103 @@
 /* Menu Wrapper
 ===========================================*/
 .jquery-accordion-menu,
-.jquery-accordion-menu *{
-	font-family: 'Open Sans', sans-serif;
-	box-sizing: border-box;
-	-moz-box-sizing: border-box; 
-	-webkit-box-sizing: border-box;
-	outline: 0;
+.jquery-accordion-menu * {
+  font-family: 'Open Sans', sans-serif;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  outline: 0;
 }
-.jquery-accordion-menu{
-	min-width: 260px;
-	float: left;
-	position: relative;
+
+.jquery-accordion-menu {
+  min-width: 260px;
+  float: left;
+  position: relative;
 }
 
 /* Header and Footer
 ===========================================*/
 .jquery-accordion-menu .jquery-accordion-menu-header,
-.jquery-accordion-menu .jquery-accordion-menu-footer{
-	width: 100%;
-	height: 50px;
-	padding-left: 22px;
-	float: left;
-	line-height: 50px;
-	font-weight: 600;
-	// color: #f0f0f0;
-	background: #414956;
+.jquery-accordion-menu .jquery-accordion-menu-footer {
+  width: 100%;
+  height: 50px;
+  padding-left: 22px;
+  float: left;
+  line-height: 50px;
+  font-weight: 600;
+  // color: #f0f0f0;
+  background: #414956;
 }
 
 /* Menu
 ===========================================*/
-.jquery-accordion-menu ul{
-	margin: 0;
-	padding: 0;
-	list-style: none;
+.jquery-accordion-menu ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
 }
-.jquery-accordion-menu ul li{
-	width: 100%;
-	display: block;
-	float: left;
-	position: relative;
+
+.jquery-accordion-menu ul li {
+  width: 100%;
+  display: block;
+  float: left;
+  position: relative;
 }
-.jquery-accordion-menu ul li a{
-	width: 100%;
+
+.jquery-accordion-menu ul li a {
+  width: 100%;
   padding: 14px 20px;
   padding-right: 50px;
-	float: left;
-	text-decoration: none;
-	color: #f0f0f0;
+  float: left;
+  text-decoration: none;
+  color: #f0f0f0;
   // font-size: 13px;
   line-height: 1.665;
-	background: #414956;
-	white-space: nowrap;
-	position: relative;
-	overflow: hidden;
-	-o-transition: color .2s linear, background .2s linear;
-	-moz-transition: color .2s linear, background .2s linear;
-	-webkit-transition: color .2s linear, background .2s linear;
-	transition: color .2s linear, background .2s linear;
+  background: #414956;
+  white-space: nowrap;
+  position: relative;
+  overflow: hidden;
+  -o-transition: color .2s linear, background .2s linear;
+  -moz-transition: color .2s linear, background .2s linear;
+  -webkit-transition: color .2s linear, background .2s linear;
+  transition: color .2s linear, background .2s linear;
 }
-.jquery-accordion-menu > ul > li:hover > a,
-.jquery-accordion-menu > ul > li.active > a{
-	color: $c-blue;
-	background: $c-gray-base-light;
+
+.jquery-accordion-menu>ul>li:hover>a,
+.jquery-accordion-menu>ul>li.active>a {
+  color: $c-blue;
+  background: $c-gray-base-light;
 }
-.jquery-accordion-menu > ul > li > a{
-	// border-bottom: 1px solid $c-gray-base-light;
+
+.jquery-accordion-menu>ul>li>a {
+  // border-bottom: 1px solid $c-gray-base-light;
 }
-.jquery-accordion-menu > ul > li:first-child > a{
-	border-bottom: 1px solid $c-gray-base-light;
+
+.jquery-accordion-menu>ul>li:first-child>a {
+  border-bottom: 1px solid $c-gray-base-light;
 }
-.jquery-accordion-menu ul li a i{
-	width: 34px;
-	float: left;
-	line-height: 18px;
-	font-size: 16px;
-	text-align: left;
+
+.jquery-accordion-menu ul li a i {
+  width: 34px;
+  float: left;
+  line-height: 18px;
+  font-size: 16px;
+  text-align: left;
 }
 
 /* Submenu indicators
 ===========================================*/
-.jquery-accordion-menu .submenu-indicator{
+.jquery-accordion-menu .submenu-indicator {
   position: absolute;
 
-	float: right;
+  float: right;
   right: 20px;
 
-	// line-height: 19px;
-	// font-size: 20px;
-	-o-transition: transform .3s linear;
-	-moz-transition: transform .3s linear;
-	-webkit-transition: transform .3s linear;
+  // line-height: 19px;
+  // font-size: 20px;
+  -o-transition: transform .3s linear;
+  -moz-transition: transform .3s linear;
+  -webkit-transition: transform .3s linear;
   -ms-transition: transform .3s linear;
 
   top: 13px;
@@ -1352,7 +1379,7 @@
   border-radius: 50%;
 
   @include transition(background-color .25s);
-  
+
   .object1 {
     position: absolute;
 
@@ -1367,6 +1394,7 @@
     @include transform(translate(-50%, -50%));
     @include transition(all .25s);
   }
+
   .object2 {
     position: absolute;
 
@@ -1383,6 +1411,7 @@
     @include transform(translate(-50%, -50%));
     @include transition(all .25s);
   }
+
   .object3 {
     position: absolute;
 
@@ -1398,13 +1427,16 @@
     @include transition(all .25s);
   }
 }
-.jquery-accordion-menu .submenu .submenu-indicator{
+
+.jquery-accordion-menu .submenu .submenu-indicator {
   top: 10px;
 }
-.jquery-accordion-menu ul ul.submenu .submenu-indicator{
-	line-height: 16px;
+
+.jquery-accordion-menu ul ul.submenu .submenu-indicator {
+  line-height: 16px;
 }
-.jquery-accordion-menu .submenu-indicator-minus > .submenu-indicator{
+
+.jquery-accordion-menu .submenu-indicator-minus>.submenu-indicator {
   background-color: rgba($c-blue, .1);
 
   .object1 {
@@ -1427,12 +1459,14 @@
 
     @include transform(translate(-50%, -50%) rotate(0deg));
   }
-	// -ms-transform: rotate(45deg);
-	// -moz-transform: rotate(45deg);
-	// -webkit-transform: rotate(45deg);
-	// transform: rotate(45deg);
+
+  // -ms-transform: rotate(45deg);
+  // -moz-transform: rotate(45deg);
+  // -webkit-transform: rotate(45deg);
+  // transform: rotate(45deg);
 }
-.jquery-accordion-menu .submenu-indicator-close > .submenu-indicator{
+
+.jquery-accordion-menu .submenu-indicator-close>.submenu-indicator {
   top: 50%;
 
   margin: 0;
@@ -1442,6 +1476,7 @@
   .object1 {
     @include transform(translate(-50%, -50%) rotate(-45deg));
   }
+
   .object3 {
     @include transform(translate(-50%, -50%) rotate(45deg));
   }
@@ -1450,117 +1485,144 @@
 /* Submenu
 ===========================================*/
 .jquery-accordion-menu ul ul.submenu,
-.jquery-accordion-menu ul ul.submenu li ul.submenu{
-	width: 100%;
-	display: none;
-	position: static;
+.jquery-accordion-menu ul ul.submenu li ul.submenu {
+  width: 100%;
+  display: none;
+  position: static;
 }
-.jquery-accordion-menu ul ul.submenu li{
-	clear: both;
-	width: 100%;
+
+.jquery-accordion-menu ul ul.submenu li {
+  clear: both;
+  width: 100%;
 }
-.jquery-accordion-menu ul ul.submenu li a{
-	width: 100%;
-	float: left;
-	// font-size: 11px;
-	// background: #383838;
-	border-top: none;
-	position: relative;
-	border-left: solid 6px transparent;
-	-o-transition: border .2s linear;
-	-moz-transition: border .2s linear;
-	-webkit-transition: border .2s linear;
-	transition: border .2s linear;
+
+.jquery-accordion-menu ul ul.submenu li a {
+  width: 100%;
+  float: left;
+  // font-size: 11px;
+  // background: #383838;
+  border-top: none;
+  position: relative;
+  border-left: solid 6px transparent;
+  -o-transition: border .2s linear;
+  -moz-transition: border .2s linear;
+  -webkit-transition: border .2s linear;
+  transition: border .2s linear;
 }
-.jquery-accordion-menu ul ul.submenu li:hover > a{
-	border-left-color: #414956;
+
+.jquery-accordion-menu ul ul.submenu li:hover>a {
+  border-left-color: #414956;
 }
-.jquery-accordion-menu ul ul.submenu > li > a{
-	padding-left: 30px;
+
+.jquery-accordion-menu ul ul.submenu>li>a {
+  padding-left: 30px;
 }
-.jquery-accordion-menu ul ul.submenu > li > ul.submenu > li > a{
-	padding-left: 45px;
+
+.jquery-accordion-menu ul ul.submenu>li>ul.submenu>li>a {
+  padding-left: 45px;
 }
-.jquery-accordion-menu ul ul.submenu > li > ul.submenu > li > ul.submenu > li > a{
-	padding-left: 60px;
+
+.jquery-accordion-menu ul ul.submenu>li>ul.submenu>li>ul.submenu>li>a {
+  padding-left: 60px;
 }
 
 /* labels
 ===========================================*/
 .jquery-accordion-menu ul li .jquery-accordion-menu-label,
-.jquery-accordion-menu ul ul.submenu li .jquery-accordion-menu-label{
-	min-width: 20px;
-	padding: 1px 2px 1px 1px;
-	position: absolute;
-	right: 18px;
-	top: 14px;
-	// font-size: 11px;
-	font-weight: 800;
-	color: #555;
-	text-align: center;
-	line-height: 18px;
-	background: #f0f0f0;
-	border-radius: 100%;
+.jquery-accordion-menu ul ul.submenu li .jquery-accordion-menu-label {
+  min-width: 20px;
+  padding: 1px 2px 1px 1px;
+  position: absolute;
+  right: 18px;
+  top: 14px;
+  // font-size: 11px;
+  font-weight: 800;
+  color: #555;
+  text-align: center;
+  line-height: 18px;
+  background: #f0f0f0;
+  border-radius: 100%;
 }
-.jquery-accordion-menu ul ul.submenu li .jquery-accordion-menu-label{
-	top: 12px;
+
+.jquery-accordion-menu ul ul.submenu li .jquery-accordion-menu-label {
+  top: 12px;
 }
 
 /* click effect
 ===========================================*/
-.ink{
-	display: block;
-	position: absolute;
-	background: rgba(255, 255, 255, 0.3);
-	border-radius: 100%;
-	-webkit-transform: scale(0);
-	-moz-transform: scale(0);
-	-ms-transform: scale(0);
-   -o-transform: scale(0);
-   transform: scale(0);
+.ink {
+  display: block;
+  position: absolute;
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 100%;
+  -webkit-transform: scale(0);
+  -moz-transform: scale(0);
+  -ms-transform: scale(0);
+  -o-transform: scale(0);
+  transform: scale(0);
 }
 
-.animate-ink{
-	-webkit-animation: ripple 0.5s linear;
-   -moz-animation: ripple 0.5s linear;
-   -ms-animation: ripple 0.5s linear;
-   -o-animation: ripple 0.5s linear;
-   animation: ripple 0.5s linear;
+.animate-ink {
+  -webkit-animation: ripple 0.5s linear;
+  -moz-animation: ripple 0.5s linear;
+  -ms-animation: ripple 0.5s linear;
+  -o-animation: ripple 0.5s linear;
+  animation: ripple 0.5s linear;
 }
 
 @-webkit-keyframes ripple {
-   100% {opacity: 0; -webkit-transform: scale(2.5);}
+  100% {
+    opacity: 0;
+    -webkit-transform: scale(2.5);
+  }
 }
+
 @-moz-keyframes ripple {
-   100% {opacity: 0; -moz-transform: scale(2.5);}
+  100% {
+    opacity: 0;
+    -moz-transform: scale(2.5);
+  }
 }
+
 @-o-keyframes ripple {
-   100% {opacity: 0; -o-transform: scale(2.5);}
+  100% {
+    opacity: 0;
+    -o-transform: scale(2.5);
+  }
 }
+
 @keyframes ripple {
-   100% {opacity: 0; transform: scale(2.5);}
+  100% {
+    opacity: 0;
+    transform: scale(2.5);
+  }
 }
 
 /* overwrite */
 .jquery-accordion-menu .jquery-accordion-menu-header,
 .jquery-accordion-menu .jquery-accordion-menu-footer,
-.jquery-accordion-menu ul li a{
-	background: #fff;
-	color: #555;
+.jquery-accordion-menu ul li a {
+  background: #fff;
+  color: #555;
 }
-.jquery-accordion-menu > ul > li:hover > a,
-.jquery-accordion-menu > ul > li.active > a{
-	background: #f0f0f0;
+
+.jquery-accordion-menu>ul>li:hover>a,
+.jquery-accordion-menu>ul>li.active>a {
+  background: #f0f0f0;
 }
-.jquery-accordion-menu > ul > li > a{
-	border-bottom-color: #f0f0f0;
+
+.jquery-accordion-menu>ul>li>a {
+  border-bottom-color: #f0f0f0;
 }
-.jquery-accordion-menu ul ul.submenu li:hover > a{
-	border-left-color: #f0f0f0;
+
+.jquery-accordion-menu ul ul.submenu li:hover>a {
+  border-left-color: #f0f0f0;
 }
-.jquery-accordion-menu ul ul.submenu li a{
-	color: $c-blue;
+
+.jquery-accordion-menu ul ul.submenu li a {
+  color: $c-blue;
 }
-.jquery-accordion-menu > ul > li > a > .ink{
-	background: rgba(0, 0, 0, 0.1);
+
+.jquery-accordion-menu>ul>li>a>.ink {
+  background: rgba(0, 0, 0, 0.1);
 }

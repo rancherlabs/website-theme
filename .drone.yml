@@ -1,12 +1,47 @@
 ---
-pipeline:
-  docker-publish-master:
-    image: plugins/docker
+kind: pipeline
+name: publish
+
+platform:
+  os: linux
+  arch: amd64
+
+steps:
+- name: docker-publish-master
+  pull: default
+  image: plugins/docker
+  settings:
+    context: .
     dockerfile: Dockerfile
     repo: rancherlabs/website-theme
-    context: .
     tag: latest
-    secrets: [docker_username, docker_password]
-    when:
-      branch: master
-      event: push
+    password:
+      from_secret: docker_password
+    username:
+      from_secret: docker_username
+trigger:
+  branch:
+  - master
+  event:
+  - push
+---
+kind: pipeline
+name: pull_requests
+
+platform:
+  os: linux
+  arch: amd64
+
+steps:
+- name: docker-publish-master
+  pull: default
+  image: plugins/docker
+  settings:
+    context: .
+    dry_run: true
+    dockerfile: Dockerfile
+    repo: rancherlabs/website-theme
+    tag: latest
+trigger:
+  event:
+  - pull_request
