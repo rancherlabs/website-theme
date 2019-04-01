@@ -359,6 +359,11 @@
       }
     }
   }
+  .blind-item-container .thumbnail-information-container {
+    .logo {
+      max-height: 30px;
+    }
+  }
 
   .blind-items-container {
     .loader-container {
