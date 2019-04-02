@@ -991,7 +991,7 @@
   &-screen10 {
     margin-top: -65px;
 
-    background-image: url('../../../static/imgs/background-learn-how-rancher-works.png');
+    // background-image: url('../../../static/imgs/background-learn-how-rancher-works.png');
     background-size: 100% auto;
     background-repeat: no-repeat;
     background-position: left bottom;
@@ -1231,6 +1231,8 @@
       padding: 20px 0;
 
       border-bottom: 1px solid rgba(#ddd, .25);
+
+      cursor: pointer;
 
       &:last-child {
         margin-bottom: 0;

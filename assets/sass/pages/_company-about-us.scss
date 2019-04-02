@@ -31,6 +31,8 @@
 }
 
 .company-about-us-screen2 {
+    z-index: 1;
+
     .set-ground {
         .background.right-side {
             position: absolute;
@@ -119,6 +121,10 @@
 }
 
 .company-about-us-screen3 {
+    .set-ground {
+        z-index: -1;
+    }
+
     .contents-container {
         padding-top: 220px;
     }

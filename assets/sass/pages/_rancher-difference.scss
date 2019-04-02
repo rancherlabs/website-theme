@@ -1,26 +1,43 @@
 .rancher-difference {
   &-screen2 {
-    .anchor-dot-container {
-      padding-left: 0;
-
+    .side-anchor {
+      z-index: 5;
+      position: absolute;
+    
+      top: 150px;
+      left: 50%;
+  
+      width: 100%;
+      max-width: 1240px;
+      height: 0;
+  
+      @include transform(translate(-50%));
+  
+      &.sticky {
+        position: fixed;
+        overflow: visible;
+  
+        top: 100px;
+      }
     }
-
     .selectable-list-container {
       margin-top: -5px;
 
+      margin-left: -20px;
+      padding-left: 20px;
     }
+    .list-item {
+      .button {
+        min-width: 0;
+        height: 40px;
 
-    .button {
-      min-width: 0;
-      height: 40px;
+        background-color: transparent;
+        box-shadow: none;
 
-      background-color: transparent;
-      box-shadow: none;
-
-      color: transparent;
-      text-align: left;
-
-      &:before {
+        color: transparent;
+        text-align: left;
+      }
+      .button:before {
         content: '';
         position: absolute;
 
@@ -36,8 +53,7 @@
 
         @include transition(all .25s);
       }
-
-      &:after {
+      .button:after {
         content: '';
         position: absolute;
 
@@ -53,12 +69,10 @@
         @include borderBox();
         @include transition(all .25s);
       }
-
-      span {
+      .button span {
         line-height: 1.4;
       }
-
-      &:hover {
+      .button:hover {
         color: $c-gray-mid-light;
 
         &:before {
@@ -71,28 +85,23 @@
           background-color: $c-gray-base-light;
         }
       }
-    }
-
-    .active {
-      .button {
+      .active .button {
         color: $c-green;
+      }
+      .active .button:after {
+        left: -6px;
+        top: 13px;
 
-        &:after {
-          left: -6px;
-          top: 13px;
+        width: 13px;
+        height: 13px;
 
-          width: 13px;
-          height: 13px;
-
-          background-color: #fff;
-          border: 2px solid $c-green;
-        }
+        background-color: #fff;
+        border: 2px solid $c-green;
       }
     }
 
-
     .article-container {
-      padding-top: 150px;
+      padding-top: 50px;
 
       &:first-child {
         padding-top: 200px;
@@ -101,7 +110,9 @@
       &:last-child {
         padding-bottom: 200px;
       }
-
+    }
+    .article-item {
+      padding-top: 100px;
     }
 
     .title-label {

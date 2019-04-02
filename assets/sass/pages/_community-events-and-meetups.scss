@@ -226,11 +226,15 @@
   }
 
   .card-container {
+    height: 100%;
+
     margin-bottom: 30px;
   }
 
   .card-item {
     overflow: hidden;
+
+    height: 100%;
 
     background-color: $c-gray;
 
@@ -567,6 +571,15 @@
   .slide-item {
     margin-right: 30px;
 
+    @include transition(opacity .25s);
+
+    &[aria-hidden="true"] {
+      opacity: .5;
+    }
+    &[aria-hidden="false"] {
+      opacity: 1;
+    }
+
     .thumbnail-container {
       position: relative;
       display: inline-block;
@@ -736,7 +749,7 @@
 
       line-height: 150px;
 
-      label {
+      .label {
         margin: 0;
       }
     }

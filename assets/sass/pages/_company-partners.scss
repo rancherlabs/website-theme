@@ -245,7 +245,11 @@
 
         .thumbnail-container {
             position: relative;
+            display: flex;
             overflow: hidden;
+
+            justify-content: center;
+            align-items: center;
 
             flex: 0 0 200px;
 
@@ -255,11 +259,12 @@
 
             margin-right: 40px;
 
-            background-color: #777;
+            // background-color: #777;
 
             .thumbnail {
                 position: relative;
                 display: inline-block;
+                vertical-align: middle;
 
                 width: 100%;
                 height: auto;

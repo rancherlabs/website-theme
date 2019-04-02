@@ -1,4 +1,6 @@
 .company-careers-screen1 {
+    overflow: hidden;
+
     margin-top: 130px;
 
     .contents-container {
@@ -153,89 +155,102 @@
 
     .slider-container {
         padding: 0;
-
-        .slider-pager {
-            position: relative;
-            display: flex;
-            flex: 1;
-
-            justify-content: flex-end;
-
-            width: 100%;
-
-            // margin-top: calc(170px);
-            margin-top: -75px;
-
-            @media (max-width: 575.98px) {
-                margin-top: 0;
-            }
-        }
-
-        .btn-prev,
-        .btn-next {
-            position: relative;
-            display: inline-block;
-            flex: 0 0 75px;
-
-            width: 75px;
-            max-width: 75px;
-            height: 75px;
-
-            cursor: pointer;
-
-            @include transition(background-color .25s);
-
-            @media (max-width: 575.98px) {
-                width: 45px;
-                height: 45px;
-            }
-
-            .icon {
-                width: 50%;
-
-                margin: 25%;
-            }
-
-            svg {
-                position: relative;
-
-                width: 50%;
-                height: auto;
-
-                margin: 25%;
-
-                .arw {
-                    fill: none;
-                    stroke: $c-blue-dark1;
-                    stroke: #fff;
-                    stroke-linecap: round;
-                    stroke-linejoin: round;
-                    stroke-miterlimit: 10;
-
-                    @include transition(stroke .25s);
-                }
-            }
-
-            &:hover,
-            &.active {
-                background-color: $c-green;
-
-                .arw {
-                    stroke: #fff;
-                }
-            }
+    }
+    .slides-wrap {
+        .slide-item {
+            line-height: 0;
         }
     }
-
     .image-container {
         position: relative;
         display: inline-block;
+        overflow: hidden;
 
         width: 100%;
         min-height: 400px;
         max-height: 400px;
 
         background-color: #777;
+
+        line-height: 0;
+
+        .image {
+            position: relative;
+            display: inline-block;
+
+            width: 100%;
+            height: auto;
+        }
+    }
+    .slider-pager {
+        position: relative;
+        display: flex;
+        flex: 1;
+
+        justify-content: flex-end;
+
+        width: 100%;
+
+        // margin-top: calc(170px);
+        margin-top: -75px;
+
+        @media (max-width: 575.98px) {
+            margin-top: 0;
+        }
+    }
+    .btn-prev,
+    .btn-next {
+        position: relative;
+        display: inline-block;
+        flex: 0 0 75px;
+
+        width: 75px;
+        max-width: 75px;
+        height: 75px;
+
+        cursor: pointer;
+
+        @include transition(background-color .25s);
+
+        @media (max-width: 575.98px) {
+            width: 45px;
+            height: 45px;
+        }
+
+        .icon {
+            width: 50%;
+
+            margin: 25%;
+        }
+
+        svg {
+            position: relative;
+
+            width: 50%;
+            height: auto;
+
+            margin: 25%;
+
+            .arw {
+                fill: none;
+                stroke: $c-blue-dark1;
+                stroke: #fff;
+                stroke-linecap: round;
+                stroke-linejoin: round;
+                stroke-miterlimit: 10;
+
+                @include transition(stroke .25s);
+            }
+        }
+
+        &:hover,
+        &.active {
+            background-color: $c-green;
+
+            .arw {
+                stroke: #fff;
+            }
+        }
     }
 }
 
@@ -638,6 +653,8 @@
 }
 
 .company-careers-screen7 {
+    margin-top: -1px;
+
     .contents-container {}
 
     .texts-container {

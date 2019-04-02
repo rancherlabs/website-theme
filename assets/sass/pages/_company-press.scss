@@ -400,9 +400,11 @@
   }
 
   .buttons-container {
-    padding: 20px 75px 160px;
+    // padding: 20px 75px 160px;
 
-    background-color: $c-gray-base-light;
+    // background-color: $c-gray-base-light;
+
+    text-align: left;
 
     .button {
       max-width: 310px;
@@ -421,5 +423,18 @@
     padding-top: 75px;
     padding-right: 40px;
     padding-left: 50px;
+
+    .side-bar {
+      position: relative;
+
+      &.sticky {
+        position: fixed;
+
+        top: 50px;
+
+        width: 100%;
+        max-width: 323px;
+      }
+    }
   }
 }

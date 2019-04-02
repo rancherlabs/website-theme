@@ -147,398 +147,397 @@ button {
   * {
     cursor: pointer;
   }
+}
+.button,
+button.button {
+  vertical-align: top;
 
-  &.button {
-    vertical-align: top;
+  height: 50px;
 
-    height: 50px;
+  margin: 0 15px 0 0;
+  padding: 1em 2em;
 
-    margin: 0 15px 0 0;
-    padding: 1em 2em;
+  color: $c-blue;
+  font-family: 'Poppins';
+  font-size: 12px;
+  font-weight: 800;
+  line-height: 0;
+  letter-spacing: 1.5px;
 
-    color: $c-blue;
-    font-family: 'Poppins';
-    font-size: 12px;
+  text-transform: uppercase;
+
+  background-color: rgba($c-blue, 0.1);
+  box-shadow: 12px 25px 50px rgba($c-blue, 0.075);
+  // border: 2px solid rgba($c-blue, .1);
+  border: none;
+
+  box-sizing: border-box;
+
+  @include transition(all 0.25s);
+
+  @media (max-width: 575.98px) {
+    width: 100%;
+
+    margin: 0;
+    margin-top: 15px;
+
+    font-size: 1em;
     font-weight: 800;
-    line-height: 0;
-    letter-spacing: 1.5px;
+    letter-spacing: 0.85px;
 
-    text-transform: uppercase;
+    background-color: $c-sky-blue-light;
 
-    background-color: rgba($c-blue, 0.1);
-    box-shadow: 12px 25px 50px rgba($c-blue, 0.075);
-    // border: 2px solid rgba($c-blue, .1);
-    border: none;
+    &:first-child {
+      margin-top: 0;
+    }
+  }
 
-    box-sizing: border-box;
+  &:last-child {
+    margin-right: 0;
+  }
 
-    @include transition(all 0.25s);
+  &:hover {
+    color: #fff;
+
+    box-shadow: 8px 15px 30px rgba($c-blue, 0.1);
+    background-color: rgba($c-blue, 1);
+  }
+
+  &.full {
+    width: 100%;
+
+    padding-left: 30px;
+    padding-right: 30px;
+
+    text-align: left;
 
     @media (max-width: 575.98px) {
-      width: 100%;
-
-      margin: 0;
-      margin-top: 15px;
-
-      font-size: 1em;
-      font-weight: 800;
-      letter-spacing: 0.85px;
-
-      background-color: $c-sky-blue-light;
-
-      &:first-child {
-        margin-top: 0;
-      }
+      padding-left: 20px;
+      padding-right: 20px;
     }
+  }
 
-    &:last-child {
-      margin-right: 0;
-    }
+  &.c-white {
+    color: #fff;
+
+    background-color: rgba(#fff, 0.1);
+  }
+
+  &.c-green {
+    color: #fff;
+
+    background-color: $c-green;
+  }
+
+  &.c-blue {
+    color: #fff;
+
+    background-color: $c-blue;
+
+    &:hover {}
+  }
+
+  &.c-sky-blue {
+    color: $c-sky-blue;
+
+    background-color: rgba($c-sky-blue, .1);
 
     &:hover {
       color: #fff;
 
-      box-shadow: 8px 15px 30px rgba($c-blue, 0.1);
-      background-color: rgba($c-blue, 1);
+      background-color: rgba($c-sky-blue, .25);
     }
+  }
 
-    &.full {
-      width: 100%;
+  &.linear {
+    color: $c-green;
 
-      padding-left: 30px;
-      padding-right: 30px;
+    background-color: transparent;
+    border: 2px solid $c-green;
 
-      text-align: left;
-
-      @media (max-width: 575.98px) {
-        padding-left: 20px;
-        padding-right: 20px;
-      }
-    }
-
-    &.c-white {
-      color: #fff;
-
-      background-color: rgba(#fff, 0.1);
-    }
-
-    &.c-green {
+    &:hover {
       color: #fff;
 
       background-color: $c-green;
     }
+  }
 
-    &.c-blue {
-      color: #fff;
+  &.text {
+    margin: 5px 0;
+    padding: 0;
 
-      background-color: $c-blue;
+    height: 36px;
 
-      &:hover {}
+    font-size: 18px;
+    font-weight: 400;
+    text-transform: initial;
+    letter-spacing: 0;
+
+    background-color: transparent;
+    box-shadow: none;
+    border: 0;
+
+    @media (max-width: 575.98px) {
+      margin-bottom: 0;
+
+      height: 30px;
+
+      font-size: 1em;
     }
 
-    &.c-sky-blue {
-      color: $c-sky-blue;
+    &:hover {
+      color: $c-blue;
+    }
 
-      background-color: rgba($c-sky-blue, .1);
+    span {
+      &:before {
+        content: "";
+        position: absolute;
 
-      &:hover {
-        color: #fff;
+        bottom: 0;
 
-        background-color: rgba($c-sky-blue, .25);
+        width: 100%;
+        height: 10px;
+
+        background-color: rgba($c-blue, 0.1);
+
+        @include transition(all 0.25s);
       }
     }
 
-    &.linear {
-      color: $c-green;
+    &:hover {
+      span:before {
+        bottom: -3px;
 
-      background-color: transparent;
-      border: 2px solid $c-green;
+        height: 1px;
 
-      &:hover {
-        color: #fff;
-
-        background-color: $c-green;
+        background-color: rgba($c-blue, 0.2);
       }
     }
 
-    &.text {
-      margin: 5px 0;
-      padding: 0;
-
-      height: 36px;
-
-      font-size: 18px;
-      font-weight: 400;
-      text-transform: initial;
-      letter-spacing: 0;
-
-      background-color: transparent;
-      box-shadow: none;
-      border: 0;
-
-      @media (max-width: 575.98px) {
-        margin-bottom: 0;
-
-        height: 30px;
-
-        font-size: 1em;
-      }
-
-      &:hover {
-        color: $c-blue;
-      }
-
+    &.c-green {
       span {
+        color: $c-green;
+
         &:before {
-          content: "";
-          position: absolute;
-
-          bottom: 0;
-
-          width: 100%;
-          height: 10px;
-
-          background-color: rgba($c-blue, 0.1);
-
-          @include transition(all 0.25s);
+          background-color: rgba($c-green, 0.1);
         }
       }
 
       &:hover {
         span:before {
-          bottom: -3px;
-
-          height: 1px;
-
-          background-color: rgba($c-blue, 0.2);
+          background-color: rgba($c-green, 0.35);
         }
-      }
-
-      &.c-green {
-        span {
-          color: $c-green;
-
-          &:before {
-            background-color: rgba($c-green, 0.1);
-          }
-        }
-
-        &:hover {
-          span:before {
-            background-color: rgba($c-green, 0.35);
-          }
-        }
-      }
-
-      &.c-emerald {
-        span {
-          color: $c-emerald;
-
-          &:before {
-            background-color: rgba($c-emerald, 0.1);
-          }
-        }
-
-        &:hover {
-          span:before {
-            background-color: rgba($c-emerald, 0.35);
-          }
-        }
-      }
-
-      &.with-icon .icon {
-        margin-left: 0;
-      }
-
-      &.with-icon span {
-        font-size: 12px;
-        font-weight: 800;
-        font-weight: 900;
-        line-height: 0;
-        letter-spacing: 1.5px;
-        text-transform: uppercase;
-      }
-
-      &.with-icon span:before {
-        display: none;
-      }
-
-      &.with-icon.c-green .icon .svg-face {
-        fill: $c-green;
-      }
-
-      &.with-icon.c-green .icon.round {
-        border-color: $c-green;
-      }
-
-      &.with-icon.c-green span {
-        color: $c-green;
       }
     }
 
-    &.has-icon-right {
-      padding-right: 120px;
-    }
+    &.c-emerald {
+      span {
+        color: $c-emerald;
 
-    &.none {
-      background-color: transparent;
-      border-color: transparent;
-      box-shadow: none;
+        &:before {
+          background-color: rgba($c-emerald, 0.1);
+        }
+      }
 
-      &.c-green {
-        color: $c-green;
+      &:hover {
+        span:before {
+          background-color: rgba($c-emerald, 0.35);
+        }
       }
     }
 
-    img {
-      position: relative;
-      vertical-align: middle;
+    &.with-icon .icon {
+      margin-left: 0;
     }
 
-    .icon {
-      position: relative;
-      display: inline-block;
-      vertical-align: middle;
+    &.with-icon span {
+      font-size: 12px;
+      font-weight: 800;
+      font-weight: 900;
+      line-height: 0;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+    }
 
-      width: 30px;
-      height: 30px;
+    &.with-icon span:before {
+      display: none;
+    }
 
-      margin-top: -3px;
-      margin-right: 5px;
-      margin-bottom: -3px;
-      margin-left: -10px;
+    &.with-icon.c-green .icon .svg-face {
+      fill: $c-green;
+    }
 
-      @include transition(all 0.25s);
+    &.with-icon.c-green .icon.round {
+      border-color: $c-green;
+    }
+
+    &.with-icon.c-green span {
+      color: $c-green;
+    }
+  }
+
+  &.has-icon-right {
+    padding-right: 120px;
+  }
+
+  &.none {
+    background-color: transparent;
+    border-color: transparent;
+    box-shadow: none;
+
+    &.c-green {
+      color: $c-green;
+    }
+  }
+
+  img {
+    position: relative;
+    vertical-align: middle;
+  }
+
+  .icon {
+    position: relative;
+    display: inline-block;
+    vertical-align: middle;
+
+    width: 30px;
+    height: 30px;
+
+    margin-top: -3px;
+    margin-right: 5px;
+    margin-bottom: -3px;
+    margin-left: -10px;
+
+    @include transition(all 0.25s);
+
+    @media (max-width: 575.98px) {
+      width: 1.5em;
+      height: 1.5em;
+
+      margin-top: -0.25em;
+      margin-bottom: -0.25em;
+    }
+
+    &.right {
+      position: absolute;
+
+      top: 50%;
+      right: 30px;
+
+      margin: 0;
+
+      @include transform(translateY(-50%));
 
       @media (max-width: 575.98px) {
-        width: 1.5em;
-        height: 1.5em;
-
-        margin-top: -0.25em;
-        margin-bottom: -0.25em;
+        right: 20px;
       }
+    }
 
+    &.arrow {
+      margin-right: 1.5em;
+    }
+
+    &.linear {
+      color: $c-blue;
+
+      border: 2px solid rgba($c-blue, 1);
+    }
+
+    &.round {
+      border-radius: 50%;
+    }
+
+    .svg-face {
+      fill: $c-blue;
+      stroke: none;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+      stroke-miterlimit: 10;
+
+      @include transition(all 0.25s);
+    }
+
+    .svg-linear {
+      fill: none;
+      stroke: $c-blue;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+      stroke-miterlimit: 10;
+
+      @include transition(all 0.25s);
+    }
+  }
+
+  &.c-white,
+  &.c-green,
+  &.c-blue {
+    .svg-face {
+      fill: #fff;
+    }
+
+    .svg-linear {
+      stroke: #fff;
+    }
+  }
+
+  &.c-sky-blue {
+    .svg-face {
+      fill: $c-sky-blue;
+    }
+
+    .svg-linear {
+      stroke: $c-sky-blue;
+    }
+  }
+
+  &:hover {
+    .icon {
       &.right {
-        position: absolute;
-
-        top: 50%;
-        right: 30px;
-
-        margin: 0;
-
-        @include transform(translateY(-50%));
+        right: 15px;
 
         @media (max-width: 575.98px) {
-          right: 20px;
+          right: 10px;
         }
-      }
-
-      &.arrow {
-        margin-right: 1.5em;
       }
 
       &.linear {
-        color: $c-blue;
+        color: #fff;
 
-        border: 2px solid rgba($c-blue, 1);
+        border-color: #fff;
       }
 
-      &.round {
-        border-radius: 50%;
-      }
-
-      .svg-face {
-        fill: $c-blue;
-        stroke: none;
-        stroke-linecap: round;
-        stroke-linejoin: round;
-        stroke-miterlimit: 10;
-
-        @include transition(all 0.25s);
-      }
-
-      .svg-linear {
-        fill: none;
-        stroke: $c-blue;
-        stroke-linecap: round;
-        stroke-linejoin: round;
-        stroke-miterlimit: 10;
-
-        @include transition(all 0.25s);
-      }
-    }
-
-    &.c-white,
-    &.c-green,
-    &.c-blue {
       .svg-face {
         fill: #fff;
+
+        @include transition(all 0.25s);
       }
 
       .svg-linear {
         stroke: #fff;
       }
     }
-
-    &.c-sky-blue {
-      .svg-face {
-        fill: $c-sky-blue;
-      }
-
-      .svg-linear {
-        stroke: $c-sky-blue;
-      }
-    }
-
-    &:hover {
-      .icon {
-        &.right {
-          right: 15px;
-
-          @media (max-width: 575.98px) {
-            right: 10px;
-          }
-        }
-
-        &.linear {
-          color: #fff;
-
-          border-color: #fff;
-        }
-
-        .svg-face {
-          fill: #fff;
-
-          @include transition(all 0.25s);
-        }
-
-        .svg-linear {
-          stroke: #fff;
-        }
-      }
-    }
-
-    span {
-      position: relative;
-      vertical-align: middle;
-    }
   }
 
-  &[disabled="disabled"] {
-    pointer-events: none;
+  span {
+    position: relative;
+    vertical-align: middle;
+  }
+}
+button[disabled="disabled"] {
+  pointer-events: none;
 
-    background-color: $c-disabled-default;
-    border-color: $c-disabled-default;
-    box-shadow: 0;
+  background-color: $c-disabled-default;
+  border-color: $c-disabled-default;
+  box-shadow: 0;
 
-    &.type-text {
-      background-color: transparent;
-      border-color: transparent;
-    }
+  &.type-text {
+    background-color: transparent;
+    border-color: transparent;
+  }
 
-    &.linear {
-      background-color: transparent;
-    }
+  &.linear {
+    background-color: transparent;
   }
 }
 
