@@ -1644,9 +1644,15 @@
 
 .homepage-screen7 {
 	.set-lines {
+		z-index: -1;
+
 		> div::after {
-			border-left: 0;
+			// border-left: 0;
 		}
+	}
+
+	.contents-container {
+		z-index: 1;
 	}
 
 	.images-container {
