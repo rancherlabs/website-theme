@@ -1630,3 +1630,55 @@ html {
   -ms-flex-align: center !important;
   align-items: center !important;
 }
+
+// hide.
+.hide {
+  display: none;
+}
+.hide-xs-down {
+@media (max-width: 575.98px) {
+  display: none !important;
+}
+}
+.hide-sm-up {
+@media (min-width: 576px) {
+  display: none !important;
+}
+}
+.hide-sm-down {
+@media (max-width: 767.98px) {
+  display: none !important;
+}
+}
+.hide-md-up {
+@media (min-width: 768px) {
+  display: none !important;
+}
+}
+.hide-md-down {
+@media (max-width: 991.98px) {
+  display: none !important;
+}
+}
+.hide-lg-up {
+@media (min-width: 992px) {
+  display: none !important;
+}
+}
+.hide-lg-down {
+@media (max-width: 1199.98px) {
+  display: none !important;
+}
+}
+.hide-xl-up {
+@media (min-width: 1200px) {
+  display: none !important;
+}
+}
+
+@media (min-width: 576px) and (max-width: 767.98px) {
+}
+@media (min-width: 768px) and (max-width: 991.98px) {
+}
+@media (min-width: 992px) and (max-width: 1199.98px) {
+}

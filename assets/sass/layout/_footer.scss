@@ -11,7 +11,7 @@
 
   background-color: $c-blue-dark1;
 
-  label {
+  .label {
     height: 30px;
 
     margin-bottom: 0;
@@ -52,7 +52,7 @@
     position: relative;
     display: flex;
 
-    label {
+    .label {
       display: none;
     }
   }

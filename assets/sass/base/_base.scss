@@ -44,6 +44,42 @@ body {
   -khtml-user-select: none;
 
   -webkit-overflow-scrolling: touch;
+
+  @media (max-width: 575.98px) {
+		&:before,
+		&:after {
+			z-index: -1;
+			content: '';
+			position: absolute;
+
+			top: 0;
+			left: $mobile-side-space;
+
+			width: 1px;
+			height: 100%;
+
+			background-color: $c-gray-base-light;
+		}
+		&:after {
+			right: $mobile-side-space;
+			left: initial;
+		}
+	}
+}
+
+.main::before {
+	@media (max-width: 575.98px) {
+		content: '';
+		position: absolute;
+
+		top: 0;
+		left: calc(50% - .5px);
+
+		width: 1px;
+		height: 100%;
+
+		background-color: $c-gray-base-light;
+	}
 }
 
 ol,

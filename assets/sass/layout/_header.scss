@@ -260,7 +260,7 @@
 
     background-color: $c-blue-dark2;
 
-    label {
+    .label {
       margin: 0;
       margin-bottom: 30px;
       padding: 0;
@@ -358,7 +358,7 @@
   .articles-container {
     padding-bottom: 30px;
 
-    label {
+    .label {
       margin: 0;
       padding: 0;
 
@@ -448,7 +448,7 @@
 
       flex-wrap: wrap;
 
-      label {
+      .label {
         flex: 0 0 100%;
       }
 
@@ -477,7 +477,7 @@
   .feature-container {
     padding-bottom: 30px;
 
-    label {
+    .label {
       margin: 0;
       padding: 0;
 

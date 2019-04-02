@@ -10,9 +10,24 @@ h1 {
   line-height: 1.167;
 
   @media (max-width: 575.98px) {
-    margin-bottom: 15px;
+    margin-bottom: 14px;
 
     font-size: 2em;
+  }
+  @media (min-width: 576px) and (max-width: 767.98px) {
+    margin-bottom: 16px;
+
+    font-size: 2.4em;
+  }
+  @media (min-width: 768px) and (max-width: 991.98px) {
+    margin-bottom: 18px;
+
+    font-size: 2.9em;
+  }
+  @media (min-width: 992px) and (max-width: 1199.98px) {
+    margin-bottom: 20px;
+
+    font-size: 3.3em;
   }
 }
 
@@ -28,6 +43,15 @@ h2 {
 
   @media (max-width: 575.98px) {
     font-size: 1.75em;
+  }
+  @media (min-width: 576px) and (max-width: 767.98px) {
+    font-size: 1.9em;
+  }
+  @media (min-width: 768px) and (max-width: 991.98px) {
+    font-size: 2.1em;
+  }
+  @media (min-width: 992px) and (max-width: 1199.98px) {
+    font-size: 2.4em;
   }
 }
 
@@ -45,6 +69,17 @@ h3 {
     font-size: 0.9em;
     line-height: 1.6;
   }
+  @media (min-width: 576px) and (max-width: 767.98px) {
+    font-size: 1.2em;
+  }
+  @media (min-width: 768px) and (max-width: 991.98px) {
+    font-size: 1.8em;
+    line-height: 1.35;
+  }
+  @media (min-width: 992px) and (max-width: 1199.98px) {
+    font-size: 2em;
+    line-height: 1.4;
+  }
 }
 
 h4 {
@@ -57,6 +92,18 @@ h4 {
   font-weight: 200;
   font-weight: 100;
 
+  @media (max-width: 575.98px) {
+    font-size: 0.8em;
+  }
+  @media (min-width: 576px) and (max-width: 767.98px) {
+    font-size: .9em;
+  }
+  @media (min-width: 768px) and (max-width: 991.98px) {
+    font-size: 1em;
+  }
+  @media (min-width: 992px) and (max-width: 1199.98px) {
+    font-size: 1.05em;
+  }
   @media (max-width: 1279px) {
     font-size: 1.1em;
   }

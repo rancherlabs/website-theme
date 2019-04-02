@@ -14,7 +14,7 @@ span {
 }
 
 // default label.
-label,
+// label,
 .label {
   position: relative;
   display: block;
@@ -61,19 +61,31 @@ p {
 
   line-height: 1.775;
 
-  @media (max-width: 1279px) {
-    font-size: 1.15em;
-  }
-
+  
   @media (max-width: 575.98px) {
     font-size: 1.05em;
     line-height: 1.5;
+  }
+  @media (min-width: 576px) and (max-width: 767.98px) {
+    font-size: .9em;
+  }
+  @media (min-width: 768px) and (max-width: 991.98px) {
+    font-size: 1em;
+    line-height: 1.5;
+  }
+  @media (min-width: 992px) and (max-width: 1199.98px) {
+    font-size: 1.15em;
+    line-height: 1.6;
   }
 
   &.set-left-bar {
     position: relative;
 
     margin-left: 105px;
+
+    @media (min-width: 576px) and (max-width: 767.98px) {
+      margin-left: 0;
+    }
 
     &:before {
       content: "";
@@ -86,6 +98,13 @@ p {
       height: 1px;
 
       background-color: $c-sky-blue;
+
+      @media (max-width: 575.98px) {
+        display: none;
+      }
+      @media (min-width: 576px) and (max-width: 767.98px) {
+        display: none;
+      }
     }
   }
 
@@ -176,6 +195,8 @@ button.button {
   @include transition(all 0.25s);
 
   @media (max-width: 575.98px) {
+    white-space: nowrap;
+
     width: 100%;
 
     margin: 0;
