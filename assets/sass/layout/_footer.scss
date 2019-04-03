@@ -38,15 +38,27 @@
       background-size: 90% auto;
       background-position: -140% bottom;
     }
-
-    .footer-side-items {
-      position: relative;
+    @media (min-width: 576px) and (max-width: 767.98px) {
+      padding: 50px 0;
     }
   }
 }
 
+.footer-side-items {
+  position: relative;
+
+  @media (min-width: 576px) and (max-width: 767.98px) {
+    display: flex;
+
+    margin-bottom: 50px;
+  }
+}
 .footer-news-letter-form {
   position: relative;
+
+  @media (min-width: 576px) and (max-width: 767.98px) {
+    margin-right: 20px;
+  }
 
   .hs-form {
     position: relative;
@@ -67,8 +79,6 @@
   .hbspt-form .hs-form-field .input {
     width: 100% !important;
   }
-
-
 
   .hs-input {
     position: relative;
@@ -172,6 +182,11 @@
   @media (max-width: 575.98px) {
     margin-top: 40px;
   }
+  @media (min-width: 576px) and (max-width: 767.98px) {
+    flex: 1;
+
+    margin-top: 0;
+  }
 
   ul {
     position: relative;
@@ -179,6 +194,14 @@
     @media (max-width: 575.98px) {
       display: flex;
     }
+    @media (min-width: 576px) and (max-width: 767.98px) {
+      display: flex;
+
+      height: 50px;
+
+      align-items: center;
+    }
+
 
     li {
       position: relative;
@@ -194,6 +217,14 @@
 
         text-align: center;
       }
+      @media (min-width: 576px) and (max-width: 767.98px) {
+        flex: 0 0 16.6666%;
+        max-width: 16.6666%;
+
+        margin-right: auto;
+
+        text-align: center;
+      }
 
       &:last-child {
         margin-right: 0;
@@ -206,6 +237,11 @@
 
       @media (max-width: 575.98px) {
         width: 46%;
+        height: auto;
+      }
+      @media (min-width: 576px) and (max-width: 767.98px) {
+        width: 100%;
+        max-width: 30px;
         height: auto;
       }
     }
@@ -230,7 +266,9 @@
       position: relative;
       display: block;
 
-      height: 28px;
+      // height: 28px;
+
+      padding-bottom: 12px;
 
       color: rgba(#fff, 0.75);
       font-size: 15px;
@@ -244,6 +282,7 @@
   a {
     color: rgba(#fff, 0.75);
     text-decoration: none;
+    line-height: 1.2;
 
     &:hover {
       color: #fff;

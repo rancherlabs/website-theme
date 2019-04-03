@@ -1665,6 +1665,8 @@
 		.image-container {
 			background-color: $c-blue-gray;
 
+			line-height: 0;
+
 			@media (max-width: 575.98px) {
 				min-height: 280px;
 			}
@@ -1676,6 +1678,13 @@
 				right: 0;
 				bottom: 0;
 				left: 0;
+
+				img {
+					position: relative;
+
+					width: auto;
+					height: 100%;
+				}
 			}
 		}
 	}
@@ -1730,8 +1739,6 @@
 				color: rgba(#fff, .75);
 
 				@media (max-width: 575.98px) {
-					font-size: 1em;
-
 					@include textElipsis(3, 1.75);
 				}
 			}
@@ -1750,11 +1757,25 @@
 			padding-bottom: 60px;
 			padding-left: $mobile-side-space;
 		}
+		@media (min-width: 576px) and (max-width: 767.98px) {
+			padding-top: 50px;
+			padding-bottom: 50px;
+		}
+		@media (min-width: 768px) and (max-width: 991.98px) {
+			padding-top: 70px;
+			padding-bottom: 70px;
+		}
 
-		label {
+		.label {
 			margin-top: 100px;
 
 			@media (max-width: 575.98px) {
+				margin-top: 0;
+			}
+			@media (min-width: 576px) and (max-width: 767.98px) {
+				margin-top: 0;
+			}
+			@media (min-width: 768px) and (max-width: 991.98px) {
 				margin-top: 0;
 			}
 		}
@@ -1768,10 +1789,6 @@
 		}
 
 		.description-label {
-			@media (max-width: 575.98px) {
-				font-size: 1em;
-				line-height: 1.75;
-			}
 		}
 
 		.buttons-container {
@@ -1806,18 +1823,26 @@
 		.image-wrap {
 			line-height: 0;
 
+			height: 100%;
+
 			.image {
 				position: relative;
 
 				width: 90%;
 				height: auto;
 
+				box-shadow: 10px 15px 75px rgba($c-blue-dark1, .15);
+
 				@media (max-width: 575.98px) {
 					width: calc(100% - 30px);
 				}
-
-				&.shadow {
-					box-shadow: 10px 15px 75px rgba($c-blue-dark1, .15);
+				@media (min-width: 576px) and (max-width: 767.98px) {
+					width: auto;
+					height: 100%;
+				}
+				@media (min-width: 768px) and (max-width: 991.98px) {
+					width: auto;
+					height: 100%;
 				}
 			}
 		}
@@ -1829,6 +1854,11 @@
 	background-size: 100% auto;
 	background-repeat: no-repeat;
 	background-position: left bottom;
+	
+	@media (max-width: 1450px) {
+		background-size: cover;
+		background-position: left top;
+	}
 
 	@media (max-width: 575.98px) {
 		background-color: $c-gray-base-light;
@@ -1836,7 +1866,11 @@
   }
   
   .blind-cloud {
-    position: relative;
+		position: relative;
+		
+		@media (max-width: 1240px) {
+			margin: 0;
+		}
 
     .blind {
       position: relative;
@@ -1845,11 +1879,14 @@
 
       .set-ground {
         z-index: 1;
-
-        .line-custom {
-          height: 31px;
-        }
       }
+			.line-custom {
+				height: 31px;
+
+				@media (max-width: 1144px) {
+					height: 100%;
+				}
+			}
 
 			.cloud-wrap {
 				position: relative;
@@ -1901,9 +1938,31 @@
 				filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f2f5f5', endColorstr='#ffffff',GradientType=0 ); /* IE6-9 */
 			}
 		}
+		@media (min-width: 576px) and (max-width: 767.98px) {
+			align-items: flex-start !important;
+
+			padding: 80px 0;
+			padding-top: 140px;
+		}
+		@media (min-width: 768px) and (max-width: 991.98px) {
+			align-items: flex-start !important;
+
+			padding: 80px 0;
+			padding-top: 140px;
+		}
+		@media (min-width: 992px) and (max-width: 1199.98px) {
+		}
 	}
 
 	.texts-container {
+		@media (min-width: 576px) and (max-width: 767.98px) {
+			margin-bottom: 20px;
+			text-align: center;	
+		}
+		@media (min-width: 768px) and (max-width: 991.98px) {
+			margin-bottom: 40px;
+			text-align: center;	
+		}
 		.title-label {
 			@media (max-width: 575.98px) {
 				margin-bottom: 30px;
@@ -1943,6 +2002,9 @@
 			margin: 0;
 			padding: 30px 22px 40px;
 		}
+		@media (min-width: 768px) and (max-width: 991.98px) {
+			height: 100%;
+		}
 
 		.title-label {
 			font-size: 25px;
@@ -1956,7 +2018,6 @@
 			line-height: 1.67;
 
 			@media (max-width: 575.98px) {
-				font-size: 1em;
 				line-height: 1.7;
 			}
 		}
