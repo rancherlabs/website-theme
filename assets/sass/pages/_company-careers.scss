@@ -711,8 +711,9 @@
     position: relative;
     display: flex;
 
-    flex-wrap: nowrap;
-    align-items: center;
+    flex-wrap: wrap;
+
+    height: 100%;
 
     padding: 45px 50px;
 
@@ -720,44 +721,24 @@
     border-radius: 10px;
     box-shadow: 15px 20px 50px rgba($c-blue, .1);
 
-    .texts-container {
+    .head-container {
       position: relative;
 
       flex: 1;
+
+      height: 50px;
 
       padding: 0;
     }
 
     .position-label {
-      margin-bottom: 14px;
+      margin-top: 10px;
+      margin-bottom: 0;
 
       color: $c-blue;
       font-size: 22px;
       font-weight: 300;
       line-height: 1.45;
-    }
-
-    .location-label {
-      margin-bottom: 0;
-
-      color: $c-blue-dark1;
-      font-size: 12px;
-      font-family: 'Poppins';
-      font-weight: 800;
-      text-transform: uppercase;
-      letter-spacing: 1px;
-
-      .icon {
-        position: relative;
-        display: inline-block;
-        vertical-align: middle;
-
-        width: 16px;
-        height: auto;
-
-        margin-right: 5px;
-        margin-left: -2px;
-      }
     }
 
     .buttons-container {
@@ -771,6 +752,59 @@
 
       .button {
         min-width: 150px;
+      }
+    }
+
+    .informations-container {
+      position: relative;
+      flex: 0 0 100%;
+
+      height: 100%;
+
+      margin-top: 30px;
+    }
+
+    .information-label {
+      position: relative;
+      display: inline-block;
+
+      width: 100%;
+
+      margin-bottom: 0;
+      padding-top: 25px;
+      padding-bottom: 25px;
+
+      color: $c-blue-dark1;
+      font-size: 12px;
+      font-family: 'Poppins';
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+
+      border-top: 1px solid $light-grey;
+
+      .icon {
+        position: relative;
+        display: inline-block;
+        vertical-align: middle;
+
+        width: 15px;
+        height: auto;
+
+        margin-top: -2px;
+        margin-right: 15px;
+      }
+
+      .side-item {
+        position: absolute;
+
+        right: 0;
+      }
+
+      .location-item {
+        display: block;
+
+        margin-top: 10px;
       }
     }
   }

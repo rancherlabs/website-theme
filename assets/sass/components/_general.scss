@@ -342,6 +342,22 @@ button.button {
         background-color: rgba($c-blue, 0.2);
       }
     }
+    &.block-hover {
+      cursor: default;
+
+      * {
+        cursor: default;
+      }
+    }
+    &.block-hover:hover {
+      span:before {
+        bottom: 0;
+  
+        height: 10px;
+
+        background-color: rgba($c-blue, 0.1);
+      }
+    }
 
     &.c-green {
       span {
@@ -583,6 +599,12 @@ button[disabled="disabled"] {
 
   &.theme-grey {
     background-color: $c-gray-base-light;
+
+    @media (max-width: 575.98px) {
+      .rancher-logo {
+        background-color: $c-gray-base-light;
+      }
+    }
   }
 
   .rancher-logo {
@@ -594,6 +616,19 @@ button[disabled="disabled"] {
       padding: 25px 10px;
 
       background-color: #fff;
+
+      &:before {
+        content: '';
+        position: absolute;
+
+        top: 0;
+        left: 100% !important;
+
+        width: 100%;
+        height: 100%;
+
+        background-color: $c-blue-dark1;
+      }
     }
 
     img {
@@ -681,22 +716,28 @@ button[disabled="disabled"] {
       padding-right: $mobile-side-space;
       padding-left: $mobile-side-space;
 
-      button.button {
+      a {
         flex: 0 0 calc(50% - 5px);
-
         max-width: calc(50% - 5px);
-
-        margin-top: 0;
-        padding: 15px;
-
-        font-size: 14px;
-        font-family: "Poppins";
-        letter-spacing: 1.5px;
-        text-align: center;
 
         &:first-child {
           margin-right: 10px;
         }
+      }
+
+      .button {
+        height: 44px;
+
+        margin-top: 0;
+        padding: 15px 0;
+
+        font-size: 14px;
+        font-family: "Poppins";
+        letter-spacing: 1px;
+        text-align: center;
+      }
+      .linear {
+        border-width: 1px;
       }
     }
     @media (min-width: 576px) and (max-width: 991.98px) {

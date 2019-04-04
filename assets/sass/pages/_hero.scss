@@ -1,7 +1,13 @@
 .hero-type1 {
+  margin-top: 130px;
+
   overflow: hidden;
 
   background-color: $c-gray-base-light;
+
+  @media (min-width: 768px) and (max-width: 991.98px) {
+    margin-top: 136px;
+  }
 
   .decoration {
     position: relative;
@@ -13,26 +19,91 @@
     line-height: 0;
 
     &.cloud-big {
-      min-height: 130px;
+      top: -52px;
 
-      background-color: #fff;
+      height: 0;
+
+      margin-top: 0;
+
+      @media (max-width: 575.98px) {
+        top: 0;
+      }
+      @media (min-width: 576px) and (max-width: 767.98px) {
+        top: -10px;
+      }
+      @media (min-width: 768px) and (max-width: 991.98px) {
+        top: -44px;
+      }
+      @media (min-width: 992px) and (max-width: 1199.98px) {
+      }
 
       .image {
+        position: absolute;
+
+        top: 100%;
         left: 50%;
 
+        width: 100%;
         max-width: 1162px;
 
-        margin-top: 8%;
         margin-bottom: -114px;
 
         @include transform(translateX(-50%));
+
+        @media (max-width: 575.98px) {
+          left: 6%;
+
+          width: auto;
+          height: 81px;
+
+          @include transform(translateX(0));
+        }
+        @media (min-width: 576px) and (max-width: 767.98px) {
+          width: auto;
+          height: 102px;
+        }
+        @media (min-width: 768px) and (max-width: 991.98px) {
+          width: auto;
+          height: 130px;
+        }
+        @media (min-width: 992px) and (max-width: 1199.98px) {
+          width: auto;
+          height: 163px;
+        }
       }
     }
 
     &.rancher-ground {
+      @media (max-width: 575.98px) {
+        margin-top: 0;
+      }
+      @media (min-width: 576px) and (max-width: 767.98px) {
+        margin-top: 0;
+      }
+      @media (min-width: 768px) and (max-width: 991.98px) {
+        margin-top: 30px;;
+      }
+      @media (min-width: 992px) and (max-width: 1199.98px) {
+      }
+
       .ground {
         width: 100%;
         height: auto;
+
+        @media (max-width: 575.98px) {
+          left: 50%;
+
+          width: auto;
+          height: 108px;
+
+          @include transform(translateX(-50%));
+        }
+        @media (min-width: 576px) and (max-width: 767.98px) { //sm
+        }
+        @media (min-width: 768px) and (max-width: 991.98px) { //md
+        }
+        @media (min-width: 992px) and (max-width: 1199.98px) { //lg
+        }
       }
     }
   }
@@ -49,17 +120,73 @@
       margin-right: auto;
       margin-left: auto;
 
+      @media (max-width: 575.98px) {
+        margin-top: 45px;
+        padding-right: 30px;
+        padding-left: 30px;
+      }
+      @media (min-width: 576px) and (max-width: 767.98px) {
+        margin-top: 60px;
+        padding-right: 30px;
+        padding-left: 30px;
+      }
+      @media (min-width: 768px) and (max-width: 991.98px) {
+        margin-top: 80px;
+        padding-right: 30px;
+        padding-left: 30px;
+      }
+      @media (min-width: 992px) and (max-width: 1199.98px) {
+        margin-top: 120px;
+        padding-right: 30px;
+        padding-left: 30px;
+      }
+
       .title-label {
         color: #000;
         font-size: 50px;
         font-weight: 200;
         text-align: center;
+
+        @media (max-width: 575.98px) {
+          font-size: 30px;
+        }
+        @media (min-width: 576px) and (max-width: 767.98px) {
+          font-size: 2em;
+        }
+        @media (min-width: 768px) and (max-width: 991.98px) {
+          font-size: 2.5em;
+        }
+        @media (min-width: 992px) and (max-width: 1199.98px) {
+          font-size: 3em;
+        }
       }
 
       .description-label {
         color: #000;
+        font-size: 25px;
         line-height: 1.4;
         text-align: center;
+
+        @media (max-width: 575.98px) {
+          font-size: 14px;
+
+          line-height: 1.72;
+        }
+        @media (min-width: 576px) and (max-width: 767.98px) {
+          font-size: 1.3em;
+
+          line-height: 1.5;
+        }
+        @media (min-width: 768px) and (max-width: 991.98px) {
+          font-size: 1.4em;
+
+          line-height: 1.5;
+        }
+        @media (min-width: 992px) and (max-width: 1199.98px) {
+          font-size: 1.5em;
+
+          line-height: 1.5;
+        }
       }
     }
   }

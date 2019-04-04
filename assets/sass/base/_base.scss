@@ -105,52 +105,6 @@ a {
     color: #4460a6;
   }
 
-  &.a-underline {
-    position: relative;
-
-    color: $c-blue;
-
-    text-decoration: none;
-
-    span:before {
-      content: "";
-      position: absolute;
-
-      bottom: -2px;
-
-      width: 100%;
-      height: 10px;
-
-      background-color: rgba($c-blue, 0.1);
-
-      @include transition(all 0.25s);
-    }
-    &:hover {
-      span:before {
-        bottom: -3px;
-
-        height: 1px;
-
-        background-color: rgba($c-blue, 0.2);
-      }
-    }
-
-    &.normal {
-      font-weight: normal;
-    }
-
-    &.c-emerald {
-      color: $c-emerald;
-
-      span:before {
-        background-color: rgba($c-emerald, 0.1);
-      }
-      &:hover span:before {
-        background-color: rgba($c-emerald, 0.2);
-      }
-    }
-  }
-
   &.disabled,
   &[disabled] {
     pointer-events: none;
@@ -158,5 +112,66 @@ a {
     opacity: 0.5;
 
     cursor: default;
+  }
+}
+.a-underline {
+  position: relative;
+
+  color: $c-blue;
+
+  text-decoration: none;
+
+  span:before {
+    content: "";
+    position: absolute;
+
+    bottom: -2px;
+
+    width: 100%;
+    height: 10px;
+
+    background-color: rgba($c-blue, 0.1);
+
+    @include transition(all 0.25s);
+  }
+  &:hover {
+    span:before {
+      bottom: -3px;
+
+      height: 1px;
+
+      background-color: rgba($c-blue, 0.2);
+    }
+  }
+  &.block-hoder {
+    cursor: default;
+
+    * {
+      cursor: default;
+    }
+  }
+  &.block-hover:hover {
+    span:before {
+      bottom: -2px;
+
+      height: 10px;
+
+      background-color: rgba($c-blue, 0.1);
+    }
+  }
+
+  &.normal {
+    font-weight: normal;
+  }
+
+  &.c-emerald {
+    color: $c-emerald;
+
+    span:before {
+      background-color: rgba($c-emerald, 0.1);
+    }
+    &:hover span:before {
+      background-color: rgba($c-emerald, 0.2);
+    }
   }
 }
