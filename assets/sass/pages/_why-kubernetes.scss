@@ -1,104 +1,97 @@
-.why-kubernetes-screen1 {
-  background-color: $c-gray-base-light;
+// .why-kubernetes-screen1 {
+//   background-color: $c-gray-base-light;
 
-  .set-ground {
-    // position: absolute;
+//   .set-ground {
+//     margin: 0;
 
-    // top: 0;
-    // right: 0;
-    // bottom: 0;
-    // left: 0;
+//     .decoration-container {
+//       > div,
+//       > img {
+//         position: absolute;
+//       }
 
-    margin: 0;
+//       .ground-upper {
+//         right: 0;
+//         bottom: 0;
 
-    .decoration-container {
-      > div,
-      > img {
-        position: absolute;
-      }
+//         width: 60%;
+//         height: auto;
+//       }
 
-      .ground-upper {
-        right: 0;
-        bottom: 0;
+//       .ground-lower {
+//         bottom: 0;
+//         left: -10%;
 
-        width: 60%;
-        height: auto;
-      }
+//         width: 90%;
+//         height: auto;
+//       }
 
-      .ground-lower {
-        bottom: 0;
-        left: -10%;
+//       .kubernetes-rise {
+//         overflow: hidden;
 
-        width: 90%;
-        height: auto;
-      }
+//         right: 25%;
+//         bottom: 10%;
 
-      .kubernetes-rise {
-        overflow: hidden;
+//         width: 320px;
+//         height: 320px;
 
-        right: 25%;
-        bottom: 10%;
+//         background-color: #fff;
+//         border-radius: 50%;
+//         box-shadow: 20px 25px 50px rgba($c-blue-dark1, .15);
 
-        width: 320px;
-        height: 320px;
+//         img {
+//           position: absolute;
 
-        background-color: #fff;
-        border-radius: 50%;
-        box-shadow: 20px 25px 50px rgba($c-blue-dark1, .15);
+//           top: 50%;
+//           left: 50%;
 
-        img {
-          position: absolute;
+//           width: 70%;
+//           height: auto;
 
-          top: 50%;
-          left: 50%;
+//           @include transform(translate(-50%, -50%));
+//         }
+//       }
 
-          width: 70%;
-          height: auto;
+//       .cloud {
+//         top: 120px;
 
-          @include transform(translate(-50%, -50%));
-        }
-      }
+//         width: 100%;
+//         max-width: 270px;
+//         height: auto;
+//       }
+//     }
+//   }
 
-      .cloud {
-        top: 120px;
+//   .texts-container {
+//     padding-top: 200px;
+//     padding-left: 0;
+//     padding-bottom: 180px;
 
-        width: 100%;
-        max-width: 270px;
-        height: auto;
-      }
-    }
-  }
+//     line-height: 0;
 
-  .texts-container {
-    padding-top: 200px;
-    padding-left: 0;
-    padding-bottom: 180px;
+//     .texts-wrap {}
 
-    line-height: 0;
+//     .title-label {
+//       margin-bottom: 30px;
 
-    .texts-wrap {}
-
-    .title-label {
-      margin-bottom: 30px;
-
-      color: #000;
-      font-size: 50px;
-      font-weight: 200;
-    }
+//       color: #000;
+//       font-size: 50px;
+//       font-weight: 200;
+//     }
     
-    .description-label {
-      margin-top: 0;
-      margin-bottom: 30px;
+//     .description-label {
+//       margin-top: 0;
+//       margin-bottom: 30px;
 
-      color: #000;
-      line-height: 1.4;
+//       color: #000;
+//       line-height: 1.4;
 
-      &:last-child {
-        margin-bottom: 0;
-      }
-    }
-  }
-}
+//       &:last-child {
+//         margin-bottom: 0;
+//       }
+//     }
+//   }
+// }
 
 .why-kubernetes-screen2 {
   .set-ground {
@@ -108,15 +101,33 @@
   .contents-container {
     padding-top: 150px;
 
+    @media (max-width: 575.98px) {
+      padding: 0;
+    }
+
     .contents-wrap {
       background-color: $c-blue-dark1;
+
+      @media (max-width: 575.98px) {
+        background-color: transparent;
+      }
     }
 
     .texts-container {
       padding-top: 100px;
       padding-bottom: 100px;
 
-      .texts-wrap {}
+      @media (max-width: 575.98px) {
+        padding: 0;
+        padding-right: $mobile-side-space;
+        padding-left: $mobile-side-space;
+      }
+
+      .texts-wrap {
+        @media (max-width: 575.98px) {
+          background-color: $c-blue-dark1;
+        }
+      }
 
       .title-label {
         margin-bottom: 30px;
@@ -169,8 +180,9 @@
     }
   }
   .selectable-list-container {
-    margin-top: -5px;
+    max-width: 16.6666666667%;
 
+    margin-top: -5px;
     margin-left: -20px;
     padding-left: 20px;
 

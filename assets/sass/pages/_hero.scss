@@ -193,20 +193,14 @@
 }
 
 .hero-type2 {
+  overflow: hidden;
+
   background-color: $c-gray-base-light;
 
   .set-ground {
-    // position: absolute;
-
-    // top: 0;
-    // right: 0;
-    // bottom: 0;
-    // left: 0;
-
     margin: 0;
 
     .decoration-container {
-
       >div,
       >img {
         position: absolute;
@@ -218,6 +212,11 @@
 
         width: 60%;
         height: auto;
+
+        @media (max-width: 575.98px) {
+          width: auto;
+          height: 77px;
+        }
       }
 
       .ground-lower {
@@ -226,6 +225,13 @@
 
         width: 90%;
         height: auto;
+
+        @media (max-width: 575.98px) {
+          left: 40%;
+
+          width: auto;
+          height: 34px;
+        }
       }
 
       .kubernetes-rise {
@@ -240,6 +246,14 @@
         background-color: #fff;
         border-radius: 50%;
         box-shadow: 20px 25px 50px rgba($c-blue-dark1, .15);
+
+        @media (max-width: 575.98px) {
+          right: 45%;
+          bottom: -30px;
+
+          width: 115px;
+          height: 115px;
+        }
 
         img {
           position: absolute;
@@ -260,6 +274,15 @@
         width: 100%;
         max-width: 270px;
         height: auto;
+
+        @media (max-width: 575.98px) {
+          top: initial;
+
+          bottom: 100px;
+          right: -8%;
+
+          max-width: 140px;
+        }
       }
     }
   }
@@ -271,6 +294,13 @@
 
     line-height: 0;
 
+    @media (max-width: 575.98px) {
+      padding-top: 180px;
+      padding-right: 25px;
+      padding-bottom: 110px;
+      padding-left: 25px;
+    }
+
     .texts-wrap {
       .title-label {
         margin-bottom: 30px;
@@ -278,6 +308,21 @@
         color: #000;
         font-size: 50px;
         font-weight: 200;
+
+        @media (max-width: 575.98px) {
+          margin-bottom: 10px;
+
+          font-size: 30px;
+        }
+        @media (min-width: 576px) and (max-width: 767.98px) {
+          font-size: 2em;
+        }
+        @media (min-width: 768px) and (max-width: 991.98px) {
+          font-size: 2.5em;
+        }
+        @media (min-width: 992px) and (max-width: 1199.98px) {
+          font-size: 3em;
+        }
       }
 
       .description-label {
@@ -286,6 +331,27 @@
 
         color: #000;
         line-height: 1.4;
+
+        @media (max-width: 575.98px) {
+          font-size: 14px;
+
+          line-height: 1.72;
+        }
+        @media (min-width: 576px) and (max-width: 767.98px) {
+          font-size: 1.3em;
+
+          line-height: 1.5;
+        }
+        @media (min-width: 768px) and (max-width: 991.98px) {
+          font-size: 1.4em;
+
+          line-height: 1.5;
+        }
+        @media (min-width: 992px) and (max-width: 1199.98px) {
+          font-size: 1.5em;
+
+          line-height: 1.5;
+        }
 
         &:last-child {
           margin-bottom: 0;
