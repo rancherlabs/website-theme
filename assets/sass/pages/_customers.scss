@@ -764,6 +764,8 @@
 
    .texts-container {
      padding-top: 100px;
+     position: relative;
+     z-index: 2;
 
      .title-label {
        margin-bottom: 50px;
@@ -840,4 +842,21 @@
      break-inside: avoid;
      padding: 1rem 0;
    }
+ }
+
+ .customer-container {
+   display: flex;
+   justify-content: flex-start;
+
+   .logo-wrapper {
+     flex: none;
+     width: 10%;
+   }
+
+   .info-wrapper {
+     flex: 2;
+     text-align: left;
+     padding-left: 20px;
+   }
+
  }
