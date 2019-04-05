@@ -576,6 +576,7 @@
     &[aria-hidden="true"] {
       opacity: .5;
     }
+
     &[aria-hidden="false"] {
       opacity: 1;
     }
@@ -655,6 +656,11 @@
 
     .description-label {
       color: #fff;
+    }
+
+    .thumbnail-container {
+      background-position: center;
+      background-size: cover;
     }
   }
 
@@ -843,7 +849,7 @@
 
     text-align: center;
 
-    > div {
+    >div {
       margin-right: 50px;
       padding-top: 7px;
       padding-right: 50px;
@@ -923,7 +929,7 @@
       color: $c-blue-dark1;
 
       &:last-child {
-          margin-bottom: 0;
+        margin-bottom: 0;
       }
     }
 
@@ -933,14 +939,14 @@
       background-color: $c-blue-dark1;
 
       .label {
-          margin-bottom: 15px;
+        margin-bottom: 15px;
       }
 
       .title {
-          color: #fff;
-          font-size: 20px;
-          font-weight: 400;
-          line-height: 1.5;
+        color: #fff;
+        font-size: 20px;
+        font-weight: 400;
+        line-height: 1.5;
       }
     }
   }
@@ -964,34 +970,36 @@
         min-width: 150px;
       }
     }
+
     .share-container {
       position: relative;
       display: inline-block;
 
       flex: 1;
-  
+
       width: 100%;
-  
+
       .share-wrap {}
-  
+
       ul {
         text-align: right;
       }
+
       li {
         position: relative;
         display: inline-block;
-  
+
         width: 30px;
         height: 30px;
-  
+
         margin-right: 2px;
         padding: 8px;
-  
+
         background-color: rgba($c-blue-gray, .5);
         border-radius: 5px;
-  
+
         &:last-child {
-            margin-right: 0;
+          margin-right: 0;
         }
       }
     }
@@ -1053,6 +1061,7 @@
       }
     }
   }
+
   .card-item {
     vertical-align: middle;
 
@@ -1066,8 +1075,8 @@
     @include transition(margin 0.25s, padding 0.25s, background-color 0.25s);
 
     @media (max-width: 575.98px) {
-        margin: 0;
-        padding: 30px 22px 40px;
+      margin: 0;
+      padding: 30px 22px 40px;
     }
 
     .title-label {
@@ -1136,6 +1145,7 @@
 
         background-color: rgba(#fff, 1);
       }
+
       &:hover {
         span:before {
           background-color: rgba($c-sky-blue, 1);
