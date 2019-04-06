@@ -57,7 +57,9 @@
   position: relative;
 
   @media (min-width: 576px) and (max-width: 767.98px) {
-    margin-right: 20px;
+    width: 50%;
+
+    margin-right: 0;
   }
 
   .hs-form {

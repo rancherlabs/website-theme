@@ -403,10 +403,15 @@
 
 	.slider-description-container {
 		position: relative;
+		flex: 0 0 calc(100% - 150px);
+
+		padding-bottom: 75px;
 
 		@media (max-width: 575.98px) {
 			flex: 0 0 100%;
 			max-width: 100%;
+
+			padding-bottom: 15px;
 		}
 
 		.title-label {
@@ -422,8 +427,6 @@
 		}
 
 		.description-label {
-			margin-bottom: 75px;
-
 			font-size: 15px;
 			line-height: 1.4;
 
@@ -1072,11 +1075,16 @@
 		@media (min-width: 576px) and (max-width: 767.98px) {
 			padding-right: $mobile-side-space;
 			margin-bottom: 30px;
+
+			text-align: center;
 		}
 		@media (min-width: 768px) and (max-width: 991.98px) {
 			margin-bottom: 30px;
 			padding-right: $mobile-side-space;
 			padding-left: 8.6666%;
+			padding-left: 15px;
+
+			text-align: center;
 		}
 		@media (min-width: 992px) and (max-width: 1199.98px) {
 			padding-right: 4%;
@@ -1090,6 +1098,8 @@
 				font-size: 1.6em;
 			}
 			@media (min-width: 576px) and (max-width: 767.98px) {
+				font-size: 2em;
+
 				br {
 					display: none;
 				}
@@ -1097,9 +1107,8 @@
 			@media (min-width: 768px) and (max-width: 991.98px) {
 				font-size: 2.4em;
 			}
-			@media (max-width: 1120px) {
-				font-size: 3em;
-				line-height: 1.2;
+			@media (min-width: 992px) and (max-width: 1199.98px) {
+				font-size: 2.8em;
 			}
 		}
 
@@ -1119,6 +1128,11 @@
 				&:hover {
 					background-color: $c-blue;
 				}
+			}
+		}
+		@media (min-width: 576px) and (max-width: 767.98px) {
+			.button {
+				max-width: 285px;
 			}
 		}
 		@media (min-width: 768px) and (max-width: 991.98px) {
@@ -1218,7 +1232,7 @@
 
 .homepage-screen6 {
 	@media (max-width: 575.98px) {
-		margin-top: -10px;
+		margin-top: 75px;
 	}
 
 	.background-blue-dark-side-left:before {
@@ -2007,15 +2021,23 @@
 		}
 
 		.title-label {
+			min-height: 4.2em;
+
 			font-size: 25px;
 			font-weight: 300;
 			line-height: 1.4;
+
+			@include textElipsis(3, 1.4);
 		}
 
 		.description-label {
+			min-height: 8.35em;
+
 			font-size: 15px;
 			font-weight: 400;
 			line-height: 1.67;
+
+			@include textElipsis(5, 1.67);
 
 			@media (max-width: 575.98px) {
 				line-height: 1.7;

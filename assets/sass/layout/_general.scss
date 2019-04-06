@@ -52,6 +52,10 @@ section.blank {
   .row {
     >div {
       height: 200px;
+
+      @media (min-width: 576px) and (max-width: 991.98px) {
+        height: 100px;
+      }
     }
   }
 }
