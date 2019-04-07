@@ -690,17 +690,13 @@
        position: relative;
        display: inline-block;
 
-       width: 175px;
-       height: 175px;
+       width: 100%;
 
-       background-color: $c-blue-gray;
-       border-radius: 50%;
+       line-height: 0;
 
        .thumbnail {
-         position: absolute;
-
-         top: 50%;
-         left: 50%;
+         position: relative;
+         display: inline-block;
 
          width: 100%;
          height: auto;
