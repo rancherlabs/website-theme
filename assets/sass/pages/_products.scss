@@ -12,7 +12,35 @@
     .contents-container {
     }
 
+    .decoration-cloud-top {
+        z-index: 1;
+        position: absolute;
+        display: inline-block;
+
+        top: 0;
+        right: -50%;
+
+        width: auto;
+        height: 130px;
+
+        // @include transform(translateX(-50%));
+    }
+    .decoration-cloud-bottom {
+        position: absolute;
+        display: inline-block;
+
+        bottom: 0;
+        left: -30%;
+
+        width: auto;
+        height: 106px;
+
+        // @include transform(translateX(-50%));
+    }
+
     .texts-container {
+        z-index: 2;
+
         padding-top: 100px;
         padding-bottom: 180px;
 
@@ -28,6 +56,8 @@
     }
 
     .list-container {
+        z-index: 3;
+
         position: relative;
 
         margin-top: -100px;
@@ -148,12 +178,14 @@
 
         .thumbnail-item {
             position: relative;
+            overflow: hidden;
 
             width: 100%;
 
             margin-top: .9em;
 
-            background-color: #787878;
+            border-radius: 50%;
+            box-shadow: 20px 25px 50px rgba($c-blue-dark1, .15);
 
             line-height: 0;
 
