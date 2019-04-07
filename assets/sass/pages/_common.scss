@@ -247,6 +247,86 @@
   }
 }
 
+.background-blue {
+  background-color: $c-blue;
+}
+.background-blue-side {
+  position: relative;
+
+  &:before {
+    z-index: 1;
+    content: "";
+    position: absolute;
+
+    top: 0;
+    right: 100%;
+
+    // width: 50%;
+    width: 1000px;
+    height: 100%;
+
+    margin-right: -1px;
+
+    background-color: $c-blue;
+  }
+  &:after {
+    z-index: 1;
+    content: "";
+    position: absolute;
+
+    top: 0;
+    left: 100%;
+
+    // width: 50%;
+    width: 1000px;
+    height: 100%;
+
+    margin-left: -1px;
+
+    background-color: $c-blue;
+  }
+}
+.background-blue-side-left {
+  position: relative;
+
+  &:before {
+    z-index: 1;
+    content: "";
+    position: absolute;
+
+    top: 0;
+    right: 100%;
+
+    // width: 50%;
+    width: 1000px;
+    height: 100%;
+
+    margin-right: -1px;
+
+    background-color: $c-blue;
+  }
+}
+.background-blue-side-right {
+  position: relative;
+
+  &:before {
+    z-index: 1;
+    content: "";
+    position: absolute;
+
+    top: 0;
+    left: 100%;
+
+    // width: 50%;
+    width: 1000px;
+    height: 100%;
+
+    margin-left: -1px;
+
+    background-color: $c-blue;
+  }
+}
+
 .background-blue-dark {
   background-color: $c-blue-dark1;
 }
