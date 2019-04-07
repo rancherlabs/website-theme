@@ -455,7 +455,7 @@
 
                 opacity: 0;
 
-                @include textElipsis(2, 1.665);
+                @include textElipsis(5, 1.665);
                 @include transition(opacity .25s);
             }
 

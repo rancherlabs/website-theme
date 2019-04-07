@@ -420,7 +420,9 @@
     padding-bottom: 200px;
   }
 
-  .title-label {}
+  .title-label {
+    text-align: center;
+  }
 
   .description-label {
     &:last-child {
