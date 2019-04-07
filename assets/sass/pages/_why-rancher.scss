@@ -10,6 +10,18 @@
         padding-top: 45px;
         padding-bottom: 70px;
       }
+      @media (min-width: 576px) and (max-width: 767.98px) { //sm
+        padding-top: 70px;
+        padding-bottom: 70px;
+      }
+      @media (min-width: 768px) and (max-width: 991.98px) { //md
+        padding-top: 100px;
+        padding-bottom: 100px;
+      }
+      @media (min-width: 992px) and (max-width: 1199.98px) {
+        padding-top: 150px;
+        padding-bottom: 150px;
+      }
     }
 
     .video-container {
@@ -160,9 +172,23 @@
     .thumbnail-container {
       padding-left: 15px;
       padding-right: 50px;
+
+      @media (max-width: 575.98px) {
+        padding-right: 15px;
+      }
+      @media (min-width: 576px) and (max-width: 1199.98px) {
+        padding-right: 15px;
+      }
     }
     .thumbnail-wrap {
       position: relative;
+
+      @media (max-width: 575.98px) {
+        text-align: center;
+      }
+      @media (min-width: 576px) and (max-width: 1199.98px) {
+        text-align: center;
+      }
       
       .thumbnail {
         position: relative;
@@ -170,6 +196,16 @@
 
         width: 100%;
         height: auto;
+
+        @media (min-width: 576px) and (max-width: 767.98px) { //sm
+          max-width: 400px;
+        }
+        @media (min-width: 768px) and (max-width: 991.98px) { //md
+          max-width: 400px;
+        }
+        @media (min-width: 992px) and (max-width: 1199.98px) { //lg
+          max-width: 400px;
+        }
       }
     }
 
@@ -181,6 +217,15 @@
           margin-bottom: 20px;
 
           line-height: 1.4;
+        }
+        @media (min-width: 576px) and (max-width: 767.98px) {
+          margin-bottom: 20px;
+        }
+        @media (min-width: 768px) and (max-width: 991.98px) {
+          margin-bottom: 25px;
+        }
+        @media (min-width: 992px) and (max-width: 1199.98px) {
+          margin-bottom: 30px;
         }
       }
     }
@@ -205,6 +250,9 @@
         &:last-child {
           margin-bottom: 0;
         }
+      }
+      @media (min-width: 576px) and (max-width: 767.98px) { //sm
+        margin-bottom: 50px;
       }
     }
     .link-wrap {
@@ -292,7 +340,25 @@
       @media (max-width: 575.98px) {
         padding-top: 60px;
         padding-right: $mobile-side-space;
-        padding-bottom: 30px;
+        padding-bottom: 0;
+        padding-left: $mobile-side-space;
+      }
+      @media (min-width: 576px) and (max-width: 767.98px) {
+        padding-top: 70px;
+        padding-right: $mobile-side-space;
+        padding-bottom: 0;
+        padding-left: $mobile-side-space;
+      }
+      @media (min-width: 768px) and (max-width: 991.98px) {
+        padding-top: 100px;
+        padding-right: $mobile-side-space;
+        padding-bottom: 100px;
+        padding-left: $mobile-side-space;
+      }
+      @media (min-width: 992px) and (max-width: 1199.98px) {
+        padding-top: 150px;
+        padding-right: $mobile-side-space;
+        padding-bottom: 150px;
         padding-left: $mobile-side-space;
       }
     }
@@ -307,11 +373,6 @@
       padding-bottom: 200px;
       padding-left: 20px;
 
-      @media (max-width: 1279px) {
-        padding-right: 30px;
-        padding-left: 30px;
-      }
-
       @media (max-width: 575.98px) {
         display: flex;
         flex-wrap: wrap;
@@ -319,8 +380,29 @@
         margin-top: 0;
         padding-top: 0;
         padding-right: 15px;
-        padding-bottom: 60px;
+        padding-bottom: 100px;
         padding-left: 15px;
+      }
+      @media (min-width: 576px) and (max-width: 767.98px) {
+        margin-top: 0;
+        padding-top: 30px;
+        padding-bottom: 100px;
+      }
+      @media (min-width: 768px) and (max-width: 991.98px) {
+        margin-top: 0;
+        padding-top: 60px;
+        padding-right: $mobile-side-space;
+        padding-bottom: 100px;
+        padding-left: $mobile-side-space;
+      }
+      @media (min-width: 992px) and (max-width: 1199.98px) {
+        margin-top: 0;
+        padding-right: $mobile-side-space;
+        padding-left: $mobile-side-space;
+      }
+      @media (min-width: 1200px) and (max-width: 1279px) {
+        padding-right: 30px;
+        padding-left: 30px;
       }
     }
     .button {
@@ -353,6 +435,18 @@
 
       @media (max-width: 575.98px) {
         margin-bottom: 20px;
+      }
+      @media (max-width: 575.98px) {
+        margin-bottom: 20px;
+      }
+      @media (min-width: 576px) and (max-width: 767.98px) {
+        margin-bottom: 25px;
+      }
+      @media (min-width: 768px) and (max-width: 991.98px) {
+        margin-bottom: 30px;
+      }
+      @media (min-width: 992px) and (max-width: 1199.98px) {
+        margin-bottom: 40px;
       }
     }
     .button .icon {
@@ -408,24 +502,66 @@
       @media (max-width: 575.98px) {
         padding-bottom: 60px;
       }
+      @media (min-width: 576px) and (max-width: 767.98px) {
+        padding-bottom: 100px;
+      }
     }
 
     .head-label {
-      .left {
-        padding: 0;
+      padding: 0;
 
-        line-height: 150px;
+      line-height: 150px;
+
+      @media (max-width: 575.98px) {
+        padding-top: 60px;
+        padding-bottom: 30px;
+        padding-left: $mobile-side-space;
+
+        line-height: 1;
+      }
+      @media (min-width: 576px) and (max-width: 767.98px) {
+        padding-left: $mobile-side-space;
+
+        background-color: $c-blue;
+        line-height: 100px;
+
+        &:before,
+        &:after {
+          display: none;
+        }
+      }
+      @media (min-width: 768px) and (max-width: 1199.98px) {
+        padding-left: $mobile-side-space;
+
+        line-height: 100px;
+      }
+      @media (min-width: 1200px) and (max-width: 1240px) {
+        padding-left: $mobile-side-space;
+
+        line-height: 100px;
+      }
+      @media (min-width: 1240.99px) and (max-width: 1280px) {
+        line-height: 100px;
+      }
+
+      .label {
+        margin: 0;
 
         @media (max-width: 575.98px) {
-          padding-top: 60px;
-          padding-bottom: 30px;
-          padding-left: $mobile-side-space;
+          padding-top: 50px;
+          padding-bottom: 0;
 
-          line-height: 1;
+          line-height: 1.2;
         }
+        @media (min-width: 576px) and (max-width: 767.98px) { //sm
+          padding-top: 50px;
+          padding-bottom: 0;
 
-        .label {
-          margin: 0;
+          line-height: 1.2;
+        }
+        @media (min-width: 768px) and (max-width: 991.98px) { //md
+        }
+        @media (min-width: 992px) and (max-width: 1199.98px) { //lg
         }
       }
     }
@@ -440,6 +576,10 @@
         padding-right: 0;
         padding-left: 0;
       }
+      @media (min-width: 576px) and (max-width: 767.98px) {
+        margin-top: -35px;
+        padding: 0;
+      }
 
       .image {
         position: absolute;
@@ -451,6 +591,12 @@
         height: 100%;
 
         @media (max-width: 575.98px) {
+          position: relative;
+
+          width: 100%;
+          height: auto;
+        }
+        @media (min-width: 576px) and (max-width: 767.98px) {
           position: relative;
 
           width: 100%;
@@ -473,6 +619,27 @@
           display: none;
         }
       }
+      @media (min-width: 576px) and (max-width: 767.98px) {
+        padding: 30px;
+
+        &:before {
+          display: none;
+        }
+      }
+      @media (min-width: 768px) and (max-width: 991.98px) {
+        padding-right: 30px;
+        padding-left: 30px;
+      }
+      @media (min-width: 992px) and (max-width: 1199.98px) {
+        padding-right: 40px;
+        padding-bottom: 100px;
+        padding-left: 40px;
+      }
+      @media (min-width: 1200px) and (max-width: 1280px) {
+        padding-right: 50px;
+        padding-bottom: 100px;
+        padding-left: 50px;
+      }
 
       .title-label {
         margin-bottom: 50px;
@@ -481,6 +648,15 @@
 
         @media (max-width: 575.98px) {
           margin-bottom: 15px;
+        }
+        @media (min-width: 576px) and (max-width: 767.98px) {
+          margin-bottom: 20px;
+        }
+        @media (min-width: 768px) and (max-width: 991.98px) {
+          margin-bottom: 30px;
+        }
+        @media (min-width: 992px) and (max-width: 1199.98px) {
+          margin-bottom: 40px;
         }
       }
 
@@ -505,6 +681,9 @@
           display: none;
         }
       }
+      @media (min-width: 576px) and (max-width: 767.98px) {
+        background-color: transparent;
+      }
     }
 
     .texts-container {
@@ -520,11 +699,24 @@
           padding-top: 60px;
         }
       }
+      @media (min-width: 576px) and (max-width: 767.98px) {
+        padding-top: 0;
+        padding-bottom: 0;
+
+        background-color: $c-gray-base-light;
+      }
 
       &:first-child {
         padding-left: 0;
 
         @media (max-width: 575.98px) {
+          padding-left: $mobile-side-space;
+        }
+        @media (min-width: 576px) and (max-width: 767.98px) {
+          padding-top: 60px;
+          padding-left: $mobile-side-space;
+        }
+        @media (min-width: 768px) and (max-width: 1239.98px) {
           padding-left: $mobile-side-space;
         }
       }
@@ -536,6 +728,13 @@
           max-width: 250px;
 
           line-height: 2;
+        }
+      }
+      @media (min-width: 768px) and (max-width: 991.98px) {
+        .label {
+          margin-bottom: 30px;
+
+          white-space: nowrap;
         }
       }
 
@@ -563,6 +762,11 @@
           margin-top: 0;
         }
       }
+      @media (min-width: 576px) and (max-width: 767.98px) {
+        .description-label:first-child {
+          margin-top: 0;
+        }
+      }
     }
 
     .sliders-container {
@@ -572,6 +776,13 @@
       padding-right: 0;
 
       @media (max-width: 575.98px) {
+        z-index: 1;
+
+        margin-top: 0;
+
+        background-color: $c-gray-base-light;
+      }
+      @media (min-width: 576px) and (max-width: 767.98px) {
         z-index: 1;
 
         margin-top: 0;
@@ -588,12 +799,22 @@
 
           margin: 0;
         }
+        @media (min-width: 576px) and (max-width: 767.98px) {
+          z-index: 0;
+
+          margin: 0;
+        }
       }
     }
     .slides-wrap {
       position: relative;
 
       @media (max-width: 575.98px) {
+        margin-top: 40px;
+
+        width: 185%;
+      }
+      @media (min-width: 576px) and (max-width: 767.98px) {
         margin-top: 40px;
 
         width: 185%;
@@ -637,6 +858,11 @@
 
         box-shadow: 8px 8px 16px rgba($c-blue-dark1, .25);
       }
+      @media (min-width: 576px) and (max-width: 767.98px) {
+        margin-right: 18px;
+
+        box-shadow: 8px 8px 16px rgba($c-blue-dark1, .25);
+      }
 
       .thumbnail {
         position: relative;
@@ -664,6 +890,21 @@
 
           padding: 22px;
         }
+        @media (min-width: 576px) and (max-width: 767.98px) {
+          font-size: 17px;
+
+          padding: 24px;
+        }
+        @media (min-width: 768px) and (max-width: 991.98px) {
+          font-size: 18px;
+
+          padding: 28px;
+        }
+        @media (min-width: 992px) and (max-width: 1199.98px) {
+          font-size: 20px;
+
+          padding: 30px;
+        }
       }
       .thumbnail-description.above {
         position: absolute;
@@ -689,6 +930,11 @@
       width: 100%;
 
       @media (max-width: 575.98px) {
+        margin-top: 0;
+        padding-top: 35px;
+        padding-bottom: 35px;
+      }
+      @media (min-width: 576px) and (max-width: 767.98px) {
         margin-top: 0;
         padding-top: 35px;
         padding-bottom: 35px;
@@ -762,6 +1008,14 @@
         padding-top: 60px;
         padding-bottom: 60px;
       }
+      @media (min-width: 576px) and (max-width: 767.98px) {
+        padding-top: 80px;
+        padding-bottom: 80px;
+      }
+      @media (min-width: 768px) and (max-width: 991.98px) {
+        padding-top: 100px;
+        padding-bottom: 100px;
+      }
     }
 
     .texts-container {
@@ -815,6 +1069,13 @@
       box-shadow: 15px 25px 75px rgba($c-blue, .1);
 
       @include transition(margin .25s);
+
+      @media (max-width: 575.98px) {
+        margin-bottom: 0;
+      }
+      @media (min-width: 576px) and (max-width: 767.98px) {
+        margin-bottom: 30px;
+      }
 
       &:hover {
         margin-top: -20px;
@@ -878,7 +1139,6 @@
           @media (max-width: 1279px) {
             font-size: 1em;
           }
-
           @media (max-width: 575.98px) {
             font-size: .8em;
             font-weight: 500;
