@@ -201,15 +201,15 @@
 }
 
 // custom footer.
-.get-started-container {
-    .rancher-logo{
-        &:before {
-            content: '';
-            position: absolute;
-            left: 0;
-            bottom: 0;
-            height: 100%;
-            border-left: 1px solid #f2f5f5;
-        }
-    }
-}
+// .get-started-container {
+//     .rancher-logo{
+//         &:before {
+//             content: '';
+//             position: absolute;
+//             left: 0;
+//             bottom: 0;
+//             height: 100%;
+//             border-left: 1px solid #f2f5f5;
+//         }
+//     }
+// }

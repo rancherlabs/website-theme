@@ -311,8 +311,6 @@
       &:first-child {
         margin-bottom: 100px;
       }
-
-
     }
 
     .sub-title-label {
@@ -373,7 +371,7 @@
         width: 175px;
         height: 175px;
 
-        background-color: $c-blue-gray;
+        // background-color: $c-blue-gray;
         box-shadow: 20px 25px 50px rgba($c-blue, .05);
         border-radius: 50%;
 
@@ -387,7 +385,7 @@
           width: 100%;
           height: auto;
 
-          @include transform(translate(-50%));
+          @include transform(translate(-50%, -50%));
         }
       }
 
@@ -395,6 +393,30 @@
         position: relative;
 
         flex: 1;
+      }
+    }
+
+    .browser1,
+    .browser2 {
+      .content .item {
+        max-height: 350px;
+      }
+    }
+
+    .thumbnail-container {
+      .thumbnail-wrap {
+        position: relative;
+        overflow: hidden;
+
+        border-radius: 10px;
+      }
+
+      .thumbnail {
+        position: relative;
+        display: inline-block;
+
+        width: 100%;
+        height: auto;
       }
     }
   }
@@ -457,15 +479,10 @@
           height: 100px;
 
           background: #f2f5f5;
-          /* Old browsers */
           background: -moz-linear-gradient(top, #f2f5f5 0%, #ffffff 100%);
-          /* FF3.6-15 */
           background: -webkit-linear-gradient(top, #f2f5f5 0%, #ffffff 100%);
-          /* Chrome10-25,Safari5.1-6 */
           background: linear-gradient(to bottom, #f2f5f5 0%, #ffffff 100%);
-          /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
           filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#f2f5f5', endColorstr='#ffffff', GradientType=0);
-          /* IE6-9 */
         }
       }
     }
@@ -519,20 +536,25 @@
         position: relative;
         display: inline-block;
 
-        width: 175px;
-        height: 175px;
+        width: 100%;
 
-        margin-right: auto;
         margin-bottom: 30px;
-        margin-left: auto;
 
-        background-color: $c-blue-gray;
         border-radius: 50%;
+
+        line-height: 0;
 
         opacity: 1;
 
         @include transition(all .25s);
 
+        .thumbnail {
+          position: relative;
+          display: inline-block;
+
+          width: 100%;
+          height: auto;
+        }
       }
 
       .title-label {
@@ -604,7 +626,7 @@
     .card-container:hover .card-item {
       width: 100%;
 
-      // margin: -15px;
+      margin: 0 -15px;
       padding: 25px 45px 40px;
       color: #fff;
 
