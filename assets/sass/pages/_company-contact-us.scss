@@ -131,6 +131,9 @@
                 border-radius: 0;
                 border: 0;
             }
+            textarea.hs-input {
+                height: 150px;
+            }
 
             &.hs-country {
                 label {
@@ -178,6 +181,32 @@
         .hs-richtext {
             color: white;
             line-height: 1.4;
+        }
+        .hs-richtext a {
+            position: relative;
+
+            color: $c-sky-blue;
+
+            &:before {
+                content: "";
+                position: absolute;
+
+                bottom: -2px;
+
+                width: 100%;
+                height: 10px;
+
+                background-color: rgba($c-sky-blue, 0.1);
+
+                @include transition(all 0.25s);
+            }
+            &:hover:before {
+                bottom: -3px;
+        
+                height: 1px;
+        
+                background-color: rgba($c-sky-blue, 0.2);
+            }
         }
 
         .hs-submit {

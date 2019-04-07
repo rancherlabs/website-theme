@@ -205,6 +205,10 @@
 }
 
 .community-videos-and-podcasts-screen3 {
+  .contents-container {
+    padding-bottom: 150px;
+  }
+
   .head-label {
     padding-left: 40px;
     line-height: 100px;
@@ -343,7 +347,7 @@
 }
 
 .community-videos-and-podcasts-screen4 {
-  padding-top: 150px;
+  // padding-top: 150px;
   padding-bottom: 250px;
 
   .head-label {

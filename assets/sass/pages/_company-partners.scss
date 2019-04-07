@@ -1,4 +1,6 @@
 .company-partners-screen1 {
+    overflow: hidden;
+
     margin-top: 130px;
 
     .contents-container {
@@ -14,8 +16,12 @@
         .texts-wrap {
             z-index: 1;
 
-            margin-top: 220px;
-            margin-bottom: 220px;
+            max-width: 1010px;
+            
+            margin-top: 160px;
+            margin-bottom: 50px;
+            margin-right: auto;
+            margin-left: auto;
 
             .title-label {
                 margin-bottom: 10px;
@@ -30,6 +36,105 @@
                 color: #000;
                 line-height: 1.4;
                 text-align: center;
+            }
+        }
+    }
+
+    .decoration {
+        position: relative;
+
+        width: 100%;
+
+        margin-top: -40px;
+
+        line-height: 0;
+
+        &.cloud-big {
+            top: -52px;
+
+            height: 0;
+
+            margin-top: 0;
+
+            @media (max-width: 575.98px) {
+                top: 0;
+            }
+            @media (min-width: 576px) and (max-width: 767.98px) {
+                top: -10px;
+            }
+            @media (min-width: 768px) and (max-width: 991.98px) {
+                top: -44px;
+            }
+            @media (min-width: 992px) and (max-width: 1199.98px) {
+            }
+
+            .image {
+                position: absolute;
+
+                top: 100%;
+                left: 50%;
+
+                width: 100%;
+                max-width: 1162px;
+
+                margin-bottom: -114px;
+
+                @include transform(translateX(-50%));
+
+                @media (max-width: 575.98px) {
+                    left: 6%;
+
+                    width: auto;
+                    height: 81px;
+
+                    @include transform(translateX(0));
+                }
+                @media (min-width: 576px) and (max-width: 767.98px) {
+                    width: auto;
+                    height: 102px;
+                }
+                @media (min-width: 768px) and (max-width: 991.98px) {
+                    width: auto;
+                    height: 130px;
+                }
+                @media (min-width: 992px) and (max-width: 1199.98px) {
+                    width: auto;
+                    height: 163px;
+                }
+            }
+        }
+
+        &.rancher-ground {
+            @media (max-width: 575.98px) {
+                margin-top: 0;
+            }
+            @media (min-width: 576px) and (max-width: 767.98px) {
+                margin-top: 0;
+            }
+            @media (min-width: 768px) and (max-width: 991.98px) {
+                margin-top: 30px;;
+            }
+                @media (min-width: 992px) and (max-width: 1199.98px) {
+            }
+
+            .ground {
+                width: 100%;
+                height: auto;
+
+                @media (max-width: 575.98px) {
+                    left: 50%;
+
+                    width: auto;
+                    height: 108px;
+
+                    @include transform(translateX(-50%));
+                }
+                @media (min-width: 576px) and (max-width: 767.98px) { //sm
+                }
+                @media (min-width: 768px) and (max-width: 991.98px) { //md
+                }
+                @media (min-width: 992px) and (max-width: 1199.98px) { //lg
+                }
             }
         }
     }
@@ -87,16 +192,17 @@
                 margin-right: 40px;
 
                 border-radius: 50%;
-
                 background-color: $c-gray-base-light;
+
+                line-height: 0;
 
                 .icon {
                     position: relative;
 
-                    width: 60%;
+                    width: 40%;
                     height: auto;
 
-                    margin: 20%;
+                    margin: 30%;
                 }
             }
 

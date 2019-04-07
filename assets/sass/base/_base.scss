@@ -96,13 +96,13 @@ a {
   text-decoration: underline;
   text-decoration: none;
 
-  color: #3e6ee5;
+  color: $c-blue;
 
   cursor: pointer;
 
   &:hover,
   &:focus {
-    color: #4460a6;
+    color: $c-blue-hover;
   }
 
   &.disabled,

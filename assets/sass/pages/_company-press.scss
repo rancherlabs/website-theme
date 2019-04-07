@@ -276,16 +276,16 @@
   }
 
   .article-item {
-    margin-bottom: 50px;
-    padding-bottom: 50px;
+    margin-top: 50px;
+    padding-top: 50px;
 
-    border-bottom: 1px solid rgba($c-blue-dark1, .25);
+    border-top: 1px solid rgba($c-blue-dark1, .25);
 
-    &:last-child {
-      margin-bottom: 0;
-      padding-bottom: 0;
+    &:first-child {
+      margin-top: 0;
+      padding-top: 0;
 
-      border-bottom: 0;
+      border-top: 0;
     }
 
     .title-label {
@@ -400,9 +400,8 @@
   }
 
   .buttons-container {
-    // padding: 20px 75px 160px;
-
-    // background-color: $c-gray-base-light;
+    margin-top: 70px;
+    margin-bottom: 40px;
 
     text-align: left;
 
@@ -473,6 +472,7 @@
 
     font-size: 15px;
 
+    background-color: $c-gray-base-light;
     border: 0;
 
     box-sizing: border-box;

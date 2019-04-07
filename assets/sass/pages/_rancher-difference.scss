@@ -147,11 +147,27 @@
       }
 
       .image-container {
+        display: flex;
+
+        align-items: center;
+
         flex: 0 0 40.66%;
 
         max-width: 40.66%;
 
-        background-color: $c-gray-mid-light;
+        padding: 7px;
+
+        background-color: $c-blue-dark1;
+
+        line-height: 0;
+
+        img {
+          position: relative;
+          display: inline-block;
+
+          width: 100%;
+          height: auto;
+        }
       }
     }
 
@@ -183,6 +199,18 @@
         }
       }
 
+      .decoration-cloud {
+        position: absolute;
+        display: inline-block;
+
+        top: 50%;
+        left: -35%;
+
+        width: auto;
+        height: 180px;
+
+        @include transform(translateY(-50%));
+      }
     }
 
     .card-container {
@@ -193,6 +221,7 @@
       margin-top: 0;
       margin-bottom: 0;
       padding: 25px 0;
+      padding-top: 0;
 
       background-color: #fff;
       border-radius: 10px;
@@ -215,15 +244,13 @@
         display: inline-block;
         overflow: hidden;
 
-        width: 80%;
-        max-width: 175px;
+        width: 90%;
 
-        margin-top: 35px;
+        margin-top: 0;
         margin-right: auto;
         margin-left: auto;
 
-        background-color: $c-blue-gray;
-        border-radius: 50%;
+        line-height: 0;
 
         img {
           position: relative;
