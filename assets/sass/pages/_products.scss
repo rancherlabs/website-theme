@@ -4,7 +4,7 @@
     .head-ground {
         bottom: initial;
 
-        height: 130px;
+        height: 100px;
 
         background-color: #fff;
     }
@@ -21,7 +21,7 @@
         right: -50%;
 
         width: auto;
-        height: 130px;
+        height: 100px;
 
         // @include transform(translateX(-50%));
     }
@@ -41,7 +41,7 @@
     .texts-container {
         z-index: 2;
 
-        padding-top: 100px;
+        padding-top: 130px;
         padding-bottom: 180px;
 
         .title-label {

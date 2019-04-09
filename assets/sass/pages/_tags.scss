@@ -1,0 +1,45 @@
+.tags-contents {
+    .contents-container {}
+
+    .head-container {
+        margin-top: 200px;
+        margin-bottom: 0;
+
+        text-align: center;
+
+        .title-label {
+            margin-bottom: 10px;
+        }
+    }
+
+    .tag-list-container {}
+    .tag-item {
+        padding-top: 22px;
+        padding-bottom: 22px;
+
+        border-top: 1px solid $c-gray-mid-light;
+
+        &:first-child {
+            border-top: 0;
+        }
+
+        a {
+            color: $c-green;
+            font-family: 'Poppins';
+            font-size: 25px;
+            font-weight: 300;
+            line-height: 1.4;
+        }
+    }
+
+    .buttons-container {
+        margin-top: 50px;
+        margin-bottom: 250px;
+
+        text-align: center;
+
+        .button {
+            max-width: 310px;
+        }
+    }
+}
