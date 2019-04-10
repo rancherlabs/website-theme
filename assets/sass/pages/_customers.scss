@@ -168,6 +168,12 @@
      }
    }
 
+   .customer-item {
+     &.hidden {
+       display: none;
+     }
+   }
+
    .main-item-container {
      padding-top: 100px;
      padding-bottom: 100px;
