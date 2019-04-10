@@ -281,6 +281,10 @@
 
     border-top: 1px solid rgba($c-blue-dark1, .25);
 
+    &.hidden {
+      display: none;
+    }
+
     &:first-child {
       margin-top: 0;
       padding-top: 0;
