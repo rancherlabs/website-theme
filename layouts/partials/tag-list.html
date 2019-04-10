@@ -1,5 +1,5 @@
-<div class="category-label">
-  {{ range .Params.tags }}
-    <a href="{{ $.Site.BaseURL }}/tags/{{ . | urlize }}" class="category-item">{{ replace . "_" " " }}</a>
-  {{ end }}
+<div class="tag-item">
+    {{ range .Params.tags }}
+      <a href="{{ $.Site.BaseURL }}/tags/{{ . | urlize }}" class="tag-linkage" href="#">{{ replace . "_" " " }}</a>
+    {{ end }}
 </div>

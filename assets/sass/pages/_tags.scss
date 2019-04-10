@@ -42,4 +42,11 @@
             max-width: 310px;
         }
     }
+
+    .pagination {
+        display: flex;
+        width: 300px;
+        justify-content: space-between;
+        margin: 50px auto 100px;
+    }
 }
