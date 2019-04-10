@@ -57,7 +57,7 @@
   <meta property="og:description" content="{{ with .Params.metaDescription }}{{ . }}{{ else }}{{ .Description }}{{ end }}">
   <meta property="og:url" content="{{ $permalink }}" />
   <meta property="og:site_name" content="{{ .Site.Title }}" />
-  <meta property="og:image" content="{{ if .Params.image }}{{ . }}{{ else }}{{.Site.BaseURL}}/img/logo-square.png{{ end }}" />
+  <meta property="og:image" content="{{.Site.BaseURL}}{{ with .Params.image }}{{ . }}{{ else }}/img/logo-square.png{{ end }}" />
   {{ range .Params.categories }}<meta property="article:section" content="{{ . }}" />{{ end }}
   {{ if isset .Params "date" }}<meta property="article:published_time" content="{{ time .Date }}" />{{ end }}
 
