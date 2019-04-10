@@ -86,6 +86,10 @@
 
   .video-container {
     margin-bottom: 30px;
+
+    &.hidden {
+      display: none;
+    }
   }
 
   .video-wrap {
@@ -98,7 +102,10 @@
     .thumbnail-wrap {
       position: relative;
 
+      height: 340px;
       width: 100%;
+      background-position: center;
+      background-size: cover;
 
       line-height: 0;
 
@@ -238,6 +245,10 @@
 
   .video-container {
     margin-bottom: 30px;
+
+    &.hidden {
+      display: none;
+    }
   }
 
   .video-wrap {
