@@ -69,6 +69,8 @@ body {
 
 .main::before {
 	@media (max-width: 575.98px) {
+    z-index: -1;
+
 		content: '';
 		position: absolute;
 

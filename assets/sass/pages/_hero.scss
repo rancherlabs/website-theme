@@ -460,6 +460,7 @@
 }
 
 .hero-type3 {
+  overflow: hidden;
 
   background-color: $c-gray-base-light;
 
@@ -471,7 +472,7 @@
     line-height: 0;
 
     &.cloud-big {
-      min-height: 100px;
+      min-height: 120px;
 
       background-color: #fff;
 
@@ -485,6 +486,27 @@
 
         @include transform(translateX(-50%));
       }
+    }
+
+    @media (max-width: 575.98px) {
+      &.cloud-big {
+        min-height: 135px;
+      }
+      &.cloud-big .image {
+        top: 95%;
+        left: 10%;
+
+        width: auto;
+        height: 100px;
+
+        @include transform(translateX(0));
+      }
+    }
+    @media (min-width: 576px) and (max-width: 767.98px) {
+    }
+    @media (min-width: 768px) and (max-width: 991.98px) {
+    }
+    @media (min-width: 992px) and (max-width: 1199.98px) {
     }
   }
 
@@ -508,6 +530,32 @@
       .description-label {
         color: #000;
         line-height: 1.4;
+      }
+
+      @media (max-width: 575.98px) {
+        margin-top: 40px;
+        margin-bottom: 85px;
+        padding-right: 5px;
+        padding-left: 5px;
+
+        .title-label {
+          margin-bottom: 20px;
+          padding-right: 15%;
+
+          font-size: 30px;
+          line-height: 1.334;
+        }
+
+        .description-label {
+          font-size: 14px;
+          line-height: 1.715;
+        }
+      }
+      @media (min-width: 576px) and (max-width: 767.98px) {
+      }
+      @media (min-width: 768px) and (max-width: 991.98px) {
+      }
+      @media (min-width: 992px) and (max-width: 1199.98px) {
       }
     }
   }
@@ -544,27 +592,94 @@
         height: 130px;
       }
 
-      .floating1 {
+      .floating1-1 {
         position: absolute;
 
-        bottom: 145%;
-        left: 63%;
+        bottom: 210%;
+        left: 67%;
 
         width: 100%;
-        max-width: 233px;
+        max-width: 124px;
+        height: auto;
+      }
+      .floating1-2 {
+        position: absolute;
+
+        bottom: 138%;
+        left: 82%;
+
+        width: 100%;
+        max-width: 50px;
         height: auto;
       }
 
-      .floating2 {
+      .floating2-1 {
         position: absolute;
 
-        bottom: 100%;
+        bottom: 95%;
         left: 55%;
 
         width: 100%;
-        max-width: 543px;
+        max-width: 50px;
         height: auto;
       }
+      .floating2-2 {
+        position: absolute;
+
+        bottom: 280%;
+        left: 85%;
+
+        width: 100%;
+        max-width: 50px;
+        height: auto;
+      }
+    }
+
+    @media (max-width: 575.98px) {
+      height: 85px;
+
+      margin-top: -85px;
+
+      .decoration .ground-lower {
+
+        height: 34px;
+
+        margin-top: 11px;
+        margin-left: 40%;
+        margin-bottom: 40px;
+      }
+      .decoration .ground-upper {
+        height: 104px;
+      }
+      .decoration .floating1-1 {
+        right: 5%;
+        bottom: 250%;
+        left: initial;
+
+        max-width: 56px;
+      }
+      .decoration .floating1-2 {
+        display: none;
+      }
+      .decoration .floating2-1 {
+        max-width: 30px;
+
+        left: 35%;
+        bottom: 40%;
+      }
+      .decoration .floating2-2 {
+        right: 20%;
+        bottom: 375%;
+        left: initial;
+
+        max-width: 26px;
+      }
+    }
+    @media (min-width: 576px) and (max-width: 767.98px) {
+    }
+    @media (min-width: 768px) and (max-width: 991.98px) {
+    }
+    @media (min-width: 992px) and (max-width: 1199.98px) {
     }
   }
 
