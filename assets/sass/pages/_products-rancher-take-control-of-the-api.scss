@@ -78,6 +78,59 @@
             max-height: 480px;
         }
     }
+
+    @media (max-width: 575.98px) {
+        margin-top: 135px;
+
+        .texts-container {
+            padding-top: 50px;
+            padding-bottom: 70px;
+
+            .title-label {
+                margin-bottom: 14px;
+
+                font-size: 2em;
+            }
+
+            .description-label {
+                font-size: 1.05em;
+                line-height: 1.5;
+            }
+        }
+
+        .middle-image-container {
+            margin-top: 10%;
+            margin-bottom: -42%;
+
+            .take-control {
+                .flow {
+                    width: 100%;
+                    height: auto;
+                }
+            }
+
+            .decoration.ground {
+                bottom: 49%;
+            }
+            .decoration.ground .left {
+                left: -95%;
+
+                height: 70px;
+            }
+            .decoration.ground .right {
+                right: -90%;
+                left: initial;
+
+                height: 75px;
+            }
+        }
+    }
+    @media (min-width: 576px) and (max-width: 767.98px) {
+    }
+    @media (min-width: 768px) and (max-width: 991.98px) {
+    }
+    @media (min-width: 992px) and (max-width: 1199.98px) {
+    }
 }
 
 .products-rancher-take-control-of-the-api-screen2 {
@@ -145,6 +198,72 @@
             height: auto;
         }
     }
+
+    @media (max-width: 575.98px) {
+        .contents-container {
+            padding-top: 150px;
+
+            .decoration-cloud {
+                height: 60px;
+            }
+        }
+
+        .texts-container {
+            padding-top: 80px;
+            padding-right: $mobile-side-space;
+            padding-bottom: 20px;
+            padding-left: $mobile-side-space;
+            
+            .decoration-ground {
+                display: none;
+            }
+        }
+        .texts-wrap {
+            width: 100%;
+        }
+
+        .thumbnail-box {
+            padding-bottom: 50px;
+
+            background-color: $c-gray-base-light;
+
+            .decoration-ground {
+                left: -10%;
+
+                height: 60px;
+            }
+        }
+        .thumbnail-container {
+            width: 100%;
+
+            margin-left: 0;
+        }
+
+        .lower-container {
+            padding-top: 50px;
+            padding-right: $mobile-side-space;
+            padding-bottom: 100px;
+            padding-left: $mobile-side-space;
+
+            .decoration-ground {
+                left: -15%;
+                height: 70px;
+            }
+
+            .thumbnail-container {
+                width: 100%;
+
+                margin-bottom: 0;
+                margin-left: 0;
+            }
+        }
+    }
+    @media (min-width: 576px) and (max-width: 767.98px) {
+    }
+    @media (min-width: 768px) and (max-width: 991.98px) {
+    }
+    @media (min-width: 992px) and (max-width: 1199.98px) {
+    }
 }
 
 .products-rancher-take-control-of-the-api-screen3 {
@@ -185,6 +304,19 @@
             width: 100%;
             height: auto;
         }
+    }
+
+    @media (max-width: 575.98px) {
+        .contents-container {
+            padding-top: 50px;
+            padding-bottom: 50px;
+        }
+    }
+    @media (min-width: 576px) and (max-width: 767.98px) {
+    }
+    @media (min-width: 768px) and (max-width: 991.98px) {
+    }
+    @media (min-width: 992px) and (max-width: 1199.98px) {
     }
 }
 
@@ -282,6 +414,52 @@
             }
         }
     }
+
+    @media (max-width: 575.98px) {
+        .contents-container {
+            padding-top: 80px;
+            padding-bottom: 80px;
+
+            .rancher-logo {
+                left: $mobile-side-space;
+                left: initial;
+                right: $mobile-side-space;
+
+                width: 70px;
+            }
+            .ground {
+                height: 50px;
+            }
+
+            .contents-wrap {
+                padding-top: 50px;
+                padding-bottom: 0;
+            }
+        }
+
+        .capture1 {
+            margin-top: 30px;
+            margin-bottom: 30px;
+
+            .thumbnail-container {
+                width: 100%;
+
+                margin-left: 0;
+            }
+
+            .decoration {
+                bottom: -25%;
+
+                max-width: 160px;
+            }
+        }
+    }
+    @media (min-width: 576px) and (max-width: 767.98px) {
+    }
+    @media (min-width: 768px) and (max-width: 991.98px) {
+    }
+    @media (min-width: 992px) and (max-width: 1199.98px) {
+    }
 }
 
 .products-rancher-take-control-of-the-api-screen5 {
@@ -342,5 +520,34 @@
             width: 100%;
             height: auto;
         }
+    }
+
+    @media (max-width: 575.98px) {
+        .contents-container {
+            padding-top: 50px;
+            padding-bottom: 50px;
+        }
+
+        .title-wrap {
+            padding-left: $mobile-side-space;
+        }
+
+        .thumbnail-container {
+            margin-right: -$mobile-side-space;
+            margin-left: -$mobile-side-space;
+            padding-top: 50px;
+            padding-right: $mobile-side-space;
+            padding-bottom: 50px;
+            padding-left: $mobile-side-space;
+        }
+        .thumbnail-wrap {
+            width: 100%;
+        }
+    }
+    @media (min-width: 576px) and (max-width: 767.98px) {
+    }
+    @media (min-width: 768px) and (max-width: 991.98px) {
+    }
+    @media (min-width: 992px) and (max-width: 1199.98px) {
     }
 }
