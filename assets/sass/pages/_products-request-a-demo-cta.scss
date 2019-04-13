@@ -36,6 +36,77 @@
       }
     }
   }
+
+  @media (max-width: 575.98px) {
+    .lower-container {
+      height: 140px;
+
+      margin-top: -140px;
+
+      .decoration {
+        .ground-upper {
+          width: auto;
+          height: 77px;
+        }
+
+        .ground-lower {
+          left: 25%;
+
+          width: auto;
+          height: 60px;
+        }
+
+        .rise {
+          top: initial;
+          bottom: 5%;
+
+          width: 115px;
+          height: 115px;
+        }
+
+        .cloud {
+          top: initial;
+          right: -12%;
+          bottom: 100%;
+          left: initial;
+
+          max-width: 160px;
+        }
+      }
+    }
+
+    .texts-container {
+      padding-top: 180px;
+      padding-right: 25px;
+      padding-bottom: 110px;
+      padding-bottom: 400px;
+      padding-left: 25px;
+    }
+    .texts-container .texts-wrap {
+      margin-top: 0;
+      margin-bottom: 0;
+
+      .title-label {
+        margin-bottom: 10px;
+
+        font-size: 30px;
+      }
+
+      .description-label {
+        margin-bottom: 10px;
+
+        font-size: 14px;
+
+        line-height: 1.72;
+      }
+    }
+  }
+  @media (min-width: 576px) and (max-width: 767.98px) {
+  }
+  @media (min-width: 768px) and (max-width: 991.98px) {
+  }
+  @media (min-width: 992px) and (max-width: 1199.98px) {
+  }
 }
 
 .products-request-a-demo-cta-screen2 {
@@ -223,6 +294,94 @@
       width: 122.5%;
     }
   }
+
+  @media (max-width: 575.98px) {
+    .contents-container {
+      padding-bottom: 60px;
+    }
+
+    .form-container {
+      margin-top: -40px;
+      padding-right: $mobile-side-space;
+      padding-left: $mobile-side-space;
+    }
+    .form-wrap {
+      padding: 40px 25px;
+
+      .title-label {
+        margin-bottom: 10px;
+      }
+
+      fieldset.form-columns-1 .input,
+      fieldset.form-columns-2 .input {
+        margin-right: 0;
+      }
+      fieldset.form-columns-1 .input input,
+      fieldset.form-columns-2 .input input {
+        width: 100%;
+      }
+      .form-columns-1 .hs-form-field .hs-input,
+      .form-columns-2 .hs-form-field .hs-input {
+        width: 100% !important;
+      }
+
+      .hs-richtext {
+        margin-top: -.5em;
+        margin-bottom: 1em;
+
+        color: rgba(#fff, .75);
+        font-size: 1em;
+        font-family: 'Poppins';
+        font-weight: 300;
+        line-height: 1.75;
+
+        p {
+          margin-top: 20px;
+          margin-bottom: 10px;
+
+          font-size: .9em;
+          font-family: 'Poppins';
+          line-height: 1.6;
+        }
+
+        a {
+          color: $c-sky-blue;
+        }
+      }
+
+      .hs-submit {
+        margin-top: 25px;
+        text-align: left;
+
+        input[type="submit"] {
+          min-width: 0;
+          max-width: 100%;
+          height: 40px;
+          
+          padding: 0 15px;
+
+          font-size: 14px;
+          font-weight: 800;
+        }
+      }
+    }
+
+    .browser-container {
+      margin-top: -380px;
+      margin-bottom: 60px;
+      padding-left: $mobile-side-space;
+
+      .browser-item {
+        margin-top: 0;
+      }
+    }
+  }
+  @media (min-width: 576px) and (max-width: 767.98px) {
+  }
+  @media (min-width: 768px) and (max-width: 991.98px) {
+  }
+  @media (min-width: 992px) and (max-width: 1199.98px) {
+  }
 }
 
 .products-request-a-demo-cta-screen3 {
@@ -259,5 +418,44 @@
       max-width: 180px;
       height: auto;
     }
+  }
+
+  @media (max-width: 575.98px) {
+    .contents-container {
+      padding-bottom: 60px;
+    }
+
+    .texts-container {
+      padding-top: 0;
+      padding-right: $mobile-side-space;
+      padding-bottom: 0;
+
+      text-align: left;
+
+      .title-label {
+        line-height: 1.6;
+      }
+    }
+
+    .logos-container {
+      margin-right: 15px;
+      margin-left: 15px;
+      padding-top: 10px;
+      padding-right: $mobile-side-space;
+      padding-bottom: 0;
+      padding-left: $mobile-side-space;
+    }
+    .logo-container {
+      margin-top: 20px;
+      margin-bottom: 20px;
+      padding-right: 10px;
+      padding-left: 10px;
+    }
+  }
+  @media (min-width: 576px) and (max-width: 767.98px) { //sm
+  }
+  @media (min-width: 768px) and (max-width: 991.98px) { //md
+  }
+  @media (min-width: 992px) and (max-width: 1199.98px) { //lg
   }
 }

@@ -71,6 +71,58 @@
       }
     }
   }
+
+  @media (max-width: 575.98px) {
+    .texts-container {
+      .texts-wrap {
+        margin-top: 180px;
+        margin-bottom: 100px;
+        padding-right: 25px;
+        padding-left: 25px;
+
+        .title-label {
+          margin-bottom: 14px;
+      
+          font-size: 2em;
+        }
+
+        h3.description-label {
+          font-size: 1.05em;
+          line-height: 1.5;
+        }
+        .description-label {
+          font-size: .95em;
+        }
+        .description-label br {
+          display: none;
+        }
+      }
+    }
+
+    .lower-container {
+      height: 100px;
+
+      margin-top: -100px;
+
+      .decoration.ground .ground-lower {
+        height: 44px;
+
+        margin-top: 56px;
+        margin-left: 15%;
+      }
+      .decoration.ground .ground-upper {
+        left: 54%;
+
+        height: 100px;
+      }
+    }
+  }
+  @media (min-width: 576px) and (max-width: 767.98px) {
+  }
+  @media (min-width: 768px) and (max-width: 991.98px) {
+  }
+  @media (min-width: 992px) and (max-width: 1199.98px) {
+  }
 }
 
 .community-videos-and-podcasts-screen2 {
@@ -208,6 +260,45 @@
         right: 20px;
       }
     }
+  }
+
+  @media (max-width: 575.98px) {
+    .texts-container {
+      padding-top: 50px;
+      padding-bottom: 10px;
+    }
+
+    .video-wrap {
+      .play-button {
+        top: 30%;
+
+        width: 80px;
+        height: 80px;
+
+        padding: 6px;
+
+        .icon.linear-round {
+          border-width: 1px;
+        }
+      }
+
+      .subject-label {
+        padding: 30px 25px;
+
+        font-size: 16px;
+      }
+    }
+
+    .buttons-container {
+      margin-top: 20px;
+      margin-bottom: 60px;
+    }
+  }
+  @media (min-width: 576px) and (max-width: 767.98px) {
+  }
+  @media (min-width: 768px) and (max-width: 991.98px) {
+  }
+  @media (min-width: 992px) and (max-width: 1199.98px) {
   }
 }
 
@@ -354,6 +445,93 @@
         right: 20px;
       }
     }
+  }
+
+  @media (max-width: 575.98px) {
+    .head-label {
+      padding-top: 50px;
+      padding-bottom: 0;
+      padding-left: $mobile-side-space;
+
+      background-color: $c-blue-dark1;
+
+      line-height: 2;
+    }
+
+    .texts-container {
+      padding-top: 10px;
+      padding-right: $mobile-side-space;
+      padding-bottom: 10px;
+      padding-left: $mobile-side-space;
+
+      .title-label {
+        margin-bottom: 0;
+      }
+    }
+
+    .videos-container {
+      margin-top: 0;
+      padding-right: $mobile-side-space;
+      padding-top: 20px;
+      padding-left: $mobile-side-space;
+    }
+    .videos-wrap {
+      flex-wrap: nowrap;
+      
+      margin-top: 0;
+
+      .information-container {
+        padding:  80px 20px 40px;
+      }
+    }
+    .video-wrap {
+      .logo {
+        width: auto;
+        max-width: 50%;
+        height: 45px;
+        max-height: 45px;
+
+        margin-bottom: 10px;
+      }
+
+      .subject-label {
+        min-height: 8em;
+
+        font-size: 16px;
+
+        @include textElipsis(5, 1.6);
+      }
+
+      hr {
+        margin-top: 10px;
+        margin-bottom: 10px;
+      }
+
+      .button {
+        width: auto;
+      }
+    }
+
+    .buttons-container {
+      margin-top: 20px;
+      margin-bottom: 60px;
+
+      .button {
+        max-width: 240px;
+
+        height: 40px;
+
+        padding: 0 15px;
+
+        font-size: 14px;
+      }
+    }
+  }
+  @media (min-width: 576px) and (max-width: 767.98px) {
+  }
+  @media (min-width: 768px) and (max-width: 991.98px) {
+  }
+  @media (min-width: 992px) and (max-width: 1199.98px) {
   }
 }
 
@@ -568,5 +746,54 @@
         line-height: 1.4;
       }
     }
+  }
+
+  @media (max-width: 575.98px) {
+    padding-bottom: 60px;
+
+    .head-label {
+      padding-top: 50px;
+      padding-bottom: 0;
+      padding-left: $mobile-side-space;
+
+      background-color: $c-gray-base-light;
+
+      line-height: 2;
+    }
+
+    .contents-container {
+      background-color: transparent;
+    }
+
+    .texts-container {
+      margin-top: 0;
+      padding-top: 10px;
+      padding-right: $mobile-side-space;
+      padding-bottom: 10px;
+      padding-left: $mobile-side-space;
+
+      background-color: $c-gray-base-light;
+
+      .title-label {
+        margin-bottom: 0;
+        padding-top: 10px;
+      }
+    }
+    
+    .sliders-container {
+      margin-top: 0;
+      padding-top: 30px;
+
+      background-color: $c-gray-base-light;
+    }
+    .slider-pager {
+      margin-top: 30px;
+    }
+  }
+  @media (min-width: 576px) and (max-width: 767.98px) {
+  }
+  @media (min-width: 768px) and (max-width: 991.98px) {
+  }
+  @media (min-width: 992px) and (max-width: 1199.98px) {
   }
 }

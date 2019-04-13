@@ -645,8 +645,8 @@
 
   @media (max-width: 575.98px) {
     .contents-container {
-      padding-top: 100px;
-      padding-bottom: 80px;
+      padding-top: 80px;
+      padding-bottom: 0;
 
       .ground-lower {
         left: 55%;
@@ -654,9 +654,10 @@
         height: 82px;
       }
       .rancher-logo {
+        bottom: calc(100% + 33px);
         left: 54%;
 
-        margin-bottom: 10%;
+        margin-bottom: 0;
       }
       .ground-upper {
         left: 20%;
@@ -665,12 +666,18 @@
       }
 
       .cloud {
-        height: 60px;
+        z-index: 0;
+
+        left: 60%;
+
+        height: 130px;
+
+        margin-top:  -64%;
       }
     }
 
     .texts-container {
-      padding: 60px 25px;
+      padding: 0 25px;
       padding-bottom: 50%;
 
       .cloud {
@@ -679,12 +686,16 @@
     }
 
     .thumbnail-container {
+      z-index: 1;
+
       margin-top: -40%;
       padding-right: $mobile-side-space;
       padding-left: $mobile-side-space;
 
       .thumbnail-wrap {
         width: 100%;
+
+        margin-left: 0;
       }
     }
   }
@@ -753,6 +764,42 @@
       height: auto;
     }
   }
+
+  @media (max-width: 575.98px) {
+    .contents-container {
+      padding-top: 100px;
+      padding-bottom: 60px;
+
+      .decoration-cloud {
+        height: 60px;
+      }
+    }
+
+    .thumbnail-container {
+      margin-top: 0;
+      margin-right: -15px;
+      margin-bottom: 10px;
+      margin-left: -15px;
+      padding-top: 30px;
+      padding-right: $mobile-side-space;
+      padding-bottom: 30px;
+      padding-left: $mobile-side-space;
+
+      .thumbnail-wrap {
+        width: 100%;
+      }
+    }
+
+    .title-label {
+      text-align: left;
+    }
+  }
+  @media (min-width: 576px) and (max-width: 767.98px) {
+  }
+  @media (min-width: 768px) and (max-width: 991.98px) {
+  }
+  @media (min-width: 992px) and (max-width: 1199.98px) {
+  }
 }
 
 .products-rancher-control-all-screen8 {
@@ -801,5 +848,33 @@
     .description-label {
       margin-bottom: 0;
     }
+  }
+
+  @media (max-width: 575.98px) {
+    .blinder-container {
+      .image-blinder {
+        width: 200%;
+      }
+    }
+
+    .contents-container {
+      padding-top: 50px;
+      padding-bottom: 80px;
+
+      .decoration-cloud {
+        height: 60px;
+      }
+    }
+
+    .thumbnail-container {
+      margin-top: 40px;
+      margin-bottom: 40px;
+    }
+  }
+  @media (min-width: 576px) and (max-width: 767.98px) {
+  }
+  @media (min-width: 768px) and (max-width: 991.98px) {
+  }
+  @media (min-width: 992px) and (max-width: 1199.98px) {
   }
 }

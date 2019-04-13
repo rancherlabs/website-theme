@@ -71,6 +71,55 @@
       }
     }
   }
+
+  @media (max-width: 575.98px) {
+    .texts-container {
+      .texts-wrap {
+        margin-top: 180px;
+        margin-bottom: 100px;
+        padding-right: 25px;
+        padding-left: 25px;
+
+        .title-label {
+          margin-bottom: 14px;
+      
+          font-size: 2em;
+        }
+
+        h3.description-label {
+          font-size: 1.05em;
+          line-height: 1.5;
+        }
+        .description-label {
+          font-size: .95em;
+        }
+      }
+    }
+
+    .lower-container {
+      height: 100px;
+
+      margin-top: -100px;
+
+      .decoration.ground .ground-lower {
+        height: 44px;
+
+        margin-top: 56px;
+        margin-left: 15%;
+      }
+      .decoration.ground .ground-upper {
+        left: 54%;
+
+        height: 100px;
+      }
+    }
+  }
+  @media (min-width: 576px) and (max-width: 767.98px) {
+  }
+  @media (min-width: 768px) and (max-width: 991.98px) {
+  }
+  @media (min-width: 992px) and (max-width: 1199.98px) {
+  }
 }
 
 .community-events-and-meetups-screen2 {
@@ -201,6 +250,84 @@
       max-width: 310px;
     }
   }
+
+  @media (max-width: 575.98px) {
+    .texts-container {
+      padding-right: 0;
+      padding-left: 0;
+    }
+    .texts-wrap {
+      padding-top: 50px;
+      padding-right: $mobile-side-space;
+      padding-bottom: 30px;
+      padding-left: $mobile-side-space;
+    }
+
+    .event-items-container {
+      padding-left: $mobile-side-space;
+
+      .event-item {
+        margin-bottom: 30px;
+      }
+      .event-item:first-child {
+        margin-top: 0;
+      }
+    }
+    .event-item {
+      flex-wrap: wrap;
+
+      .thumbnail-container {
+        width: 150px;
+        max-width: 150px;
+        height: 150px;
+      }
+
+      .information-container {
+        flex: 0 0 100%;
+
+        margin-top: 20px;
+      }
+      .title-label {
+        font-size: 20px;
+      }
+      .date-label,
+      .location-label {
+        margin-top: 25px;
+        padding-left: 32px;
+
+        .icon {
+          width: 20px;
+          height: 20px;
+
+          margin-top: -3px;
+        }
+      }
+    }
+
+    .buttons-container {
+      margin-top: 20px;
+      margin-bottom: 60px;
+
+      .button {
+        max-width: 240px;
+        height: 40px;
+
+        padding: 0 20px;
+
+        font-size: 14px;
+
+        .svg-linear {
+          stroke-width: 2px;
+        }
+      }
+    }
+  }
+  @media (min-width: 576px) and (max-width: 767.98px) {
+  }
+  @media (min-width: 768px) and (max-width: 991.98px) {
+  }
+  @media (min-width: 992px) and (max-width: 1199.98px) {
+  }
 }
 
 .community-events-and-meetups-screen3 {
@@ -320,6 +447,56 @@
       margin-top: 15px;
     }
   }
+
+  @media (max-width: 575.98px) {
+    .texts-container {
+      padding-top: 50px;
+      padding-right: 0;
+      padding-left: 0;
+    }
+    
+    .cards-container {
+      padding-right: $mobile-side-space;
+      padding-left: $mobile-side-space;
+
+      .texts-wrap {
+        padding: 30px 25px 40px;
+
+        hr {
+          width: 50px;
+        }
+
+        .date-label {
+          .icon {
+            width: 20px;
+            height: 20px;
+          }
+        }
+      }
+    }
+    .card-item {
+      border-radius: 5px;
+
+      .buttons-container {
+        margin-top: 25px;
+
+        text-align: left;
+
+        .button {
+          width: auto;
+          height: auto;
+
+          font-size: 14px;
+        }
+      }
+    }
+  }
+  @media (min-width: 576px) and (max-width: 767.98px) {
+  }
+  @media (min-width: 768px) and (max-width: 991.98px) {
+  }
+  @media (min-width: 992px) and (max-width: 1199.98px) {
+  }
 }
 
 .community-events-and-meetups-screen4 {
@@ -426,6 +603,72 @@
       margin-top: 8px;
     }
   }
+
+  @media (max-width: 575.98px) {
+    .head-label {
+      padding-top: 50px;
+      padding-left: $mobile-side-space;
+
+      background-color: $c-gray-base-light;
+
+      line-height: 2;
+    }
+
+    .contents-container {
+      padding-top: 20px;
+      padding-bottom: 0;
+
+      .texts-container {
+        padding-left: $mobile-side-space;
+        padding-bottom: 20px;;
+
+        .title-label {
+          margin-bottom: 15px;
+        }
+      }
+    }
+
+    .list-container {
+      margin-top: 10px;
+
+      > .buttons-container {
+        margin-top: 40px;
+
+        text-align: left;
+
+        .button {
+          max-width: 240px;
+          height: 40px;
+
+          padding: 0 20px;
+
+          font-size: 14px;
+        }
+      }
+    }
+    .list-item {
+      .title-label {
+        font-size: 20px;
+      }
+
+      .buttons-container {
+        text-align: left;
+
+        .button {
+          width: auto;
+          height: auto;
+
+          font-size: 14px;
+        }
+      }
+    }
+  }
+  @media (min-width: 576px) and (max-width: 767.98px) {
+  }
+  @media (min-width: 768px) and (max-width: 991.98px) {
+  }
+  @media (min-width: 992px) and (max-width: 1199.98px) {
+  }
 }
 
 .community-events-and-meetups-screen5 {
@@ -501,6 +744,47 @@
     &:after {
       height: 150px;
     }
+  }
+
+  @media (max-width: 575.98px) {
+    .texts-container {
+      .list-container {
+        padding-right: 0;
+        padding-left: 0;
+      }
+
+      .list-item {
+        .title-label {
+          font-size: 20px;
+        }
+
+        .date-label {
+          margin-top: 10px;
+        }
+      }
+
+      .buttons-container {
+        margin-top: 30px;
+        margin-bottom: 50px;
+
+        text-align: left;
+
+        .button {
+          max-width: 240px;
+          height: 40px;
+
+          padding: 0 20px;
+
+          font-size: 14px;
+        }
+      }
+    }
+  }
+  @media (min-width: 576px) and (max-width: 767.98px) {
+  }
+  @media (min-width: 768px) and (max-width: 991.98px) {
+  }
+  @media (min-width: 992px) and (max-width: 1199.98px) {
   }
 }
 
@@ -700,6 +984,8 @@
     @include transition(background-color .25s);
 
     @media (max-width: 575.98px) {
+      flex: 0 0 45px;
+
       width: 45px;
       height: 45px;
     }
@@ -737,6 +1023,50 @@
         stroke: #fff;
       }
     }
+  }
+
+  @media (max-width: 575.98px) {
+    .head-label {
+      padding-top: 50px;
+      padding-left: $mobile-side-space;
+
+      line-height: 2;
+
+      background-color: $c-blue-dark1;
+    }
+
+    .texts-container {
+      padding-top: 20px;
+      padding-right: $mobile-side-space;
+      padding-bottom: 50px;
+      padding-left: $mobile-side-space;
+
+      .texts-wrap {
+        margin-top: 0;
+      }
+    }
+
+    .slider-container {
+      padding-right: 0;
+      padding-left: $mobile-side-space;
+      padding-bottom: 0;
+    }
+    .slide-item {
+      .thumbnail-container {
+        min-width: 290px;
+        min-height: 205px;
+      }
+    }
+
+    .slider-options {
+      margin-top: 90px;
+    }
+  }
+  @media (min-width: 576px) and (max-width: 767.98px) {
+  }
+  @media (min-width: 768px) and (max-width: 991.98px) {
+  }
+  @media (min-width: 992px) and (max-width: 1199.98px) {
   }
 }
 
@@ -793,6 +1123,49 @@
         margin-bottom: 0;
       }
     }
+  }
+
+  @media (max-width: 575.98px) {
+    .head-label {
+      padding-top: 50px;
+      padding-right: $mobile-side-space;
+      padding-left: $mobile-side-space;
+
+      background-color: $c-gray-base-light;
+
+      .left {
+        line-height: 2;
+      }
+    }
+
+    .texts-container {
+      padding-top: 20px;
+      padding-right: $mobile-side-space;
+      padding-bottom: 80px;
+      padding-left: $mobile-side-space;
+    }
+
+    .image-container {
+      z-index: 1;
+
+      margin-top: -40px;
+      margin-bottom: 50px;
+
+      line-height: 0;
+
+      .image {
+        position: relative;
+
+        width: 100%;
+        height: auto;
+      }
+    }
+  }
+  @media (min-width: 576px) and (max-width: 767.98px) {
+  }
+  @media (min-width: 768px) and (max-width: 991.98px) {
+  }
+  @media (min-width: 992px) and (max-width: 1199.98px) {
   }
 }
 

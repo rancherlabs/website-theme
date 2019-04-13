@@ -138,6 +138,50 @@
             }
         }
     }
+
+    @media (max-width: 575.98px) {
+        margin-top: 135px;
+
+        .contents-container {
+            margin-top: 0;
+        }
+
+        .texts-container {
+            padding-top: 60px;
+            padding-right: $mobile-side-space;
+            padding-bottom: 0;
+            padding-left: $mobile-side-space;
+
+            .texts-wrap {
+                margin: 0;
+
+                .title-label {
+                    margin-bottom: 14px;
+                
+                    font-size: 2em;
+                }
+
+                .description-label {
+                    font-size: .95em;
+                }
+                .description-label br {
+                    display: none;
+                }
+            }
+        }
+
+        .lower-container {
+            height: 120px;
+
+            margin-top: -120px;
+        }
+    }
+    @media (min-width: 576px) and (max-width: 767.98px) {
+    }
+    @media (min-width: 768px) and (max-width: 991.98px) {
+    }
+    @media (min-width: 992px) and (max-width: 1199.98px) {
+    }
 }
 
 .company-partners-screen2 {
@@ -214,6 +258,41 @@
                 font-size: 15px;
             }
         }
+    }
+
+    @media (max-width: 575.98px) {
+        .contents-container {
+            padding-top: 50px;
+            padding-bottom: 60px;
+        }
+
+        .texts-container {
+            padding-right: $mobile-side-space;
+            padding-left: $mobile-side-space;
+        }
+
+        .list-container {
+            margin-top: 20px;
+
+            .list-wrap {
+                .list-item {
+                    .icon-container {
+                        margin-right: 15px;
+                    }
+
+                    .text-container {
+                        font-size: 16px;
+                        font-weight: 300;
+                    }
+                }
+            }
+        }
+    }
+    @media (min-width: 576px) and (max-width: 767.98px) {
+    }
+    @media (min-width: 768px) and (max-width: 991.98px) {
+    }
+    @media (min-width: 992px) and (max-width: 1199.98px) {
     }
 }
 
@@ -296,6 +375,67 @@
                 line-height: 1.665;
             }
         }
+    }
+
+    @media (max-width: 575.98px) {
+        .head-label {
+            padding-top: 50px;
+            padding-left: $mobile-side-space;
+
+            line-height: 2;
+
+            background-color: $c-gray-base-light;
+        }
+        .contents-container {
+            padding-top: 50px;
+        }
+
+        .partners-type-container {
+            .texts-container {
+                padding-top: 20px;
+                padding-right: $mobile-side-space;
+                padding-left: $mobile-side-space;
+            }
+
+            .texts-wrap {
+                .title-label {
+                    margin-top: 0;
+                    margin-bottom: 30px;
+                }
+            }
+
+            .partners-type-item {
+                // padding-right: $mobile-side-space;
+                // padding-left: $mobile-side-space;
+
+                margin-bottom: 30px;
+            }
+        }
+        .partners-type-wrap {
+            padding-right: $mobile-side-space;
+            padding-left: $mobile-side-space;
+
+            border-radius: 5px;
+
+            .partners-type-item-wrap {
+                padding: 30px 25px;
+
+                .type-label {
+                    font-size: 16px;
+                }
+            }
+        }
+
+        .texts-container {
+            padding-right: $mobile-side-space;
+            padding-left: $mobile-side-space;
+        }
+    }
+    @media (min-width: 576px) and (max-width: 767.98px) {
+    }
+    @media (min-width: 768px) and (max-width: 991.98px) {
+    }
+    @media (min-width: 992px) and (max-width: 1199.98px) {
     }
 }
 
@@ -451,5 +591,99 @@
                 line-height: 1.665;
             }
         }
+    }
+
+    @media (max-width: 575.98px) {
+        .contents-container {
+            padding-bottom: 60px;
+        }
+
+        .texts-container {
+            padding-top: 60px;
+
+            &:before {
+                height: 40px;
+                margin-right: -15px;
+            }
+            &:after {
+                height: 40px;
+                margin-left: -15px;
+            }
+
+            .title-label {
+                font-size: 20px;
+            }
+
+            .buttons-container {
+                .button {
+                    width: auto;
+                    min-width: 0;
+                    height: 40px;
+
+                    padding: 0 20px;
+
+                    font-size: 14px;
+                    line-height: 1.2;
+                }
+            }
+        }
+
+        .partners-item-container {
+            padding-top: 40px;
+            padding-right: $mobile-side-space;
+            padding-left: $mobile-side-space;
+        }
+        .partner-item-wrap {
+            flex-wrap: wrap;
+
+            margin-bottom: 30px;
+            padding: 30px 25px;
+
+            .thumbnail-container {
+                flex: 0 0 100%;
+
+                max-width: 100%;
+                // min-height: 145px;
+
+                margin-right: 0;
+                margin-bottom: 20px;
+
+                text-align: left;
+
+                .thumbnail {
+                    width: 80%;
+                }
+            }
+
+            .information-continaer {
+                .title-label {
+                    font-size: 20px;
+                }
+
+                .infor-label {
+                    flex-wrap: wrap;
+
+                    margin-top: 0;
+                }
+
+                .location-label,
+                .position-label {
+                    flex: 0 0 100%;
+
+                    margin-top: 15px;
+
+                    text-align: left;
+                }
+                .position-label a {
+                    margin-left: 15px;
+                }
+            }
+        }
+    }
+    @media (min-width: 576px) and (max-width: 767.98px) {
+    }
+    @media (min-width: 768px) and (max-width: 991.98px) {
+    }
+    @media (min-width: 992px) and (max-width: 1199.98px) {
     }
 }

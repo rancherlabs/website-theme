@@ -72,6 +72,51 @@
       }
     }
   }
+
+  @media (max-width: 575.98px) {
+    margin-top: 135px;
+
+    .contents-container {
+      margin-top: 0;
+    }
+
+    .texts-container {
+      padding-top: 60px;
+      padding-bottom: 150px;
+
+      .texts-wrap {
+        margin: 0;
+
+        .title-label {
+            margin-bottom: 14px;
+        
+            font-size: 2em;
+        }
+
+        .description-label {
+          font-size: .95em;
+        }
+        .description-label br {
+          display: none;
+        }
+      }
+    }
+
+    .lower-container {
+      height: 120px;
+
+      margin-top: -120px;
+    }
+    .lower-container .decoration.ground .careers-ground {
+
+    }
+  }
+  @media (min-width: 576px) and (max-width: 767.98px) {
+  }
+  @media (min-width: 768px) and (max-width: 991.98px) {
+  }
+  @media (min-width: 992px) and (max-width: 1199.98px) {
+  }
 }
 
 .company-careers-screen2 {
@@ -126,6 +171,52 @@
     .description-label {
       color: rgba(#fff, .75);
     }
+  }
+
+  @media (max-width: 575.98px) {
+    .contents-container {
+      padding-top: 50px;
+
+      &:before {
+        display: none;
+      }
+    }
+
+    .head-label {
+      padding-top: 50px;
+      padding-left: $mobile-side-space;
+
+      line-height: 2;
+
+      background-color: $c-blue-dark1;
+    }
+
+    .texts-container {
+      padding-top: 20px;
+      padding-right: $mobile-side-space;
+      padding-bottom: 30px;
+      padding-left: $mobile-side-space;
+    }
+
+    .image-container .image-wrap {
+      overflow: hidden;
+
+      max-height: 340px;
+
+      margin-top: -40px;
+    }
+    .image-container .image-wrap .image {
+      position: relative;
+
+      width: 100%;
+      height: auto;
+    }
+  }
+  @media (min-width: 576px) and (max-width: 767.98px) {
+  }
+  @media (min-width: 768px) and (max-width: 991.98px) {
+  }
+  @media (min-width: 992px) and (max-width: 1199.98px) {
   }
 }
 
@@ -258,6 +349,71 @@
       }
     }
   }
+
+  @media (max-width: 575.98px) {
+    .contents-container {
+      padding-top: 30px;
+
+      &:before {
+        display: none;
+      }
+    }
+
+    .texts-container {
+      padding-top: 0;
+      padding-right: $mobile-side-space;
+      padding-bottom: 10px;
+      padding-left: $mobile-side-space;
+
+      .label {
+        text-align: left;
+      }
+
+      .title-label {
+        margin-bottom: 20px;
+        font-size: 25px;
+        line-height: 1.4;
+        text-align: left;
+      }
+
+      .description-label {
+        text-align: left;
+      }
+    }
+
+    .slider-container {
+      padding-right: $mobile-side-space;
+      padding-left: $mobile-side-space;
+    }
+    .image-container {
+      min-height: 0;
+      max-height: 170px;
+
+      .image {
+        top: 50%;
+
+        @include transform(translateT(-50%));
+      }
+    }
+    .slider-options {
+      position: absolute;
+      right: $mobile-side-space;
+      bottom: 0;
+
+      .btn-prev,
+      .btn-next {
+        flex: 0 0 45px;
+
+        max-width: 45px;
+      }
+    }
+  }
+  @media (min-width: 576px) and (max-width: 767.98px) {
+  }
+  @media (min-width: 768px) and (max-width: 991.98px) {
+  }
+  @media (min-width: 992px) and (max-width: 1199.98px) {
+  }
 }
 
 .company-careers-screen4 {
@@ -339,6 +495,61 @@
         @include transform(translate(-50%, -50%));
       }
     }
+  }
+
+  @media (max-width: 575.98px) {
+    .contents-container {
+      padding-top: 60px;
+
+      &:before {
+        display: none;
+      }
+    }
+
+    .texts-container {
+      padding-top: 0;
+      padding-right: $mobile-side-space;
+      padding-bottom: 10px;
+      padding-left: $mobile-side-space;
+
+      .label {
+        margin-bottom: 25px;
+
+        text-align: left;
+      }
+
+      .title-label {
+        margin-bottom: 20px;
+        font-size: 25px;
+        line-height: 1.4;
+        text-align: left;
+      }
+
+      .description-label {
+        text-align: left;
+        line-height: 1.4;
+      }
+    }
+
+    .image-list-container {
+      margin-top: 10px;
+      padding-right: 20px;
+      padding-left: 20px;
+
+      border-radius: 5px;
+
+      .image-item {
+        margin-bottom: 30px;
+        padding-right: 10px;
+        padding-left: 10px;
+      }
+    }
+  }
+  @media (min-width: 576px) and (max-width: 767.98px) {
+  }
+  @media (min-width: 768px) and (max-width: 991.98px) {
+  }
+  @media (min-width: 992px) and (max-width: 1199.98px) {
   }
 }
 
@@ -494,6 +705,92 @@
         }
       }
     }
+  }
+
+  @media (max-width: 575.98px) {
+    .contents-container {
+      padding-top: 50px;
+      padding-bottom: 100px;
+    }
+
+    .texts-container {
+      z-index: 1;
+
+      padding-right: $mobile-side-space;
+      padding-left: $mobile-side-space;
+
+      .title-label {
+        font-size: 25px;
+      }
+    }
+
+    .item-list-container {
+      .rancher-container {
+        margin-top: -40px;
+
+        .rancher-wrap {
+          position: relative;
+
+          top: initial;
+          left: initial;
+
+          width: 100%;
+
+          text-align: center;
+
+          @include transform(translate(0, 0));
+        }
+        .rancher-wrap .cloud {
+          width: 60%;
+          height: auto;
+        }
+        .rancher-wrap .rancher-logo {
+          position: relative;
+          display: inline-block;
+
+          top: initial;
+          left: initial;
+
+          width: auto;
+          max-width: 100%;
+          height: 40px;
+
+          margin: 0 auto;
+
+          @include transform(translate(0, 0));
+        }
+      }
+
+      .list-container {
+        z-index: 1;
+
+        padding-top: 75px;
+        padding-bottom: 5px;
+      }
+      .list-wrap {
+        padding: 40px 25px;
+      }
+      .list-item {
+        margin-bottom: 30px;
+
+        .icon-container {
+          max-width: 30px;
+        }
+        .text-container {
+          font-size: 16px;
+          font-weight: 300;
+        }
+      }
+      .title-label.floating {
+        top: 40px;
+      }
+    }
+  }
+  @media (min-width: 576px) and (max-width: 767.98px) {
+  }
+  @media (min-width: 768px) and (max-width: 991.98px) {
+  }
+  @media (min-width: 992px) and (max-width: 1199.98px) {
   }
 }
 
@@ -661,6 +958,67 @@
       }
     }
   }
+
+  @media (max-width: 575.98px) {
+    .contents-container {
+      padding-top: 50px;
+      padding-bottom: 20px;
+    }
+
+    .texts-container {
+      z-index: 1;
+
+      padding-right: $mobile-side-space;
+      padding-left: $mobile-side-space;
+
+      .label {
+        text-align: left;
+      }
+      .title-label {
+        font-size: 25px;
+        text-align: left;
+      }
+      .description-label {
+        text-align: left;
+      }
+    }
+
+    .cards-container {
+      padding-bottom: 50px;
+
+      .background {
+        top: 150px;
+
+        height: calc(100% - 150px);
+      }
+    }
+    .card-container {
+      margin-bottom: 30px;
+    }
+    .card-wrap {
+      padding: 40px 30px;
+
+      .quote-container {
+        padding-top: 0;
+
+        &:before {
+          margin-top: -5%;
+
+          width: 60px;
+          height: 60px;
+        }
+      }
+      .quote-label {
+        min-height: 0;
+      }
+    }
+  }
+  @media (min-width: 576px) and (max-width: 767.98px) {
+  }
+  @media (min-width: 768px) and (max-width: 991.98px) {
+  }
+  @media (min-width: 992px) and (max-width: 1199.98px) {
+  }
 }
 
 .company-careers-screen7 {
@@ -807,5 +1165,92 @@
         margin-top: 10px;
       }
     }
+  }
+
+  @media (max-width: 575.98px) {
+    .contents-container {
+      padding-bottom: 20px;
+    }
+
+    .texts-container {
+      z-index: 1;
+
+      padding-top: 60px;
+      padding-right: $mobile-side-space;
+      padding-left: $mobile-side-space;
+
+      &:before {
+        height: 40px;
+        margin-right: -$mobile-side-space;
+      }
+      &:after {
+        height: 40px;
+        margin-left: -$mobile-side-space;
+      }
+
+      .label {
+      }
+      .title-label {
+        margin-top: 30px;
+
+        font-size: 25px;
+      }
+      .description-label {
+        font-size: 16px;
+        font-family: 'Roboto';
+      }
+    }
+
+    .item-list-container {
+      margin-top: 20px;
+      padding-right: $mobile-side-space;
+      padding-bottom: 60px;
+      padding-left: $mobile-side-space;
+    }
+    .position-item-wrap {
+      padding: 25px;
+
+      .position-label {
+        margin-top: 0;
+
+        font-size: 20px;
+      }
+
+      .informations-container {
+        height: auto;
+
+        margin-top: 0;
+      }
+      .information-label {
+        padding: 15px 0;
+
+        .icon {
+          width: 20px;
+
+          margin-right: 7px;
+        }
+      }
+      .buttons-container {
+        margin-top: 10px;
+
+        text-align: left;
+
+        .button {
+          width: auto;
+          min-width: 0;
+          height: 40px;
+
+          padding: 0 20px;
+
+          font-size: 14px;
+        }
+      }
+    }
+  }
+  @media (min-width: 576px) and (max-width: 767.98px) {
+  }
+  @media (min-width: 768px) and (max-width: 991.98px) {
+  }
+  @media (min-width: 992px) and (max-width: 1199.98px) {
   }
 }

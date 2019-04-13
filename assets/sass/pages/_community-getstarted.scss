@@ -85,35 +85,63 @@
             }
         }
     }
-}
 
-.community-getstarted-screen2 {
     @media (max-width: 575.98px) {
-        z-index: 1;
-
-        margin-top: 36px;
-
-        background-color: transparent;
-    }
-
-    .label-container {
-        @media (max-width: 575.98px) {
-            background-color: transparent;
-
-            .head-label {
-                background-color: transparent;
+        .texts-container {
+            .texts-wrap {
+                margin-top: 80px;
+                margin-bottom: 120px;
+                padding-right: 25px;
+                padding-left: 25px;
+        
+                .title-label {
+                    margin-bottom: 14px;
+                
+                    font-size: 2em;
+                }
+        
+                h3.description-label {
+                    font-size: 1.05em;
+                    line-height: 1.5;
+                }
+                .description-label {
+                    font-size: .95em;
+                }
+                .description-label br {
+                    display: none;
+                }
+            }
+        }
+    
+        .lower-container {
+            height: 100px;
+        
+            margin-top: -100px;
+        
+            .decoration.ground .ground-lower {
+                height: 44px;
+        
+                margin-top: 56px;
+                margin-left: 15%;
+            }
+            .decoration.ground .ground-upper {
+                left: 54%;
+        
+                height: 100px;
             }
         }
     }
+    @media (min-width: 576px) and (max-width: 767.98px) {
+    }
+    @media (min-width: 768px) and (max-width: 991.98px) {
+    }
+    @media (min-width: 992px) and (max-width: 1199.98px) {
+    }
+}
 
+.community-getstarted-screen2 {
     .texts-container {
         padding: 180px 0 220px;
-
-        @media (max-width: 575.98px) {
-            padding: 45px 0;
-
-            background-color: $c-blue-dark1;
-        }
 
         &:first-child {
             margin-bottom: 0;
@@ -292,6 +320,46 @@
                 color: #0075a8;
                 font-size: 0.9em;
                 }
+            }
+        }
+    }
+
+    @media (max-width: 575.98px) {
+        z-index: 1;
+
+        margin-top: 50px;
+
+        background-color: transparent;
+
+        .label-container {
+            background-color: transparent;
+
+            .head-label {
+                background-color: transparent;
+            }
+        }
+
+        .texts-container {
+            padding: 0 0 45px;
+
+            background-color: transparent;
+            
+            .title-label {
+                br {
+                    display: none;
+                }
+            }
+
+            .description-label.more-container {
+                color: $c-gray;
+            }
+        }
+
+        .easy-steps-detail {
+            margin-top: 10px;
+
+            .step-item {
+                margin-bottom: 10px;
             }
         }
     }
