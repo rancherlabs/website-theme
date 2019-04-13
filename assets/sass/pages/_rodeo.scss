@@ -89,6 +89,102 @@
       }
     }
   }
+
+  @media (max-width: 575.98px) {
+    margin-top: 135px;
+
+    .decoration {
+      &.cloud-big {
+        min-height: 135px;
+      }
+      &.cloud-big .image {
+        top: 95%;
+        left: 10%;
+
+        width: auto;
+        height: 100px;
+
+        @include transform(translateX(0));
+      }
+    }
+
+    .texts-container {
+      padding-right: 25px;
+      padding-left: 25px;
+
+      .texts-wrap {
+        margin-top: 40px;
+        margin-bottom: 150px;
+        margin-bottom: 100px;
+
+        .title-label {
+          margin-bottom: 10px;
+          padding-right: 0;
+
+          font-size: 30px;
+          line-height: 1.334;
+        }
+
+        .sub-title-label {
+          margin-bottom: 15px;
+        }
+
+        .description-label {
+          font-size: 14px;
+          font-weight: 300;
+          line-height: 1.715;
+        }
+      }
+    }
+
+    .lower-container {
+      height: 120px;
+
+      margin-top: -120px;
+
+      .decoration.ground .ground-lower {
+        height: 70px;
+
+        margin-top: 50px;
+        margin-left: 5%;
+        margin-bottom: 0;
+      }
+      .decoration.ground .ground-upper {
+        left: 50%;
+
+        height: 120px;
+      }
+      .decoration .floating1-1 {
+        right: 5%;
+        bottom: 250%;
+        left: initial;
+
+        max-width: 56px;
+      }
+      .decoration .floating1-2 {
+        display: none;
+      }
+      .decoration .floating2-1 {
+        max-width: 30px;
+
+        left: 35%;
+        bottom: 40%;
+      }
+      .decoration .floating2-2 {
+        right: 20%;
+        bottom: 375%;
+        left: initial;
+
+        max-width: 26px;
+      }
+    }
+  }
+  @media (min-width: 576px) and (max-width: 767.98px) {
+  }
+  @media (min-width: 768px) and (max-width: 991.98px) {
+  }
+  @media (min-width: 992px) and (max-width: 1199.98px) {
+  }
 }
 
 .rodeo-note-item {
@@ -163,6 +259,87 @@
 
       width: 100%;
     }
+  }
+
+  @media (max-width: 575.98px) {
+    &.floating .content-container {
+      position: relative;
+
+      margin-top: -40px;
+      padding-right: 16px;
+      padding-left: 16px;
+
+      &:before {
+        content: '';
+        position: absolute;
+
+        top: 10px;
+        right: $mobile-side-space;
+        left: $mobile-side-space;
+
+        height: 30px;
+
+        background-color: #fff;
+      }
+    }
+
+    .texts-container {
+      padding: 30px;
+
+      background-color: transparent;
+
+      .texts-wrap {
+        .label {
+          margin-bottom: 15px;
+        }
+        .description-label {
+          color: $c-gray;
+          font-size: 16px;
+        }
+        .description-label br {
+          display: none;
+        }
+      }
+
+      .arrow {
+        top: 56%;
+        right: -25px;
+
+        width: 30px;
+        height: 30px;
+      }
+
+      .icon-container {
+        flex: 0 0 40px;
+      }
+
+      .buttons-container {
+        margin-top: 10px;
+        margin-left: 40px;
+
+        .button {
+          width: auto;
+          min-width: 0;
+          height: 40px;
+
+          padding: 0 15px;
+
+          font-size: 14px;
+          line-height: 1.2;
+        }
+        .button.text {
+          margin-top: 0;
+          margin-left: 0;
+          padding: 0;
+        }
+      }
+    }
+  }
+  @media (min-width: 576px) and (max-width: 767.98px) {
+  }
+  @media (min-width: 768px) and (max-width: 991.98px) {
+  }
+  @media (min-width: 992px) and (max-width: 1199.98px) {
   }
 }
 
@@ -298,6 +475,39 @@
       }
     }
   }
+
+  @media (max-width: 575.98px) {
+    .contents-container {
+      padding-top: 50px;
+    }
+
+    .texts-container {
+      padding-right: $mobile-side-space;
+      padding-left: $mobile-side-space;
+    }
+    .texts-wrap {
+      .sub-title-label {
+        margin-top: 20px;
+        margin-bottom: 10px;
+
+        font-size: 20px;
+      }
+    }
+
+    .card-container .text-container {
+      padding: 15px 10px 30px;
+
+      p {
+        font-size: 16px;
+      }
+    }
+  }
+  @media (min-width: 576px) and (max-width: 767.98px) {
+  }
+  @media (min-width: 768px) and (max-width: 991.98px) {
+  }
+  @media (min-width: 992px) and (max-width: 1199.98px) {
+  }
 }
 
 .rodeo-screen3 {
@@ -427,6 +637,89 @@
         }
       }
     }
+  }
+
+  @media (max-width: 575.98px) {
+    .head-label {
+      padding-top: 50px;
+      padding-left: $mobile-side-space;
+
+      line-height: 2;
+
+      background-color: $c-blue-dark1;
+    }
+
+    .texts-container {
+      padding-left: $mobile-side-space;
+      padding-bottom: 30px;
+
+      &:before {
+        display: none;
+      }
+    }
+    .texts-wrap {
+      margin-top: 0;
+
+      .text-item {
+        margin-bottom: 15px;
+        padding-bottom: 30px;
+      }
+    }
+
+    .thumbnail-container {
+      margin-top: -40px;
+
+      .thumbnail-wrap {
+        height: auto;
+
+        .thumbnail {
+          position: relative;
+
+          width: 100%;
+          height: auto;
+        }
+      }
+    }
+
+    .inside-contents-container {
+      margin-top: -40px;
+      margin-right: 16px;
+      margin-left: 16px;
+
+      .texts-container {
+        padding-top: 50px;
+        padding-bottom: 60px;
+      }
+
+      .texts-wrap {
+        padding-right: $mobile-side-space;
+        padding-left: $mobile-side-space;
+
+        .title-label {
+          font-size: 20px;
+        }
+
+        .buttons-container {
+          margin-top: 30px;
+        }
+        .buttons-container .button {
+          min-width: 0;
+          max-width: 100%;
+          width: auto;
+          height: 40px;
+
+          padding: 0 15px;
+
+          line-height: 1.2;
+        }
+      }
+    }
+  }
+  @media (min-width: 576px) and (max-width: 767.98px) {
+  }
+  @media (min-width: 768px) and (max-width: 991.98px) {
+  }
+  @media (min-width: 992px) and (max-width: 1199.98px) {
   }
 }
 
@@ -579,6 +872,54 @@
       top: .05em;
       left: -15px;
     }
+  }
+
+  @media (max-width: 575.98px) {
+    .contents-container {
+      padding-top: 50px;
+      padding-right: $mobile-side-space;
+      padding-bottom: 60px;
+      padding-left: $mobile-side-space;
+    }
+
+    .timeline-container {
+      margin-top: 20px;
+      padding-right: 0;
+      padding-left: 0;
+
+      .time-label {
+        text-align: left;
+      }
+    }
+
+    .timeline-item {
+      padding-left: 100px;
+
+      &:before {
+        left: 70px;
+      }
+
+      .dot {
+        left: 63.5px;
+      }
+
+      .title-label {
+        font-size: 16px;
+      }
+
+      .list-container {
+        margin-bottom: 15px;
+      }
+      .list-item {
+        font-size: 14px;
+      }
+    }
+  }
+  @media (min-width: 576px) and (max-width: 767.98px) {
+  }
+  @media (min-width: 768px) and (max-width: 991.98px) {
+  }
+  @media (min-width: 992px) and (max-width: 1199.98px) {
   }
 }
 
@@ -876,5 +1217,87 @@
         }
       }
     }
+  }
+
+  @media (max-width: 575.98px) {
+    .contents-container {
+      padding-top: 0;
+      
+      &:last-child {
+        padding-bottom: 60px;
+      }
+    }
+
+    .texts-container {
+      padding-top: 30px;
+      padding-right: $mobile-side-space;
+      padding-left: $mobile-side-space;
+    }
+
+    .locations-container {
+      margin-top: 20px;
+      padding-right: $mobile-side-space;
+      padding-left: $mobile-side-space;
+
+      .location-item {
+        margin-bottom: 40px;
+      }
+
+      .thumbnail-container {
+        border-radius: 5px;
+      }
+
+      .information-container {
+        .location-label {
+          font-size: 16px;
+        }
+
+        .buttons-container {
+          margin-top: 20px;
+        }
+        .buttons-container .button {
+          min-width: 0;
+          max-width: 100%;
+          width: auto;
+          height: 40px;
+
+          padding: 0 15px;
+
+          font-size: 14px;
+        }
+      }
+    }
+
+    .cards-container {
+      margin-top: 10px;
+      padding-right: $mobile-side-space;
+      padding-left: $mobile-side-space;
+
+      .card-item {}
+
+      .card-wrap {
+        padding: 40px 25px;
+
+        border-radius: 5px;
+      }
+
+      .speak-label {
+        overflow: visible;
+        max-height: 100%;
+        min-height: 0;
+
+        -webkit-line-clamp: 20;
+      }
+
+      .information-container {
+        margin-top: 15px;
+      }
+    }
+  }
+  @media (min-width: 576px) and (max-width: 767.98px) {
+  }
+  @media (min-width: 768px) and (max-width: 991.98px) {
+  }
+  @media (min-width: 992px) and (max-width: 1199.98px) {
   }
 }

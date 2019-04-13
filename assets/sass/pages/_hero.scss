@@ -689,15 +689,7 @@
   background-color: $c-gray-base-light;
 
   .set-ground {
-    // position: absolute;
-
-    // top: 0;
-    // right: 0;
-    // bottom: 0;
-    // left: 0;
-
     margin: 0;
-
   }
 
   .decoration-container {
@@ -706,7 +698,6 @@
     >img {
       position: absolute;
     }
-
   }
 
   .ground-upper {
@@ -777,5 +768,141 @@
   .description-label {
     color: #000;
     line-height: 1.4;
+  }
+
+  @media (max-width: 575.98px) {
+    overflow: hidden;
+
+    .ground-upper {
+      width: auto;
+      height: 77px;
+    }
+    .ground-lower {
+      left: 30%;
+
+      width: auto;
+      height: 34px;
+    }
+
+    .rancher-rise {
+      right: 55%;
+      bottom: -30px;
+
+      width: 115px;
+      height: 115px;
+    }
+
+    .cloud {
+      top: initial;
+      bottom: 100px;
+      right: -8%;
+
+      max-width: 140px;
+    }
+
+    .texts-container {
+      padding-top: 180px;
+      padding-right: 25px;
+      padding-bottom: 110px;
+      padding-left: 25px;
+    }
+    .texts-wrap {
+      .title-label {
+        margin-bottom: 10px;
+          
+        font-size: 30px;
+      }
+    }
+  }
+  @media (min-width: 576px) and (max-width: 767.98px) {
+    .rancher-rise {
+      bottom: 1%;
+
+      width: 150px;
+      height: 150px;
+    }
+
+    .cloud {
+      top: initial;
+      bottom: 30%;
+      right: 10%;
+
+      max-width: 160px;
+    }
+
+    .texts-container {
+      padding-bottom: 130px;
+      padding-left: 20px;
+    }
+    .texts-wrap {
+      .title-label {
+        margin-bottom: 15px;
+
+        font-size: 2em;
+      }
+    }
+  }
+  @media (min-width: 768px) and (max-width: 991.98px) {
+    .rancher-rise {
+      bottom: 4%;
+
+      width: 210px;
+      height: 210px;
+    }
+
+    .cloud {
+      top: initial;
+      bottom: 40%;
+      right: 40%;
+
+      max-width: 190px;
+    }
+
+    .texts-container {
+      padding-bottom: 140px;
+      padding-left: 20px;
+    }
+
+    .texts-wrap {
+      .title-label {
+        margin-bottom: 20px;
+
+        font-size: 2.5em;
+      }
+    }
+  }
+  @media (min-width: 992px) and (max-width: 1199.98px) {
+    .rancher-rise {
+      bottom: 7%;
+
+      width: 260px;
+      height: 260px;
+    }
+
+    .cloud {
+      top: initial;
+      bottom: 50%;
+      right: 50%;
+
+      max-width: 240px;
+    }
+
+    .texts-container {
+      padding-bottom: 150px;
+      padding-left: 25px;
+    }
+
+    .texts-wrap {
+      .title-label {
+        margin-bottom: 25px;
+
+        font-size: 3em;
+      }
+    }
+  }
+  @media (min-width: 1200px) and (max-width: 1280px) {
+    .texts-container {
+      padding-left: 25px;
+    }
   }
 }
