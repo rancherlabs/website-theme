@@ -11,6 +11,26 @@
             text-align: center;
         }
     }
+
+    @media (max-width: 575.98px) {
+        margin-top: 135px;
+
+        .contents-container {
+            padding-top: 70px;
+            padding-bottom: 70px;
+        }
+        .texts-container {
+            .title-label {
+                font-size: 2em;
+            }
+        }
+    }
+    @media (min-width: 576px) and (max-width: 767.98px) {
+    }
+    @media (min-width: 768px) and (max-width: 991.98px) {
+    }
+    @media (min-width: 992px) and (max-width: 1199.98px) {
+    }
 }
 
 .legal-document-content {
@@ -309,5 +329,35 @@
                 font-size: 18px;
             }
         }
+    }
+
+    @media (max-width: 575.98px) {
+        .contents-container {
+            padding-top: 50px;
+            padding-bottom: 60px;
+        }
+        .texts-container {
+            padding-right: $mobile-side-space;
+            padding-left: $mobile-side-space;
+
+            h2 {
+                margin-bottom: 15px;
+
+                font-size: 1.25em;
+                line-height: 1.5;
+            }
+        }
+
+        .table td, 
+        .table tbody th {
+            padding-right: 10px;
+            padding-left: 10px;
+        }
+    }
+    @media (min-width: 576px) and (max-width: 767.98px) {
+    }
+    @media (min-width: 768px) and (max-width: 991.98px) {
+    }
+    @media (min-width: 992px) and (max-width: 1199.98px) {
     }
 }

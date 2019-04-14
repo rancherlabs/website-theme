@@ -90,6 +90,102 @@
             }
         }
     }
+
+    @media (max-width: 575.98px) {
+        margin-top: 135px;
+
+        .decoration {
+            &.cloud-big {
+                min-height: 135px;
+            }
+            &.cloud-big .image {
+                top: 95%;
+                left: 10%;
+
+                width: auto;
+                height: 100px;
+
+                @include transform(translateX(0));
+            }
+        }
+
+        .texts-container {
+            padding-right: 25px;
+            padding-left: 25px;
+
+            .texts-wrap {
+                margin-top: 40px;
+                margin-bottom: 50px;
+
+                .title-label {
+                    margin-bottom: 10px;
+                    padding-right: 0;
+
+                    font-size: 30px;
+                    line-height: 1.334;
+                }
+
+                .sub-title-label {
+                    margin-bottom: 5px;
+                }
+
+                .description-label {
+                    margin-bottom: 15px;
+                    font-size: 14px;
+                    font-weight: 300;
+                    line-height: 1.715;
+                }
+            }
+        }
+
+        .lower-container {
+                height: 120px;
+
+                margin-top: -120px;
+
+            .decoration.ground .ground-lower {
+                height: 70px;
+
+                margin-top: 50px;
+                margin-left: 5%;
+                margin-bottom: 0;
+            }
+            .decoration.ground .ground-upper {
+                left: 50%;
+
+                height: 120px;
+            }
+            .decoration .floating1-1 {
+                right: 5%;
+                bottom: 250%;
+                left: initial;
+
+                max-width: 56px;
+            }
+            .decoration .floating1-2 {
+                display: none;
+            }
+            .decoration .floating2-1 {
+                max-width: 30px;
+
+                left: 35%;
+                bottom: 40%;
+            }
+            .decoration .floating2-2 {
+                right: 20%;
+                bottom: 375%;
+                left: initial;
+
+                max-width: 26px;
+            }
+        }
+    }
+    @media (min-width: 576px) and (max-width: 767.98px) {
+    }
+    @media (min-width: 768px) and (max-width: 991.98px) {
+    }
+    @media (min-width: 992px) and (max-width: 1199.98px) {
+    }
 }
 
 .writing-program-research-writer-screen2 {
@@ -189,6 +285,86 @@
             top: .05em;
             left: -15px;
         }
+    }
+
+    @media (max-width: 575.98px) {
+        .head-label {
+            line-height: 0;
+        }
+
+        .texts-container {
+            padding-top: 50px;
+            padding-bottom: 30px;
+
+            .title-label {
+                text-align: center;
+
+                br {
+                    display: none;
+                }
+            }
+
+            .description-label {
+                text-align: center;
+            }
+        }
+
+        .detail-container {
+            padding-right: 30px;
+            padding-left: 30px;
+        }
+        .detail-item {
+            margin-bottom: 40px;
+            padding-right: 0;
+            padding-bottom: 40px;
+            padding-left: 0;
+
+            .title-label {
+                margin-bottom: 15px;
+
+                font-size: 20px;
+                line-height: 1.4;
+            }
+
+            .description-label {
+                margin-bottom: 15px;
+            }
+        }
+
+        .list-container {
+            margin-top: 0;
+            margin-bottom: 20px;
+
+            .sub-title-label {
+                font-size: 20px;
+            }
+        }
+        .list-wrap {
+        }
+        .list-item {
+            padding-top: 0;
+            padding-bottom: 5px;
+            margin-bottom: 25px;
+
+            .head-container {
+                .title-label {
+                    margin-top: 3px;
+
+                    font-size: 16px;
+                    line-height: 1.5;
+                }
+            }
+
+            .description-label {
+                margin-top: 10px;
+            }
+        }
+    }
+    @media (min-width: 576px) and (max-width: 767.98px) {
+    }
+    @media (min-width: 768px) and (max-width: 991.98px) {
+    }
+    @media (min-width: 992px) and (max-width: 1199.98px) {
     }
 }
 
@@ -303,5 +479,81 @@
             color: rgba($c-gray, .75);
             text-align: center;
         }
+    }
+
+    @media (max-width: 575.98px) {
+        .contents-container {
+            margin: 0;
+        }
+
+        .texts-container {
+            &:first-child {
+                padding-right: $mobile-side-space;
+            }
+        }
+        .half .texts-container {
+            padding: 0 40px !important;
+
+            background-color: $c-gray-base-light;
+
+            .texts-wrap {
+                margin-bottom: 30px;
+                padding-top: 40px;
+                padding-bottom: 40px;
+
+                background-color: #fff;
+
+                .title-label {
+                    letter-spacing: 1px;
+                    line-height: 2.15;
+                }
+            }
+            &.last {
+                background-color: transparent;
+
+                .texts-wrap {
+                    margin-bottom: 0;
+
+                    background-color: transparent;
+                }
+                &:before,
+                &:after {
+                    content: '';
+
+                    position: absolute;
+
+                    top: 0;
+                    left: 0;
+
+                    width: 40px;
+                    height: 60px !important;
+
+                    padding: 0;
+
+                    background-color: $c-gray-base-light;
+                }
+                &:after {
+                    left: initial !important;
+                    right: 0 !important;
+
+                    width: 40px !important;
+                    margin-right: 0 !important;
+                }
+            }        
+        }
+
+        .description-container {
+            padding-bottom: 60px;
+
+            .description-label {
+                margin-top: 40px;
+            }
+        }
+    }
+    @media (min-width: 576px) and (max-width: 767.98px) {
+    }
+    @media (min-width: 768px) and (max-width: 991.98px) {
+    }
+    @media (min-width: 992px) and (max-width: 1199.98px) {
     }
 }
