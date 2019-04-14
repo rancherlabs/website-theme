@@ -100,6 +100,8 @@
         .texts-container {
             padding-top: 50px;
             padding-bottom: 30%;
+            padding-right: 25px;
+            padding-left: 25px;
 
             .title-label {
                 margin-bottom: 14px;
@@ -141,10 +143,40 @@
         }
     }
     @media (min-width: 576px) and (max-width: 767.98px) {
+        .texts-container {
+            padding-right: 25px;
+            padding-left: 25px;
+
+            .title-label {
+                margin-bottom: 16px;
+
+                font-size: 2.4em;
+            }
+        }
     }
     @media (min-width: 768px) and (max-width: 991.98px) {
+        .texts-container {
+            padding-right: 25px;
+            padding-left: 25px;
+
+            .title-label {
+                margin-bottom: 18px;
+
+                font-size: 2.9em;
+            }
+        }
     }
     @media (min-width: 992px) and (max-width: 1199.98px) {
+        .texts-container {
+            padding-right: 25px;
+            padding-left: 25px;
+
+            .title-label {
+                margin-bottom: 20px;
+
+                font-size: 3.3em;
+            }
+        }
     }
 }
 
@@ -192,7 +224,7 @@
     }
 
     .thumbnail-box {
-        .decoration-cloud {
+        .decoration-ground {
             display: none;
         }
     }
@@ -286,10 +318,37 @@
         }
     }
     @media (min-width: 576px) and (max-width: 767.98px) {
+        .contents-container {
+            padding-top: 350px;
+        }
+
+        .thumbnail-container {
+            width: 160%;
+            
+            margin-top: 55%;
+            margin-left: -60%;
+        }
     }
     @media (min-width: 768px) and (max-width: 991.98px) {
+        .contents-container {
+            padding-top: 330px;
+        }
+
+        .thumbnail-container {
+            width: 160%;
+            
+            margin-top: 55%;
+            margin-left: -60%;
+        }
     }
     @media (min-width: 992px) and (max-width: 1199.98px) {
+        .contents-container {
+            padding-top: 300px;
+        }
+
+        .thumbnail-container {
+            margin-left: -60%;
+        }
     }
 }
 
@@ -529,9 +588,42 @@
         }
     }
     @media (min-width: 576px) and (max-width: 767.98px) {
+        .thumbnail-container {
+            .thumbnail-wrap {
+                width: 150%;
+            }
+        }
+
+        .texts-container {
+            padding-top: 100px;
+            padding-bottom: 100px;
+            padding-left: 18%
+        }
     }
     @media (min-width: 768px) and (max-width: 991.98px) {
+        .thumbnail-container {
+            .thumbnail-wrap {
+                width: 150%;
+            }
+        }
+
+        .texts-container {
+            padding-top: 120px;
+            padding-bottom: 120px;
+            padding-left: 18%
+        }
     }
     @media (min-width: 992px) and (max-width: 1199.98px) {
+        .thumbnail-container {
+            .thumbnail-wrap {
+                width: 150%;
+            }
+        }
+
+        .texts-container {
+            padding-top: 150px;
+            padding-bottom: 150px;
+            padding-left: 18%
+        }
     }
 }

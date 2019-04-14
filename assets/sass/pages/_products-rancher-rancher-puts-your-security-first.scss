@@ -90,6 +90,162 @@
             max-height: 550px;
         }
     }
+
+    @media (max-width: 575.98px) {
+        margin-top: 135px;
+
+        .texts-container {
+            padding-top: 50px;
+            padding-bottom: 20px;
+
+            .title-label {
+                margin-bottom: 14px;
+
+                font-size: 2em;
+            }
+
+            .description-label {
+                font-size: 1.05em;
+                line-height: 1.5;
+            }
+        }
+
+        .middle-image-container {
+            margin-top: 30px;
+            margin-bottom: -160px;
+
+            .rancher-security {
+                .flow {
+                    width: 100%;
+                    height: auto;
+                }
+            }
+
+            .decoration.ground {
+                bottom: 140px;
+            }
+            .decoration.ground .left {
+                // left: -95%;
+
+                height: 90px;
+            }
+            .decoration.ground .right {
+                // right: -90%;
+                // left: initial;
+
+                height: 95px;
+            }
+        }
+    }
+    @media (min-width: 576px) and (max-width: 767.98px) {
+        margin-top: 135px;
+
+        .texts-container {
+            padding-top: 100px;
+            padding-right: 25px;
+            padding-left: 25px;
+
+            .title-label {
+                margin-bottom: 16px;
+
+                font-size: 2.4em;
+            }
+
+            .description-label {
+                font-size: .9em;
+            }
+        }
+
+        .rancher-security {
+            .flow {
+                width: 90%;
+                max-width: 400px;
+                height: auto;
+                max-height: none;
+            }
+        }
+
+        .middle-image-container {
+            margin-top: 60px;
+            margin-bottom: -180px;
+
+            .decoration.ground {
+                bottom: 180px;
+            }
+        }
+    }
+    @media (min-width: 768px) and (max-width: 991.98px) {
+        .texts-container {
+            padding-top: 120px;
+            padding-right: 25px;
+            padding-left: 25px;
+
+            .title-label {
+                margin-bottom: 18px;
+
+                font-size: 2.9em;
+            }
+
+            .description-label {
+                font-size: 1em;
+                line-height: 1.5;
+            }
+        }
+
+        .rancher-security {
+            .flow {
+                width: 90%;
+                max-width: 400px;
+                height: auto;
+                max-height: none;
+            }
+        }
+
+        .middle-image-container {
+            margin-top: 100px;
+            margin-bottom: -150px;
+
+            .decoration.ground {
+                bottom: 150px;
+            }
+        }
+    }
+    @media (min-width: 992px) and (max-width: 1199.98px) {
+        .texts-container {
+            padding-top: 150px;
+            padding-right: 25px;
+            padding-left: 25px;
+
+            .title-label {
+                margin-bottom: 20px;
+
+                font-size: 3.3em;
+            }
+
+            .description-label {
+                font-size: 1.15em;
+                line-height: 1.6;
+            }
+        }
+
+        .rancher-security {
+            .flow {
+                width: 90%;
+                max-width: 400px;
+                height: auto;
+                max-height: none;
+            }
+        }
+
+        .middle-image-container {
+            margin-top: 120px;
+            margin-bottom: -200px;
+
+            .decoration.ground {
+                bottom: 200px;
+            }
+        }
+    }
 }
 
 .products-rancher-rancher-puts-your-security-first-screen2 {
@@ -179,6 +335,122 @@
             margin-left: 14.5%;
         }
     }
+
+    @media (max-width: 575.98px) {
+        .contents-container {
+            padding-top: 200px;
+
+            .decoration-cloud {
+                height: 60px;
+            }
+        }
+
+        .texts-container {
+            padding-top: 80px;
+            padding-right: $mobile-side-space;
+            padding-bottom: 150px;
+            padding-left: $mobile-side-space;
+            
+            .decoration-ground {
+                display: none;
+            }
+        }
+        .texts-wrap {
+            width: 100%;
+
+            .title-label {
+                width: 70%;
+            }
+        }
+
+        .thumbnail-box {
+            padding-bottom: 50px;
+
+            background-color: $c-gray-base-light;
+
+            .decoration-ground {
+                display: block;
+
+                left: -10%;
+
+                height: 60px;
+            }
+        }
+        .thumbnail-container {
+            width: 100%;
+
+            margin-top: -120px;
+            margin-left: 0;
+
+            background-color: #fff;
+
+            text-align: center;
+
+            .thumbnail {
+                width: 60%;
+            }
+        }
+
+        .lower-container {
+            padding-top: 50px;
+            padding-right: $mobile-side-space;
+            padding-bottom: 100px;
+            padding-left: $mobile-side-space;
+
+            .decoration-ground {
+                left: -15%;
+                height: 70px;
+            }
+
+            .thumbnail-container {
+                width: 100%;
+
+                margin-bottom: 0;
+                margin-left: 0;
+            }
+        }
+    }
+    @media (min-width: 576px) and (max-width: 767.98px) {
+        .contents-container {
+            padding-top: 230px;
+        }
+
+        .texts-wrap {
+            width: 60%;
+        }
+
+        .thumbnail-container {
+            width: 200%;
+
+            margin-left: -80%;
+        }
+    }
+    @media (min-width: 768px) and (max-width: 991.98px) {
+        .contents-container {
+            padding-top: 280px;
+        }
+
+        .texts-wrap {
+            width: 70%;
+        }
+
+        .thumbnail-container {
+            width: 150%;
+
+            margin-left: -40%;
+        }
+    }
+    @media (min-width: 992px) and (max-width: 1199.98px) {
+        .contents-container {
+            padding-top: 350px;
+        }
+
+        .thumbnail-container {
+            width: 180%;
+
+            margin-left: -60%;
+        }
+    }
 }
 
 .products-rancher-rancher-puts-your-security-first-screen3 {
@@ -242,6 +514,112 @@
 
             width: 100%;
             height: auto;
+        }
+    }
+
+    @media (max-width: 575.98px) {
+        .contents-container {
+            padding-top: 45%;
+            padding-bottom: 60px;
+        }
+
+        .texts-container {
+            .title-label {
+                br {
+                    display: none;
+                }
+            }
+        }
+
+        .title-wrap {
+            text-align: center;
+        }
+
+        .thumbnail-container {
+            margin-top: -7%;
+            padding-top: 10%;
+            padding-right: 5%;
+            padding-left: 5%;
+
+            .thumbnail-wrap {
+                width: 100%;
+            }
+        }
+    }
+    @media (min-width: 576px) and (max-width: 767.98px) {
+        .contents-container {
+            padding-top: 60px;
+        }
+
+        .texts-container {
+            .title-label {
+                br {
+                    display: none;
+                }
+            }
+        }
+
+        .title-wrap {
+            text-align: center;
+        }
+
+        .thumbnail-container {
+            margin-top: -7%;
+            padding-top: 10%;
+            padding-right: 5%;
+            padding-left: 5%;
+
+            .thumbnail-wrap {
+                width: 100%;
+            }
+        }
+    }
+    @media (min-width: 768px) and (max-width: 991.98px) {
+        .contents-container {
+            padding-top: 100px;
+        }
+
+        .texts-container {
+            .title-label {
+                br {
+                    display: none;
+                }
+            }
+        }
+
+        .title-wrap {
+            text-align: center;
+        }
+
+        .thumbnail-container {
+            margin-top: -7%;
+            padding-top: 10%;
+            padding-right: 5%;
+            padding-left: 5%;
+
+            .thumbnail-wrap {
+                width: 100%;
+            }
+        }
+    }
+    @media (min-width: 992px) and (max-width: 1199.98px) {
+        .contents-container {
+            padding-top: 300px;
+        }
+
+        .title-wrap {
+            text-align: center;
+        }
+
+        .thumbnail-container {
+            margin-top: -7%;
+            padding-top: 10%;
+            padding-right: 5%;
+            padding-left: 5%;
+
+            .thumbnail-wrap {
+                width: 100%;
+            }
         }
     }
 }
@@ -342,6 +720,82 @@
             }
         }
     }
+
+    @media (max-width: 575.98px) {
+        .contents-container {
+            padding-top: 80px;
+            padding-bottom: 80px;
+
+            .rancher-logo {
+                left: $mobile-side-space;
+                left: initial;
+                right: $mobile-side-space;
+
+                width: 70px;
+            }
+            .ground {
+                height: 50px;
+            }
+
+            .contents-wrap {
+                padding-top: 50px;
+                padding-bottom: 0;
+            }
+        }
+
+        .capture1 {
+            margin-top: 30px;
+            margin-bottom: 30px;
+
+            .thumbnail-container {
+                width: 100%;
+
+                margin-left: 0;
+            }
+
+            .decoration {
+                bottom: -25%;
+
+                max-width: 160px;
+            }
+        }
+    }
+    @media (min-width: 576px) and (max-width: 767.98px) {
+        .contents-container {
+            padding-top: 70px;
+            padding-right: 5%;
+            padding-bottom: 70px;
+            padding-left: 5%;
+        }
+
+        .capture1 .thumbnail-container {
+            width: 110%;
+        }
+    }
+    @media (min-width: 768px) and (max-width: 991.98px) {
+        .contents-container {
+            padding-top: 80px;
+            padding-right: 5%;
+            padding-bottom: 80px;
+            padding-left: 5%;
+        }
+
+        .capture1 .thumbnail-container {
+            width: 110%;
+        }
+    }
+    @media (min-width: 992px) and (max-width: 1199.98px) {
+        .contents-container {
+            padding-top: 100px;
+            padding-right: 5%;
+            padding-bottom: 100px;
+            padding-left: 5%;
+        }
+
+        .capture1 .thumbnail-container {
+            width: 120%;
+        }
+    }
 }
 
 .products-rancher-rancher-puts-your-security-first-screen5 {
@@ -383,6 +837,86 @@
 
             width: 100%;
             height: auto;
+        }
+    }
+
+    @media (max-width: 575.98px) {
+        .contents-container {
+            padding-top: 50px;
+            padding-bottom: 50px;
+        }
+
+        .title-wrap {
+            padding-left: $mobile-side-space;
+        }
+
+        .thumbnail-container {
+            margin-right: -$mobile-side-space;
+            margin-left: -$mobile-side-space;
+            padding-top: 50px;
+            padding-right: $mobile-side-space;
+            padding-bottom: 50px;
+            padding-left: $mobile-side-space;
+        }
+        .thumbnail-wrap {
+            width: 100%;
+        }
+    }
+    @media (min-width: 576px) and (max-width: 767.98px) {
+        .contents-container {
+            padding-top: 100px;
+            padding-bottom: 100px;
+        }
+
+        .thumbnail-container {
+            padding-right: 7%;
+            padding-left: 7%;
+        }
+        .thumbnail-wrap {
+            width: 100%;
+        }
+
+        .title-wrap {
+            padding-left: $mobile-side-space;
+        }
+        .title-label {
+            br {
+                display: none;
+            }
+        }
+    }
+    @media (min-width: 768px) and (max-width: 991.98px) {
+        .contents-container {
+            padding-top: 150px;
+            padding-bottom: 150px;
+        }
+
+        .thumbnail-container {
+            padding-right: 5%;
+            padding-left: 5%;
+        }
+        .thumbnail-wrap {
+            width: 100%;
+        }
+
+        .title-label {
+            br {
+                display: none;
+            }
+        }
+    }
+    @media (min-width: 992px) and (max-width: 1199.98px) {
+        .contents-container {
+            padding-top: 180px;
+            padding-bottom: 180px;
+        }
+
+        .thumbnail-container {
+            padding-right: 5%;
+            padding-left: 5%;
+        }
+        .thumbnail-wrap {
+            width: 100%;
         }
     }
 }
@@ -431,6 +965,89 @@
 
             width: 100%;
             height: auto;
+        }
+    }
+
+    @media (max-width: 575.98px) {
+        .contents-container {
+            padding-top: 30px;
+            padding-bottom: 60px;
+        }
+
+        .thumbnail-container {
+            margin-top: 20px;
+
+            .thumbnail-wrap {
+                width: 80%;
+
+                margin-left: 10%;
+            }
+        }
+
+        .blind-container {
+            .blind-wrap {}
+
+            .blinder {
+                width: 200%;
+                height: auto;
+
+                margin-left: -2%;
+            }
+        }
+    }
+    @media (min-width: 576px) and (max-width: 767.98px) {
+        .contents-container {
+            padding-top: 50px;
+            padding-bottom: 100px;
+        }
+
+        .thumbnail-container {
+            margin-top: 30px;
+
+            .thumbnail-wrap {
+                width: 70%;
+
+                margin-left: 15%;
+            }
+        }
+
+        .blind-container {
+            .blind-wrap {}
+
+            .blinder {
+                width: 120%;
+                height: auto;
+            }
+        }
+    }
+    @media (min-width: 768px) and (max-width: 991.98px) {
+        .contents-container {
+            padding-top: 80px;
+            padding-bottom: 120px;
+        }
+
+        .blind-container {
+            .blind-wrap {}
+
+            .blinder {
+                width: 120%;
+                height: auto;
+            }
+        }
+    }
+    @media (min-width: 992px) and (max-width: 1199.98px) {
+        .contents-container {
+            padding-top: 80px;
+            padding-bottom: 160px;
+        }
+
+        .blind-container {
+            .blind-wrap {}
+
+            .blinder {
+                width: 120%;
+                height: auto;
+            }
         }
     }
 }

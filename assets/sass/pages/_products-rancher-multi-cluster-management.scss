@@ -97,7 +97,7 @@
 
         .texts-container {
             padding-top: 50px;
-            padding-bottom: 30%;
+            padding-bottom: 10px;
 
             .title-label {
                 margin-bottom: 14px;
@@ -111,38 +111,112 @@
             }
         }
 
-        .middle-image-container {
-            margin-top: -20%;
-            margin-bottom: -27.5%;
+        // .middle-image-container {
+        //     margin-top: -20%;
+        //     margin-bottom: -27.5%;
 
-            .multi-cluster {
-                .flow {
-                    width: 100%;
-                    height: auto;
-                }
-            }
+        //     .multi-cluster {
+        //         .flow {
+        //             width: 100%;
+        //             height: auto;
+        //         }
+        //     }
+
+        //     .decoration.ground {
+        //         bottom: 49%;
+        //     }
+        //     .decoration.ground .left {
+        //         left: -95%;
+
+        //         height: 70px;
+        //     }
+        //     .decoration.ground .right {
+        //         right: -90%;
+        //         left: initial;
+
+        //         height: 75px;
+        //     }
+        // }
+
+        .middle-image-container {
+            margin-top: 50px;
+            margin-bottom: -150px;
 
             .decoration.ground {
-                bottom: 49%;
-            }
-            .decoration.ground .left {
-                left: -95%;
-
-                height: 70px;
-            }
-            .decoration.ground .right {
-                right: -90%;
-                left: initial;
-
-                height: 75px;
+                bottom: 150px;
             }
         }
     }
     @media (min-width: 576px) and (max-width: 767.98px) {
+        .texts-container {
+            padding-top: 100px;
+            padding-right: 25px;
+            padding-left: 25px;
+
+            .title-label {
+                margin-bottom: 16px;
+
+                font-size: 2.4em;
+            }
+
+            .description-label {
+                font-size: .9em;
+            }
+        }
+
+        .middle-image-container {
+            margin-top: 50px;
+            margin-bottom: -250px;
+
+            .decoration.ground {
+                bottom: 250px;
+            }
+        }
     }
     @media (min-width: 768px) and (max-width: 991.98px) {
+        .texts-container {
+            padding-top: 130px;
+            padding-right: 25px;
+            padding-left: 25px;
+
+            .title-label {
+                margin-bottom: 18px;
+
+                font-size: 2.9em;
+            }
+
+            .description-label {
+                font-size: 1em;
+                line-height: 1.5;
+            }
+        }
+
+        .middle-image-container {
+            margin-top: 70px;
+            margin-bottom: -250px;
+
+            .decoration.ground {
+                bottom: 250px;
+            }
+        }
     }
     @media (min-width: 992px) and (max-width: 1199.98px) {
+        .texts-container {
+            padding-top: 150px;
+            padding-right: 25px;
+            padding-left: 25px;
+
+            .title-label {
+                margin-bottom: 20px;
+
+                font-size: 3.3em;
+            }
+
+            .description-label {
+                font-size: 1.15em;
+                line-height: 1.6;
+            }
+        }
     }
 }
 
@@ -320,10 +394,43 @@
         }
     }
     @media (min-width: 576px) and (max-width: 767.98px) {
+        .contents-container {
+            padding-top: 350px;
+        }
+
+        .texts-container {
+            padding-top: 80px;
+        }
+
+        .thumbnail-wrap {
+            width: 110%;
+        }
     }
     @media (min-width: 768px) and (max-width: 991.98px) {
+        .contents-container {
+            padding-top: 450px;
+        }
+
+        .texts-container {
+            padding-top: 100px;
+        }
+
+        .thumbnail-wrap {
+            width: 110%;
+        }
     }
     @media (min-width: 992px) and (max-width: 1199.98px) {
+        .contents-container {
+            padding-top: 550px;
+        }
+
+        .texts-container {
+            padding-top: 120px;
+        }
+
+        .thumbnail-wrap {
+            width: 120%;
+        }
     }
 }
 
@@ -404,6 +511,7 @@
         .thumbnail-container {
             width: 100%;
 
+            margin-top: 5%;
             margin-bottom: 40px;
             padding-right: $mobile-side-space;
             padding-left: $mobile-side-space;
@@ -418,10 +526,40 @@
         }
     }
     @media (min-width: 576px) and (max-width: 767.98px) {
+        .contents-container {
+            padding-top: 50px;
+            padding-bottom: 50px;
+        }
+
+        .thumbnail-container {
+            margin-top: 50px;
+            padding-top: 20px;
+            padding-right: 5%;
+            padding-bottom: 20px;
+            padding-left: 5%;
+
+            &:before {
+                width: 135%;
+                height: 135%;
+
+                margin-top: 0;
+            }
+        }
+        .thumbnail-wrap {
+            width: 100%;
+        }
     }
     @media (min-width: 768px) and (max-width: 991.98px) {
+        .contents-container {
+            padding-top: 150px;
+            padding-bottom: 175px;
+        }
     }
     @media (min-width: 992px) and (max-width: 1199.98px) {
+        .contents-container {
+            padding-top: 200px;
+            padding-bottom: 175px;
+        }
     }
 }
 
@@ -571,8 +709,27 @@
         }
     }
     @media (min-width: 576px) and (max-width: 767.98px) {
+        .thumbnail-container {
+            .thumbnail-wrap {
+                width: 160%;
+
+                margin-left: -18%;
+            }
+        }
+
+        .texts-container {
+            padding-top: 120px;
+            padding-bottom: 120px;
+        }
     }
     @media (min-width: 768px) and (max-width: 991.98px) {
+        .thumbnail-container {
+            .thumbnail-wrap {
+                width: 160%;
+
+                margin-left: -18%;
+            }
+        }
     }
     @media (min-width: 992px) and (max-width: 1199.98px) {
     }
@@ -718,25 +875,76 @@
         }
 
         .cluster-security {
-            .thumbnail-container {
-                margin-top: 80px;
-            }
-
             .decoration-ground {
-                margin-top: -41.5%;
-                padding-top: 50%;
+                margin-top: -13%;
+                padding-top: 17%;
 
                 .decoration-cloud {
-                    height: 40px;
+                    height: 60px;
                 }
             }
         }
     }
     @media (min-width: 576px) and (max-width: 767.98px) {
+        .contents-container {
+            padding-top: 75px;
+        }
+
+        .thumbnail-container {
+            padding-right: 5%;
+            padding-left: 5%;
+        }
+        .thumbnail-wrap {
+            width: 100%;
+        }
+
+        .cluster-security {
+            .decoration-ground {
+                margin-top: -13%;
+                padding-top: 17%;
+
+                .decoration-cloud {
+                    height: 60px;
+                }
+            }
+        }
     }
     @media (min-width: 768px) and (max-width: 991.98px) {
+        .contents-container {
+            padding-top: 100px;
+        }
+
+        .thumbnail-container {
+            padding-right: 5%;
+            padding-left: 5%;
+        }
+        .thumbnail-wrap {
+            width: 100%;
+        }
+
+        .cluster-security {
+            .decoration-ground {
+                margin-top: -13%;
+                padding-top: 17%;
+
+                .decoration-cloud {
+                    height: 60px;
+                }
+            }
+        }
     }
     @media (min-width: 992px) and (max-width: 1199.98px) {
+        .contents-container {
+            padding-top: 150px;
+        }
+
+        .thumbnail-container {
+            padding-right: 5%;
+            padding-left: 5%;
+        }
+        .thumbnail-wrap {
+            width: 100%;
+        }
     }
 }
 
@@ -889,6 +1097,9 @@
         .contents-container {
             padding-top: 60px;
             padding-bottom: 60px;
+        }
+        .texts-container {
+            margin-left: 0;
         }
 
         .thumbnail-container {
