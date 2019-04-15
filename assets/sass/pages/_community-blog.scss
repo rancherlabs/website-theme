@@ -235,6 +235,16 @@
   @media (min-width: 768px) and (max-width: 991.98px) {
   }
   @media (min-width: 992px) and (max-width: 1199.98px) {
+    .information-container .user-container {
+      margin-top: 10px;
+    }
+    .information-container .user-container .date-label,
+    .information-container .user-container .read-time-label {
+      white-space: nowrap;
+    }
+    .information-container .user-container .read-time-label {
+      margin-right: 0;
+    }
   }
 }
 
@@ -675,6 +685,10 @@
   @media (min-width: 768px) and (max-width: 991.98px) {
   }
   @media (min-width: 992px) and (max-width: 1199.98px) {
+    .lastest-container {
+      padding-right: $mobile-side-space;
+      padding-left: $mobile-side-space;
+    }
   }
 }
 

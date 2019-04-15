@@ -55,10 +55,33 @@
         }
     }
     @media (min-width: 576px) and (max-width: 767.98px) {
+        .texts-container {
+            padding-top: 130px;
+            padding-bottom: 130px;
+
+            .description-label {
+                font-size: 1.15em;
+            }
+        }
     }
     @media (min-width: 768px) and (max-width: 991.98px) {
+        .texts-container {
+            padding-top: 130px;
+            padding-bottom: 160px;
+
+            .description-label {
+                font-size: 1.35em;
+            }
+        }
     }
     @media (min-width: 992px) and (max-width: 1199.98px) {
+        .texts-container {
+            padding-bottom: 200px;
+
+            .description-label {
+                font-size: 1.5em;
+            }
+        }
     }
 }
 

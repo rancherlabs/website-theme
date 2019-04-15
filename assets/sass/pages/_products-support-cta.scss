@@ -121,10 +121,69 @@
     }
   }
   @media (min-width: 576px) and (max-width: 767.98px) {
+    .texts-container {
+      padding-right: 25px;
+      padding-left: 25px;
+
+      .texts-wrap {
+        margin-top: 210px;
+        margin-bottom: 140px;
+
+        .title-label {
+          margin-bottom: 10px;
+
+          font-size: 2em;
+        }
+
+        .description-label {
+          font-size: .9em;
+        }
+      }
+    }
   }
   @media (min-width: 768px) and (max-width: 991.98px) {
+    .texts-container {
+      padding-right: 25px;
+      padding-left: 25px;
+
+      .texts-wrap {
+        margin-top: 210px;
+        margin-bottom: 150px;
+
+        .title-label {
+          margin-bottom: 10px;
+
+          font-size: 2.4em;
+        }
+
+        .description-label {
+          font-size: 1em;
+          line-height: 1.5;
+        }
+      }
+    }
   }
   @media (min-width: 992px) and (max-width: 1199.98px) {
+    .texts-container {
+      padding-right: 25px;
+      padding-left: 25px;
+
+      .texts-wrap {
+        margin-top: 210px;
+        margin-bottom: 170px;
+
+        .title-label {
+          margin-bottom: 10px;
+
+          font-size: 2.8em;
+        }
+
+        .description-label {
+          font-size: 1.25em;
+          line-height: 1.6;
+        }
+      }
+    }
   }
 }
 
@@ -411,9 +470,64 @@
     }
   }
   @media (min-width: 576px) and (max-width: 767.98px) {
+    .contents-container {
+      padding: 70px 0 80px;
+    }
+
+    .texts-container {
+      padding-left: $mobile-side-space;
+    }
+
+    .form-container {
+      padding-left: 5%;
+    }
+
+    .hs-form-field label {
+      font-size: 20px;
+    }
+    .hs-form-field:before {
+      top: 12%;
+
+      font-size: 410%;
+    }
+
+    .hs-form-field .input {
+      width: 100%;
+
+      margin-top: 15px;
+    }
   }
   @media (min-width: 768px) and (max-width: 991.98px) {
+    .contents-container {
+      padding: 100px 0;
+    }
+
+    .texts-container {
+      padding-left: $mobile-side-space;
+    }
+
+    .hs-form-field label {
+      font-size: 20px;
+    }
+    .hs-form-field:before {
+      top: 12%;
+
+      font-size: 410%;
+    }
+
+    .hs-form-field .input {
+      width: 100%;
+
+      margin-top: 15px;
+    }
   }
   @media (min-width: 992px) and (max-width: 1199.98px) {
+    .contents-container {
+      padding: 150px 0;
+    }
+
+    .texts-container {
+      padding-left: $mobile-side-space;
+    }
   }
 }

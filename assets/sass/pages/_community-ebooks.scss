@@ -118,10 +118,67 @@
     }
   }
   @media (min-width: 576px) and (max-width: 767.98px) {
+    .texts-container {
+      padding-left: 25px;
+      padding-right: 25px;
+
+      .texts-wrap {
+        margin-top: 200px;
+        margin-bottom: 100px;
+        padding-right: 25px;
+        padding-left: 25px;
+
+        .title-label {
+          font-size: 2em;
+        }
+      }
+    }
+
+    .lower-container .decoration.ground .ground-lower {
+        margin-left: 45%;
+    }
   }
   @media (min-width: 768px) and (max-width: 991.98px) {
+    .texts-container {
+      padding-left: 25px;
+      padding-right: 25px;
+
+      .texts-wrap {
+        margin-top: 200px;
+        margin-bottom: 110px;
+        padding-right: 25px;
+        padding-left: 25px;
+
+        .title-label {
+          font-size: 2.4em;
+        }
+      }
+    }
+
+    .lower-container .decoration.ground .ground-lower {
+      margin-left: 45%;
+    }
   }
   @media (min-width: 992px) and (max-width: 1199.98px) {
+    .texts-container {
+      padding-left: 25px;
+      padding-right: 25px;
+
+      .texts-wrap {
+        margin-top: 200px;
+        margin-bottom: 110px;
+        padding-right: 25px;
+        padding-left: 25px;
+
+        .title-label {
+          font-size: 2.8em;
+        }
+      }
+    }
+
+    .lower-container .decoration.ground .ground-lower {
+        margin-left: 45%;
+    }
   }
 }
 
@@ -129,13 +186,77 @@
   padding-bottom: 300px;
 
   @media (max-width: 575.98px) {
-    padding-bottom: 80px;
+    padding-bottom: 100px;
+
+    .sign-up-form-container {
+      height: auto;
+
+      margin-right: $mobile-side-space;
+      margin-left: $mobile-side-space;
+      padding-top: 50px;
+      padding-bottom: 50px;
+
+      .title-label {
+        font-size: 20px;
+        text-align: center;
+      }
+
+      .form-container {
+        margin-top: 20px;
+
+        .hbspt-form {
+          justify-content: center;
+        }
+
+        [type=submit] {
+          width: 100%;
+          max-width: 100%;
+
+          text-align: center;
+        }
+      }
+    }
   }
   @media (min-width: 576px) and (max-width: 767.98px) {
+    padding-bottom: 150px;
+
+    .sign-up-form-container {
+      height: auto;
+
+      margin-right: $mobile-side-space;
+      margin-left: $mobile-side-space;
+      padding-top: 50px;
+      padding-bottom: 50px;
+
+      .title-label {
+        font-size: 24px;
+        text-align: center;
+      }
+  
+      .form-container {
+        margin-top: 20px;
+  
+        .hbspt-form {
+          justify-content: center;
+        }
+      }
+    }
   }
   @media (min-width: 768px) and (max-width: 991.98px) {
+    padding-bottom: 200px;
+
+    .sign-up-form-container {
+      margin-right: $mobile-side-space;
+      margin-left: $mobile-side-space;
+    }
   }
   @media (min-width: 992px) and (max-width: 1199.98px) {
+    padding-bottom: 250px;
+
+    .sign-up-form-container {
+      margin-right: $mobile-side-space;
+      margin-left: $mobile-side-space;
+    }
   }
 }
 
@@ -279,10 +400,46 @@
     }
   }
   @media (min-width: 576px) and (max-width: 767.98px) {
+    .ebook-list-container .ebook-list-wrap {
+      padding-right: $mobile-side-space;
+      padding-left: $mobile-side-space;
+    }
+    .ebook-item .information-container .title-label {
+      @include textElipsis(3, 1.5);
+    }
+    .ebook-item .information-container .description-label {
+      margin-bottom: 15px;
+
+      @include textElipsis(2, 1.665);
+    }
   }
   @media (min-width: 768px) and (max-width: 991.98px) {
+    .ebook-list-container .ebook-list-wrap {
+      padding-right: $mobile-side-space;
+      padding-left: $mobile-side-space;
+    }
+    .ebook-item .information-container .title-label {
+      @include textElipsis(3, 1.5);
+    }
+    .ebook-item .information-container .description-label {
+      margin-bottom: 15px;
+
+      @include textElipsis(2, 1.665);
+    }
   }
   @media (min-width: 992px) and (max-width: 1199.98px) {
+    .ebook-list-container .ebook-list-wrap {
+      padding-right: $mobile-side-space;
+      padding-left: $mobile-side-space;
+    }
+    .ebook-item .information-container .title-label {
+      @include textElipsis(3, 1.5);
+    }
+    .ebook-item .information-container .description-label {
+      margin-bottom: 15px;
+
+      @include textElipsis(2, 1.665);
+    }
   }
 }
 

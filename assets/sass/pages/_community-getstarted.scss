@@ -132,10 +132,140 @@
         }
     }
     @media (min-width: 576px) and (max-width: 767.98px) {
+        .texts-container {
+            .texts-wrap {
+                margin-top: 100px;
+                margin-bottom: 140px;
+                padding-right: 25px;
+                padding-left: 25px;
+        
+                .title-label {
+                    margin-bottom: 14px;
+                
+                    font-size: 2.3em;
+                }
+        
+                h3.description-label {
+                    font-size: 1.15em;
+                    line-height: 1.5;
+                }
+                .description-label {
+                    font-size: 1em;
+                }
+                .description-label br {
+                    display: none;
+                }
+            }
+        }
+    
+        .lower-container {
+            height: 100px;
+        
+            margin-top: -100px;
+        
+            .decoration.ground .ground-lower {
+                height: 44px;
+        
+                margin-top: 56px;
+                margin-left: 15%;
+            }
+            .decoration.ground .ground-upper {
+                left: 54%;
+        
+                height: 100px;
+            }
+        }
     }
     @media (min-width: 768px) and (max-width: 991.98px) {
+        .texts-container {
+            .texts-wrap {
+                margin-top: 110px;
+                margin-bottom: 150px;
+                padding-right: 25px;
+                padding-left: 25px;
+        
+                .title-label {
+                    margin-bottom: 14px;
+                
+                    font-size: 2.6em;
+                }
+        
+                h3.description-label {
+                    font-size: 1.25em;
+                    line-height: 1.5;
+                }
+                .description-label {
+                    font-size: 1.1em;
+                }
+                .description-label br {
+                    display: none;
+                }
+            }
+        }
+    
+        .lower-container {
+            height: 120px;
+        
+            margin-top: -120px;
+        
+            .decoration.ground .ground-lower {
+                height: 44px;
+        
+                margin-top: 56px;
+                margin-left: 15%;
+            }
+            .decoration.ground .ground-upper {
+                left: 54%;
+        
+                height: 100px;
+            }
+        }
+
     }
     @media (min-width: 992px) and (max-width: 1199.98px) {
+        .texts-container {
+            .texts-wrap {
+                margin-top: 130px;
+                margin-bottom: 160px;
+                padding-right: 25px;
+                padding-left: 25px;
+        
+                .title-label {
+                    margin-bottom: 14px;
+                
+                    font-size: 2.9em;
+                }
+        
+                h3.description-label {
+                    font-size: 1.35em;
+                    line-height: 1.5;
+                }
+                .description-label {
+                    font-size: 1.15em;
+                }
+                .description-label br {
+                    display: none;
+                }
+            }
+        }
+    
+        .lower-container {
+            height: 140px;
+        
+            margin-top: -140px;
+        
+            .decoration.ground .ground-lower {
+                height: 44px;
+        
+                margin-top: 56px;
+                margin-left: 15%;
+            }
+            .decoration.ground .ground-upper {
+                left: 54%;
+        
+                height: 100px;
+            }
+        }
     }
 }
 
@@ -355,12 +485,57 @@
             }
         }
 
+        .easy-steps .title-label {
+            br {
+                display: none;
+            }
+        }
         .easy-steps-detail {
             margin-top: 10px;
 
             .step-item {
                 margin-bottom: 10px;
             }
+        }
+    }
+    @media (min-width: 576px) and (max-width: 767.98px) {
+        .texts-container {
+            padding-top: 100px;
+            padding-bottom: 120px;
+        }
+
+        .easy-steps .title-label {
+            br {
+                display: none;
+            }
+        }
+        .easy-steps .description-label.more-container {
+            margin-top: 35px;
+        }
+    }
+    @media (min-width: 768px) and (max-width: 991.98px) {
+        .texts-container {
+            padding-top: 120px;
+            padding-bottom: 140px;
+        }
+
+        .easy-steps .title-label {
+            br {
+                display: none;
+            }
+        }
+        .easy-steps .description-label.more-container {
+            margin-top: 40px;
+        }
+    }
+    @media (min-width: 992px) and (max-width: 1199.98px) {
+        .texts-container {
+            padding-top: 150px;
+            padding-bottom: 160px;
+        }
+
+        .easy-steps .description-label.more-container {
+            margin-top: 50px;
         }
     }
 }
