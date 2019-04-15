@@ -435,6 +435,10 @@
       border-top: 0;
     }
 
+    &.hidden {
+      display: none;
+    }
+
     .thumbnail-container {
       width: 100%;
       max-width: 182px;
@@ -718,14 +722,132 @@
 
       .buttons-container {
         margin-top: 40px;
-
         text-align: center;
+        display: flex;
+        justify-content: center;
 
         .button {
           min-width: 210px;
         }
       }
     }
+
+
+  .hs-form {
+    position: relative;
+    display: flex;
+
+    .label {
+      display: none;
+    }
+  }
+
+  @media (max-width: 575.98px) {
+    .hs_email {
+      width: 100%;
+    }
+  }
+
+  .hbspt-form form .input,
+  .hbspt-form .hs-form-field .input {
+    width: 100% !important;
+  }
+
+  .hs-input {
+    position: relative;
+    display: inline-block;
+    border-radius: 0;
+
+    flex: 0 0 auto;
+
+    width: 100%;
+    max-width: 260px;
+    height: 50px;
+
+    padding: 0 20px;
+
+    font-size: 15px;
+
+    border: 0;
+
+    box-sizing: border-box;
+
+    @media (max-width: 575.98px) {
+      max-width: 100%;
+      height: 46px;
+
+      padding: 0 15px;
+    }
+  }
+
+  .hs-button {
+    position: relative;
+    display: inline-block;
+
+    flex: 0 0 auto;
+
+    width: 50px;
+    height: 50px;
+
+    margin-top: 0;
+    padding: 0;
+
+    background-color: $c-blue !important;
+    border-radius: 0 !important;
+
+    border: 0;
+
+    @media (max-width: 575.98px) {
+      width: 46px;
+      height: 46px;
+    }
+
+    &:hover {
+      .icon {
+        width: 46px;
+        height: 46px;
+
+        margin: 2px;
+      }
+    }
+  }
+
+  .actions {
+    position: relative;
+
+    &:after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      pointer-events: none;
+      background: url("/imgs/button-arrow.png") center no-repeat;
+
+      width: 36px;
+      height: 36px;
+
+      margin: 7px;
+
+      @include transition(all 0.04s);
+
+      @media (max-width: 575.98px) {
+        transform: translate3d(-2px, -2px, 0);
+      }
+
+      .svg-linear {
+        fill: none;
+        stroke: #fff;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        stroke-miterlimit: 10;
+
+        @include transition(all 0.04s);
+      }
+    }
+  }
+  .submitted-message {
+    color: white;
+  }
   }
 
   @media (max-width: 575.98px) {
