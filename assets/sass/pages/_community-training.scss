@@ -827,6 +827,8 @@
         .training-item {
             margin-top: 30px;
             margin-bottom: 40px;
+            padding-right: 40px;
+            box-sizing: border-box;
 
             &:last-child {
                 margin-bottom: 0;
@@ -836,7 +838,7 @@
                 margin-top: 0;
                 margin-bottom: 0;
 
-                color: $c-blue-dark1;
+                color: $c-blue;
                 font-weight: 400;
             }
 
