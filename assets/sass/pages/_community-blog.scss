@@ -902,6 +902,33 @@
     padding-top: 130px;
   }
 
+  .tag-item {
+    position: relative;
+    display: block;
+    
+    justify-content: flex-start;
+    align-content: flex-start;
+
+    width: 100%;
+    margin: 20px 0 0;
+
+
+    .category-item,
+    a {
+      position: relative;
+      display: inline-block;
+
+      margin-right: 25px;
+      margin-top: 10px;
+
+      color: $c-green;
+      font-size: 12px;
+      font-weight: 800;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+    }
+  }
+
   .thumbnail-container {
     position: relative;
     display: inline-block;
@@ -1097,12 +1124,16 @@
       margin-bottom: 50px;
     }
 
-    h1 {
+    h1, h3 {
       margin-bottom: 40px;
 
       font-size: 25px;
       font-weight: 400;
       line-height: 1.4;
+    }
+
+    h3 {
+      font-size: 25px;
     }
 
     p {
@@ -1113,6 +1144,11 @@
       &:last-child {
         margin-bottom: 0;
       }
+    }
+
+    a {
+      // color: $c-green;
+      font-weight: bold;
     }
 
     .cta-container {
@@ -1261,10 +1297,10 @@
           position: relative;
           display: inline-block;
 
-          flex: 1;
+          flex: none;
 
-          max-width: 16px;
-          max-height: 16px;
+          width: 16px;
+          height: 16px;
 
           margin-right: 15px;
         }
@@ -1428,35 +1464,35 @@
     }
   }
 
-  .card-container.active .card-item,
-  .card-container:hover .card-item {
-    margin: -15px;
-    padding: 80px 60px 70px;
-    color: #fff;
+  // .card-container.active .card-item,
+  // .card-container:hover .card-item {
+  //   margin: -15px;
+  //   padding: 80px 60px 70px;
+  //   color: #fff;
 
-    background-color: $c-blue;
+  //   background-color: $c-blue;
 
-    @media (max-width: 575.98px) {
-      margin: 0;
-      padding: 30px 22px 40px;
-    }
+  //   @media (max-width: 575.98px) {
+  //     margin: 0;
+  //     padding: 30px 22px 40px;
+  //   }
 
-    .button {
-      color: #fff;
+  //   .button {
+  //     color: #fff;
 
-      span:before {
-        bottom: -5px;
+  //     span:before {
+  //       bottom: -5px;
 
-        height: 1px;
+  //       height: 1px;
 
-        background-color: rgba(#fff, 1);
-      }
+  //       background-color: rgba(#fff, 1);
+  //     }
 
-      &:hover {
-        span:before {
-          background-color: rgba($c-sky-blue, 1);
-        }
-      }
-    }
-  }
+  //     &:hover {
+  //       span:before {
+  //         background-color: rgba($c-sky-blue, 1);
+  //       }
+  //     }
+  //   }
+  // }
 }

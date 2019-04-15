@@ -82,6 +82,29 @@
                 </div>
 
                 <div class="article-contents">
+
+                    <!--cta defined in front matter-->
+                    {{ if and (.Params.cta) (eq .Section "blog") }}
+                      {{ with index .Site.Data.cta .Params.cta }}
+
+                        <div class="wrap">
+                            <div class="cta-container">
+                                <div class="row align-items-center">
+                                    <div class="col-xl-9">
+                                        <div class="label">{{ .header }}</div>
+                                        <div class="title">{{ .copy }}</div>
+                                    </div>
+                                    <div class="col-xl-3">
+                                        <a href="{{ .link }}" target="_blank" class="button c-blue">
+                                            {{ .button }}
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>                        
+                      {{end}}
+                    {{end}}
+
                     <div class="wrap">
                     {{ with .Content }}
                       {{ . }}
@@ -198,4 +221,5 @@
 
   <!-- related content -->
   {{ partial "related-content.html" . }}
+  {{ partial "footer-cta.html" (dict "theme" "grey")}}
 {{ end }}
