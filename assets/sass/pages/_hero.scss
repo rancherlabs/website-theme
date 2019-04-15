@@ -731,6 +731,11 @@
 
     width: 60%;
     height: auto;
+
+    @media (max-width: 575.98px) {
+      width: auto;
+      height: 77px;
+    }
   }
 
   .ground-lower {
@@ -739,6 +744,13 @@
 
     width: 90%;
     height: auto;
+
+    @media (max-width: 575.98px) {
+      left: 40%;
+
+      width: auto;
+      height: 34px;
+    }
   }
 
   .rancher-rise {
@@ -753,6 +765,32 @@
     background-color: #fff;
     border-radius: 50%;
     box-shadow: 20px 25px 50px rgba($c-blue-dark1, .15);
+
+    @media (max-width: 575.98px) {
+      right: 45%;
+      bottom: -30px;
+
+      width: 115px;
+      height: 115px;
+    }
+    @media (min-width: 576px) and (max-width: 767.98px) {
+      bottom: 1%;
+
+      width: 150px;
+      height: 150px;
+    }
+    @media (min-width: 768px) and (max-width: 991.98px) {
+      bottom: 4%;
+
+      width: 210px;
+      height: 210px;
+    }
+    @media (min-width: 992px) and (max-width: 1199.98px) {
+      bottom: 7%;
+
+      width: 260px;
+      height: 260px;
+    }
 
     img {
       position: absolute;
@@ -773,6 +811,35 @@
     width: 100%;
     max-width: 270px;
     height: auto;
+
+    @media (max-width: 575.98px) {
+      top: initial;
+      bottom: 100px;
+      right: -8%;
+
+      max-width: 140px;
+    }
+    @media (min-width: 576px) and (max-width: 767.98px) {
+      top: initial;
+      bottom: 30%;
+      right: 10%;
+
+      max-width: 160px;
+    }
+    @media (min-width: 768px) and (max-width: 991.98px) {
+      top: initial;
+      bottom: 40%;
+      right: 40%;
+
+      max-width: 190px;
+    }
+    @media (min-width: 992px) and (max-width: 1199.98px) {
+      top: initial;
+      bottom: 50%;
+      right: 50%;
+
+      max-width: 240px;
+    }
   }
 
   .texts-container {
@@ -782,17 +849,95 @@
 
     line-height: 0;
 
+    @media (max-width: 575.98px) {
+      padding-top: 180px;
+      padding-right: 25px;
+      padding-bottom: 110px;
+      padding-left: 25px;
+    }
+    @media (min-width: 576px) and (max-width: 767.98px) {
+      padding-bottom: 130px;
+      padding-left: 20px;
+    }
+    @media (min-width: 768px) and (max-width: 991.98px) {
+      padding-bottom: 140px;
+      padding-left: 20px;
+    }
+    @media (min-width: 992px) and (max-width: 1199.98px) {
+      padding-top: 180px;
+      padding-bottom: 150px;
+      padding-left: 25px;
+    }
+    @media (min-width: 1200px) and (max-width: 1280px) {
+      padding-top: 210px;
+      padding-left: 25px;
+    }
   }
 
   .title-label {
     color: #000;
     font-size: 50px;
     font-weight: 200;
+
+    @media (max-width: 575.98px) {
+      margin-bottom: 10px;
+      
+      font-size: 30px;
+    }
+    @media (min-width: 576px) and (max-width: 767.98px) {
+      margin-bottom: 15px;
+
+      font-size: 2em;
+    }
+    @media (min-width: 768px) and (max-width: 991.98px) {
+      margin-bottom: 20px;
+
+      font-size: 2.5em;
+    }
+    @media (min-width: 992px) and (max-width: 1199.98px) {
+      margin-bottom: 25px;
+
+      font-size: 3em;
+    }
   }
 
   .description-label {
     color: #000;
     line-height: 1.4;
+
+    @media (max-width: 575.98px) {
+      margin-bottom: 10px;
+
+      font-size: 14px;
+
+      line-height: 1.72;
+    }
+    @media (min-width: 576px) and (max-width: 767.98px) {
+      margin-bottom: 20px;
+
+      font-size: 1.2em;
+
+      line-height: 1.5;
+    }
+    @media (min-width: 768px) and (max-width: 991.98px) {
+      margin-bottom: 20px;
+
+      font-size: 1.3em;
+
+      line-height: 1.5;
+    }
+    @media (min-width: 992px) and (max-width: 1199.98px) {
+      margin-bottom: 20px;
+
+      font-size: 1.5em;
+
+      line-height: 1.5;
+    }
+    @media (min-width: 1200px) and (max-width: 1280px) {
+      margin-bottom: 30px;
+
+      font-size: 1.6em;
+    }
   }
 
   @media (max-width: 575.98px) {
@@ -856,6 +1001,7 @@
     }
 
     .texts-container {
+      padding-top: 210px;
       padding-bottom: 130px;
       padding-left: 20px;
     }
@@ -884,6 +1030,7 @@
     }
 
     .texts-container {
+      padding-top: 250px;
       padding-bottom: 140px;
       padding-left: 20px;
     }

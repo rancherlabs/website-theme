@@ -131,10 +131,77 @@
     }
   }
   @media (min-width: 576px) and (max-width: 767.98px) {
+    .texts-container {
+      padding-top: 180px;
+      padding-bottom: 110px;
+      padding-left: 5%;
+      padding-right: 5%;
+
+      .texts-wrap {
+        margin-top: 0;
+        margin-bottom: 0;
+
+        .title-label {
+          margin-bottom: 10px;
+
+          font-size: 2em;
+        }
+
+        .description-label {
+          font-size: .9em;
+        }
+      }
+    }
   }
   @media (min-width: 768px) and (max-width: 991.98px) {
+    .texts-container {
+      padding-top: 320px;
+      padding-bottom: 110px;
+      padding-bottom: 40px;
+      padding-left: 5%;
+      padding-right: 5%;
+
+      .texts-wrap {
+        margin-top: 0;
+        margin-bottom: 0;
+
+        .title-label {
+          margin-bottom: 10px;
+
+          font-size: 2.4em;
+        }
+
+        .description-label {
+          font-size: 1em;
+          line-height: 1.5;
+        }
+      }
+    }
   }
   @media (min-width: 992px) and (max-width: 1199.98px) {
+    .texts-container {
+      padding-top: 320px;
+      padding-bottom: 110px;
+      padding-bottom: 40px;
+      padding-left: 5%;
+      padding-right: 5%;
+
+      .texts-wrap {
+        margin-top: 0;
+        margin-bottom: 0;
+
+        .title-label {
+          margin-bottom: 10px;
+
+          font-size: 2.8em;
+        }
+
+        .description-label {
+          font-size: 1.25em;
+          line-height: 1.6;
+        }
+      }
+    }
   }
 }
 
@@ -528,10 +595,117 @@
     }
   }
   @media (min-width: 576px) and (max-width: 767.98px) {
+    .contents-container {
+      padding-bottom: 100px;
+    }
+
+    .form-container {
+      margin-top: -40px;
+      padding-right: $mobile-side-space;
+      padding-left: $mobile-side-space;
+    }
+    .form-wrap {
+      max-width: 500px;
+
+      margin-right: auto;
+      margin-left: auto;
+      padding: 40px 25px;
+
+      .title-label {
+        margin-bottom: 10px;
+      }
+
+      fieldset.form-columns-1 .input,
+      fieldset.form-columns-2 .input {
+        margin-right: 0;
+      }
+      fieldset.form-columns-1 .input input,
+      fieldset.form-columns-2 .input input {
+        width: 100%;
+      }
+      .form-columns-1 .hs-form-field .hs-input,
+      .form-columns-2 .hs-form-field .hs-input {
+        width: 100% !important;
+      }
+
+      .form-columns-1 .hs-form-field .hs-input[type=checkbox],
+      .form-columns-2 .hs-form-field .hs-input[type=checkbox] {
+        width: auto !important;
+      }
+
+      .hs-form-checkbox {
+        margin-bottom: 10px;
+      }
+
+      .hs-richtext {
+        margin-top: -.5em;
+        margin-bottom: 1em;
+
+        color: rgba(#fff, .75);
+        font-size: 1em;
+        font-family: 'Poppins';
+        font-weight: 300;
+        line-height: 1.75;
+
+        p {
+          margin-top: 0;
+          margin-bottom: 10px;
+
+          font-size: .9em;
+          font-family: 'Poppins';
+          line-height: 1.6;
+        }
+
+        a {
+          color: $c-sky-blue;
+        }
+      }
+
+      .hs-submit {
+        margin-top: 25px;
+        text-align: left;
+
+        input[type="submit"] {
+          min-width: 0;
+          max-width: 100%;
+          height: 40px;
+          
+          padding: 0 15px;
+
+          font-size: 14px;
+          font-weight: 800;
+        }
+      }
+    }
   }
   @media (min-width: 768px) and (max-width: 991.98px) {
+    .contents-container {
+      padding-bottom: 120px;
+    }
+
+    .form-container {
+      margin-top: -50%;
+    }
+    .form-wrap {
+      padding: 60px 30px;
+    }
+
+    .texts-container {
+      padding-right: 5%;
+      padding-left: 5%;
+    }
   }
   @media (min-width: 992px) and (max-width: 1199.98px) {
+    .contents-container {
+      padding-bottom: 150px;
+    }
+
+    .form-container {
+      margin-top: -40%;
+    }
+    .form-wrap {
+      padding: 70px 40px;
+    }
   }
 }
 
