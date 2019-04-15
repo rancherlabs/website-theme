@@ -149,7 +149,7 @@
         .texts-container {
             padding-top: 60px;
             padding-right: $mobile-side-space;
-            padding-bottom: 0;
+            padding-bottom: 120px;
             padding-left: $mobile-side-space;
 
             .texts-wrap {
@@ -170,17 +170,157 @@
             }
         }
 
-        .lower-container {
+        .decoration.rancher-ground {
+            position: absolute;
+
+            left: 0;
+            bottom: 0;
+
+            width: 100%;
             height: 120px;
 
-            margin-top: -120px;
+            .ground {
+                position: relative;
+
+                left: 50%;
+
+                width: auto;
+                height: 100%;
+
+                @include transform(translateX(-50%));
+            }
         }
     }
     @media (min-width: 576px) and (max-width: 767.98px) {
+        .texts-container {
+            .texts-wrap {
+                margin-top: 100px;
+                margin-bottom: 180px;
+            }
+      
+            .texts-wrap .title-label {
+                margin-bottom: 10px;
+        
+                font-size: 2em;
+            }
+      
+            .texts-wrap .title-label br {
+                display: none;
+            }
+      
+            .texts-wrap .description-label {
+                font-size: .9em;
+            }
+        }
+    
+        .decoration.rancher-ground {
+            position: absolute;
+
+            left: 0;
+            bottom: 0;
+
+            width: 100%;
+            height: 140px;
+
+            .ground {
+                position: relative;
+
+                left: 50%;
+
+                width: auto;
+                height: 100%;
+
+                @include transform(translateX(-50%));
+            }
+        }
     }
     @media (min-width: 768px) and (max-width: 991.98px) {
+        .texts-container {
+                .texts-wrap {
+                margin-top: 120px;
+                margin-bottom: 200px;
+            }
+        
+            .texts-wrap .title-label {
+                margin-bottom: 10px;
+        
+                font-size: 2.4em;
+            }
+        
+            .texts-wrap .title-label br {
+                display: none;
+            }
+        
+            .texts-wrap .description-label {
+                font-size: 1em;
+                line-height: 1.5;
+            }
+        }
+    
+        .decoration.rancher-ground {
+            position: absolute;
+
+            left: 0;
+            bottom: 0;
+
+            width: 100%;
+            height: 180px;
+
+            .ground {
+                position: relative;
+
+                left: 50%;
+
+                width: auto;
+                height: 100%;
+
+                @include transform(translateX(-50%));
+            }
+        }
     }
     @media (min-width: 992px) and (max-width: 1199.98px) {
+        .texts-container {
+            .texts-wrap {
+                margin-top: 120px;
+                margin-bottom: 220px;
+            }
+        
+            .texts-wrap .title-label {
+                margin-bottom: 10px;
+        
+                font-size: 2.8em;
+        
+                br {
+                display: none;
+                }
+            }
+        
+            .texts-wrap .description-label {
+                font-size: 1.25em;
+                line-height: 1.6;
+            }
+        }
+    
+        .decoration.rancher-ground {
+            position: absolute;
+
+            left: 0;
+            bottom: 0;
+
+            width: 100%;
+            height: 200px;
+
+            .ground {
+                position: relative;
+
+                left: 50%;
+
+                width: auto;
+                height: 100%;
+
+                @include transform(translateX(-50%));
+            }
+        }
     }
 }
 
@@ -289,10 +429,30 @@
         }
     }
     @media (min-width: 576px) and (max-width: 767.98px) {
+        .contents-container {
+            padding-top: 80px;
+            padding-bottom: 80px;
+        }
+
+        .texts-container {
+            padding-right: $mobile-side-space;
+            padding-left: $mobile-side-space;
+        }
+        .list-container {
+            margin-top: 30px;
+        }
     }
     @media (min-width: 768px) and (max-width: 991.98px) {
+        .contents-container {
+            padding-top: 120px;
+            padding-bottom: 120px;
+        }
     }
     @media (min-width: 992px) and (max-width: 1199.98px) {
+        .contents-container {
+            padding-top: 160px;
+            padding-bottom: 160px;
+        }
     }
 }
 
@@ -432,10 +592,62 @@
         }
     }
     @media (min-width: 576px) and (max-width: 767.98px) {
+        .head-label {
+            padding-left: 30px;;
+
+            line-height: 2;
+
+            background-color: $c-gray-base-light;
+
+            .label {
+                margin-top: 60px;
+                margin-bottom: 0;
+            }
+        }
+
+        .texts-wrap .title-label {
+            margin-top: 20px;
+            margin-bottom: 40px;
+        }
+
+        .partners-type-wrap {
+            padding-right: 30px;
+            padding-left: 30px;
+        }
     }
     @media (min-width: 768px) and (max-width: 991.98px) {
+        .head-label {
+            padding-left: $mobile-side-space;
+
+            line-height: 2;
+
+            .label {
+                margin-top: 60px;
+                margin-bottom: 60px;
+            }
+        }
+
+        .partners-type-wrap {
+            padding-right: 30px;
+            padding-left: 30px;
+        }
     }
     @media (min-width: 992px) and (max-width: 1199.98px) {
+        .head-label {
+            padding-left: $mobile-side-space;
+
+            line-height: 2;
+
+            .label {
+                margin-top: 60px;
+                margin-bottom: 60px;
+            }
+        }
+
+        .partners-type-wrap {
+            padding-right: 30px;
+            padding-left: 30px;
+        }
     }
 }
 
@@ -681,9 +893,18 @@
         }
     }
     @media (min-width: 576px) and (max-width: 767.98px) {
+        .texts-container {
+            padding-top: 50px;
+        }
     }
     @media (min-width: 768px) and (max-width: 991.98px) {
+        .texts-container {
+            padding-top: 60px;
+        }
     }
     @media (min-width: 992px) and (max-width: 1199.98px) {
+        .texts-container {
+            padding-top: 80px;
+        }
     }
 }
