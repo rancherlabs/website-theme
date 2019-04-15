@@ -180,10 +180,64 @@
     }
   }
   @media (min-width: 576px) and (max-width: 767.98px) {
+    .texts-container .texts-wrap {
+      margin-top: 120px;
+      margin-bottom: 180px;
+      padding-right: 25px;
+      padding-left: 25px;
+
+      .title-label {
+        margin-bottom: 16px;
+      
+        font-size: 2.4em;
+      }
+    }
+
+    .lower-container .decoration.ground .ground-lower {
+      margin-left: -30%;
+    }
+    .lower-container .decoration.ground .ground-upper {
+      left: 60%;
+    }
   }
   @media (min-width: 768px) and (max-width: 991.98px) {
+    .texts-container .texts-wrap {
+      margin-top: 120px;
+      padding-right: 25px;
+      padding-left: 25px;
+
+      .title-label {
+        margin-bottom: 18px;
+      
+        font-size: 2.9em;
+      }
+    }
+
+    .lower-container .decoration.ground .ground-lower {
+      margin-left: 15%;
+    }
+    .lower-container .decoration.ground .ground-upper {
+      left: 36.5%;
+    }
   }
   @media (min-width: 992px) and (max-width: 1199.98px) {
+    .texts-container .texts-wrap {
+      padding-right: 25px;
+      padding-left: 25px;
+
+      .title-label {
+        margin-bottom: 20px;
+      
+        font-size: 3.3em;
+      }
+    }
+
+    .lower-container .decoration.ground .ground-lower {
+      margin-left: 15%;
+    }
+    .lower-container .decoration.ground .ground-upper {
+      left: 36.5%;
+    }
   }
 }
 
@@ -288,6 +342,10 @@
 
       background-color: transparent;
 
+      &:before {
+        display: none;
+      }
+
       .texts-wrap {
         .label {
           margin-bottom: 15px;
@@ -336,8 +394,53 @@
     }
   }
   @media (min-width: 576px) and (max-width: 767.98px) {
+    &.floating .content-container {
+      position: relative;
+
+      margin-top: -150px;
+    }
+
+    .texts-container:before {
+      display: none;
+    }
+    .texts-container .icon-container {
+      flex: 0 0 40px;
+
+      margin-bottom: 5px;
+    }
+    .texts-container .icon-container .icon {
+      width: 100%;
+    }
+    .texts-container .texts-wrap {
+      flex: 0 0 100%;
+    }
+    .texts-container .texts-wrap .description-label {
+      font-size: 20px;
+    }
+    .texts-container .buttons-container {
+      width: 100%;
+      margin-left: 0;
+    }
   }
   @media (min-width: 768px) and (max-width: 991.98px) {
+    .texts-container .icon-container {
+      flex: 0 0 40px;
+
+      margin-bottom: 5px;
+    }
+    .texts-container .icon-container .icon {
+      width: 100%;
+    }
+    .texts-container .texts-wrap {
+      flex: 0 0 100%;
+    }
+    .texts-container .texts-wrap .description-label {
+      font-size: 20px;
+    }
+    .texts-container .buttons-container {
+      width: 100%;
+      margin-left: 0;
+    }
   }
   @media (min-width: 992px) and (max-width: 1199.98px) {
   }
@@ -503,6 +606,9 @@
     }
   }
   @media (min-width: 576px) and (max-width: 767.98px) {
+     .card-container-wrap {
+       margin-bottom: 30px;
+     }
   }
   @media (min-width: 768px) and (max-width: 991.98px) {
   }
@@ -716,10 +822,77 @@
     }
   }
   @media (min-width: 576px) and (max-width: 767.98px) {
+    .head-label {
+      padding-left: 8.666666%;
+
+      line-height: 2;
+
+      background-color: $c-blue-dark1;
+
+      .label {
+        margin-top: 60px;
+      }
+    }
+
+    .texts-container {
+      padding-bottom: 60px;
+    }
+    .texts-wrap {
+      margin-top: 30px;
+    }
+
+    .thumbnail-container .thumbnail-wrap .thumbnail {
+      position: relative;
+
+      width: 100%;
+      height: auto;
+    }
+
+    .inside-contents-container {
+      .texts-container {
+        padding-top: 50px;
+        padding-right: 30px;
+        padding-left: 30px;
+
+        .texts-wrap .title-label {
+          font-size: 24px;
+        }
+      }
+    }
   }
   @media (min-width: 768px) and (max-width: 991.98px) {
+    .head-label {
+      padding-left: $mobile-side-space;
+
+      line-height: 2;
+
+      .label {
+        margin-top: 50px;
+        margin-bottom: 50px;
+      }
+    }
+
+    .texts-container {
+      padding-right: 4.3333%;
+      padding-left: 4.3333%;
+    }
   }
   @media (min-width: 992px) and (max-width: 1199.98px) {
+    .head-label {
+      padding-left: $mobile-side-space;
+
+      line-height: 2;
+
+      .label {
+        margin-top: 50px;
+        margin-bottom: 50px;
+      }
+    }
+
+    .texts-container {
+      padding-right: 4.3333%;
+      padding-left: 4.3333%;
+    }
   }
 }
 
@@ -916,10 +1089,38 @@
     }
   }
   @media (min-width: 576px) and (max-width: 767.98px) {
+    .contents-container {
+      padding-top: 60px;
+      padding-bottom: 80px;
+    }
+
+    .texts-container {
+      padding-right: 30px;
+      padding-left: 30px;
+    }
+    .texts-wrap {
+      margin-bottom: 50px;
+    }
   }
   @media (min-width: 768px) and (max-width: 991.98px) {
+    .contents-container {
+      padding-top: 100px;
+      padding-bottom: 100px;
+    }
+
+    .texts-container {
+      padding-left: 30px;
+    }
   }
   @media (min-width: 992px) and (max-width: 1199.98px) {
+    .contents-container {
+      padding-top: 130px;
+      padding-bottom: 130px;
+    }
+
+    .texts-container {
+      padding-left: 30px;
+    }
   }
 }
 
@@ -1295,9 +1496,63 @@
     }
   }
   @media (min-width: 576px) and (max-width: 767.98px) {
+    .contents-container {
+      padding-bottom: 120px;
+    }
+
+    .texts-container {
+      padding-top: 60px;
+    }
+
+    .locations-container {
+      margin-top: 20px;
+      padding-right: 30px;
+      padding-left: 30px;
+    }
+    
+    .card-list-wrap {
+      padding-right: 30px;
+      padding-left: 30px;
+    }
   }
   @media (min-width: 768px) and (max-width: 991.98px) {
+    .contents-container {
+      padding-bottom: 150px;
+    }
+
+    .texts-container {
+      padding-top: 70px;
+    }
+
+    .locations-container {
+      margin-top: 30px;
+      padding-right: 30px;
+      padding-left: 30px;
+    }
+    
+    .card-list-wrap {
+      padding-right: 30px;
+      padding-left: 30px;
+    }
   }
   @media (min-width: 992px) and (max-width: 1199.98px) {
+    .contents-container {
+      padding-bottom: 180px;
+    }
+
+    .texts-container {
+      padding-top: 80px;
+    }
+
+    .locations-container {
+      margin-top: 40px;
+      padding-right: 30px;
+      padding-left: 30px;
+    }
+    
+    .card-list-wrap {
+      padding-right: 30px;
+      padding-left: 30px;
+    }
   }
 }
