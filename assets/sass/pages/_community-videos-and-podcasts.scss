@@ -18,7 +18,7 @@
     .texts-wrap {
       z-index: 1;
 
-      margin-top: 165px;
+      margin-top: 190px;
       margin-bottom: 100px;
 
       .title-label {
@@ -118,10 +118,74 @@
     }
   }
   @media (min-width: 576px) and (max-width: 767.98px) {
+    .texts-container .texts-wrap {
+      margin-top: 200px;
+      margin-bottom: 80px;
+      padding-right: 25px;
+      padding-left: 25px;
+
+      .title-label {
+        margin-bottom: 10px;
+      
+        font-size: 2em;
+      }
+      .description-label {
+        font-size: 1.05em;
+      }
+    }
+
+    .lower-container .decoration.ground .ground-lower {
+      margin-left: 35%;
+    }
+    .lower-container .decoration.ground .ground-upper {
+      left: 70%;
+    }
   }
   @media (min-width: 768px) and (max-width: 991.98px) {
+    .texts-container .texts-wrap {
+      margin-top: 210px;
+      margin-bottom: 100px;
+      padding-right: 25px;
+      padding-left: 25px;
+
+      .title-label {
+        margin-bottom: 15px;
+      
+        font-size: 2.4em;
+      }
+      .description-label {
+        font-size: 1.1em;
+      }
+    }
+
+    .lower-container .decoration.ground .ground-lower {
+      margin-left: 40%;
+    }
+    .lower-container .decoration.ground .ground-upper {
+      left: 70%;
+    }
   }
   @media (min-width: 992px) and (max-width: 1199.98px) {
+    .texts-container .texts-wrap {
+      padding-right: 25px;
+      padding-left: 25px;
+
+      .title-label {
+        margin-bottom: 20px;
+      
+        font-size: 2.8em;
+      }
+      .description-label {
+        font-size: 1.2em;
+      }
+    }
+
+    .lower-container .decoration.ground .ground-lower {
+      margin-left: 50%;
+    }
+    .lower-container .decoration.ground .ground-upper {
+      left: 70%;
+    }
   }
 }
 
@@ -295,10 +359,59 @@
     }
   }
   @media (min-width: 576px) and (max-width: 767.98px) {
+    .texts-container {
+      padding-top: 60px;
+      padding-bottom: 30px;
+    }
+
+    .buttons-container {
+      margin-top: 50px;
+      margin-bottom: 80px;
+    }
   }
   @media (min-width: 768px) and (max-width: 991.98px) {
+    .texts-container {
+      padding-top: 80px;
+      padding-bottom: 60px;
+    }
+
+    .video-wrap .thumbnail-wrap {
+      height: 280px;
+    }
+    .video-wrap .play-button {
+      top: 21%;
+
+      width: 110px;
+      height: 110px;
+    }
+    .video-wrap .subject-label {
+      padding: 25px 30px;
+
+      font-size: 18px;
+    }
+
+    .buttons-container {
+      margin-top: 60px;
+      margin-bottom: 110px;
+    }
   }
   @media (min-width: 992px) and (max-width: 1199.98px) {
+    .texts-container {
+      padding-top: 120px;
+      padding-bottom: 80px;
+    }
+
+    .video-wrap .play-button {
+      top: 21%;
+
+      width: 110px;
+      height: 110px;
+    }
+    .video-wrap .subject-label {
+      padding: 35px 40px;
+
+      font-size: 21px;
+    }
   }
 }
 
@@ -528,10 +641,71 @@
     }
   }
   @media (min-width: 576px) and (max-width: 767.98px) {
+    .head-label {
+      padding: 0 3%;
+      line-height: 2;
+
+      background-color: $c-blue-dark1;
+
+      .label {
+        margin-top: 60px;
+      }
+    }
+
+    .texts-container .title-label {
+      margin-top: 20px;
+      padding-right: 3%;
+      padding-left: 3%;
+    }
+
+    .videos-container {
+      padding-right: 30px;
+      padding-left: 30px;
+    }
+    .videos-wrap {
+      margin-top: 40px;
+    }
+
+    .buttons-container {
+      margin-top: 40px;
+      margin-bottom: 80px;
+    }
   }
   @media (min-width: 768px) and (max-width: 991.98px) {
+    .texts-container .title-label {
+      padding-left: 30px;
+    }
+
+    .videos-container {
+      padding-right: 30px;
+      padding-left: 30px;
+    }
+    .videos-wrap {
+      margin-top: 40px;
+    }
+
+    .buttons-container {
+      margin-top: 40px;
+      margin-bottom: 100px;
+    }
   }
   @media (min-width: 992px) and (max-width: 1199.98px) {
+    .texts-container .title-label {
+      padding-left: 30px;
+    }
+
+    .videos-container {
+      padding-right: 30px;
+      padding-left: 30px;
+    }
+    .videos-wrap {
+      margin-top: 60px;
+    }
+
+    .buttons-container {
+      margin-top: 50px;
+      margin-bottom: 120px;
+    }
   }
 }
 
@@ -791,9 +965,112 @@
     }
   }
   @media (min-width: 576px) and (max-width: 767.98px) {
+    padding-bottom: 80px;
+
+    .head-label {
+      padding-right: 5%;
+      padding-left: 5%;
+      line-height: 1;
+
+      background-color: $c-gray-base-light;
+
+      .label {
+        margin-top: 60px;
+        margin-bottom: 20px;
+      }
+    }
+
+    .contents-container {
+      background-color: transparent;
+    }
+
+    .texts-container {
+      margin-top: 0;
+      padding-right: 5%;
+      padding-left: 5%;
+
+      background-color: $c-gray-base-light;
+    }
+
+    .sliders-container {
+      margin-top: 0;
+      padding-top: 50px;
+
+      background-color: $c-gray-base-light;
+    }
+
+    .thumbnail-item .thumbnail-description {
+      right: 0;
+      bottom: 0;
+      left: 0;
+
+      padding: 30px 25px;
+
+      .description-label {
+        font-size: 18px;
+
+        &:last-child {
+          margin-bottom: 5px;
+        }
+      }
+    }
   }
   @media (min-width: 768px) and (max-width: 991.98px) {
+    padding-bottom: 100px;
+
+    .head-label {
+      padding-left: $mobile-side-space;
+      line-height: 1;
+
+      .label {
+        margin-top: 60px;
+        margin-bottom: 60px;
+      }
+    }
+
+    .thumbnail-item .thumbnail-description {
+      right: 0;
+      bottom: 0;
+      left: 0;
+
+      padding: 30px 38px;
+
+      .description-label {
+        font-size: 21px;
+
+        &:last-child {
+          margin-bottom: 5px;
+        }
+      }
+    }
   }
   @media (min-width: 992px) and (max-width: 1199.98px) {
+    padding-bottom: 120px;
+
+    .head-label {
+      padding-left: $mobile-side-space;
+      line-height: 1;
+
+      .label {
+        margin-top: 60px;
+        margin-bottom: 60px;
+      }
+    }
+
+    .thumbnail-item .thumbnail-description {
+      right: 0;
+      bottom: 0;
+      left: 0;
+
+      padding: 40px 45px;
+
+      .description-label {
+        font-size: 23px;
+
+        &:last-child {
+          margin-bottom: 5px;
+        }
+      }
+    }
   }
 }
