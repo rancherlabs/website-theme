@@ -513,7 +513,7 @@
     min-height: 560px;
 
     background-color: $c-blue-gray-dark1;
-    box-shadow: 8px 12px 35px rgba($c-blue, .15);
+    box-shadow: 8px 12px 35px rgba($c-blue, .05);
 
     &.set-blinder {
       &:before {
@@ -577,14 +577,6 @@
 
     .logo-container {
       position: relative;
-      max-height: 85px;
-
-      .logo {
-        max-height: 85px;
-        max-width: 200px;
-        width: auto;
-        height: 100%;
-      }
     }
 
     .title-label {
@@ -617,12 +609,6 @@
           background-color: rgba($c-emerald, .25);
         }
       }
-    }
-  }
-
-  .blind-item-container .thumbnail-information-container {
-    .logo {
-      max-height: 30px;
     }
   }
 
