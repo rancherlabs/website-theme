@@ -10,21 +10,24 @@
 
         <div class="row max-sized">
             <div class="col-xl-8 offset-xl-2 contents-container">
-                <div class="thumbnail-container">
-                    <div class="thumbnail-wrap">
-                    <!-- video or image-->
-                    {{ with .Params.youtubeId }}
-                      <div style="position: relative; padding-bottom: 56.25%; padding-top: 30px; height: 0; overflow: hidden;" class="thumbnail">
-                        <iframe src="//www.youtube.com/embed/{{.}}" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" allowfullscreen frameborder="0" title="YouTube Video"></iframe>
+                {{ with .Params.youtubeId }}
+                  <div class="thumbnail-container">
+                      <div class="thumbnail-wrap">
+                      <!-- video or image-->
+                        <div style="position: relative; padding-bottom: 56.25%; padding-top: 30px; height: 0; overflow: hidden;" class="thumbnail">
+                          <iframe src="//www.youtube.com/embed/{{.}}" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" allowfullscreen frameborder="0" title="YouTube Video"></iframe>
+                        </div>
                       </div>
-
-                    {{else}}
-                        {{ if .Params.image }}
-                          <img class="thumbnail" src="{{ .Params.image }}" alt="{{ .Params.title }}">
-                        {{end}}
-                    {{end}}
-                    </div>
-                </div>
+                  </div>
+                {{else}}
+                  {{ if .Params.image }}
+                  <div class="thumbnail-container">
+                      <div class="thumbnail-wrap">                    
+                        <img class="thumbnail" src="{{ .Params.image }}" alt="{{ .Params.title }}">
+                      </div>
+                  </div>
+                  {{end}}
+                {{end}}
 
                 {{ with .Params.title }}
                   <h2 class="title-label">{{.}}</h2>

@@ -929,6 +929,22 @@
     }
   }
 
+  pre {
+    background-color: #3d3d3d!important;
+    white-space: pre;
+    hyphens: none;
+    position: relative;
+    max-height: 75vh;
+    border-radius: 3px;
+    overflow: auto;
+
+    code {
+      display: block;
+      padding: 1rem;
+      line-height: 2;
+    }
+  }
+
   .thumbnail-container {
     position: relative;
     display: inline-block;
