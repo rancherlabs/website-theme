@@ -13,7 +13,7 @@
     }
 
     @media (max-width: 575.98px) {
-        margin-top: 135px;
+        margin-top: 81px;
 
         .contents-container {
             padding-top: 60px;
@@ -26,7 +26,7 @@
         }
     }
     @media (min-width: 576px) and (max-width: 767.98px) {
-        margin-top: 135px;
+        margin-top: 81px;
 
         .contents-container {
             padding-top: 70px;
@@ -39,7 +39,7 @@
         }
     }
     @media (min-width: 768px) and (max-width: 991.98px) {
-        margin-top: 135px;
+        margin-top: 81px;
 
         .contents-container {
             padding-top: 80px;
@@ -68,11 +68,10 @@
     padding-right: 70px;
     padding-left: 0;
 }
-
 .legal-document-content .side-menus .side-menus-wrap {
     margin-top: 0;
     margin-left: 0;
-    padding-left: 1px;
+    // padding-left: 1px;
 
     min-width: 0;
 
@@ -92,12 +91,12 @@
 
         .object1 {
             margin-top: -2px;
-            margin-left: -7px;
+            margin-left: -1px;
             @include transform(rotate(-45deg));
         }
         .object3 {
             margin-top: -2px;
-            margin-left: -1px;
+            margin-left: -7px;
             @include transform(rotate(45deg));
         }
 
@@ -121,12 +120,12 @@
 
         .object1 {
             margin-top: -2px;
-            margin-left: -1px;
+            margin-left: -7px;
             @include transform(rotate(-45deg));
         }
         .object3 {
             margin-top: -2px;
-            margin-left: -7px;
+            margin-left: -1px;
             @include transform(rotate(45deg));
         }
     }
@@ -615,14 +614,59 @@
                 margin-bottom: 15px;
 
                 font-size: 1.25em;
+                font-size: 25px;
+                font-weight: 200;
                 line-height: 1.5;
+            }
+
+            h3 {
+                margin-bottom: 5px;
+
+                font-size: 17.5px;
+                font-weight: 300;
+            }
+
+            p {
+                b {
+                    font-weight: 300;
+                }
             }
         }
 
+        .fully-container {
+            padding-right: $mobile-side-space;
+            padding-left: $mobile-side-space;
+        }
+
+        .table {
+            width: 100%;
+
+            margin-bottom: 25px;
+
+            th {
+                padding: 6px 10px;
+            }
+
+            caption {
+                font-size: 16px;
+                font-weight: 500;
+            }
+
+            .w-3 {
+                width: 30%;
+            }
+            .w-4 {
+                width: 40%;
+            }
+        }
         .table td, 
         .table tbody th {
             padding-right: 10px;
             padding-left: 10px;
+        }
+        .table th,
+        .table td {
+            word-break: break-word;
         }
 
         .tab-head {
@@ -657,6 +701,41 @@
                 flex: 0 0 100%;
 
                 max-width: 100%;
+            }
+        }
+        .tab-body h1 {
+            margin-bottom: 13px;
+
+            font-size: 25px;
+            font-weight: 200;
+        }
+        .tab-body h2 {
+            font-size: 16px;
+            font-weight: 400;
+        }
+        .tab-body .last-text {
+            margin-top: 15px;
+            margin-bottom: 15px;
+
+            p {
+                font-size: 16px;
+            }
+        }
+
+        .versions-containe {
+            padding-right: 25px;
+            padding-left: 25px;
+
+            h1 {
+                margin-bottom: 23px;
+
+                font-size: 25px;
+                font-weight: 200;
+            }
+
+            h2 {
+                font-size: 16px;
+                font-weight: 300;
             }
         }
     }
@@ -729,6 +808,23 @@
                 flex: 0 0 100%;
 
                 max-width: 100%;
+            }
+        }
+
+        .versions-containe {
+            padding-right: 25px;
+            padding-left: 25px;
+
+            h1 {
+                margin-bottom: 23px;
+
+                font-size: 25px;
+                font-weight: 200;
+            }
+
+            h2 {
+                font-size: 16px;
+                font-weight: 300;
             }
         }
     }

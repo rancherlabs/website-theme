@@ -947,12 +947,12 @@
   position: fixed;
   overflow: hidden;
 
-  top: -135px;
+  top: -81px;
   left: 0;
 
   width: 100%;
   // max-height: 78px;
-  max-height: 135px;
+  max-height: 81px;
 
   text-align: center;
 
@@ -1000,7 +1000,7 @@
   padding: 15px $mobile-side-space;
 
   background-color: #fff;
-  border-bottom: 1px solid $c-gray-base-light;
+  // border-bottom: 1px solid $c-gray-base-light;
 
   box-sizing: border-box;
 
