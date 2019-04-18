@@ -681,6 +681,8 @@
 
         &:before,
         &:after {
+            z-index: -1;
+
             margin-right: 0;
             margin-left: 0;
         }
@@ -937,6 +939,30 @@
         .buttons-container {
             margin-top: 30px;
             margin-bottom: 40px;
+        }
+
+        .docs-banner {
+            position: relative;
+            display: inline-block;
+
+            width: 100%;
+
+            margin-bottom: 50px;
+            padding: 30px;
+
+            background-color: #fff;
+            border-radius: 10px;
+
+            box-shadow: 15px 20px 40px rgba($c-blue-dark1, .1);
+
+            h3 {
+                padding-top: 0;
+            }
+
+            .buttons-container {
+                margin-top: 20px;
+                margin-bottom: 0;
+            }
         }
     }
 
