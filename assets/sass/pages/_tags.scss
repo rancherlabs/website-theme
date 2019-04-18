@@ -12,7 +12,10 @@
         }
     }
 
-    .tag-list-container {}
+    .tag-list-container {
+        margin-bottom: 100px;
+    }
+
     .tag-item {
         padding-top: 22px;
         padding-bottom: 22px;
@@ -48,5 +51,27 @@
         width: 300px;
         justify-content: space-between;
         margin: 50px auto 100px;
+    }
+
+    .article-item-wrap {
+        margin-bottom: 30px;
+
+        @media (max-width: 768px) {
+            display: flex;
+            flex-direction: column;
+        }
+    }
+
+    .user-container {
+        @media (max-width: 768px) {
+            flex-direction: column;
+            align-items: flex-start !important;
+
+            & > div {
+                &:not(:last-of-type) {
+                    margin-bottom: 15px;
+                }
+            }
+        }
     }
 }

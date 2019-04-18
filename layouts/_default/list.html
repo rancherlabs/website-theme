@@ -2,19 +2,6 @@
   {{ .Title }} – {{ .Site.Title }}
 {{ end }}
 
-{{ define "hero" }}
-  <!-- theme/layouts/_default/list.html-->
-  <section class="hero">
-    {{ with .Title }}
-      <h1>{{ . }}</h1>
-    {{end}}
-
-    {{ with .Params.description }}
-      <p class="p-t-sm">{{ . }}</p>
-    {{end}}
-  </section>
-{{ end }}
-
 {{ define "main" }}
 
 <section class="tags-contents">
@@ -29,7 +16,7 @@
             <div class="col-xl-8 offset-xl-2">
 
               <div class="head-container">
-                  <h2 class="title-label">Tags</h2>
+                  <h2 class="title-label">{{ .Title }}</h2>
               </div>
 
       {{ .Content }}
@@ -75,6 +62,44 @@
                 <a href="{{.URL}}" class="tag-linkage">{{.Title}}</a>
             </div>
 
+            {{ if  .Description | default .Summary }}
+            <div class="article-item-wrap">
+                {{ if .Params.image }}
+                <div class="thumbnail-container" style="background-image: url('{{ .Params.image }}');">
+                </div>
+                {{ end }}
+                
+                <div class="detail-container">
+                    <div class="information-container">
+                        <div class="user-container">
+                            {{ if and (.Params.author) (eq .Section "blog") }}
+                            {{ with index .Site.Data.authors .Params.author }}
+                                <div class="user-thumbnail">
+                                    <div class="user-thumbnail-wrap">
+                                        <img class="thumbnail" src="{{.pic}}" alt="{{.name}}">
+                                    </div>
+
+                                    <span class="name-label">{{ .name }}</span>
+                                </div>
+                            {{end}}
+                            {{end}}                                
+                            
+                            <div class="date-label"><img class="icon" src="/imgs/community/blog/icon-calendar-gray.svg"> {{ .Date.Format "January 2, 2006" }}</div>
+                            {{ with .ReadingTime }}
+                            <div class="read-time-label"><img class="icon" src="/imgs/community/blog/icon-time-gray.svg"> Read time: {{.}} min</div>
+                            {{ end }}
+                            {{ with .Params.location }}
+                              <div class="date-label">{{ . }}</div>
+                            {{end}}
+                        </div>                    
+                        <p class="description-label">
+                            {{ .Description | default .Summary | safeHTML }}
+                        </p>
+                        
+                    </div>
+                </div>
+            </div>      
+            {{ end }}      
           {{ end }}
           </div>
         {{ template "_internal/pagination.html" . }}
