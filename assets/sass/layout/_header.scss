@@ -13,12 +13,13 @@
   text-align: center;
 
   position: fixed;
-  background-color: #fff;
-  box-shadow: 5px 15px 50px rgba($c-blue-dark3, 0.2);
+  // background-color: #fff;
+  // box-shadow: 5px 15px 50px rgba($c-blue-dark3, 0.2);
 
   @include transition(top 0.6s, opacity 0.6s, box-shadow .6s, background-color .6s);
 
   &.sticky {
+    overflow: visible;
     background-color: #fff;
     box-shadow: 5px 15px 50px rgba($c-blue-dark3, 0.2);
   }
