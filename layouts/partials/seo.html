@@ -1,5 +1,5 @@
 {{- .Scratch.Set "permalink" .Permalink -}}
-{{- if .Pages -}}
+{{- if (and .Pages (not .IsHome)) -}}
   {{/*
         Hugo doesn't generate permalinks for lists with the page number in them,
         which makes all the pages of a list look lik the same page to a search
@@ -41,10 +41,9 @@
   {{- end }}
 
   <meta name="description" content="{{ with .Params.metaDescription }}{{ . }}{{ else }}{{ .Description }}{{ end }}"/>
-  <meta name="robots" content="noodp"/>
 
   <!-- Twitter Card -->
-  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:description" content="{{ with .Params.metaDescription }}{{ . }}{{ else }}{{ .Description }}{{ end }}" />
   <meta name="twitter:title" content="{{ .Title }}" />
   <meta name="twitter:site" content="{{ .Site.Params.twitter }}" />
