@@ -958,6 +958,11 @@
 
     line-height: 0;
 
+    &.large {
+      height: auto;
+      max-height: unset;
+    }
+
     .thumbnail-wrap {
       position: relative;
       overflow: hidden;
