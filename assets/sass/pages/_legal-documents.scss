@@ -68,14 +68,19 @@
     padding-right: 70px;
     padding-left: 0;
 }
-.legal-document-content .side-menus .side-menus-wrap {
-    margin-top: 0;
-    margin-left: 0;
-    // padding-left: 1px;
-
+.legal-document-content .side-menus .side-menus-container {
     min-width: 0;
 
-    .submenu-indicator {
+    &.for-mobile {
+        display: none;
+    }
+
+    .side-menus-wrap {
+        margin-top: 0;
+        margin-left: 0;
+    }
+
+    .side-menus-wrap .submenu-indicator {
         right: 15px;
 
         .object1,
@@ -100,11 +105,11 @@
             @include transform(rotate(45deg));
         }
 
-        &:last-child {
-            display: none;
-        }
+        // &:last-child {
+        //     display: none;
+        // }
     }
-    .submenu-indicator-minus .submenu-indicator {
+    .side-menus-wrap .submenu-indicator-minus .submenu-indicator {
         .object1,
         .object2,
         .object3 {
@@ -130,7 +135,7 @@
         }
     }
 
-    > li {
+    .side-menus-wrap > li {
         margin-bottom: 50px;
 
         > a {
@@ -167,7 +172,7 @@
         }
     }
 
-    a {
+    .side-menus-wrap a {
         margin: 0;
         padding: 0;
 
@@ -183,7 +188,7 @@
         border: none;
     }
 
-    .submenus-wrap {
+    .side-menus-wrap .submenus-wrap {
         .active {
             background-color: rgba($c-blue, .1);
             >a {
@@ -208,7 +213,7 @@
         }
     }
 
-    .in-contents {
+    .side-menus-wrap .in-contents {
         margin-bottom: 0;
 
         >a {
@@ -257,6 +262,170 @@
                 }
             }
         }
+    }
+
+    @media (max-width: 575.98px) {
+        &.for-desktop {
+            display: none;
+        }
+        &.for-mobile {
+            z-index: 1;
+
+            display: block;
+
+            &.second {
+                z-index: 0;
+            }
+        }
+    }
+    @media (min-width: 576px) and (max-width: 767.98px) {
+        &.for-desktop {
+            display: none;
+        }
+        &.for-mobile {
+            z-index: 1;
+
+            display: block;
+
+            &.second {
+                z-index: 0;
+            }
+        }
+
+        &.for-mobile .side-menus-wrap {
+            padding-right: $mobile-side-space;
+            padding-left: $mobile-side-space;
+
+            > li {
+                width: 100%;
+
+                > a {
+                    font-size: 14px;
+
+                    box-shadow: 12px 13px 25px rgba($c-blue-dark1, .25);
+
+                    @include transition(box-shadow .25s);
+                }
+                > a.submenu-indicator-minus {
+                    box-shadow: none;
+                }
+            }
+
+            > li > .submenus-wrap {
+                position: absolute;
+
+                top: 50px;
+
+                margin-top: 0;
+
+                background-color: #fff;
+                box-shadow: 12px 13px 25px rgba($c-blue-dark1, .25);
+            }
+            > li > .submenus-wrap li {
+                border-bottom: 1px solid rgba($c-gray-mid-light, .5);
+            }
+        }
+        &.for-mobile.second .side-menus-wrap {
+            background-color: #fff;
+
+            border-top: 1px solid rgba($c-gray-mid-light, .3);
+            border-bottom: 1px solid rgba($c-gray-mid-light, .3);
+
+            > li > a {
+                padding-right: 10px;
+                padding-left: 10px;
+
+                color: $c-gray;
+                font-family: 'Roboto';
+                font-size: 14px;
+                text-transform: initial;
+
+                background-color: #fff;
+                box-shadow: none;
+
+                .submenu-indicator {
+                    width: 26px;
+                    height: 26px;
+
+                    .object1,
+                    .object2,
+                    .object3 {
+                        top: 50%;
+                        left: 50%;
+
+                        width: 2px;
+                        height: 2px;
+
+                        margin: 0;
+
+                        background-color: $c-blue;
+
+                        @include transform(rotate(0));
+                    }
+                    .object1 {
+                        margin-left: -5px;
+                    }
+                    .object2 {
+                        opacity: 1;
+                    }
+                    .object3 {
+                        margin-left: 5px;
+                    }
+                }
+                &.submenu-indicator-minus .submenu-indicator {
+                    width: 25px;
+                    height: 25px;
+
+                    .object1,
+                    .object2,
+                    .object3 {
+                        width: 13px;
+                        height: 1px;
+                    }
+
+                    .object1 {
+                        margin-top: -1px;
+                        margin-left: -7px;
+
+                        @include transform(rotate(-45deg));
+                    }
+                    .object2 {
+                        opacity: 0;
+                    }
+                    .object3 {
+                        margin-top: -1px;
+                        margin-left: -7px;
+
+                        @include transform(rotate(45deg));
+                    }
+                }
+            }
+
+            > li > .submenus-wrap {
+                position: relative;
+
+                top: 0;
+
+                margin-top: 25px;
+
+                box-shadow: none;
+
+                > li {
+                    border-top: 1px solid rgba($c-gray-base-light, 1);
+                    border-bottom: 0;
+                }
+                > li a {
+                    color: $c-gray;
+                    font-family: 'Roboto';
+                    font-size: 14px;
+                    text-transform: initial;
+                }
+            }
+        }
+    }
+    @media (min-width: 768px) and (max-width: 991.98px) {
+    }
+    @media (min-width: 992px) and (max-width: 1199.98px) {
     }
 }
 
@@ -577,7 +746,7 @@
             .side-menus {
                 padding-right: 0;
 
-                .side-menus-wrap {
+                .side-menus-container {
                     width: 100%;
     
                     margin-bottom: 20px;
@@ -747,7 +916,7 @@
             .side-menus {
                 padding-right: 0;
 
-                .side-menus-wrap {
+                .side-menus-container {
                     width: 100%;
     
                     margin-bottom: 20px;

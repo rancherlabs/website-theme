@@ -325,6 +325,22 @@ $(document).ready(function() {
         viewFactor: .5,
         mobile: false
     });
+
+    var mobileNavContainer = $('.mobile-header-container');
+
+    if ($(this).scrollTop() > 50) {
+        mobileNavContainer.addClass('add-blinder');
+    } else {
+        mobileNavContainer.removeClass('add-blinder');
+    }
+
+    var stkNav = $('.header-container');
+
+    if ($(window).scrollTop() > 50) {
+        stkNav.addClass('sticky');
+    } else {
+        stkNav.removeClass('sticky');
+    }
 }).on("scroll", function(e) {
     var mobileNavContainer = $('.mobile-header-container');
 
