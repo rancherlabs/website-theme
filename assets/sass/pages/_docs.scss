@@ -81,7 +81,7 @@
     @media (max-width: 575.98px) {
         .texts-container .texts-wrap {
             margin-top: 120px;
-            margin-bottom: 250px;
+            margin-bottom: 110px;
             padding-right: 25px;
             padding-left: 25px;
         
@@ -97,17 +97,31 @@
             }
         }
     
+        .lower-container {
+            height: 100px;
+            margin-top: -100px;
+        }
         .lower-container .decoration.ground .ground-lower {
-            margin-left: -30%;
+            left: 0;
+            margin-left: -20%;
+
+            width: auto;
+            height: 60%;
         }
         .lower-container .decoration.ground .ground-upper {
-            left: 60%;
+            left: 0;
+
+            width: auto;
+            height: 100%;
+            
+            margin-top: 0;
+            margin-left: 18%;
         }
     }
     @media (min-width: 576px) and (max-width: 767.98px) {
         .texts-container .texts-wrap {
             margin-top: 120px;
-            margin-bottom: 250px;
+            margin-bottom: 220px;
             padding-right: 25px;
             padding-left: 25px;
         
@@ -123,16 +137,30 @@
             }
         }
     
+        .lower-container {
+            height: 120px;
+            margin-top: -120px;
+        }
         .lower-container .decoration.ground .ground-lower {
-            margin-left: -30%;
+            left: 0;
+            margin-left: -20%;
+
+            width: auto;
+            height: 50%;
         }
         .lower-container .decoration.ground .ground-upper {
-            left: 60%;
+            left: 30%;
+
+            width: auto;
+            height: 100%;
+            
+            margin-top: 0;
         }
     }
     @media (min-width: 768px) and (max-width: 991.98px) {
         .texts-container .texts-wrap {
             margin-top: 120px;
+            margin-bottom: 150px;
             padding-right: 25px;
             padding-left: 25px;
         
@@ -148,11 +176,24 @@
             }
         }
     
+        .lower-container {
+            height: 120px;
+            margin-top: -120px;
+        }
         .lower-container .decoration.ground .ground-lower {
-            margin-left: 15%;
+            left: 15%;
+            margin-left: 5%;
+
+            width: auto;
+            height: 50%;
         }
         .lower-container .decoration.ground .ground-upper {
-            left: 36.5%;
+            left: 0%;
+
+            width: auto;
+            height: 100%;
+            
+            margin-top: 0;
         }
     }
     @media (min-width: 992px) and (max-width: 1199.98px) {
@@ -173,10 +214,10 @@
         }
     
         .lower-container .decoration.ground .ground-lower {
-            margin-left: 15%;
+            margin-left: 5%;
         }
         .lower-container .decoration.ground .ground-upper {
-            left: 36.5%;
+            left: 10%;
         }
     }
 }
@@ -327,12 +368,76 @@
     }
 
     @media (max-width: 575.98px) {
+        &.floating .contents-container {
+            position: relative;
+        
+            margin-top: -40px;
+        }
+
+        .decoration {
+            margin-bottom: 10px;
+        }
+        
+        .texts-container {
+            flex: 0 0 calc(100% - 32px);
+            margin-right: 16px;
+            margin-left: 16px;
+            padding: 40px 30px 0;
+
+            background-color: transparent;
+
+            &:before {
+                content: '';
+                position: absolute;
+
+                top: 0;
+                left: 0;
+
+                width: 100%;
+                height: 40px;
+
+                background-color: #fff;
+            }
+
+            .icon-container {
+                flex: 0 0 50px;
+            }
+            .texts-wrap {
+                flex: 0 0 calc(100% - 50px);
+
+                .label {
+                    margin-bottom: 20px;
+                }
+
+                .description-label {
+                    font-size: 18px;
+
+                    @include textElipsis(3, 1.5);
+                }
+            }
+            .buttons-container {
+                width: calc(100% - 50px);
+
+                margin-left: 50px;
+
+                margin-top: 30px;
+
+                .button {
+                    width: auto;
+                    height: auto;
+                }
+            }
+        }
     }
     @media (min-width: 576px) and (max-width: 767.98px) {
         &.floating .content-container {
             position: relative;
         
             margin-top: -150px;
+        }
+
+        .decoration .document {
+            width: 64%;
         }
         
         .texts-container {
@@ -508,12 +613,56 @@
     }
 
     @media (max-width: 575.98px) {
+        .cards-container {
+            padding-top: 50px;
+            padding-bottom: 80px;
+        }
+        .card-items-wrap {
+            padding-right: $mobile-side-space;
+            padding-left: $mobile-side-space;
+        }
+        .card-wrap {
+            padding: 30px;
+        }
     }
     @media (min-width: 576px) and (max-width: 767.98px) {
+        .cards-container {
+            padding-top: 80px;
+            padding-bottom: 120px;
+        }
+        .card-items-wrap {
+            padding-right: $mobile-side-space;
+            padding-left: $mobile-side-space;
+        }
+        .card-wrap {
+            padding: 50px;
+        }
     }
     @media (min-width: 768px) and (max-width: 991.98px) {
+        .cards-container {
+            padding-top: 100px;
+            padding-bottom: 140px;
+        }
+        .card-items-wrap {
+            padding-right: 30px;
+            padding-left: 30px;
+        }
+        .card-wrap {
+            padding: 50px;
+        }
     }
     @media (min-width: 992px) and (max-width: 1199.98px) {
+        .cards-container {
+            padding-top: 120px;
+            padding-bottom: 160px;
+        }
+        .card-items-wrap {
+            padding-right: 30px;
+            padding-left: 30px;
+        }
+        .card-wrap {
+            padding: 60px;
+        }
     }
 }
 
