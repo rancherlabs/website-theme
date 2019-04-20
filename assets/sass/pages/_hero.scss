@@ -897,48 +897,6 @@
         width: auto;
         height: 130px;
       }
-
-      .floating1-1 {
-        position: absolute;
-
-        bottom: 210%;
-        left: 67%;
-
-        width: 100%;
-        max-width: 124px;
-        height: auto;
-      }
-      .floating1-2 {
-        position: absolute;
-
-        bottom: 138%;
-        left: 82%;
-
-        width: 100%;
-        max-width: 50px;
-        height: auto;
-      }
-
-      .floating2-1 {
-        position: absolute;
-
-        bottom: 95%;
-        left: 55%;
-
-        width: 100%;
-        max-width: 50px;
-        height: auto;
-      }
-      .floating2-2 {
-        position: absolute;
-
-        bottom: 280%;
-        left: 85%;
-
-        width: 100%;
-        max-width: 50px;
-        height: auto;
-      }
     }
 
     @media (max-width: 575.98px) {
@@ -957,38 +915,10 @@
       .decoration .ground-upper {
         height: 104px;
       }
-      .decoration .floating1-1 {
-        right: 5%;
-        bottom: 250%;
-        left: initial;
-
-        max-width: 56px;
-      }
-      .decoration .floating1-2 {
-        display: none;
-      }
-      .decoration .floating2-1 {
-        max-width: 30px;
-
-        left: 35%;
-        bottom: 40%;
-      }
-      .decoration .floating2-2 {
-        right: 20%;
-        bottom: 375%;
-        left: initial;
-
-        max-width: 26px;
-      }
     }
     @media (min-width: 576px) and (max-width: 767.98px) {
     }
     @media (min-width: 768px) and (max-width: 991.98px) {
-      .decoration .floating1-1 {
-        bottom: 250%;
-
-        width: 110px;
-      }
     }
     @media (min-width: 992px) and (max-width: 1199.98px) {
     }
@@ -1233,7 +1163,7 @@
       height: 77px;
     }
     .ground-lower {
-      left: 30%;
+      left: 40%;
 
       width: auto;
       height: 34px;

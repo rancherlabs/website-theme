@@ -1,0 +1,515 @@
+.why-rancher-hybrid-multi-cloud-screen1 {
+    background-color: $c-gray-base-light;
+
+    .decoration {
+        position: relative;
+
+        width: 100%;
+
+        line-height: 0;
+    }
+
+    .texts-container {
+        padding-right: 0;
+        padding-left: 0;
+
+        line-height: 0;
+
+        .texts-wrap {
+            z-index: 1;
+
+            margin-top: 200px;
+            margin-bottom: 120px;
+
+            .title-label {
+                margin-bottom: 35px;
+                color: #000;
+                font-size: 50px;
+                font-weight: 200;
+            }
+            
+            .description-label {
+                color: #000;
+                line-height: 1.4;
+            }
+        }
+    }
+
+    .lower-container {
+        height: 120px;
+
+        margin-top: -120px;
+
+        line-height: 0;
+
+        .decoration {
+            position: relative;
+
+            height: 100%;
+
+            &.ground {
+                .ground-lower {
+                    position: relative;
+                    
+                    width: auto;
+                    height: 75px;
+
+                    margin-top: 45px;
+                    margin-left: 60%;
+                }
+
+                .ground-upper {
+                    position: absolute;
+
+                    bottom: 0;
+                    left: 77%;
+
+                    width: auto;
+                    height: 130px;
+                }
+            }
+        }
+    }
+
+    @media (max-width: 575.98px) {
+        .texts-container {
+            padding-left: 0;
+            padding-right: 0;
+
+            .texts-wrap {
+                margin-top: 140px;
+                margin-bottom: 90px;
+                padding-right: $mobile-side-space;
+                padding-left: $mobile-side-space;
+
+                .title-label {
+                    margin-bottom: 10px;
+                
+                    font-size: 2em;
+                }
+            }
+        }
+
+        .lower-container {
+            height: 100px;
+
+            margin-top: -100px;
+
+            .decoration.ground .ground-lower {
+                height: 44px;
+
+                margin-top: 56px;
+                margin-left: 15%;
+            }
+            .decoration.ground .ground-upper {
+                left: 54%;
+
+                height: 100px;
+            }
+        }
+    }
+    @media (min-width: 576px) and (max-width: 767.98px) {
+        .texts-container {
+            .texts-wrap {
+                margin-top: 150px;
+                margin-bottom: 80px;
+                padding-right: 25px;
+                padding-left: 25px;
+
+                .title-label {
+                    margin-bottom: 15px;
+
+                    font-size: 2em;
+                }
+            }
+        }
+
+        .lower-container .decoration.ground .ground-lower {
+            margin-left: 45%;
+
+            height: 55px;
+            margin-top: 65px;
+        }
+        .lower-container .decoration.ground .ground-upper {
+            left: 70%;
+
+            height: 100px;
+        }
+    }
+    @media (min-width: 768px) and (max-width: 991.98px) {
+        .texts-container {
+            .texts-wrap {
+                margin-top: 180px;
+                margin-bottom: 110px;
+                padding-right: 25px;
+                padding-left: 25px;
+
+                .title-label {
+                    margin-bottom: 20px;
+
+                    font-size: 2.4em;
+                }
+            }
+        }
+
+        .lower-container .decoration.ground .ground-lower {
+            margin-left: 45%;
+        }
+    }
+    @media (min-width: 992px) and (max-width: 1199.98px) {
+        .texts-container {
+            .texts-wrap {
+                margin-top: 200px;
+                margin-bottom: 110px;
+                padding-right: 25px;
+                padding-left: 25px;
+
+                .title-label {
+                    margin-bottom: 25px;
+
+                    font-size: 2.8em;
+                }
+            }
+        }
+
+        .lower-container .decoration.ground .ground-lower {
+            margin-left: 45%;
+        }
+    }
+}
+
+.why-rancher-hybrid-multi-cloud-screen2 {
+    .contents-container {
+        padding-top: 150px;
+        padding-bottom: 150px;
+    }
+
+    .texts-container {
+        padding-left: 0;
+    }
+    .texts-wrap {
+        .title-label {
+            line-height: 1.25;
+        }
+    }
+
+    .links-wrap {
+        margin-top: 50px;
+
+        .link-item {
+            position: relative;
+            display: flex;
+
+            align-items: center;
+
+            margin-bottom: 30px;
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+
+            a {
+                position: relative;
+                display: inline-block;
+
+                flex: 0;
+
+                font-size: 18px;
+                white-space: nowrap;
+            }
+
+            &.set-icon {
+                .icon {
+                    position: relative;
+                    display: inline-block;
+
+                    flex: 1;
+
+                    max-width: 20px;
+                    height: auto;
+
+                    margin-right: 20px;
+                }
+            }
+        }
+    }
+
+    .list-container {
+        .list-item {
+            align-items: flex-start;
+
+            padding-top: 80px;
+
+            &:first-child {
+                padding-top: 0;
+            }
+
+            .thumbnail-container {
+                background-color: $c-gray-base-light;
+
+                .thumbnail {
+                    margin: 15px 0;
+                }
+            }
+
+            .texts-container {
+                padding-left: 30px;
+
+                .title-label {
+                    margin-bottom: 20px;
+
+                    font-size: 25px;
+                    font-weight: 300;
+                }
+            }
+        }
+    }
+
+    @media (max-width: 575.98px) {
+        .contents-container {
+            padding: 50px 0;
+        }
+
+        .texts-container {
+            padding-left: $mobile-side-space;
+
+            text-align: center;
+        }
+        .links-wrap {
+            position: relative;
+            display: inline-block;
+
+            flex-wrap: wrap;
+
+            margin-top: 15px;
+            margin-right: auto;
+            margin-left: auto;
+
+            .link-item {
+                flex: 0 0 100%;
+
+                margin-bottom: 20px;
+            }
+        }
+
+        .list-container {
+            margin-top: 50px;
+        }
+        .list-container .list-item {
+            padding-top: 30px;
+            padding-right: $mobile-side-space;
+            padding-left: $mobile-side-space;
+        }
+        .list-container .list-item .texts-container .title-label {
+            margin-bottom: 10px;
+
+            font-size: 20px;
+            text-align: left;
+        }
+        .list-container .list-item .texts-container .description-label {
+            font-size: 14px;
+            text-align: left;
+        }
+    }
+    @media (min-width: 576px) and (max-width: 767.98px) {
+        .contents-container {
+            padding: 70px 0;
+        }
+
+        .texts-container {
+            padding-left: $mobile-side-space;
+
+            .texts-wrap .title-label {
+                text-align: center;
+            }
+        }
+        .links-wrap {
+            display: flex;
+
+            flex-wrap: wrap;
+
+            max-width: 575px;
+
+            margin-top: 35px;
+            margin-right: auto;
+            margin-left: auto;
+
+            .link-item {
+                flex: 0;
+
+                min-width: 50%;
+            }
+        }
+
+        .list-container {
+            margin-top: 50px;
+        }
+        .list-container .list-item {
+            padding-top: 50px;
+            padding-right: $mobile-side-space;
+            padding-left: $mobile-side-space;
+        }
+        .list-container .list-item .texts-container .title-label {
+            margin-bottom: 10px;
+
+            font-size: 20px;
+        }
+        .list-container .list-item .texts-container .description-label {
+            font-size: 15px;
+        }
+    }
+    @media (min-width: 768px) and (max-width: 991.98px) {
+        .contents-container {
+            padding: 100px 0;
+        }
+
+        .texts-container {
+            padding-left: $mobile-side-space;
+        }
+        .links-wrap {
+            margin-top: 40px;
+        }
+
+        .list-container .list-item {
+            padding-top: 60px;
+        }
+    }
+    @media (min-width: 992px) and (max-width: 1199.98px) {
+        .contents-container {
+            padding: 120px 0;
+        }
+
+        .texts-container {
+            padding-left: $mobile-side-space;
+        }
+
+        .list-container .list-item {
+            padding-top: 70px;
+        }
+    }
+}
+
+.why-rancher-hybrid-multi-cloud-screen3 {
+    .contents-container {
+        padding-top: 150px;
+        padding-bottom: 250px;
+    }
+
+    .texts-container {
+        .title-label {
+            text-align: center;
+
+            line-height: 1.25;
+        }
+    }
+
+    .card-container {
+        margin-top: 30px;
+
+        .card-item {
+            position: relative;
+            display: inline-block;
+
+            width: 100%;
+            height: 100%;
+
+            padding: 50px;
+            padding-bottom: 110px;
+
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 25px 20px 50px rgba($c-blue-dark1, .15);
+
+            text-align: center;
+
+            .title-label {
+                font-size: 22px;
+                font-family: 'Poppins';
+                font-weight: 300;
+
+                text-align: center;
+            }
+
+            .description-label {
+                font-size: 15px;
+
+                text-align: center;
+
+                &:last-child {
+                    margin-bottom: 0;
+                }
+            }
+
+            a.button {
+                position: absolute;
+                display: inline-block;
+
+                left: 50%;
+                bottom: 50px;
+
+                min-width: 175px;
+
+                padding: 0 20px;
+
+                line-height: 50px;
+
+                @include transform(translateX(-50%));
+            }
+        }
+    }
+
+    @media (max-width: 575.98px) {
+        .contents-container {
+            padding-top: 50px;
+            padding-bottom: 100px;
+        }
+
+        .card-container .card-item {
+            padding: 30px 30px;
+            padding-bottom: 80px;
+        }
+        .card-container .card-item a.button {
+            bottom: 30px;
+
+            width: auto;
+            height: 40px;
+
+            font-size: 14px;
+            line-height: 40px;
+        }
+    }
+    @media (min-width: 576px) and (max-width: 767.98px) {
+        .contents-container {
+            padding-top: 80px;
+            padding-bottom: 150px;
+        }
+
+        .card-container .card-item {
+            padding: 35px 25px;
+            padding-bottom: 85px;
+        }
+        .card-container .card-item a.button {
+            bottom: 35px;
+
+            height: 44px;
+            line-height: 44px;
+        }
+    }
+    @media (min-width: 768px) and (max-width: 991.98px) {
+        .contents-container {
+            padding-top: 100px;
+            padding-bottom: 180px;
+        }
+
+        .card-container .card-item {
+            padding: 40px;
+            padding-bottom: 80px;
+        }
+    }
+    @media (min-width: 992px) and (max-width: 1199.98px) {
+        .contents-container {
+            padding-top: 120px;
+            padding-bottom: 200px;
+        }
+    }
+}
