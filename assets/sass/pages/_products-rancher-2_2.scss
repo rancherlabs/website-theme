@@ -1,0 +1,806 @@
+.products-rancher-2_2-screen1 {
+    background-color: $c-gray-base-light;
+
+    .decoration {
+        position: relative;
+
+        width: 100%;
+
+        line-height: 0;
+    }
+
+    .texts-container {
+        padding-right: 0;
+        padding-left: 0;
+
+        line-height: 0;
+
+        .texts-wrap {
+            z-index: 1;
+
+            margin-top: 200px;
+            margin-bottom: 120px;
+
+            .title-label {
+                margin-bottom: 35px;
+                color: #000;
+                font-size: 50px;
+                font-weight: 200;
+            }
+            
+            .description-label {
+                color: #000;
+                line-height: 1.4;
+            }
+        }
+    }
+
+    .lower-container {
+        height: 120px;
+
+        margin-top: -120px;
+
+        line-height: 0;
+
+        .decoration {
+            position: relative;
+
+            height: 100%;
+
+            &.ground {
+                .ground-lower {
+                    position: relative;
+                    
+                    width: auto;
+                    height: 75px;
+
+                    margin-top: 45px;
+                    margin-left: 60%;
+                }
+
+                .ground-upper {
+                    position: absolute;
+
+                    bottom: 0;
+                    left: 77%;
+
+                    width: auto;
+                    height: 130px;
+                }
+            }
+        }
+    }
+
+    @media (max-width: 575.98px) {
+        .texts-container {
+            padding-left: 0;
+            padding-right: 0;
+
+            .texts-wrap {
+                margin-top: 140px;
+                margin-bottom: 90px;
+                padding-right: $mobile-side-space;
+                padding-left: $mobile-side-space;
+
+                .title-label {
+                    margin-bottom: 10px;
+                
+                    font-size: 2em;
+                }
+            }
+        }
+
+        .lower-container {
+            height: 100px;
+
+            margin-top: -100px;
+
+            .decoration.ground .ground-lower {
+                height: 44px;
+
+                margin-top: 56px;
+                margin-left: 15%;
+            }
+            .decoration.ground .ground-upper {
+                left: 54%;
+
+                height: 100px;
+            }
+        }
+    }
+    @media (min-width: 576px) and (max-width: 767.98px) {
+        .texts-container {
+            .texts-wrap {
+                margin-top: 150px;
+                margin-bottom: 80px;
+                padding-right: 25px;
+                padding-left: 25px;
+
+                .title-label {
+                    margin-bottom: 15px;
+
+                    font-size: 2em;
+                }
+            }
+        }
+
+        .lower-container .decoration.ground .ground-lower {
+            margin-left: 45%;
+
+            height: 55px;
+            margin-top: 65px;
+        }
+        .lower-container .decoration.ground .ground-upper {
+            left: 70%;
+
+            height: 100px;
+        }
+    }
+    @media (min-width: 768px) and (max-width: 991.98px) {
+        .texts-container {
+            .texts-wrap {
+                margin-top: 180px;
+                margin-bottom: 110px;
+                padding-right: 25px;
+                padding-left: 25px;
+
+                .title-label {
+                    margin-bottom: 20px;
+
+                    font-size: 2.4em;
+                }
+            }
+        }
+
+        .lower-container .decoration.ground .ground-lower {
+            margin-left: 45%;
+        }
+    }
+    @media (min-width: 992px) and (max-width: 1199.98px) {
+        .texts-container {
+            .texts-wrap {
+                margin-top: 200px;
+                margin-bottom: 110px;
+                padding-right: 25px;
+                padding-left: 25px;
+
+                .title-label {
+                    margin-bottom: 25px;
+
+                    font-size: 2.8em;
+                }
+            }
+        }
+
+        .lower-container .decoration.ground .ground-lower {
+            margin-left: 45%;
+        }
+    }
+}
+
+.products-rancher-2_2-screen2 {
+    .contents-container {
+        padding: 150px 0 0;
+    }
+
+    .texts-container {}
+    .texts-wrap {
+        text-align: center;
+
+        .title-label {
+            text-align: center;
+        }
+
+        .description-label {
+            text-align: center;
+        }
+
+        a.button {
+            position: relative;
+            display: inline-block;
+
+            min-width: 200px;
+            
+            margin-top: 20px;
+            padding: 0 20px;
+            
+            text-align: center;
+            line-height: 50px;
+        }
+    }
+
+    @media (max-width: 575.98px) {
+        .contents-container {
+            padding: 50px 0 0;
+        }
+
+        .texts-wrap {
+            a.button {
+                width: auto;
+                height: 40px;
+
+                padding: 0 20px;
+
+                font-size: 14px;
+                line-height: 40px;
+            }
+        }
+    }
+    @media (min-width: 576px) and (max-width: 767.98px) {
+        .contents-container {
+            padding: 80px 0 0;
+        }
+
+        .texts-wrap {
+            a.button {
+                width: auto;
+                height: 44px;
+
+                padding: 0 20px;
+
+                line-height: 44px;
+            }
+        }
+    }
+    @media (min-width: 768px) and (max-width: 991.98px) {
+        .contents-container {
+            padding: 100px 0 0;
+        }
+    }
+    @media (min-width: 992px) and (max-width: 1199.98px) {
+        .contents-container {
+            padding: 120px 0 0;
+        }
+    }
+}
+
+.products-rancher-2_2-screen3 {
+    .contents-container {
+        padding-top: 150px;
+    }
+
+    .texts-container {
+        padding-right: 6%;
+
+        .title-label {
+            margin-top: 1.25em;
+            line-height: 1.25;
+
+            &:first-child {
+                margin-top: 0;
+            }
+        }
+        .description-label {
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+
+        a.button {
+            position: relative;
+            display: inline-block;
+
+            height: 50px;
+
+            margin-top: 20px;
+            padding: 0 30px;
+
+            line-height: 50px;
+        }
+    }
+
+    .thumbnail-wrap {
+        overflow: hidden;
+
+        line-height: 0;
+
+        background-color: #fff;
+        border-radius: 10px;
+        box-shadow: 15px 25px 50px rgba($c-blue, .1);
+
+        .thumbnail {
+            width: 100%;
+            height: auto;
+        }
+    }
+
+    .more-information-container {
+        margin-top: 50px;
+
+        padding-top: 70px;
+        padding-bottom: 70px;
+
+        background-color: $c-gray-base-light;
+
+        .texts-container {
+            padding-right: $mobile-side-space;
+        }
+        .texts-wrap {
+            margin-bottom: 30px;
+            padding-right: 8%;
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+
+            .title-label {
+                margin-bottom: 0;
+
+                text-align: right;
+            }
+
+            a.button {
+                height: auto;
+
+                margin-top: 0;
+
+                line-height: 1.4;
+            }
+        }
+    }
+
+    .blank {
+        height: 150px;
+    }
+
+    @media (max-width: 575.98px) {
+        .contents-container {
+            padding-top: 50px;
+        }
+
+        .texts-wrap {
+            text-align: center;
+
+            a.button {
+                width: auto;
+                height: 40px;
+
+                font-size: 14px;
+                line-height: 40px;
+            }
+        }
+
+        .thumbnail-container {
+            margin-top: 40px;
+
+            .thumbnail-wrap {
+                width: 80%;
+                max-width: 375px;
+
+                margin-right: auto;
+                margin-left: auto;
+            }
+        }
+
+        .more-information-container {
+            padding-top: 50px;
+            padding-bottom: 50px;
+
+            .texts-wrap {
+                margin-bottom: 10px;
+                padding-right: 0;
+
+                text-align: center;
+            }
+            .texts-wrap .title-label {
+                margin-bottom: 15px;
+
+                font-size: 1.6em;
+
+                text-align: center;
+            }
+            .texts-wrap a.button {
+                padding: 0 5px;
+
+                font-size: 15px;
+            }
+        }
+
+        .blank {
+            height: 50px;
+        }
+    }
+    @media (min-width: 576px) and (max-width: 767.98px) {
+        .contents-container {
+            padding-top: 70px;
+        }
+
+        .texts-wrap {
+            text-align: center;
+
+            a.button {
+                height: 44px;
+                line-height: 44px;
+            }
+        }
+
+        .thumbnail-container {
+            margin-top: 40px;
+
+            .thumbnail-wrap {
+                width: 80%;
+                max-width: 480px;
+
+                margin-right: auto;
+                margin-left: auto;
+            }
+        }
+
+        .more-information-container {
+            .texts-wrap {
+                margin-bottom: 15px;
+
+                text-align: left;
+            }
+            .texts-wrap .title-label {
+                font-size: 1.6em;
+            }
+            .texts-wrap a.button {
+                padding: 0 5px;
+
+                font-size: 15px;
+            }
+        }
+
+        .blank {
+            height: 70px;
+        }
+    }
+    @media (min-width: 768px) and (max-width: 991.98px) {
+        .contents-container {
+            padding-top: 100px;
+        }
+
+        .more-information-container {
+            .texts-wrap {
+                margin-bottom: 20px;
+            }
+            .texts-wrap .title-label {
+                font-size: 1.8em;
+            }
+            .texts-wrap a.button {
+                padding: 0 10px;
+
+                font-size: 16px;
+            }
+        }
+
+        .blank {
+            height: 100px;
+        }
+    }
+    @media (min-width: 992px) and (max-width: 1199.98px) {
+        .contents-container {
+            padding-top: 120px;
+        }
+
+        .blank {
+            height: 120px;
+        }
+    }
+}
+
+.products-rancher-2_2-screen4,
+.products-rancher-2_2-screen5 {
+    .contents-container {
+        padding-top: 150px;
+    }
+
+    .head-container {
+        margin-bottom: 80px;
+
+        text-align: center;
+
+        .description-label {
+            padding-right: 8%;
+            padding-left: 8%;
+        }
+    }
+
+    .texts-container {
+        padding-right: 6%;
+
+        .title-label {
+            margin-top: 1.25em;
+
+            line-height: 1.25;
+
+            &:first-child {
+                margin-top: 0;
+            }
+        }
+        &.list-container {
+            padding-right: $mobile-side-space;
+
+            .title-label {
+                margin-top: 2em;
+
+                font-size: 25px;
+                font-family: 'Poppins';
+                font-weight: 300;
+                line-height: 1.25;
+
+                &:first-child {
+                    margin-top: 0;
+                }
+            }
+        }
+        .description-label {
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+
+        a.button {
+            position: relative;
+            display: inline-block;
+
+            height: 50px;
+
+            margin-top: 20px;
+            padding: 0 30px;
+
+            line-height: 50px;
+        }
+    }
+
+    .thumbnail-wrap {
+        overflow: hidden;
+
+        line-height: 0;
+
+        background-color: #fff;
+        // border-radius: 10px;
+        // box-shadow: 15px 25px 50px rgba($c-blue, .1);
+
+        .thumbnail {
+            width: 100%;
+            height: auto;
+        }
+    }
+    .image-description {
+        margin-top: 2em;
+        margin-bottom: 2em;
+
+        .quote-label {
+            font-weight: 100;
+            line-height: 1.5;
+        }
+
+        .label {
+            margin-bottom: 0;
+            line-height: 1.2;
+
+            &.c-white {
+                color: #fff;
+            }
+            &.c-gray {
+                color: $c-gray;
+            }
+            &.c-emerald {
+                color: $c-emerald;
+            }
+        }
+    }
+
+    .more-information-container {
+        margin-top: 50px;
+
+        padding-top: 70px;
+        padding-bottom: 70px;
+
+        background-color: $c-gray-base-light;
+
+        .texts-container {
+            padding-right: $mobile-side-space;
+        }
+        .texts-wrap {
+            margin-bottom: 30px;
+            padding-right: 8%;
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+
+            .title-label {
+                margin-bottom: 0;
+
+                text-align: right;
+            }
+
+            a.button {
+                height: auto;
+
+                margin-top: 0;
+
+                line-height: 1.4;
+            }
+        }
+    }
+
+    .blank {
+        height: 250px;
+    }
+
+    @media (max-width: 575.98px) {
+        .contents-container {
+            padding-top: 50px;
+        }
+
+        .texts-container {
+            &.list-container {
+                .title-label {
+                    font-size: 18px;
+                }
+            }
+        }
+        .texts-wrap {
+            text-align: center;
+
+            a.button {
+                width: auto;
+                height: 40px;
+
+                font-size: 14px;
+                line-height: 40px;
+            }
+        }
+
+        .thumbnail-container {
+            margin-top: 40px;
+
+            .thumbnail-wrap {
+                width: 80%;
+                max-width: 375px;
+
+                margin-right: auto;
+                margin-left: auto;
+            }
+        }
+
+        .more-information-container {
+            padding-top: 50px;
+            padding-bottom: 50px;
+
+            .texts-wrap {
+                margin-bottom: 10px;
+                padding-right: 0;
+
+                text-align: center;
+            }
+            .texts-wrap .title-label {
+                margin-bottom: 15px;
+
+                font-size: 1.6em;
+
+                text-align: center;
+            }
+            .texts-wrap a.button {
+                padding: 0 5px;
+
+                font-size: 13px;
+            }
+        }
+
+        .blank {
+            height: 50px;
+        }
+    }
+    @media (min-width: 576px) and (max-width: 767.98px) {
+        .contents-container {
+            padding-top: 70px;
+        }
+
+        .head-container {
+            margin-bottom: 40px;
+        }
+
+        .texts-container {
+            &.list-container {
+                .title-label {
+                    font-size: 20px;
+                }
+            }
+        }
+        .texts-wrap {
+            text-align: center;
+
+            a.button {
+                height: 44px;
+                line-height: 44px;
+            }
+        }
+
+        .thumbnail-container {
+            margin-top: 40px;
+
+            .thumbnail-wrap {
+                width: 80%;
+                max-width: 480px;
+
+                margin-right: auto;
+                margin-left: auto;
+            }
+        }
+
+        .more-information-container {
+            .texts-wrap {
+                margin-bottom: 15px;
+
+                text-align: left;
+            }
+            .texts-wrap .title-label {
+                font-size: 1.6em;
+            }
+            .texts-wrap a.button {
+                padding: 0 5px;
+
+                font-size: 15px;
+            }
+        }
+
+        .blank {
+            height: 100px;
+        }
+    }
+    @media (min-width: 768px) and (max-width: 991.98px) {
+        .contents-container {
+            padding-top: 100px;
+        }
+
+        .more-information-container {
+            .texts-wrap {
+                margin-bottom: 20px;
+            }
+            .texts-wrap .title-label {
+                font-size: 1.8em;
+            }
+            .texts-wrap a.button {
+                padding: 0 10px;
+
+                font-size: 16px;
+            }
+        }
+
+        .blank {
+            height: 150px;
+        }
+    }
+    @media (min-width: 992px) and (max-width: 1199.98px) {
+        .contents-container {
+            padding-top: 120px;
+        }
+
+        .more-information-container {
+            margin-bottom: 120px;
+        }
+
+        .blank {
+            height: 200px;
+        }
+    }
+}
+.products-rancher-2_2-screen4 {
+    .head-container .title-label,
+    .head-container .description-label,
+    .texts-container.list-container .title-label,
+    .texts-container.list-container .description-label {
+        color: #fff;
+    }
+
+    .image-description .quote-label {
+        color: rgba(#fff, .5);
+        font-weight: 300;
+    }
+
+    .thumbnail-wrap {
+        background-color: transparent;
+    }
+
+    .more-information-container {
+        background-color: $c-blue-dark2;
+    }
+    .more-information-container .texts-wrap .title-label {
+        color: #fff;
+    }
+}

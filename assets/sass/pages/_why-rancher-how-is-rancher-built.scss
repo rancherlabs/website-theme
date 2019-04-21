@@ -1,0 +1,364 @@
+.why-rancher-how-is-rancher-built-screen1 {
+    background-color: $c-gray-base-light;
+
+    .decoration {
+        position: relative;
+
+        width: 100%;
+
+        line-height: 0;
+    }
+
+    .texts-container {
+        padding-right: 0;
+        padding-left: 0;
+
+        line-height: 0;
+
+        .texts-wrap {
+            z-index: 1;
+
+            margin-top: 200px;
+            margin-bottom: 120px;
+
+            .title-label {
+                margin-bottom: 35px;
+                color: #000;
+                font-size: 50px;
+                font-weight: 200;
+            }
+            
+            .description-label {
+                color: #000;
+                line-height: 1.4;
+            }
+        }
+    }
+
+    .lower-container {
+        height: 120px;
+
+        margin-top: -120px;
+
+        line-height: 0;
+
+        .decoration {
+            position: relative;
+
+            height: 100%;
+
+            &.ground {
+                .ground-lower {
+                    position: relative;
+                    
+                    width: auto;
+                    height: 75px;
+
+                    margin-top: 45px;
+                    margin-left: 60%;
+                }
+
+                .ground-upper {
+                    position: absolute;
+
+                    bottom: 0;
+                    left: 77%;
+
+                    width: auto;
+                    height: 130px;
+                }
+            }
+        }
+    }
+
+    @media (max-width: 575.98px) {
+        .texts-container {
+            padding-left: 0;
+            padding-right: 0;
+
+            .texts-wrap {
+                margin-top: 140px;
+                margin-bottom: 90px;
+                padding-right: $mobile-side-space;
+                padding-left: $mobile-side-space;
+
+                .title-label {
+                    margin-bottom: 10px;
+                
+                    font-size: 2em;
+                }
+            }
+        }
+
+        .lower-container {
+            height: 100px;
+
+            margin-top: -100px;
+
+            .decoration.ground .ground-lower {
+                height: 44px;
+
+                margin-top: 56px;
+                margin-left: 15%;
+            }
+            .decoration.ground .ground-upper {
+                left: 54%;
+
+                height: 100px;
+            }
+        }
+    }
+    @media (min-width: 576px) and (max-width: 767.98px) {
+        .texts-container {
+            .texts-wrap {
+                margin-top: 150px;
+                margin-bottom: 80px;
+                padding-right: 25px;
+                padding-left: 25px;
+
+                .title-label {
+                    margin-bottom: 15px;
+
+                    font-size: 2em;
+                }
+            }
+        }
+
+        .lower-container .decoration.ground .ground-lower {
+            margin-left: 45%;
+
+            height: 55px;
+            margin-top: 65px;
+        }
+        .lower-container .decoration.ground .ground-upper {
+            left: 70%;
+
+            height: 100px;
+        }
+    }
+    @media (min-width: 768px) and (max-width: 991.98px) {
+        .texts-container {
+            .texts-wrap {
+                margin-top: 180px;
+                margin-bottom: 110px;
+                padding-right: 25px;
+                padding-left: 25px;
+
+                .title-label {
+                    margin-bottom: 20px;
+
+                    font-size: 2.4em;
+                }
+            }
+        }
+
+        .lower-container .decoration.ground .ground-lower {
+            margin-left: 45%;
+        }
+    }
+    @media (min-width: 992px) and (max-width: 1199.98px) {
+        .texts-container {
+            .texts-wrap {
+                margin-top: 200px;
+                margin-bottom: 110px;
+                padding-right: 25px;
+                padding-left: 25px;
+
+                .title-label {
+                    margin-bottom: 25px;
+
+                    font-size: 2.8em;
+                }
+            }
+        }
+
+        .lower-container .decoration.ground .ground-lower {
+            margin-left: 45%;
+        }
+    }
+}
+
+.why-rancher-how-is-rancher-built-screen2 {
+    .contents-container {
+        padding-top: 150px;
+    }
+
+    .texts-container {}
+    .texts-wrap {
+        .title-label {
+            text-align: center;
+        }
+    }
+
+    .thumbnail-container {
+        .thumbnail-wrap {
+            text-align: center;
+
+            .thumbnail {
+                position: relative;
+                display: inline-block;
+
+                width: 100%;
+                max-width: 480px;
+                height: auto;
+            }
+        }
+    }
+
+    @media (max-width: 575.98px) {
+        .contents-container {
+            padding-top: 50px;
+        }
+    }
+    @media (min-width: 576px) and (max-width: 767.98px) {
+        .contents-container {
+            padding-top: 70px;
+        }
+    }
+    @media (min-width: 768px) and (max-width: 991.98px) {
+        .contents-container {
+            padding-top: 100px;
+        }
+    }
+    @media (min-width: 992px) and (max-width: 1199.98px) {
+        .contents-container {
+            padding-top: 120px;
+        }
+    }
+}
+
+.why-rancher-how-is-rancher-built-screen3,
+.why-rancher-how-is-rancher-built-screen4,
+.why-rancher-how-is-rancher-built-screen5 {
+    .contents-container {
+        padding-top: 150px;
+    }
+
+    .texts-container {
+        .description-label {
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+
+        a.button {
+            position: relative;
+            display: inline-block;
+
+            height: 50px;
+
+            margin-top: 20px;
+            padding: 0 30px;
+
+            line-height: 50px;
+        }
+    }
+
+    .thumbnail-wrap {
+        overflow: hidden;
+
+        line-height: 0;
+        text-align: center;
+
+        background-color: $c-gray-base-light;
+        border-radius: 10px;
+        box-shadow: 15px 25px 50px rgba($c-blue, .1);
+
+        .thumbnail {
+            position: relative;
+            display: inline-block;
+
+            width: 90%;
+            max-width: 470px;
+            height: auto;
+        }
+    }
+
+    @media (max-width: 575.98px) {
+        .contents-container {
+            padding-top: 50px;
+        }
+
+        .texts-wrap {
+            text-align: center;
+
+            a.button {
+                width: auto;
+                height: 40px;
+
+                font-size: 14px;
+                line-height: 40px;
+            }
+        }
+
+        .thumbnail-wrap {
+            width: 80%;
+
+            margin-top: 20px;
+            margin-right: auto;
+            margin-left: auto;
+            padding-top: 10px;
+            padding-bottom: 10px;
+        }
+    }
+    @media (min-width: 576px) and (max-width: 767.98px) {
+        .contents-container {
+            padding-top: 70px;
+        }
+
+        .texts-wrap {
+            text-align: center;
+
+            a.button {
+                height: 44px;
+                line-height: 44px;
+            }
+        }
+
+        .thumbnail-wrap {
+            width: 80%;
+
+            margin-top: 40px;
+            margin-right: auto;
+            margin-left: auto;
+            padding-top: 10px;
+            padding-bottom: 10px;
+        }
+    }
+    @media (min-width: 768px) and (max-width: 991.98px) {
+        .contents-container {
+            padding-top: 100px;
+        }
+    }
+    @media (min-width: 992px) and (max-width: 1199.98px) {
+        .contents-container {
+            padding-top: 120px;
+        }
+    }
+}
+.why-rancher-how-is-rancher-built-screen5 {
+    .contents-container {
+        padding-bottom: 250px;
+    }
+
+    @media (max-width: 575.98px) {
+        .contents-container {
+            padding-bottom: 50px;
+        }
+    }
+    @media (min-width: 576px) and (max-width: 767.98px) {
+        .contents-container {
+            padding-bottom: 150px;
+        }
+    }
+    @media (min-width: 768px) and (max-width: 991.98px) {
+        .contents-container {
+            padding-bottom: 150px;
+        }
+    }
+    @media (min-width: 992px) and (max-width: 1199.98px) {
+        .contents-container {
+            padding-bottom: 200px;
+        }
+    }
+}

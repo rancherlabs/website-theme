@@ -1,4 +1,4 @@
-.why-rancher-hybrid-multi-cloud-screen1 {
+.why-rancher-security-and-compliance-screen1 {
     background-color: $c-gray-base-light;
 
     .decoration {
@@ -178,88 +178,212 @@
     }
 }
 
-.why-rancher-hybrid-multi-cloud-screen2 {
+.why-rancher-security-and-compliance-screen2 {
     .contents-container {
         padding-top: 150px;
-        padding-bottom: 150px;
     }
 
-    .texts-container {
-        padding-left: 0;
-    }
+    .texts-container {}
     .texts-wrap {
         .title-label {
-            line-height: 1.25;
+            margin-bottom: 50px;
+
+            text-align: center;
         }
-    }
 
-    .links-wrap {
-        margin-top: 50px;
+        .sub-title-label {
+            margin-top: 0;
+            margin-bottom: 15px;
 
-        .link-item {
-            position: relative;
-            display: flex;
+            font-size: 25px;
+            font-weight: 300;
+        }
 
-            align-items: center;
-
+        .label {
             margin-bottom: 30px;
+
+            color: $c-gray;
+
+            &:first-child {
+                margin-top: 60px;
+            }
 
             &:last-child {
                 margin-bottom: 0;
             }
-
-            a {
-                position: relative;
-                display: inline-block;
-
-                flex: 0;
-
-                font-size: 18px;
-                white-space: nowrap;
-            }
-
-            &.set-icon {
-                .icon {
-                    position: relative;
-                    display: inline-block;
-
-                    flex: 1;
-
-                    max-width: 20px;
-                    height: auto;
-
-                    margin-right: 20px;
-                }
-            }
         }
     }
 
-    .list-container {
-        .list-item {
-            align-items: flex-start;
+    @media (max-width: 575.98px) {
+    }
+    @media (min-width: 576px) and (max-width: 767.98px) {
+    }
+    @media (min-width: 768px) and (max-width: 991.98px) {
+    }
+    @media (min-width: 992px) and (max-width: 1199.98px) {
+    }
+}
 
-            padding-top: 80px;
+.why-rancher-security-and-compliance-screen3,
+.why-rancher-security-and-compliance-screen4 {
+    .contents-container {
+        padding-top: 150px;
+    }
 
-            &:first-child {
-                padding-top: 0;
+    .texts-container {
+        .description-label {
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+
+        a.button {
+            position: relative;
+            display: inline-block;
+
+            height: 50px;
+
+            margin-top: 20px;
+            padding: 0 30px;
+
+            line-height: 50px;
+        }
+    }
+
+    .thumbnail-wrap {
+        line-height: 0;
+
+        .thumbnail {
+            width: 100%;
+            height: auto;
+        }
+    }
+
+    @media (max-width: 575.98px) {
+        .contents-container {
+            padding-top: 50px;
+        }
+
+        .texts-wrap {
+            text-align: center;
+
+            a.button {
+                width: auto;
+                height: 40px;
+
+                font-size: 14px;
+                line-height: 40px;
+            }
+        }
+
+        .thumbnail-container {
+            margin-top: 40px;
+
+            .browser-item {
+                width: 80%;
+
+                margin-right: auto;
+                margin-left: auto;
+            }
+        }
+    }
+    @media (min-width: 576px) and (max-width: 767.98px) {
+        .contents-container {
+            padding-top: 70px;
+        }
+
+        .texts-wrap {
+            text-align: center;
+
+            a.button {
+                height: 44px;
+                line-height: 44px;
+            }
+        }
+
+        .thumbnail-container {
+            margin-top: 40px;
+
+            .browser-item {
+                width: 80%;
+                max-width: 480px;
+
+                margin-right: auto;
+                margin-left: auto;
+            }
+        }
+    }
+    @media (min-width: 768px) and (max-width: 991.98px) {
+        .contents-container {
+            padding-top: 100px;
+        }
+    }
+    @media (min-width: 992px) and (max-width: 1199.98px) {
+        .contents-container {
+            padding-top: 120px;
+        }
+    }
+}
+
+.why-rancher-security-and-compliance-screen5 {
+    .contents-container {
+        padding-top: 150px;
+        padding-bottom: 0;
+    }
+
+    .texts-container {
+        .title-label {
+            text-align: center;
+
+            line-height: 1.25;
+        }
+
+        .description-label {
+            text-align: center;
+        }
+    }
+
+    .cards-container {
+        padding-right: 0;
+        padding-left: 0;
+    }
+    .card-container {
+        margin-top: 30px;
+
+        .card-item {
+            position: relative;
+            display: inline-block;
+
+            width: 100%;
+            height: 100%;
+
+            padding: 45px 30px;
+
+            background-color: $c-blue;
+            border-radius: 10px;
+
+            text-align: center;
+
+            .title-label {
+                margin-bottom: 10px;
+
+                color: #fff;
+                font-size: 22px;
+                font-family: 'Poppins';
+                font-weight: 400;
+
+                text-align: center;
             }
 
-            .thumbnail-container {
-                background-color: $c-gray-base-light;
+            .description-label {
+                color: #fff;
+                font-size: 15px;
+                line-height: 1.665;
+                font-weight: 400;
+                text-align: center;
 
-                .thumbnail {
-                    margin: 15px 0;
-                }
-            }
-
-            .texts-container {
-                padding-left: 30px;
-
-                .title-label {
-                    margin-bottom: 20px;
-
-                    font-size: 25px;
-                    font-weight: 300;
+                &:last-child {
+                    margin-bottom: 0;
                 }
             }
         }
@@ -267,129 +391,92 @@
 
     @media (max-width: 575.98px) {
         .contents-container {
-            padding: 50px 0;
+            padding-top: 50px;
+            padding-bottom: 100px;
         }
 
-        .texts-container {
+        .cards-container {
+            padding-right: $mobile-side-space;
             padding-left: $mobile-side-space;
 
             text-align: center;
         }
-        .links-wrap {
-            position: relative;
+        .card-container .card-item {
             display: inline-block;
 
-            flex-wrap: wrap;
+            width: 80%;
 
-            margin-top: 15px;
             margin-right: auto;
             margin-left: auto;
+            padding: 25px 20px;
 
-            .link-item {
-                flex: 0 0 100%;
-
-                margin-bottom: 20px;
+            .title-label {
+                font-size: 18px;
             }
-        }
 
-        .list-container {
-            margin-top: 50px;
-        }
-        .list-container .list-item {
-            padding-top: 30px;
-            padding-right: $mobile-side-space;
-            padding-left: $mobile-side-space;
-        }
-        .list-container .list-item .texts-container .title-label {
-            margin-bottom: 10px;
-
-            font-size: 20px;
-            text-align: left;
-        }
-        .list-container .list-item .texts-container .description-label {
-            font-size: 14px;
-            text-align: left;
+            .description-label {
+                font-size: 12px;
+            }
         }
     }
     @media (min-width: 576px) and (max-width: 767.98px) {
         .contents-container {
-            padding: 70px 0;
+            padding-top: 80px;
+            padding-bottom: 150px;
         }
 
-        .texts-container {
-            padding-left: $mobile-side-space;
-
-            .texts-wrap .title-label {
-                text-align: center;
-            }
-        }
-        .links-wrap {
-            display: flex;
-
-            flex-wrap: wrap;
-
-            max-width: 575px;
-
-            margin-top: 35px;
-            margin-right: auto;
-            margin-left: auto;
-
-            .link-item {
-                flex: 0;
-
-                min-width: 50%;
-            }
-        }
-
-        .list-container {
-            margin-top: 50px;
-        }
-        .list-container .list-item {
-            padding-top: 50px;
+        .cards-container {
             padding-right: $mobile-side-space;
             padding-left: $mobile-side-space;
         }
-        .list-container .list-item .texts-container .title-label {
-            margin-bottom: 10px;
+        .card-container .card-item {
+            padding: 25px 20px;
 
-            font-size: 20px;
-        }
-        .list-container .list-item .texts-container .description-label {
-            font-size: 15px;
+            .title-label {
+                font-size: 18px;
+            }
+
+            .description-label {
+                font-size: 12px;
+            }
         }
     }
     @media (min-width: 768px) and (max-width: 991.98px) {
         .contents-container {
-            padding: 100px 0;
+            padding-top: 100px;
+            padding-bottom: 180px;
         }
 
-        .texts-container {
+        .cards-container {
+            padding-right: $mobile-side-space;
             padding-left: $mobile-side-space;
         }
-        .links-wrap {
-            margin-top: 40px;
-        }
+        .card-container .card-item {
+            padding: 30px;
 
-        .list-container .list-item {
-            padding-top: 60px;
+            .title-label {
+                font-size: 20px;
+            }
+
+            .description-label {
+                font-size: 13px;
+            }
         }
     }
     @media (min-width: 992px) and (max-width: 1199.98px) {
         .contents-container {
-            padding: 120px 0;
+            padding-top: 120px;
+            padding-bottom: 200px;
         }
 
-        .texts-container {
+        .cards-container {
+            padding-right: $mobile-side-space;
             padding-left: $mobile-side-space;
-        }
-
-        .list-container .list-item {
-            padding-top: 70px;
         }
     }
 }
 
-.why-rancher-hybrid-multi-cloud-screen3 {
+.why-rancher-security-and-compliance-screen6 {
     .contents-container {
         padding-top: 150px;
         padding-bottom: 250px;
