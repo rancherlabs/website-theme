@@ -83,7 +83,7 @@
     }
 
     @media (max-width: 575.98px) {
-        margin-top: 135px;
+        margin-top: 81px;
 
         .decoration {
             &.cloud-big {
@@ -107,6 +107,8 @@
             .texts-wrap {
                 margin-top: 40px;
                 margin-bottom: 50px;
+
+                text-align: center;
 
                 .title-label {
                     margin-bottom: 10px;
@@ -176,13 +178,13 @@
             margin-bottom: 120px;
             padding-right: 25px;
             padding-left: 25px;
-      
+        
             .title-label {
-              margin-bottom: 16px;
+                margin-bottom: 16px;
             
-              font-size: 2.4em;
+                font-size: 2.4em;
             }
-          }
+        }
     }
     @media (min-width: 768px) and (max-width: 991.98px) {
         .texts-container {
@@ -284,8 +286,15 @@
             margin-right: 15px;
             margin-bottom: 15px;
 
-            background-color: #777;
+            // background-color: #777;
             border-radius: 50%;
+
+            .thumbnail {
+                width: 80%;
+                height: auto;
+
+                margin: 10%;
+            }
         }
         .title-label {
             position: relative;
@@ -353,6 +362,7 @@
 
             .description-label {
                 margin-top: 10px;
+                margin-left: calc(32px + 15px);
             }
         }
     }
@@ -383,6 +393,9 @@
         }
         .list-container .sub-title-label {
             margin-bottom: 0;
+        }
+        .list-item .description-label {
+            margin-left: calc(32px + 15px);
         }
     }
     @media (min-width: 768px) and (max-width: 991.98px) {

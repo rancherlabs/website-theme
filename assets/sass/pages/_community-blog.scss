@@ -884,11 +884,11 @@
       }
     }
   }
-  @media (min-width: 576px) and (max-width: 767.98px) { //sm
+  @media (min-width: 576px) and (max-width: 767.98px) {
   }
-  @media (min-width: 768px) and (max-width: 991.98px) { //md
+  @media (min-width: 768px) and (max-width: 991.98px) {
   }
-  @media (min-width: 992px) and (max-width: 1199.98px) { //lg
+  @media (min-width: 992px) and (max-width: 1199.98px) {
   }
 }
 
@@ -968,9 +968,11 @@
       overflow: hidden;
 
       width: 100%;
-      height: 100%;
+      // height: 100%;
 
       background-color: #777;
+
+      line-height: 0;
 
       .thumbnail {
         position: relative;
@@ -1170,6 +1172,77 @@
     a {
       // color: $c-green;
       font-weight: bold;
+    }
+
+    h2 {
+      line-height: 1.4;
+    }
+  
+    ul, ol {
+      margin-bottom: 40px;
+  
+      li {
+        margin-bottom: 15px;
+        margin-left: 1.5em;
+  
+        line-height: 1.5;
+      }
+    }
+    ul {
+      list-style: disc;
+    
+      li {
+        list-style: disc;
+      }
+    }
+    ol {
+      list-style: decimal;
+      
+      li {
+        list-style: decimal;
+      }
+    }
+
+    blockquote {
+      margin: 0;
+      margin-bottom: 40px;
+
+      padding: 50px;
+      padding-top: 90px;
+
+      background-color: $c-blue;
+      border-radius: 10px;
+
+      background-color: $c-blue;
+      background-image: url('/imgs/customers/detail/icon-quote-dark-blue.svg');
+      background-size: 90px auto;
+      background-repeat: no-repeat;
+      background-position: center 30px;
+
+      p {
+        margin-bottom: 15px;
+
+        color: #fff;
+        font-size: 1em;
+        font-weight: 400;
+        line-height: 1.5;
+        text-align: center;
+
+        cite {
+          position: relative;
+          display: block;
+
+          margin-top: 20px;
+          padding-top: 15px;
+
+          font-size: 12px;
+          font-family: 'Poppins';
+          line-height: 1.2;
+          font-weight: 800;
+
+          border-top: 1px solid rgba(#fff, .2);
+        }
+      }
     }
 
     .cta-container {
@@ -1382,6 +1455,231 @@
         height: 62px;
 
         margin-left: 60%;
+      }
+    }
+  }
+
+  @media (max-width: 575.98px) {
+    .article-contents {
+      .wrap,
+      p {
+        margin-bottom: 20px;
+      }
+  
+      h2 {
+        font-weight: 300;
+      }
+    }
+  
+    .title-label {
+      margin-top: 25px;
+      margin-bottom: 25px;
+    }
+  
+    .thumbnail-container {
+      height: auto;
+      min-height: 0;
+  
+      .thumbnail-wrap {
+        height: auto;
+  
+        .thumbnail {}
+      }
+    }
+  
+    .user-container {
+      display: inline-block;
+  
+      margin-bottom: 40px;
+    }
+    .user-container .user-thumbnail {
+      margin-right: 0;
+    }
+    .user-container .user-thumbnail .user-thumbnail-wrap {
+      width: 40px;
+      height: 40px;
+    }
+    .user-container .date-label {
+      display: block;
+  
+      margin-top: 20px;
+  
+      text-align: center;
+    }
+    .user-container .date-label .icon {
+      width: 20px;
+      height: 20px;
+    }
+    .user-container .tag-item {
+      margin-top: 45px;
+    }
+  
+    .article-contents .cta-container {
+      margin-bottom: 40px;
+      padding: 40px 20px;
+    }
+    .cta-wrap {
+      align-items: flex-start !important;
+  
+      text-align: center;
+  
+      .buttons-container a {
+        display: inline-block;
+  
+        width: auto;
+  
+        margin-top: 20px;
+        padding: 0 20px;
+  
+        height: 40px;
+  
+        font-size: 14px;
+        line-height: 40px;
+      }
+    }
+
+    .author-container .author-wrap {
+      padding-top: 40px;
+    }
+    .author-container .decoration .cloud {
+      height: 45px;
+    }
+    .author-container .author-item .thumbnail-container {
+      max-width: 80px;
+      min-height: 80px;
+      max-height: 80px;
+
+      margin-bottom: 20px;
+    }
+    .author-container .author-item .information-container {
+      flex: 0 0 100%;
+    }
+    .author-container .author-item .profile-container .service-icon {
+      width: 30px;
+      height: auto;
+
+      margin-right: 10px;
+    }
+    .author-container .author-item .information-container .user-information > div {
+      display: block;
+    }
+  }
+  @media (min-width: 576px) and (max-width: 767.98px) {
+    .article-contents {
+      .wrap,
+      p {
+        margin-bottom: 20px;
+      }
+
+      h2 {
+        font-weight: 300;
+      }
+    }
+
+    .title-label {
+      margin-top: 25px;
+      margin-bottom: 25px;
+    }
+
+    .thumbnail-container {
+      height: auto;
+      min-height: 0;
+
+      .thumbnail-wrap {
+        height: auto;
+
+        .thumbnail {}
+      }
+    }
+
+    .user-container {
+      display: inline-block;
+
+      margin-bottom: 40px;
+    }
+    .user-container .user-thumbnail {
+      margin-right: 0;
+    }
+    .user-container .date-label {
+      display: block;
+
+      margin-top: 10px;
+
+      text-align: center;
+    }
+
+    .article-contents .cta-container {
+      padding: 40px 30px;
+    }
+    .cta-wrap {
+      align-items: flex-start !important;
+
+      .buttons-container a {
+        display: inline-block;
+
+        margin-top: 20px;
+        padding: 0 20px;
+
+        height: 44px;
+        line-height: 44px;
+      }
+    }
+
+    .author-container .author-wrap {
+      padding-top: 40px;
+    }
+    .author-container .decoration .cloud {
+      height: 45px;
+    }
+    .author-container .author-item .thumbnail-container {
+      margin-bottom: 20px;
+    }
+    .author-container .author-item .information-container {
+      flex: 0 0 100%;
+    }
+    .author-container .author-item .profile-container .service-icon {
+      width: 26px;
+      height: auto;
+
+      margin-right: 10px;
+    }
+    .author-container .author-item .information-container .user-information > div {
+      display: block;
+    }
+  }
+  @media (min-width: 768px) and (max-width: 991.98px) {
+    .title-label {
+      margin-top: 40px;
+      margin-bottom: 30px;
+    }
+
+    .thumbnail-container {
+      height: auto;
+      min-height: 0;
+
+      .thumbnail-wrap {
+        height: auto;
+
+        .thumbnail {}
+      }
+    }
+  }
+  @media (min-width: 992px) and (max-width: 1199.98px) {
+    .title-label {
+      margin-top: 40px;
+      margin-bottom: 30px;
+    }
+
+    .thumbnail-container {
+      height: auto;
+      min-height: 0;
+
+      .thumbnail-wrap {
+        height: auto;
+
+        .thumbnail {
+
+        }
       }
     }
   }

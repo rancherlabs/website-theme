@@ -1,7 +1,11 @@
 .rodeo-screen1 {
   margin-top: 100px;
 
-  background-color: $c-gray-base-light;
+  background-color: $c-blue-dark1;
+  background-image: url('/imgs/rodeo/screen1-background.png');
+  background-size: auto 100%;
+  background-repeat: repeat-x;
+  background-position: center;
 
   .decoration {
     position: relative;
@@ -19,13 +23,13 @@
     .texts-wrap {
       z-index: 1;
 
-      margin-top: 150px;
-      margin-bottom: 100px;
+      margin-top: 120px;
+      margin-bottom: 130px;
 
       .title-label {
         margin-bottom: 10px;
 
-        color: #000;
+        color: #fff;
         font-size: 50px;
         font-weight: 200;
       }
@@ -33,7 +37,7 @@
       .sub-title-label {
         margin-bottom: 30px;
 
-        color: #000;
+        color: #fff;
         line-height: 1.4;
       }
 
@@ -42,7 +46,7 @@
 
         margin-bottom: 30px;
 
-        color: rgba($c-gray, .75);
+        color: #fff;
         font-size: 15px;
         font-weight: 400;
         line-height: 1.665;
@@ -252,6 +256,12 @@
 
   .content-container {
     position: relative;
+
+    > .set-lines > .hide-sm-down {
+      &:before {
+        display: none;
+      }
+    }
   }
 
   .texts-container {
@@ -259,7 +269,7 @@
 
     flex-wrap: wrap;
 
-    margin-top: 10px;
+    margin-top: 0;
     padding: 50px 40px 40px;
 
     .icon-container {

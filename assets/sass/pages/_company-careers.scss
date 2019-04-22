@@ -232,7 +232,7 @@
         right: 0;
 
         width: auto;
-        height: 1005;
+        height: 100%;
       }
     }
   }
@@ -428,6 +428,15 @@
       height: auto;
     }
   }
+  .image-container {
+    padding: 0;
+
+    max-height: 100%;
+
+    .image {
+      transform: translate3d(0, 0, 0);
+    }
+  }
 
   .slider-pager {
     position: relative;
@@ -609,7 +618,9 @@
     padding-right: 0;
     padding-left: 0;
 
-    .image-list-wrap {}
+    .image-list-wrap {
+      justify-content: center;
+    }
 
     .image-item {
       margin-bottom: 30px;
@@ -656,10 +667,16 @@
         top: 50%;
         left: 50%;
 
+        width: 100%;
+
+        padding-right: $mobile-side-space;
+        padding-left: $mobile-side-space;
+
         color: #fff;
         font-size: 12px;
         font-family: 'Poppins';
         font-weight: bold;
+        text-align: center;
         letter-spacing: 1px;
         text-transform: uppercase;
         line-height: 1.1;

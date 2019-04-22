@@ -32,6 +32,71 @@
             line-height: 1.4;
         }
     }
+
+    @media (max-width: 575.98px) {
+        .contents-container {
+            margin-top: 81px;
+        }
+
+        .texts-container {
+            padding-top: 50px;
+            padding-bottom: 50px;
+
+            .texts-wrap {
+                .title-label {
+                    margin-bottom: 14px;
+                
+                    font-size: 2em;
+                }
+
+                .description-label {
+                    font-size: .95em;
+                }
+            }
+        }
+    }
+    @media (min-width: 576px) and (max-width: 767.98px) {
+        .contents-container {
+            margin-top: 81px;
+        }
+
+        .texts-container {
+            padding-top: 80px;
+            padding-bottom: 80px;
+
+            .description-label {
+                font-size: 1.15em;
+            }
+        }
+    }
+    @media (min-width: 768px) and (max-width: 991.98px) {
+        .contents-container {
+            margin-top: 81px;
+        }
+
+        .texts-container {
+            padding-top: 90px;
+            padding-bottom: 90px;
+
+            .description-label {
+                font-size: 1.35em;
+            }
+        }
+    }
+    @media (min-width: 992px) and (max-width: 1199.98px) {
+        .contents-container {
+            margin-top: 81px;
+        }
+
+        .texts-container {
+            padding-top: 100px;
+            padding-bottom: 100px;
+
+            .description-label {
+                font-size: 1.5em;
+            }
+        }
+    }
 }
 
 .customers-detail-contents {
@@ -184,6 +249,108 @@
                 top: .05em;
                 left: -15px;
             }
+        }
+    }
+
+    @media (max-width: 575.98px) {
+        .contents-container {
+            padding-top: 50px;
+            padding-bottom: 50px;
+        }
+
+        .side-wrap {
+            padding: 30px 20px;
+        }
+        .side-wrap .image-container {
+            margin-bottom: 30px;
+        }
+        .side-wrap .information-container {
+            margin-bottom: 20px;
+        }
+        .side-wrap .image-container .image {
+            height: 70px;
+        }
+        .side-wrap .highlights-container .title-label {
+            font-size: 18px;
+        }
+        .side-wrap .highlights-container li {
+            margin-bottom: 7px;
+
+            font-size: 14px;
+        }
+    }
+    @media (min-width: 576px) and (max-width: 767.98px) {
+        .contents-container {
+            padding-top: 80px;
+            padding-bottom: 120px;
+        }
+
+        .side-wrap {
+            padding: 40px 30px;
+        }
+        .side-wrap .image-container {
+            margin-bottom: 40px;
+        }
+        .side-wrap .information-container {
+            margin-bottom: 25px;
+        }
+        .side-wrap .image-container .image {
+            height: 65px;
+        }
+        .side-wrap .highlights-container .title-label {
+            font-size: 18px;
+        }
+        .side-wrap .highlights-container li {
+            margin-bottom: 10px;
+
+            font-size: 15px;
+        }
+    }
+    @media (min-width: 768px) and (max-width: 991.98px) {
+        .contents-container {
+            padding-top: 100px;
+            padding-bottom: 150px;
+        }
+
+        .side-wrap {
+            padding: 50px 35px;
+        }
+        .side-wrap .image-container {
+            margin-bottom: 50px;
+        }
+        .side-wrap .information-container {
+            margin-bottom: 30px;
+        }
+        .side-wrap .image-container .image {
+            height: 75px;
+        }
+        .side-wrap .highlights-container .title-label {
+            font-size: 20px;
+        }
+        .side-wrap .highlights-container li {
+            font-size: 16px;
+        }
+    }
+    @media (min-width: 992px) and (max-width: 1199.98px) {
+        .contents-container {
+            padding-top: 120px;
+            padding-bottom: 200px;
+        }
+
+        .side-wrap {
+            padding: 60px 40px;
+        }
+        .side-wrap .image-container {
+            margin-bottom: 60px;
+        }
+        .side-wrap .information-container {
+            margin-bottom: 35px;
+        }
+        .side-wrap .highlights-container .title-label {
+            font-size: 22px;
+        }
+        .side-wrap .highlights-container li {
+            font-size: 17px;
         }
     }
 }

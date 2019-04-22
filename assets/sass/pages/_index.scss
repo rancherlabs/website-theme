@@ -1577,6 +1577,8 @@
 		}
 	}
 	.slider-messege-wrap {
+		max-width: 50%;
+
 		padding: 0;
 
 		background-color: #fff;
@@ -1587,6 +1589,10 @@
 			padding: 45px 10%;
 
 			background-color: transparent;
+		}
+
+		.slider-messege-item {
+			outline: none;
 		}
 
 		.quote-box {

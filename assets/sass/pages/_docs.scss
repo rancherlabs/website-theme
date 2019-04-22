@@ -1144,6 +1144,9 @@
             }
         }
     }
+    .search-container {
+        display: none;
+    }
 
     .texts-container {
         h1 {
@@ -1168,7 +1171,8 @@
         }
 
         p {
-            margin-bottom: 15px;
+            margin-bottom: 20px;
+
             color: #3d3d3d;
             font-size: 15px;
             line-height: 1.665;
@@ -1313,6 +1317,12 @@
             margin: 0;
             padding: $mobile-side-space;
             padding-top: 0;
+
+            p {
+                &:last-child {
+                    margin-bottom: 0;
+                }
+            }
         }
 
         pre {
@@ -1592,6 +1602,8 @@
 @media (min-width: 576px) and (max-width: 767.98px) {
     .docs-container .guide-menus-activator {
         display: block;
+
+        margin-top: 40px;
     }
 
     .docs-container .contents-container {}
@@ -1632,6 +1644,10 @@
 
             border-width: 1px;
         }
+    }
+    .docs-container .product-select {
+        width: 100%;
+        min-width: 100% !important;
     }
     .docs-container .side-menus .side-menus-container .side-menus-wrap>li li {
         height: 40px;
