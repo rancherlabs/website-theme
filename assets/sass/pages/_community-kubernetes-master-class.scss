@@ -114,6 +114,57 @@
             }
         }
     }
+
+    @media (max-width: 575.98px) {
+        .set-ground .decoration-container .ground-lower {
+            left: -5%;
+        }
+
+        .texts-container {
+            padding-top: 130px;
+            padding-bottom: 80px;
+            padding-right: 25px;
+            padding-left: 25px;
+
+            .title-label {
+                max-width: 380px;
+            }
+        }
+    }
+    @media (min-width: 576px) and (max-width: 767.98px) {
+        .texts-container {
+            padding-top: 150px;
+            padding-bottom: 100px;
+            padding-right: 25px;
+            padding-left: 25px;
+
+            .title-label {
+                max-width: 380px;
+            }
+        }
+    }
+    @media (min-width: 768px) and (max-width: 991.98px) {
+        .texts-container {
+            padding-top: 180px;
+            padding-bottom: 100px;
+            padding-right: 25px;
+            padding-left: 25px;
+
+            .title-label {
+                max-width: 450px;
+            }
+        }
+    }
+    @media (min-width: 992px) and (max-width: 1199.98px) {
+        .texts-container {
+            padding-right: 25px;
+            padding-left: 25px;
+
+            .title-label {
+                max-width: 500px;
+            }
+        }
+    }
 }
 
 .community-kubernetes-master-class-screen2 {
@@ -136,6 +187,55 @@
             &:last-child {
                 margin-bottom: 0;
             }
+        }
+    }
+
+    @media (max-width: 575.98px) {
+        .contents-container {
+            padding-top: 50px;
+            padding-bottom: 50px;
+        }
+        .texts-container.left {
+            padding-left: $mobile-side-space;
+        }
+        .texts-container.right {
+            padding-right: $mobile-side-space;
+        }
+    }
+    @media (min-width: 576px) and (max-width: 767.98px) {
+        .contents-container {
+            padding-top: 80px;
+            padding-bottom: 80px;
+        }
+        .texts-container.left {
+            padding-left: $mobile-side-space;
+        }
+        .texts-container.right {
+            padding-right: $mobile-side-space;
+        }
+    }
+    @media (min-width: 768px) and (max-width: 991.98px) {
+        .contents-container {
+            padding-top: 100px;
+            padding-bottom: 100px;
+        }
+        .texts-container.left {
+            padding-left: $mobile-side-space;
+        }
+        .texts-container.right {
+            padding-right: $mobile-side-space;
+        }
+    }
+    @media (min-width: 992px) and (max-width: 1199.98px) {
+        .contents-container {
+            padding-top: 120px;
+            padding-bottom: 120px;
+        }
+        .texts-container.left {
+            padding-left: $mobile-side-space;
+        }
+        .texts-container.right {
+            padding-right: $mobile-side-space;
         }
     }
 }
@@ -165,7 +265,9 @@
         padding-right: 0;
         padding-left: 0;
 
-        .cards-wrap {}
+        .cards-wrap {
+            justify-content: center;
+        }
 
         .card-item {
             margin-top: 30px;
@@ -286,6 +388,65 @@
             }
         }
     }
+
+    @media (max-width: 575.98px) {
+        .contents-container {
+            padding-top: 50px;
+            padding-bottom: 50px;
+        }
+
+        .texts-container {
+            padding-right: $mobile-side-space;
+            padding-left: $mobile-side-space;
+        }
+        .texts-container .texts-wrap {
+            .title-label {
+                line-height: 1.4;
+            }
+        }
+
+        .cards-wrap {
+            padding-right: $mobile-side-space;
+            padding-left: $mobile-side-space;
+        }
+    }
+    @media (min-width: 576px) and (max-width: 767.98px) {
+        .contents-container {
+            padding-top: 80px;
+            padding-bottom: 80px;
+        }
+
+        .texts-container .texts-wrap {
+            .title-label {
+                line-height: 1.4;
+            }
+        }
+
+        .cards-wrap {
+            padding-right: $mobile-side-space;
+            padding-left: $mobile-side-space;
+        }
+    }
+    @media (min-width: 768px) and (max-width: 991.98px) {
+        .contents-container {
+            padding-top: 110px;
+            padding-bottom: 110px;
+        }
+        .cards-wrap {
+            padding-right: $mobile-side-space;
+            padding-left: $mobile-side-space;
+        }
+    }
+    @media (min-width: 992px) and (max-width: 1199.98px) {
+        .contents-container {
+            padding-top: 130px;
+            padding-bottom: 130px;
+        }
+        .cards-wrap {
+            padding-right: $mobile-side-space;
+            padding-left: $mobile-side-space;
+        }
+    }
 }
 
 .community-kubernetes-master-class-screen4 {
@@ -348,6 +509,61 @@
             a {
                 font-size: 18px;
             }
+        }
+    }
+
+    @media (max-width: 575.98px) {
+        .blank>div {
+            height: 50px;
+        }
+
+        .article-item {
+            margin-top: 50px;
+
+            .subject-label {
+                font-size: 18px;
+            }
+
+            .button-container a {
+                font-size: 14px;
+            }
+        }
+
+        .articles-container .buttons-container {
+            margin-top: 50px;
+            margin-bottom: 50px;
+
+            .button {
+                height: 40px;
+
+                font-size: 14px;
+            }
+        }
+    }
+    @media (min-width: 576px) and (max-width: 767.98px) {
+        .blank>div {
+            height: 70px;
+        }
+
+        .articles-container .buttons-container {
+            margin-top: 70px;
+            margin-bottom: 100px;
+        }
+    }
+    @media (min-width: 768px) and (max-width: 991.98px) {
+        .blank>div {
+            height: 100px;
+        }
+
+        .articles-container .buttons-container {
+            margin-top: 80px;
+            margin-bottom: 150px;
+        }
+    }
+    @media (min-width: 992px) and (max-width: 1199.98px) {
+        .articles-container .buttons-container {
+            margin-top: 80px;
+            margin-bottom: 200px;
         }
     }
 }

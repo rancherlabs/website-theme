@@ -283,6 +283,8 @@
 
     .contents-container {
         padding-top: 220px;
+
+        justify-content: center;
     }
 
     .texts-container {
@@ -364,6 +366,7 @@
             .user-connected {
                 margin-top: 20px;
                 margin-bottom: 20px;
+                margin-bottom: 0;
             }
             .connected-wrap {
                 text-align: center;
