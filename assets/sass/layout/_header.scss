@@ -901,6 +901,7 @@
   ul {
     position: relative;
     display: inline-block;
+    vertical-align: middle;
 
     text-align: left;
 
@@ -908,10 +909,23 @@
       position: relative;
       display: inline-block;
 
-      margin-left: 15px;
+      margin-left: 25px;
 
       &:first-child {
         margin-left: 0;
+      }
+
+      &.search {
+        position: relative;
+
+        .icon {
+          position: relative;
+          display: inline-block;
+          vertical-align: middle;
+
+          width: 15px;
+          height: auto;
+        }
       }
     }
   }
