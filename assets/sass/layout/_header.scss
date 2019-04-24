@@ -799,7 +799,7 @@
   >.primary-menus-sub {
     left: 50%;
 
-    min-width: 850px;
+    // min-width: 850px;
 
     @include transform(translateX(-50%));
   }

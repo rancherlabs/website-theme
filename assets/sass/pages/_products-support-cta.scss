@@ -360,6 +360,16 @@
         stroke: $c-blue;
       }
     }
+
+    // hide & resize.
+    margin-bottom: 20px;
+    &:before,
+    label {
+      display: none;
+    }
+    .input {
+      width: 100%;
+    }
   }
 
   .hs-submit {
