@@ -1429,6 +1429,8 @@
 @media (max-width: 575.98px) {
     .docs-container .guide-menus-activator {
         display: block;
+
+        margin-top: 40px;
     }
 
     .docs-container .contents-container {}
@@ -1486,6 +1488,9 @@
         z-index: 5;
 
         flex: 1;
+
+        width: 100%;
+        min-width: 100% !important;
 
         .side-menus-wrap>li>a {
             font-size: 14px !important;
@@ -1653,10 +1658,6 @@
             border-width: 1px;
         }
     }
-    .docs-container .product-select {
-        width: 100%;
-        min-width: 100% !important;
-    }
     .docs-container .side-menus .side-menus-container .side-menus-wrap>li li {
         height: 40px;
 
@@ -1670,6 +1671,9 @@
         z-index: 5;
 
         flex: 1;
+
+        width: 100%;
+        min-width: 100% !important;
 
         .side-menus-wrap>li>a {
             font-size: 14px !important;
