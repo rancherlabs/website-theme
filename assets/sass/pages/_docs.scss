@@ -1027,6 +1027,14 @@
             }
         }
 
+        .tree-nav-item {
+            &.open {
+               .tree-nav-sublist {
+                //    display: block;
+               } 
+            }
+        }
+
         >li.back-to-the-top {
             display: none;
 

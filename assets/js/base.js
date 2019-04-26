@@ -212,10 +212,18 @@ const bootstrapNav = function () {
   });
 
   // expand the current page
-  let cur = $('.tree-nav A[href="'+window.location.pathname+'"]').closest('LI');
+  let cur = $('.side-menus-wrap.second a[href="'+window.location.pathname+'"]').closest('li.tree-nav-item');
+  let upper = cur.closest('ul.tree-nav-sublist');
+  let upper2 = upper.parent().closest('ul.tree-nav-sublist');
+
   cur.addClass('active');
   toggleNav(cur, 'show');
   $('.tree-nav').removeClass('invisible');
+
+  upper.css('display', 'block');
+  upper2.css('display', 'block');
+  upper.closest('.tree-nav-item.open').find('> a').addClass('submenu-indicator-minus');
+  upper2.closest('.tree-nav-item.open').find('> a').addClass('submenu-indicator-minus');
 }
 
 const bootstrapScrollSpy = function () {
