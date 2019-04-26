@@ -491,6 +491,10 @@
     .article-item {
         margin-top: 60px;
 
+        &.hidden {
+            display: none;
+        }
+
         .date-label {
             margin-bottom: 15px;
 
