@@ -85,8 +85,7 @@
                                 <div class="label">Community</div>
                                 <li><a href="/events/">Events</a></li>
                                 <li><a href="/online-meetups/">Online Metups</a></li>
-                                <li><a href="/training/">Training</a></li>
-                                <li><a href="/tutorials/">Tutotials</a></li>
+                                <li><a href="/tutorials/">Tutorials</a></li>
                                 <li><a href="/writing-program/">Rancher Writing Program</a></li>
                                 <li><a href="https://forums.rancher.com/">Forums</a></li>
                                 <li><a href="http://slack.rancher.io/">Slack</a></li>
@@ -177,6 +176,27 @@ function sliderProgressPlay(slider, progressBar, duration, repeatable) {
 
         if (repeatable) sliderProgressPlay(slider, progressBar, duration, repeatable);
     });
+}
+
+function scrollPage(hash) {
+    var hash = window.location.hash.substring(1),
+        objt = $('#' + hash),
+        objt_mt = Number(objt.css('margin-top').replace(/[^0-9]/g,"")),
+        depth = 50,
+        scrn = $(window).width();
+        scrn_check = 1025;
+
+    if (scrn < scrn_check) {
+        depth = 120;
+    }
+
+    if (objt_mt > 0) {
+        depth = depth + objt_mt
+    }
+
+    $('html').animate({
+        'scrollTop': objt.offset().top - depth
+    }, 400);
 }
 
 
@@ -325,6 +345,19 @@ $(document).ready(function() {
         viewFactor: .5,
         mobile: false
     });
+
+
+    if(window.location.hash) {
+        scrollPage(window.location.hash);
+    }
+
+    // $("a[href*='#']").click(function(e) {
+    //     if ($(this).attr('href').charAt(0) === '#') {
+    //         // e.preventDefault();
+    //         scrollPage($(this).attr('href'));
+    //     }
+    // });
+
 
     var mobileNavContainer = $('.mobile-header-container');
 

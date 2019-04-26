@@ -879,6 +879,8 @@
 
         .text-container {
             margin-top: 30px;
+            margin-top: -10px;
+            margin-bottom: 40px;
 
             min-height: 130px;
 
@@ -903,7 +905,7 @@
                 line-height: 1.665;
                 text-align: center;
 
-                opacity: 0;
+                // opacity: 0;
 
                 @include textElipsis(5, 1.665);
                 @include transition(opacity .25s);
@@ -914,7 +916,7 @@
 
                 text-align: center;
 
-                opacity: 0;
+                // opacity: 0;
 
                 @include transition(opacity .25s);
 
@@ -925,21 +927,21 @@
                 }
             }
         }
-        &:hover,
-        &.active {
-            .text-container {
-                margin-top: -10px;
-                margin-bottom: 40px;
-            }
+        // &:hover,
+        // &.active {
+        //     .text-container {
+        //         margin-top: -10px;
+        //         margin-bottom: 40px;
+        //     }
 
-            .description-label {
-                opacity: 1;
-            }
+        //     .description-label {
+        //         opacity: 1;
+        //     }
             
-            .buttons-container {
-                opacity: 1;
-            }
-        }
+        //     .buttons-container {
+        //         opacity: 1;
+        //     }
+        // }
     }
 
     @media (max-width: 575.98px) {

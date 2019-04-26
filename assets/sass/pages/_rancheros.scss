@@ -929,6 +929,7 @@
       vertical-align: middle;
 
       margin: 15px 0;
+      margin-top: 0;
       padding: 50px 30px 40px;
 
       background-color: #fff;
@@ -974,7 +975,7 @@
 
         opacity: 1;
 
-        @include transition(all .25s);
+        // @include transition(all .25s);
 
         .thumbnail {
           position: relative;
@@ -1023,7 +1024,7 @@
         opacity: 0;
 
         @include textElipsis(7, 1.67);
-        @include transition(height .25s, max-height .25s, opacity .25s);
+        @include transition(opacity .25s);
 
         @media (max-width: 575.98px) {
           font-size: 1em;
@@ -1041,7 +1042,7 @@
 
         opacity: 0;
 
-        @include transition(max-width .25s, margin .25s, opacity .25s);
+        // @include transition(max-width .25s, margin .25s, opacity .25s);
 
         @media (max-width: 575.98px) {
           max-width: 40px;
@@ -1084,7 +1085,7 @@
       width: 100%;
 
       margin: 0 -15px;
-      padding: 25px 45px 40px;
+      padding: 25px 45px 50px;
       color: #fff;
 
       background-color: $c-blue;

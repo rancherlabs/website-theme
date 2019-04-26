@@ -1212,17 +1212,19 @@
       }
     }
 
+    img {
+      position: relative;
+
+      max-width: 100%;
+      height: auto;
+
+      margin: 25px 0;
+    }
+
     figure {
       position: relative;
 
       margin: 40px 0;
-
-      img {
-        position: relative;
-
-        max-width: 100%;
-        height: auto;
-      }
 
       figcaption {
         margin-top: 25px;
