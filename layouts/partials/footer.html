@@ -231,7 +231,7 @@ $(document).ready(function() {
             
             openSubmenu: function () {
                 var opts = this.settings; //to differ from local variable "this"
-                $(this.element).children("ul").find("li").bind("click touchstart", function(e){
+                $(this.element).children("ul").find("li").bind("click", function(e){
                     e.stopPropagation(); 
                     e.preventDefault();
 
@@ -247,6 +247,7 @@ $(document).ready(function() {
                             if(opts.singleOpen){
                                 $(this).siblings().children(".submenu").slideUp(opts.speed);
                                 $(this).siblings().children(".submenu").siblings("a").removeClass("submenu-indicator-minus");
+                                $(this).removeClass("activate");
                             }
                             return false;
                         }
@@ -270,7 +271,8 @@ $(document).ready(function() {
             
             addClickEffect: function () {
                 var ink, d, x, y;
-                $(this.element).find("a").bind("click touchstart", function(e){
+
+                $(this.element).find("a").bind("click", function(e){
                     
                     $(".ink").remove();
                     
