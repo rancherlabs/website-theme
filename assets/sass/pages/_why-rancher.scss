@@ -4,23 +4,23 @@
 
     .contents-container {
       padding-top: 200px;
-      padding-bottom: 180px;
+      // padding-bottom: 180px;
 
       @media (max-width: 575.98px) {
         padding-top: 45px;
-        padding-bottom: 70px;
+        // padding-bottom: 70px;
       }
-      @media (min-width: 576px) and (max-width: 767.98px) { //sm
+      @media (min-width: 576px) and (max-width: 767.98px) {
         padding-top: 70px;
-        padding-bottom: 70px;
+        // padding-bottom: 70px;
       }
-      @media (min-width: 768px) and (max-width: 991.98px) { //md
+      @media (min-width: 768px) and (max-width: 991.98px) {
         padding-top: 100px;
-        padding-bottom: 100px;
+        // padding-bottom: 100px;
       }
       @media (min-width: 992px) and (max-width: 1199.98px) {
         padding-top: 150px;
-        padding-bottom: 150px;
+        // padding-bottom: 150px;
       }
     }
 
@@ -486,6 +486,10 @@
 
       white-space: nowrap;
 
+      span:before {
+        display: none;
+      }
+
       @media (max-width: 575.98px) {
         font-size: 14px;
         line-height: 1.4;
@@ -673,6 +677,23 @@
   }
 
   &-screen6 {
+    .blank-bottom {
+      padding-bottom: 150px;
+
+      @media (max-width: 575.98px) {
+        padding-bottom: 50px;
+      }
+      @media (min-width: 576px) and (max-width: 767.98px) {
+        padding-bottom: 70px;
+      }
+      @media (min-width: 768px) and (max-width: 991.98px) {
+        padding-bottom: 100px;
+      }
+      @media (min-width: 992px) and (max-width: 1199.98px) {
+        padding-bottom: 120px;
+      }
+    }
+
     .contents-container {
       @media (max-width: 575.98px) {
         background-color: transparent;
@@ -739,6 +760,7 @@
       }
 
       .title-label {
+        color: #fff;
         line-height: 1.25;
 
         @media (max-width: 575.98px) {
@@ -747,7 +769,9 @@
       }
 
       .description-label {
-        margin-bottom: 15p;
+        margin-bottom: 15px;
+
+        color: #fff;
 
         &:first-child {
           margin-top: 50px;

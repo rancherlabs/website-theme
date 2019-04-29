@@ -1828,37 +1828,37 @@
       }
     }
 
-    .card-container.active .card-item,
-    .card-container:hover .card-item {
-      margin: -15px;
-      padding: 80px 60px 70px;
-      color: #fff;
+    // .card-container.active .card-item,
+    // .card-container:hover .card-item {
+    //   margin: -15px;
+    //   padding: 80px 60px 70px;
+    //   color: #fff;
 
-      background-color: $c-blue;
+    //   background-color: $c-blue;
 
-      @media (max-width: 575.98px) {
-        margin: 0;
-        padding: 30px 22px 40px;
-      }
+    //   @media (max-width: 575.98px) {
+    //     margin: 0;
+    //     padding: 30px 22px 40px;
+    //   }
 
-      .button {
-        color: #fff;
+    //   .button {
+    //     color: #fff;
 
-        span:before {
-          bottom: -5px;
+    //     span:before {
+    //       bottom: -5px;
 
-          height: 1px;
+    //       height: 1px;
 
-          background-color: rgba(#fff, 1);
-        }
+    //       background-color: rgba(#fff, 1);
+    //     }
 
-        &:hover {
-          span:before {
-            background-color: rgba($c-sky-blue, 1);
-          }
-        }
-      }
-    }
+    //     &:hover {
+    //       span:before {
+    //         background-color: rgba($c-sky-blue, 1);
+    //       }
+    //     }
+    //   }
+    // }
   }
 }
 

@@ -5,8 +5,11 @@
 
   background-color: $c-gray-base-light;
 
+  @media (max-width: 575.98px) {
+    margin-top: 81px;
+  }
   @media (min-width: 768px) and (max-width: 991.98px) {
-    margin-top: 136px;
+    margin-top: 81px;
   }
 
   .decoration {
@@ -19,6 +22,7 @@
     line-height: 0;
 
     &.cloud-big {
+
       top: -52px;
 
       height: 0;
@@ -26,7 +30,7 @@
       margin-top: 0;
 
       @media (max-width: 575.98px) {
-        top: 0;
+        top: -10px;
       }
       @media (min-width: 576px) and (max-width: 767.98px) {
         top: -10px;
@@ -38,6 +42,8 @@
       }
 
       .image {
+        z-index: 0;
+
         position: absolute;
 
         top: 100%;
@@ -112,8 +118,6 @@
     line-height: 0;
 
     .texts-wrap {
-      z-index: 1;
-
       max-width: 1010px;
 
       margin-top: 180px;
@@ -121,11 +125,17 @@
       margin-left: auto;
 
       @media (max-width: 575.98px) {
+        z-index: 1;
+        position: relative;
+
         margin-top: 45px;
         padding-right: 30px;
         padding-left: 30px;
       }
       @media (min-width: 576px) and (max-width: 767.98px) {
+        z-index: 1;
+        position: relative;
+
         margin-top: 60px;
         padding-right: 30px;
         padding-left: 30px;
