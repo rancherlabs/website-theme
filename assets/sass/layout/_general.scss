@@ -45,6 +45,9 @@ main::before {
     height: 100%;
 
     background-color: $c-gray-base-light;
+
+    // remove lines.
+    display: none;
   }
 }
 
@@ -102,6 +105,12 @@ section.blank {
       &:after {
         display: none;
       }
+    }
+
+    // remove lines.
+    &:before,
+    &:after {
+      display: none;
     }
   }
 }
