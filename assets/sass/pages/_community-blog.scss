@@ -1172,6 +1172,16 @@
       font-size: 25px;
     }
 
+    h4 {
+      font-size: 20px;
+    }
+
+    h5 {
+      margin-bottom: 1em;
+      font-size: 18px;
+      font-weight: bold;
+    }
+
     p {
       margin-bottom: 40px;
 
@@ -1201,6 +1211,13 @@
       list-style: disc;
     
       li {
+        margin-bottom: 10px;
+
+        color: $c-blue-dark1;
+        font-size: 18px;
+        font-weight: 300;
+        line-height: 1.775;
+
         list-style: disc;
       }
     }
@@ -1241,20 +1258,33 @@
     blockquote {
       margin: 0;
       margin-bottom: 40px;
+      padding: 25px;
 
-      padding: 50px;
-      padding-top: 90px;
-
-      background-color: $c-blue;
-      border-radius: 10px;
-
-      background-color: $c-blue;
-      background-image: url('/imgs/customers/detail/icon-quote-dark-blue.svg');
-      background-size: 90px auto;
-      background-repeat: no-repeat;
-      background-position: center 30px;
+      background-color: $c-gray-base-light;
 
       p {
+        font-size: 1em;
+        font-weight: 300;
+        line-height: 1.5;
+      }
+
+      &.type1 {
+        margin: 0;
+        margin-bottom: 40px;
+
+        padding: 50px;
+        padding-top: 90px;
+
+        background-color: $c-blue;
+        border-radius: 10px;
+
+        background-color: $c-blue;
+        background-image: url('/imgs/customers/detail/icon-quote-dark-blue.svg');
+        background-size: 90px auto;
+        background-repeat: no-repeat;
+        background-position: center 30px;
+      }
+      &.type1 p {
         margin-bottom: 15px;
 
         color: #fff;
@@ -1262,22 +1292,97 @@
         font-weight: 400;
         line-height: 1.5;
         text-align: center;
-
-        cite {
-          position: relative;
-          display: block;
-
-          margin-top: 20px;
-          padding-top: 15px;
-
-          font-size: 12px;
-          font-family: 'Poppins';
-          line-height: 1.2;
-          font-weight: 800;
-
-          border-top: 1px solid rgba(#fff, .2);
-        }
       }
+      &.type1 p cite {
+        position: relative;
+        display: block;
+
+        margin-top: 20px;
+        padding-top: 15px;
+
+        font-size: 12px;
+        font-family: 'Poppins';
+        line-height: 1.2;
+        font-weight: 800;
+
+        border-top: 1px solid rgba(#fff, .2);
+      }
+    }
+
+    table,
+    .table {
+      position: relative;
+
+      width: 100%;
+
+      margin-bottom: 15px;
+      padding-top: 5px;
+
+      background-color: #fff;
+      border: 1px solid rgba($c-gray-mid-light, .5);
+
+      border-collapse: collapse;
+
+      &.no-background {
+        background-color: transparent;
+      }
+
+      caption {
+        margin-top: 20px;
+        margin-bottom: 15px;
+
+        font-size: 15px;
+        font-weight: bold;
+        text-align: left;
+      }
+
+      thead, tbody {
+        width: 100%;
+      }
+
+      th, td,
+      tbody th {
+        position: relative;
+        vertical-align: top;
+
+        padding: 6px 20px;
+
+        color: $c-gray;
+        font-size: 15px;
+        font-weight: 300;
+        line-height: 1.665;
+
+        border: 1px solid $c-gray-mid-light;
+      }
+
+      th {
+        vertical-align: middle;
+
+        color: $c-blue;
+        font-size: 12px;
+        font-family: 'Poppins';
+        font-weight: 800;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        text-align: left;
+      }
+
+      th[scope] {
+        vertical-align: top;
+
+        width: 20%;
+
+        color: #313131;
+        font-size: 15px;
+        font-family: 'Roboto';
+        font-weight: 500;
+        letter-spacing: 0;
+        text-transform: initial;
+      }
+    }
+    .table-foot-caption {
+      margin-top: -30px;
+      margin-bottom: 50px;
     }
 
     .cta-container {
