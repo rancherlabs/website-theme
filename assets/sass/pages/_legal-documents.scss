@@ -169,6 +169,10 @@
 
             line-height: 50px;
             border-bottom: 1px solid $c-gray-mid-light;
+
+            &:hover {
+                background-color: rgba($c-blue, .1);
+            }
         }
     }
 
@@ -191,7 +195,8 @@
     .side-menus-wrap .submenus-wrap {
         .active {
             background-color: rgba($c-blue, .1);
-            >a {
+
+            > a {
                 color: $c-blue;
                 font-weight: 700;
             }

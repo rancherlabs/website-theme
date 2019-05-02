@@ -307,16 +307,13 @@
     .more-information-container {
         margin-top: 50px;
 
-        padding-top: 70px;
-        padding-bottom: 70px;
-
-        background-color: $c-gray-base-light;
-
         .texts-container {
-            padding-right: $mobile-side-space;
+            padding: 50px;
+
+            background-color: $c-gray-base-light;
         }
         .texts-wrap {
-            margin-bottom: 30px;
+            margin-bottom: 20px;
             padding-right: 8%;
 
             &:last-child {
@@ -326,13 +323,15 @@
             .title-label {
                 margin-bottom: 0;
 
-                text-align: right;
+                font-weight: 300;
             }
 
             a.button {
                 height: auto;
 
                 margin-top: 0;
+                padding-right: 0;
+                padding-left: 0;
 
                 line-height: 1.4;
             }
@@ -586,14 +585,11 @@
 
     .more-information-container {
         margin-top: 50px;
-
-        padding-top: 70px;
-        padding-bottom: 70px;
-
-        background-color: $c-gray-base-light;
-
+        
         .texts-container {
-            padding-right: $mobile-side-space;
+            padding: 50px;
+
+            background-color: $c-gray-base-light;
         }
         .texts-wrap {
             margin-bottom: 30px;
@@ -606,13 +602,15 @@
             .title-label {
                 margin-bottom: 0;
 
-                text-align: right;
+                font-weight: 300;
             }
 
             a.button {
                 height: auto;
 
                 margin-top: 0;
+                padding-right: 0;
+                padding-left: 0;
 
                 line-height: 1.4;
             }
@@ -798,7 +796,7 @@
         background-color: transparent;
     }
 
-    .more-information-container {
+    .more-information-container .texts-container {
         background-color: $c-blue-dark2;
     }
     .more-information-container .texts-wrap .title-label {
