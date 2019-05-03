@@ -1776,6 +1776,10 @@
   .masonry {
     column-count: 4;
     box-sizing: border-box;
+
+    @media (max-width: 575.98px) {
+      column-count: 1;
+    }
   }
 
   .panel {
