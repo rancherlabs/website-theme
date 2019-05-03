@@ -143,11 +143,11 @@
 
   text-align: left;
 
-  >li {
+  .primary-menu-item {
     position: relative;
     display: inline-block;
 
-    >a {
+    .primary-menu {
       &:after {
         z-index: 1;
         content: "";
@@ -174,7 +174,7 @@
 
     &.active,
     &:hover {
-      a {
+      .primary-menu {
         color: $c-green;
 
         &:before {
@@ -752,9 +752,9 @@
 }
 
 // &.active,
-.primary-menus-wrap>li:focus,
-.primary-menus-wrap>li:focus-within,
-.primary-menus-wrap>li:hover {
+.primary-menu-item:focus,
+.primary-menu-item:focus-within,
+.primary-menu-item:hover {
   &:before {
     content: "";
     position: absolute;
@@ -782,7 +782,7 @@
     @include transition-delay(0s, 0s, 0.3s);
   }
 }
-.primary-menus-wrap>li:hover .primary-menus-sub {
+.primary-menu-item:hover .primary-menus-sub {
   z-index: 1;
   visibility: visible;
 
