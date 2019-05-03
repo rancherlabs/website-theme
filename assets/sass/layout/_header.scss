@@ -704,7 +704,7 @@
       right: -10px;
     }
 
-    >li {
+    li {
       position: relative;
       display: inline-block;
 
@@ -726,8 +726,8 @@
     }
   }
 
-  >.grid-container {
-    >.row {
+  .grid-container {
+    .row {
       margin-right: 0;
       margin-left: 0;
     }
