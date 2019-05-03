@@ -733,7 +733,7 @@
     }
 
     .col,
-    col-1,
+    .col-1,
     .col-2,
     .col-3,
     .col-4,
@@ -773,7 +773,7 @@
     }
   }
 
-  >.primary-menus-sub {
+  .primary-menus-sub {
     z-index: 1;
     visibility: visible;
 
@@ -782,7 +782,7 @@
     @include transition-delay(0s, 0s, 0.3s);
   }
 }
-.primary-menus-wrap>li:hover>.primary-menus-sub {
+.primary-menus-wrap>li:hover .primary-menus-sub {
   z-index: 1;
   visibility: visible;
 
@@ -793,7 +793,7 @@
 
 // special cases.
 .menu-why_rancher {
-  >.primary-menus-sub {
+  .primary-menus-sub {
     margin-left: 20px;
   }
 }
@@ -805,7 +805,7 @@
   .right {
   }
 
-  >.primary-menus-sub {
+  .primary-menus-sub {
     left: 50%;
 
     // min-width: 850px;
@@ -848,7 +848,7 @@
     }
   }
 
-  >.primary-menus-sub {
+  .primary-menus-sub {
     left: 50%;
 
     min-width: 820px;
@@ -872,7 +872,7 @@
     border-bottom-color: $c-blue-dark2;
   }
 
-  >.primary-menus-sub {
+  .primary-menus-sub {
     left: 50%;
 
     min-width: 820px;
@@ -888,7 +888,7 @@
     border-bottom-color: $c-blue-dark2;
   }
 
-  >.primary-menus-sub {
+  .primary-menus-sub {
     left: 50%;
 
     min-width: 310px;
