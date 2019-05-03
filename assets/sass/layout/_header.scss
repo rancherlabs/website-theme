@@ -782,6 +782,14 @@
     @include transition-delay(0s, 0s, 0.3s);
   }
 }
+.primary-menus-wrap>li:hover>.primary-menus-sub {
+  z-index: 1;
+  visibility: visible;
+
+  opacity: 1;
+
+  @include transition-delay(0s, 0s, 0.3s);
+}
 
 // special cases.
 .menu-why_rancher {
