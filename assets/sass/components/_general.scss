@@ -705,6 +705,8 @@ button[disabled="disabled"] {
     text-align: center;
 
     @media (max-width: 575.98px) {
+      flex: 0 0 100%;
+
       padding-right: $mobile-side-space;
       padding-left: $mobile-side-space;
 

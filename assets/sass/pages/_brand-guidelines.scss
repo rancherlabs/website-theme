@@ -215,6 +215,11 @@
     }
 
     @media (max-width: 575.98px) {
+        .menu-item {
+            min-width: 50%;
+
+            border-bottom: 1px solid $c-gray-base-light;
+        }
     }
     @media (min-width: 576px) and (max-width: 767.98px) {
     }

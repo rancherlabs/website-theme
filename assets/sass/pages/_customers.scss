@@ -1653,6 +1653,8 @@
     }
 
     .contents-container {
+      flex-wrap: nowrap;
+
       &:before,
       &:after,
       > div:first-child,
@@ -1681,12 +1683,15 @@
         margin-left: -20px;
 
         .button {
-          width: auto;
-          height: 40px;
+          width: 100%;
+          height: auto;
 
-          padding: 0 15px;
+          padding: 10px 15px;
 
           font-size: 14px;
+
+          white-space: normal;
+          line-height: 1.2;
         }
       }
     }

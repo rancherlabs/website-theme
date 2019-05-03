@@ -192,7 +192,7 @@
   margin-top: 80px;
 
   @media (max-width: 575.98px) {
-    margin-top: 80px;
+    margin-top: 50px;
   }
   @media (min-width: 576px) and (max-width: 767.98px) {
     flex: 1;
@@ -263,10 +263,6 @@
 .footer-sitemaps {
   position: relative;
 
-  @media (max-width: 575.98px) {
-    display: none;
-  }
-
   ul {
     position: relative;
     display: inline-block;
@@ -298,6 +294,16 @@
 
     &:hover {
       color: #fff;
+    }
+  }
+
+  @media (max-width: 575.98px) {
+    // display: none;
+
+    margin-top: 40px;
+
+    ul {
+      margin-bottom: 20px;
     }
   }
 }
