@@ -191,10 +191,10 @@ function sliderProgressPlay(slider, progressBar, duration, repeatable) {
 }
 
 function scrollPage(hash) {
-    var hash = window.location.hash.substring(1),
+    var hash = hash.substring(1),
         objt = $('#' + hash),
         objt_mt = Number(objt.css('margin-top').replace(/[^0-9]/g,"")),
-        depth = 50,
+        depth = 80,
         scrn = $(window).width();
         scrn_check = 1025;
 
@@ -209,6 +209,8 @@ function scrollPage(hash) {
     $('html').animate({
         'scrollTop': objt.offset().top - depth
     }, 400);
+
+    console.debug('scroll to :', objt.offset().top - depth);
 }
 
 
@@ -367,13 +369,13 @@ $(document).ready(function() {
         scrollPage(window.location.hash);
     }
 
-    // $("a[href*='#']").click(function(e) {
-    //     if ($(this).attr('href').charAt(0) === '#') {
-    //         // e.preventDefault();
-    //         scrollPage($(this).attr('href'));
-    //     }
-    // });
-
+    $('.docs-wrap .accordion > label').click(function() {
+        if ($(this).parent().hasClass('active')) {
+            $(this).parent().removeClass('active');
+        } else {
+            $(this).parent().addClass('active');
+        }
+    });
 
     var mobileNavContainer = $('.mobile-header-container');
 

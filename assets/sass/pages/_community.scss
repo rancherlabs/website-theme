@@ -87,6 +87,10 @@
   }
 
   @media (max-width: 575.98px) {
+    .decoration.cloud-big {
+      min-height: 80px;
+    }
+
     .texts-container {
       padding-top: 50px;
       padding-right: 25px;
@@ -95,6 +99,7 @@
 
       .texts-wrap {
         margin-top: 50px;
+        margin-bottom: calc(150px - 50px);
       }
 
       .texts-wrap .title-label {
@@ -107,11 +112,17 @@
         }
       }
     }
+
+    .lower-container {
+      height: 150px;
+      margin-top: -150px;
+    }
   }
   @media (min-width: 576px) and (max-width: 767.98px) {
     .texts-container {
       .texts-wrap {
         margin-top: 80px;
+        margin-bottom: calc(180px - 50px);
       }
 
       .texts-wrap .title-label {

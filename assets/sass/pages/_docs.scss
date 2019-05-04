@@ -1074,7 +1074,7 @@
         position: relative;
 
         padding: 50px 0;
-        padding-top: 90px;
+        // padding-top: 90px;
 
         background-color: $c-gray-base-light;
 
@@ -1159,7 +1159,7 @@
     .texts-container {
         h1 {
             margin-top: 5px;
-            padding-bottom: 15px;
+            padding-bottom: 0;
 
             color: $c-blue-dark1;
             font-family: 'Poppins';
@@ -1176,6 +1176,12 @@
             font-family: 'Poppins';
             font-size: 25px;
             font-weight: 300;
+        }
+
+        h1, h2, h3, h4, h5 {
+            &[id] {
+                padding-top: 80px;
+            }
         }
 
         p {
@@ -1209,25 +1215,32 @@
 
         ol, ul {
             margin-bottom: 30px;
-            padding: 36px;
-            background-color: #fff;
 
             li {
-                margin-bottom: 15px;
+                margin-bottom: 5px;
 
-                line-height: 1.5;
+                line-height: 1.2;
 
                 &:last-child {
                     margin-bottom: 0;
                 }
 
+                p {
+                    margin-bottom: 5px;
+                }
+
                 ul, ol {
+                    margin-bottom: 5px;
                     padding: 0;
                 }
             }
         }
         ol {
+            padding: 30px;
+
             list-style-type: decimal;
+
+            background-color: #fff;
 
             li {
                 margin-left: 1.5em;
@@ -1290,6 +1303,9 @@
     
                 border: 1px solid $c-gray-mid-light;
             }
+            tbody tr:nth-child(2n - 1) td {
+                background-color: #f2f5f5;
+            }
     
             th {
                 vertical-align: middle;
@@ -1332,6 +1348,24 @@
                 }
             }
         }
+        blockquote {
+            margin-top: 20px;
+            margin-bottom: 20px;
+            padding: 15px 35px;
+
+            background-color: rgba($c-blue, .1);
+
+            p {
+                strong {
+                    color: $c-blue;
+                    font-size: 12px;
+                    margin-right: 15px;
+                    font-family: 'Poppins';
+                    text-transform: uppercase;
+                    letter-spacing: 1px;
+                }
+            }
+        }
 
         pre {
             position: relative;
@@ -1353,7 +1387,12 @@
 
         .docs-banner {
             position: relative;
-            display: inline-block;
+            display: flex;
+
+            flex-wrap: nowrap;
+
+            justify-content: center;
+            align-items: center;
 
             width: 100%;
 
@@ -1366,12 +1405,170 @@
             box-shadow: 15px 20px 25px rgba($c-blue-dark1, .025);
 
             h3 {
+                position: relative;
+                display: inline-block;
+
+                flex: 1;
+
+                margin-bottom: 0;
                 padding-top: 0;
             }
 
             .buttons-container {
-                margin-top: 20px;
+                position: relative;
+                display: inline-block;
+
+                flex: 0 0 200px;
+
+                margin-top: 0;
+                margin-left: 20px;
                 margin-bottom: 0;
+
+                .button {
+                    width: 100%;
+
+                    padding-right: 50px;
+                    padding-left: 20px;
+
+                    text-align: left;
+                }
+            }
+        }
+
+        .content-tabs {
+            .nav-tabs {
+                position: relative;
+                display: flex;
+
+                flex-wrap: wrap;
+
+                justify-items: flex-start;
+                align-items: flex-end;
+
+                margin-bottom: 0;
+                padding-right: 0;
+                padding-left: 0;
+                padding-bottom: 0;
+                
+                list-style: none;
+
+                background-color: transparent;
+
+                li {
+                    position: relative;
+                    display: inline-block;
+
+                    flex: 0;
+
+                    margin: 0;
+                    margin-right: 5px;
+
+                    background-color: rgba($c-blue, .05);
+
+                    a {
+                        position: relative;
+                        display: block;
+
+                        padding: 13px 15px;
+
+                        font-size: 12px;
+                        font-family: 'Poppins';
+                        font-weight: 500;
+                        text-transform: uppercase;
+                        letter-spacing: 1px;
+                        white-space: nowrap;
+                    }
+
+                    &.active {
+                        background-color: rgba(#fff, 1);
+
+                        a {
+                            padding: 15px 20px;
+
+                            font-size: 14px;
+                            font-weight: 700;
+                        }
+                    }
+                }
+            }
+
+            .tab-content {
+                position: relative;
+
+                background-color: #fff;
+
+                .tab-pane {
+                    position: relative;
+                    display: none;
+
+                    padding: 30px;
+
+                    &.active {
+                        display: block;
+                    }
+                }
+            }
+        }
+
+        .accordion {
+            margin: 20px 0;
+
+            background-color: #f7f7f7;
+            border: 1px solid #efefef;
+
+            input[name="accordion"] {
+                display: none;
+            }
+
+            label {
+                position: relative;
+                display: block;
+
+                padding: 15px;
+
+                color: $c-blue;
+                font-size: 14px;
+                font-family: 'Poppins';
+                font-weight: 700;
+                text-transform: uppercase;
+                letter-spacing: 1px;
+
+                &:before,
+                &:after {
+                    content: '';
+                    position: absolute;
+
+                    top: 22px;
+                    right: 20px;
+
+                    width: 11px;
+                    height: 1px;
+
+                    background-color: $c-blue;
+                }
+                &:after {
+                    @include transform(rotate(-90deg));
+                }
+            }
+
+            .accordion-content {
+                display: none;
+
+                padding: 15px;
+            }
+
+            &.active {
+                label {
+                    color: $c-gray;
+
+                    &:after {
+                        @include transform(rotate(0deg));
+                    }
+                }
+
+                .accordion-content {
+                    display: block;
+                }
             }
         }
     }
