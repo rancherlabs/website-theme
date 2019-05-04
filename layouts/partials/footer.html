@@ -38,7 +38,7 @@
                                         <a href="https://twitter.com/Rancher_Labs" target="_blank"><img src="/imgs/icon-twitter.svg"></a>
                                     </li>
                                     <li>
-                                        <a href="https://www.linkedin.com/groups/6977008/profile" target="_blank"><img src="/imgs/icon-linkedin.svg"></a>
+                                        <a href="https://www.linkedin.com/company/rancher" target="_blank"><img src="/imgs/icon-linkedin.svg"></a>
                                     </li>
                                     <li>
                                         <a href="https://www.facebook.com/rancherlabs/" target="_blank"><img src="/imgs/icon-facebook.svg"></a>
@@ -262,16 +262,18 @@ $(document).ready(function() {
                                 $(this).siblings().children(".submenu").siblings("a").removeClass("submenu-indicator-minus");
                                 $(this).removeClass("activate");
                             }
+
                             return false;
-                        }
-                        else{
+                        }else {
                             $(this).children(".submenu").delay(opts.hideDelay).slideUp(opts.speed);
                         }
+
                         if($(this).children(".submenu").siblings("a").hasClass("submenu-indicator-minus")){
                             $(this).children(".submenu").siblings("a").removeClass("submenu-indicator-minus");
                             $(this).removeClass("activate");
                         }
                     }
+
                     window.location.href = $(this).children("a").attr("href");
                 });
             },

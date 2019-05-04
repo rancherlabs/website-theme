@@ -1586,13 +1586,23 @@
 		box-sizing: border-box;
 
 		@media (max-width: 575.98px) {
-			padding: 45px 10%;
+			max-width: 100%;
+
+			padding: 45px $mobile-side-space;
 
 			background-color: transparent;
+
+			.slick-list {
+				overflow: visible;
+			}
 		}
 
 		.slider-messege-item {
 			outline: none;
+
+			@media (max-width: 575.98px) {
+				padding: 0 $mobile-side-space;
+			}
 		}
 
 		.quote-box {

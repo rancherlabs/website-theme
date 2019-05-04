@@ -25,6 +25,8 @@
                     <div class="logo">
                         <a href="/"><img class="logo-image" src="/imgs/rancher-logo-horiz-color.png"></a>
                     </div>
+
+                    <div class="mobile-search"><a href="#" class="search-open" data-launch-id="open-search"><img class="icon" src="/imgs/icon-search-mobile.svg"></a></div>
         
                     <div class="mobile-menu-opener">
                         <span></span>
@@ -35,8 +37,8 @@
 
                 <div class="nav-mobile-menus jquery-accordion-menu">
                     <ul class="mobile-menus-wrap">
-                        <li class="">
-                            <a href="/what-is-rancher/overview/">Why Rancher?</a>
+                        <li class="mobile-menu-item">
+                            <a class="mobile-menu" href="/what-is-rancher/overview/">Why Rancher?</a>
 
                             <ul class="submenu submenus-wrap">
                                 <li class=""><a href="/what-is-rancher/overview/">Why Rancher?</a></li>
@@ -44,27 +46,21 @@
                                 <li class=""><a href="/what-is-rancher/what-rancher-adds-to-kubernetes/">What Rancher Adds to Kubernetes?</a></li>
                             </ul>
                         </li>
-                        <li class="">
-                            <a href="/products/">Products</a>
+                        <li class="mobile-menu-item">
+                            <a class="mobile-menu" href="/products/">Products</a>
 
                             <ul class="submenu submenus-wrap">
+                                <li><a href="/products/">Overview</a></li>
+                                <li><a href="/products/rancher/">Rancher</a></li>
                                 <li><a href="/rancher-os/">RancherOS</a></li>
                                 <li><a href="http://k3s.io" target="_blank">k3s</a></li>
-                                <li><a href="http://submariner.io" target="_blank">Submariner</a></li>
                                 <li><a href="http://k3os.io" target="_blank">k3os</a></li>
+                                <li><a href="http://submariner.io" target="_blank">Submariner</a></li>
                                 <li><a href="/request-a-demo/">Request a demo</a></li>
-                                <li><a href="/products/rancher/">Overview</a></li>
-                                <li><a href="/products/rancher/supercharge-helm-via-the-application-catalog/">Supercharge Helm Via the Application Catalog</a></li>
-                                <li><a href="/products/rancher/take-control-of-the-api/">Take Control of the API</a></li>
-                                <li><a href="/products/rancher/rancher-puts-your-security-first/">Rancher Puts your security First</a></li>
-                                <li><a href="/products/rancher/control-kubernetes/">Control All of Kubernetes with an intuitive interface</a></li>
-                                <li><a href="/products/rancher/rancher-makes-clusters-useful/">Rancher Makes Clusters Immediately Useful</a></li>
-                                <li><a href="/products/rancher/multi-cluster-management/">Multi-Cluster Management</a></li>
-                                <li><a href="/products/rancher/easy-provisioning/">Easy Provisioning</a></li>
                             </ul>
                         </li>
-                        <li class="">
-                            <a href="/customers/">Customers</a>
+                        <li class="mobile-menu-item">
+                            <a class="mobile-menu" href="/customers/">Customers</a>
 
                             <ul class="submenu submenus-wrap">
                                 <li><a href="/customers/illumina/">Illuminia</a></li>
@@ -74,8 +70,8 @@
                                 <li><a href="/customers/">See All Customer Stories</a></li>
                             </ul>
                         </li>
-                        <li class="">
-                            <a href="/learn/">Community</a>
+                        <li class="mobile-menu-item">
+                            <a class="mobile-menu" href="/learn/">Community</a>
 
                             <ul class="submenu submenus-wrap">
                                 <li><a href="/online-meetups/">Online Meetups</a></li>
@@ -96,8 +92,8 @@
                                 <li><a href="/blog/">Blog</a></li>
                             </ul>
                         </li>
-                        <li class="">
-                            <a href="#">Company</a>
+                        <li class="mobile-menu-item">
+                            <a class="mobile-menu" href="#">Company</a>
 
                             <ul class="submenu submenus-wrap">
                                 <li><a href="/about/">About us</a></li>
@@ -107,6 +103,13 @@
                                 <li><a href="/contact/">Contact us</a></li>
                             </ul>
                         </li>
+
+                        <li class="mobile-menu-item option-menu"><a href="/docs/">Docs</a></li>
+                        <li class="mobile-menu-item option-menu"><a href="/support">Support</a></li>
+                        <li class="mobile-menu-item option-menu"><a href="/request-a-demo/">Request a demo</a></li>
+                        <li class="mobile-menu-item option-menu"><a href="/contact/">Contact</a></li>
+                        <li class="mobile-menu-item option-menu"><a href="/pricing/">Pricing</a></li>
+                        <li class="mobile-menu-item option-menu get-started"><a href="/quick-start/">Get started</a></li>
                     </ul>
                 </div>
             </div>
@@ -122,6 +125,8 @@
                             <li><a href="/contact/">Contact</a></li>
                             <li class="search"><a href="#" class="search-open" data-launch-id="open-search"><img class="icon" src="/imgs/icon-search.svg"></a></li>
                         </ul>
+
+                        <a class="get-started" href="/quick-start/">Get started</a>
                     </div>
 
                     <div class="header-primary-menus">
@@ -508,15 +513,6 @@
                                                         </a>
                                                         <a href="/videos-and-podcasts/">
                                                             <span>Videos & Podcasts</span>
-                                                            <svg class="icon right" enable-background="new 0 0 34 34" viewBox="0 0 34 34" xmlns="http://www.w3.org/2000/svg">
-                                                                <g class="svg-linear" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10">
-                                                                    <path d="m19.5 12 5 5-5 5"/>
-                                                                    <path d="m24.5 17h-15"/>
-                                                                </g>
-                                                            </svg>
-                                                        </a>
-                                                        <a href="/docs/">
-                                                            <span>Docs</span>
                                                             <svg class="icon right" enable-background="new 0 0 34 34" viewBox="0 0 34 34" xmlns="http://www.w3.org/2000/svg">
                                                                 <g class="svg-linear" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10">
                                                                     <path d="m19.5 12 5 5-5 5"/>
