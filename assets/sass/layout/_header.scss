@@ -188,7 +188,8 @@
     &.get-started {
       margin-left: 20px;
 
-      background-color: rgba($c-blue, 0.1);
+      background-color: rgba(#d9e8ed, 1);
+      box-shadow: 10px 15px 30px rgba($c-blue, .075);
 
       a {
         padding: 15px 40px;

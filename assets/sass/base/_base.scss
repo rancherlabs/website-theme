@@ -58,7 +58,10 @@ body {
 			width: 1px;
 			height: 100%;
 
-			background-color: $c-gray-base-light;
+      background-color: $c-gray-base-light;
+      
+      // remove lines.
+      display: none;
 		}
 		&:after {
 			right: $mobile-side-space;
@@ -80,7 +83,10 @@ body {
 		width: 1px;
 		height: 100%;
 
-		background-color: $c-gray-base-light;
+    background-color: $c-gray-base-light;
+    
+    // remove lines.
+    display: none;
 	}
 }
 

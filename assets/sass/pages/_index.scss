@@ -1,4 +1,124 @@
 .homepage-screen1 {
+	// background-size: auto 98%;
+	background-image: url('/imgs/screen1-background.png');
+	background-repeat: no-repeat;
+	background-position: center bottom;
+
+	.contents-container {
+		text-align: center;
+
+		.texts-container {
+			padding-top: 200px;
+			padding-bottom: 300px;
+
+			.title-label {
+				margin-bottom: 10px;
+			}
+
+			.buttons-container {
+				margin-top: 40px;
+
+				a {
+					margin-right: 15px;
+				}
+
+				.button {
+					min-width: 210px;
+				}
+				.btn-what_is_rancher {
+					color: #fff;
+
+					.round {
+						border-color: #fff;
+					}
+
+					.svg-face {
+						fill: #fff;
+					}
+				}
+				.btn-what_is_rancher:hover {
+					color: $c-sky-blue;
+				}
+				.btn-what_is_rancher:hover .round {
+					border-color: $c-sky-blue;
+				}
+				.btn-what_is_rancher:hover .svg-face {
+					fill: $c-sky-blue;
+				}
+			}
+		}
+	}
+
+	@media (max-width: 575.98px) {
+		background-size: auto 80%;
+
+		.contents-container {
+			.texts-container {
+				padding-top: 120px;
+				padding-bottom: 150px;
+
+				.description-label {
+					padding-right: 10%;
+					padding-left: 10%;
+				}
+
+				.buttons-container {
+					margin-top: 10px;
+
+					a {
+						margin: 0;
+					}
+
+					.button {
+						width: auto;
+						min-width: 220px;
+
+						margin-top: 10px;
+						margin-right: 10px;
+						margin-left: 10px;
+
+						font-size: 14px;
+					}
+				}
+			}
+		}
+	}
+	@media (min-width: 576px) and (max-width: 767.98px) {
+		background-size: 150% auto;
+
+		.contents-container {
+			.texts-container {
+				padding-top: 150px;
+				padding-bottom: 200px;
+
+				.description-label {
+					padding-right: 10%;
+					padding-left: 10%;
+				}
+
+				.buttons-container {
+					margin-top: 20px;
+				}
+			}
+		}
+	}
+	@media (min-width: 768px) and (max-width: 991.98px) {
+		background-size: 150% auto;
+
+		.contents-container {
+			.texts-container {
+				padding-top: 150px;
+				padding-bottom: 200px;
+				padding-right: 10%;
+				padding-left: 10%;
+			}
+		}
+	}
+	@media (min-width: 992px) and (max-width: 1199.98px) {
+	}
+}
+
+.homepage-screen1a {
 	.set-ground {
 		z-index: -1;
 	}

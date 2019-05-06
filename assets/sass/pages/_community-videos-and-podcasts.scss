@@ -966,8 +966,30 @@
 
       background-color: $c-gray-base-light;
     }
+    .slide-wrap {
+      padding-right: 0;
+    }
+    .slide-item {
+      margin-right: 15px;
+    }
     .slider-pager {
       margin-top: 30px;
+    }
+
+    .thumbnail-item .thumbnail-description {
+      right: 0;
+      bottom: 0;
+      left: 0;
+
+      padding: 30px 25px;
+
+      .description-label {
+        font-size: 18px;
+
+        &:last-child {
+          margin-bottom: 5px;
+        }
+      }
     }
   }
   @media (min-width: 576px) and (max-width: 767.98px) {
