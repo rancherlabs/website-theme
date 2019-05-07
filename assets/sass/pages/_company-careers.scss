@@ -278,9 +278,7 @@
     .image-container .image-wrap {
       overflow: hidden;
 
-      max-height: 340px;
-
-      margin-top: -40px;
+      max-height: 500px;
     }
     .image-container .image-wrap .image {
       position: relative;
@@ -552,7 +550,7 @@
       .image {
         top: 50%;
 
-        @include transform(translateT(-50%));
+        @include transform(translateY(-50%));
       }
     }
     .slider-options {

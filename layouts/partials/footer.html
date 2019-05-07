@@ -138,21 +138,29 @@
             </div>
 
             <div class="grid-container footer-copyright">
-                <div class="row align-items-center grid-row max-sized">
-                    <div class="col text">
+                <div class="row align-items-center grid-row max-sized footer-copyright-wrap">
+                    <div class="
+                        col-xl-6 
+                        col-lg-6 
+                        col-md-6 
+                        col-sm-12 
+                        col-xs-12 
+                        col-12 
+                        text">
                         © Copyright {{ now.Format "2006" }} Rancher. All Rights Reserved.
                     </div>
-                    <div class="col hidden-xs-down sub-menus">
+                    <div class="
+                        col-xl-6 
+                        col-lg-6 
+                        col-md-6 
+                        col-sm-12 
+                        col-xs-12 
+                        col-12 
+                        sub-menus">
                         <ul>
-                            <li>
-                                <a href="/privacy">Privacy Policy</a>
-                            </li>
-                            <li>
-                                <a href="/eula">EULA</a>
-                            </li>
-                            <li>
-                                <a href="/support-maintenance-terms">Terms of Service</a>
-                            </li>
+                            <li><a href="/privacy/">Privacy Policy</a></li>
+                            <li><a href="/eula/">EULA</a></li>
+                            <li><a href="/support-maintenance-terms/">Terms of Service</a></li>
                         </ul>
                     </div>
                 </div>
@@ -206,11 +214,13 @@ function scrollPage(hash) {
         depth = depth + objt_mt
     }
 
-    $('html').animate({
-        'scrollTop': objt.offset().top - depth
-    }, 400);
+    setTimeout(function() {
+        $('html').animate({
+            'scrollTop': objt.offset().top - depth
+        }, 400);
+    }, 100);
 
-    console.debug('scroll to :', objt.offset().top - depth);
+    // console.debug('scroll to :', objt.offset().top - depth);
 }
 
 

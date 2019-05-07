@@ -1,15 +1,17 @@
 .company-contact-us-screen1 {
-    overflow: hidden;
+    z-index: 1;
+    position: relative;
 
     background-color: $c-gray-base-light;
 
     .decoration {
-        position: relative;
+        position: absolute;
 
-        width: 100%;
+        bottom: 0;
 
-        padding-top: 250px;
-        padding-bottom: 140px;
+        width: 150%;
+
+        margin-left: -62%;
 
         line-height: 0;
 
@@ -32,120 +34,14 @@
         }
     }
 
-    @media (max-width: 575.98px) {
-        margin-top: 135px;
-
-        .decoration {
-            padding-top: 80px;
-            padding-bottom: 360px;
-
-            .cloud {
-                position: absolute;
-
-                top: 5%;
-                left: 50%;
-
-                width: 150%;
-
-                @include transform(translateX(-50%));
-            }
-
-            .items {
-                position: relative;
-
-                width: 90%;
-                height: auto;
-                margin: 0 5%;
-            }
-        }
-    }
-    @media (min-width: 576px) and (max-width: 767.98px) {
-        .texts-container {
-            padding-top: 180px;
-            padding-bottom: 110px;
-            padding-bottom: 400px;
-            padding-left: 5%;
-            padding-right: 5%;
-      
-            .texts-wrap {
-                margin-top: 0;
-                margin-bottom: 0;
-        
-                .title-label {
-                    margin-bottom: 10px;
-        
-                    font-size: 2em;
-                }
-        
-                .description-label {
-                    font-size: .9em;
-                }
-            }
-        }
-    }
-    @media (min-width: 768px) and (max-width: 991.98px) {
-        .texts-container {
-            padding-top: 180px;
-            padding-bottom: 110px;
-            padding-bottom: 300px;
-            padding-left: 5%;
-            padding-right: 5%;
-      
-            .texts-wrap {
-                margin-top: 0;
-                margin-bottom: 0;
-        
-                .title-label {
-                    margin-bottom: 10px;
-        
-                    font-size: 2.4em;
-                }
-        
-                .description-label {
-                    font-size: 1em;
-                    line-height: 1.5;
-                }
-            }
-        }
-    }
-    @media (min-width: 992px) and (max-width: 1199.98px) {
-        .texts-container {
-            padding-top: 180px;
-            padding-bottom: 110px;
-            padding-bottom: 300px;
-            padding-left: 5%;
-            padding-right: 5%;
-        
-            .texts-wrap {
-                margin-top: 0;
-                margin-bottom: 0;
-        
-                .title-label {
-                    margin-bottom: 10px;
-            
-                    font-size: 2.8em;
-                }
-        
-                .description-label {
-                    font-size: 1.25em;
-                    line-height: 1.6;
-                }
-            }
-        }
-    }
-}
-
-.company-contact-us-screen2 {
-    .contents-container {
-        padding-bottom: 200px;
-    }
-
     .form-container {
-        margin-top: -520px;
+        z-index: 1;
+
+        margin-top: 130px;
+        margin-bottom: -800px;
         padding-right: 0;
         padding-left: 0;
     }
-
     .form-wrap {
         padding: 90px 76px;
 
@@ -284,6 +180,11 @@
             color: white;
             line-height: 1.4;
         }
+        .legal-consent-container {
+            .hs-richtext p {
+                font-size: 15px;
+            }
+        }
         .hs-richtext a {
             position: relative;
 
@@ -339,6 +240,187 @@
         .submitted-message {
             color: white;
         }
+    }
+
+    @media (max-width: 575.98px) {
+        .form-container {
+            margin-bottom: 0;
+            padding-right: $mobile-side-space;
+            padding-left: $mobile-side-space;
+        }
+        .form-wrap {
+            max-width: 500px;
+      
+            margin-right: auto;
+            margin-left: auto;
+            padding: 40px 25px;
+      
+            .title-label {
+                margin-bottom: 10px;
+            }
+      
+            fieldset.form-columns-1 .input,
+            fieldset.form-columns-2 .input {
+                margin-right: 0;
+            }
+            fieldset.form-columns-1 .input input,
+            fieldset.form-columns-2 .input input {
+                width: 100%;
+            }
+            .form-columns-1 .hs-form-field .hs-input,
+            .form-columns-2 .hs-form-field .hs-input {
+                width: 100% !important;
+            }
+      
+            .hs-richtext {
+                margin-top: 20px;
+                margin-bottom: 10px;
+        
+                font-size: .9em;
+                font-family: 'Poppins';
+                line-height: 1.6;
+            }
+      
+            .hs-submit {
+                margin-top: 25px;
+                text-align: left;
+        
+                input[type="submit"] {
+                    min-width: 0;
+                    max-width: 100%;
+                    height: 40px;
+                    
+                    padding: 0 15px;
+        
+                    font-size: 14px;
+                    font-weight: 800;
+                }
+            }
+        }
+
+        .decoration {
+            position: relative;
+
+            width: 100%;
+
+            margin-left: 0;
+
+            .cloud {
+                width: 100%;
+            }
+
+            .items {
+                
+            }
+        }
+    }
+    @media (min-width: 576px) and (max-width: 767.98px) {
+        .form-container {
+            margin-bottom: 0;
+            padding-right: $mobile-side-space;
+            padding-left: $mobile-side-space;
+        }
+        .form-wrap {
+            max-width: 500px;
+      
+            margin-right: auto;
+            margin-left: auto;
+            padding: 40px 25px;
+      
+            .title-label {
+                margin-bottom: 10px;
+            }
+      
+            fieldset.form-columns-1 .input,
+            fieldset.form-columns-2 .input {
+                margin-right: 0;
+            }
+            fieldset.form-columns-1 .input input,
+            fieldset.form-columns-2 .input input {
+                width: 100%;
+            }
+            .form-columns-1 .hs-form-field .hs-input,
+            .form-columns-2 .hs-form-field .hs-input {
+                width: 100% !important;
+            }
+      
+            .hs-richtext {
+                margin-top: 20px;
+                margin-bottom: 10px;
+        
+                font-size: .9em;
+                font-family: 'Poppins';
+                line-height: 1.6;
+            }
+      
+            .hs-submit {
+                margin-top: 25px;
+                text-align: left;
+        
+                input[type="submit"] {
+                    min-width: 0;
+                    max-width: 100%;
+                    height: 40px;
+                    
+                    padding: 0 15px;
+        
+                    font-size: 14px;
+                    font-weight: 800;
+                }
+            }
+        }
+
+        .decoration {
+            position: relative;
+
+            width: 100%;
+
+            margin-left: 0;
+
+            .cloud {
+                width: 100%;
+            }
+
+            .items {
+
+            }
+        }
+    }
+    @media (min-width: 768px) and (max-width: 991.98px) {
+        .form-container {
+            margin-bottom: -700px;
+        }
+        .form-wrap {
+            padding: 60px 30px;
+        }
+
+        .decoration {
+            padding-bottom: 15%;
+
+            .cloud {
+                width: 140%;
+
+                margin-left: -40%;
+            }
+
+            .items {
+                width: 62%;
+            }
+        }
+    }
+    @media (min-width: 992px) and (max-width: 1199.98px) {
+        .form-wrap {
+            padding: 70px 40px;
+        }
+    }
+}
+
+.company-contact-us-screen2 {
+    z-index: 0;
+    position: relative;
+
+    .contents-container {
+        padding-bottom: 200px;
     }
 
     .texts-container {
@@ -511,61 +593,6 @@
         .contents-container {
             padding-bottom: 100px;
         }
-    
-        .form-container {
-            margin-top: -40px;
-            padding-right: $mobile-side-space;
-            padding-left: $mobile-side-space;
-        }
-        .form-wrap {
-            max-width: 500px;
-      
-            margin-right: auto;
-            margin-left: auto;
-            padding: 40px 25px;
-      
-            .title-label {
-                margin-bottom: 10px;
-            }
-      
-            fieldset.form-columns-1 .input,
-            fieldset.form-columns-2 .input {
-                margin-right: 0;
-            }
-            fieldset.form-columns-1 .input input,
-            fieldset.form-columns-2 .input input {
-                width: 100%;
-            }
-            .form-columns-1 .hs-form-field .hs-input,
-            .form-columns-2 .hs-form-field .hs-input {
-                width: 100% !important;
-            }
-      
-            .hs-richtext {
-                margin-top: 20px;
-                margin-bottom: 10px;
-        
-                font-size: .9em;
-                font-family: 'Poppins';
-                line-height: 1.6;
-            }
-      
-            .hs-submit {
-                margin-top: 25px;
-                text-align: left;
-        
-                input[type="submit"] {
-                    min-width: 0;
-                    max-width: 100%;
-                    height: 40px;
-                    
-                    padding: 0 15px;
-        
-                    font-size: 14px;
-                    font-weight: 800;
-                }
-            }
-        }
 
         .texts-container {
             padding-top: 60px;
@@ -582,13 +609,6 @@
             padding-bottom: 120px;
         }
     
-        .form-container {
-            margin-top: -50%;
-        }
-        .form-wrap {
-            padding: 60px 30px;
-        }
-    
         .texts-container {
             padding-top: 60px;
             padding-right: 5%;
@@ -602,13 +622,6 @@
     @media (min-width: 992px) and (max-width: 1199.98px) {
         .contents-container {
             padding-bottom: 150px;
-        }
-    
-        .form-container {
-            margin-top: -40%;
-        }
-        .form-wrap {
-            padding: 70px 40px;
         }
     }
 }

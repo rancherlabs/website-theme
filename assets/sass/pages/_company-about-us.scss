@@ -637,6 +637,10 @@
 
             .location-item {
                 margin-bottom: 30px;
+
+                .address-label br {
+                    display: none;
+                }
             }
 
             .location-item .label {
@@ -697,7 +701,7 @@
             }
 
             .texts-wrap {
-                padding: 40px 50px;
+                padding: 40px 25px;
 
                 .title-label {
                     font-size: 20px;
@@ -712,9 +716,12 @@
                     width: auto;
                     max-width: 100%;
                     min-width: 0;
-                    height: 40px;
+                    height: auto;
 
-                    padding: 0 20px;
+                    padding: 12px 20px;
+
+                    white-space: normal;
+                    line-height: 1.2;
                 }
             }
         }

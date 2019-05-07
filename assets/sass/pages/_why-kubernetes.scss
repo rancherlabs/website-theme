@@ -418,13 +418,17 @@
         padding-bottom: 50px;
       }
     }
+
+    @media (max-width: 575.98px) {
+      padding-top: 0;
+    }
   }
 
   .article-item {
     padding-top: 100px;
 
     @media (max-width: 575.98px) {
-      padding-top: 0;
+      padding-top: 50px;
     }
     @media (min-width: 576px) and (max-width: 767.98px) {
       padding-top: 30px;

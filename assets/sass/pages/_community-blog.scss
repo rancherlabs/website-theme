@@ -627,15 +627,6 @@
 
       flex: 1;
 
-      color: #fff;
-      font-family: 'Poppins';
-      font-size: 12px;
-      font-weight: 800;
-      text-transform: uppercase;
-      letter-spacing: .5px;
-      line-height: 50px;
-      text-align: center;
-
       background-color: $c-gray-mid-light;
       border-right: 1px solid $c-gray-light;
 
@@ -646,7 +637,17 @@
       }
 
       a {
+        position: relative;
+        display: block;
+
         color: #fff;
+        font-family: 'Poppins';
+        font-size: 12px;
+        font-weight: 800;
+        text-transform: uppercase;
+        letter-spacing: .5px;
+        line-height: 50px;
+        text-align: center;
       }
 
       &:hover,

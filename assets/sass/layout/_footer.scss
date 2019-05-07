@@ -314,12 +314,6 @@
   .text {
     color: rgba(#fff, 0.5);
     font-size: 12px;
-
-    @media (max-width: 575.98px) {
-      padding: 20px 10px;
-
-      text-align: center;
-    }
   }
 
   ul {
@@ -356,5 +350,60 @@
     &:hover {
       color: rgba(#fff, 1);
     }
+  }
+
+  @media (max-width: 575.98px) {
+    .text {
+      padding: 25px 10px 10px;
+
+      text-align: center;
+    }
+    .sub-menus ul {
+      padding-bottom: 5px;
+
+      text-align: center;
+
+      li {
+        margin-left: 15px;
+
+        line-height: 1;
+
+        a {
+          line-height: 45px;
+        }
+      }
+
+      li:first-child {
+        margin-left: 0;
+      }
+    }
+  }
+  @media (min-width: 576px) and (max-width: 767.98px) {
+    .text {
+      padding: 25px 10px 10px;
+
+      text-align: center;
+    }
+    .sub-menus ul {
+      padding-bottom: 5px;
+
+      text-align: center;
+
+      li {
+        line-height: 1;
+
+        a {
+          line-height: 45px;
+        }
+      }
+
+      li:first-child {
+        margin-left: 0;
+      }
+    }
+  }
+  @media (min-width: 768px) and (max-width: 991.98px) {
+  }
+  @media (min-width: 992px) and (max-width: 1199.98px) {
   }
 }
