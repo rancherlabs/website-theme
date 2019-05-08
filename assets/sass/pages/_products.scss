@@ -272,20 +272,20 @@
     }
 
     .item-container {
-        margin-top: 100px;
+        padding-top: 100px;
         padding-bottom: 50px;
 
         @media (max-width: 575.98px) {
-            margin-top: 30px;
+            padding-top: 30px;
         }
         @media (min-width: 576px) and (max-width: 767.98px) {
-            margin-top: 40px;
+            padding-top: 40px;
         }
         @media (min-width: 768px) and (max-width: 991.98px) {
-            margin-top: 60px;
+            padding-top: 60px;
         }
         @media (min-width: 992px) and (max-width: 1199.98px) {
-            margin-top: 80px;
+            padding-top: 80px;
         }
 
         &:last-child {

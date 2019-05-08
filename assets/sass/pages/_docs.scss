@@ -1180,7 +1180,7 @@
 
         h1, h2, h3, h4, h5 {
             &[id] {
-                padding-top: 80px;
+                padding-top: 40px;
             }
         }
 
@@ -1216,10 +1216,16 @@
         ol, ul {
             margin-bottom: 30px;
 
+            &:last-child {
+                margin-bottom: 0;
+            }
+
             li {
                 margin-bottom: 5px;
 
-                line-height: 1.2;
+                font-size: 15px;
+                font-weight: 300;
+                line-height: 1.4;
 
                 &:last-child {
                     margin-bottom: 0;
@@ -1236,7 +1242,7 @@
             }
         }
         ol {
-            padding: 30px;
+            padding: 20px 30px;
 
             list-style-type: decimal;
 
