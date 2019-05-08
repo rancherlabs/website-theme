@@ -777,12 +777,12 @@
                 letter-spacing: 1px;
                 text-align: right;
 
-                a {
+                div {
                     margin-left: 30px;
-
+                    display: inline-block;
                     color: $c-green;
                 }
-                a:first-child {
+                div:first-child {
                     margin-left: 0;
                 }
             }
