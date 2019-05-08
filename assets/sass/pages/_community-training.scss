@@ -812,6 +812,10 @@
         padding-bottom: 250px;
     }
 
+    .buttons-container {
+        width: 230px;
+    }
+
     .past-trainings-container {
         padding: 100px 0;
     }
@@ -829,6 +833,10 @@
             margin-bottom: 40px;
             padding-right: 40px;
             box-sizing: border-box;
+
+            &.hidden {
+                display: none;
+            }
 
             &:last-child {
                 margin-bottom: 0;
