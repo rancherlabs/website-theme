@@ -2091,14 +2091,82 @@
 
     .label-container {
       .head-label {
-        padding-top: 50px;
+        padding-top: 40px;
         padding-right: $mobile-side-space;
-        padding-bottom: 20px;
+        padding-bottom: 40px;
         padding-left: $mobile-side-space;
 
-        line-height: 2;
+        line-height: 1;
 
         background-color: $c-blue-dark1;
+
+        .label {
+          line-height: 1.2;
+        }
+      }
+
+      .head-button {
+        position: relative;
+
+        padding-right: $mobile-side-space;
+
+        background-color: $c-blue-dark1;
+
+        .decoration {
+          display: none
+        }
+
+        .buttons-container {
+          position: relative;
+
+          top: 50%;
+
+          width: 100%;
+
+          @include transform(translateY(-50%));
+
+          .button {
+            margin: auto 0;
+            padding: 12px 20px;
+            
+            width: 100%;
+            min-width: 100%;
+            height: auto;
+            
+            font-size: 14px;
+
+            white-space: normal;
+          }
+        }
+      }
+    }
+
+    .list-container.has-arrow .list-item:last-child {
+      padding-bottom: 0;
+    }
+    .list-container.has-arrow .list-item .title-label {
+      opacity: 1;
+    }
+    .list-container.has-arrow .list-item .description-label {
+      margin-bottom: 0;
+
+      opacity: .75;
+    }
+
+    .active-container {
+      padding-top: 0;
+      padding-bottom: 50px;
+      padding-right: $mobile-side-space;
+    }
+    .active-image-wrap {
+      padding: 40px 56px;
+
+      .active-item {
+        opacity: 1;
+
+        .title-label {
+          font-size: 16px;
+        }
       }
     }
 
@@ -2110,16 +2178,224 @@
     }
   }
   @media (min-width: 576px) and (max-width: 767.98px) {
+    .label-container {
+      .head-label {
+        padding-top: 50px;
+        padding-bottom: 50px;
+        padding-right: $mobile-side-space;
+        padding-left: $mobile-side-space;
+
+        line-height: 1;
+
+        .label {
+          line-height: 1.2;
+        }
+      }
+
+      .head-button {
+        position: relative;
+
+        padding-right: $mobile-side-space;
+
+        .decoration {
+          width: 200px;
+        }
+
+        .buttons-container {
+          position: relative;
+
+          top: 50%;
+
+          @include transform(translateY(-50%));
+
+          .button {
+            margin: auto 0;
+          }
+        }
+      }
+    }
+
+    .active-container {
+      padding-top: 50px;
+      padding-bottom: 50px;
+      padding-right: $mobile-side-space;
+    }
+    .active-image-wrap {
+      padding: 40px 56px;
+
+      .active-item {
+        &.item-devops,
+        &.item-central_it,
+        &.item-infrastructure {
+          flex: 0 0 100%;
+          max-width: 100%;
+        }
+
+        &.item-central_it {
+          order: 1;
+
+          text-align: center;
+        }
+        &.item-central_it .title-label {
+          position: relative;
+          display: block;
+
+          top: 0;
+          left: 0;
+
+          margin-bottom: 10px;
+          margin-left: 0;
+
+          text-align: center;
+
+          @include transform(translate(0, 0) rotate(0));
+        }
+        &.item-central_it .active-image {
+          max-width: 180px;
+        }
+
+        &.item-devops {
+          order: 2;
+
+          text-align: center;
+        }
+        &.item-devops .title-label {
+          position: relative;
+          display: block;
+
+          top: 0;
+          left: 0;
+
+          margin-top: 20px;
+          margin-bottom: 10px;
+          margin-left: 0;
+
+          text-align: center;
+
+          @include transform(translate(0, 0) rotate(0));
+        }
+        &.item-devops .active-image {
+          max-width: 180px;
+        }
+
+        &.item-infrastructure {
+          order: 3;
+
+          margin-top: 20px;
+        }
+        &.item-infrastructure .title-label {
+        }
+
+        .title-label {
+          font-size: 20px;
+        }
+      }
+    }
+
+    .texts-container {
+      padding-top: 50px;
+      padding-bottom: 50px;
+      padding-right: $mobile-side-space;
+      padding-left: $mobile-side-space;
+    }
   }
   @media (min-width: 768px) and (max-width: 991.98px) {
+    .label-container {
+      .head-label {
+        padding-top: 50px;
+        padding-bottom: 50px;
+        padding-right: $mobile-side-space;
+        padding-left: $mobile-side-space;
+
+        line-height: 1;
+
+        .label {
+          line-height: 1.2;
+        }
+      }
+
+      .head-button {
+        position: relative;
+
+        padding-right: $mobile-side-space;
+
+        .decoration {
+          width: 200px;
+        }
+
+        .buttons-container {
+          position: relative;
+
+          top: 50%;
+
+          @include transform(translateY(-50%));
+
+          .button {
+            margin: auto 0;
+          }
+        }
+      }
+    }
+
+    .active-container {
+      padding-top: 50px;
+      padding-bottom: 50px;
+      padding-right: $mobile-side-space;
+    }
+    .active-image-wrap {
+      padding: 40px 56px;
+
+      .active-item .title-label {
+        font-size: 20px;
+      }
+    }
+    .texts-container {
+      padding-top: 50px;
+      padding-bottom: 50px;
+      padding-right: $mobile-side-space;
+      padding-left: $mobile-side-space;
+    }
   }
   @media (min-width: 992px) and (max-width: 1199.98px) {
     .label-container {
       .head-label {
+        padding-top: 50px;
+        padding-bottom: 50px;
+        padding-right: $mobile-side-space;
         padding-left: $mobile-side-space;
 
-        .label {}
+        line-height: 1;
+
+        .label {
+          line-height: 1.2;
+        }
       }
+
+      .head-button {
+        position: relative;
+
+        padding-right: $mobile-side-space;
+
+        .decoration {
+          width: 200px;
+        }
+
+        .buttons-container {
+          position: relative;
+
+          top: 50%;
+
+          @include transform(translateY(-50%));
+
+          .button {
+            margin: auto 0;
+          }
+        }
+      }
+    }
+
+    .active-container {
+      padding-right: $mobile-side-space;
     }
     .texts-container {
       padding-right: $mobile-side-space;
