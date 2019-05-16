@@ -1511,7 +1511,25 @@
         }
 
         &.hs-country label {
-          display: none;
+        }
+        .hs-error-msgs.inputs-list {
+          position: relative;
+
+          margin-bottom: 0;
+          padding: 10px;
+          padding-bottom: 0;
+
+          transform: none;
+
+          li {
+            margin-left: 5px;
+
+            font-size: 1em;
+
+            &:last-child {
+              margin-bottom: 0;
+            }
+          }
         }
 
         .select-box {
