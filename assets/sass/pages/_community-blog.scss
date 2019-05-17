@@ -1434,7 +1434,9 @@
     }
 
     .hbspt-form {
-      padding: 40px;
+      max-width: 500px;
+
+      padding: 60px;
 
       background-color: $c-blue-dark1;
 
