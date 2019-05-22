@@ -1,0 +1,38 @@
+// Font list.
+$font-set: "Roboto", "Poppins", sans-serif;
+
+// assets.
+$article-thumbnail-width: 36px;
+$article-thumbnail-space: 20px;
+$mobile-side-space: 15px;
+$mobile-inner-space: 10px;
+$mobile-side-space-full: 25px;
+
+// level.
+$level-navigator: 10000;
+
+// white space.
+$default-space: 1em;
+
+// animate time.
+$animate-time-default: 0.6s;
+$animate-cubic-in-out: cubic-bezier(0.75, 0.17, 0.47, 0.91);
+
+// type weight.
+$type-weight--light: light;
+$type-weight--semi-light: 300;
+$type-weight--default: normal;
+$type-weight--bold: bolder;
+
+// Navigator size.
+$global-nav-height: 100px/2;
+$global-uc-height: 40px;
+
+// border radius r.
+$border-radius-default: 8px;
+
+// language selector height.
+$language-selector-height: 36px;
+
+// button active size
+$button--active-size: 4px;

@@ -1,0 +1,56 @@
+{{ define "hero" }}
+<section class="hero-type4">
+    <div class="grid-container">
+        <div class="row set-ground">
+            <div class="
+                col-xl-6 offset-xl-6 
+                col-lg-6 offset-lg-6 
+                col-md-6 offset-md-6 
+                col-sm-6 offset-sm-6 
+                col-12 offset-0
+                ">
+                <div class="decoration-container">
+                    <div class="rancher-rise">
+                        <img src="/imgs/rancher-logo-only-color.svg">
+                    </div>
+                    <img class="ground-lower" src="/imgs/rancher-difference/screen1-background-ground-lower.svg">
+                    <img class="ground-upper" src="/imgs/rancher-difference/screen1-background-ground-upper.svg">
+                    <img class="cloud floating" src="/imgs/icon-cloud-white.svg">
+                </div>
+            </div>
+        </div>
+
+        <div class="row max-sized">
+            <div class="
+                col-xl-7 offset-xl-0 
+                col-lg-7 offset-lg-0 
+                col-md-9 offset-md-0 
+                col-sm-10 offset-sm-0 
+                col-12 
+                texts-container">
+                <div class="texts-wrap">
+                    {{ with .Title }}
+                    <h1 class="title-label">
+                    {{ . }}
+                    </h1>
+                    {{ end }}
+
+                    {{ with .Params.description }}
+                    <h4 class="description-label">
+                    {{ . }}
+                    </h4>
+                    {{ end }}
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{{ end }}
+
+{{ define "main" }}
+
+
+  {{ .Content }}
+{{ end }}
+
+

@@ -1,0 +1,37 @@
+{{ define "hero" }}
+    <section class="hero-type1">
+        <div class="grid-container">
+            <div class="row">
+                <div class="col-xl-12 col-12 texts-container">
+                    <div class="decoration cloud-big">
+                        <img class="image" src="/imgs/why-rancher/decoration-cloud-big-white.svg">
+                    </div>
+
+                    <div class="texts-wrap">
+                        {{ with .Title }}
+                            <h1 class="title-label">{{ . }}</h1>
+                        {{end}}
+
+                        {{ with .Params.description }}
+                        <h4 class="description-label">
+                            {{ . }}
+                        </h4>
+                        {{end}}
+                    </div>
+
+                    <div class="decoration rancher-ground">
+                        <img class="ground" src="/imgs/decoration-rancher-ground.svg">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+{{ end }}
+
+{{ define "main" }}
+
+  {{ .Content }}
+
+{{ end }}
+
+

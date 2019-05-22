@@ -1,0 +1,748 @@
+.what-rancher-adds-to-kubernetes-note-item {
+    position: relative;
+
+    .background-white-side-right {
+        &:before {
+            margin-left: 0;
+        }
+    }
+
+    .content-container {
+        position: relative;
+    }
+    .texts-container {
+        display: flex;
+
+        flex-wrap: wrap;
+
+        // margin-top: 10px;
+        padding: 50px 40px;
+
+        .icon-container {
+            position: relative;
+
+            flex: 0 0 80px;
+
+            .icon {
+                position: relative;
+
+                width: 50%;
+                height: auto;
+            }
+        }
+    }
+    .texts-wrap {
+        position: relative;
+
+        flex: 1;
+
+        .description-label {
+            margin-bottom: 0;
+
+            font-size: 20px;
+            font-family: 'Poppins';
+            font-weight: 400;
+            line-height: 1.5;
+        }
+
+        .buttons-container {
+            margin-top: 10px;
+        }
+    }
+
+    &.floating {
+        .content-container {
+            position: absolute;
+
+            bottom: 0;
+
+            width: 100%;
+        }
+    }
+
+    @media (max-width: 575.98px) {
+        &.floating {
+            .content-container {
+                position: relative;
+
+                width: calc(100% - 32px);
+
+                margin-left: 16px;
+            }
+        }
+
+        .texts-container {
+            margin-top: -40px;
+            padding: 30px;
+
+            // background-color: transparent;
+
+            &:before {
+                display: none;
+            }
+
+            .icon-container {
+                flex: 0 0 40px;
+            }
+
+            .description-label {
+                margin-top: -5px;
+
+                font-size: 16px;
+                line-height: 1.5;
+            }
+
+            .buttons-container {
+                margin-top: 20px;
+
+                text-align: left;
+            }
+            .button {
+                margin-top: 0;
+
+                width: auto;
+                height: auto;
+
+                font-size: 14px;
+            }
+        }
+    }
+    @media (min-width: 576px) and (max-width: 767.98px) {
+        &.floating .content-container {
+            position: relative;
+
+            margin-top: -40px;
+        }
+        .texts-container {
+            padding: 40px 30px;
+            padding-bottom: 0;
+
+            &:before,
+            &:after {
+                display: none;
+            }
+
+            .icon-container {
+                flex: 0 0 60px;
+            }
+
+            .texts-wrap {
+                flex: 0 0 calc(100% - 60px);
+            }
+        }
+    }
+    @media (min-width: 768px) and (max-width: 991.98px) {
+        .texts-container {
+            padding: 35px 25px;
+
+            .icon-container {
+                flex: 0 0 60px;
+            }
+
+            .texts-wrap {
+                flex: 0 0 calc(100% - 60px);
+            }
+        }
+    }
+    @media (min-width: 992px) and (max-width: 1199.98px) {
+        .texts-container {
+            padding: 40px 30px;
+            
+            .icon-container {
+                flex: 0 0 70px;
+            }
+            
+            .texts-wrap {
+                flex: 0 0 calc(100% - 70px);
+            }
+        }
+    }
+}
+
+.what-rancher-adds-to-kubernetes-screen2 {
+    .contents-container {
+        padding-top: 150px;
+        padding-bottom: 150px;
+        padding-right: 0;
+        padding-left: 0;
+    }
+
+    .cards-container {
+        
+    }
+
+    .card-container {
+        .card-wrap {
+            position: relative;
+            overflow: hidden;
+
+            width: 100%;
+            height: 100%;
+
+            padding: 30px;
+
+            background-color: #fff;
+            box-shadow: 20px 25px 40px rgba($c-blue-dark1, .15);
+            border-radius: 10px;
+        }
+
+        .image-container {
+            position: relative;
+            display: inline-block;
+
+            width: 100%;
+
+            text-align: center;
+
+            .image {
+                position: relative;
+                display: inline-block;
+
+                width: 100%;
+                max-width: 240px;
+                height: auto;
+
+                margin-right: auto;
+                margin-left: auto;
+            }
+        }
+
+        .texts-container .texts-wrap {
+            text-align: center;
+
+            .description-label {
+                font-size: 22px;
+                font-family: 'Poppins';
+                font-weight: 300;
+                line-height: 1.455;
+            }
+        }
+    }
+
+    @media (max-width: 575.98px) {
+        .contents-container {
+            padding-top: 50px;
+            padding-bottom: 50px;
+            padding-right: $mobile-side-space;
+            padding-left: $mobile-side-space;
+        }
+
+        .card-container {
+            margin-bottom: 20px;
+        }
+        .card-container .card-wrap {
+            padding: 20px;
+        }
+        .card-container .texts-container .texts-wrap .description-label {
+            font-size: 16px;
+
+            br {
+                display: none;
+            }
+        }
+        .card-container .image-container .image {
+            max-width: 150px;
+        }
+    }
+    @media (min-width: 576px) and (max-width: 767.98px) {
+        .contents-container {
+            padding-top: 80px;
+            padding-bottom: 80px;
+            padding-right: $mobile-side-space;
+            padding-left: $mobile-side-space;
+        }
+
+        .card-container .card-wrap {
+            padding: 25px;
+        }
+        .card-container .texts-container .texts-wrap .description-label {
+            font-size: 18px;
+
+            br {
+                display: none;
+            }
+        }
+    }
+    @media (min-width: 768px) and (max-width: 991.98px) {
+        .contents-container {
+            padding-top: 100px;
+            padding-bottom: 100px;
+            padding-right: $mobile-side-space;
+            padding-left: $mobile-side-space;
+        }
+
+        .card-container .texts-container .texts-wrap .description-label {
+            font-size: 20px;
+        }
+    }
+    @media (min-width: 992px) and (max-width: 1199.98px) {
+        .contents-container {
+            padding-top: 120px;
+            padding-bottom: 120px;
+            padding-right: 30px;
+            padding-left: 30px;
+        }
+    }
+}
+
+.what-rancher-adds-to-kubernetes-screen3,
+.what-rancher-adds-to-kubernetes-screen4,
+.what-rancher-adds-to-kubernetes-screen5 {
+    .contents-container {
+        padding-top: 150px;
+        padding-bottom: 150px;
+    }
+
+    .texts-container {
+        .title-label {
+            color: $c-blue-dark1;
+        }
+        .description-label {
+            color: rgba($c-blue-dark1, .75);
+        }
+
+        .text-list-container {
+            margin-top: 50px;
+
+            .list-item {
+                margin-bottom: 25px;
+                padding-bottom: 25px;
+
+                border-bottom: 1px solid $c-gray-mid-light;
+
+                &:last-child {
+                    margin-bottom: 0;
+                    padding-bottom: 0;
+
+                    border-bottom: 0;
+                }
+
+                .item-label {
+                    margin-bottom: 0;
+
+                    color: $c-blue;
+                    font-size: 12px;
+                    font-family: 'Poppins';
+                    font-weight: 800;
+                    letter-spacing: 1px;
+                    line-height: 1.3;
+                    text-transform: uppercase;
+                }
+            }
+        }
+    }
+
+    .list-container {
+        .list-item {
+            margin-bottom: 45px;
+            padding-bottom: 45px;
+
+            border-bottom: 1px solid $c-gray-mid-light;
+
+            &:last-child {
+                margin-bottom: 0;
+                padding: 0;
+
+                border-bottom: 0;
+            }
+        }
+
+        .list-head-container {
+            position: relative;
+            display: flex;
+
+            flex-wrap: nowrap;
+            align-items: center;
+
+            margin-bottom: 10px;
+
+            .thumbnail-item {
+                position: relative;
+                display: inline-block;
+
+                flex: 0 0 50px;
+                height: 50px;
+
+                margin-right: 25px;
+
+                background-color: #fff;
+                border-radius: 50%;
+
+                text-align: center;
+
+                line-height: 0;
+
+                .icon {
+                    position: relative;
+                    display: inline-block;
+
+                    width: 40%;
+                    height: auto;
+
+                    margin: 30%;
+                }
+            }
+            .title-label {
+                position: relative;
+                display: inline-block;
+
+                flex: 0 0 calc(100% - 75px);
+
+                color: $c-blue-dark1;
+                font-family: 'Poppins';
+                font-size: 22px;
+                font-weight: 300;
+                line-height: 1.445;
+            }
+        }
+        .description-label {
+            margin-left: 75px;
+
+            font-size: 15px;
+            font-weight: 300;
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+        .buttons-container {
+            margin-top: 40px;
+
+            margin-left: 75px;
+
+            a {
+                margin-right: 20px;
+            }
+        }
+    }
+
+    @media (max-width: 575.98px) {
+        .contents-container {
+            padding-top: 50px;
+            padding-bottom: 50px;
+        }
+
+        .texts-container .title-label {
+            br {
+                display: none;
+            }
+        }
+        .texts-container .text-list-container {
+            margin-top: 30px;
+        }
+
+        .list-container {
+            margin-top: 40px;
+
+            .list-head-container .title-label {
+                font-size: 20px;
+            }
+
+            .list-item {
+                margin-bottom: 30px;
+                padding-bottom: 30px;
+            }
+        }
+        .list-container .buttons-container a {
+            margin-right: 12px;
+        }
+    }
+    @media (min-width: 576px) and (max-width: 767.98px) {
+        .contents-container {
+            padding-top: 80px;
+            padding-bottom: 80px;
+        }
+
+        .texts-container .title-label {
+            br {
+                display: none;
+            }
+        }
+
+        .list-container {
+            margin-top: 50px;
+        }
+        .list-container .buttons-container a {
+            margin-right: 12px;
+        }
+    }
+    @media (min-width: 768px) and (max-width: 991.98px) {
+        .contents-container {
+            padding-top: 100px;
+            padding-bottom: 100px;
+        }
+
+        .list-container .list-head-container .title-label {
+            font-size: 22px;
+        }
+        .list-container .buttons-container a {
+            margin-right: 15px;
+        }
+    }
+    @media (min-width: 992px) and (max-width: 1199.98px) {
+        .contents-container {
+            padding-top: 120px;
+            padding-bottom: 120px;
+        }
+
+        .list-container .buttons-container a {
+            margin-right: 15px;
+        }
+    }
+}
+.what-rancher-adds-to-kubernetes-screen4 {
+    .list-container .list-head-container .thumbnail-item {
+        background-color: $c-gray-base-light;
+    }
+}
+
+.what-rancher-adds-to-kubernetes-screen6 {
+	background-image: url('/imgs/why-rancher/what-rancher-adds-to-kubernetes/background-learn-how-rancher-works.png');
+	background-size: 100% auto;
+	background-repeat: no-repeat;
+	background-position: left bottom;
+	
+    @media (max-width: 1450px) {
+        background-size: cover;
+        background-position: left top;
+    }
+
+    @media (max-width: 575.98px) {
+        background-color: $c-gray-base-light;
+        // background-image: none;
+    }
+  
+    .blind-cloud {
+        position: relative;
+        
+        @media (max-width: 1240px) {
+            margin: 0;
+        }
+
+        .blind {
+            position: relative;
+
+            line-height: 0;
+
+            .set-ground {
+                z-index: 1;
+            }
+            .line-custom {
+                height: 31px;
+
+                @media (max-width: 1144px) {
+                    height: 100%;
+                }
+            }
+
+            .cloud-wrap {
+                position: relative;
+                display: inline-block;
+
+                left: 50%;
+
+                @include transform(translateX(-50%));
+
+                &:before {
+                    margin-right: -1px;
+                }
+                &:after {
+                    margin-left: -1px;
+                }
+            }
+            .cloud {
+                position: relative;
+
+                width: auto;
+                height: 62px;
+            }
+        }
+    }
+
+    .contents-container {
+        padding: 160px 0;
+        padding-top: 226px;
+
+        @media (max-width: 575.98px) {
+            margin-top: 60px;
+
+            padding: 45px 0 60px;
+
+            &:before {
+                content: '';
+                position: absolute;
+
+                bottom: 0;
+                left: 0;
+
+                width: 100%;
+                height: 100px;
+
+                background: #f2f5f5; /* Old browsers */
+                background: -moz-linear-gradient(top, #f2f5f5 0%, #ffffff 100%); /* FF3.6-15 */
+                background: -webkit-linear-gradient(top, #f2f5f5 0%,#ffffff 100%); /* Chrome10-25,Safari5.1-6 */
+                background: linear-gradient(to bottom, #f2f5f5 0%,#ffffff 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+                filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f2f5f5', endColorstr='#ffffff',GradientType=0 ); /* IE6-9 */
+            }
+        }
+        @media (min-width: 576px) and (max-width: 767.98px) {
+            align-items: flex-start !important;
+
+            padding: 80px 0;
+            padding-top: 140px;
+        }
+        @media (min-width: 768px) and (max-width: 991.98px) {
+            align-items: flex-start !important;
+
+            padding: 80px 0;
+            padding-top: 140px;
+        }
+        @media (min-width: 992px) and (max-width: 1199.98px) {
+        }
+    }
+
+    .texts-container {
+        @media (min-width: 576px) and (max-width: 767.98px) {
+            margin-bottom: 20px;
+            text-align: center;	
+        }
+        @media (min-width: 768px) and (max-width: 991.98px) {
+            margin-bottom: 40px;
+            text-align: center;	
+        }
+        .title-label {
+            @media (max-width: 575.98px) {
+                margin-bottom: 30px;
+
+                br {
+                    display: none;
+                }
+            }
+        }
+    }
+
+    .card-container {
+        padding: 0 20px;
+
+        @media (max-width: 575.98px) {
+            margin-bottom: 30px;
+            padding: 0 $mobile-side-space;
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+    }
+    .card-item {
+        vertical-align: middle;
+
+        margin: 15px 0;
+        padding: 50px 30px 40px;
+
+        background-color: #fff;
+        border-radius: 10px;
+        box-shadow: 15px 25px 75px rgba($c-blue-dark1, .1);
+
+        @include transition(margin .25s, padding .25s, background-color .25s);
+
+        @media (max-width: 575.98px) {
+            margin: 0;
+            padding: 30px 22px 40px;
+        }
+        @media (min-width: 768px) and (max-width: 991.98px) {
+            height: 100%;
+        }
+
+        .title-label {
+            min-height: 4.2em;
+
+            font-size: 25px;
+            font-weight: 300;
+            line-height: 1.4;
+
+            @include textElipsis(3, 1.4);
+        }
+
+        .description-label {
+            min-height: 8.35em;
+
+            font-size: 15px;
+            font-weight: 400;
+            line-height: 1.67;
+
+            @include textElipsis(5, 1.67);
+
+            @media (max-width: 575.98px) {
+                line-height: 1.7;
+            }
+        }
+
+        hr {
+            width: 30%;
+
+            margin: 30px 0;
+
+            border: 0px none white; 
+            border-top: 1px solid $c-sky-blue;
+
+            @include transition(max-width .25s, margin .25s);
+
+            @media (max-width: 575.98px) {
+                max-width: 40px;
+
+                margin: 15px 0;
+            }
+        }
+
+        .button {
+            @media (max-width: 575.98px) {
+                margin-top: 0;
+
+                text-align: left;
+            }
+        }
+    }
+
+    // .card-container.active .card-item,
+    // .card-container:hover .card-item {
+    //     margin: -15px;
+    //     padding: 80px 60px 70px;
+    //     color: #fff;
+
+    //     background-color: $c-blue;
+
+    //     @media (max-width: 575.98px) {
+    //         margin: 0;
+    //         padding: 30px 22px 40px;
+    //     }
+
+    //     .button {
+    //         color: #fff;
+
+    //         span:before {
+    //             bottom: -5px;
+
+    //             height: 1px;
+
+    //             background-color: rgba(#fff, 1);
+    //         }
+    //         &:hover {
+    //             span:before {
+    //                 background-color: rgba($c-sky-blue, 1);
+    //             }
+    //         }
+    //     }
+    // }
+
+    @media (max-width: 575.98px) {
+        .blind-cloud .blind .cloud-wrap {
+            left: 0;
+        }
+    }
+    @media (min-width: 576px) and (max-width: 767.98px) {
+    }
+    @media (min-width: 768px) and (max-width: 991.98px) {
+    }
+    @media (min-width: 992px) and (max-width: 1199.98px) {
+    }
+}

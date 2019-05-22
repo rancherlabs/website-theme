@@ -1,0 +1,422 @@
+.products-training-screen1 {
+    background-color: $c-gray-base-light;
+
+    .decoration {
+        position: relative;
+
+        width: 100%;
+
+        line-height: 0;
+    }
+
+    .texts-container {
+        padding-right: 0;
+        padding-left: 0;
+
+        line-height: 0;
+
+        .texts-wrap {
+            z-index: 1;
+
+            margin-top: 165px;
+            margin-bottom: 120px;
+
+            .title-label {
+                margin-bottom: 35px;
+                color: #000;
+                font-size: 50px;
+                font-weight: 200;
+            }
+            
+            .description-label {
+                color: #000;
+                line-height: 1.4;
+            }
+        }
+    }
+
+    .lower-container {
+        height: 120px;
+
+        margin-top: -120px;
+
+        line-height: 0;
+
+        .decoration {
+            position: relative;
+
+            height: 100%;
+
+            &.ground {
+                .ground-lower {
+                    position: relative;
+                    
+                    width: auto;
+                    height: 75px;
+
+                    margin-top: 45px;
+                    margin-left: 60%;
+                }
+
+                .ground-upper {
+                    position: absolute;
+
+                    bottom: 0;
+                    left: 77%;
+
+                    width: auto;
+                    height: 130px;
+                }
+            }
+        }
+    }
+}
+
+.products-training-screen2 {
+    .texts-container {
+        padding-top: 140px;
+        padding-bottom: 120px;
+
+        .left {
+            padding-right: 6%;
+            padding-left: 0;
+        }
+
+        .title-label {
+            line-height: 1.25;
+        }
+
+        .description-label {
+            line-height: 1.775;
+        }
+    }
+}
+
+.products-training-screen3 {
+    .head-label {
+        padding-left: 0;
+
+        line-height: 150px;
+
+        .label {
+            margin-bottom: 0;
+        }
+    }
+
+    .thumbnail-container {
+        padding-right: 0;
+        padding-left: 0;
+
+        .thumbnail-item {
+            position: relative;
+
+            width: calc(100% + 100px);
+
+            margin-left: -100px;
+
+            .thumbnail {
+                position: relative;
+
+                width: 100%;
+                height: auto;
+            }
+        }
+    }
+
+    .texts-container {
+        .texts-wrap {
+            margin-top: -50px;
+            padding-left: 12%;
+
+            .title-label {
+                margin-bottom: 0;
+
+                color: #fff;
+                font-size: 25px;
+                font-family: 'Poppins';
+                font-weight: 400;
+            }
+
+            .date-label {
+                margin-top: 5px;
+                margin-bottom: 0;
+
+                color: #fff;
+                font-size: 12px;
+                font-family: 'Poppins';
+                font-weight: 800;
+                text-transform: uppercase;
+                letter-spacing: .5px;
+            }
+
+            .description-label {
+                margin-top: 25px;
+                padding-top: 25px;
+
+                color: rgba(#fff, .75);
+                line-height: 1.56;
+
+                border-top: 1px solid rgba(#fff, .25);
+            }
+
+            .buttons-container {
+                margin-top: 40px;
+            }
+        }
+    }
+}
+
+.products-training-screen4 {
+    .texts-container {
+        padding-top: 150px;
+        padding-bottom: 100px;
+
+        text-align: center;
+    }
+
+    .cards-container {
+        padding-right: 0;
+        padding-bottom: 150px;
+        padding-left: 0;
+    }
+    .cards-wrap {}
+    .card-container {}
+    .card-item {
+        padding: 45px 35px;
+
+        background-color: $c-gray;
+
+        border-radius: 1em;
+
+        .text-label {
+            position: relative;
+
+            min-height: 5.82em;
+
+            margin-bottom: 0;
+
+            color: #fff;
+            font-family: 'Poppins';
+            font-size: 22px;
+            font-weight: 400;
+            line-height: 1.455;
+
+            @include textElipsis(4, 1.455);
+        }
+
+        hr {
+            width: 90px;
+
+            margin: 1.5em 0;
+
+            border: 0px none rgba(#fff, .25);
+            border-top: 1px solid rgba(#fff, .25);
+        }
+
+        .date-label {
+            color: $c-green;
+            font-size: 12px;
+            font-weight: 800;
+            letter-spacing: 1px;
+
+            .icon {
+                position: relative;
+                display: inline-block;
+                vertical-align: middle;
+
+                width: 15px;
+                height: 15px;
+
+                margin-right: 10px;
+            }
+        }
+
+        .buttons-container {
+            margin-top: 25px;
+        }
+    }
+}
+
+.products-training-screen5 {
+    .head-label {
+        padding-left: 0;
+
+        line-height: 100px;
+
+        .label {
+            margin-bottom: 0;
+        }
+    }
+
+    .contents-container {
+        padding-top: 100px;
+        padding-bottom: 100px;
+    }
+
+    .texts-container {
+        padding-left: 0;
+
+        .title-label {
+            color: $c-blue-dark1;
+        }
+
+        .description-label {
+            color: rgba($c-blue-dark1, .75);
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+
+        .buttons-container {
+            margin-top: 40px;
+
+            .button {
+                width: 210px;
+            }
+        }
+    }
+
+    .list-container {}
+    .list-item {
+        margin-bottom: 40px;
+        padding-bottom: 40px;
+
+        border-bottom: 1px solid rgba($c-blue-dark1, .25);
+
+        &:last-child {
+            padding-bottom: 0;
+
+            border-bottom: 0;
+        }
+
+        .title-label {
+            color: $c-blue-dark1;
+            font-size: 22px;
+            font-weight: 400;
+            line-height: 1.455;
+        }
+
+        .date-label {
+            margin-top: 10px;
+
+            color: $c-green;
+            font-size: 12px;
+            font-weight: 800;
+            letter-spacing: 1px;
+
+            .icon {
+                position: relative;
+                display: inline-block;
+                vertical-align: middle;
+
+                width: 15px;
+                height: 15px;
+
+                margin-right: 10px;
+            }
+        }
+
+        .buttons-container {
+            margin-top: 10px;
+        }
+    }
+}
+
+.products-training-screen6 {
+    .contents-container {
+        padding-top: 150px;
+        padding-bottom: 250px;
+    }
+
+    .past-trainings-container {
+        padding: 100px 0;
+    }
+
+    .texts-container {
+        .title-label {
+            margin-bottom: 0;
+
+            color: $c-blue-dark1;
+            font-size: 40px;
+        }
+
+        .training-item {
+            margin-top: 30px;
+            margin-bottom: 40px;
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+
+            .subject-label {
+                margin-top: 0;
+                margin-bottom: 0;
+
+                color: $c-blue-dark1;
+                font-weight: 400;
+            }
+
+            .date-label {
+                margin-top: 5px;
+
+                color: $c-blue-gray;
+                font-size: 12px;
+                font-weight: 800;
+                letter-spacing: 1px;
+                text-transform: uppercase;
+            }
+        }
+    }
+
+    .people-saying-container {}
+    .people-saying-wrap {
+        padding-top: 100px;
+        padding-bottom: 100px;
+
+        padding-left: 10%;
+        padding-right: 5%;
+
+        .title-label {
+            color: #fff;
+            font-size: 22px;
+            font-weight: 400;
+        }
+
+        .quote-container {
+            position: relative;
+
+            margin-top: 110px;
+
+            &::before {
+                z-index: 0;
+                content: '';
+                position: absolute;
+
+                top: -70px;
+                left: 25px;
+
+                width: 100px;
+                height: 100px;
+
+                background-repeat: no-repeat;
+                background-position: center;
+                background-size: contain;
+                background-image: url('/imgs/products/training/icon-quote-dark-blue.svg');
+            }
+
+            .quote-label {
+                z-index: 1;
+                position: relative;
+
+                margin-bottom: 30px;
+                padding-left: 10%;
+
+                color: rgba(#fff, .75);
+                font-size: 18px;
+                font-weight: 300;
+                line-height: 1.775;
+            }
+        }
+    }
+}

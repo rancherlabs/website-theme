@@ -2,40 +2,23 @@
   {{ .Title }} – {{ .Site.Title }}
 {{ end }}
 
-{{ define "hero" }}
-  <!-- theme/layouts/_default/list.html-->
-  <section class="hero">
-    {{ with .Title }}
-      <h1>{{ . }}</h1>
-    {{end}}
-
-    {{ with .Params.description }}
-      <p class="p-t-sm">{{ . }}</p>
-    {{end}}
-  </section>
-{{ end }}
-
 {{ define "main" }}
-  <!--cta banner-->
-  {{ if and (.Params.ctaBanner) }}
-    {{ with index .Site.Data.cta .Params.ctaBanner }}
-      <div class="wrapper">
-        <div class="cta-banner row center-xs middle-xs bg-info shadow rounded-corners">
-          <h3 class="m-v-sm m-r-sm text-white">{{ .header }}</h3>
-          <a href="{{ .link }}" target="_blank" class="btn border-btn">{{ .button }}</a>
+
+<section class="tags-contents">
+    <div class="grid-container">
+        <div class="row max-sized set-lines set-ground">
+            <div class="col-4"></div>
+            <div class="col-4"></div>
+            <div class="col-4"></div>
         </div>
-      </div>
-    {{end}}
-  {{end}}
 
-  <div class="wrapper">
-    <div class="row center-xs">
+        <div class="row max-sized contents-container">
+            <div class="col-xl-8 offset-xl-2">
 
-<!--     <div class="col-md-8">
-      {{ partial "breadcrumbs.html" . }}
-    </div> -->
+              <div class="head-container">
+                  <h2 class="title-label">{{ .Title }}</h2>
+              </div>
 
-    <article class="col-md-8">
       {{ .Content }}
 
       {{ if eq .Section "events" }}
@@ -71,76 +54,62 @@
       {{else}}
 
         <!-- non event lists -->
+        <div class="tag-list-container">
         {{ $paginator := .Scratch.Get "paginator" }}
         {{ range $paginator.Pages }}
-          <div class="p-v-xs">
-            <h2 class="m-t-0"><a href="{{.URL}}">{{.Title}}</a></h2>
-              <!--list tags-->
-              {{ if eq .Section "events" }}
-                {{ else }}
 
-                {{ partial "tag-list.html" . }}
-              {{ end }}
+            <div class="tag-item">
+                <a href="{{.URL}}" class="tag-linkage">{{.Title}}</a>
+            </div>
 
-              {{ if .Params.image }}
-                <div class="thumbnail"><img src="{{ .Params.image }}" alt="{{ .Params.title }}"></div>
-              {{end}}
+            {{ if  .Description | default .Summary }}
+            <div class="article-item-wrap">
+                {{ if .Params.image }}
+                <div class="thumbnail-container" style="background-image: url('{{ .Params.image }}');">
+                </div>
+                {{ end }}
+                
+                <div class="detail-container">
+                    <div class="information-container">
+                        <div class="user-container">
+                            {{ if and (.Params.author) (eq .Section "blog") }}
+                            {{ with index .Site.Data.authors .Params.author }}
+                                <div class="user-thumbnail">
+                                    <div class="user-thumbnail-wrap">
+                                        <img class="thumbnail" src="{{.pic}}" alt="{{.name}}">
+                                    </div>
 
-              <p class="m-t-0">
-                {{ .Description | default .Summary | safeHTML }}
-              </p>
-
-              <div class="row middle-xs">
-                {{ if and (.Params.author) (eq .Section "blog") }}
-                  {{ with index .Site.Data.authors .Params.author }}
-                    <div class="p-l-xs p-a-xs"><img src="{{.pic}}" class="circle" alt="{{.name}}" height="35" width="35" /></div>
-                    <div class="p-r-xs p-v-xs"><span class="">{{ .name }}</span></div>
-                  {{end}}
-                {{end}}
-
-                {{ if eq .Section "careers" }}
-                  {{else}}
-                    {{ with .Params.date }}
-                      <div class="p-h-xs p-v-xs"><i class="material-icons text-muted">event</i> {{ .Format "January 2, 2006" }}</div>
-                    {{end}}
-                {{end}}
-
-                {{ if eq .Section "blog" }}
-                  <div class="p-h-xs p-v-xs"><i class="material-icons text-muted">timer</i> Read Time: {{.ReadingTime}} minutes</div>
-                {{end}}
-
-                {{ with .Params.location }}
-                  <div class="p-h-xs p-v-xs"><i class="material-icons text-muted">location_on</i> {{ . }}</div>
-                {{end}}
-
-                {{ if eq .Section "careers" }}
-                  <div class="p-h-xs p-v-xs"><i class="material-icons text-muted">work</i>{{ .Params.Department }}</div>
-                {{end}}
-              </div>
-             </div>
-           <hr/>
+                                    <span class="name-label">{{ .name }}</span>
+                                </div>
+                            {{end}}
+                            {{end}}                                
+                            
+                            <div class="date-label"><img class="icon" src="/imgs/community/blog/icon-calendar-gray.svg"> {{ .Date.Format "January 2, 2006" }}</div>
+                            {{ with .ReadingTime }}
+                            <div class="read-time-label"><img class="icon" src="/imgs/community/blog/icon-time-gray.svg"> Read time: {{.}} min</div>
+                            {{ end }}
+                            {{ with .Params.location }}
+                              <div class="date-label">{{ . }}</div>
+                            {{end}}
+                        </div>                    
+                        <p class="description-label">
+                            {{ .Description | default .Summary | safeHTML }}
+                        </p>
+                        
+                    </div>
+                </div>
+            </div>      
+            {{ end }}      
           {{ end }}
-
+          </div>
         {{ template "_internal/pagination.html" . }}
       {{end}}
 
-        <div class="box m-v-lg">
-          <div class="row middle-xs">
-            <div class="col-md-4 p-a-md">
-              <img src="/img/spot/spot-training.svg" alt="training">
-            </div>
-            <div class="col-md-8 p-a-md">
-              <p class="text-md">Get <strong>free training</strong> from an expert through our classes on Kubernetes and Rancher</p>
-              <a href="{{ .Site.BaseURL }}/training" class="btn bg-accent">Sign Up Now</a>
-            </div>
-          </div>
-        </div>
       </div>
-    </article>
-
-<!-- <aside class="col-sm-4 col-xs-12 hidden-md">
-        {{ partial "sidebar.html" . }}
-      </aside> -->
     </div>
+
   </div>
+</section>
+
+  {{ partial "footer-cta.html" }}
 {{ end }}

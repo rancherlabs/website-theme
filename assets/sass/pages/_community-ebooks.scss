@@ -1,0 +1,622 @@
+.community-ebooks-screen1 {
+  background-color: $c-gray-base-light;
+
+  .decoration {
+    position: relative;
+
+    width: 100%;
+
+    line-height: 0;
+  }
+
+  .texts-container {
+    padding-right: 0;
+    padding-left: 0;
+
+    line-height: 0;
+
+    .texts-wrap {
+      z-index: 1;
+
+      margin-top: 165px;
+      margin-bottom: 80px;
+
+      .title-label {
+        margin-bottom: 20px;
+
+        color: #000;
+        font-size: 50px;
+        font-weight: 200;
+      }
+
+      .description-label {
+        color: #000;
+        line-height: 1.4;
+      }
+    }
+  }
+
+  .lower-container {
+    height: 120px;
+
+    margin-top: -120px;
+
+    line-height: 0;
+
+    .decoration {
+      position: relative;
+
+      height: 100%;
+
+      &.ground {
+        .ground-lower {
+          position: relative;
+
+          width: auto;
+          height: 75px;
+
+          margin-top: 45px;
+          margin-left: 60%;
+        }
+
+        .ground-upper {
+          position: absolute;
+
+          bottom: 0;
+          left: 77%;
+
+          width: auto;
+          height: 130px;
+        }
+      }
+    }
+  }
+
+  @media (max-width: 575.98px) {
+    .texts-container {
+      .texts-wrap {
+        margin-top: 180px;
+        margin-bottom: 100px;
+        padding-right: 25px;
+        padding-left: 25px;
+
+        .title-label {
+          margin-bottom: 14px;
+      
+          font-size: 2em;
+        }
+
+        h3.description-label {
+          font-size: 1.05em;
+          line-height: 1.5;
+        }
+        .description-label {
+          font-size: .95em;
+        }
+        .description-label br {
+          display: none;
+        }
+      }
+    }
+
+    .lower-container {
+      height: 100px;
+
+      margin-top: -100px;
+
+      .decoration.ground .ground-lower {
+        height: 44px;
+
+        margin-top: 56px;
+        margin-left: 15%;
+      }
+      .decoration.ground .ground-upper {
+        left: 54%;
+
+        height: 100px;
+      }
+    }
+  }
+  @media (min-width: 576px) and (max-width: 767.98px) {
+    .texts-container {
+      padding-left: 25px;
+      padding-right: 25px;
+
+      .texts-wrap {
+        margin-top: 200px;
+        margin-bottom: 100px;
+        padding-right: 25px;
+        padding-left: 25px;
+
+        .title-label {
+          font-size: 2em;
+        }
+      }
+    }
+
+    .lower-container .decoration.ground .ground-lower {
+        margin-left: 45%;
+    }
+  }
+  @media (min-width: 768px) and (max-width: 991.98px) {
+    .texts-container {
+      padding-left: 25px;
+      padding-right: 25px;
+
+      .texts-wrap {
+        margin-top: 200px;
+        margin-bottom: 110px;
+        padding-right: 25px;
+        padding-left: 25px;
+
+        .title-label {
+          font-size: 2.4em;
+        }
+      }
+    }
+
+    .lower-container .decoration.ground .ground-lower {
+      margin-left: 45%;
+    }
+  }
+  @media (min-width: 992px) and (max-width: 1199.98px) {
+    .texts-container {
+      padding-left: 25px;
+      padding-right: 25px;
+
+      .texts-wrap {
+        margin-top: 200px;
+        margin-bottom: 110px;
+        padding-right: 25px;
+        padding-left: 25px;
+
+        .title-label {
+          font-size: 2.8em;
+        }
+      }
+    }
+
+    .lower-container .decoration.ground .ground-lower {
+        margin-left: 45%;
+    }
+  }
+}
+
+.community-ebooks-screen3 {
+  padding-bottom: 300px;
+
+  @media (max-width: 575.98px) {
+    padding-bottom: 100px;
+
+    .sign-up-form-container {
+      height: auto;
+
+      margin-right: $mobile-side-space;
+      margin-left: $mobile-side-space;
+      padding-top: 50px;
+      padding-bottom: 50px;
+
+      .title-label {
+        font-size: 20px;
+        text-align: center;
+      }
+
+      .form-container {
+        margin-top: 20px;
+
+        .hbspt-form {
+          justify-content: center;
+        }
+
+        [type=submit] {
+          width: 100%;
+          max-width: 100%;
+
+          text-align: center;
+        }
+      }
+    }
+  }
+  @media (min-width: 576px) and (max-width: 767.98px) {
+    padding-bottom: 150px;
+
+    .sign-up-form-container {
+      height: auto;
+
+      margin-right: $mobile-side-space;
+      margin-left: $mobile-side-space;
+      padding-top: 50px;
+      padding-bottom: 50px;
+
+      .title-label {
+        font-size: 24px;
+        text-align: center;
+      }
+  
+      .form-container {
+        margin-top: 20px;
+  
+        .hbspt-form {
+          justify-content: center;
+        }
+      }
+    }
+  }
+  @media (min-width: 768px) and (max-width: 991.98px) {
+    padding-bottom: 200px;
+
+    .sign-up-form-container {
+      margin-right: $mobile-side-space;
+      margin-left: $mobile-side-space;
+    }
+  }
+  @media (min-width: 992px) and (max-width: 1199.98px) {
+    padding-bottom: 250px;
+
+    .sign-up-form-container {
+      margin-right: $mobile-side-space;
+      margin-left: $mobile-side-space;
+    }
+  }
+}
+
+.community-ebooks-screen2,
+.community-ebooks-screen4 {
+  .texts-container {
+    padding-top: 150px;
+    padding-bottom: 100px;
+
+    text-align: center;
+
+    .title-label {
+      color: $c-blue-dark1;
+    }
+
+    .description-label {
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  .ebook-list-container {
+    padding-top: 100px;
+  }
+
+  .ebook-list-wrap {
+    padding-right: 0;
+    padding-left: 0;
+  }
+
+  .ebook-item {
+    position: relative;
+    display: flex;
+
+    flex-wrap: wrap;
+
+    margin-bottom: 100px;
+
+    .thumbnail-container {
+      position: relative;
+      display: inline-block;
+      overflow: hidden;
+
+      flex: 1;
+
+      max-width: 125px;
+      margin-right: 20px;
+
+      background-color: #b9b9b9;
+      border-radius: 10px;
+
+      line-height: 0;
+
+      .thumbnail {
+        position: relative;
+        display: inline-block;
+
+        width: auto;
+        height: 100%;
+        max-height: 185px;
+      }
+    }
+
+    .information-container {
+      position: relative;
+      display: inline-block;
+
+      flex: 1;
+
+      .title-label {
+        margin-top: -5px;
+        margin-bottom: 0;
+
+        font-size: 20px;
+        font-weight: 400;
+        line-height: 1.5;
+      }
+
+      .description-label {
+        min-height: 3.33em;
+
+        margin-top: 10px;
+        margin-bottom: 50px;
+
+        line-height: 1.665;
+
+        @include textElipsis(2, 1.665);
+      }
+
+      .button-container {
+        span {
+          font-size: 18px;
+        }
+      }
+    }
+  }
+
+  .buttons-container {
+    width: 100%;
+
+    margin-bottom: 250px;
+
+    text-align: center;
+
+    .button {
+      min-width: 210px;
+
+      box-shadow: 12px 25px 50px rgba($c-blue-dark1, .15);
+    }
+  }
+
+  @media (max-width: 575.98px) {
+    .ebook-list-container {
+      padding-top: 50px;
+    }
+    .ebook-list-wrap {
+      padding-right: $mobile-side-space;
+      padding-left: $mobile-side-space;
+    }
+    .ebook-item {
+      margin-bottom: 40px;
+
+      .thumbnail-container {
+        max-width: 160px;
+
+        .thumbnail {
+          max-height: 220px;
+        }
+      }
+
+      .information-container {
+        .title-label {
+          margin-top: 0;
+        }
+
+        .description-label {
+          margin-bottom: 15px;
+        }
+      }
+    }
+  }
+  @media (min-width: 576px) and (max-width: 767.98px) {
+    .ebook-list-container .ebook-list-wrap {
+      padding-right: $mobile-side-space;
+      padding-left: $mobile-side-space;
+    }
+    .ebook-item .information-container .title-label {
+      @include textElipsis(3, 1.5);
+    }
+    .ebook-item .information-container .description-label {
+      margin-bottom: 15px;
+
+      @include textElipsis(2, 1.665);
+    }
+  }
+  @media (min-width: 768px) and (max-width: 991.98px) {
+    .ebook-list-container .ebook-list-wrap {
+      padding-right: $mobile-side-space;
+      padding-left: $mobile-side-space;
+    }
+    .ebook-item .information-container .title-label {
+      @include textElipsis(3, 1.5);
+    }
+    .ebook-item .information-container .description-label {
+      margin-bottom: 15px;
+
+      @include textElipsis(2, 1.665);
+    }
+  }
+  @media (min-width: 992px) and (max-width: 1199.98px) {
+    .ebook-list-container .ebook-list-wrap {
+      padding-right: $mobile-side-space;
+      padding-left: $mobile-side-space;
+    }
+    .ebook-item .information-container .title-label {
+      @include textElipsis(3, 1.5);
+    }
+    .ebook-item .information-container .description-label {
+      margin-bottom: 15px;
+
+      @include textElipsis(2, 1.665);
+    }
+  }
+}
+
+.floating-sign-up-form {
+  z-index: 2;
+  position: relative;
+
+  margin-top: -100px;
+  margin-bottom: -100px;
+}
+
+.sign-up-form-container {
+  height: 200px;
+
+  background-color: $c-blue;
+  border-radius: 10px;
+
+  .title-label {
+    margin-bottom: 0;
+
+    color: #fff;
+    font-family: 'Poppins';
+    font-size: 30px;
+    font-weight: 300;
+    line-height: 1.3333;
+  }
+
+  .form-container {
+    position: relative;
+    display: flex;
+
+    flex-wrap: nowrap;
+
+    .hbspt-form {
+      width: 100%;
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+    }
+
+    form {
+      display: flex;
+      align-items: center;
+      margin-bottom: 0;
+    }
+
+    .field {
+      margin: 0 !important;
+    }
+
+    .actions {
+      margin: 0 !important;
+      padding: 0 !important;
+    }
+
+    .hs_email {
+      &>label {
+        line-height: 0;
+        margin-bottom: 0;
+      }
+    }
+
+    input {
+      position: relative;
+
+      flex: 1;
+
+      height: 50px;
+
+      margin: 0;
+      padding: 0 20px;
+
+      border: 0;
+      border-radius: 0;
+      box-shadow: none;
+    }
+
+    input[type='email'] {
+      box-sizing: border-box !important;
+      width: 100%;
+    }
+
+    .submitted-message {
+      margin-bottom: 0;
+      color: white;
+      font-size: 14px;
+    }
+
+    [type='submit'] {
+      position: relative;
+
+      flex: 1;
+
+      max-width: 154px;
+      height: 50px;
+
+      margin: 0;
+      padding-right: 20px;
+      padding-left: 20px;
+
+      text-align: left;
+      vertical-align: top;
+      height: 50px;
+      margin: 0 15px 0 0;
+      padding: 1em 2em;
+      color: #0075a8;
+      font-family: poppins;
+      font-size: 12px;
+      font-weight: 800;
+      line-height: 0;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      box-shadow: 12px 25px 50px rgba(0, 117, 168, .075);
+      border: none;
+      box-sizing: border-box;
+      -webkit-transition: all .25s;
+      -moz-transition: all .25s;
+      -o-transition: all .25s;
+      transition: all .25s;
+      background: #8dc63f;
+      text-shadow: none;
+      color: white;
+
+      .icon {
+        &.right {
+          right: 10px;
+        }
+
+        .svg-linear {
+          stroke-width: 1.25px;
+        }
+      }
+    }
+  }
+
+  @media (max-width: 575.98px) {
+    height: auto;
+
+    margin-right: $mobile-side-space !important;
+    margin-left: $mobile-side-space !important;
+    padding: 30px 15px;
+
+    border-radius: 5px;
+
+    .title-label {
+      font-size: 22px;
+    }
+
+    .form-container {
+      margin-top: 20px;
+
+      .hbspt-form {
+        justify-content: flex-start;
+      }
+
+      form {
+        display: block;
+
+        width: 100%;
+      }
+
+      [type=submit] {
+        display: block;
+
+        margin-top: 15px;
+        padding: 0 15px;
+
+        height: 40px;
+
+        font-size: 14px;
+      }
+    }
+  }
+  @media (min-width: 576px) and (max-width: 767.98px) {
+  }
+  @media (min-width: 768px) and (max-width: 991.98px) {
+  }
+  @media (min-width: 992px) and (max-width: 1199.98px) {
+  }
+}

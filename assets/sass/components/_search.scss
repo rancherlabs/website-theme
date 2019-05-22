@@ -2,6 +2,11 @@
   max-width: 100%;
 }
 
+.tingle-modal-box {
+  max-height: 100%;
+  overflow-y: auto;
+}
+
 .ais-search-box--input {
   box-shadow: none;
 }

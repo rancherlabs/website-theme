@@ -1,173 +1,273 @@
-{{ define "hero" }}
-  <div class="wrapper p-t-md">
-    <div class="row center-xs">
-      <div class="col-md-8 col-xs-12">
-        <!-- {{ partial "breadcrumbs.html" . }} -->
-
-        <!-- video or image-->
-        {{ with .Params.youtubeId }}
-          <div style="position: relative; padding-bottom: 56.25%; padding-top: 30px; height: 0; overflow: hidden;" class="m-b-md">
-            <iframe src="//www.youtube.com/embed/{{.}}" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" allowfullscreen frameborder="0" title="YouTube Video"></iframe>
-          </div>
-
-          {{else}}
-            {{ if .Params.image }}
-              <img class="feat-img m-b-md" src="{{ .Params.image }}" alt="{{ .Params.title }}">
-            {{end}}
-        {{end}}
-
-        <!--event details or author and date-->
-         {{ if eq .Section "events" }}
-          <div class="row middle-xs">
-            {{ with .Params.date }}
-              <span class="detail p-h-xs">
-              {{.Format "Monday January 2, 2006"}}
-
-                {{end}}
-              {{ with .Params.enddate }}
-                - {{ . | dateFormat "Monday, Jan 2, 2006" }}
-              {{end}}
-              </span>
-
-            <span class="detail p-h-xs">{{ .Params.time }}</span>
-
-            {{ with .Params.location }}
-              <span class="detail p-h-xs">{{ . }}</span>
-            {{end}}
-          </div>
-
-          {{ else }}
-
-          <div class="row middle-xs">
-            {{ if and (.Params.author) (eq .Section "blog") }}
-              {{ with index .Site.Data.authors .Params.author }}
-                <div class="row middle-xs p-l-sm p-a-xs">
-                  <img src="{{.pic}}" class="circle" alt="{{.name}}" height="35" width="35" />
-                  <span class="detail p-l-xs">{{ .name }}</span>
-                </div>
-              {{end}}
-            {{end}}
-
-            {{ $published := time (.Date.Format "2006-01-02") }}
-            {{ $updated := time (.Lastmod.Format "2006-01-02") }}
-
-            <div class="detail"><span class="p-h-xs"></span>{{ $published.Format "January 2, 2006" }}</div>
-
-            {{ if and ( $updated.After $published) (eq .Section "blog")}}
-              <div class="detail pull-right"><span class="p-h-xs"></span>Updated: {{ $updated.Format "January 2, 2006" }}</div>
-            {{end}}
-          </div>
-        {{end}}
-
-        <!--title and description-->
-        {{ with .Params.title }}
-          <h1 class="m-t-0">{{ . }}</h1>
-        {{end}}
-
-        <!--list tags-->
-        {{ if eq .Section "events" }}
-          {{ else }}
-
-          {{ partial "tag-list.html" . }}
-        {{ end }}
-
-      </div>
-    </div>
-  <hr/>
-</div>
-
-{{ end }}
-
 {{ define "main" }}
-  <div class="wrapper">
-    <!-- <div class="row center-xs"> -->
-      <article class="main-content row center-xs">
-        <div class="col-md-8 col-xs-12">
 
-          <!--cta defined in front matter-->
-          {{ if and (.Params.cta) (eq .Section "blog") }}
-            {{ with index .Site.Data.cta .Params.cta }}
-              <div class="cta-box cta-right">
-                <h5>{{ .header }}</h5>
-                  <p>{{ .copy }}</p>
-                  <a class="btn bg-warning" href="{{ .link }}" target="blank">{{ .button }}</a>
-              </div>
-            {{end}}
-          {{end}}
-
-          {{ with .Content }}
-          {{ . }}
-          {{ else }}
-          <p class="p-t-sm">{{ .Description }}</p>
-          {{ end }}
-
-          {{ if eq .Section "events" }}
-          <div class="m-t-sm">
-            {{ with .Params.link }}
-                <a href="{{ . }}" class="btn bg-accent" target="_blank">Register Here</a>
-            {{end}}
-          </div>
-          {{ end }}
-
-          {{ if eq .Section "careers" }}
-            <p><a class="btn bg-link" href="mailto:jobs@rancher.com?subject={{ .Title }}">Apply Now</a></p>
-          {{end}}
-
-        {{ if eq .Section "events" }}
-          <!--[if lte IE 8]>
-          <script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/v2-legacy.js"></script>
-          <![endif]-->
-          <script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/v2.js"></script>
-          <script>
-            hbspt.forms.create({
-            portalId: "468859",
-            formId: "{{ .Params.formId }}",
-            css: "",
-            sfdcCampaignId: "{{ .Params.sfdcCampaignId }}"
-          });
-          </script>
-        {{end}}
-
-        <div class="row middle p-v-sm">
-          <span>{{ partial "addthis" . }}</span>
+<section class="community-blog-view">
+    <div class="grid-container">
+        <div class="row max-sized set-lines set-ground">
+            <div class="col-4"></div>
+            <div class="col-4"></div>
+            <div class="col-4"></div>
         </div>
 
-          {{ if and (.Params.author) (eq .Section "blog") }}
-          <div class="bio p-t-lg">
-            {{ with index .Site.Data.authors .Params.author }}
-              <div class="row middle-xs m-l-0">
-                <img src="{{.pic}}" alt="{{.name}}" height="100" width="100" class="m-r-sm" />
-                <div class="byline m-t-0">
-                  <p class="m-a-0">
-                    {{.name}}
-                    <br/> {{.title}}
-                  </p>
-                  <div class="row middle-xs p-t-xs m-l-0">
-                    {{ with .git }}
-                      <a href="https://github.com/{{.}}" target="_blank"><img src="/img/icon-github.svg" width="30" class="m-r-sm" alt="github"></a>
-                    {{ end }}
-                    {{ with .twitter }}
-                      <a href="https://twitter.com/{{.}}" target="_blank"><img src="/img/icon-twitter.svg" width="30" alt="twitter"></a>
-                    {{ end }}
+        <div class="row max-sized">
+            <div class="
+              col-xl-8 offset-xl-2 
+              col-lg-8 offset-lg-2 
+              col-md-10 offset-md-1 
+              col-sm-10 offset-sm-1 
+              col-xs-12 offset-xs-0 
+              col-12 offset-0 
+              contents-container">
+                {{ with .Params.youtubeId }}
+                  <div class="thumbnail-container large">
+                      <div class="thumbnail-wrap">
+                      <!-- video or image-->
+                        <div style="position: relative; padding-bottom: 56.25%; padding-top: 30px; height: 0; overflow: hidden;" class="thumbnail">
+                          <iframe src="//www.youtube.com/embed/{{.}}" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" allowfullscreen frameborder="0" title="YouTube Video"></iframe>
+                        </div>
+                      </div>
                   </div>
+                {{else}}
+                  {{ if .Params.image }}
+                  <div class="thumbnail-container">
+                      <div class="thumbnail-wrap">                    
+                        <img class="thumbnail" src="{{ .Params.image }}" alt="{{ .Params.title }}">
+                      </div>
+                  </div>
+                  {{end}}
+                {{end}}
+
+                {{ with .Params.title }}
+                  <h1 class="title-label">{{.}}</h1>
+                {{end}}
+
+                <div class="user-container">
+                    <!--event details or author and date-->
+                    {{ if eq .Section "events" }}
+                      <div class="row middle-xs">
+                        {{ with .Params.date }}
+                          <span class="detail p-h-xs">
+                          {{.Format "Monday January 2, 2006"}}
+
+                            {{end}}
+                          {{ with .Params.enddate }}
+                            - {{ . | dateFormat "Monday, Jan 2, 2006" }}
+                          {{end}}
+                          </span>
+
+                        <span class="detail p-h-xs">{{ .Params.time }}</span>
+
+                        {{ with .Params.location }}
+                          <span class="detail p-h-xs">{{ . }}</span>
+                        {{end}}
+                      </div>
+
+                    {{ else }}
+                      <div class="user-thumbnail">
+                          {{ if and (.Params.author) (eq .Section "blog") }}
+                            {{ with index .Site.Data.authors .Params.author }}
+                              <div class="user-thumbnail-wrap">
+                                  <img class="thumbnail" src="{{.pic}}" alt="{{.name}}">
+                              </div>
+                              <span class="name-label">{{.name}}</span>
+                            {{end}}
+                          {{end}}
+
+                      </div>
+
+                      {{ $published := time (.Date.Format "2006-01-02") }}
+                      {{ $updated := time (.Lastmod.Format "2006-01-02") }}
+
+                      <div class="date-label"><img class="icon" src="/imgs/community/blog/icon-calendar-gray.svg"> Published: {{ $published.Format "January 2, 2006" }}</div>
+                      {{ if and ( $updated.After $published) (eq .Section "blog")}}
+                        <div class="date-label"><img class="icon" src="/imgs/community/blog/icon-calendar-gray.svg"> Updated: {{ $updated.Format "January 2, 2006" }}</div>
+                      {{end}}
+                    {{end}}
+                    
+                    <!--list tags-->
+                    {{ if eq .Section "events" }}
+                      {{ else }}
+
+                      {{ partial "tag-list.html" . }}
+                    {{ end }}
                 </div>
 
-              </div>
-              <hr/>
-              {{ with .bio }}
-                <p>{{.}}</p>
-              {{end}}
-            {{ end }}
-          </div>
-          {{ end }}
+                <div class="article-contents">
 
-        <!-- related content -->
-        <div class="p-v-md">{{ partial "related-content.html" . }}</div>
+                    <!--cta defined in front matter-->
+                    {{ if and (.Params.cta) (eq .Section "blog") }}
+                      {{ with index .Site.Data.cta .Params.cta }}
+
+                        <div class="wrap">
+                            <div class="cta-container">
+                                <div class="row align-items-center cta-wrap">
+                                    <div class="
+                                      col-xl-9 
+                                      col-lg-9 
+                                      col-md-8 
+                                      col-sm-12 
+                                      col-xs-12 
+                                      col-12 
+                                      texts-container">
+                                      <div class="label">{{ .header }}</div>
+                                      <div class="title">{{ .copy }}</div>
+                                    </div>
+                                    <div class="
+                                      col-xl-3 
+                                      col-lg-3 
+                                      col-md-4 
+                                      col-sm-12 
+                                      col-xs-12 
+                                      col-12 
+                                      buttons-container">
+                                        <a href="{{ .link }}" target="_blank" class="button c-blue">
+                                            {{ .button }}
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>                        
+                      {{end}}
+                    {{end}}
+
+                    <div class="wrap">
+                    {{ with .Content }}
+                      {{ . }}
+                    {{ else }}
+                      <p>{{ .Description }}</p>
+                    {{ end }}
+                    </div>
 
 
+                    {{ if eq .Section "events" }}
+                      {{ with .Params.link }}
+                          <a href="{{ . }}" class="button c-blue" target="_blank">Register Here</a>
+                      {{end}}
+                    {{ end }}
+
+                    {{ if eq .Section "careers" }}
+                      <a class="button c-blue" href="mailto:jobs@rancher.com?subject={{ .Title }}">Apply Now</a>
+                    {{end}}
+
+                    {{ if eq .Section "events" }}
+                      <!--[if lte IE 8]>
+                      <script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/v2-legacy.js"></script>
+                      <![endif]-->
+                      <script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/v2.js"></script>
+                      <script>
+                        hbspt.forms.create({
+                        portalId: "468859",
+                        formId: "{{ .Params.formId }}",
+                        css: "",
+                        sfdcCampaignId: "{{ .Params.sfdcCampaignId }}"
+                      });
+                      </script>
+                    {{end}}       
+                                 
+
+                    <!--cta defined in front matter-->
+                    {{ if and (.Params.cta) (eq .Section "blog") }}
+                      {{ with index .Site.Data.cta .Params.cta }}
+                        <div class="wrap">
+                            <div class="cta-container">
+                                <div class="row align-items-center cta-wrap">
+                                    <div class="
+                                      col-xl-9 
+                                      col-lg-9 
+                                      col-md-8 
+                                      col-sm-12 
+                                      col-xs-12 
+                                      col-12 
+                                      texts-container">
+                                        <div class="label">{{ .header }}</div>
+                                        <div class="title">{{ .copy }}</div>
+                                    </div>
+                                    <div class="
+                                      col-xl-3 
+                                      col-lg-3 
+                                      col-md-4 
+                                      col-sm-12 
+                                      col-xs-12 
+                                      col-12 
+                                      buttons-container">
+                                        <a href="{{ .link }}" target="_blank" class="button c-blue">
+                                            {{ .button }}
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                      {{end}}
+                    {{end}}
+                </div>
+
+                <div class="share-container">
+                    <div class="share-wrap">
+                      {{ partial "addthis" . }}
+                    </div>
+                </div>
+            </div>
         </div>
-      </article>
 
-    <!-- </div> -->
-  </div>
+
+        {{ if and (.Params.author) (eq .Section "blog") }}
+        <div class="row author-container">
+            {{ with index .Site.Data.authors .Params.author }}
+            <div class="col">
+                <div class="row max-sized">
+                    <div class="
+                      col-xl-10 offset-xl-1 
+                      col-lg-10 offset-lg-1 
+                      col-md-10 offset-md-1 
+                      col-sm-12 offset-sm-0 
+                      col-xs-12 offset-xs-0 
+                      col-12 offset-0 
+                      author-wrap">
+                        <div class="author-item">
+                            <div class="thumbnail-container">
+                                <img class="thumbnail" src="{{.pic}}" alt="{{.name}}">
+                            </div>
+
+                            <div class="information-container">
+                                <div class="profile-container">
+                                    {{ with .git }}
+                                      <a href="https://github.com/{{.}}" target="_blank">
+                                        <img class="service-icon" src="/imgs/icon-github.svg" alt="github">
+                                      </a>
+                                    {{ end }}
+                                    {{ with .twitter }}
+                                      <a href="https://twitter.com/{{.}}" target="_blank">
+                                        <img class="service-icon" src="/imgs/icon-twitter.svg">
+                                      </a>
+                                    {{ end }}
+
+                                    <div class="user-information">
+                                      <div class="user-name">{{.name}}</div>
+                                      <div class="user-position">{{.title}}</div>
+                                    </div>
+                                </div>
+
+                                {{ with .bio }}
+                                  <div class="description-label small">{{.}}</div>
+                                {{end}}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="decoration">
+                    <img class="cloud" src="/imgs/community/blog/author-container-bottom-ground.svg">
+                </div>
+            </div>
+            {{end}}
+        </div>
+        {{ end }}
+        
+        
+    </div>
+</section>
+
+
+  <!-- related content -->
+  {{ partial "related-content.html" . }}
+  {{ partial "footer-cta.html" (dict "theme" "grey")}}
 {{ end }}

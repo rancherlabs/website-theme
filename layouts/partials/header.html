@@ -14,146 +14,594 @@
 <body lang="en" class="{{ replaceRE "/.*" "" ($.Scratch.Get "topLevel").Dir }}">
   <a name="top"></a>
 
-  <!-- {{ partial "mobile-nav.html" . }} -->
+
 <div class="main"> <!--container ends in footer html-->
-  <!-- {{ partial "main-nav.html" . }} -->
 
 
-<!--nav-->
-<header>
+    <header>
+        <nav>
+            <div class="mobile-header-container">
+                <div class="mobile-nav-header">
+                    <div class="logo">
+                        <a href="/"><img class="logo-image" src="/imgs/rancher-logo-horiz-color.png"></a>
+                    </div>
 
-  <nav id="menu" role="navigation" class="main-nav sticky-header">
-    <!--branding-->
-    <div class="nav-logo">
-      <a href="/"><img src="/img/rancher-logo-horiz-white.svg" width="150" height="22" alt="rancher logo"></a>
-    </div>
+                    <div class="mobile-search"><a href="#" class="search-open" data-launch-id="open-search"><img class="icon" src="/imgs/icon-search-mobile.svg"></a></div>
+        
+                    <div class="mobile-menu-opener">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </div>
 
-    <ul>
-      {{ $currentPage := . }}
-      {{ range .Site.Menus.main }}
-        {{ if .HasChildren }}
-          <li class="dropdown sub-menu {{ if $currentPage.HasMenuCurrent " main " . }}active{{ end }}">
-            <a href="{{ .URL }}">{{ .Name }} {{ .Pre }}</a>
-            <ul class="sub dropdown-menu">
-              {{ range .Children }}
-              <li class="{{ if $currentPage.IsMenuCurrent " main " . }}active{{ end }}">
-                <a href="{{ .URL }}">{{ .Name }} {{ .Pre }}</a>
-                {{ end }}
-            </ul>
-          </li>
-        {{else if .URL }}
-          <li class="">
-            <a href="{{.URL}}">{{ .Name }} {{ .Pre }}</a>
-          </li>
-        {{end}}
-      {{end}}
+                <div class="nav-mobile-menus jquery-accordion-menu">
+                    <ul class="mobile-menus-wrap">
+                        <li class="mobile-menu-item">
+                            <a class="mobile-menu" href="#">Why Rancher?</a>
 
-      <li class="only-small dropdown sub-menu">
-        <a>More</a>
-        <ul class="sub dropdown-menu">
-          <li>
-            <a class="modal-open" data-launch-id="pricing">Pricing</a>
-          </li>
-          <li>
-            <a href="https://info.rancher.com/rancher-kubernetes-online-training" target="_blank" rel="noopener">Training</a></li>
-          </li>
-          <li>
-            <a href="/quick-start">Deploy</a></li>
-          </li>
-          <li>
-            <a class="modal-open" data-launch-id="support">Support</a>
-          </li>
-          <li>
-            <a class="modal-open" data-launch-id="demo">Request a Demo</a>
-          </li>
-        </ul>
-      </li>
-    </ul>
+                            <ul class="submenu submenus-wrap">
+                                <li class=""><a href="/what-is-rancher/overview/">Why Rancher?</a></li>
+                                <li class=""><a href="/kubernetes/">Why Kubernetes?</a></li>
+                                <li class=""><a href="/what-is-rancher/what-rancher-adds-to-kubernetes/">What Rancher Adds to Kubernetes</a></li>
+                                <li class=""><a href="/what-is-rancher/how-is-rancher-different/">The Rancher Difference</a></li>
+                            </ul>
+                        </li>
+                        <li class="mobile-menu-item">
+                            <a class="mobile-menu" href="#">Products</a>
 
-    <div class="toggle-search inline-block">
-      <!--search-->
-      <button class="search-open text-white" data-launch-id="open-search"><i class="material-icons">search</i></button>
+                            <ul class="submenu submenus-wrap">
+                                <li><a href="/products/">Overview</a></li>
+                                <li><a href="/products/rancher/">Rancher</a></li>
+                                <li><a href="/rancher-os/">RancherOS</a></li>
+                                <li><a href="http://k3s.io" target="_blank">k3s</a></li>
+                                <li><a href="http://k3os.io" target="_blank">k3OS</a></li>
+                                <li><a href="http://submariner.io" target="_blank">Submariner</a></li>
+                                <li><a href="/request-a-demo/">Request a demo</a></li>
+                            </ul>
+                        </li>
+                        <li class="mobile-menu-item">
+                            <a class="mobile-menu" href="#">Customers</a>
 
-      <!--toggle-->
-      <a href="#menu" class="menu-link">
-        <span></span>
-      </a>
-    </div>
+                            <ul class="submenu submenus-wrap">
+                                <li><a href="/customers/illumina/">Illumina</a></li>
+                                <li><a href="/customers/sling/">Sling TV</a></li>
+                                <li><a href="/customers/eoc/">EOC</a></li>
+                                <li><a href="/customers/deutsche-bahn/">Deutsche Bahn</a></li>
+                                <li><a href="/customers/">See All Customer Stories</a></li>
+                            </ul>
+                        </li>
+                        <li class="mobile-menu-item">
+                            <a class="mobile-menu" href="#">Community</a>
 
-  </nav>
+                            <ul class="submenu submenus-wrap">
+                                <li><a href="/community">Overview</a></li>
+                                <li><a href="/training/">Training</a></li>
+                                <li><a href="/tutorials/">Tutorials</a></li>
+                                <li><a href="/events/">Events</a></li>
+                                <li><a href="/online-meetups/">Online Meetups</a></li>
+                                <li><a href="/rodeos/">Rancher Rodeos</a></li>
+                                <li><a href="/kubernetes-master-class/">Kubernetes Master Classes</a></li>
+                                <li><a href="/writing-program/">Rancher Writing Program</a></li>
+                                <li><a href="/quick-start/">Getting Started Guide</a></li>
+                                <li><a href="/blog/">Blog</a></li>
+                                <li><a href="/ebooks-and-whitepapers/">eBooks & Whitepapers</a></li>
+                                <li><a href="/videos-and-podcasts/">Videos & Podcasts</a></li>
+                                <li><a href="https://forums.rancher.com/">Forums</a></li>
+                                <li><a href="http://slack.rancher.io/">Slack</a></li>
+                                <li><a href="https://github.com/rancher">Github</a></li>
+                            </ul>
+                        </li>
+                        <li class="mobile-menu-item">
+                            <a class="mobile-menu" href="#">Company</a>
 
-  <nav>
-    <ul class="secondary-nav row middle-xs end-xs">
-      <li>
-        <button class="modal-open btn" data-launch-id="pricing">Pricing</button>
-        <div class="modal-content" id="pricing">
-          <div class="content">
-            <h3>Request Pricing</h3>
-            <hr/>
-            <div class="rnchr-hbspt-form">
-              <script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/v2.js"></script>
-              <script>
-                hbspt.forms.create({
-                  css: '',
-                  portalId: '468859',
-                  formId: 'bf52b40f-ddc4-4bbb-8464-59067b55565b'
-                });
-              </script>
+                            <ul class="submenu submenus-wrap">
+                                <li><a href="/about/">About us</a></li>
+                                <li><a href="/careers/">Careers</a></li>
+                                <li><a href="/partners/">Partners</a></li>
+                                <li><a href="/press/">Press</a></li>
+                                <li><a href="/contact/">Contact us</a></li>
+                            </ul>
+                        </li>
+
+                        <li class="mobile-menu-item option-menu"><a href="/docs/">Docs</a></li>
+                        <li class="mobile-menu-item option-menu"><a href="/support">Support</a></li>
+                        <li class="mobile-menu-item option-menu"><a href="/request-a-demo/">Request a demo</a></li>
+                        <li class="mobile-menu-item option-menu"><a href="/contact/">Contact</a></li>
+                        <li class="mobile-menu-item option-menu"><a href="/pricing/">Pricing</a></li>
+                        <li class="mobile-menu-item option-menu get-started"><a href="/quick-start/">Get started</a></li>
+                    </ul>
+                </div>
             </div>
-          </div>
-        </div>
-      </li>
 
-      <li><a href="https://info.rancher.com/rancher-kubernetes-online-training" class="btn" target="_blank" rel="noopener">Training</a></li>
+            <div class="header-container">
+                <div class="header-wrap">
+                    <div class="header-option-menus">
+                        <ul>
+                            <li><a href="/docs/">Docs</a></li>
+                            <li><a href="/request-a-demo/">Request a demo</a></li>
+                            <li><a href="/pricing/">Pricing</a></li>
+                            <li><a href="/support">Support</a></li>
+                            <li><a href="/contact/">Contact</a></li>
+                            <li class="search"><a href="#" class="search-open" data-launch-id="open-search"><img class="icon" src="/imgs/icon-search.svg"></a></li>
+                        </ul>
+                    </div>
 
-      <li><a href="/quick-start" class="btn">Deploy</a></li>
+                    <div class="header-primary-menus">
+                        <div class="logo">
+                            <a href="/"><img class="logo-image" src="/imgs/rancher-logo-horiz-color.png"></a>
+                        </div>
+            
+                        <div class="primary-menus">
+                            <ul class="primary-menus-wrap">
+                                <li class="primary-menu-item menu-why_rancher">
+                                    <a class="primary-menu" href="/what-is-rancher/overview">Why RANCHER?</a>
 
-      <li>
-        <button class="modal-open btn" data-launch-id="support">Support</button>
-        <div class="modal-content" id="support">
-          <div class="content">
-            <h3>Get Support</h3>
-            <hr/>
-            <div class="rnchr-hbspt-form">
-              <script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/v2.js"></script>
-              <script>
-                hbspt.forms.create({
-                  css: '',
-                  portalId: '468859',
-                  formId: '237d641d-a939-4f18-bb35-4c870bd85597'
-                });
-              </script>
+                                    <ul class="primary-menus-sub">
+                                        <div class="grid-container">
+                                            <div class="row">
+                                                <div class="col">
+                                                    <li class="menus-container">
+                                                        <a href="/what-is-rancher/overview/">
+                                                            <span>Why Rancher?</span>
+                                                            <svg class="icon right" enable-background="new 0 0 34 34" viewBox="0 0 34 34" xmlns="http://www.w3.org/2000/svg">
+                                                                <g class="svg-linear" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10">
+                                                                    <path d="m19.5 12 5 5-5 5"></path>
+                                                                    <path d="m24.5 17h-15"></path>
+                                                                </g>
+                                                            </svg>
+                                                        </a>
+                                                        <a href="/kubernetes/">
+                                                            <span>Why Kubernetes?</span>
+                                                            <svg class="icon right" enable-background="new 0 0 34 34" viewBox="0 0 34 34" xmlns="http://www.w3.org/2000/svg">
+                                                                <g class="svg-linear" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10">
+                                                                    <path d="m19.5 12 5 5-5 5"></path>
+                                                                    <path d="m24.5 17h-15"></path>
+                                                                </g>
+                                                            </svg>
+                                                        </a>
+                                                        <a href="/what-is-rancher/what-rancher-adds-to-kubernetes/">
+                                                            <span>What Rancher Adds to Kubernetes </span>
+                                                            <svg class="icon right" enable-background="new 0 0 34 34" viewBox="0 0 34 34" xmlns="http://www.w3.org/2000/svg">
+                                                                <g class="svg-linear" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10">
+                                                                    <path d="m19.5 12 5 5-5 5"></path>
+                                                                    <path d="m24.5 17h-15"></path>
+                                                                </g>
+                                                            </svg>
+                                                        </a>
+                                                        <a href="/what-is-rancher/how-is-rancher-different/">
+                                                            <span>The Rancher Difference </span>
+                                                            <svg class="icon right" enable-background="new 0 0 34 34" viewBox="0 0 34 34" xmlns="http://www.w3.org/2000/svg">
+                                                                <g class="svg-linear" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10">
+                                                                    <path d="m19.5 12 5 5-5 5"></path>
+                                                                    <path d="m24.5 17h-15"></path>
+                                                                </g>
+                                                            </svg>
+                                                        </a>
+                                                    </li>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </ul>
+                                </li>
+                                <li class="primary-menu-item menu-products">
+                                    <a class="primary-menu" href="/products">Products</a>
+
+                                    <ul class="primary-menus-sub">
+                                        <div class="grid-container">
+                                            <div class="row">
+                                                <div class="col-12 right">
+                                                    <li class="menus-container">
+                                                        <a href="/products/">
+                                                            <span>Overview</span>
+                                                            <svg class="icon right" enable-background="new 0 0 34 34" viewBox="0 0 34 34" xmlns="http://www.w3.org/2000/svg">
+                                                                <g class="svg-linear" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10">
+                                                                    <path d="m19.5 12 5 5-5 5"/>
+                                                                    <path d="m24.5 17h-15"/>
+                                                                </g>
+                                                            </svg>
+                                                        </a>
+                                                        <a href="/products/rancher/">
+                                                            <span>Rancher</span>
+                                                            <svg class="icon right" enable-background="new 0 0 34 34" viewBox="0 0 34 34" xmlns="http://www.w3.org/2000/svg">
+                                                                <g class="svg-linear" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10">
+                                                                    <path d="m19.5 12 5 5-5 5"/>
+                                                                    <path d="m24.5 17h-15"/>
+                                                                </g>
+                                                            </svg>
+                                                        </a>
+                                                        <a href="/rancher-os">
+                                                            <span>RancherOS</span>
+                                                            <svg class="icon right" enable-background="new 0 0 34 34" viewBox="0 0 34 34" xmlns="http://www.w3.org/2000/svg">
+                                                                <g class="svg-linear" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10">
+                                                                    <path d="m19.5 12 5 5-5 5"/>
+                                                                    <path d="m24.5 17h-15"/>
+                                                                </g>
+                                                            </svg>
+                                                        </a>
+                                                        <a href="http://k3s.io" target="_blank">
+                                                            <span>k3s</span>
+                                                            <svg class="icon right" enable-background="new 0 0 34 34" viewBox="0 0 34 34" xmlns="http://www.w3.org/2000/svg">
+                                                                <g class="svg-linear" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10">
+                                                                    <path d="m19.5 12 5 5-5 5"/>
+                                                                    <path d="m24.5 17h-15"/>
+                                                                </g>
+                                                            </svg>
+                                                        </a>
+                                                        <a href="http://k3os.io" target="_blank">
+                                                            <span>k3OS</span>
+                                                            <svg class="icon right" enable-background="new 0 0 34 34" viewBox="0 0 34 34" xmlns="http://www.w3.org/2000/svg">
+                                                                <g class="svg-linear" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10">
+                                                                    <path d="m19.5 12 5 5-5 5"/>
+                                                                    <path d="m24.5 17h-15"/>
+                                                                </g>
+                                                            </svg>
+                                                        </a>
+                                                        <a href="http://submariner.io" target="_blank">
+                                                            <span>Submariner</span>
+                                                            <svg class="icon right" enable-background="new 0 0 34 34" viewBox="0 0 34 34" xmlns="http://www.w3.org/2000/svg">
+                                                                <g class="svg-linear" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10">
+                                                                    <path d="m19.5 12 5 5-5 5"/>
+                                                                    <path d="m24.5 17h-15"/>
+                                                                </g>
+                                                            </svg>
+                                                        </a>
+                                                        <a class="box" href="/request-a-demo/">
+                                                            <span>Request a demo</span>
+                                                        </a>
+                                                    </li>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </ul>
+                                </li>
+                                <li class="primary-menu-item menu-customers">
+                                    <a class="primary-menu" href="/customers">Customers</a>
+
+                                    <ul class="primary-menus-sub">
+                                        <div class="grid-container">
+                                            <div class="row">
+                                                <div class="col left">
+                                                    <li class="feature-container single split-half">
+                                                        <div class="label">Featured</div>
+
+                                                        <div class="article-item">
+                                                            <div class="article-thumbmail">
+                                                                <img class="image" src="/imgs/header-customers-featured-thumbnail.png">
+                                                            </div>
+
+                                                            <div class="article-texts">
+                                                                <a href="/customers/illumina/">
+                                                                    <h2 class="title-label">Illumina</h2>
+                                                                    <p class="description-label">
+                                                                        Illumina Innovates with Rancher and Kubernetes
+
+                                                                        <svg class="icon right" enable-background="new 0 0 34 34" viewBox="0 0 34 34" xmlns="http://www.w3.org/2000/svg">
+                                                                            <g class="svg-linear" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10">
+                                                                                <path d="m19.5 12 5 5-5 5"/>
+                                                                                <path d="m24.5 17h-15"/>
+                                                                            </g>
+                                                                        </svg>
+                                                                    </p>
+                                                                </a>
+                                                            </div>
+                                                        </div>
+                                                    </li>
+                                                </div>
+                                                <div class="col right">
+                                                    <li class="menus-container">
+                                                        <div class="label">More Customers</div>
+
+                                                        <a href="/customers/sling/">
+                                                            <span>Sling TV</span>
+                                                            <svg class="icon right" enable-background="new 0 0 34 34" viewBox="0 0 34 34" xmlns="http://www.w3.org/2000/svg">
+                                                                <g class="svg-linear" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10">
+                                                                    <path d="m19.5 12 5 5-5 5"/>
+                                                                    <path d="m24.5 17h-15"/>
+                                                                </g>
+                                                            </svg>
+                                                        </a>
+                                                        <a href="/customers/eoc/">
+                                                            <span>EOC</span>
+                                                            <svg class="icon right" enable-background="new 0 0 34 34" viewBox="0 0 34 34" xmlns="http://www.w3.org/2000/svg">
+                                                                <g class="svg-linear" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10">
+                                                                    <path d="m19.5 12 5 5-5 5"/>
+                                                                    <path d="m24.5 17h-15"/>
+                                                                </g>
+                                                            </svg>
+                                                        </a>
+                                                        <a href="/customers/deutsche-bahn/">
+                                                            <span>Deutsche Bahn</span>
+                                                            <svg class="icon right" enable-background="new 0 0 34 34" viewBox="0 0 34 34" xmlns="http://www.w3.org/2000/svg">
+                                                                <g class="svg-linear" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10">
+                                                                    <path d="m19.5 12 5 5-5 5"/>
+                                                                    <path d="m24.5 17h-15"/>
+                                                                </g>
+                                                            </svg>
+                                                        </a>
+                                                        <a class="box" href="/customers/">
+                                                            <span>See All Customer Stories</span>
+                                                        </a>
+                                                    </li>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </ul>
+                                </li>
+                                <li class="primary-menu-item menu-community">
+                                    <a class="primary-menu" href="/learn">Community</a>
+
+                                    <ul class="primary-menus-sub">
+                                        <div class="grid-container">
+                                            <div class="row">
+                                                <div class="left">
+                                                    <li class="articles-container split-half">
+                                                        <div class="label">The Rancher Community
+                                                            <ul class="sns-services set-right">
+                                                                <li><a href="https://twitter.com/Rancher_Labs" target="_blank"><img src="/imgs/icon-twitter.svg"></a></li>
+                                                                <li><a href="https://www.linkedin.com/groups/6977008/profile" target="_blank"><img src="/imgs/icon-linkedin.svg"></a></li>
+                                                                <li><a href="https://www.facebook.com/rancherlabs/" target="_blank"><img src="/imgs/icon-facebook.svg"></a></li>
+                                                                <li><a href="https://www.youtube.com/channel/UCh5Xtp82q8wjijP8npkVTBA" target="_blank"><img src="/imgs/icon-youtube.svg"></a></li>
+                                                            </ul>
+                                                        </div>
+
+                                                        <div class="articles-wrap">
+                                                            <div class="article-item">
+                                                                <div class="article-texts">
+                                                                    <a href="/community/">
+                                                                        <p class="title-label">Community</p>
+                                                                    </a>
+                                                                </div>
+                                                            </div>
+                                                            <div class="article-item">
+                                                                <div class="article-texts">
+                                                                    <a href="/online-meetups/">
+                                                                        <p class="title-label">Online Meetups</p>
+                                                                    </a>
+                                                                </div>
+                                                            </div>
+                                                            <div class="article-item">
+                                                                <div class="article-texts">
+                                                                    <a href="/training/">
+                                                                        <p class="title-label">Training</p>
+                                                                    </a>
+                                                                </div>
+                                                            </div>
+                                                            <div class="article-item">
+                                                                <div class="article-texts">
+                                                                    <a href="/rodeos/">
+                                                                        <p class="title-label">Rancher Rodeos</p>
+                                                                    </a>
+                                                                </div>
+                                                            </div>
+                                                            <div class="article-item">
+                                                                <div class="article-texts">
+                                                                    <a href="/tutorials/">
+                                                                        <p class="title-label">Tutorials</p>
+                                                                    </a>
+                                                                </div>
+                                                            </div>
+                                                            <div class="article-item">
+                                                                <div class="article-texts">
+                                                                    <a href="/kubernetes-master-class/">
+                                                                        <p class="title-label">Kubernetes Master Classes</p>
+                                                                    </a>
+                                                                </div>
+                                                            </div>
+                                                            <div class="article-item">
+                                                                <div class="article-texts">
+                                                                    <a href="/events/">
+                                                                        <p class="title-label">Events</p>
+                                                                    </a>
+                                                                </div>
+                                                            </div>
+                                                            <div class="article-item">
+                                                                <div class="article-texts">
+                                                                    <a href="/writing-program/">
+                                                                        <p class="title-label">Rancher Writing Program</p>
+                                                                    </a>
+                                                                </div>
+                                                            </div>
+                                                            <div class="article-item type-list">
+                                                                <div class="article-texts">
+                                                                    <a href="https://forums.rancher.com/">
+                                                                        <p class="title-label">Forums</p>
+                                                                    </a>
+                                                                    <a href="http://slack.rancher.io/">
+                                                                        <p class="title-label">Slack</p>
+                                                                    </a>
+                                                                    <a href="https://github.com/rancher">
+                                                                        <p class="title-label">Github</p>
+                                                                    </a>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+
+                                                        <!-- <div class="article-item">
+                                                            <div class="article-thumbmail"></div>
+                                                            <div class="article-texts">
+                                                                <h1 class="title-label">
+                                                                    Forums
+                                                                </h1>
+                                                                <p class="description-label">
+                                                                    Lucidus malesuada vero sudo appellatio facilisi iaceo
+                                                                </p>
+                                                            </div>
+                                                        </div>
+                                                        <div class="article-item">
+                                                            <div class="article-thumbmail"></div>
+                                                            <div class="article-texts">
+                                                                <h1 class="title-label">
+                                                                    Docs
+                                                                </h1>
+                                                                <p class="description-label">
+                                                                    Lucidus malesuada vero sudo appellatio facilisi iaceo
+                                                                </p>
+                                                            </div>
+                                                        </div>
+                                                        <div class="article-item">
+                                                            <div class="article-thumbmail"></div>
+                                                            <div class="article-texts">
+                                                                <h1 class="title-label">
+                                                                    Slack
+                                                                </h1>
+                                                                <p class="description-label">
+                                                                    Saepius tortor consectetuer meus abigo pneum cursus
+                                                                </p>
+                                                            </div>
+                                                        </div>
+                                                        <div class="article-item">
+                                                            <div class="article-thumbmail"></div>
+                                                            <div class="article-texts">
+                                                                <h1 class="title-label">
+                                                                    Training
+                                                                </h1>
+                                                                <p class="description-label">
+                                                                    Saepius tortor consectetuer meus abigo pneum cursus
+                                                                </p>
+                                                            </div>
+                                                        </div>
+                                                        <div class="article-item">
+                                                            <div class="article-thumbmail"></div>
+                                                            <div class="article-texts">
+                                                                <h1 class="title-label">
+                                                                    Github
+                                                                </h1>
+                                                                <p class="description-label">
+                                                                    Saepius tortor consectetuer meus abigo pneum cursus
+                                                                </p>
+                                                            </div>
+                                                        </div>
+                                                        <div class="article-item">
+                                                            <div class="article-thumbmail"></div>
+                                                            <div class="article-texts">
+                                                                <h1 class="title-label">
+                                                                    Event & Meetups
+                                                                </h1>
+                                                                <p class="description-label">
+                                                                    Saepius tortor consectetuer meus abigo pneum cursus
+                                                                </p>
+                                                            </div>
+                                                        </div> -->
+                                                    </li>
+                                                </div>
+                                                <div class="right">
+                                                    <li class="menus-container">
+                                                        <div class="label">Content Library</div>
+
+                                                        <a href="/quick-start/">
+                                                            <span>Getting Started Guide</span>
+                                                            <svg class="icon right" enable-background="new 0 0 34 34" viewBox="0 0 34 34" xmlns="http://www.w3.org/2000/svg">
+                                                                <g class="svg-linear" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10">
+                                                                    <path d="m19.5 12 5 5-5 5"/>
+                                                                    <path d="m24.5 17h-15"/>
+                                                                </g>
+                                                            </svg>
+                                                        </a>
+                                                        <a href="/blog/">
+                                                            <span>Blog</span>
+                                                            <svg class="icon right" enable-background="new 0 0 34 34" viewBox="0 0 34 34" xmlns="http://www.w3.org/2000/svg">
+                                                                <g class="svg-linear" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10">
+                                                                    <path d="m19.5 12 5 5-5 5"/>
+                                                                    <path d="m24.5 17h-15"/>
+                                                                </g>
+                                                            </svg>
+                                                        </a>
+                                                        <a href="/ebooks-and-whitepapers/">
+                                                            <span>eBooks & Whitepapers</span>
+                                                            <svg class="icon right" enable-background="new 0 0 34 34" viewBox="0 0 34 34" xmlns="http://www.w3.org/2000/svg">
+                                                                <g class="svg-linear" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10">
+                                                                    <path d="m19.5 12 5 5-5 5"/>
+                                                                    <path d="m24.5 17h-15"/>
+                                                                </g>
+                                                            </svg>
+                                                        </a>
+                                                        <a href="/videos-and-podcasts/">
+                                                            <span>Videos & Podcasts</span>
+                                                            <svg class="icon right" enable-background="new 0 0 34 34" viewBox="0 0 34 34" xmlns="http://www.w3.org/2000/svg">
+                                                                <g class="svg-linear" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10">
+                                                                    <path d="m19.5 12 5 5-5 5"/>
+                                                                    <path d="m24.5 17h-15"/>
+                                                                </g>
+                                                            </svg>
+                                                        </a>
+                                                    </li>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </ul>
+                                </li>
+                                <li class="primary-menu-item menu-company">
+                                    <a class="primary-menu" href="/about/">Company</a>
+
+                                    <ul class="primary-menus-sub">
+                                        <div class="grid-container">
+                                            <div class="row">
+                                                <div class="col">
+                                                    <li class="menus-container">
+                                                        <a href="/about/">
+                                                            <span>About us</span>
+                                                            <svg class="icon right" enable-background="new 0 0 34 34" viewBox="0 0 34 34" xmlns="http://www.w3.org/2000/svg">
+                                                                <g class="svg-linear" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10">
+                                                                    <path d="m19.5 12 5 5-5 5"/>
+                                                                    <path d="m24.5 17h-15"/>
+                                                                </g>
+                                                            </svg>
+                                                        </a>
+                                                        <a href="/careers/">
+                                                            <span>Careers</span>
+                                                            <svg class="icon right" enable-background="new 0 0 34 34" viewBox="0 0 34 34" xmlns="http://www.w3.org/2000/svg">
+                                                                <g class="svg-linear" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10">
+                                                                    <path d="m19.5 12 5 5-5 5"/>
+                                                                    <path d="m24.5 17h-15"/>
+                                                                </g>
+                                                            </svg>
+                                                        </a>
+                                                        <a href="/partners/">
+                                                            <span>Partners</span>
+                                                            <svg class="icon right" enable-background="new 0 0 34 34" viewBox="0 0 34 34" xmlns="http://www.w3.org/2000/svg">
+                                                                <g class="svg-linear" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10">
+                                                                    <path d="m19.5 12 5 5-5 5"/>
+                                                                    <path d="m24.5 17h-15"/>
+                                                                </g>
+                                                            </svg>
+                                                        </a>
+                                                        <a href="/press/">
+                                                            <span>Press</span>
+                                                            <svg class="icon right" enable-background="new 0 0 34 34" viewBox="0 0 34 34" xmlns="http://www.w3.org/2000/svg">
+                                                                <g class="svg-linear" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10">
+                                                                    <path d="m19.5 12 5 5-5 5"/>
+                                                                    <path d="m24.5 17h-15"/>
+                                                                </g>
+                                                            </svg>
+                                                        </a>
+                                                        <a href="/contact/">
+                                                            <span>Contact us</span>
+                                                            <svg class="icon right" enable-background="new 0 0 34 34" viewBox="0 0 34 34" xmlns="http://www.w3.org/2000/svg">
+                                                                <g class="svg-linear" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10">
+                                                                    <path d="m19.5 12 5 5-5 5"/>
+                                                                    <path d="m24.5 17h-15"/>
+                                                                </g>
+                                                            </svg>
+                                                        </a>
+                                                    </li>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </ul>
+                                </li>
+                                <li class="primary-menu-item menu-get_started get-started">
+                                    <a href="/quick-start/">Get started</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
             </div>
-          </div>
-        </div>
-      </li>
+        </nav>
+    </header>
 
-      <li>
-        <button class="modal-open btn border-btn p-a-xs" data-launch-id="demo">Request a Demo</button>
-        <div class="modal-content" id="demo">
-          <div class="content">
-            <h3>Request a Demo</h3>
-            <hr/>
-            <div class="rnchr-hbspt-form">
-              <!--[if lte IE 8]>
-              <script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/v2-legacy.js"></script>
-              <![endif]-->
-              <script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/v2.js"></script>
-              <script>
-                hbspt.forms.create({
-                portalId: "468859",
-                formId: "e0ee1553-4dd6-47bf-b078-ed09dfa5040a",
-                css: "",
-                sfdcCampaignId: "7010a000002uLIGAA2"
-              });
-              </script>
-            </div>
-          </div>
-        </div>
-      </li>
-    </ul>
-  </nav>
-</header>
+
 
 <div class="modal-content" id="open-search">
   <div class="content search-modal">

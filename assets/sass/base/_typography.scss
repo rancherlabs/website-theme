@@ -1,398 +1,153 @@
-/**
- * Basic typography style for copy text
- */
-
-html {
-  font-size: 11px;
-}
-
-body {
-  font-family: $text-font-stack;
-  color: $text-color;
-  counter-reset: sidenote-counter;
-  font-weight: 400;
-  letter-spacing: .03em;
-}
-
+// default heading.
 h1 {
-  margin-bottom: 1rem;
-  font-family: $text-font-header;
-  font-size: 4rem;
-  line-height: 5rem;
-  font-weight: 600;
-  font-style: normal;
-  color: $text-color;
+  margin: 0;
+  margin-bottom: 20px;
+
+  font-family: "Poppins";
+  font-size: 60px;
+  font-weight: 200;
+
+  line-height: 1.167;
+
+  @media (max-width: 575.98px) {
+    margin-bottom: 14px;
+
+    font-size: 2em;
+  }
+  @media (min-width: 576px) and (max-width: 767.98px) {
+    margin-bottom: 16px;
+
+    font-size: 2.4em;
+  }
+  @media (min-width: 768px) and (max-width: 991.98px) {
+    margin-bottom: 18px;
+
+    font-size: 2.9em;
+  }
+  @media (min-width: 992px) and (max-width: 1199.98px) {
+    margin-bottom: 20px;
+
+    font-size: 3.3em;
+  }
 }
 
 h2 {
-  margin-bottom: 1rem;
-  font-family: $text-font-header;
-  font-size: 3rem;
-  line-height: 4rem;
-  font-weight: 600;
-  font-style: normal;
-  color: lighten($text-color, 10%);
+  margin: 0;
+  margin-bottom: 20px;
+
+  font-family: "Poppins";
+  font-size: 40px;
+  font-weight: 200;
+
+  line-height: 1.125;
+
+  @media (max-width: 575.98px) {
+    font-size: 1.75em;
+  }
+  @media (min-width: 576px) and (max-width: 767.98px) {
+    font-size: 1.9em;
+  }
+  @media (min-width: 768px) and (max-width: 991.98px) {
+    font-size: 2.1em;
+  }
+  @media (min-width: 992px) and (max-width: 1199.98px) {
+    font-size: 2.4em;
+  }
 }
 
 h3 {
-  margin-bottom: 1rem;
-  font-family: $text-font-header;
-  font-size: 2.25rem;
-  line-height: 3rem;
-  font-weight: 600;
-  font-style: normal;
-  color: lighten($text-color, 20%);
+  margin: 0;
+  margin-bottom: 20px;
+
+  font-family: "Poppins";
+  font-size: 30px;
+  font-weight: 100;
+
+  line-height: 1.5;
+
+  @media (max-width: 575.98px) {
+    font-size: 0.9em;
+    line-height: 1.6;
+  }
+  @media (min-width: 576px) and (max-width: 767.98px) {
+    font-size: 1.2em;
+  }
+  @media (min-width: 768px) and (max-width: 991.98px) {
+    font-size: 1.8em;
+    line-height: 1.35;
+  }
+  @media (min-width: 992px) and (max-width: 1199.98px) {
+    font-size: 2em;
+    line-height: 1.4;
+  }
 }
 
 h4 {
-  margin-bottom: 1rem;
-  font-family: $text-font-header;
-  font-size: 1.75rem;
-  line-height: 2.75rem;
-  font-weight: 600;
-  font-style: normal;
-  color: lighten($text-color, 30%);
+  position: relative;
+
+  margin: 0.25em 0;
+
+  font-size: 25px;
+  font-weight: lighter;
+  font-weight: 200;
+  font-weight: 100;
+
+  @media (max-width: 575.98px) {
+    font-size: .9em;
+  }
+  @media (min-width: 576px) and (max-width: 767.98px) {
+    font-size: 1em;
+  }
+  @media (min-width: 768px) and (max-width: 991.98px) {
+    font-size: 1.2em;
+  }
+  @media (min-width: 992px) and (max-width: 1199.98px) {
+    font-size: 1.3em;
+  }
+  @media (min-width: 1200px) and (max-width: 1279px) {
+    font-size: 1.4em;
+  }
 }
 
 h5 {
-  margin-bottom: 1rem;
-  font-family: $text-font-header;
-  font-size: 1.5rem;
-  line-height: 2.5rem;
-  font-weight: 600;
-  font-style: normal;
-  color: lighten($text-color, 40%);
+  font-size: 11px;
+  font-weight: lighter;
+  font-weight: 200;
+  font-weight: 100;
+
+  @media (max-width: 1279px) {
+    font-size: 0.9em;
+  }
 }
 
-h6 {
-  margin-bottom: 1rem;
-  font-family: $text-font-header;
-  font-size: 1.25rem;
-  line-height: 2.5rem;
-  font-weight: 600;
-  font-style: normal;
-  color: lighten($text-color, 50%);
-}
+h1,
+h2,
+h3,
+h4,
+h5 {
+  &.light {
+    font-weight: lighter;
+    font-weight: 100;
+  }
 
-
-hr {
-  display: block;
-  border: 0;
-  border-top: 1px solid $light-grey;
-  margin: 2em auto;
-  padding: 0;
-  clear: both;
-}
-
-article {
-  position: relative;
-}
-
-p,
-ol,
-ul,
-table {
-  font-size: 1.4rem;
-  line-height: 2rem;
-}
-
-p {
-  vertical-align: baseline;
-  font-size: 1.4rem;
-  line-height: 2.4rem;
-  margin-top: .7rem;
-  margin-bottom: 1.4rem;
-  padding-right: 0;
-  vertical-align: baseline;
-  letter-spacing: .03em;
-}
-
-blockquote {
-  font-size: 1.2rem;
-  font-weight: 400;
-  line-height: 2rem;
-  font-family: $text-font-header;
-}
-
-cite {
-  display: block;
-  font-family: $text-font-header;
-  font-size: 1.4rem;
-  line-height: 2rem;
-  font-weight: 300;
-  font-style: normal;
-  padding-top: 10px;
-  letter-spacing: .5px;
-  color: $mid-grey;
-}
-
-figure {
-  padding: 0;
-  border: 0;
-  font-size: 100%;
-  font: inherit;
-  vertical-align: baseline;
-  -webkit-margin-start: 0;
-  -webkit-margin-end: 0;
-  margin: 0 0 3em 0;
-}
-
-figcaption {
-  margin-top: 0;
-  margin-bottom: 0;
-  vertical-align: baseline;
-  position: relative;
-
-  h4 {
-    font-size: 1.1rem;
-    line-height: 1.6;
+  &.normal {
     font-weight: normal;
-    font-style: italic;
-  }
-}
-
-figure.fullwidth figcaption {
-  margin-right: 24%;
-}
-
-
-
-/* Sidenotes, margin notes, figures, captions */
-
-img {
-  max-width: 100%;
-}
-
-
-code {
-  font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;
-  font-size: 1.0rem;
-  line-height: 1.42;
-}
-
-.sans>code {
-  font-size: 1.2rem;
-}
-
-h1>code,
-h2>code,
-h3>code {
-  font-size: 0.80em;
-}
-
-code {
-  padding: .2em;
-  margin: 0;
-  font-size: 85%;
-  border-radius: 3px;
-  color: $success;
-  background-color: rgba($success, .15);
-  padding: 2px 4px;
-}
-
-
-pre {
-  background-color: $dark-grey!important;
-  white-space: pre;
-  -webkit-hyphens: none;
-  -ms-hyphens: none;
-  hyphens: none;
-  position: relative;
-  max-height: 75vh;
-  border-radius: 3px;
-  overflow: auto;
-
-  code {
-    display: block;
-    padding: $spacer-xs;
-    font-size: 1.25rem;
-    line-height: 2;
-    overflow-x: auto;
-    background: transparent;
-  }
-}
-
-.highlight pre {
-  background-color: inherit;
-  color: inherit;
-  padding: .5em;
-  font-size: .875rem;
-}
-
-
-//icons
-.material-icons {
-  vertical-align: middle;
-  font-size: inherit;
-
-  &.dot {
-    border: solid 3px;
-    border-radius: 50%;
-
-  }
-}
-
-
-//list helpers
-ul {
-  &.unstyled {
-    margin: 0;
-    padding: 0;
-    list-style: none;
+    font-weight: 300;
   }
 
-  li {
-    margin-bottom: calc($spacer-xs / 2);
+  &.bold {
+    font-weight: bold;
+    font-weight: 500;
   }
 
-  &.underlined {
-    padding: 0;
-    margin: 0;
-    list-style: none;
-
-    li {
-      border-bottom: $light-grey solid thin;
-      padding: $spacer-xs;
-    }
+  &.heavy,
+  .heavy {
+    font-weight: bolder;
+    font-weight: 900;
+    letter-spacing: -0.025em;
   }
-}
 
-@media screen and (max-width: 720px) {}
-
-//text helpers
-.text-sm {
-  font-size: 1rem !important;
-  line-height: 1.5;
-  font-weight: 300;
-}
-
-.text-md {
-  font-size: 2rem !important;
-  line-height: 3rem;
-}
-
-.text-lg {
-  font-size: 3rem !important;
-  line-height: 4rem;
-}
-
-.text-huge {
-  font-size: 5rem !important;
-  line-height: 6rem;
-  margin: 0;
-}
-
-//alternative styles
-.lead {
-  font-size: 2em;
-  line-height: 3rem;
-  color: $mid-grey;
-}
-
-.light {
-  font-weight: light;
-}
-
-//text
-.text-left {
-  text-align: left!important;
-}
-
-.text-center {
-  text-align: center!important;
-}
-
-.text-right {
-  text-align: right!important;
-}
-
-.text-normal {
-  font-weight: normal;
-}
-
-.text-italic {
-  font-style: italic;
-}
-
-.text-bold {
-  font-weight: $bold-weight;
-}
-
-/* roboto-regular - latin */
-@font-face {
-  font-family: 'Roboto';
-  font-style: normal;
-  font-weight: 400;
-  src: url('../fonts/roboto-v18-latin-regular.eot'); /* IE9 Compat Modes */
-  src: local('Roboto'), local('Roboto-Regular'),
-       url('../fonts/roboto-v18-latin-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-       url('../fonts/roboto-v18-latin-regular.woff2') format('woff2'), /* Super Modern Browsers */
-       url('../fonts/roboto-v18-latin-regular.woff') format('woff'), /* Modern Browsers */
-       url('../fonts/roboto-v18-latin-regular.ttf') format('truetype'), /* Safari, Android, iOS */
-       url('../fonts/roboto-v18-latin-regular.svg#Roboto') format('svg'); /* Legacy iOS */
-}
-
-/* poppins-regular - latin */
-@font-face {
-  font-family: 'Poppins';
-  font-style: normal;
-  font-weight: 400;
-  src: url('../fonts/poppins-v5-latin-regular.eot'); /* IE9 Compat Modes */
-  src: local('Poppins Regular'), local('Poppins-Regular'),
-       url('../fonts/poppins-v5-latin-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-       url('../fonts/poppins-v5-latin-regular.woff2') format('woff2'), /* Super Modern Browsers */
-       url('../fonts/poppins-v5-latin-regular.woff') format('woff'), /* Modern Browsers */
-       url('../fonts/poppins-v5-latin-regular.ttf') format('truetype'), /* Safari, Android, iOS */
-       url('../fonts/poppins-v5-latin-regular.svg#Poppins') format('svg'); /* Legacy iOS */
-}
-
-/* poppins-600 - latin */
-@font-face {
-  font-family: 'Poppins';
-  font-style: normal;
-  font-weight: bold;
-  src: url('../fonts/poppins-v5-latin-600.eot'); /* IE9 Compat Modes */
-  src: local('Poppins SemiBold'), local('Poppins-SemiBold'),
-       url('../fonts/poppins-v5-latin-600.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-       url('../fonts/poppins-v5-latin-600.woff2') format('woff2'), /* Super Modern Browsers */
-       url('../fonts/poppins-v5-latin-600.woff') format('woff'), /* Modern Browsers */
-       url('../fonts/poppins-v5-latin-600.ttf') format('truetype'), /* Safari, Android, iOS */
-       url('../fonts/poppins-v5-latin-600.svg#Poppins') format('svg'); /* Legacy iOS */
-}
-
-@font-face {
-  font-family: 'Material Icons';
-  font-style: normal;
-  font-weight: 400;
-  src: url('../fonts/MaterialIcons-Regular.eot'); /* For IE6-8 */
-  src: local('Material Icons'),
-       local('MaterialIcons-Regular'),
-       url('../fonts/MaterialIcons-Regular.woff2') format('woff2'),
-       url('../fonts/MaterialIcons-Regular.woff') format('woff'),
-       url('../fonts/MaterialIcons-Regular.ttf') format('truetype');
-}
-
-.material-icons {
-  font-family: 'Material Icons';
-  font-weight: normal;
-  font-style: normal;
-  font-size: 24px;  /* Preferred icon size */
-  display: inline-block;
-  line-height: 1;
-  text-transform: none;
-  letter-spacing: normal;
-  word-wrap: normal;
-  white-space: nowrap;
-  direction: ltr;
-
-  /* Support for all WebKit browsers. */
-  -webkit-font-smoothing: antialiased;
-  /* Support for Safari and Chrome. */
-  text-rendering: optimizeLegibility;
-
-  /* Support for Firefox. */
-  -moz-osx-font-smoothing: grayscale;
-
-  /* Support for IE. */
-  font-feature-settings: 'liga';
+  .small {
+    font-size: 50%;
+  }
 }

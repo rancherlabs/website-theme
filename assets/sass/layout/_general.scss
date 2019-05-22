@@ -1,0 +1,229 @@
+// default container.
+.container {
+  position: relative;
+  display: inline-block;
+
+  width: 100%;
+}
+
+
+// contents.
+body {
+  @media (max-width: 575.98px) {
+
+    &:before,
+    &:after {
+      z-index: -1;
+      content: '';
+      position: absolute;
+
+      top: 0;
+      left: $mobile-side-space;
+
+      width: 1px;
+      height: 100%;
+
+      background-color: $c-gray-base-light;
+
+      // remove lines.
+      display: none;
+    }
+
+    &:after {
+      right: $mobile-side-space;
+      left: initial;
+    }
+  }
+}
+
+main::before {
+  @media (max-width: 575.98px) {
+    content: '';
+    position: absolute;
+
+    top: 0;
+    left: calc(50% - .5px);
+
+    width: 1px;
+    height: 100%;
+
+    background-color: $c-gray-base-light;
+
+    // remove lines.
+    display: none;
+  }
+}
+
+section.blank {
+  .row {
+    >div {
+      height: 200px;
+
+      @media (min-width: 576px) and (max-width: 991.98px) {
+        height: 100px;
+      }
+    }
+  }
+}
+
+.set-lines {
+  >div {
+    &:after {
+      content: '';
+      position: absolute;
+
+      right: 0;
+      bottom: 0;
+
+      height: 100%;
+
+      border-left: 1px solid $c-gray-base-light;
+
+      @media (max-width: 575.98px) {
+        display: none;
+      }
+    }
+
+    &.set-line-half:after {
+      height: 50%;
+    }
+
+    &:first-child:before {
+      content: '';
+      position: absolute;
+
+      left: 0;
+      bottom: 0;
+
+      height: 100%;
+
+      border-left: 1px solid $c-gray-base-light;
+
+      @media (max-width: 575.98px) {
+        display: none;
+      }
+    }
+
+    &.line-none {
+      &:after {
+        display: none;
+      }
+    }
+
+    // remove lines.
+    &:before,
+    &:after {
+      display: none;
+    }
+  }
+}
+
+.set-ground {
+  position: absolute;
+
+  top: 0;
+  left: 50%;
+
+  width: 100%;
+  height: 100%;
+
+  @include transform(translateX(-50%));
+
+  >div {
+
+    &:before,
+    &:after {
+      height: 100%;
+    }
+  }
+}
+
+
+// support scrollable.
+.scrollable {
+  overflow: auto;
+  -webkit-overflow-scrolling: touch;
+
+  >ul {
+    position: relative;
+  }
+}
+
+
+
+
+// search box.
+.overlay-search {
+  .search-results {
+    .ais-infinite-hits--item {
+      h3 {
+        margin-bottom: 10px;
+
+        font-size: 25px;
+
+        @media (max-width: 575.98px) {
+          font-size: 1.1em;
+        }
+        @media (min-width: 576px) and (max-width: 767.98px) {
+          font-size: 1.2em;
+        }
+        @media (min-width: 768px) and (max-width: 991.98px) {
+          font-size: 1.3em;
+        }
+        @media (min-width: 992px) and (max-width: 1199.98px) {
+          font-size: 1.4em;
+        }
+        @media (min-width: 1200px) and (max-width: 1279px) {
+          font-size: 1.5em;
+        }
+      }
+
+      .body {
+        font-size: 18px;
+        font-weight: 300;
+
+        line-height: 1.775;
+
+        @media (max-width: 575.98px) {
+          font-size: 1.05em;
+          line-height: 1.5;
+        }
+        @media (min-width: 576px) and (max-width: 767.98px) {
+          font-size: .9em;
+        }
+        @media (min-width: 768px) and (max-width: 991.98px) {
+          font-size: 1em;
+          line-height: 1.5;
+        }
+        @media (min-width: 992px) and (max-width: 1199.98px) {
+          font-size: 1.15em;
+          line-height: 1.6;
+        }
+      }
+    }
+  }
+}
+
+
+// for testing.
+.test {
+  position: absolute;
+
+  top: 50%;
+  left: 50%;
+
+  color: #fff;
+  font-family: 'Poppins';
+  font-size: 11px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+
+  @include transform(translate(-50%, -50%));
+
+  @media (max-width: 575.98px) {
+    color: rgba(#fff, .5);
+    font-size: 9px;
+    font-weight: 400;
+  }
+}

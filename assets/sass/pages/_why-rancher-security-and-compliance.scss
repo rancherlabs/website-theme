@@ -1,0 +1,605 @@
+.why-rancher-security-and-compliance-screen1 {
+    background-color: $c-gray-base-light;
+
+    .decoration {
+        position: relative;
+
+        width: 100%;
+
+        line-height: 0;
+    }
+
+    .texts-container {
+        padding-right: 0;
+        padding-left: 0;
+
+        line-height: 0;
+
+        .texts-wrap {
+            z-index: 1;
+
+            margin-top: 200px;
+            margin-bottom: 120px;
+
+            .title-label {
+                margin-bottom: 35px;
+                color: #000;
+                font-size: 50px;
+                font-weight: 200;
+            }
+            
+            .description-label {
+                color: #000;
+                line-height: 1.4;
+            }
+        }
+    }
+
+    .lower-container {
+        height: 120px;
+
+        margin-top: -120px;
+
+        line-height: 0;
+
+        .decoration {
+            position: relative;
+
+            height: 100%;
+
+            &.ground {
+                .ground-lower {
+                    position: relative;
+                    
+                    width: auto;
+                    height: 75px;
+
+                    margin-top: 45px;
+                    margin-left: 60%;
+                }
+
+                .ground-upper {
+                    position: absolute;
+
+                    bottom: 0;
+                    left: 77%;
+
+                    width: auto;
+                    height: 130px;
+                }
+            }
+        }
+    }
+
+    @media (max-width: 575.98px) {
+        .texts-container {
+            padding-left: 0;
+            padding-right: 0;
+
+            .texts-wrap {
+                margin-top: 140px;
+                margin-bottom: 90px;
+                padding-right: $mobile-side-space;
+                padding-left: $mobile-side-space;
+
+                .title-label {
+                    margin-bottom: 10px;
+                
+                    font-size: 2em;
+                }
+            }
+        }
+
+        .lower-container {
+            height: 100px;
+
+            margin-top: -100px;
+
+            .decoration.ground .ground-lower {
+                height: 44px;
+
+                margin-top: 56px;
+                margin-left: 15%;
+            }
+            .decoration.ground .ground-upper {
+                left: 54%;
+
+                height: 100px;
+            }
+        }
+    }
+    @media (min-width: 576px) and (max-width: 767.98px) {
+        .texts-container {
+            .texts-wrap {
+                margin-top: 150px;
+                margin-bottom: 80px;
+                padding-right: 25px;
+                padding-left: 25px;
+
+                .title-label {
+                    margin-bottom: 15px;
+
+                    font-size: 2em;
+                }
+            }
+        }
+
+        .lower-container .decoration.ground .ground-lower {
+            margin-left: 45%;
+
+            height: 55px;
+            margin-top: 65px;
+        }
+        .lower-container .decoration.ground .ground-upper {
+            left: 70%;
+
+            height: 100px;
+        }
+    }
+    @media (min-width: 768px) and (max-width: 991.98px) {
+        .texts-container {
+            .texts-wrap {
+                margin-top: 180px;
+                margin-bottom: 110px;
+                padding-right: 25px;
+                padding-left: 25px;
+
+                .title-label {
+                    margin-bottom: 20px;
+
+                    font-size: 2.4em;
+                }
+            }
+        }
+
+        .lower-container .decoration.ground .ground-lower {
+            margin-left: 45%;
+        }
+    }
+    @media (min-width: 992px) and (max-width: 1199.98px) {
+        .texts-container {
+            .texts-wrap {
+                margin-top: 200px;
+                margin-bottom: 110px;
+                padding-right: 25px;
+                padding-left: 25px;
+
+                .title-label {
+                    margin-bottom: 25px;
+
+                    font-size: 2.8em;
+                }
+            }
+        }
+
+        .lower-container .decoration.ground .ground-lower {
+            margin-left: 45%;
+        }
+    }
+}
+
+.why-rancher-security-and-compliance-screen2 {
+    .contents-container {
+        padding-top: 150px;
+    }
+
+    .texts-container {}
+    .texts-wrap {
+        .title-label {
+            margin-bottom: 50px;
+
+            text-align: center;
+        }
+
+        .sub-title-label {
+            margin-top: 0;
+            margin-bottom: 15px;
+
+            font-size: 25px;
+            font-weight: 300;
+        }
+
+        .label {
+            margin-bottom: 30px;
+
+            color: $c-gray;
+
+            &:first-child {
+                margin-top: 60px;
+            }
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+    }
+
+    @media (max-width: 575.98px) {
+    }
+    @media (min-width: 576px) and (max-width: 767.98px) {
+    }
+    @media (min-width: 768px) and (max-width: 991.98px) {
+    }
+    @media (min-width: 992px) and (max-width: 1199.98px) {
+    }
+}
+
+.why-rancher-security-and-compliance-screen3,
+.why-rancher-security-and-compliance-screen4 {
+    .contents-container {
+        padding-top: 150px;
+    }
+
+    .texts-container {
+        .description-label {
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+
+        a.button {
+            position: relative;
+            display: inline-block;
+
+            height: 50px;
+
+            margin-top: 20px;
+            padding: 0 30px;
+
+            line-height: 50px;
+        }
+    }
+
+    .thumbnail-wrap {
+        line-height: 0;
+
+        .thumbnail {
+            width: 100%;
+            height: auto;
+        }
+    }
+
+    @media (max-width: 575.98px) {
+        .contents-container {
+            padding-top: 50px;
+        }
+
+        .texts-wrap {
+            text-align: center;
+
+            a.button {
+                width: auto;
+                height: 40px;
+
+                font-size: 14px;
+                line-height: 40px;
+            }
+        }
+
+        .thumbnail-container {
+            margin-top: 40px;
+
+            .browser-item {
+                width: 80%;
+
+                margin-right: auto;
+                margin-left: auto;
+            }
+        }
+    }
+    @media (min-width: 576px) and (max-width: 767.98px) {
+        .contents-container {
+            padding-top: 70px;
+        }
+
+        .texts-wrap {
+            text-align: center;
+
+            a.button {
+                height: 44px;
+                line-height: 44px;
+            }
+        }
+
+        .thumbnail-container {
+            margin-top: 40px;
+
+            .browser-item {
+                width: 80%;
+                max-width: 480px;
+
+                margin-right: auto;
+                margin-left: auto;
+            }
+        }
+    }
+    @media (min-width: 768px) and (max-width: 991.98px) {
+        .contents-container {
+            padding-top: 100px;
+        }
+    }
+    @media (min-width: 992px) and (max-width: 1199.98px) {
+        .contents-container {
+            padding-top: 120px;
+        }
+    }
+}
+
+.why-rancher-security-and-compliance-screen5 {
+    .contents-container {
+        padding-top: 150px;
+        padding-bottom: 0;
+    }
+
+    .texts-container {
+        .title-label {
+            text-align: center;
+
+            line-height: 1.25;
+        }
+
+        .description-label {
+            text-align: center;
+        }
+    }
+
+    .cards-container {
+        padding-right: 0;
+        padding-left: 0;
+    }
+    .card-container {
+        margin-top: 30px;
+
+        .card-item {
+            position: relative;
+            display: inline-block;
+
+            width: 100%;
+            height: 100%;
+
+            padding: 45px 30px;
+
+            background-color: $c-blue;
+            border-radius: 10px;
+
+            text-align: center;
+
+            .title-label {
+                margin-bottom: 10px;
+
+                color: #fff;
+                font-size: 22px;
+                font-family: 'Poppins';
+                font-weight: 400;
+
+                text-align: center;
+            }
+
+            .description-label {
+                color: #fff;
+                font-size: 15px;
+                line-height: 1.665;
+                font-weight: 400;
+                text-align: center;
+
+                &:last-child {
+                    margin-bottom: 0;
+                }
+            }
+        }
+    }
+
+    @media (max-width: 575.98px) {
+        .contents-container {
+            padding-top: 50px;
+            padding-bottom: 100px;
+        }
+
+        .cards-container {
+            padding-right: $mobile-side-space;
+            padding-left: $mobile-side-space;
+
+            text-align: center;
+        }
+        .card-container .card-item {
+            display: inline-block;
+
+            width: 80%;
+
+            margin-right: auto;
+            margin-left: auto;
+            padding: 25px 20px;
+
+            .title-label {
+                font-size: 18px;
+            }
+
+            .description-label {
+                font-size: 12px;
+            }
+        }
+    }
+    @media (min-width: 576px) and (max-width: 767.98px) {
+        .contents-container {
+            padding-top: 80px;
+            padding-bottom: 150px;
+        }
+
+        .cards-container {
+            padding-right: $mobile-side-space;
+            padding-left: $mobile-side-space;
+        }
+        .card-container .card-item {
+            padding: 25px 20px;
+
+            .title-label {
+                font-size: 18px;
+            }
+
+            .description-label {
+                font-size: 12px;
+            }
+        }
+    }
+    @media (min-width: 768px) and (max-width: 991.98px) {
+        .contents-container {
+            padding-top: 100px;
+            padding-bottom: 180px;
+        }
+
+        .cards-container {
+            padding-right: $mobile-side-space;
+            padding-left: $mobile-side-space;
+        }
+        .card-container .card-item {
+            padding: 30px;
+
+            .title-label {
+                font-size: 20px;
+            }
+
+            .description-label {
+                font-size: 13px;
+            }
+        }
+    }
+    @media (min-width: 992px) and (max-width: 1199.98px) {
+        .contents-container {
+            padding-top: 120px;
+            padding-bottom: 200px;
+        }
+
+        .cards-container {
+            padding-right: $mobile-side-space;
+            padding-left: $mobile-side-space;
+        }
+    }
+}
+
+.why-rancher-security-and-compliance-screen6 {
+    .contents-container {
+        padding-top: 150px;
+        padding-bottom: 250px;
+    }
+
+    .texts-container {
+        .title-label {
+            text-align: center;
+
+            line-height: 1.25;
+        }
+    }
+
+    .card-container {
+        margin-top: 30px;
+
+        .card-item {
+            position: relative;
+            display: inline-block;
+
+            width: 100%;
+            height: 100%;
+
+            padding: 50px;
+            padding-bottom: 110px;
+
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 25px 20px 50px rgba($c-blue-dark1, .15);
+
+            text-align: center;
+
+            .title-label {
+                font-size: 22px;
+                font-family: 'Poppins';
+                font-weight: 300;
+
+                text-align: center;
+            }
+
+            .description-label {
+                font-size: 15px;
+
+                text-align: center;
+
+                &:last-child {
+                    margin-bottom: 0;
+                }
+            }
+
+            a.button {
+                position: absolute;
+                display: inline-block;
+
+                left: 50%;
+                bottom: 50px;
+
+                min-width: 175px;
+
+                padding: 0 20px;
+
+                line-height: 50px;
+
+                @include transform(translateX(-50%));
+            }
+        }
+    }
+
+    @media (max-width: 575.98px) {
+        .contents-container {
+            padding-top: 50px;
+            padding-bottom: 100px;
+        }
+
+        .card-container .card-item {
+            padding: 30px 30px;
+            padding-bottom: 80px;
+        }
+        .card-container .card-item a.button {
+            bottom: 30px;
+
+            width: auto;
+            height: 40px;
+
+            font-size: 14px;
+            line-height: 40px;
+        }
+    }
+    @media (min-width: 576px) and (max-width: 767.98px) {
+        .contents-container {
+            padding-top: 80px;
+            padding-bottom: 150px;
+        }
+
+        .card-container .card-item {
+            padding: 35px 25px;
+            padding-bottom: 85px;
+        }
+        .card-container .card-item a.button {
+            bottom: 35px;
+
+            height: 44px;
+            line-height: 44px;
+        }
+    }
+    @media (min-width: 768px) and (max-width: 991.98px) {
+        .contents-container {
+            padding-top: 100px;
+            padding-bottom: 180px;
+        }
+
+        .card-container .card-item {
+            padding: 40px;
+            padding-bottom: 80px;
+        }
+        .card-container .card-item a.button {
+            bottom: 40px;
+        }
+    }
+    @media (min-width: 992px) and (max-width: 1199.98px) {
+        .contents-container {
+            padding-top: 120px;
+            padding-bottom: 200px;
+        }
+    }
+}

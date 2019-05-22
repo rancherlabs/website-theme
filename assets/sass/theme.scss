@@ -1,65 +1,83 @@
 // 1. Configuration and helpers
-@import
-'abstracts/variables',
-'abstracts/functions',
-'abstracts/mixins';
+@import "abstracts/variables", "abstracts/functions", "abstracts/mixins";
+
+@import "variable/variable";
+@import "variable/color";
 
 // 2. Vendors
-@import
-'vendor/normalize',
-'vendor/loryslider',
-'vendor/flexboxgrid';
-
+@import "vendor/normalize", "vendor/loryslider", "vendor/flexboxgrid";
 
 // 3. Base stuff
-@import
-'base/base',
-'base/fonts',
-'base/typography',
-'base/colors',
-'base/helpers';
+@import "base/base", "base/fonts", "base/typography", "base/colors",
+"base/helpers";
+
+@import "base/animations";
 
 // 4. Layout-related sections
-@import
-'layout/grid',
-'layout/header',
-'layout/footer',
-'layout/sidebar',
-'layout/page-content',
-'layout/extra-small',
-'layout/small',
-'layout/medium',
-'layout/large';
+@import "layout/grid", "layout/header", "layout/footer";
 
-// 5. Components
-@import
-'components/breadcrumbs',
-'components/button',
-'components/dropdown',
-'components/forms',
-'components/tree',
-'components/tabs',
-'components/tags',
-'components/search';
+@import "vendor/grid";
+@import "vendor/slick";
+@import "layout/general";
+
+
+@import "components/general";
+@import "components/tweet-box";
+@import "components/search";
 
 // 6. Page-specific styles
-@import
-'pages/home',
-'pages/404',
-'pages/lists-single',
-'pages/about',
-'pages/careers',
-'pages/news',
-'pages/partners',
-'pages/testimonials',
-'pages/customers',
-'pages/rodeos',
-'pages/training',
-'pages/brand-guidelines';
-
-// 7 break points
-@import
-'layout/extra-small',
-'layout/small',
-'layout/medium',
-'layout/large';
+@import "pages/common";
+@import "pages/hero";
+@import "pages/index";
+@import "pages/why-rancher";
+@import "pages/why-rancher-hybrid-multi-cloud";
+@import "pages/why-rancher-workload-management";
+@import "pages/why-rancher-security-and-compliance";
+@import "pages/why-rancher-open-source";
+@import "pages/why-rancher-how-is-rancher-built";
+@import "pages/why-rancher-cluster-operations";
+@import "pages/why-kubernetes";
+@import "pages/rancheros";
+@import "pages/rancher-difference";
+@import "pages/customers";
+@import "pages/customers-detail";
+@import "pages/products";
+@import "pages/products-rancher-supercharge-helm-via-the-application-catalog";
+@import "pages/products-rancher-take-control-of-the-api";
+@import "pages/products-rancher-rancher-puts-your-security-first";
+@import "pages/products-rancher-makes-clusters-immediately-usetful";
+@import "pages/products-rancher-multi-cluster-management";
+@import "pages/products-rancher-easy-provisioning";
+@import "pages/products-rancher-control-all";
+@import "pages/products-rancher-os";
+@import "pages/products-rancher-2_2";
+@import "pages/products-training";
+@import "pages/products-support";
+@import "pages/products-support-cta";
+@import "pages/products-pricing-cta";
+@import "pages/products-request-a-demo-cta";
+@import "pages/community";
+@import "pages/community-online-meetups";
+@import "pages/community-tutorials";
+@import "pages/community-training";
+@import "pages/community-events-and-meetups";
+@import "pages/community-ebooks";
+@import "pages/community-videos-and-podcasts";
+@import "pages/community-blog";
+@import "pages/community-getstarted";
+@import "pages/community-kubernetes-master-class";
+@import "pages/company-about-us";
+@import "pages/company-careers";
+@import "pages/company-partners";
+@import "pages/company-partners-contact";
+@import "pages/company-press";
+@import "pages/company-contact-us";
+@import "pages/writing-program";
+@import "pages/writing-program-research-assistant";
+@import "pages/writing-program-research-writer";
+@import "pages/rodeo";
+@import "pages/tags";
+@import "pages/legal-documents";
+@import "pages/docs";
+@import "pages/what-rancher-adds-to-kubernetes";
+@import "pages/brand-guidelines";
