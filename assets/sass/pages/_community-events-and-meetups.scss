@@ -1083,6 +1083,7 @@
     .thumbnail-container {
       position: relative;
       display: inline-block;
+      overflow: hidden;
 
       width: 100%;
       min-height: 250px;
@@ -1093,12 +1094,15 @@
 
       line-height: 0;
 
+      > img, 
       .thumbnail {
         position: relative;
         display: inline-block;
 
         width: 100%;
         height: auto;
+
+        opacity: 0;
       }
     }
 
