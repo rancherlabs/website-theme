@@ -1083,6 +1083,7 @@
     .thumbnail-container {
       position: relative;
       display: inline-block;
+      overflow: hidden;
 
       width: 100%;
       min-height: 250px;
