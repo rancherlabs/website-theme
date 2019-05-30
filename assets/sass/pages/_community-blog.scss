@@ -1211,6 +1211,10 @@
       &:last-child {
         margin-bottom: 0;
       }
+
+      code {
+        white-space: nowrap;
+      }
     }
 
     a {
@@ -1420,6 +1424,25 @@
         font-size: 20px;
         font-weight: 400;
         line-height: 1.5;
+      }
+
+      .buttons-container {
+        text-align: center;
+      }
+      .button {
+        position: relative;
+        display: inline-block;
+
+        height: auto;
+
+        padding-top: 15px;
+        padding-bottom: 15px;
+
+        line-height: 1;
+
+        span {
+          white-space: normal;
+        }
       }
     }
 
