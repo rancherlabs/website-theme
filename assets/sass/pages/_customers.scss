@@ -1798,7 +1798,7 @@
   @media (max-width: 575.98px) {
     .texts-container {
       padding-top: 120px;
-      
+
       .title-label {
         line-height: 1.4;
       }
@@ -1844,6 +1844,10 @@
   .logo-wrapper {
     flex: none;
     width: 10%;
+
+    IMG {
+      max-width: 100%;
+    }
   }
 
   .info-wrapper {
