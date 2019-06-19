@@ -384,8 +384,6 @@
             margin-left: 16px;
             padding: 40px 30px 0;
 
-            background-color: transparent;
-
             &:before {
                 content: '';
                 position: absolute;
@@ -1156,6 +1154,8 @@
         display: none;
     }
 
+    .docs-wrap {}
+
     .texts-container {
         h1 {
             margin-top: 5px;
@@ -1204,7 +1204,7 @@
             position: relative;
             display: inline-block;
 
-            width: 100%;
+            max-width: 100%;
             height: auto;
 
             margin: 15px 0;
@@ -1588,6 +1588,9 @@
     }
 
     @media (max-width: 575.98px) {
+        .head-blank {
+            height: 190px;
+        }
         .search-container {
             margin-bottom: 30px;
         }
@@ -1599,6 +1602,10 @@
         }
     }
     @media (min-width: 576px) and (max-width: 767.98px) {
+        .head-blank {
+            height: 190px;
+        }
+
         .search-container {
             margin-bottom: 40px;
         }
@@ -1611,7 +1618,7 @@
     }
     @media (min-width: 768px) and (max-width: 991.98px) {
         .head-blank {
-            height: 135px;
+            height: 85px;
         }
 
         .contents-container {
@@ -1626,6 +1633,11 @@
             .texts-container {
                 padding-right: $mobile-side-space;
             }
+        }
+    }
+    @media (min-width: 992px) and (max-width: 1024.98px) {
+        .head-blank {
+            height: 85px;
         }
     }
     @media (min-width: 992px) and (max-width: 1199.98px) {
@@ -1718,6 +1730,7 @@
     .docs-container .guide-menus {
         overflow: hidden;
         overflow-y: auto;
+        -webkit-overflow-scrolling: touch;
 
         flex: 0 0 100%;
 
