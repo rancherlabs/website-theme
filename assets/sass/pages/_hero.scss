@@ -374,7 +374,7 @@
 
         @media (max-width: 575.98px) {
           margin-bottom: 10px;
-          
+
           font-size: 30px;
         }
         @media (min-width: 576px) and (max-width: 767.98px) {
@@ -538,22 +538,22 @@
 
         @media (max-width: 575.98px) {
           margin-bottom: 14px;
-      
+
           font-size: 2em;
         }
         @media (min-width: 576px) and (max-width: 767.98px) {
           margin-bottom: 16px;
-      
+
           font-size: 2.4em;
         }
         @media (min-width: 768px) and (max-width: 991.98px) {
           margin-bottom: 18px;
-      
+
           font-size: 2.9em;
         }
         @media (min-width: 992px) and (max-width: 1199.98px) {
           margin-bottom: 20px;
-      
+
           font-size: 3.3em;
         }
       }
@@ -754,22 +754,22 @@
 
         @media (max-width: 575.98px) {
           margin-bottom: 14px;
-      
+
           font-size: 2em;
         }
         @media (min-width: 576px) and (max-width: 767.98px) {
           margin-bottom: 16px;
-      
+
           font-size: 2.4em;
         }
         @media (min-width: 768px) and (max-width: 991.98px) {
           margin-bottom: 18px;
-      
+
           font-size: 2.6em;
         }
         @media (min-width: 992px) and (max-width: 1199.98px) {
           margin-bottom: 20px;
-      
+
           font-size: 2.8em;
         }
       }
@@ -1106,7 +1106,7 @@
 
     @media (max-width: 575.98px) {
       margin-bottom: 10px;
-      
+
       font-size: 30px;
     }
     @media (min-width: 576px) and (max-width: 767.98px) {
@@ -1204,7 +1204,7 @@
     .texts-wrap {
       .title-label {
         margin-bottom: 10px;
-          
+
         font-size: 30px;
       }
     }
@@ -1301,5 +1301,24 @@
     .texts-container {
       padding-left: 25px;
     }
+  }
+}
+
+.cta-banner {
+  padding: 25px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 15px 25px 75px rgba($c-blue-dark1, .1);
+  text-align: center;
+  z-index: 1;
+  position: relative;
+  margin: 25px;
+
+  p {
+    margin: 0 0 0 15px;
+  }
+
+  .button {
+    vertical-align: middle;
   }
 }
