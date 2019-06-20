@@ -234,7 +234,6 @@ button.button {
 
   &:hover {
     color: #fff;
-
     box-shadow: 8px 15px 30px rgba($c-blue, 0.1);
     background-color: rgba($c-blue, 1);
   }
@@ -360,7 +359,7 @@ button.button {
     &.block-hover:hover {
       span:before {
         bottom: 0;
-  
+
         height: 10px;
 
         background-color: rgba($c-blue, 0.1);

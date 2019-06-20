@@ -1,52 +1,54 @@
 {{ define "hero" }}
-        <section class="hero-type3">
-            <div class="grid-container">
-                <div class="row">
-                    <div class="col-12 upper-container">
-                        <div class="decoration cloud-big">
-                            <img class="image" src="/imgs/products/rancher/hero-decoration-cloud-white.svg">
-                        </div>
-                    </div>
-                </div>
-
-                <div class="row max-sized">
-                    <div class="
-                        col-xl-7 
-                        col-lg-7 
-                        col-md-7 
-                        col-sm-7 
-                        col-xs-10 
-                        texts-container">
-                        <div class="texts-wrap">
-                            {{ with .Title }}
-                            <h1 class="title-label">
-                            {{ . }}
-                            </h1>
-                            {{ end }}
-
-                            {{ with .Params.description }}
-                            <h4 class="description-label">
-                            {{ . }}
-                            </h4>
-                            {{ end }}
-                        </div>
-                    </div>
-                </div>
-
-                <div class="row">
-                    <div class="col-xl-12 lower-container">
-                        <div class="decoration ground">
-                            <img class="floating1-1" src="/imgs/products/rancher/screen1-decoration-floating1-1.png">
-                            <img class="floating1-2" src="/imgs/products/rancher/screen1-decoration-floating1-2.png">
-                            <img class="floating2-1" src="/imgs/products/rancher/screen1-decoration-floating2.png">
-                            <img class="floating2-2" src="/imgs/products/rancher/screen1-decoration-floating2.png">
-                            <img class="ground-lower" src="/imgs/products/screen1-background-ground-lower.svg">
-                            <img class="ground-upper" src="/imgs/products/screen1-background-ground-upper.svg">
-                        </div>
-                    </div>
+<section class="hero-type3">
+    <div class="grid-container">
+        <div class="row">
+            <div class="col-12 upper-container">
+                <div class="decoration cloud-big">
+                    <img class="image" src="/imgs/products/rancher/hero-decoration-cloud-white.svg">
                 </div>
             </div>
-        </section>
+        </div>
+
+        <div class="row max-sized">
+            <div class="
+                col-xl-7
+                col-lg-7
+                col-md-7
+                col-sm-7
+                col-xs-10
+                texts-container">
+                <div class="texts-wrap">
+                    {{ with .Title }}
+                    <h1 class="title-label">
+                    {{ . }}
+                    </h1>
+                    {{ end }}
+
+                    {{ with .Params.description }}
+                    <h4 class="description-label">
+                    {{ . }}
+                    </h4>
+                    {{ end }}
+
+                    {{ partial "ctaheader" . }}
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-xl-12 lower-container">
+                <div class="decoration ground">
+                    <img class="floating1-1" src="/imgs/products/rancher/screen1-decoration-floating1-1.png">
+                    <img class="floating1-2" src="/imgs/products/rancher/screen1-decoration-floating1-2.png">
+                    <img class="floating2-1" src="/imgs/products/rancher/screen1-decoration-floating2.png">
+                    <img class="floating2-2" src="/imgs/products/rancher/screen1-decoration-floating2.png">
+                    <img class="ground-lower" src="/imgs/products/screen1-background-ground-lower.svg">
+                    <img class="ground-upper" src="/imgs/products/screen1-background-ground-upper.svg">
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 {{ end }}
 
 {{ define "main" }}
