@@ -1404,39 +1404,6 @@
   }
 }
 
-.back-to-the-top {
-  a {
-    padding-top: 10px;
-    padding-bottom: 10px;
-
-    color: $c-green !important;
-    font-size: 12px;
-    text-transform: uppercase;
-
-    border-top: 1px solid $c-gray-base-light;
-
-    .svg-icon {
-      position: absolute;
-
-      width: 28px;
-      height: auto;
-
-      margin-top: -5px;
-      margin-left: 15px;
-
-      .svg-linear {
-        fill: none;
-        stroke: $c-green;
-        stroke-width: 1.5px;
-        stroke-linecap: round;
-        stroke-linejoin: round;
-        stroke-miterlimit: 10;
-      }
-    }
-  }
-}
-
-
 /* Menu Wrapper
 ===========================================*/
 .jquery-accordion-menu,
@@ -1655,7 +1622,6 @@
 .jquery-accordion-menu ul ul.submenu,
 .jquery-accordion-menu ul ul.submenu li ul.submenu {
   width: 100%;
-  display: none;
   position: static;
 }
 
