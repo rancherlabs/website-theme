@@ -162,17 +162,17 @@ const bootstrapSorts = function() {
 const toggleNav = function(input, mode="toggle"/*show, hide*/) {
   let $target = $(input);
   let children = $target.find('>UL');
-  let icon = $target.find('>.expand-toggle');
+  let $link = $target.find('>A');
 
   let show = ((mode === 'toggle' && children.hasClass('hide')) || mode === 'show' );
 
   if (children.length > 0) {
     if ( show ) {
       children.removeClass('hide');
-      icon.html('indeterminate_check_box');
+      $link.addClass('submenu-indicator-minus');
     } else {
       children.addClass('hide');
-      icon.html('add_box');
+      $link.removeClass('submenu-indicator-minus');
     }
   }
 
@@ -189,18 +189,12 @@ const toggleNav = function(input, mode="toggle"/*show, hide*/) {
 }
 
 const bootstrapNav = function () {
-  // mobile nav
-  // init-attaches to js object
-  $.fn.mlStackNav();
-  // consume
-  $(".js-ml-stack-nav").mlStackNav();
-
   // sidenav
   $('.tree-nav').on('click', '.tree-nav-item', function(e) {
     // actual clicked element
     let target = e.target;
 
-    if (target.href) {
+    if (target.href && !target.href.match(/#$/) ) {
       return;
     }
 
@@ -210,20 +204,6 @@ const bootstrapNav = function () {
 
     toggleNav(e.currentTarget);
   });
-
-  // expand the current page
-  let cur = $('.side-menus-wrap.second a[href="'+window.location.pathname+'"]').closest('li.tree-nav-item');
-  let upper = cur.closest('ul.tree-nav-sublist');
-  let upper2 = upper.parent().closest('ul.tree-nav-sublist');
-
-  cur.addClass('active');
-  toggleNav(cur, 'show');
-  $('.tree-nav').removeClass('invisible');
-
-  upper.css('display', 'block');
-  upper2.css('display', 'block');
-  upper.closest('.tree-nav-item.open').find('> a').addClass('submenu-indicator-minus');
-  upper2.closest('.tree-nav-item.open').find('> a').addClass('submenu-indicator-minus');
 }
 
 const bootstrapScrollSpy = function () {

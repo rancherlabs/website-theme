@@ -28,7 +28,7 @@
             font-size: 50px;
             font-weight: 200;
         }
-        
+
         .description-label {
             color: #000;
             font-size: 25px;
@@ -62,7 +62,7 @@
 
             left: 26%;
             bottom: 0;
-            
+
             width: auto;
             height: 76px;
         }
@@ -84,10 +84,10 @@
             margin-bottom: 110px;
             padding-right: 25px;
             padding-left: 25px;
-        
+
             .title-label {
                 margin-bottom: 16px;
-            
+
                 font-size: 2em;
             }
 
@@ -96,7 +96,7 @@
                 font-weight: 100;
             }
         }
-    
+
         .lower-container {
             height: 100px;
             margin-top: -100px;
@@ -113,7 +113,7 @@
 
             width: auto;
             height: 100%;
-            
+
             margin-top: 0;
             margin-left: 18%;
         }
@@ -124,10 +124,10 @@
             margin-bottom: 220px;
             padding-right: 25px;
             padding-left: 25px;
-        
+
             .title-label {
                 margin-bottom: 16px;
-            
+
                 font-size: 2.3em;
             }
 
@@ -136,7 +136,7 @@
                 font-weight: 100;
             }
         }
-    
+
         .lower-container {
             height: 120px;
             margin-top: -120px;
@@ -153,7 +153,7 @@
 
             width: auto;
             height: 100%;
-            
+
             margin-top: 0;
         }
     }
@@ -163,19 +163,19 @@
             margin-bottom: 150px;
             padding-right: 25px;
             padding-left: 25px;
-        
+
             .title-label {
                 margin-bottom: 18px;
-            
+
                 font-size: 2.6em;
             }
-            
+
             .description-label {
                 font-size: 1.25em;
                 font-weight: 100;
             }
         }
-    
+
         .lower-container {
             height: 120px;
             margin-top: -120px;
@@ -192,7 +192,7 @@
 
             width: auto;
             height: 100%;
-            
+
             margin-top: 0;
         }
     }
@@ -200,10 +200,10 @@
         .texts-container .texts-wrap {
             padding-right: 25px;
             padding-left: 25px;
-        
+
             .title-label {
                 margin-bottom: 20px;
-            
+
                 font-size: 2.8em;
             }
 
@@ -212,7 +212,7 @@
                 font-weight: 100;
             }
         }
-    
+
         .lower-container .decoration.ground .ground-lower {
             margin-left: 5%;
         }
@@ -308,7 +308,7 @@
 
             .button {
                 display: inline-block;
-                
+
                 margin: 0;
 
                 height: auto;
@@ -370,14 +370,14 @@
     @media (max-width: 575.98px) {
         &.floating .contents-container {
             position: relative;
-        
+
             margin-top: -40px;
         }
 
         .decoration {
             margin-bottom: 10px;
         }
-        
+
         .texts-container {
             flex: 0 0 calc(100% - 32px);
             margin-right: 16px;
@@ -430,14 +430,14 @@
     @media (min-width: 576px) and (max-width: 767.98px) {
         &.floating .content-container {
             position: relative;
-        
+
             margin-top: -150px;
         }
 
         .decoration .document {
             width: 64%;
         }
-        
+
         .texts-container {
             padding: 40px 30px 0;
 
@@ -942,6 +942,13 @@
 
             white-space: normal;
         }
+
+        & > LI.active > A {
+          background-color: rgba($c-blue, .1);
+          color: $c-blue;
+          font-weight: 700;
+        }
+
         .submenu-indicator {
             top: 0;
             right: 0;
@@ -1029,7 +1036,7 @@
             &.open {
                .tree-nav-sublist {
                 //    display: block;
-               } 
+               }
             }
         }
 
@@ -1127,21 +1134,21 @@
                 text-align: center;
                 letter-spacing: 1px;
             }
-            
+
             &:-moz-placeholder {
                 color: $c-green;
                 font-weight: 800;
                 text-align: center;
                 letter-spacing: 1px;
             }
-            
+
             &::-moz-placeholder {
                 color: $c-green;
                 font-weight: 800;
                 text-align: center;
                 letter-spacing: 1px;
             }
-            
+
             &:-ms-input-placeholder {
                 color: $c-green;
                 font-weight: 800;
@@ -1212,12 +1219,12 @@
 
         hr {
             width: 100%;
-      
+
             margin: 25px 0;
-      
+
             border: 0px none white;
             border-top: 1px solid $c-gray-mid-light;
-      
+
             @include transition(max-width 0.25s, margin 0.25s);
         }
 
@@ -1275,52 +1282,52 @@
         table,
         .table {
             position: relative;
-    
+
             width: 100%;
-    
+
             margin-bottom: 15px;
             padding-top: 5px;
-    
+
             background-color: #fff;
             border: 1px solid $c-gray-mid-light;
-    
+
             border-collapse: collapse;
-    
+
             &.no-background {
                 background-color: transparent;
             }
-    
+
             caption {
                 margin-top: 20px;
                 margin-bottom: 15px;
-    
+
                 font-size: 15px;
                 font-weight: bold;
                 text-align: left;
             }
-    
+
             thead, tbody {
                 width: 100%;
             }
-    
+
             th, td,
             tbody th {
                 position: relative;
                 vertical-align: top;
-    
+
                 padding: 6px 20px;
-    
+
                 color: $c-gray;
                 font-size: 15px;
                 font-weight: 300;
                 line-height: 1.665;
-    
+
                 border: 1px solid $c-gray-mid-light;
             }
             tbody tr:nth-child(2n - 1) td {
                 background-color: #f2f5f5;
             }
-    
+
             th {
                 vertical-align: middle;
 
@@ -1332,12 +1339,12 @@
                 text-transform: uppercase;
                 text-align: left;
             }
-    
+
             th[scope] {
                 vertical-align: top;
-    
+
                 width: 20%;
-    
+
                 color: #313131;
                 font-size: 15px;
                 font-family: 'Roboto';
@@ -1386,7 +1393,7 @@
             overflow: auto;
 
             padding: 30px;
-            
+
             background-color: #3d3d3d;
 
             code {
@@ -1463,7 +1470,7 @@
                 padding-right: 0;
                 padding-left: 0;
                 padding-bottom: 0;
-                
+
                 list-style: none;
 
                 background-color: transparent;
@@ -1750,9 +1757,6 @@
     .docs-container .side-menus .side-menus-container .side-menus-wrap.second>li {
         border: 0;
     }
-    .docs-container .side-menus .side-menus-container .side-menus-wrap.second li.back-to-the-top {
-        display: block;
-    }
     .docs-container .side-menus .side-menus-container .side-menus-wrap.second>li>a {
         padding-top: 13px;
         padding-bottom: 13px;
@@ -1932,7 +1936,7 @@
     }
     .docs-container .side-menus .side-menus-container .side-menus-wrap.second>li {
         border: 0;
-    
+
     }
     .docs-container .side-menus .side-menus-container .side-menus-wrap.second li.back-to-the-top {
         display: block;
