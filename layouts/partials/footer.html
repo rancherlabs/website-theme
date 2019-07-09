@@ -426,5 +426,13 @@ $(document).ready(function() {
 
 {{ partial "tracking.html" . }}
 {{ partial "addthis-script" . }}
+
+<!--demandbase tag-->
+<script>
+    (function(d,b,a,s,e){ var t = b.createElement(a),
+    fs = b.getElementsByTagName(a)[0]; t.async=1; t.id=e; t.src=s;
+    fs.parentNode.insertBefore(t, fs); })
+    (window,document,'script','https://tag.demandbase.com/e5883831.min.js','demandbase_js_lib');
+</script>
 </body>
 </html>
