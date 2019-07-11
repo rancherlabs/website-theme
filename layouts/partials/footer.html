@@ -6,15 +6,15 @@
             <div class="grid-container informations">
                 <div class="row max-sized">
                     <div class="
-                        col-xl-3 
-                        col-lg-3 
-                        col-md-4 
-                        col-sm-12 
+                        col-xl-3
+                        col-lg-3
+                        col-md-4
+                        col-sm-12
                         col-12">
                         <div class="footer-side-items">
                             <div class="footer-news-letter-form">
                                 <div class="label">Get the latest news</div>
-    
+
                                 <script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/v2.js"></script>
                                 <script>
                                   hbspt.forms.create({
@@ -29,10 +29,10 @@
                                   });
                                 </script>
                             </div>
-                            
+
                             <div class="footer-connect-sns">
                                 <div class="label">Connect with us</div>
-    
+
                                 <ul>
                                     <li>
                                         <a href="https://twitter.com/Rancher_Labs" target="_blank"><img src="/imgs/icon-twitter.svg"></a>
@@ -57,19 +57,19 @@
                         </div>
                     </div>
                     <div class="
-                        col-xl-8 offset-xl-1 
-                        col-lg-9 offset-lg-0 
-                        col-md-8 offset-md-0 
-                        col-sm-12 offset-sm-0 
+                        col-xl-8 offset-xl-1
+                        col-lg-9 offset-lg-0
+                        col-md-8 offset-md-0
+                        col-sm-12 offset-sm-0
                         col-12">
                         <div class="row footer-sitemaps">
                             <ul class="
-                                col-xl-3 
-                                col-lg-3 
-                                col-md-3 
-                                col-sm-6 
-                                col-xs-6 
-                                col-6 
+                                col-xl-3
+                                col-lg-3
+                                col-md-3
+                                col-sm-6
+                                col-xs-6
+                                col-6
                                 ">
                                 <div class="label">Products</div>
                                 <li><a href="/products/rancher/">Rancher</a></li>
@@ -82,12 +82,12 @@
                                 <li><a href="/request-a-demo/">Request a Demo</a></li>
                             </ul>
                             <ul class="
-                                col-xl-3 
-                                col-lg-3 
-                                col-md-3 
-                                col-sm-6 
-                                col-xs-6 
-                                col-6 
+                                col-xl-3
+                                col-lg-3
+                                col-md-3
+                                col-sm-6
+                                col-xs-6
+                                col-6
                                 ">
                                 <div class="label">Community</div>
                                 <li><a href="/events/">Events</a></li>
@@ -100,12 +100,12 @@
                                 <li><a href="https://github.com/rancher/">GitHub</a></li>
                             </ul>
                             <ul class="
-                                col-xl-3 
-                                col-lg-3 
-                                col-md-3 
-                                col-sm-6 
-                                col-xs-6 
-                                col-6 
+                                col-xl-3
+                                col-lg-3
+                                col-md-3
+                                col-sm-6
+                                col-xs-6
+                                col-6
                                 ">
                                 <div class="label">Resources</div>
                                 <li><a href="/docs/rancher/v2.x/en/">Rancher 2.x Docs</a></li>
@@ -118,12 +118,12 @@
                                 <li><a href="/kubernetes/">Why Kubernetes</a></li>
                             </ul>
                             <ul class="
-                                col-xl-3 
-                                col-lg-3 
-                                col-md-3 
-                                col-sm-6 
-                                col-xs-6 
-                                col-6 
+                                col-xl-3
+                                col-lg-3
+                                col-md-3
+                                col-sm-6
+                                col-xs-6
+                                col-6
                                 ">
                                 <div class="label">Company</div>
                                 <li><a href="/about/">About Us</a></li>
@@ -143,26 +143,26 @@
             <div class="grid-container footer-copyright">
                 <div class="row align-items-center grid-row max-sized footer-copyright-wrap">
                     <div class="
-                        col-xl-6 
-                        col-lg-6 
-                        col-md-6 
-                        col-sm-12 
-                        col-xs-12 
-                        col-12 
+                        col-xl-6
+                        col-lg-6
+                        col-md-6
+                        col-sm-12
+                        col-xs-12
+                        col-12
                         text">
                         © Copyright {{ now.Format "2006" }} Rancher. All Rights Reserved.
                     </div>
                     <div class="
-                        col-xl-6 
-                        col-lg-6 
-                        col-md-6 
-                        col-sm-12 
-                        col-xs-12 
-                        col-12 
+                        col-xl-6
+                        col-lg-6
+                        col-md-6
+                        col-sm-12
+                        col-xs-12
+                        col-12
                         sub-menus">
                         <ul>
                             <li><a href="/privacy/">Privacy Policy</a></li>
-                            <li><a href="/eula/">EULA</a></li>
+                            <li><a href="/agreements/">Agreements</a></li>
                             <li><a href="/support-maintenance-terms/">Terms of Service</a></li>
                         </ul>
                     </div>
@@ -246,9 +246,9 @@ $(document).ready(function() {
             this._name = pluginName;
             this.init();
         };
-        
+
         $.extend(Plugin.prototype, {
-            
+
             init: function () {
                 this.openSubmenu();
                 this.submenuIndicators();
@@ -256,11 +256,11 @@ $(document).ready(function() {
                     this.addClickEffect();
                 }
             },
-            
+
             openSubmenu: function () {
                 var opts = this.settings; //to differ from local variable "this"
                 $(this.element).children("ul").find("li").bind("click", function(e){
-                    e.stopPropagation(); 
+                    e.stopPropagation();
                     e.preventDefault();
 
                     if ($(this).attr('class') === 'back-to-the-top') {
@@ -292,39 +292,39 @@ $(document).ready(function() {
                     window.location.href = $(this).children("a").attr("href");
                 });
             },
-            
+
             submenuIndicators: function () {
                 if($(this.element).find(".submenu").length > 0){
                     $(this.element).find(".submenu").siblings("a").append("<span class='submenu-indicator'><span class='object1'></span><span class='object2'></span><span class='object3'></span></span>");
                 }
             },
-            
+
             addClickEffect: function () {
                 var ink, d, x, y;
 
                 $(this.element).find("a").bind("click", function(e){
-                    
+
                     $(".ink").remove();
-                    
+
                     if($(this).children(".ink").length === 0){
                         $(this).prepend("<span class='ink'></span>");
                     }
-                    
+
                     ink = $(this).find(".ink");
                     ink.removeClass("animate-ink");
-                    
+
                     if(!ink.height() && !ink.width()){
                         d = Math.max($(this).outerWidth(), $(this).outerHeight());
                         ink.css({height: d, width: d});
                     }
-                    
+
                     x = e.pageX - $(this).offset().left - ink.width()/2;
                     y = e.pageY - $(this).offset().top - ink.height()/2;
-        
+
                     ink.css({top: y+'px', left: x+'px'}).addClass("animate-ink");
                 });
             }
-            
+
         });
 
         $.fn[ pluginName ] = function ( options ) {
