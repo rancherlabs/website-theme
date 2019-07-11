@@ -534,15 +534,12 @@
 
 .docs-screen2 {
     .cards-container {
-        padding-top: 200px;
-        padding-bottom: 220px;
+        padding-top: 100px;
+        padding-bottom: 120px;
     }
     .cards-wrap {
         padding-right: 0;
         padding-left: 0;
-    }
-
-    .card-items-wrap {
     }
 
     .card-item {
@@ -550,36 +547,28 @@
     }
     .card-wrap {
         overflow: hidden;
-
         height: 100%;
-
-        padding: 80px;
-
+        padding: 40px;
         text-align: center;
-
         background-color: #fff;
         box-shadow: 20px 25px 75px rgba($c-blue-dark1, .2);
         border-radius: 10px;
 
         .title-label {
             position: relative;
-
             color: $c-blue-dark1;
-            font-size: 25px;
+            font-size: 21px;
             line-height: 2;
             font-weight: 300;
 
             .background {
                 position: absolute;
                 display: inline-block;
-
                 top: 50%;
                 left: 50%;
-
-                font-size: 75px;
+                font-size: 65px;
                 font-weight: 500;
                 line-height: .666;
-
                 opacity: .1;
 
                 @include transform(translate(-50%, -50%));
@@ -588,9 +577,7 @@
 
         hr {
             width: 100px;
-
             margin: 35px auto 25px;
-
             border: 0px none white;
             border-top: 1px solid rgba($c-sky-blue, 1);
         }
