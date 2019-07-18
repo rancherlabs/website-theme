@@ -753,8 +753,8 @@
 }
 
 // &.active,
-.primary-menu-item:focus,
-.primary-menu-item:focus-within,
+// .primary-menu-item:focus,
+// .primary-menu-item:focus-within,
 .primary-menu-item:hover {
   &:before {
     content: "";
