@@ -1472,10 +1472,8 @@
 	.slider-options {
 		position: relative;
 		display: flex;
-    
-    justify-content: flex-start;
-    align-items: flex-end;
-
+		justify-content: flex-start;
+		align-items: flex-end;
 		width: 110%;
 
 		@media (max-width: 575.98px) {
@@ -1489,6 +1487,11 @@
 
 		&:before {
 			margin-right: 0;
+		}
+
+		.slick-list {
+			width: 220px;
+			height: 150px;
 		}
 	}
 
@@ -1572,9 +1575,7 @@
 		position: relative;
 		display: flex;
 		flex: 1;
-
 		width: 150px;
-
 		margin-top: auto;
 
 		@media (max-width: 575.98px) {
@@ -1585,7 +1586,6 @@
 		.btn-next {
 			position: relative;
 			display: inline-block;
-
 			width: 75px;
 			height: 75px;
 
@@ -1642,29 +1642,28 @@
 
 		margin-top: -76px;
 		
-		@media (max-width: 575.98px),
-					 (min-width: 576px) and (max-width: 767.98px) {
+		@media (max-width: 575.98px), (min-width: 576px) and (max-width: 767.98px) {
 			display: none;
 		}
+
 		@media (min-width: 768px) and (max-width: 991.98px) {
 			flex: 0 0 180px;
-	
 			width: 180px;
 		}
+
 		@media (min-width: 992px) and (max-width: 1199.98px) {
 		}
     
-    .slide-item {
-      position: relative;
-
-      line-height: 0;
-    }
+		.slide-item {
+			position: relative;
+			line-height: 0;
+		}
 
 		.thumbnail {
 			position: relative;
-
 			width: auto;
 			height: 100%;
+			max-width: 220px;
 		}
 
 		.next-slide-name {
