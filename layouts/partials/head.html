@@ -26,6 +26,7 @@
 
   {{ $base := resources.Get "js/base.js" }}
   {{ $local := resources.Get "js/app.js" }}
+  {{ $local := resources.Get "js/twitter-fetcher.js" }}
   {{ $appJs := slice $base $local  | resources.Concat "js/app.js" }}
   <script charset="utf-8" type="text/javascript" src="{{ $appJs.Permalink}}?{{ $cache}}"></script>
 
