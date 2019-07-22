@@ -21,9 +21,16 @@
     }
   }
 
-  .tweet-item:nth-child(2n+2) {
-    .user-infor {
+  .tweet-item:nth-child(even) {
+    .tweet-user {
+      flex-direction: row-reverse;
 
+      .user-photo {
+        text-align: right;
+      }
+    }
+
+    .user-infor {
       .user-name,
       .user-id {
         text-align: right !important;
