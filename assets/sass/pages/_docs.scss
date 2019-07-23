@@ -1359,7 +1359,7 @@
         blockquote {
             margin-top: 20px;
             margin-bottom: 20px;
-            padding: 15px 35px;
+            padding: 35px;
 
             background-color: rgba($c-blue, .1);
 
@@ -1367,7 +1367,7 @@
                 strong {
                     color: $c-blue;
                     font-size: 12px;
-                    margin-right: 15px;
+                    display: block;
                     font-family: 'Poppins';
                     text-transform: uppercase;
                     letter-spacing: 1px;
