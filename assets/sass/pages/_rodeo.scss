@@ -1170,6 +1170,8 @@
 
     .location-item {
       margin-bottom: 70px;
+      display: flex;
+      flex-direction: column;
     }
 
     .thumbnail-container {
@@ -1230,6 +1232,14 @@
 
     .information-container {
       margin-top: 20px;
+      flex: 1 1 1px;
+
+      &-inner {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+      }
     }
 
     .location-label {
