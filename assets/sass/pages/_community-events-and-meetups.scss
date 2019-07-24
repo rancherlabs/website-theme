@@ -1069,6 +1069,7 @@
 
   .slide-item {
     margin-right: 30px;
+    outline: none;
 
     @include transition(opacity .25s);
 
@@ -1078,6 +1079,10 @@
 
     &[aria-hidden="false"] {
       opacity: 1;
+    }
+
+    a {
+      outline: none;
     }
 
     .thumbnail-container {
