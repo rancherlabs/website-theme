@@ -819,9 +819,8 @@
 
         background-color: $c-gray-base-light;
 
-        h1 {
-            margin-bottom: 40px;
-
+        h6 {
+            margin: 0 0 40px;
             color: #313131;
             font-size: 40px;
             font-family: 'Poppins';
@@ -867,9 +866,10 @@
     }
 
     .versions-containe {
-        h1 {
+        h1, h6 {
             font-size: 40px;
             font-weight: 400;
+            margin: 0 0 20px;
         }
 
         .table {
