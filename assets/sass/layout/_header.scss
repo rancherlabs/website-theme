@@ -247,6 +247,12 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+    
+    .menu-sub-block {
+      .articles-container {
+        padding-bottom: 20px;
+      }
+    }
 
     &-join {
       width: 100%;
@@ -276,6 +282,10 @@
         > ul {
           width: 300px;
           margin: 0 auto;
+        }
+
+        .articles-container {
+          padding-top: 20px;
         }
       }
 
