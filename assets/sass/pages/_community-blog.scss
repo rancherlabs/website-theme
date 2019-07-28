@@ -1235,7 +1235,7 @@
     ul {
       list-style: disc;
     
-      li {
+      > li {
         margin-bottom: 10px;
 
         color: $c-blue-dark1;
@@ -1249,8 +1249,19 @@
     ol {
       list-style: decimal;
       
-      li {
+      > li {
         list-style: decimal;
+      }
+
+      ul {
+        margin-top: 10px;
+
+         > li {
+          color: inherit;
+          font-size: inherit;
+          font-weight: inherit;
+          line-height: inherit;
+        }
       }
     }
 
