@@ -14,11 +14,12 @@
   {{ $lory := resources.Get "js/jquery.lory.js" }}
   {{ $tingle := resources.Get "js/tingle.js" }}
   {{ $moment := resources.Get "js/moment.js" }}
+  {{ $timezone := resources.Get "js/moment-timezone.js" }}
   {{ $empty := resources.Get "js/empty.js" }}
   {{ $scrollreveal := resources.Get "js/scrollreveal.js" }}
   {{ $vendors := resources.Get "js/vendors.js" }}
 
-  {{ $vendorJs := slice $jquery $empty $lory $empty $tingle $empty $moment $scrollreveal $vendors  | resources.Concat "js/vendor.js" | minify }}
+  {{ $vendorJs := slice $jquery $empty $lory $empty $tingle $empty $moment $empty $timezone $empty $scrollreveal $empty $vendors  | resources.Concat "js/vendor.js" | minify }}
   <script charset="utf-8" type="text/javascript" src="{{ $vendorJs.Permalink}}?{{ $cache }}"></script>
 
  {{ $instantsearch := resources.Get "js/instantsearch.js" | minify }}
