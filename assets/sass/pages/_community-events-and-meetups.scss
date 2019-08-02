@@ -218,6 +218,7 @@
 
       margin-right: 30px;
 
+
       .thumbnail {
         position: relative;
         display: inline-block;
@@ -1098,6 +1099,10 @@
       background-color: $c-blue-gray;
 
       line-height: 0;
+
+      &.devops-thumbnail {
+        background-position: left center;
+      }
 
       > img, 
       .thumbnail {
