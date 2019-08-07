@@ -297,6 +297,11 @@ button.button {
     }
   }
 
+  &.button-link {
+    display: inline-block;
+    line-height: 2;
+  }
+
   &.text {
     margin: 5px 0;
     padding: 0;
