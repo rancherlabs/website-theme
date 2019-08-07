@@ -1405,14 +1405,13 @@
 
       th {
         vertical-align: middle;
-
-        color: $c-blue;
         font-size: 12px;
         font-family: 'Poppins';
         font-weight: 800;
         letter-spacing: 1px;
         text-transform: uppercase;
         text-align: left;
+        background: #eee;
       }
 
       th[scope] {
