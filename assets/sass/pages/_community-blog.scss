@@ -1246,8 +1246,18 @@
         line-height: 1.775;
 
         list-style: disc;
+
+        > ul {
+          margin: 0;
+
+          > li {
+            margin-top: 5px;
+            margin-bottom: 5px;
+          }
+        }
       }
     }
+
     ol {
       list-style: decimal;
       
