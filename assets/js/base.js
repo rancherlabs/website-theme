@@ -319,7 +319,7 @@ const formatTimePeriod = function() {
     } else {
       const endTime = moment(endDate);
       const date2 = endTime.tz(timezone).format(dateFormat);
-      const time2 = endTime.tz(timezone).format('hh:mm a z');
+      const time2 = endTime.tz(timezone).format('hh:mm a');
       let result = `${date1} ${time1}`;
       if (date1 === date2) {
         result += ` - ${time2}`;
