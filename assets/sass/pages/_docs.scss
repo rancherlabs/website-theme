@@ -1214,6 +1214,10 @@
 
             @include transition(max-width 0.25s, margin 0.25s);
         }
+        // Helm chart release channel selection
+        input[name="channel"] {
+            -webkit-appearance: radio;
+        }
 
         ol, ul {
             margin-bottom: 30px;
