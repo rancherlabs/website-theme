@@ -142,10 +142,8 @@ img {
 }
 
 // default input.
-input {
+input:not([type="radio"]) {
   border-radius: 0;
-
-  -webkit-appearance: none;
 }
 
 input {
