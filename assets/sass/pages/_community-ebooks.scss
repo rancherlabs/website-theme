@@ -291,24 +291,20 @@
   .ebook-item {
     position: relative;
     display: flex;
-
     flex-wrap: wrap;
-
     margin-bottom: 100px;
+    height: 100%;
 
     .thumbnail-container {
       position: relative;
       display: inline-block;
       overflow: hidden;
-
+      max-height: 185px;
       flex: 1;
-
       max-width: 125px;
       margin-right: 20px;
-
       background-color: #b9b9b9;
       border-radius: 10px;
-
       line-height: 0;
 
       .thumbnail {
@@ -323,8 +319,8 @@
 
     .information-container {
       position: relative;
-      display: inline-block;
-
+      display: grid;
+      grid-template-rows: auto auto 1fr;
       flex: 1;
 
       .title-label {
@@ -340,7 +336,7 @@
         min-height: 3.33em;
 
         margin-top: 10px;
-        margin-bottom: 50px;
+        margin-bottom: 10px;
 
         line-height: 1.665;
 
@@ -348,6 +344,8 @@
       }
 
       .button-container {
+        align-self: end;
+
         span {
           font-size: 18px;
         }
@@ -381,7 +379,7 @@
       margin-bottom: 40px;
 
       .thumbnail-container {
-        max-width: 160px;
+        max-width: 140px;
 
         .thumbnail {
           max-height: 220px;
