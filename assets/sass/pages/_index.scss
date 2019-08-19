@@ -375,17 +375,7 @@
 
 	.browser-item {
 		z-index: 1;
-
 		width: 90%;
-
-		@media (max-width: 575.98px) {
-			width: 120%;
-		}
-		@media (min-width: 576px) and (max-width: 767.98px) {
-			width: 140%;
-
-			margin-left: -50%;
-		}
 	}
 
 	.slider-timer {
@@ -569,9 +559,11 @@
 	.slider-pager {
 		position: relative;
 		flex: 1;
-
 		margin-top: auto;
 		margin-left: 75px;
+		display: flex;
+		align-items: flex-end;
+		flex-direction: column-reverse;
 
 		@media (max-width: 575.98px) {
 			display: flex;
