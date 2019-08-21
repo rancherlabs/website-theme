@@ -1,7 +1,6 @@
 // -----------------------------------------------------------------------------
 // This file contains styles that are specific to the partners page and partial page.
 // -----------------------------------------------------------------------------
-
 .partner {
   display: flex;
   position: relative;
@@ -14,5 +13,10 @@
     position: absolute;
     right: -3px;
     top: -3px;
+  }
+
+  &-section-title {
+    text-align: center;
+    margin-bottom: 60px;
   }
 }
