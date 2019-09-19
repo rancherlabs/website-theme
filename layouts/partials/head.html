@@ -2,7 +2,20 @@
   {{ $cache :=  now.Unix }}
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width">
-  <title>{{ with .Params.metaTitle }}{{ . }}{{ else }}{{ .Title }}{{ end }}</title>
+  <title>
+      {{ with .Params.metaTitle }}
+          {{ . }}
+      {{ else }}
+          {{ if eq .Section "tags" }}
+              {{ .Title }} Blog Post by Rancher
+          {{ else }}
+              {{ .Title }}
+          {{ end }}
+      {{ end }}
+  </title>
+    {{ if eq .Section "tags" }}
+      <meta name="description" content="Learn more about {{ .Title }} from Rancher, the experts in container orchestration.">
+    {{ end }}
 
   <link rel="icon" type="image/png" href="{{ "img/favicon.png" | relURL }}">
 
@@ -32,7 +45,7 @@
 
   {{ partial "seo.html" . }}
 
-  
+
   <!-- Google Tag Manager -->
   <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
     new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
