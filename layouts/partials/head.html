@@ -7,15 +7,12 @@
           {{ . }}
       {{ else }}
           {{ if eq .Section "tags" }}
-              {{ .Title }} Blog Post by Rancher
+              {{ .Title }} Blog Posts by Rancher
           {{ else }}
               {{ .Title }}
           {{ end }}
       {{ end }}
   </title>
-    {{ if eq .Section "tags" }}
-      <meta name="description" content="Learn more about {{ .Title }} from Rancher, the experts in container orchestration.">
-    {{ end }}
 
   <link rel="icon" type="image/png" href="{{ "img/favicon.png" | relURL }}">
 
