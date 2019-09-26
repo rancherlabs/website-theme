@@ -140,7 +140,7 @@
             
                         <div class="primary-menus">
                             <ul class="primary-menus-wrap">
-                                <li class="primary-menu-item menu-why_rancher">
+                                <li class='primary-menu-item menu-why_rancher {{ if eq .Params.section "overview" }}active{{ end }}'>
                                     <a class="primary-menu" href="/what-is-rancher/overview">Why RANCHER?</a>
 
                                     <ul class="primary-menus-sub">
@@ -190,7 +190,7 @@
                                         </div>
                                     </ul>
                                 </li>
-                                <li class="primary-menu-item menu-products">
+                                <li class='primary-menu-item menu-products {{ if eq .Params.section "products" }}active{{ end }}'>
                                     <a class="primary-menu" href="/products">Products</a>
                                     <ul class="primary-menus-sub">
                                         <div class="grid-container">
@@ -227,7 +227,7 @@
                                         </div>
                                     </ul>
                                 </li>
-                                <li class="primary-menu-item menu-customers">
+                                <li class='primary-menu-item menu-customers {{ if eq .Params.section "customers" }}active{{ end }}'>
                                     <a class="primary-menu" href="/customers">Customers</a>
 
                                     <ul class="primary-menus-sub">
@@ -300,7 +300,7 @@
                                         </div>
                                     </ul>
                                 </li>
-                                <li class="primary-menu-item menu-community">
+                                <li class='primary-menu-item menu-community {{ if eq .Params.section "resources" }}active{{ end }}'>
                                     <a class="primary-menu" href="/learn">RESOURCES</a>
 
                                     <ul class="primary-menus-sub">
@@ -555,7 +555,7 @@
                                         </div>
                                     </ul>
                                 </li>
-                                <li class="primary-menu-item menu-company">
+                                <li class='primary-menu-item menu-company {{ if eq .Params.section "company" }}active{{ end }}'>
                                     <a class="primary-menu" href="/about/">Company</a>
 
                                     <ul class="primary-menus-sub">
