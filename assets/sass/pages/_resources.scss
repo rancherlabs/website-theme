@@ -1,15 +1,27 @@
 .ndvr {
+	h2.title-label {
+		margin: 2rem 0;
+	}
+
+	.customers-screen3 {
+		background-color: white !important;
+	}
+
+	.community-videos-and-podcasts-screen4 .sliders-container {
+		margin-top: 0;
+	}
+
 	.in-page-menus-container {
 		display: flex;
 
 		.menu-wrap {
 		    display: flex;
+		    flex-wrap: wrap;
 		    flex: 1;
 
 			.menu-item {
 				display: flex;
-			    padding: 20px;
-			    flex: 1;
+			    flex: 1 1 150px;
 			    font-family: $font-set;
 			    font-size: 14px;
 			    background-color: $c-gray-mid-light;
@@ -36,6 +48,11 @@
 			    	text-transform: uppercase;
 			    	color: white;
 			    	font-weight: 500;
+			    	display: flex;
+					justify-content: center;
+					align-items: stretch;
+					padding: 20px;
+					flex: 1;
 			    }
 			}
 		}
