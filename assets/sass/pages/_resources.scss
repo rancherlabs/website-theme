@@ -1,0 +1,30 @@
+.ndvr {
+	.in-page-menus-container {
+		display: flex;
+
+		.menu-wrap {
+		    display: flex;
+
+			.menu-item {
+				display: flex;
+			    padding: 20px;
+			    flex: 1;
+			    background-color: $c-gray-mid-light;
+			    border-right: 1px solid white;
+			    justify-content: center;
+			    align-items: center;
+
+			    &:hover {
+			    	cursor: pointer;
+			    	background-color: $c-blue;
+			    }
+
+			    a {
+			    	color: white;
+			    	text-transform: uppercase;
+			    	color: white;
+			    }
+			}
+		}
+	}
+}
