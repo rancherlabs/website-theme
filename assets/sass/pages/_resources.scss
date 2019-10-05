@@ -4,17 +4,29 @@
 
 		.menu-wrap {
 		    display: flex;
+		    flex: 1;
 
 			.menu-item {
 				display: flex;
 			    padding: 20px;
 			    flex: 1;
+			    font-family: $font-set;
+			    font-size: 14px;
 			    background-color: $c-gray-mid-light;
-			    border-right: 1px solid white;
+			    border: 1px solid white;
 			    justify-content: center;
 			    align-items: center;
+			    transition: all 300ms $animate-cubic-in-out;
 
-			    &:hover {
+				&:first-child {
+					border-left: none;
+				}
+
+				&:last-child {
+					border-right: none;
+				}
+
+			    &:hover, &.active {
 			    	cursor: pointer;
 			    	background-color: $c-blue;
 			    }
@@ -23,6 +35,7 @@
 			    	color: white;
 			    	text-transform: uppercase;
 			    	color: white;
+			    	font-weight: 500;
 			    }
 			}
 		}

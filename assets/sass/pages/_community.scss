@@ -699,24 +699,20 @@
       z-index: 1;
       position: absolute;
       display: inline-block;
-
-      top: 19%;
+      top: 40%;
       left: 50%;
-
       width: 125px;
       height: 125px;
-
       padding: 10px;
-
       background-color: rgba(#313131, .75);
       border: none;
       border-radius: 50%;
+      box-sizing: border-box;
 
-      @include transform(translateX(-50%));
+      @include transform(translate(-50%, -50%));
 
       .icon {
         position: relative;
-
         width: 100%;
         height: auto;
 
@@ -732,6 +728,7 @@
       .icon.linear-round {
         border: 2px solid $c-green;
         border-radius: 50%;
+        box-sizing: border-box;
       }
     }
 
