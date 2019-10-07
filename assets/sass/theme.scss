@@ -24,6 +24,8 @@
 @import "components/general";
 @import "components/tweet-box";
 @import "components/search";
+@import "components/card";
+@import "components/button";
 
 // 6. Page-specific styles
 @import "pages/common";
@@ -42,6 +44,7 @@
 @import "pages/customers";
 @import "pages/customers-detail";
 @import "pages/products";
+@import "pages/partners";
 @import "pages/products-rancher-supercharge-helm-via-the-application-catalog";
 @import "pages/products-rancher-take-control-of-the-api";
 @import "pages/products-rancher-rancher-puts-your-security-first";
@@ -81,3 +84,5 @@
 @import "pages/docs";
 @import "pages/what-rancher-adds-to-kubernetes";
 @import "pages/brand-guidelines";
+@import "pages/learning-paths";
+@import "pages/resources";

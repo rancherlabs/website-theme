@@ -12,6 +12,10 @@
 {{- end -}}
 
 <body lang="en" class="{{ replaceRE "/.*" "" ($.Scratch.Get "topLevel").Dir }}">
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-57KS2MW"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
   <a name="top"></a>
 
 
@@ -76,13 +80,14 @@
 
                             <ul class="submenu submenus-wrap">
                                 <li><a href="/community">Overview</a></li>
+                                <li><a href="/learning-paths">Learning Paths</a></li>
                                 <li><a href="/training/">Training</a></li>
                                 <li><a href="/tutorials/">Tutorials</a></li>
                                 <li><a href="/events/">Events</a></li>
                                 <li><a href="/online-meetups/">Online Meetups</a></li>
                                 <li><a href="/rodeos/">Rancher Rodeos</a></li>
                                 <li><a href="/kubernetes-master-class/">Kubernetes Master Classes</a></li>
-                                <li><a href="/writing-program/">Rancher Writing Program</a></li>
+                                <!-- <li><a href="/writing-program/">Rancher Writing Program</a></li> -->
                                 <li><a href="/quick-start/">Getting Started Guide</a></li>
                                 <li><a href="/blog/">Blog</a></li>
                                 <li><a href="/ebooks-and-whitepapers/">eBooks & Whitepapers</a></li>
@@ -97,10 +102,11 @@
 
                             <ul class="submenu submenus-wrap">
                                 <li><a href="/about/">About us</a></li>
-                                <li><a href="/careers/">Careers</a></li>
                                 <li><a href="/partners/">Partners</a></li>
                                 <li><a href="/press/">Press</a></li>
-                                <li><a href="/contact/">Contact us</a></li>
+                                <li><a href="/events/">Events</a></li>
+                                <li><a href="/careers/">Careers</a></li>
+                                <li><a href="/blog/">Blog</a></li>
                             </ul>
                         </li>
 
@@ -134,7 +140,7 @@
             
                         <div class="primary-menus">
                             <ul class="primary-menus-wrap">
-                                <li class="primary-menu-item menu-why_rancher">
+                                <li class='primary-menu-item menu-why_rancher {{ if eq .Params.section "overview" }}active{{ end }}'>
                                     <a class="primary-menu" href="/what-is-rancher/overview">Why RANCHER?</a>
 
                                     <ul class="primary-menus-sub">
@@ -184,12 +190,10 @@
                                         </div>
                                     </ul>
                                 </li>
-                                <li class="primary-menu-item menu-products">
+                                <li class='primary-menu-item menu-products {{ if eq .Params.section "products" }}active{{ end }}'>
                                     <a class="primary-menu" href="/products">Products</a>
-
                                     <ul class="primary-menus-sub">
                                         <div class="grid-container">
-<<<<<<< Updated upstream
                                             <div class="row">
                                                 <div class="col-12 right">
                                                     <li class="menus-container">
@@ -251,7 +255,6 @@
                                                             <span>Request a demo</span>
                                                         </a>
                                                     </li>
-=======
                                             <div class="primary-menu-blocks">
                                                 <div class="menu-sub-block">
                                                     <ul>
@@ -282,13 +285,12 @@
                                                     <a class="box" href="/request-a-demo/">
                                                         <span>Request a demo</span>
                                                     </a>
->>>>>>> Stashed changes
                                                 </div>
                                             </div>
                                         </div>
                                     </ul>
                                 </li>
-                                <li class="primary-menu-item menu-customers">
+                                <li class='primary-menu-item menu-customers {{ if eq .Params.section "customers" }}active{{ end }}'>
                                     <a class="primary-menu" href="/customers">Customers</a>
 
                                     <ul class="primary-menus-sub">
@@ -361,15 +363,67 @@
                                         </div>
                                     </ul>
                                 </li>
-                                <li class="primary-menu-item menu-community">
-                                    <a class="primary-menu" href="/learn">Community</a>
+                                <li class='primary-menu-item menu-community {{ if eq .Params.section "resources" }}active{{ end }}'>
+                                    <a class="primary-menu" href="/learn">RESOURCES</a>
 
                                     <ul class="primary-menus-sub">
                                         <div class="grid-container">
-                                            <div class="row">
+                                            <div class="primary-menu-blocks">
+                                                <div class="menu-sub-block">
+                                                    <ul>
+                                                        <li class="articles-container">
+                                                            <div class="label">Technical Resources</div>
+                                                            <a href="/quick-start/" class="menu-sub-block-item">Getting Started Guide</a>
+                                                            <a href="/training/" class="menu-sub-block-item">Introductory Training</a>
+                                                            <a href="/tutorials/" class="menu-sub-block-item">Tutorials</a>
+                                                            <a href="/docs" class="menu-sub-block-item">Docs</a>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                                <div class="menu-sub-block">
+                                                    <ul>
+                                                        <li class="articles-container">
+                                                            <div class="label">Content Library</div>
+                                                            <a href="/ebooks-and-whitepapers/" class="menu-sub-block-item">eBooks & Whitepapers</a>
+                                                            <a href="/videos-and-podcasts/" class="menu-sub-block-item">Videos & Podcasts</a>
+                                                            <a href="/blog" class="menu-sub-block-item">Blog</a>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                                <div class="menu-sub-block">
+                                                    <ul>
+                                                        <li class="articles-container">
+                                                            <div class="label">Community</div>
+                                                            <a href="/community/" class="menu-sub-block-item">Community Overview</a>
+                                                            <a href="/learning-paths/" class="menu-sub-block-item">Learning Paths</a>
+                                                            <a href="/online-meetups/" class="menu-sub-block-item">Online Meetups</a>
+                                                            <a href="/rodeos/" class="menu-sub-block-item">Hands-on Workshops</a>
+                                                            <a href="/kubernetes-master-class/" class="menu-sub-block-item">Kubernetes Master Classes</a>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                            <div class="primary-menu-blocks primary-menu-blocks-join">
+                                                <div class="menu-sub-block">
+                                                    <ul>
+                                                        <li class="articles-container">
+                                                            <div class="label">Join the Community</div>
+                                                            <div class="menu-sub-items">
+                                                                <a href="https://forums.rancher.com/" class="menu-sub-block-item">Forums</a>
+                                                                <span class="menu-sub-block-item">|</span>
+                                                                <a href="http://slack.rancher.io/" class="menu-sub-block-item">Slack</a>
+                                                                <span class="menu-sub-block-item">|</span>
+                                                                <a href="https://github.com/rancher" class="menu-sub-block-item">Github</a>
+                                                            </div>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                            <!-- <div class="row">
                                                 <div class="left">
+                                                    
                                                     <li class="articles-container split-half">
-                                                        <div class="label">The Rancher Community
+                                                        <div class="label">Technical Resources
                                                             <ul class="sns-services set-right">
                                                                 <li><a href="https://twitter.com/Rancher_Labs" target="_blank"><img src="/imgs/icon-twitter.svg"></a></li>
                                                                 <li><a href="https://www.linkedin.com/groups/6977008/profile" target="_blank"><img src="/imgs/icon-linkedin.svg"></a></li>
@@ -448,7 +502,7 @@
                                                                     </a>
                                                                 </div>
                                                             </div>
-                                                        </div>
+                                                        </div> -->
 
                                                         <!-- <div class="article-item">
                                                             <div class="article-thumbmail"></div>
@@ -516,7 +570,7 @@
                                                                 </p>
                                                             </div>
                                                         </div> -->
-                                                    </li>
+                                                    <!-- </li>
                                                 </div>
                                                 <div class="right">
                                                     <li class="menus-container">
@@ -560,11 +614,11 @@
                                                         </a>
                                                     </li>
                                                 </div>
-                                            </div>
+                                            </div> -->
                                         </div>
                                     </ul>
                                 </li>
-                                <li class="primary-menu-item menu-company">
+                                <li class='primary-menu-item menu-company {{ if eq .Params.section "company" }}active{{ end }}'>
                                     <a class="primary-menu" href="/about/">Company</a>
 
                                     <ul class="primary-menus-sub">
@@ -574,15 +628,6 @@
                                                     <li class="menus-container">
                                                         <a href="/about/">
                                                             <span>About us</span>
-                                                            <svg class="icon right" enable-background="new 0 0 34 34" viewBox="0 0 34 34" xmlns="http://www.w3.org/2000/svg">
-                                                                <g class="svg-linear" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10">
-                                                                    <path d="m19.5 12 5 5-5 5"/>
-                                                                    <path d="m24.5 17h-15"/>
-                                                                </g>
-                                                            </svg>
-                                                        </a>
-                                                        <a href="/careers/">
-                                                            <span>Careers</span>
                                                             <svg class="icon right" enable-background="new 0 0 34 34" viewBox="0 0 34 34" xmlns="http://www.w3.org/2000/svg">
                                                                 <g class="svg-linear" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10">
                                                                     <path d="m19.5 12 5 5-5 5"/>
@@ -608,8 +653,26 @@
                                                                 </g>
                                                             </svg>
                                                         </a>
-                                                        <a href="/contact/">
-                                                            <span>Contact us</span>
+                                                        <a href="/events/">
+                                                            <span>Events</span>
+                                                            <svg class="icon right" enable-background="new 0 0 34 34" viewBox="0 0 34 34" xmlns="http://www.w3.org/2000/svg">
+                                                                <g class="svg-linear" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10">
+                                                                    <path d="m19.5 12 5 5-5 5"/>
+                                                                    <path d="m24.5 17h-15"/>
+                                                                </g>
+                                                            </svg>
+                                                        </a>
+                                                        <a href="/careers/">
+                                                            <span>Careers</span>
+                                                            <svg class="icon right" enable-background="new 0 0 34 34" viewBox="0 0 34 34" xmlns="http://www.w3.org/2000/svg">
+                                                                <g class="svg-linear" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10">
+                                                                    <path d="m19.5 12 5 5-5 5"/>
+                                                                    <path d="m24.5 17h-15"/>
+                                                                </g>
+                                                            </svg>
+                                                        </a>
+                                                        <a href="/blog/">
+                                                            <span>Blog</span>
                                                             <svg class="icon right" enable-background="new 0 0 34 34" viewBox="0 0 34 34" xmlns="http://www.w3.org/2000/svg">
                                                                 <g class="svg-linear" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10">
                                                                     <path d="m19.5 12 5 5-5 5"/>

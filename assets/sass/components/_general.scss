@@ -1,3 +1,7 @@
+html.sr .load-hidden {
+  visibility: hidden;
+}
+
 // default span.
 span {
   &.block {
@@ -142,10 +146,8 @@ img {
 }
 
 // default input.
-input {
+input:not([type="radio"]) {
   border-radius: 0;
-
-  -webkit-appearance: none;
 }
 
 input {
@@ -295,6 +297,11 @@ button.button {
 
       background-color: $c-green;
     }
+  }
+
+  &.button-link {
+    display: inline-block;
+    line-height: 2;
   }
 
   &.text {

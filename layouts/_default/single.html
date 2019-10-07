@@ -139,9 +139,15 @@
 
 
                     {{ if eq .Section "events" }}
-                      {{ with .Params.link }}
-                          <a href="{{ . }}" class="button c-blue" target="_blank">Register Here</a>
-                      {{end}}
+                      {{ if lt .Date.Unix now.Unix }}
+                        {{ with .Params.url }}
+                            <a href="{{ . }}" class="button c-blue" target="_blank">View recording</a>
+                        {{end}}
+                      {{ else }}
+                        {{ with .Params.link }}
+                            <a href="{{ . }}" class="button c-blue" target="_blank">Register Here</a>
+                        {{end}}
+                      {{ end }}
                     {{ end }}
 
                     {{ if eq .Section "careers" }}

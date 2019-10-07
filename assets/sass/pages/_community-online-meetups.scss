@@ -480,3 +480,102 @@
         }
     }
 }
+
+.upcoming-hubspot-form {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    margin-bottom: 50px;
+    margin-top: -60px;
+
+    @media (max-width: 991px) {
+        margin-top: -40px;
+        margin-bottom: 30px;
+    }
+
+    @media (max-width: 575px) {
+        margin-top: -30px;
+
+        > p {
+            text-align: left;
+            margin-left: 8.3333%;
+            margin-right: 8.3333%;
+            padding: 0 15px;
+            font-size: 1em;
+
+        }
+    }
+
+    .hbspt-form {
+        width: 100%;
+        text-align: center;
+
+        form {
+            display: flex;
+            justify-content: center;
+            padding: 0 15px;
+
+            .hs-form-field {
+                margin: 0;
+            }
+        }
+
+        .hs_email {
+            > label {
+                display: none;
+            }
+        }
+
+        .hs-input {
+            position: relative;
+            display: inline-block;
+            border-radius: 0;
+            flex: 0 0 auto;
+            width: 100%;
+            max-width: 260px;
+            height: 50px;
+            padding: 0 20px;
+            font-size: 15px;
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+
+        }
+
+        .hs_error_rollup {
+            display: none;
+        }
+
+        .hs_submit {
+            .actions {
+                margin: 0;
+                padding: 0;
+            }
+        }
+
+        .hs-button {
+            height: 50px;
+            color: white;
+            font-family: poppins;
+            font-weight: 800;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            box-shadow: 12px 25px 50px rgba(0,117,168,.075);
+            border: none !important;
+            background: #0075a8;
+            border-radius: 0;
+            box-sizing: border-box;
+
+
+            &:hover {
+                border: none !important;
+            }
+
+            &:active {
+                background: #0075a8 !important;
+                border: none !important;
+            }
+        }
+    }
+
+}

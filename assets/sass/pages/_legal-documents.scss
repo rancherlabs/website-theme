@@ -819,9 +819,8 @@
 
         background-color: $c-gray-base-light;
 
-        h1 {
-            margin-bottom: 40px;
-
+        h6 {
+            margin: 0 0 40px;
             color: #313131;
             font-size: 40px;
             font-family: 'Poppins';
@@ -866,14 +865,40 @@
         }
     }
 
+    div.tab-body-title {
+        margin: 0;
+        margin-bottom: 20px;
+        font-family: poppins;
+        font-size: 60px;
+        font-weight: 200;
+        line-height: 1.167;
+    }
+
     .versions-containe {
-        h1 {
+        h1, h6 {
             font-size: 40px;
             font-weight: 400;
+            margin: 0 0 20px;
         }
 
         .table {
             background-color: #f2f5f5;
+        }
+
+        &.versions-custom-header {
+            h2 {
+                font-size: 40px;
+                font-weight: 400;
+                margin: 0 0 20px;
+            }
+
+            h3 {
+                margin-bottom: 20px;
+                font-size: 25px;
+                font-family: poppins;
+                font-weight: 400;
+                line-height: 1.4;
+            }
         }
     }
 

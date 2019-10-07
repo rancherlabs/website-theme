@@ -1,0 +1,46 @@
+.pull-up-100 {
+	margin-top: -100px;
+}
+
+.pull-up-50 {
+	margin-top: -50px;
+}
+
+.ndvr {
+	.card-container	{
+		display: flex;
+
+		.card {
+			box-sizing: content-box;
+			margin: 1.5rem;
+			display: flex;
+			flex-direction: column;
+			overflow: visible;
+			padding: 1.5rem;
+			flex: 1;
+			box-shadow: $box-shadow;
+			background-color: white;
+			border-radius: $border-radius-default;
+
+			&-header {
+				margin-bottom: 10px;
+			}
+
+			&-img {
+				width: 100%;
+				height: auto;
+			}
+
+			&-body {
+				flex: 1;
+				margin: 1rem 0;
+			}
+
+			&-footer {
+				display: flex;
+				justify-self: flex-end;
+				align-content: center;
+			}
+		}
+	}
+}
