@@ -6,6 +6,11 @@
 	margin-top: -50px;
 }
 
+.border-radius {
+	border-radius: $border-radius-default;
+	overflow: hidden;
+}
+
 .ndvr {
 	.card-container	{
 		display: flex;
@@ -40,6 +45,52 @@
 				display: flex;
 				justify-self: flex-end;
 				align-content: center;
+			}
+		
+			&.video,
+			&.whitepaper,
+			&.ebook {
+			    padding: 0;
+			    overflow: hidden;
+			    align-items: stretch;
+				height: calc(100% - 1.5rem);
+			    margin: 1.5rem 0;
+				
+				img {
+				    max-height: 200px;
+				    width: 100%;
+				    object-fit: cover;
+				    object-position: top;
+				}
+
+				.title-label {
+				    font-size: 16px;
+				    font-weight: 500;
+				}
+				
+				.video-wrap {
+					box-shadow: none;
+				}
+
+				.subject-label {
+					box-sizing: border-box;
+					position: relative;
+					color: inherit;
+					padding: 1rem;
+					padding-bottom: 0;
+				}
+				
+				.information-container {
+					padding: 1rem;
+				    display: flex;
+				    flex-direction: column;
+				    height: 100%;
+				    flex: 1;
+
+				    .description-label {
+				    	flex: 1;
+				    }
+				}
 			}
 		}
 	}
