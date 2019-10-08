@@ -6,6 +6,11 @@
 	margin-top: -50px;
 }
 
+.border-radius {
+	border-radius: $border-radius-default;
+	overflow: hidden;
+}
+
 .ndvr {
 	.card-container	{
 		display: flex;
