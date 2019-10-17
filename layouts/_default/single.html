@@ -10,12 +10,12 @@
 
         <div class="row max-sized">
             <div class="
-              col-xl-8 offset-xl-2 
-              col-lg-8 offset-lg-2 
-              col-md-10 offset-md-1 
-              col-sm-10 offset-sm-1 
-              col-xs-12 offset-xs-0 
-              col-12 offset-0 
+              col-xl-8 offset-xl-2
+              col-lg-8 offset-lg-2
+              col-md-10 offset-md-1
+              col-sm-10 offset-sm-1
+              col-xs-12 offset-xs-0
+              col-12 offset-0
               contents-container">
                 {{ with .Params.youtubeId }}
                   <div class="thumbnail-container large">
@@ -29,7 +29,7 @@
                 {{else}}
                   {{ if .Params.image }}
                   <div class="thumbnail-container">
-                      <div class="thumbnail-wrap">                    
+                      <div class="thumbnail-wrap">
                         <img class="thumbnail" src="{{ .Params.image }}" alt="{{ .Params.title }}">
                       </div>
                   </div>
@@ -77,12 +77,12 @@
                       {{ $published := time (.Date.Format "2006-01-02") }}
                       {{ $updated := time (.Lastmod.Format "2006-01-02") }}
 
-                      <div class="date-label"><img class="icon" src="/imgs/community/blog/icon-calendar-gray.svg"> Published: {{ $published.Format "January 2, 2006" }}</div>
+                      <div class="date-label"><img class="icon" src="/imgs/community/blog/icon-calendar-gray.svg" alt="Gray Calendar Icon"> Published: {{ $published.Format "January 2, 2006" }}</div>
                       {{ if and ( $updated.After $published) (eq .Section "blog")}}
-                        <div class="date-label"><img class="icon" src="/imgs/community/blog/icon-calendar-gray.svg"> Updated: {{ $updated.Format "January 2, 2006" }}</div>
+                        <div class="date-label"><img class="icon" src="/imgs/community/blog/icon-calendar-gray.svg" alt="Gray Calendar Icon"> Updated: {{ $updated.Format "January 2, 2006" }}</div>
                       {{end}}
                     {{end}}
-                    
+
                     <!--list tags-->
                     {{ if eq .Section "events" }}
                       {{ else }}
@@ -101,23 +101,23 @@
                             <div class="cta-container">
                                 <div class="row align-items-center cta-wrap">
                                     <div class="
-                                      col-xl-8 
-                                      col-lg-8 
-                                      col-md-8 
-                                      col-sm-12 
-                                      col-xs-12 
-                                      col-12 
+                                      col-xl-8
+                                      col-lg-8
+                                      col-md-8
+                                      col-sm-12
+                                      col-xs-12
+                                      col-12
                                       texts-container">
                                       <div class="label">{{ .header }}</div>
                                       <div class="title">{{ .copy }}</div>
                                     </div>
                                     <div class="
-                                      col-xl-4 
-                                      col-lg-4 
-                                      col-md-4 
-                                      col-sm-12 
-                                      col-xs-12 
-                                      col-12 
+                                      col-xl-4
+                                      col-lg-4
+                                      col-md-4
+                                      col-sm-12
+                                      col-xs-12
+                                      col-12
                                       buttons-container">
                                         <a href="{{ .link }}" target="_blank" class="button c-blue">
                                             <span>{{ .button }}</span>
@@ -125,7 +125,7 @@
                                     </div>
                                 </div>
                             </div>
-                        </div>                        
+                        </div>
                       {{end}}
                     {{end}}
 
@@ -167,8 +167,8 @@
                         sfdcCampaignId: "{{ .Params.sfdcCampaignId }}"
                       });
                       </script>
-                    {{end}}       
-                                 
+                    {{end}}
+
 
                     <!--cta defined in front matter-->
                     {{ if and (.Params.cta) (eq .Section "blog") }}
@@ -177,23 +177,23 @@
                             <div class="cta-container">
                                 <div class="row align-items-center cta-wrap">
                                     <div class="
-                                      col-xl-9 
-                                      col-lg-9 
-                                      col-md-8 
-                                      col-sm-12 
-                                      col-xs-12 
-                                      col-12 
+                                      col-xl-9
+                                      col-lg-9
+                                      col-md-8
+                                      col-sm-12
+                                      col-xs-12
+                                      col-12
                                       texts-container">
                                         <div class="label">{{ .header }}</div>
                                         <div class="title">{{ .copy }}</div>
                                     </div>
                                     <div class="
-                                      col-xl-3 
-                                      col-lg-3 
-                                      col-md-4 
-                                      col-sm-12 
-                                      col-xs-12 
-                                      col-12 
+                                      col-xl-3
+                                      col-lg-3
+                                      col-md-4
+                                      col-sm-12
+                                      col-xs-12
+                                      col-12
                                       buttons-container">
                                         <a href="{{ .link }}" target="_blank" class="button c-blue">
                                             <span>{{ .button }}</span>
@@ -221,12 +221,12 @@
             <div class="col">
                 <div class="row max-sized">
                     <div class="
-                      col-xl-10 offset-xl-1 
-                      col-lg-10 offset-lg-1 
-                      col-md-10 offset-md-1 
-                      col-sm-12 offset-sm-0 
-                      col-xs-12 offset-xs-0 
-                      col-12 offset-0 
+                      col-xl-10 offset-xl-1
+                      col-lg-10 offset-lg-1
+                      col-md-10 offset-md-1
+                      col-sm-12 offset-sm-0
+                      col-xs-12 offset-xs-0
+                      col-12 offset-0
                       author-wrap">
                         <div class="author-item">
                             <div class="thumbnail-container">
@@ -267,8 +267,8 @@
             {{end}}
         </div>
         {{ end }}
-        
-        
+
+
     </div>
 </section>
 

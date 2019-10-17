@@ -89,9 +89,9 @@
                               {{end}}
                             {{end}}
 
-                            <div class="date-label"><img class="icon" src="/imgs/community/blog/icon-calendar-gray.svg"> {{ .Date.Format "January 2, 2006" }}</div>
+                            <div class="date-label"><img class="icon" src="/imgs/community/blog/icon-calendar-gray.svg" alt="Gray Calendar Icon"> {{ .Date.Format "January 2, 2006" }}</div>
                             {{ with .ReadingTime }}
-                              <div class="read-time-label"><img class="icon" src="/imgs/community/blog/icon-time-gray.svg"> Read time: {{.}} min</div>
+                              <div class="read-time-label"><img class="icon" src="/imgs/community/blog/icon-time-gray.svg" alt="A Gray Icon of a Clock with White Clock Hands"> Read time: {{.}} min</div>
                             {{ end }}
                             {{ with .Params.location }}
                               <div class="date-label">{{ . }}</div>
