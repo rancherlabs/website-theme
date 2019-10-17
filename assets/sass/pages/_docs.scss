@@ -222,6 +222,10 @@
     }
 }
 
+.docs-container .grid-container {
+    background: #fff;
+}
+
 .docs-note-item {
     position: relative;
 
@@ -1059,6 +1063,37 @@
     .head-blank {
         height: 135px;
     }
+
+    nav#TableOfContents {
+        .active {
+          font-weight: bold;
+        }
+        ul {
+          list-style-type: none;
+          margin: 0;
+          padding: 0;
+    
+          &:first-child {
+            padding: 0;
+            margin: 0;
+            border: none;
+          }
+    
+          li {
+            a {
+              display: block;
+              font-size: .75em;
+              line-height: 1.25em;
+              border-bottom: solid thin $light-grey;
+              padding: .5em 0;
+            }
+          }
+    
+          ul {
+            margin-left: .5em;
+          }
+        }
+      }
 
     .contents-container {
         position: relative;
