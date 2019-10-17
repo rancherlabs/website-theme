@@ -2,7 +2,17 @@
   {{ $cache :=  now.Unix }}
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width">
-  <title>{{ with .Params.metaTitle }}{{ . }}{{ else }}{{ .Title }}{{ end }}</title>
+  <title>
+      {{ with .Params.metaTitle }}
+          {{ . }}
+      {{ else }}
+          {{ if eq .Section "tags" }}
+              {{ .Title }} Blog Posts by Rancher
+          {{ else }}
+              {{ .Title }}
+          {{ end }}
+      {{ end }}
+  </title>
 
   <link rel="icon" type="image/png" href="{{ "img/favicon.png" | relURL }}">
 
@@ -14,11 +24,12 @@
   {{ $lory := resources.Get "js/jquery.lory.js" }}
   {{ $tingle := resources.Get "js/tingle.js" }}
   {{ $moment := resources.Get "js/moment.js" }}
+  {{ $timezone := resources.Get "js/moment-timezone.js" }}
   {{ $empty := resources.Get "js/empty.js" }}
   {{ $scrollreveal := resources.Get "js/scrollreveal.js" }}
   {{ $vendors := resources.Get "js/vendors.js" }}
 
-  {{ $vendorJs := slice $jquery $empty $lory $empty $tingle $empty $moment $scrollreveal $vendors  | resources.Concat "js/vendor.js" | minify }}
+  {{ $vendorJs := slice $jquery $empty $lory $empty $tingle $empty $moment $empty $timezone $empty $scrollreveal $empty $vendors  | resources.Concat "js/vendor.js" | minify }}
   <script charset="utf-8" type="text/javascript" src="{{ $vendorJs.Permalink}}?{{ $cache }}"></script>
 
  {{ $instantsearch := resources.Get "js/instantsearch.js" | minify }}
@@ -30,6 +41,15 @@
   <script charset="utf-8" type="text/javascript" src="{{ $appJs.Permalink}}?{{ $cache}}"></script>
 
   {{ partial "seo.html" . }}
+
+
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-57KS2MW');</script>
+  <!-- End Google Tag Manager -->
 
   <!-- Google Analytics -->
   <script>

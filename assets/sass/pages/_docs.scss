@@ -1004,7 +1004,7 @@
             padding-top: 16px;
             padding-bottom: 16px;
             padding-right: 40px;
-            padding-left: 0;
+            padding-left: 10px;
 
             color: #3d3d3d !important;
             font-family: 'Roboto';
@@ -1188,7 +1188,7 @@
     }
 
     .texts-container {
-        h1 {
+        h1, h5 {
             margin-top: 5px;
             padding-bottom: 0;
 

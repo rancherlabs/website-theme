@@ -258,19 +258,15 @@
       z-index: 1;
       position: absolute;
       display: inline-block;
-
-      top: 19%;
+      top: 36%;
       left: 50%;
-
       width: 125px;
       height: 125px;
-
       padding: 10px;
-
       background-color: rgba(#313131, .75);
       border-radius: 50%;
-
-      @include transform(translateX(-50%));
+      box-sizing: border-box;
+      transform: translate(-50%, -50%);
 
       .icon {
         position: relative;

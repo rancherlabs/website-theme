@@ -299,8 +299,41 @@ const bootstrapApp = function() {
   //bootstrapImgZoom();
 }
 
+const formatTimePeriod = function() {
+  $(".format-datetime").each(function(index, item) {
+    const element = $(item);
+    const parts = element.data('start').split(' ');
+    const dateFormat = element.data('format') || 'MMM D, YYYY';
+    const startDate = `${parts[0]}T${parts[1]}${parts[2]}`;
+    const startTime = moment(startDate);
+    const offset = parts[2];
+    const timezone = moment.tz.names().find(x => offset === startTime.tz(x).format('ZZ'));
+    
+    const date1 = startTime.tz(timezone).format(dateFormat);
+    const time1 = startTime.tz(timezone).format('h:mm a');
+
+    const endDate = element.data('end');
+    if (!endDate) {
+      // all day long, just specify date
+      element.find('span').html(date1);
+    } else {
+      const endTime = moment(endDate);
+      const date2 = endTime.tz(timezone).format(dateFormat);
+      const time2 = endTime.tz(timezone).format('h:mm a');
+      let result = `${date1} ${time1}`;
+      if (date1 === date2) {
+        result += ` - ${time2}`;
+      } else {
+        result += ` - ${date2} ${time2}`;
+      }
+      element.find('span').html(result);
+    }
+  });
+}
+
 $(document).ready(() => {
   bootstrapApp();
+  formatTimePeriod();
 });
 
 //tab functionality
