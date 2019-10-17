@@ -1,6 +1,6 @@
 .homepage-screen1 {
 	// background-size: auto 98%;
-	background-image: url('/imgs/screen1-background.png');
+	background-image: url('/img/screen1-background2.png');
 	background-repeat: no-repeat;
 	background-position: center bottom;
 
@@ -8,8 +8,11 @@
 		text-align: center;
 
 		.texts-container {
-			padding-top: 200px;
-			padding-bottom: 300px;
+			height: 95vh;
+			max-height: 700px;
+			min-height: 500px;
+			display: flex;
+			align-items: center;
 
 			.title-label {
 				margin-bottom: 10px;

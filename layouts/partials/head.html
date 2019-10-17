@@ -2,7 +2,17 @@
   {{ $cache :=  now.Unix }}
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width">
-  <title>{{ with .Params.metaTitle }}{{ . }}{{ else }}{{ .Title }}{{ end }}</title>
+  <title>
+      {{ with .Params.metaTitle }}
+          {{ . }}
+      {{ else }}
+          {{ if eq .Section "tags" }}
+              {{ .Title }} Blog Posts by Rancher
+          {{ else }}
+              {{ .Title }}
+          {{ end }}
+      {{ end }}
+  </title>
 
   <link rel="icon" type="image/png" href="{{ "img/favicon.png" | relURL }}">
 
@@ -32,7 +42,7 @@
 
   {{ partial "seo.html" . }}
 
-  
+
   <!-- Google Tag Manager -->
   <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
     new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],

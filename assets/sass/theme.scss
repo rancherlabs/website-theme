@@ -24,6 +24,8 @@
 @import "components/general";
 @import "components/tweet-box";
 @import "components/search";
+@import "components/card";
+@import "components/button";
 
 // 6. Page-specific styles
 @import "pages/common";
@@ -83,3 +85,4 @@
 @import "pages/what-rancher-adds-to-kubernetes";
 @import "pages/brand-guidelines";
 @import "pages/learning-paths";
+@import "pages/resources";

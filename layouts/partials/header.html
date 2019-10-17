@@ -80,6 +80,7 @@
 
                             <ul class="submenu submenus-wrap">
                                 <li><a href="/community">Overview</a></li>
+                                <li><a href="/learning-paths">Learning Paths</a></li>
                                 <li><a href="/training/">Training</a></li>
                                 <li><a href="/tutorials/">Tutorials</a></li>
                                 <li><a href="/events/">Events</a></li>
@@ -89,7 +90,6 @@
                                 <!-- <li><a href="/writing-program/">Rancher Writing Program</a></li> -->
                                 <li><a href="/quick-start/">Getting Started Guide</a></li>
                                 <li><a href="/blog/">Blog</a></li>
-                                <li><a href="/learning-paths/">Learning Paths</a></li>
                                 <li><a href="/ebooks-and-whitepapers/">eBooks & Whitepapers</a></li>
                                 <li><a href="/videos-and-podcasts/">Videos & Podcasts</a></li>
                                 <li><a href="https://forums.rancher.com/">Forums</a></li>
@@ -140,7 +140,7 @@
 
                         <div class="primary-menus">
                             <ul class="primary-menus-wrap">
-                                <li class="primary-menu-item menu-why_rancher">
+                                <li class='primary-menu-item menu-why_rancher {{ if eq .Params.section "overview" }}active{{ end }}'>
                                     <a class="primary-menu" href="/what-is-rancher/overview">Why RANCHER?</a>
 
                                     <ul class="primary-menus-sub">
@@ -190,10 +190,13 @@
                                         </div>
                                     </ul>
                                 </li>
-                                <li class="primary-menu-item menu-products">
+                                <li class='primary-menu-item menu-products {{ if eq .Params.section "products" }}active{{ end }}'>
                                     <a class="primary-menu" href="/products">Products</a>
                                     <ul class="primary-menus-sub">
                                         <div class="grid-container">
+                                            <div class="row">
+                                                <div class="col-12 right">
+                                               
                                             <div class="primary-menu-blocks">
                                                 <div class="menu-sub-block">
                                                     <ul>
@@ -202,6 +205,7 @@
                                                             <a href="/products" class="menu-sub-block-item">Overview</a>
                                                             <a href="/products/rancher" class="menu-sub-block-item">Rancher</a>
                                                             <a href="/rancher-os" class="menu-sub-block-item">RancherOS</a>
+                                                            <a href="/rancher-os" class="menu-sub-block-item">RKE</a>
                                                         </li>
                                                     </ul>
                                                 </div>
@@ -213,6 +217,7 @@
                                                             <a href="http://k3os.io" target="_blank" class="menu-sub-block-item">k3OS</a>
                                                             <a href="http://submariner.io" target="_blank" class="menu-sub-block-item">Submariner</a>
                                                             <a href="https://rio.io" target="_blank" class="menu-sub-block-item">Rio</a>
+                                                            <a href="https://github.com/longhorn/longhorn" target="_blank" class="menu-sub-block-item">Longhorn</a>
                                                         </li>
                                                     </ul>
                                                 </div>
@@ -227,7 +232,7 @@
                                         </div>
                                     </ul>
                                 </li>
-                                <li class="primary-menu-item menu-customers">
+                                <li class='primary-menu-item menu-customers {{ if eq .Params.section "customers" }}active{{ end }}'>
                                     <a class="primary-menu" href="/customers">Customers</a>
 
                                     <ul class="primary-menus-sub">
@@ -300,8 +305,8 @@
                                         </div>
                                     </ul>
                                 </li>
-                                <li class="primary-menu-item menu-community">
-                                    <a class="primary-menu" href="/learn">RESOURCES</a>
+                                <li class='primary-menu-item menu-community {{ if eq .Params.section "resources" }}active{{ end }}'>
+                                    <a class="primary-menu" href="/resources/">RESOURCES</a>
 
                                     <ul class="primary-menus-sub">
                                         <div class="grid-container">
@@ -321,10 +326,13 @@
                                                     <ul>
                                                         <li class="articles-container">
                                                             <div class="label">Content Library</div>
-                                                            <a href="/learning-paths/" class="menu-sub-block-item">Learning Paths</a>
-                                                            <a href="/ebooks-and-whitepapers/" class="menu-sub-block-item">eBooks & Whitepapers</a>
-                                                            <a href="/videos-and-podcasts/" class="menu-sub-block-item">Videos & Podcasts</a>
-                                                            <a href="/blog/" class="menu-sub-block-item">Blog</a>
+                                                            <a href="/resources/#analyst-reports" class="menu-sub-block-item">Analyst Reports</a>
+                                                            <a href="/resources/#whitepapers" class="menu-sub-block-item">
+                                                            White Papers</a>
+                                                            <a href="/resources/#ebooks" class="menu-sub-block-item">Ebooks</a>
+                                                            <a href="/resources/#videos" class="menu-sub-block-item">Videos</a>
+                                                            <a href="/resources/#podcasts" class="menu-sub-block-item">Podcasts</a>
+                                                            <a href="/resources/#customer-stories" class="menu-sub-block-item">Customer Stories</a>
                                                         </li>
                                                     </ul>
                                                 </div>
@@ -332,10 +340,13 @@
                                                     <ul>
                                                         <li class="articles-container">
                                                             <div class="label">Community</div>
-                                                            <a href="/community" class="menu-sub-block-item">Community Overview</a>
-                                                            <a href="/online-meetups" class="menu-sub-block-item">Online Meetups</a>
-                                                            <a href="/rodeos" class="menu-sub-block-item">Hands-on Workshops</a>
-                                                            <a href="/kubernetes-master-class" class="menu-sub-block-item">Kubernetes Master Classes</a>
+                                                            <a href="/community/" class="menu-sub-block-item">Community Overview</a>
+                                                            <a href="/learning-paths/" class="menu-sub-block-item">Learning Paths</a>
+                                                            <a href="/online-meetups/" class="menu-sub-block-item">Online Meetups</a>
+                                                            <a href="/rodeos/" class="menu-sub-block-item">Hands-on Workshops</a>
+                                                            <a href="/kubernetes-master-class/" class="menu-sub-block-item">Kubernetes Master Classes</a>
+                                                            <!-- <a href="/ranchcasts/" class="menu-sub-block-item">RanchCasts</a> -->
+                                                            <a href="/blog/" class="menu-sub-block-item">Blog</a>
                                                         </li>
                                                     </ul>
                                                 </div>
@@ -356,206 +367,10 @@
                                                     </ul>
                                                 </div>
                                             </div>
-                                            <!-- <div class="row">
-                                                <div class="left">
-
-                                                    <li class="articles-container split-half">
-                                                        <div class="label">Technical Resources
-                                                            <ul class="sns-services set-right">
-                                                                <li><a href="https://twitter.com/Rancher_Labs" target="_blank"><img src="/imgs/icon-twitter.svg"></a></li>
-                                                                <li><a href="https://www.linkedin.com/groups/6977008/profile" target="_blank"><img src="/imgs/icon-linkedin.svg"></a></li>
-                                                                <li><a href="https://www.facebook.com/rancherlabs/" target="_blank"><img src="/imgs/icon-facebook.svg"></a></li>
-                                                                <li><a href="https://www.youtube.com/channel/UCh5Xtp82q8wjijP8npkVTBA" target="_blank"><img src="/imgs/icon-youtube.svg"></a></li>
-                                                            </ul>
-                                                        </div>
-
-                                                        <div class="articles-wrap">
-                                                            <div class="article-item">
-                                                                <div class="article-texts">
-                                                                    <a href="/community/">
-                                                                        <p class="title-label">Community</p>
-                                                                    </a>
-                                                                </div>
-                                                            </div>
-                                                            <div class="article-item">
-                                                                <div class="article-texts">
-                                                                    <a href="/online-meetups/">
-                                                                        <p class="title-label">Online Meetups</p>
-                                                                    </a>
-                                                                </div>
-                                                            </div>
-                                                            <div class="article-item">
-                                                                <div class="article-texts">
-                                                                    <a href="/training/">
-                                                                        <p class="title-label">Training</p>
-                                                                    </a>
-                                                                </div>
-                                                            </div>
-                                                            <div class="article-item">
-                                                                <div class="article-texts">
-                                                                    <a href="/rodeos/">
-                                                                        <p class="title-label">Rancher Rodeos</p>
-                                                                    </a>
-                                                                </div>
-                                                            </div>
-                                                            <div class="article-item">
-                                                                <div class="article-texts">
-                                                                    <a href="/tutorials/">
-                                                                        <p class="title-label">Tutorials</p>
-                                                                    </a>
-                                                                </div>
-                                                            </div>
-                                                            <div class="article-item">
-                                                                <div class="article-texts">
-                                                                    <a href="/kubernetes-master-class/">
-                                                                        <p class="title-label">Kubernetes Master Classes</p>
-                                                                    </a>
-                                                                </div>
-                                                            </div>
-                                                            <div class="article-item">
-                                                                <div class="article-texts">
-                                                                    <a href="/events/">
-                                                                        <p class="title-label">Events</p>
-                                                                    </a>
-                                                                </div>
-                                                            </div>
-                                                            <div class="article-item">
-                                                                <div class="article-texts">
-                                                                    <a href="/writing-program/">
-                                                                        <p class="title-label">Rancher Writing Program</p>
-                                                                    </a>
-                                                                </div>
-                                                            </div>
-                                                            <div class="article-item type-list">
-                                                                <div class="article-texts">
-                                                                    <a href="https://forums.rancher.com/">
-                                                                        <p class="title-label">Forums</p>
-                                                                    </a>
-                                                                    <a href="http://slack.rancher.io/">
-                                                                        <p class="title-label">Slack</p>
-                                                                    </a>
-                                                                    <a href="https://github.com/rancher">
-                                                                        <p class="title-label">Github</p>
-                                                                    </a>
-                                                                </div>
-                                                            </div>
-                                                        </div> -->
-
-                                                        <!-- <div class="article-item">
-                                                            <div class="article-thumbmail"></div>
-                                                            <div class="article-texts">
-                                                                <h1 class="title-label">
-                                                                    Forums
-                                                                </h1>
-                                                                <p class="description-label">
-                                                                    Lucidus malesuada vero sudo appellatio facilisi iaceo
-                                                                </p>
-                                                            </div>
-                                                        </div>
-                                                        <div class="article-item">
-                                                            <div class="article-thumbmail"></div>
-                                                            <div class="article-texts">
-                                                                <h1 class="title-label">
-                                                                    Docs
-                                                                </h1>
-                                                                <p class="description-label">
-                                                                    Lucidus malesuada vero sudo appellatio facilisi iaceo
-                                                                </p>
-                                                            </div>
-                                                        </div>
-                                                        <div class="article-item">
-                                                            <div class="article-thumbmail"></div>
-                                                            <div class="article-texts">
-                                                                <h1 class="title-label">
-                                                                    Slack
-                                                                </h1>
-                                                                <p class="description-label">
-                                                                    Saepius tortor consectetuer meus abigo pneum cursus
-                                                                </p>
-                                                            </div>
-                                                        </div>
-                                                        <div class="article-item">
-                                                            <div class="article-thumbmail"></div>
-                                                            <div class="article-texts">
-                                                                <h1 class="title-label">
-                                                                    Training
-                                                                </h1>
-                                                                <p class="description-label">
-                                                                    Saepius tortor consectetuer meus abigo pneum cursus
-                                                                </p>
-                                                            </div>
-                                                        </div>
-                                                        <div class="article-item">
-                                                            <div class="article-thumbmail"></div>
-                                                            <div class="article-texts">
-                                                                <h1 class="title-label">
-                                                                    Github
-                                                                </h1>
-                                                                <p class="description-label">
-                                                                    Saepius tortor consectetuer meus abigo pneum cursus
-                                                                </p>
-                                                            </div>
-                                                        </div>
-                                                        <div class="article-item">
-                                                            <div class="article-thumbmail"></div>
-                                                            <div class="article-texts">
-                                                                <h1 class="title-label">
-                                                                    Event & Meetups
-                                                                </h1>
-                                                                <p class="description-label">
-                                                                    Saepius tortor consectetuer meus abigo pneum cursus
-                                                                </p>
-                                                            </div>
-                                                        </div> -->
-                                                    <!-- </li>
-                                                </div>
-                                                <div class="right">
-                                                    <li class="menus-container">
-                                                        <div class="label">Content Library</div>
-
-                                                        <a href="/quick-start/">
-                                                            <span>Getting Started Guide</span>
-                                                            <svg class="icon right" enable-background="new 0 0 34 34" viewBox="0 0 34 34" xmlns="http://www.w3.org/2000/svg">
-                                                                <g class="svg-linear" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10">
-                                                                    <path d="m19.5 12 5 5-5 5"/>
-                                                                    <path d="m24.5 17h-15"/>
-                                                                </g>
-                                                            </svg>
-                                                        </a>
-                                                        <a href="/blog/">
-                                                            <span>Blog</span>
-                                                            <svg class="icon right" enable-background="new 0 0 34 34" viewBox="0 0 34 34" xmlns="http://www.w3.org/2000/svg">
-                                                                <g class="svg-linear" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10">
-                                                                    <path d="m19.5 12 5 5-5 5"/>
-                                                                    <path d="m24.5 17h-15"/>
-                                                                </g>
-                                                            </svg>
-                                                        </a>
-                                                        <a href="/ebooks-and-whitepapers/">
-                                                            <span>eBooks & Whitepapers</span>
-                                                            <svg class="icon right" enable-background="new 0 0 34 34" viewBox="0 0 34 34" xmlns="http://www.w3.org/2000/svg">
-                                                                <g class="svg-linear" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10">
-                                                                    <path d="m19.5 12 5 5-5 5"/>
-                                                                    <path d="m24.5 17h-15"/>
-                                                                </g>
-                                                            </svg>
-                                                        </a>
-                                                        <a href="/videos-and-podcasts/">
-                                                            <span>Videos & Podcasts</span>
-                                                            <svg class="icon right" enable-background="new 0 0 34 34" viewBox="0 0 34 34" xmlns="http://www.w3.org/2000/svg">
-                                                                <g class="svg-linear" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10">
-                                                                    <path d="m19.5 12 5 5-5 5"/>
-                                                                    <path d="m24.5 17h-15"/>
-                                                                </g>
-                                                            </svg>
-                                                        </a>
-                                                    </li>
-                                                </div>
-                                            </div> -->
                                         </div>
                                     </ul>
                                 </li>
-                                <li class="primary-menu-item menu-company">
+                                <li class='primary-menu-item menu-company {{ if eq .Params.section "company" }}active{{ end }}'>
                                     <a class="primary-menu" href="/about/">Company</a>
 
                                     <ul class="primary-menus-sub">
