@@ -843,7 +843,7 @@
             line-height: 1.4;
             text-align: left;
 
-            background-color: $c-gray-base-light;
+            background-color: #fff;
         }
     }
 
@@ -1068,7 +1068,7 @@
         padding: 50px 0;
         // padding-top: 90px;
 
-        background-color: $c-gray-base-light;
+        background-color: #fff;
 
         &:before,
         &:after {
@@ -1301,9 +1301,7 @@
             tbody th {
                 position: relative;
                 vertical-align: top;
-
                 padding: 6px 20px;
-
                 color: $c-gray;
                 font-size: 15px;
                 font-weight: 300;
