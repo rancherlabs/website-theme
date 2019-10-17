@@ -1,13 +1,15 @@
 <!--cta Header-->
 {{ if and (.Page.Params.ctaHeader) }}
 {{ with index .Site.Data.cta .Page.Params.ctaHeader }}
-<div class="cta-banner row center-xs middle-xs">
-  <p>{{ .header }}</p>
-  <p>
-    <a href="{{ .link }}" target="_blank" class="button">
-      <span>{{ .button }}</span>
-    </a>
-  </p>
+<div class="cta-banner-holder">
+  <div class="cta-banner center-xs middle-xs">
+    <p>{{ .header }}</p>
+    <p>
+      <a href="{{ .link }}" target="_blank" class="button">
+        <span>{{ .button }}</span>
+      </a>
+    </p>
+  </div>
 </div>
 {{end}}
 {{end}}

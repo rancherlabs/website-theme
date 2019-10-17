@@ -1,1 +1,11 @@
+.ndvr {
+	.button {
+		height: auto;
+		text-align: center;
+		padding: 1rem 2rem;
 
+		&.w-100 {
+			width: 100%;
+		}
+	}
+}

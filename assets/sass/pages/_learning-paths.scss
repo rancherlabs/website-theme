@@ -1,0 +1,87 @@
+/** Learning paths list page */
+.learning-paths {
+	.card-item {
+		display: flex;
+		margin-bottom: 30px;
+	}
+
+	.card-wrap {
+		display: flex;
+	    flex-direction: column;
+	    justify-content: space-between;
+		box-shadow: $box-shadow;
+		transition: all 200ms $animate-cubic-in-out;
+		
+		a, span {
+			transition: all 200ms $animate-cubic-in-out;
+		}
+
+		&:hover {
+			transform: scale(1.05);
+
+			a, span {
+				color: $c-green !important;
+			}
+		}
+	}
+}
+
+.nav-prev-next {
+	margin-bottom: 40px;
+
+	.d-flex {
+		display: flex;
+		align-items: center;
+		margin-bottom: 15px;
+	}
+
+	.nav-prev, .nav-next {
+		position: relative;
+		white-space: normal;
+		width: 100%;
+		display: flex;
+		flex-direction: column;
+		line-height: 1.5;
+		height: 100%;
+		padding-left: 15px;
+		padding-right: 60px;
+
+		&:after {
+		    content: "";
+		    position: absolute;
+		    top: 50%;
+		    right: 15px;
+		    pointer-events: none;
+		    background: url(/imgs/button-arrow.png) 50% no-repeat;
+		    width: 36px;
+		    height: 36px;
+		    transition: all .2s ease-in-out;
+		    transform: translateY( -50% );
+		}
+
+		&:hover::after {
+			background-position: 95%;
+		}
+	}
+
+	.nav-prev {
+		padding-right: 15px;
+		padding-left: 60px;
+		align-items: flex-end;
+		text-align: right;
+
+		&::after {
+			right: unset;
+			left: 15px;
+			transform: rotate(180deg) translateY( 50% );
+		}
+
+		&:hover::after {
+			background-position: 95%;
+		}
+	}
+
+	.label {
+		margin-bottom: 0;
+	}
+}
