@@ -839,10 +839,8 @@
 
         .contents-container {
             padding: 20px;
-
             line-height: 1.4;
             text-align: left;
-
             background-color: #fff;
         }
     }
@@ -1148,7 +1146,11 @@
         display: none;
     }
 
-    .docs-wrap {}
+    .docs-wrap {
+        .docs-body p {
+            font-weight: 400;
+        }
+    }
 
     .texts-container {
         h1 {
