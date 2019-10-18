@@ -577,6 +577,11 @@
 
     .logo-container {
       position: relative;
+
+      .logo {
+        max-height: 125px;
+        object-fit: contain;
+      }
     }
 
     .title-label {
@@ -996,16 +1001,14 @@
       @include transform(translate(0));
 
       .logo-container {
-        max-height: 60px;
-
         .logo {
-          width: auto;
-          height: 100%;
+          max-width: 100%;
+          height: 100px;
+          object-fit: contain;
         }
       }
     }
     .main-item-container .thumbnail-information-container .logo-container {
-      max-height: 60px;
       height: 60px;
     }
 
@@ -1843,10 +1846,12 @@
 
   .logo-wrapper {
     flex: none;
-    width: 10%;
+    width: 50%;
 
-    IMG {
+    img {
       max-width: 100%;
+      max-height: 100%;
+      object-fit: contain;
     }
   }
 
