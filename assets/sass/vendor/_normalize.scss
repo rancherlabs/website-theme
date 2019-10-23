@@ -156,11 +156,11 @@ kbd,
 samp {
   font-family: monospace, monospace; /* 1 */
   font-size: 1em; /* 2 */
+  font-weight: bold;
   color: $c-blue;
   background: $c-gray-base-light;
   padding: 2px 7px;
   border-radius: 2px;
-  border: thin solid $c-gray-mid-light;
 }
 
 pre code {
