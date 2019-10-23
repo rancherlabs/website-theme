@@ -843,10 +843,11 @@
 
         .contents-container {
             padding: 20px;
+
             line-height: 1.4;
             text-align: left;
 
-            background-color: $c-gray-base-light;
+            background-color: #fff;
         }
     }
 
@@ -1182,11 +1183,7 @@
         display: none;
     }
 
-    .docs-wrap {
-        .docs-body p {
-            font-weight: 400;
-        }
-    }
+    .docs-wrap {}
 
     .texts-container {
         h1, h5 {
