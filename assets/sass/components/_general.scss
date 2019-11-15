@@ -17,6 +17,11 @@ span {
   }
 }
 
+.align-items-center {
+  display: flex;
+  align-items: center !important;
+}
+
 // default label.
 // label,
 .label {
