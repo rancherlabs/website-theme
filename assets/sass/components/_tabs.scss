@@ -1,295 +1,54 @@
-ul.tabs {
-  list-style-type: none;
+.tabs-container {
+  margin-top: 2rem;
+  
+  .tabs {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    border-bottom: 1px solid $c-gray-light;
+
+    .tab-item {
+      background: $c-gray-base-light;
+      flex: 1 1 100px;
+      text-align: center;
+      margin: 0 2px;
+      transition: all 300ms ease-in-out;
+
+      a {
+        display: block;
+        padding: 1rem 0;
+      }
+
+      &:hover {
+        background: $c-gray-light;
+      }
+
+      &.active {
+        box-shadow: 0 -2px 0 $c-blue;
+        background: $c-gray-light;
+      }
+    }
+  }
+}
+
+
+.tab-content .row:not(:first-of-type) {
+    border-bottom: 1px solid $c-gray-light;
+    padding-bottom:  3rem;
+}
+
+.product-logo {
+  @extend .col-md-3;
   display: flex;
-  margin: 0;
-  padding: 0;
-  // background-color: $light-grey ;
-  // background-size: 100% 2px;
-  // background-position: bottom;
-  box-shadow: 0 2px 0 $light-grey;
+  align-items: center;
+  justify-content: center;
 
-  li {
-    a {
-      padding: 10px;
-      display: block;
-    }
-
-    &.active {
-      box-shadow: 0 2px 0 $link-color;
-      position: relative;
-
-      &:after {
-        content: "";
-        position: absolute;
-        bottom: 0;
-        left: calc(50% - 5px);
-        border-left: 5px solid transparent;
-        border-right: 5px solid transparent;
-        border-bottom: 5px solid $link-color;
-      }
-    }
+  img {
+    width: 66%;
   }
 }
 
-.tabbed-content {
-  min-height: 250px;
-  position: relative;
-  width: 100%;
-  > div {
-    display: inline;
-    > a {
-      margin-left: -1px;
-      position: relative;
-      left: 1px;
-      text-decoration: none;
-      color: black;
-      background: white;
-      display: block;
-      float: left;
-      padding: 5px 10px;
-      border: 1px solid #ccc;
-      border-bottom: 1px solid white;
-    }
-    &:not(:target) > a {
-      border-bottom: 0;
-      background: -moz-linear-gradient(top, white, #eee);
-    }
-    &:target > a {
-      background: white;
-    }
-    > div {
-      background: white;
-      z-index: -2;
-      left: 0;
-      top: 30px;
-      bottom: 0;
-      right: 0;
-      padding: 20px;
-      border: 1px solid #ccc;
-    }
-    &:not(:target) > div {
-      position: absolute;
-    }
-    &:target > div {
-      position: absolute;
-      z-index: -1;
-    }
-  }
+.product-description {
+  @extend .col-md-9;
+  padding-top: 2rem;
 }
-
-.content-tabs {
-  ul.nav-tabs {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
-    border-bottom: solid 2px $border;
-    font-family: $text-font-header;
-    font-weight: bold;
-
-    li {
-      padding: $spacer-xs $spacer-sm;
-      background-color: $light-grey;
-      margin-right: $spacer-xs;
-      transition: ease-in-out all .25s;
-
-      &:before {
-        content: none;
-      }
-
-      &:not(:first-child) {
-        margin-top: 0;
-      }
-
-      &.active {
-        background-color: $link-color;
-        > a {
-          color: white;
-        }
-      }
-    }
-
-    &.nav-tabs-clean {
-      border-bottom: none;
-
-      li {
-        background-color: transparent;
-        border-bottom: solid 2px $light-grey;
-
-        a {
-          opacity: .5;
-        }
-
-        &.active {
-          background-color: transparent;
-          border-bottom-color: $mid-grey;
-
-          > a {
-            color: $link-color;
-            opacity: 1;
-          }
-        }
-      }
-    }
-  }
-
-  .tab-content {
-    .tab-pane {
-      display: none;
-
-      &.active {
-        display: block;
-      }
-    }
-  }
-
-  //k8s page
-  .tab-page-image {
-    position: relative;
-
-    img {
-      position: absolute;
-      z-index: -1;
-      opacity: .4;
-      top: $spacer-sm;
-      right: 0;
-      left: 0;
-      width: 300px;
-      margin-left: auto;
-      margin-right: auto;
-    }
-  }
-
-
-  &.vertical-tabs {
-    display: flex;
-
-    .vertical-tab-nav {
-      flex-basis: 30%;
-      max-width: 30%;
-
-      .nav-tabs {
-        display: block;
-        text-align: left;
-        border-bottom: none;
-
-        li {
-          background: $light-grey;
-          margin-bottom: $spacer-xs;
-          border-radius: 3px;
-
-          a {
-            color: $mid-grey;
-            display: block;
-          }
-
-          &.active {
-            background-color: $link-color;
-            a {
-              color: white;
-            }
-          }
-        }
-      }
-    }
-    .tab-content {
-      flex-basis: 70%;
-      max-width: 70%;
-    }
-  }
-}
-
-.main-content {
-  .content-tabs {
-    margin: $spacer-md 0;
-
-      ul.nav-tabs {
-        border-bottom: none;
-
-        li {
-          padding: $spacer-xs $spacer-sm;
-          background-color: darken($light-grey, 5%);
-          border-top: solid 4px darken($light-grey, 8%);
-          color: darken($light-grey, 10%);
-
-          &.active {
-            background-color: lighten($light-grey, 3%);
-            border-top: solid 4px $link-color;
-            > a {
-              color: $link-color;
-            }
-          }
-        }
-      }
-  }
-
-  .tab-content {
-    background-color: lighten($light-grey, 3%);
-    padding: 0 $spacer-sm;
-  }
-}
-
-//accordion
-.accordion {
-  position: relative;
-  margin-bottom: $spacer-xs;
-  width: 100%;
-  overflow: hidden;
-  border: solid $border thin;
-  border-radius: 3px;
-
-  input {
-    position: absolute;
-    opacity: 0;
-    z-index: -1;
-  }
-  label {
-    position: relative;
-    display: block;
-    padding: calc(#{$spacer-xs} + 2px) $spacer-xs $spacer-xs $spacer-xs;
-    background: lighten($bg-default,4%);
-    font-family: $text-font-header;
-    cursor: pointer;
-  }
-
-  .accordion-content {
-    display: none;
-    overflow: hidden;
-    background: #fff;
-    -webkit-transition: max-height .35s;
-    -o-transition: max-height .35s;
-    transition: max-height .35s;
-    padding: $spacer-sm;
-  }
-
-  /* :checked */
-  input:checked~.accordion-content {
-    display: block;
-  }
-  /* Icon */
-  label::after {
-    position: absolute;
-    right: $spacer-xs;
-    top: calc(#{$spacer-xs} + 3px);
-    display: block;
-    text-align: center;
-    -webkit-transition: all .35s;
-    -o-transition: all .35s;
-    transition: all .35s;
-    font-size: 2rem;
-  }
-  input[type=checkbox]+label::after {
-    content: "+";
-  }
-  input[type=radio]+label::after {
-    content: "\25BC";
-  }
-  input[type=checkbox]:checked+label::after {
-    transform: rotate(90deg);
-  }
-  input[type=radio]:checked+label::after {
-    transform: rotateX(180deg);
-  }
-}
-
-

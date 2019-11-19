@@ -1,11 +1,33 @@
 .ndvr {
 	.button {
+		display: inline-block;
 		height: auto;
 		text-align: center;
 		padding: 1rem 2rem;
+		border: 2px solid $c-blue;
 
 		&.w-100 {
 			width: 100%;
+		}
+
+		&.primary {
+			background: $c-blue;
+			color: white;
+
+			&:hover {
+				background: $c-blue-hover;
+			}
+		}
+
+		&.outline {
+			background-color: transparent;
+			border-color: $c-green;
+			color: $c-green;
+
+			&:hover {
+				background-color: $c-green;
+				color: white;
+			}
 		}
 	}
 }
