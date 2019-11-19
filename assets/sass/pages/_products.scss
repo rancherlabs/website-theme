@@ -42,7 +42,12 @@
         z-index: 2;
 
         padding-top: 130px;
-        padding-bottom: 80px;
+        padding-bottom: 130px;
+
+        h2, p {
+            z-index: 2;
+            position: relative;
+        }
     }
 
     .list-container {
@@ -410,6 +415,12 @@
         }
     }
 }
+
+.community-ebooks-screen1 .lower-container {
+    position: absolute;
+    bottom: 0;
+}
+
 
 // custom footer.
 // .get-started-container {
