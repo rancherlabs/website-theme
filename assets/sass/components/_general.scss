@@ -2,6 +2,10 @@ html.sr .load-hidden {
   visibility: hidden;
 }
 
+.d-flex {
+  display: flex;
+}
+
 // default span.
 span {
   &.block {
