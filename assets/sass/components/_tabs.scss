@@ -4,15 +4,16 @@
   .tabs {
     display: flex;
     flex-direction: row;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     border-bottom: 1px solid $c-gray-light;
+    padding: 0;
 
     .tab-item {
       background: $c-gray-base-light;
-      flex: 1 1 100px;
       text-align: center;
       margin: 0 2px;
       transition: all 300ms ease-in-out;
+      flex: 1 1 100px;
 
       a {
         display: block;
@@ -32,9 +33,17 @@
 }
 
 
-.tab-content .row:not(:first-of-type) {
-    border-bottom: 1px solid $c-gray-light;
-    padding-bottom:  3rem;
+.tab-content {
+  margin: 0 15px;
+
+   .row:not(:first-of-type) {
+      border-bottom: 1px solid $c-gray-light;
+      padding-bottom:  3rem;
+      margin-bottom: 3rem;
+  }
+  .row:last-child {
+    border: none;
+  }
 }
 
 .product-logo {
