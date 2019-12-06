@@ -37,7 +37,7 @@
 
   {{ $base := resources.Get "js/base.js" }}
   {{ $local := resources.Get "js/app.js" }}
-  {{ $appJs := slice $base $local  | resources.Concat "js/app.js" }}
+    {{ $appJs := slice $base $local  | resources.Concat "js/app.js" | minify }}
   <script charset="utf-8" type="text/javascript" src="{{ $appJs.Permalink}}?{{ $cache}}"></script>
 
   {{ partial "seo.html" . }}
