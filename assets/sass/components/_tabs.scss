@@ -1,6 +1,6 @@
 .tabs-container {
   margin-top: 2rem;
-  
+
   .tabs {
     display: flex;
     flex-direction: row;
@@ -34,8 +34,6 @@
 
 
 .tab-content {
-  margin: 0 15px;
-
    .row:not(:first-of-type) {
       border-bottom: 1px solid $c-gray-light;
       padding-bottom:  3rem;
