@@ -297,18 +297,9 @@
         margin-bottom: 30px;
     }
     .card-item {
-        display: block;
         padding: 45px 35px;
         background-color: $c-gray;
         border-radius: 1em;
-        box-shadow: 0 2px 8px 2px rgba(0,0,0,0.0);
-        transform: scale(1);
-        transition: box-shadow 300ms ease-out, transform 300ms ease-out;
-
-        &:hover {
-          box-shadow: 0 2px 8px 2px rgba(0,0,0,0.5);
-          transform: scale(1.025);
-        }
 
         .text-label {
             position: relative;
