@@ -82,7 +82,7 @@
 
         .title-label {
           margin-bottom: 14px;
-      
+
           font-size: 2em;
         }
 
@@ -126,7 +126,7 @@
 
       .title-label {
         margin-bottom: 10px;
-      
+
         font-size: 2em;
       }
       .description-label {
@@ -150,7 +150,7 @@
 
       .title-label {
         margin-bottom: 15px;
-      
+
         font-size: 2.4em;
       }
       .description-label {
@@ -172,7 +172,7 @@
 
       .title-label {
         margin-bottom: 20px;
-      
+
         font-size: 2.8em;
       }
       .description-label {
@@ -592,7 +592,7 @@
     }
     .videos-wrap {
       flex-wrap: wrap;
-      
+
       margin-top: 0;
 
       .information-container {
@@ -955,7 +955,7 @@
         padding-top: 10px;
       }
     }
-    
+
     .sliders-container {
       margin-top: 0;
       padding-top: 30px;
@@ -1097,4 +1097,8 @@
       }
     }
   }
+}
+
+.podcast-player {
+  width: 100%;
 }
