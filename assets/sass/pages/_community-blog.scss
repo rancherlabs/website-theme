@@ -58,7 +58,7 @@
   .tag-item {
     position: relative;
     display: block;
-    
+
     justify-content: flex-start;
     align-content: flex-start;
 
@@ -295,7 +295,7 @@
       @include textElipsis(3, 1.775);
     }
 
-    .category-label, 
+    .category-label,
     .tag-item {
       padding-left: 0;
     }
@@ -904,6 +904,27 @@
 
 
 .community-blog-view {
+  .article-sidebar {
+    .featured, .tags {
+      margin-bottom: 2rem;
+    }
+    .title {
+      font-family: poppins;
+      font-size: 28px;
+      font-weight: 200;
+      line-height: 1.125;
+      margin-bottom: 1rem;
+    }
+    .thumbnail-container {
+      min-height: 150px;
+      max-height: 150px;
+    }
+    .label {
+      font-size: 1rem;
+      margin: 0 0 0.5rem 0;
+    }
+  }
+
   .set-ground {
     z-index: -1;
   }
@@ -915,7 +936,7 @@
   .tag-item {
     position: relative;
     display: block;
-    
+
     justify-content: flex-start;
     align-content: flex-start;
 
@@ -1221,10 +1242,10 @@
       // color: $c-green;
       font-weight: bold;
     }
-  
+
     ul, ol {
       margin-bottom: 40px;
-  
+
       li {
         margin-bottom: 15px;
         margin-left: 1.5em;
@@ -1236,7 +1257,7 @@
     }
     ul {
       list-style: disc;
-    
+
       > li {
         margin-bottom: 10px;
 
@@ -1260,7 +1281,7 @@
 
     ol {
       list-style: decimal;
-      
+
       > li {
         list-style: decimal;
       }
@@ -1667,9 +1688,9 @@
         }
         &:hover:before {
           bottom: -3px;
-  
+
           height: 1px;
-  
+
           background-color: rgba($c-sky-blue, 0.2);
         }
       }
@@ -1893,31 +1914,31 @@
       p {
         margin-bottom: 20px;
       }
-  
+
       h2 {
         font-weight: 300;
       }
     }
-  
+
     .title-label {
       margin-top: 25px;
       margin-bottom: 25px;
     }
-  
+
     .thumbnail-container {
       height: auto;
       min-height: 0;
-  
+
       .thumbnail-wrap {
         height: auto;
-  
+
         .thumbnail {}
       }
     }
-  
+
     .user-container {
       display: inline-block;
-  
+
       margin-bottom: 40px;
     }
     .user-container .user-thumbnail {
@@ -1929,9 +1950,9 @@
     }
     .user-container .date-label {
       display: block;
-  
+
       margin-top: 20px;
-  
+
       text-align: center;
     }
     .user-container .date-label .icon {
@@ -1941,26 +1962,26 @@
     .user-container .tag-item {
       margin-top: 45px;
     }
-  
+
     .article-contents .cta-container {
       margin-bottom: 40px;
       padding: 40px 20px;
     }
     .cta-wrap {
       align-items: flex-start !important;
-  
+
       text-align: center;
-  
+
       .buttons-container a {
         display: inline-block;
-  
+
         width: auto;
-  
+
         margin-top: 20px;
         padding: 0 20px;
-  
+
         height: 40px;
-  
+
         font-size: 14px;
         line-height: 40px;
       }
@@ -2296,7 +2317,7 @@
   .article-item-wrap .information-container .user-container {
     margin-top: 0;
   }
-  .article-item-wrap .information-container .user-container .date-label, 
+  .article-item-wrap .information-container .user-container .date-label,
   .article-item-wrap .information-container .user-container .read-time-label {
     flex: 0 0 100%;
 
