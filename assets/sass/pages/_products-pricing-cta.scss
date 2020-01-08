@@ -6,9 +6,7 @@
 
   .decoration {
     position: relative;
-
     width: 100%;
-
     line-height: 0;
   }
 
@@ -41,8 +39,23 @@
   }
 
   .form-container {
-    z-index: 1;
+    fieldset {
+      display: block;
+      max-width: 100% !important;
+    }
+  }
 
+  fieldset.form-columns-1 {
+    display: inline-block;
+    width: 50%;
+  }
+
+  fieldset.form-columns-1:last-of-type {
+    width: 100%;
+  }
+
+  .form-container {
+    z-index: 1;
     margin-top: 130px;
     margin-bottom: -600px;
     padding-right: 0;
@@ -72,22 +85,25 @@
       margin-top: 50px;
     }
 
-    .hs-error-msgs {
-      transform: translate3d(0, 27px, 0);
+      .hs-error-msgs {
+          margin-top: 0.5rem;
+        
+        li {
+          box-sizing: border-box;
+          background-color: $cs--red-dark;
+          padding: 0.5rem;
+          margin-right: 0.5rem;
+          border-radius: 4px;
+        }
 
-      label {
-        position: static;
-        transform: translate3d(0, 0, 0);
-        color: white;
+        label {
+          color: white;
+        }
       }
-    }
 
     .hs-form-field {
-      position: relative;
-      display: inline-block;
-
-      width: 100% !important;
       margin-bottom: 20px;
+      position: relative;
 
       &>label {
         z-index: 1;

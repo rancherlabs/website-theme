@@ -1,6 +1,7 @@
 .products-request-a-demo-cta-screen1 {
   z-index: 1;
   position: relative;
+  padding-top: 160px;
 
   &:before {
     content: '';
@@ -15,21 +16,21 @@
   }
 
   .form-container {
+    fieldset {
+      display: block;
+      max-width: 100% !important;
+    }
   }
 
   .form-wrap {
     position: relative;
-
     width: 100%;
-    
-    margin-top: 130px;
+    margin-top: 40px;
     padding: 90px 76px;
-
     background-color: $c-blue-dark1;
 
     .title-label {
       margin-bottom: 15px;
-
       color: #fff;
       font-size: 25px;
       font-weight: 400;
@@ -46,20 +47,33 @@
     }
 
     .hs-error-msgs {
-      transform: translate3d(0, 27px, 0);
+        margin-top: 0.5rem;
+      
+      li {
+        box-sizing: border-box;
+        background-color: $cs--red-dark;
+        padding: 0.5rem;
+        margin-right: 0.5rem;
+        border-radius: 4px;
+      }
 
       label {
-        position: static;
-        transform: translate3d(0, 0, 0);
         color: white;
       }
     }
 
+    fieldset.form-columns-1 {
+      display: inline-block;
+      width: 50%;
+    }
+
+    fieldset.form-columns-1:last-of-type {
+      width: 100%;
+    }
+
     .hs-form-field {
       position: relative;
-      display: inline-block;
-
-      width: 100% !important;
+      display: block;
       margin-bottom: 20px;
 
       &>label {

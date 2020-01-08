@@ -8,5 +8,8 @@
     "private": true,
     "devDependencies": {
         "normalize-scss": "^7.0.1"
+    },
+    "dependencies": {
+        "@mdi/font": "^4.7.95"
     }
 }
