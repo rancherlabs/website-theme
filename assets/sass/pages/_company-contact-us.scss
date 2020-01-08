@@ -2,24 +2,16 @@
     z-index: 1;
     position: relative;
 
-    background-color: $c-gray-base-light;
 
     .decoration {
-        position: absolute;
-
-        bottom: 0;
-
-        width: 150%;
-
-        margin-left: -62%;
-
-        line-height: 0;
+        background-color: $c-gray-base-light;
+        position: relative;
+        width: 100%;
+        top: 130px;
 
         .cloud {
             position: relative;
-            display: inline-block;
-
-            width: 100%;
+            width: 60%;
             height: auto;
         }
 
@@ -29,22 +21,30 @@
             bottom: 0;
             right: 0;
 
-            width: 52%;
+            width: 32%;
             height: auto;
         }
     }
 
     .form-container {
         z-index: 1;
-
-        margin-top: 130px;
-        margin-bottom: -800px;
+        margin-top: 50px;
         padding-right: 0;
         padding-left: 0;
+
+        fieldset {
+            display: block;
+            max-width: 100% !important;
+        }
+
+        fieldset.form-columns-1 {
+            display: inline-block;
+            width: 100%;
+        }
     }
+
     .form-wrap {
         padding: 90px 76px;
-
         background-color: $c-blue-dark1;
 
         .title-label {
@@ -65,21 +65,24 @@
             margin-top: 50px;
         }
 
-        .hs-error-msgs {
-            transform: translate3d(0, 27px, 0);
+          .hs-error-msgs {
+              margin-top: 0.5rem;
+            
+            li {
+              box-sizing: border-box;
+              background-color: $cs--red-dark;
+              padding: 0.5rem;
+              margin-right: 0.5rem;
+              border-radius: 4px;
+            }
 
             label {
-                position: static;
-                transform: translate3d(0, 0, 0);
-                color: white;
+              color: white;
             }
-        }
+          }
 
         .hs-form-field {
             position: relative;
-            display: inline-block;
-
-            width: 100% !important;
             margin-bottom: 20px;
 
             &>label {
@@ -300,17 +303,11 @@
 
         .decoration {
             position: relative;
-
             width: 100%;
-
             margin-left: 0;
 
             .cloud {
                 width: 100%;
-            }
-
-            .items {
-                
             }
         }
     }
@@ -372,17 +369,11 @@
 
         .decoration {
             position: relative;
-
             width: 100%;
-
             margin-left: 0;
 
             .cloud {
                 width: 100%;
-            }
-
-            .items {
-
             }
         }
     }
@@ -395,11 +386,8 @@
         }
 
         .decoration {
-            padding-bottom: 15%;
-
             .cloud {
                 width: 140%;
-
                 margin-left: -40%;
             }
 

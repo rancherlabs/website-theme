@@ -1,20 +1,8 @@
-.products-support-cta-screen1 {
-  z-index: 1;
-  position: relative;
-
-  background-color: $c-gray-base-light;
-
-  .form-container {}
+.ndvr .form {
   .form-wrap {
-    position: absolute;
-
-    top: 130px;
-
-    width: 100%;
-
     padding: 90px 76px;
-
     background-color: $c-blue-dark1;
+    margin-top: 50px;
 
     .title-label {
       margin-bottom: 15px;
@@ -23,23 +11,23 @@
       font-size: 25px;
       font-weight: 400;
     }
-
     .description-label {
       color: #fff;
-
       margin-bottom: 40px;
     }
 
-    .form-wrap {
-      margin-top: 50px;
-    }
-
     .hs-error-msgs {
-      transform: translate3d(0, 27px, 0);
+        margin-top: 0.5rem;
+      
+      li {
+        box-sizing: border-box;
+        background-color: $cs--red-dark;
+        padding: 0.5rem;
+        margin-right: 0.5rem;
+        border-radius: 4px;
+      }
 
       label {
-        position: static;
-        transform: translate3d(0, 0, 0);
         color: white;
       }
     }
@@ -48,7 +36,7 @@
       position: relative;
       display: inline-block;
 
-      width: 100% !important;
+      width: 100%;
       margin-bottom: 20px;
 
       &>label {
@@ -156,6 +144,7 @@
         color: $c-sky-blue;
       }
     }
+
     .legal-consent-container {
       .hs-richtext {
         margin-bottom: 20px;
@@ -214,15 +203,21 @@
       }
     }
   }
+}
+
+.products-support-cta-screen1 {
+  z-index: 1;
+  position: relative;
+  background-color: $c-gray-base-light;
+  padding: 200px 0 35px;
+  margin-bottom: 60px;
 
   .lower-container {
     .decoration.ground {
       position: absolute;
-
-      top: 100%;
       left: 50%;
-
       width: 50%;
+      transform: translateY(35px);
 
       .cloud {
         position: relative;
@@ -325,10 +320,10 @@
           position: relative;
           display: inline-block;
           vertical-align: middle;
-  
+
           width: 30px;
           height: auto;
-  
+
           margin-right: 20px;
         }
       }

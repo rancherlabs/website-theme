@@ -341,3 +341,9 @@
 .no-wrap, .nowrap {
   white-space: nowrap;
 }
+
+.icon-horizontal-center {
+  transform: translateY(6px);
+  opacity: 0.8;
+  padding: 3px;
+}
