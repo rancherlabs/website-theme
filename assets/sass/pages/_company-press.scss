@@ -213,6 +213,81 @@
   }
 }
 
+.cta-ribbon {
+  background-color: #0075a8;
+  color: white; 
+  padding: 1rem 0 0;
+
+  @media (max-width: 768px) {
+    margin-bottom: 40px;
+  }
+
+  .cta-field-label {
+    @extend h3;
+    float: left;
+    margin-right: 20px;
+  }
+
+  .hs-form {
+      display: flex;
+      margin-bottom: 1rem;
+  }
+
+  .hs-input {
+      display: inline-block;
+      position: relative;
+  }
+
+  .hs-button {
+      position: relative;
+      display: inline-block;
+      flex: 0 0 auto;
+      width: 50px;
+      height: 50px;
+      margin-top: 0;
+      padding: 0;
+      background-color: $cs--blue-dark ;
+      border-radius: 0!important;
+      border: 0;
+  }
+
+.actions {
+  position: relative;
+}
+
+ .actions:after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      pointer-events: none;
+      background: url(/imgs/button-arrow.png) 50% no-repeat;
+      width: 36px;
+      height: 36px;
+      margin: 7px;
+      -webkit-transition: all .04s;
+      -moz-transition: all .04s;
+      -o-transition: all .04s;
+      transition: all .04s;
+  }
+
+  .hs-input {
+      position: relative;
+      display: inline-block;
+      border-radius: 0;
+      flex: 0 0 auto;
+      // width: 400px;
+      max-width: 100%;
+      height: 50px;
+      padding: 0 20px;
+      font-size: 15px;
+      background-color: #f2f5f5;
+      border: 0;
+      box-sizing: border-box;
+  }
+}
+
+
 .company-press-note-item {
   position: relative;
 
@@ -233,6 +308,8 @@
 
     margin-top: 10px;
     padding: 50px 40px 40px;
+
+    box-shadow: $box-shadow;
 
     &:before {
       display: none;
@@ -1001,4 +1078,5 @@
   }
   @media (min-width: 992px) and (max-width: 1199.98px) {
   }
+
 }
