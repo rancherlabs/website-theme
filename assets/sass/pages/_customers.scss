@@ -926,7 +926,7 @@
           max-height: 60px;
         }
       }
-    } 
+    }
   }
   @media (min-width: 768px) and (max-width: 991.98px) {
     .main-item-container {
@@ -1232,7 +1232,7 @@
       padding-right: $mobile-side-space;
       padding-left: $mobile-side-space;
       padding-bottom: 10px;
-      
+
       background-color: $c-blue-dark1;
     }
 
@@ -1471,90 +1471,6 @@
     }
   }
 
-  .cards-container {
-    z-index: 1;
-
-    .card-wrap {
-      padding-right: 25px;
-      padding-left: 25px;
-    }
-  }
-
-  .card-container {
-    position: relative;
-
-    padding: 50px;
-
-    background-color: #fff;
-    border-radius: 10px;
-    box-shadow: 15px 25px 75px rgba($c-blue, 0.1);
-
-    text-align: center;
-
-    .thumbnail-container {
-      position: relative;
-      display: inline-block;
-
-      width: 100%;
-
-      line-height: 0;
-
-      .thumbnail {
-        position: relative;
-        display: inline-block;
-
-        width: 100%;
-        height: auto;
-      }
-    }
-
-    .text-container {
-      margin-top: 40px;
-
-      text-align: center;
-
-      p {
-        margin: 0;
-        margin-top: 10px;
-        margin-bottom: 20px;
-        padding: 0;
-
-        color: $c-blue-dark2;
-        font-size: 22px;
-        font-family: "Poppins";
-        font-weight: 400;
-        line-height: 1;
-
-        cursor: default;
-
-        @media (max-width: 1279px) {
-          font-size: 1em;
-        }
-
-        @media (max-width: 575.98px) {
-          font-size: 0.8em;
-          font-weight: 500;
-        }
-      }
-
-      .point-label {
-        margin: 0;
-
-        color: $c-blue;
-        font-size: 50px;
-        font-weight: 600;
-
-        @media (max-width: 1279px) {
-          font-size: 2em;
-        }
-      }
-
-      .point-label .small {
-        font-size: 65%;
-      }
-    }
-  }
-
   @media (max-width: 575.98px) {
     .background-bottom {
       top: 35%;
@@ -1566,21 +1482,6 @@
     .texts-container {
       padding-top: 60px;
       padding-bottom: 30px;
-    }
-
-    .cards-container {
-      .card-wrap {
-        margin-bottom: 30px;
-        padding-right: $mobile-side-space;
-        padding-left: $mobile-side-space;
-      }
-      .card-container {
-        padding: 30px 25px;
-
-        .thumbnail-container .thumbnail {
-          max-width: 200px;
-        }
-      }
     }
   }
   @media (min-width: 576px) and (max-width: 767.98px) {
@@ -1620,13 +1521,130 @@
       padding-top: 170px;
       padding-bottom: 60px;
     }
-
-    .card-container {
-      height: 100%;
-
-      padding: 40px;
-    }
   }
+
+  .cards-container {
+  		position: relative;
+
+  		margin-top: 70px;
+  		padding: 0;
+
+  		@media (max-width: 1279px) {
+  			padding-right: 30px;
+  			padding-left: 30px;
+  		}
+  		@media (max-width: 575.98px) {
+  			z-index: 1;
+
+  			margin-top: 35px;
+  			padding-right: $mobile-side-space;
+  			padding-left: $mobile-side-space;
+
+  			> .row > .col-6 {
+  				margin-bottom: 20px;
+  				padding-right: 8px;
+  				padding-left: 8px;
+  			}
+  		}
+  	}
+  	.card-container {
+  		position: relative;
+
+  		background-color: #fff;
+  		border-radius: 10px;
+  		box-shadow: 15px 25px 75px rgba($c-blue, .1);
+
+  		@include transition(margin-top .25s);
+
+  		@media (max-width: 575.98px) {
+  			margin-bottom: 0;
+  		}
+  		@media (min-width: 576px) and (max-width: 767.98px) {
+  			margin-bottom: 30px;
+  		}
+
+  		// &:hover {
+  		// 	margin-top: -20px;
+
+  		// 	@media (max-width: 575.98px) {
+  		// 		margin-top: 0;
+  		// 	}
+  		// }
+
+  		&:first-child {
+  			margin-left: 1px;
+  		}
+  		&:last-child {
+  			margin-right: 1px;
+  		}
+  	}
+  	.text-container {
+    		padding: 50px 10px 40px;
+
+    		text-align: center;
+
+    		@media (max-width: 575.98px) {
+    			padding: 35px 5px 30px;
+    		}
+
+    		p {
+    			margin: 0;
+    			margin-top: 10px;
+    			padding: 0;
+
+    			color: $c-blue-dark2;
+    			font-size: 22px;
+    			font-family: 'Poppins';
+    			font-weight: 400;
+    			line-height: 1;
+
+    			cursor: default;
+
+    			@media (max-width: 1279px) {
+    				font-size: 1em;
+    			}
+    			@media (max-width: 575.98px) {
+    				font-size: .8em;
+    				font-weight: 500;
+    			}
+    		}
+
+    		p.point-label {
+    			margin: 0;
+
+    			color: $c-blue;
+    			font-size: 50px;
+    			font-weight: 600;
+
+    			@media (max-width: 1279px) {
+    				font-size: 2em;
+    			}
+    		}
+
+    		hr {
+    			width: 33.3333%;
+
+    			margin: 1.5em auto;
+
+    			border: 0px none white;
+    			border-top: 1px solid #d0d4d7;
+    		}
+
+    		.button {
+    			height: auto;
+
+    			margin: 0;
+
+    			font-family: 'Roboto';
+
+    			@media (max-width: 1279px) {
+    				font-size: 1em;
+    			}
+    			@media (max-width: 575.98px) {
+    				font-size: .9em;
+    			}
+    		}
+    	}
 }
 
 .customers-screen6 {
