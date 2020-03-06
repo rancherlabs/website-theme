@@ -2,17 +2,9 @@
   {{ $cache :=  now.Unix }}
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width">
-  <title>
-      {{ with .Params.metaTitle }}
-          {{ . }}
-      {{ else }}
-          {{ if eq .Section "tags" }}
-              {{ .Title }} Blog Posts by Rancher
-          {{ else }}
-              {{ .Title }}
-          {{ end }}
-      {{ end }}
-  </title>
+
+
+  {{ partial "seo.html" . }}
 
   <link rel="icon" type="image/png" href="{{ "img/favicon.png" | relURL }}">
 
@@ -39,8 +31,6 @@
   {{ $local := resources.Get "js/app.js" }}
     {{ $appJs := slice $base $local  | resources.Concat "js/app.js" | minify }}
   <script charset="utf-8" type="text/javascript" src="{{ $appJs.Permalink}}?{{ $cache}}"></script>
-
-  {{ partial "seo.html" . }}
 
 
   <!-- Google Tag Manager -->
