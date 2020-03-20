@@ -235,14 +235,6 @@
   .article-container {
     padding-top: 50px;
 
-    &:first-child {
-      padding-top: 200px;
-    }
-
-    &:last-child {
-      padding-bottom: 200px;
-    }
-
     @media (max-width: 575.98px) {
       &:first-child {
         padding-top: 50px;
