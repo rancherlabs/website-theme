@@ -329,11 +329,17 @@ const formatTimePeriod = function() {
       element.find('span').html(result);
     }
   });
-}
+};
+
+const lazyload = function() {
+  const observer = lozad();
+  observer.observe();
+};
 
 $(document).ready(() => {
   bootstrapApp();
   formatTimePeriod();
+  lazyload();
 });
 
 //tab functionality
