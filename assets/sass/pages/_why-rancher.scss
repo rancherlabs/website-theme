@@ -233,8 +233,6 @@
 
   &-screen3 {
     padding-top: 100px;
-    padding-bottom: 120px;
-
     background-color: $c-gray-base-light;
 
     @media (max-width: 575.98px) {
@@ -332,34 +330,17 @@
 
   &-screen4 {
     .texts-container {
-      padding-top: 200px;
-      padding-right: 0;
-      padding-bottom: 200px;
-      padding-left: 45px;
+        padding-right: $mobile-side-space;
+        padding-left: $mobile-side-space;
 
       @media (max-width: 575.98px) {
-        padding-top: 60px;
-        padding-right: $mobile-side-space;
-        padding-bottom: 0;
-        padding-left: $mobile-side-space;
       }
       @media (min-width: 576px) and (max-width: 767.98px) {
-        padding-top: 70px;
-        padding-right: $mobile-side-space;
-        padding-bottom: 0;
-        padding-left: $mobile-side-space;
       }
       @media (min-width: 768px) and (max-width: 991.98px) {
-        padding-top: 100px;
-        padding-right: $mobile-side-space;
-        padding-bottom: 100px;
-        padding-left: $mobile-side-space;
+
       }
       @media (min-width: 992px) and (max-width: 1199.98px) {
-        padding-top: 150px;
-        padding-right: $mobile-side-space;
-        padding-bottom: 150px;
-        padding-left: $mobile-side-space;
       }
     }
 
@@ -1461,6 +1442,53 @@
             font-size: .9em;
           }
         }
+      }
+    }
+  }
+}
+
+.what-is-rancher {
+  .article-item-detail {
+    ul {
+      font-weight: 300;
+      margin-left: 20px;
+      line-height: 1.5;
+
+      li {
+        list-style: disc;
+      }
+    }
+  }
+
+  .content-tabs {
+    .nav-tabs {   
+        display: flex;
+
+        li {
+          background: $c-blue;
+          padding: .75rem 2rem;
+          flex: 1 1 100px;
+          margin-right: 4px;
+          transition: all 200ms ease-out;
+
+          &:not(.active) a {
+            color: $c-gray-light;
+          }
+
+          &.active {
+          background: $c-gray-light;
+          box-shadow: 0 -2px 0 $c-blue;
+        }
+      }
+    }
+
+    .tab-pane {
+      padding: 2rem;
+      display: none;
+      background: $c-gray-light;
+
+      &.active {
+        display: block;
       }
     }
   }

@@ -4,7 +4,7 @@
 
 {{ define "main" }}
 
-<section class="tags-contents">
+<section id="{{ cond (isset .Params "section") (.Params.section | anchorize) "" }}" class="tags-contents">
     <div class="grid-container">
         <div class="row max-sized set-lines set-ground">
             <div class="col-4"></div>
@@ -56,7 +56,7 @@
         <!-- non event lists -->
         <div class="tag-list-container">
         {{ $paginator := .Scratch.Get "paginator" }}
-        {{ range sort $paginator.Pages "Params.date" "desc"}}
+        {{ range $paginator.Pages.ByPublishDate.Reverse }}
 
             <div class="tag-item">
                 {{if .Params.link}}
