@@ -56,8 +56,12 @@
 
   {{ if eq .Section "tags" }}
     <meta name="description" content="Learn more about {{ .Title | pluralize }} from Rancher, the experts in container orchestration.">
+  {{ else if .Params.metaDescription }}
+    <meta name="description" content="{{ with .Params.metaDescription }}{{ . }}{{ end }}"/>
+  {{ else if .Description }}
+    <meta name="description" content="{{ .Description }}"/>
   {{ else }}
-    <meta name="description" content="{{ with .Params.metaDescription }}{{ . }}{{ else }}{{ .Description }}{{ end }}"/>
+    <meta name="description" content="{{ .Summary | plainify }}"/>
   {{ end }}
 
   <!-- Twitter Card -->
