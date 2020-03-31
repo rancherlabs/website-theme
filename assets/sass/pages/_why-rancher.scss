@@ -1,9 +1,26 @@
+.icon-container {
+    height: 80px;
+    width: 80px;
+    background: #f9f9f9;
+    display: flex;
+    border-radius: 50%;
+    padding: 15px;
+    justify-content: center;
+    align-items: center;
+}
+
+.icon-container .icon {
+    width: 100%;
+    height: auto;
+    fill: #0075a8;
+}
+
 .why-rancher {
   &-screen2 {
     z-index: 1;
 
     .contents-container {
-      padding-top: 200px;
+      padding-top: 100px;
       // padding-bottom: 180px;
 
       @media (max-width: 575.98px) {
@@ -1447,11 +1464,22 @@
   }
 }
 
-.what-is-rancher {
+.why-rancher .analyst-report {
+  margin-top: 100px;
+  margin-bottom: 100px;
+
+  blockquote {
+    padding-left: 20px;
+    margin-left: 20px;
+    border-left: 6px solid $c-blue;
+  }
+}
+
+.why-rancher {
   .article-item-detail {
     ul {
       font-weight: 300;
-      margin-left: 20px;
+      margin-left: 0;
       line-height: 1.5;
 
       li {
@@ -1460,16 +1488,30 @@
     }
   }
 
+  .tab-content:not(:first-of-type) {
+    margin-bottom: 40px;
+    margin-top: 40px;
+  }
+
+
   .content-tabs {
     .nav-tabs {   
         display: flex;
 
         li {
           background: $c-blue;
-          padding: .75rem 2rem;
           flex: 1 1 100px;
           margin-right: 4px;
           transition: all 200ms ease-out;
+          
+          &:last-of-type {
+            margin-right: 0;
+          }
+
+          a {
+            padding: .75rem 2rem;
+            display: block;
+          }
 
           &:not(.active) a {
             color: $c-gray-light;
