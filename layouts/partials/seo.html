@@ -1,3 +1,15 @@
+<title>
+  {{ with .Params.metaTitle }}
+    {{ . }}
+  {{ else }}
+    {{ if eq .Section "tags" }}
+      {{ .Title }} Blog Posts by Rancher
+    {{ else }}
+      {{ .Title }}
+    {{ end }}
+  {{ end }}
+</title>
+
 {{- .Scratch.Set "permalink" .Permalink -}}
 {{- if (and .Pages (not .IsHome)) -}}
   {{/*
