@@ -12,6 +12,8 @@
   {{- $appCss := resources.Get "sass/app.scss" | toCSS $opt | minify }}
   <link rel="stylesheet" type="text/css" href="{{ $appCss.Permalink }}?{{ $cache }}"/>
 
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lozad/dist/lozad.min.js"></script>
+
   {{ $jquery := resources.Get "js/jquery.js" }}
   {{ $lory := resources.Get "js/jquery.lory.js" }}
   {{ $tingle := resources.Get "js/tingle.js" }}
