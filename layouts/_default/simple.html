@@ -1,0 +1,30 @@
+{{ define "main" }}
+
+<section id="{{ cond (isset .Params "section") (.Params.section | anchorize) "" }}" class="community-blog-view">
+    <div class="grid-container">
+        <div class="row max-sized">
+            <div class="
+              col-lg-8 offset-lg-2
+              col-sm-10 offset-sm-1
+              col-12 offset-0
+              contents-container">
+                {{ with .Params.title }}
+                  <h1 class="title-label">{{.}}</h1>
+                {{end}}
+
+                <div class="article-contents">
+
+                    <div class="wrap">
+                    {{ with .Content }}
+                      {{ . }}
+                    {{ else }}
+                      <p>{{ .Description }}</p>
+                    {{ end }}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+{{ end }}
