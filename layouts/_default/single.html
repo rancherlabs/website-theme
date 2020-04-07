@@ -30,7 +30,7 @@
                   {{ if .Params.image }}
                   <div class="thumbnail-container">
                       <div class="thumbnail-wrap">
-                        <img class="thumbnail" src="{{ .Params.image }}" alt="{{ .Params.title }}">
+                        <img data-src="{{ .Params.image }}" alt="{{ .Params.title }}" class="lozad thumbnail">
                       </div>
                   </div>
                   {{end}}
