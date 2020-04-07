@@ -15,7 +15,7 @@
             z-index: 1;
 
             max-width: 1010px;
-            
+
             margin-top: 190px;
             margin-bottom: 50px;
             margin-right: auto;
@@ -155,7 +155,7 @@
 
                 .title-label {
                     margin-bottom: 14px;
-                
+
                     font-size: 2em;
                 }
 
@@ -195,22 +195,22 @@
                 margin-top: 100px;
                 margin-bottom: 180px;
             }
-      
+
             .texts-wrap .title-label {
                 margin-bottom: 10px;
-        
+
                 font-size: 2em;
             }
-      
+
             .texts-wrap .title-label br {
                 display: none;
             }
-      
+
             .texts-wrap .description-label {
                 font-size: .9em;
             }
         }
-    
+
         .decoration.rancher-ground {
             position: absolute;
 
@@ -238,23 +238,23 @@
                 margin-top: 120px;
                 margin-bottom: 200px;
             }
-        
+
             .texts-wrap .title-label {
                 margin-bottom: 10px;
-        
+
                 font-size: 2.4em;
             }
-        
+
             .texts-wrap .title-label br {
                 display: none;
             }
-        
+
             .texts-wrap .description-label {
                 font-size: 1em;
                 line-height: 1.5;
             }
         }
-    
+
         .decoration.rancher-ground {
             position: absolute;
 
@@ -282,23 +282,23 @@
                 margin-top: 120px;
                 margin-bottom: 220px;
             }
-        
+
             .texts-wrap .title-label {
                 margin-bottom: 10px;
-        
+
                 font-size: 2.8em;
-        
+
                 br {
                 display: none;
                 }
             }
-        
+
             .texts-wrap .description-label {
                 font-size: 1.25em;
                 line-height: 1.6;
             }
         }
-    
+
         .decoration.rancher-ground {
             position: absolute;
 
@@ -744,30 +744,24 @@
             .infor-label {
                 position: relative;
                 display: flex;
-
                 width: 100%;
-
-                margin-top: 10px;
             }
             .location-label {
                 position: relative;
                 display: inline-block;
-
-                flex: 1;
-
                 color: $c-blue-gray;
                 font-size: 12px;
                 font-weight: 800;
                 font-family: 'Poppins';
                 text-transform: uppercase;
                 letter-spacing: 1px;
+                margin-top: 10px;
+                margin-right: 30px;
             }
             .position-label {
                 position: relative;
                 display: inline-block;
-
                 flex: 1;
-
                 font-size: 12px;
                 font-weight: 800;
                 font-family: 'Poppins';
@@ -779,6 +773,7 @@
                     margin-left: 30px;
                     display: inline-block;
                     color: $c-green;
+                    margin-top: 10px;
                 }
                 div:first-child {
                     margin-left: 0;
@@ -872,18 +867,29 @@
 
                 .infor-label {
                     flex-wrap: wrap;
-
                     margin-top: 0;
                 }
 
                 .location-label,
                 .position-label {
                     flex: 0 0 100%;
-
                     margin-top: 15px;
-
                     text-align: left;
                 }
+
+                .position-label {
+                    margin-top: 5px;
+
+                    > div {
+                        margin-left: 0;
+                        margin-right: 30px;
+
+                        &:last-child {
+                            margin-right: 0;
+                        }
+                    }
+                }
+
                 .position-label a {
                     margin-left: 15px;
                 }
