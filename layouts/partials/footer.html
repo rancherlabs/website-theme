@@ -185,7 +185,7 @@ var VAR_DATAS = {
 
 
 // funcs.
-function sliderProgressPlay(slider, progressBar, duration, repeatable) {
+function sliderProgressPlay(slider, progressBar, duration, repeatable, syncedsliders) {
     // initialize progress bar.
     progressBar.stop().css('width', 0);
 
@@ -197,6 +197,13 @@ function sliderProgressPlay(slider, progressBar, duration, repeatable) {
 
         // request next slide.
         slider.slick('slickNext');
+
+        if(syncedsliders)
+        {
+          syncedsliders.forEach(function(item, index){
+            item.slick('slickNext');
+          })
+        }
 
         if (repeatable) sliderProgressPlay(slider, progressBar, duration, repeatable);
     });
