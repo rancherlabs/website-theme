@@ -88,10 +88,12 @@
                       {{ $published := time (.Date.Format "2006-01-02") }}
                       {{ $updated := time (.Lastmod.Format "2006-01-02") }}
 
-                      <div class="date-label"><img class="icon" src="/imgs/community/blog/icon-calendar-gray.svg" alt="Gray Calendar Icon"> Published: {{ $published.Format "January 2, 2006" }}</div>
-                      {{ if and ( $updated.After $published) (eq .Section "blog")}}
-                        <div class="date-label"><img class="icon" src="/imgs/community/blog/icon-calendar-gray.svg" alt="Gray Calendar Icon"> Updated: {{ $updated.Format "January 2, 2006" }}</div>
-                      {{end}}
+                      <div class="date-label-group">
+                        <div class="date-label"><img class="icon" src="/imgs/community/blog/icon-calendar-gray.svg" alt="Gray Calendar Icon"> Published: {{ $published.Format "January 2, 2006" }}</div>
+                        {{ if and ( $updated.After $published) (eq .Section "blog")}}
+                          <div class="date-label"><img class="icon" src="/imgs/community/blog/icon-calendar-gray.svg" alt="Gray Calendar Icon"> Updated: {{ $updated.Format "January 2, 2006" }}</div>
+                        {{end}}
+                      </div>
                     {{end}}
 
                     <!--list tags-->
