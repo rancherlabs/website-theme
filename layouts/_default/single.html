@@ -258,6 +258,11 @@
                                         <img class="service-icon" src="/imgs/icon-twitter.svg">
                                       </a>
                                     {{ end }}
+                                    {{ with .linkedin }}
+                                      <a href="https://linkedin.com/in/{{.}}" target="_blank">
+                                        <img class="service-icon" src="/imgs/icon-linkedin.svg">
+                                      </a>
+                                    {{ end }}
 
                                     <div class="user-information">
                                       <div class="user-name">{{.name}}</div>
@@ -300,6 +305,11 @@
                                         {{ with .twitter }}
                                           <a href="https://twitter.com/{{.}}" target="_blank">
                                             <img class="service-icon" src="/imgs/icon-twitter.svg">
+                                          </a>
+                                        {{ end }}
+                                        {{ with .linkedin }}
+                                          <a href="https://linkedin.com/in/{{.}}" target="_blank">
+                                            <img class="service-icon" src="/imgs/icon-linkedin.svg">
                                           </a>
                                         {{ end }}
 
