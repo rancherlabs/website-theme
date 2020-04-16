@@ -578,7 +578,7 @@
 
 			margin-top: 15px;
 			margin-left: 0;
-			
+
 			text-align: right;
 			line-height: 0;
 		}
@@ -660,7 +660,7 @@
 			}
 		}
   }
-  
+
   .side-slide-wrap {
     z-index: 5;
 
@@ -681,12 +681,12 @@
         content: '';
         z-index: 1;
         position: absolute;
-  
+
         top: 0;
         right: 0;
         bottom: 0;
         left: 0;
-  
+
         background-color: rgba(#000, .6);
       }
 
@@ -747,7 +747,7 @@
 		@media (max-width: 575.98px) {
 			display: flex;
 			flex-wrap: wrap;
-			
+
 			margin-top: 0;
 			padding-right: 15px;
 			padding-left: 15px;
@@ -869,8 +869,8 @@
 
 			margin: 1.5em auto;
 
-			border: 0px none white; 
-			border-top: 1px solid #d0d4d7; 
+			border: 0px none white;
+			border-top: 1px solid #d0d4d7;
 		}
 
 		.button {
@@ -892,9 +892,9 @@
 
 .homepage-screen4 {
 	color: #fff;
-	
+
 	background-color: $c-blue-dark1;
-	
+
 	@media (max-width: 575.98px) {
 		z-index: 1;
 
@@ -907,7 +907,7 @@
 		@media (max-width: 575.98px) {
 			background-color: transparent;
     }
-    
+
     .head-label {
       padding-left: 0;
 
@@ -960,7 +960,7 @@
 			padding-right: $mobile-side-space;
 			padding-left: $mobile-side-space;
     }
-    
+
     .title-label {
       b {
         font-weight: 400;
@@ -1637,7 +1637,7 @@
 		width: 220px;
 
 		margin-top: -76px;
-		
+
 		@media (max-width: 575.98px), (min-width: 576px) and (max-width: 767.98px) {
 			display: none;
 		}
@@ -1649,7 +1649,7 @@
 
 		@media (min-width: 992px) and (max-width: 1199.98px) {
 		}
-    
+
 		.slide-item {
 			position: relative;
 			line-height: 0;
@@ -1786,9 +1786,9 @@
 
 			@media (max-width: 575.98px) {
 				width: 100%;
-				
+
 				margin-top: 27px;
-				
+
 				line-height: 2;
 			}
 		}
@@ -2008,7 +2008,7 @@
 	background-size: 100% auto;
 	background-repeat: no-repeat;
 	background-position: left bottom;
-	
+
 	@media (max-width: 1450px) {
 		background-size: cover;
 		background-position: left top;
@@ -2018,10 +2018,10 @@
 		background-color: $c-gray-base-light;
 		background-image: none;
   }
-  
+
   .blind-cloud {
 		position: relative;
-		
+
 		@media (max-width: 1240px) {
 			margin: 0;
 		}
@@ -2111,11 +2111,11 @@
 	.texts-container {
 		@media (min-width: 576px) and (max-width: 767.98px) {
 			margin-bottom: 20px;
-			text-align: center;	
+			text-align: center;
 		}
 		@media (min-width: 768px) and (max-width: 991.98px) {
 			margin-bottom: 40px;
-			text-align: center;	
+			text-align: center;
 		}
 		.title-label {
 			@media (max-width: 575.98px) {
@@ -2189,7 +2189,7 @@
 
 			margin: 30px 0;
 
-			border: 0px none white; 
+			border: 0px none white;
 			border-top: 1px solid $c-sky-blue;
 
 			@include transition(max-width .25s, margin .25s);
