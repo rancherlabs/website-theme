@@ -88,10 +88,12 @@
                       {{ $published := time (.Date.Format "2006-01-02") }}
                       {{ $updated := time (.Lastmod.Format "2006-01-02") }}
 
-                      <div class="date-label"><img class="icon" src="/imgs/community/blog/icon-calendar-gray.svg" alt="Gray Calendar Icon"> Published: {{ $published.Format "January 2, 2006" }}</div>
-                      {{ if and ( $updated.After $published) (eq .Section "blog")}}
-                        <div class="date-label"><img class="icon" src="/imgs/community/blog/icon-calendar-gray.svg" alt="Gray Calendar Icon"> Updated: {{ $updated.Format "January 2, 2006" }}</div>
-                      {{end}}
+                      <div class="date-label-group">
+                        <div class="date-label"><img class="icon" src="/imgs/community/blog/icon-calendar-gray.svg" alt="Gray Calendar Icon"> Published: {{ $published.Format "January 2, 2006" }}</div>
+                        {{ if and ( $updated.After $published) (eq .Section "blog")}}
+                          <div class="date-label"><img class="icon" src="/imgs/community/blog/icon-calendar-gray.svg" alt="Gray Calendar Icon"> Updated: {{ $updated.Format "January 2, 2006" }}</div>
+                        {{end}}
+                      </div>
                     {{end}}
 
                     <!--list tags-->
@@ -256,6 +258,11 @@
                                         <img class="service-icon" src="/imgs/icon-twitter.svg">
                                       </a>
                                     {{ end }}
+                                    {{ with .linkedin }}
+                                      <a href="https://linkedin.com/in/{{.}}" target="_blank">
+                                        <img class="service-icon" src="/imgs/icon-linkedin.svg">
+                                      </a>
+                                    {{ end }}
 
                                     <div class="user-information">
                                       <div class="user-name">{{.name}}</div>
@@ -298,6 +305,11 @@
                                         {{ with .twitter }}
                                           <a href="https://twitter.com/{{.}}" target="_blank">
                                             <img class="service-icon" src="/imgs/icon-twitter.svg">
+                                          </a>
+                                        {{ end }}
+                                        {{ with .linkedin }}
+                                          <a href="https://linkedin.com/in/{{.}}" target="_blank">
+                                            <img class="service-icon" src="/imgs/icon-linkedin.svg">
                                           </a>
                                         {{ end }}
 

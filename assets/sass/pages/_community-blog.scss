@@ -1052,6 +1052,14 @@
 
     text-align: center;
 
+    > * {
+      margin-bottom: 10px;
+    }
+
+    > .tag-item {
+      margin-top: 10px;
+    }
+
     .user-thumbnail {
       position: relative;
       display: inline-block;
@@ -1096,6 +1104,16 @@
       font-weight: 800;
       letter-spacing: 1px;
       text-transform: uppercase;
+    }
+
+    .date-label-group {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+
+      .date-label + .date-label {
+        margin-top: 10px;
+      }
     }
 
     .date-label {
@@ -1184,30 +1202,46 @@
       margin-bottom: 50px;
     }
 
-    h1, h3 {
-      margin-bottom: 40px;
-
-      font-size: 25px;
-      font-weight: 400;
-      line-height: 1.4;
+    h1 {
+      font-size: 40px;
+      font-weight: 300;
+      margin-bottom: 20px;
+      margin-top: 0;
     }
 
     h2 {
-      line-height: 1.4;
+      font-size: 32px;
+      font-weight: 300;
+      margin-bottom: 20px;
+      margin-top: 0;
     }
 
     h3 {
-      font-size: 25px;
+      font-size: 28px;
+      font-weight: 300;
+      margin-bottom: 20px;
+      margin-top: 0;
     }
 
     h4 {
-      font-size: 20px;
+      font-size: 24px;
+      font-weight: 300;
+      margin-bottom: 10px;
+      margin-top: 0;
     }
 
     h5 {
-      margin-bottom: 1em;
-      font-size: 18px;
-      font-weight: bold;
+      font-size: 20px;
+      font-weight: 300;
+      margin-bottom: 10px;
+      margin-top: 0;
+    }
+
+    h6 {
+      font-size: 16px;
+      font-weight: 300;
+      margin-bottom: 10px;
+      margin-top: 0;
     }
 
     p {
@@ -1905,9 +1939,6 @@
         margin-bottom: 20px;
       }
 
-      h2 {
-        font-weight: 300;
-      }
     }
 
     .title-label {
@@ -2008,10 +2039,6 @@
       .wrap,
       p {
         margin-bottom: 20px;
-      }
-
-      h2 {
-        font-weight: 300;
       }
     }
 

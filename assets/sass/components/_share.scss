@@ -1,0 +1,28 @@
+.share-container {
+  @media (min-width: 800px) {
+    position: fixed !important;
+    left: 0;
+    top: 50%;
+    width: 60px !important;
+    transform: translateY(-50%);
+    z-index: 10;
+  }
+
+  .at-resp-share-element .at-share-btn {
+    margin: 4px;
+  }
+
+  .at-style-responsive .at-share-btn {
+    padding: 0;
+  }
+
+  .at-icon-wrapper {
+    background-color: $c-green !important;
+    width: 50px !important;
+    height: 50px !important;
+    svg {
+      width: 50px !important;
+      height: 50px !important;
+    }
+  }
+}
