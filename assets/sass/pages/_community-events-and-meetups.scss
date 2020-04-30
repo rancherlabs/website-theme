@@ -472,6 +472,15 @@
 
     border-radius: 1em;
 
+    .thumbnail-image {
+      width: 100%;
+    }
+
+    .text-subtitle {
+      color: #78c9cf;
+      margin-bottom: 10px;
+    }
+
     .thumbnail-wrap {
       position: relative;
       display: inline-block;
