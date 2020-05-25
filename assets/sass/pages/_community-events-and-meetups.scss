@@ -562,6 +562,14 @@
     }
   }
 
+  .featured-event-card {
+    .card-item {
+      .text-label {
+        font-size: 18px;
+      }
+    }
+  }
+
   @media (max-width: 575.98px) {
     .texts-container {
       padding-top: 50px;
