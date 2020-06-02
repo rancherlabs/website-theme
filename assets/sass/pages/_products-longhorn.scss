@@ -544,8 +544,8 @@
 
     .text-container {
       margin: 30px auto;
-
       min-height: 130px;
+      position: relative;
 
       @include transition(margin 0.25s);
 
