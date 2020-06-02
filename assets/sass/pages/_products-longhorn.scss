@@ -19,13 +19,6 @@
     left: -150px;
   }
 
-  .longhorn-button {
-    position: absolute;
-    width: 900px;
-    top: 250px;
-    left: 55%;
-  }
-
   .z-index-1 {
     position: relative;
     z-index: 1;
@@ -513,20 +506,17 @@
 
     .icon-container {
       position: relative;
-
       line-height: 0;
-      text-align: center;
+      margin: auto;
 
       .background {
         position: relative;
         display: inline-block;
 
-        width: 80%;
-        max-width: 270px;
+        width: 270px;
         height: auto;
 
-        margin-right: auto;
-        margin-left: auto;
+        margin: auto;
       }
 
       .icon {
@@ -553,9 +543,7 @@
     }
 
     .text-container {
-      margin-top: 30px;
-      margin-top: -10px;
-      margin-bottom: 40px;
+      margin: 30px auto;
 
       min-height: 130px;
 
