@@ -1,11 +1,11 @@
 .community-kubernetes-master-class-screen1 {
     overflow: hidden;
-  
+
     background-color: $c-gray-base-light;
-  
+
     .set-ground {
         margin: 0;
-  
+
         .decoration-container {
             >div,
             >img {
@@ -41,7 +41,7 @@
             }
         }
     }
-  
+
     .texts-container {
         padding-top: 200px;
         padding-left: 0;
@@ -241,6 +241,41 @@
     }
 }
 
+.community-rancher-academy-screen {
+    .contents-container {
+        padding-top: 150px;
+        padding-bottom: 150px;
+    }
+
+    @media (max-width: 575.98px) {
+        .contents-container {
+            padding-top: 50px;
+            padding-bottom: 50px;
+        }
+    }
+
+    @media (min-width: 576px) and (max-width: 767.98px) {
+        .contents-container {
+            padding-top: 80px;
+            padding-bottom: 80px;
+        }
+    }
+
+    @media (min-width: 768px) and (max-width: 991.98px) {
+        .contents-container {
+            padding-top: 110px;
+            padding-bottom: 110px;
+        }
+    }
+
+    @media (min-width: 992px) and (max-width: 1199.98px) {
+        .contents-container {
+            padding-top: 130px;
+            padding-bottom: 130px;
+        }
+    }
+}
+
 .community-kubernetes-master-class-screen3 {
     .contents-container {
         padding-top: 200px;
@@ -346,15 +381,15 @@
 
             hr {
                 width: 30%;
-          
+
                 margin: 50px 0 25px;
-          
+
                 border: 0px none white;
                 border-top: 1px solid rgba(#fff, .25);
-          
+
                 @media (max-width: 575.98px) {
                   max-width: 40px;
-          
+
                   margin: 15px 0;
                 }
             }
@@ -362,23 +397,23 @@
             .date-label {
                 position: relative;
                 display: inline-block;
-        
+
                 margin-right: 30px;
-        
+
                 color: $c-green;
                 font-size: 12px;
                 font-weight: 800;
                 letter-spacing: 1px;
                 text-transform: uppercase;
-        
+
                 .icon {
                     position: relative;
                     display: inline-block;
                     vertical-align: middle;
-            
+
                     width: 16px;
                     height: 16px;
-            
+
                     margin-top: -3px;
                     margin-right: 10px;
                 }
