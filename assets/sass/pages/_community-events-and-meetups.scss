@@ -459,8 +459,17 @@
 
   .card-container {
     height: 100%;
-
     margin-bottom: 30px;
+
+    &.summit-event-card {
+      height: auto;
+
+      .text-label {
+        font-size: 18px;
+        max-height: 100%;
+        -webkit-line-clamp: inherit;
+      }
+    }
   }
 
   .card-item {
