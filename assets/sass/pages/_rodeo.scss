@@ -1,9 +1,13 @@
 .rodeo-screen1 {
-  background-color: $c-blue-dark1;
-  background-image: url('/imgs/rodeo/screen1-background.png');
-  background-size: auto 100%;
-  background-repeat: repeat-x;
-  background-position: center;
+  padding-top: 130px;
+
+  .grid-container {
+    background-color: $c-blue-dark1;
+    background-image: url('/imgs/rodeo/screen1-background.png');
+    background-size: auto 100%;
+    background-repeat: repeat-x;
+    background-position: center;
+  }
 
   .decoration {
     position: relative;
@@ -90,6 +94,10 @@
         }
       }
     }
+  }
+
+  @media (max-width: 1024.98px) {
+    padding-top: 81px;
   }
 
   @media (max-width: 575.98px) {
@@ -190,7 +198,7 @@
 
       .title-label {
         margin-bottom: 16px;
-      
+
         font-size: 2.4em;
       }
     }
@@ -210,7 +218,7 @@
 
       .title-label {
         margin-bottom: 18px;
-      
+
         font-size: 2.9em;
       }
     }
@@ -229,7 +237,7 @@
 
       .title-label {
         margin-bottom: 20px;
-      
+
         font-size: 3.3em;
       }
     }
@@ -1441,7 +1449,7 @@
   @media (max-width: 575.98px) {
     .contents-container {
       padding-top: 0;
-      
+
       &:last-child {
         padding-bottom: 60px;
       }
@@ -1527,7 +1535,7 @@
       padding-right: 30px;
       padding-left: 30px;
     }
-    
+
     .card-list-wrap {
       padding-right: 30px;
       padding-left: 30px;
@@ -1547,7 +1555,7 @@
       padding-right: 30px;
       padding-left: 30px;
     }
-    
+
     .card-list-wrap {
       padding-right: 30px;
       padding-left: 30px;
@@ -1567,7 +1575,7 @@
       padding-right: 30px;
       padding-left: 30px;
     }
-    
+
     .card-list-wrap {
       padding-right: 30px;
       padding-left: 30px;
