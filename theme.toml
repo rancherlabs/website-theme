@@ -19,3 +19,6 @@ min_version = "0.26"
   name = ""
   homepage = ""
   repo = ""
+
+[params]
+    custom_css = ["css/docs.css"]
