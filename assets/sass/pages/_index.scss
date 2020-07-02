@@ -341,8 +341,11 @@
 }
 
 .homepage-screen2 {
+    padding-top: 4rem;
+
 	.sliders-container {
     position: relative;
+
 
 		padding-right: 0;
 		padding-left: 0;
@@ -379,6 +382,11 @@
 	.browser-item {
 		z-index: 1;
 		width: 90%;
+		line-height: 0;
+
+		.header {
+			padding: 1rem;
+		}
 	}
 
 	.slider-timer {
@@ -396,8 +404,6 @@
 		}
 
 		.current-slide {
-			// max-width: 31px;
-
 			color: $c-green;
 			font-family: 'Poppins';
 			font-size: 15px;
@@ -627,9 +633,8 @@
 	}
 
 	.texts-container {
-		padding-top: 110px;
-		padding-right: 50px;
-		padding-left: 50px;
+		padding-right: 3rem;
+		padding-left: 3rem;
 
 		@media (max-width: 575.98px) {
 			padding-top: 25px;
