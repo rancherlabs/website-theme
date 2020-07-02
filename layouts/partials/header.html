@@ -11,7 +11,7 @@
   {{- end -}}
 {{- end -}}
 
-<body lang="en" class="{{ replaceRE "/.*" "" ($.Scratch.Get "topLevel").Dir }}">
+<body lang="en" class="{{ replaceRE "/.*" "" ($.Scratch.Get "topLevel").Dir }} {{ .Params.section }}">
     <!-- Google Tag Manager (noscript) -->
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-57KS2MW"
     height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>

@@ -8,11 +8,13 @@
 
   <link rel="icon" type="image/png" href="{{ "img/favicon.png" | relURL }}">
 
-  {{- $opt := (dict "outputStyle" "compressed" "enableSourceMap" "true" "includePaths" (slice "/theme" "../../node_modules")) -}}
-  {{- $appCss := resources.Get "sass/app.scss" | toCSS $opt | minify }}
+  {{- $opt := (dict "outputStyle" "compressed" "enableSourceMap" true "includePaths" (slice "/theme" "../../node_modules")) -}}
+  {{- $appCss := resources.Get "sass/app.scss" | toCSS $opt }}
   <link rel="stylesheet" type="text/css" href="{{ $appCss.Permalink }}?{{ $cache }}"/>
 
   <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lozad/dist/lozad.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/lax.js"></script>
+
 
   {{ $jquery := resources.Get "js/jquery.js" }}
   {{ $lory := resources.Get "js/jquery.lory.js" }}
