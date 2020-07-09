@@ -1,3 +1,105 @@
+body {
+  overflow-x: unset;
+  height: unset;
+}
+
+.community-events-quick-links {
+  position: sticky;
+  top:116px;
+  z-index: 9;
+
+  background-color: $c-gray-base-light;
+
+  .contents-container {
+    padding-top: 130px;
+  }
+  .in-page-menus-container {
+    position: relative;
+    display: block;
+
+    margin-top: 40px;
+
+    .menus-wrap {
+      position: relative;
+      display: flex;
+    }
+
+    .menu-item {
+      position: relative;
+      display: inline-block;
+
+      flex: 1;
+
+      background-color: $c-gray-mid-light;
+      border-right: 1px solid $c-gray-light;
+
+      background-color: #0075a8;
+
+      &:last-child {
+        border-right: 0;
+      }
+
+      a {
+        position: relative;
+        display: block;
+
+        color: #fff;
+        font-family: 'Poppins';
+        font-size: 12px;
+        font-weight: 800;
+        text-transform: uppercase;
+        letter-spacing: .5px;
+        line-height: 50px;
+        text-align: center;
+      }
+
+      &:hover,
+      &.active {
+        background-color: $c-blue;
+
+        a {
+          color: #fff;
+        }
+      }
+    }
+  }
+
+  @media (max-width: 575.98px) {
+    padding-top: 25px;
+
+    .in-page-menus-container {
+      position: absolute;
+
+      margin-top: 50px;
+      padding-right: $mobile-side-space;
+      padding-left: $mobile-side-space;
+
+      .menus-wrap {
+        flex-wrap: wrap;
+      }
+      .menu-item {
+        flex: 0 0 50%;
+
+        border-bottom: 1px solid $c-gray-base-light;
+
+        &:last-child {
+          border-right: 1px solid $c-gray-light;
+        }
+      }
+    }
+  }
+  @media (min-width: 576px) and (max-width: 767.98px) {
+  }
+  @media (min-width: 768px) and (max-width: 991.98px) {
+  }
+  @media (min-width: 992px) and (max-width: 1199.98px) {
+    .lastest-container {
+      padding-right: $mobile-side-space;
+      padding-left: $mobile-side-space;
+    }
+  }
+}
+
 .community-events-and-meetups-screen1 {
   .set-ground {
     z-index: -1;
@@ -23,8 +125,8 @@
     .texts-wrap {
       z-index: 1;
 
-      margin-top: 130px;
-      margin-bottom: 130px;
+      margin-top: 30px;
+      margin-bottom: 30px;
 
       .title-label {
         margin-bottom: 20px;
@@ -55,7 +157,7 @@
 
         .title-label {
           margin-bottom: 14px;
-      
+
           font-size: 2em;
         }
 
@@ -100,7 +202,7 @@
 
       .title-label {
         margin-bottom: 20px;
-      
+
         font-size: 2em;
       }
 
@@ -123,7 +225,7 @@
 
       .title-label {
         margin-bottom: 20px;
-      
+
         font-size: 2.4em;
       }
 
@@ -147,7 +249,7 @@
 
       .title-label {
         margin-bottom: 20px;
-      
+
         font-size: 2.8em;
       }
 
@@ -437,7 +539,7 @@
 
 .community-events-and-meetups-screen3 {
   .texts-container {
-    padding-top: 150px;
+    padding-top: 50px;
     padding-bottom: 40px;
 
     text-align: center;
@@ -459,8 +561,17 @@
 
   .card-container {
     height: 100%;
-
     margin-bottom: 30px;
+
+    &.summit-event-card {
+      height: auto;
+
+      .text-label {
+        font-size: 18px;
+        max-height: 100%;
+        -webkit-line-clamp: inherit;
+      }
+    }
   }
 
   .card-item {
@@ -471,6 +582,15 @@
     background-color: $c-gray;
 
     border-radius: 1em;
+
+    .thumbnail-image {
+      width: 100%;
+    }
+
+    .text-subtitle {
+      color: #78c9cf;
+      margin-bottom: 10px;
+    }
 
     .thumbnail-wrap {
       position: relative;
@@ -553,13 +673,21 @@
     }
   }
 
+  .featured-event-card {
+    .card-item {
+      .text-label {
+        font-size: 18px;
+      }
+    }
+  }
+
   @media (max-width: 575.98px) {
     .texts-container {
       padding-top: 50px;
       padding-right: 0;
       padding-left: 0;
     }
-    
+
     .cards-container {
       padding-right: $mobile-side-space;
       padding-left: $mobile-side-space;
@@ -1104,7 +1232,7 @@
         background-position: left center;
       }
 
-      > img, 
+      > img,
       .thumbnail {
         position: relative;
         display: inline-block;
@@ -1509,6 +1637,12 @@
     .row.blank:last-child {
       height: 150px;
     }
+  }
+}
+
+.community-events-and-meetups-screen8 {
+  .contents-container {
+    padding-top: 150px;
   }
 }
 
