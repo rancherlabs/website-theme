@@ -1,4 +1,47 @@
+.homepage-screen-divided_sections{
+	& .section-separator{
+		padding: 100px 0;
+		&:first-child {
+			padding: 0 0 100px 0;
+		}
+		&:nth-child(even){
+			background-color: #f2f5f5;;
+			& .column-gap {	
+				padding-left: 0;
+				padding-right: 30px;
+			}
+		}
+		& .column-gap{
+			padding-left: 30px;
+		}
+	}
+	& .btn-small{
+		margin-top: 20px;
+		display: inline-block;
+		min-width: 300px;
+	}
+	& .max-sized {
+		display: flex;
+		align-items: center;
+	}
+	& ul li {
+		list-style: disc;
+		margin-left: 20px;
+		line-height: 1.6;
+	}
+
+	img {
+		width: 100%;
+		height: auto;
+	}
+	
+}
+
 .homepage-screen-kubernetes-everywhere{
+	
+	@media (max-width: 1024px) {
+		background-color:#f2f5f5;
+	}
 	
 	& .title-label{
 		margin-top: 75px;
@@ -507,6 +550,10 @@
 .section-xl-padding-top {
 	padding-top: 12rem;
 } 
+
+.section-md-padding-top {
+	padding-top: 6rem;
+}
 
 .no-mobile-padding-bottom {
 	@media (max-width: 768px) {
