@@ -1,3 +1,74 @@
+.homepage-reviews {
+	.review-wrapper {
+		background-color: #f2f5f5;
+		padding: 30px;
+		.star-ratings-css {
+			unicode-bidi: bidi-override;
+			color: #c5c5c5;
+			font-size: 25px;
+			height: 25px;
+			width: 100px;
+			margin: 0;
+			position: relative;
+			padding: 0;
+		}
+		.star-ratings-css-top {
+			color: #f1c61c;
+			padding: 0;
+			position: absolute;
+			z-index: 1;
+			display: block;
+			top: 0;
+			left: 0;
+			overflow: hidden;
+		}
+		.star-ratings-css-bottom {
+			padding: 0;
+			display: block;
+			z-index: 0;
+		}
+
+		img {
+			margin-bottom: 20px;
+		}
+
+		.rancher-logo-image {
+			max-width: 80%;
+			margin: 0 auto;
+			display: block;
+		}
+
+		.gartner-logo-image {
+			max-width: 70%;
+		}
+
+		.rancher-review {
+			display: flex;
+			margin: 40px 0 30px;
+			justify-content: center;
+			align-items: flex-end;
+			& > span {
+				margin-right: 15px;
+			}
+		}
+		&.review-gartner {
+			.star-ratings-css {
+				margin-bottom: 15px;
+				font-size: 50px;
+				height: 50px;
+				width: 200px;
+			}
+		}
+		
+		a {
+			font-size: 20px;
+		}
+	}
+
+
+}
+
+
 .homepage-screen-divided_sections{
 	& .section-separator{
 		padding: 100px 0;
@@ -40,9 +111,12 @@
 			padding-top: 20px;
 		}
 	}
-	.section-separator:nth-child(2n) .texts-wrap {
-		@media (max-width: 768px) {
-			margin-left: 16px;
+	.section-separator:nth-child(2n) {
+		padding-bottom: 0;
+		.texts-wrap {
+			@media (max-width: 768px) {
+				margin-left: 16px;
+			}
 		}
 	}
 
@@ -126,6 +200,7 @@
 			display: flex;
 			justify-content: center;
 			flex-direction: column;
+			padding: 0 30px;
 			@media (max-width: 1024px) {
 				height: auto;
 				margin-bottom: 30px;
@@ -186,6 +261,11 @@
 		// flex-direction: column;
 		@media (max-width: 800px) {
 			flex-direction: column;
+		}
+	}
+	& .card-footer{
+		.button {
+			border: none;
 		}
 	}
 }
