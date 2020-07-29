@@ -22,11 +22,11 @@
 <div class="main"> <!--container ends in footer html-->
     <section class="popup-notification">
         <p>
-            <span>Next event</span>
+            <span>{{.Site.Data.home.header_notification.next_event_label}}</span>
             <span class="dash-break">-</span>
-            <b>Pacific Time Virtual Rodeo</b>
+            <b>{{.Site.Data.home.header_notification.event_name}}</b>
             <span class="dash-break">-</span>
-            <a href="#">Sign Up Now!</a>
+            <a target="{{.Site.Data.home.header_notification.link_target}}" href="{{.Site.Data.home.header_notification.event_link}}">{{.Site.Data.home.header_notification.sign_up_label}}</a>
         </p>
     </section>
     <header>
