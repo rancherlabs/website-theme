@@ -22,11 +22,13 @@
 <div class="main"> <!--container ends in footer html-->
     <section class="popup-notification">
         <p>
-            <span>{{.Site.Data.home.header_notification.next_event_label}}</span>
-            <span class="dash-break">-</span>
-            <b>{{.Site.Data.home.header_notification.event_name}}</b>
-            <span class="dash-break">-</span>
-            <a target="{{.Site.Data.home.header_notification.link_target}}" href="{{.Site.Data.home.header_notification.event_link}}">{{.Site.Data.home.header_notification.sign_up_label}}</a>
+            <b>
+                <span>{{.Site.Data.home.header_notification.next_event_label}}</span>
+                <span class="dash-break">-</span>
+                <span>{{.Site.Data.home.header_notification.event_name}}</span>
+                <span class="dash-break">-</span>
+                <a target="{{.Site.Data.home.header_notification.link_target}}" href="{{.Site.Data.home.header_notification.event_link}}">{{.Site.Data.home.header_notification.sign_up_label}}</a>
+            </b>
         </p>
     </section>
     <header>

@@ -70,7 +70,6 @@
 		}
 	}
 
-
 }
 
 
@@ -78,9 +77,9 @@
 	& .section-separator{
 		padding: 100px 0;
 		&:first-child {
-			padding: 0 0 100px 0;
+			padding: 50px 0 100px 0;
 		}
-		&:nth-child(even){
+		&:nth-child(odd){
 			background-color: #f2f5f5;
 			& .column-gap {	
 				padding-left: 0;
@@ -116,7 +115,7 @@
 			padding-top: 20px;
 		}
 	}
-	.section-separator:nth-child(2n) {
+	.section-separator:first-child {
 		padding-bottom: 0;
 		.texts-wrap {
 			@media (max-width: 768px) {
