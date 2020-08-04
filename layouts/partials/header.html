@@ -20,6 +20,19 @@
 
 
 <div class="main"> <!--container ends in footer html-->
+    <section class="popup-notification">
+        <p>
+            <b>
+              {{ range first 1 (sort (where .Site.Taxonomies.tags.rodeo ".Date.Unix" "ge" now.Unix)  ".Date" "asc") }}
+                <span>{{.Site.Data.home.header_notification.next_event_label}}</span>
+                <span class="dash-break">-</span>
+                <span> {{.Title}} {{.Params.dateText}} {{.Params.timeText}}</span>
+                <span class="dash-break">-</span>
+                <a target="_self" href="{{ .Params.link }}">{{.Site.Data.home.header_notification.sign_up_label}}</a>
+                {{ end }}
+            </b>
+        </p>
+    </section>
     <header>
         <nav>
             <div class="mobile-header-container">

@@ -1,3 +1,26 @@
+.popup-notification {
+  background-color: #82c340;
+  overflow: hidden; 
+  display: none;
+  -webkit-box-shadow: 0 0 5px black;
+  -moz-box-shadow:    0 0 5px black;
+  box-shadow:         0 0 5px black;
+  p {
+    margin: 0;
+    line-height: 2.5;
+    text-align: center;
+  }
+  span{
+    color: #fff;
+  }
+  .dash-break {
+    margin: 0 10px;
+  }
+  b{
+   font-weight: 600;
+  }
+}
+
 // default header.
 .main > header {
   position: absolute;
