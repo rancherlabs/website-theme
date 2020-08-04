@@ -1,13 +1,11 @@
 .homepage-reviews {
 	.review-wrapper {
-		margin-bottom: 30px;
 		background-color: #f2f5f5;
 		padding: 30px;
 		.star-ratings-css {
 			unicode-bidi: bidi-override;
 			color: #c5c5c5;
-			font-size: 25px;
-			height: 25px;
+			font-size: 32px;
 			margin: 0;
 			position: relative;
 			padding: 0;
@@ -44,6 +42,9 @@
 
 		.gartner-logo-image {
 			max-width: 70%;
+			margin: auto;
+			display: block;
+			margin-bottom: 2.5rem;
 		}
 		.big-stars-wrapper{
 			display: flex;
@@ -52,10 +53,15 @@
 			display: flex;
 			margin: 40px 0 30px;
 			justify-content: center;
-			align-items: flex-end;
-			& > span {
+			align-items: center;
+			font-weight: 700;
+			color: $c-blue;
+			& > div:first-child {
 				margin-right: 15px;
 			}
+		}
+		&.review-rancher {
+			background-color: #dbdedf;
 		}
 		&.review-gartner {
 			.star-ratings-css {
@@ -74,20 +80,28 @@
 
 
 .homepage-screen-divided_sections{
-	& .section-separator{
+	& .section-separator {
 		padding: 100px 0;
 		&:first-child {
-			padding: 50px 0 100px 0;
+			padding: 50px 0 0;
+			@media (max-width: 768px) {
+				padding-bottom: 2rem;
+			}
 		}
 		&:nth-child(odd){
 			background-color: #f2f5f5;
-			& .column-gap {	
+			& .column-gap {
 				padding-left: 0;
 				padding-right: 30px;
 			}
 		}
 		& .column-gap{
 			padding-left: 30px;
+		}
+		.texts-wrap {
+			@media (max-width: 768px) {
+				margin-left: 16px;
+			}
 		}
 	}
 	& .btn-small{
@@ -115,21 +129,12 @@
 			padding-top: 20px;
 		}
 	}
-	.section-separator:first-child {
-		padding-bottom: 0;
-		.texts-wrap {
-			@media (max-width: 768px) {
-				margin-left: 16px;
-			}
-		}
-	}
-
-	
 }
 
 .homepage-screen-kubernetes-everywhere{
 	
 	@media (max-width: 1024px) {
+		margin-top: 3rem;
 		background-color:#f2f5f5;
 		#edge {
 			padding-bottom: 30px;
