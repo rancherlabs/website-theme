@@ -39,7 +39,7 @@
             .texts-wrap {
                 .title-label {
                     margin-bottom: 14px;
-                
+
                     font-size: 2em;
                 }
 
@@ -196,7 +196,7 @@
             .texts-wrap {
                 .title-label {
                     margin-bottom: 14px;
-                
+
                     font-size: 2em;
                 }
 
@@ -250,6 +250,23 @@
                 }
             }
         }
+
+        .texts-container.our-inverstors {
+            margin-top: 50px;
+
+            text-align: center;
+
+            .texts-wrap {
+                .title-label {
+                    font-size: 1.5em;
+                }
+            }
+
+            .logos-container .logo-container .logo {
+                width: 100%;
+                height: auto;
+            }
+        }
     }
     @media (min-width: 768px) and (max-width: 991.98px) {
         .contents-container {
@@ -298,13 +315,13 @@
         padding-right: 25px;
         padding-left: 25px;
     }
-    
+
     .card-wrap {
         position: relative;
 
         height: 100%;
 
-        padding: 70px 50px;
+        padding: 70px 15px;
 
         background-color: $c-blue;
         border-radius: 10px;
@@ -427,10 +444,10 @@
             padding-left: $mobile-side-space;
         }
         .card-wrap {
-            padding: 40px 20px 30px;
+            padding: 40px 15px 30px;
 
             border-radius: 5px;
-            
+
             .image-container {
                 width: 90px;
                 height: 90px;
@@ -443,7 +460,7 @@
     }
     @media (min-width: 576px) and (max-width: 767.98px) {
         .contents-container {
-            padding-top: 160px;
+            padding-top: 250px;
         }
 
         .card-wrap {
@@ -460,7 +477,7 @@
         }
 
         .card-wrap {
-            padding: 50px 40px;
+            padding: 50px 15px;
         }
         .card-wrap .image-container {
             width: 130px;
@@ -473,7 +490,7 @@
         }
 
         .card-wrap {
-            padding: 60px 40px;
+            padding: 60px 15px;
         }
         .card-wrap .image-container {
             width: 150px;

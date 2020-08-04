@@ -55,7 +55,7 @@
 
         .title-label {
           margin-bottom: 14px;
-      
+
           font-size: 2em;
         }
 
@@ -100,7 +100,7 @@
 
       .title-label {
         margin-bottom: 20px;
-      
+
         font-size: 2em;
       }
 
@@ -123,7 +123,7 @@
 
       .title-label {
         margin-bottom: 20px;
-      
+
         font-size: 2.4em;
       }
 
@@ -147,7 +147,7 @@
 
       .title-label {
         margin-bottom: 20px;
-      
+
         font-size: 2.8em;
       }
 
@@ -437,7 +437,7 @@
 
 .community-events-and-meetups-screen3 {
   .texts-container {
-    padding-top: 150px;
+    padding-top: 50px;
     padding-bottom: 40px;
 
     text-align: center;
@@ -458,26 +458,59 @@
   }
 
   .card-container {
-    height: 100%;
-
     margin-bottom: 30px;
+    display: flex;
+
+    &.summit-event-card {
+      height: auto;
+
+      .text-label {
+        font-size: 18px;
+        max-height: 100%;
+        -webkit-line-clamp: inherit;
+      }
+    }
+  }
+
+  .card-image {
+    line-height: 0;
+
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  .card-body {
+    flex: 1 1 100%;
+    padding: 2rem 2rem 0;
+    background-color: $c-gray;
+  }
+
+  .card-footer {
+    padding: 0 2rem 2rem;
+    background-color: $c-gray;
   }
 
   .card-item {
     overflow: hidden;
-
     height: 100%;
 
-    background-color: $c-gray;
-
     border-radius: 1em;
+    display: flex;
+    flex-direction: column;
+
+    .text-subtitle {
+      color: #78c9cf;
+      margin-bottom: 10px;
+    }
 
     .thumbnail-wrap {
       position: relative;
       display: inline-block;
 
       width: 100%;
-      height: 201px;
+      height: auto;
       background-position: center;
       background-size: cover;
 
@@ -500,10 +533,6 @@
         width: 100%;
         height: auto;
       }
-    }
-
-    .texts-wrap {
-      padding: 40px 35px 50px;
     }
 
     .text-label {
@@ -553,13 +582,21 @@
     }
   }
 
+  .featured-event-card {
+    .card-item {
+      .text-label {
+        font-size: 18px;
+      }
+    }
+  }
+
   @media (max-width: 575.98px) {
     .texts-container {
       padding-top: 50px;
       padding-right: 0;
       padding-left: 0;
     }
-    
+
     .cards-container {
       padding-right: $mobile-side-space;
       padding-left: $mobile-side-space;
@@ -1104,7 +1141,7 @@
         background-position: left center;
       }
 
-      > img, 
+      > img,
       .thumbnail {
         position: relative;
         display: inline-block;
@@ -1509,6 +1546,12 @@
     .row.blank:last-child {
       height: 150px;
     }
+  }
+}
+
+.community-events-and-meetups-screen8 {
+  .contents-container {
+    padding-top: 150px;
   }
 }
 

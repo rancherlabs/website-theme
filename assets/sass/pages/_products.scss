@@ -421,17 +421,221 @@
     bottom: 0;
 }
 
+body.products-rancher {
+    @media (min-width: 1024px) {
+        overflow-x: visible !important;        
+    }
 
-// custom footer.
-// .get-started-container {
-//     .rancher-logo{
-//         &:before {
-//             content: '';
-//             position: absolute;
-//             left: 0;
-//             bottom: 0;
-//             height: 100%;
-//             border-left: 1px solid #f2f5f5;
-//         }
-//     }
-// }
+    .grid-container:not(.footer-copyright) {
+        padding-bottom: 8rem;
+    }
+
+    .hero-type2 .grid-container {
+        padding-bottom: 0 !important;
+    }
+}
+
+.rancher-note-item.product-rancher {
+    margin-right: 1.5rem;
+    margin-left: 1.5rem;
+
+    .grid-container {
+        padding-bottom: 0;
+    }
+    .icon-container {
+
+        flex: 0 0 80px !important;
+        margin-right: 10px;
+    }
+
+    .content-container {
+        position: relative !important;
+        top: 25px;
+
+        @media (min-width: 768px) {
+            top: -80px;
+        }
+
+        .texts-container {
+            box-shadow: $box-shadow;
+        }
+    }
+}
+
+.products .kubecake-wrapper {
+    background: #f1f1f4;
+    padding-top: 80px;
+
+    @media(max-height: 700px) {
+
+    .max-sized {
+            max-width: 1000px;
+
+            & > .col-8 {
+                flex: 0 0 60%;
+                max-width: 60%;                
+            }
+
+            & > .col-4 {
+                flex: 0 0 40%;
+                max-width: 40%;
+
+                font-size: 80% !important;
+            }
+        }
+    }
+
+    .position-sticky {
+        position: sticky;
+        top: 100px;
+        padding-top: 7vh;
+
+        @media(max-height: 700px) {
+            top: 125px;
+            padding-top: 0;
+        }
+    }
+
+    @media (min-width: 1024px) {
+        .full-height {
+            display: flex;
+            justify-content: center;
+            margin-top: 120px;
+            height: calc(100vh - 120px);
+            flex-direction: column;
+
+            &:not(:first-child) > div {
+                transform: translateY(-25%);
+            }
+
+            &:last-child > div {
+                transform: translateY(50%);
+            }
+        }
+    }
+
+
+    .rancher-logo {
+        align-items: center;
+        justify-content: center;
+        padding: 1rem;
+        display: none;
+
+        @media (min-width: 1024px) {
+            display: flex;
+        }
+    }
+
+    .bg-primary {
+        background-color: #0075a8;
+    }
+
+    .bg-primary-dark {
+        background: #33485e;
+    }
+
+    .border-bottom {
+        border-bottom: 1px solid white;
+    }
+
+    .border-right {
+        border-right: 1px solid white;
+    }
+
+    .bg-green {
+        background: #99c355;
+    }
+
+    .container-label {
+        padding: 0.5rem 1rem;
+        color: white;
+        text-align: center;
+        border-left: 1px solid white;
+        border-bottom: 1px solid white;
+    }
+}
+
+.products .features-capabilities {
+    margin-top: 8rem;
+
+    .feature-icon {
+        background: $c-sky-blue-light;
+        height: 72px;
+        width: 72px;
+        max-width: 100%;
+        border-radius: 50%;
+        padding: 1rem;
+        margin: 0;
+
+        img {
+            width: 100%;
+            height: auto;
+            opacity: 0.9;
+            fill: $c-blue;
+        }
+    }
+}
+
+.products .rancher-support {
+    background-color: $c-blue-dark1;
+    padding-top: 8rem;
+    color: white;
+}
+
+.products .hosted-rancher {
+    padding-top: 8rem;
+
+    .image {
+        max-height: 96px;
+        max-width: 96px;
+        margin: 1.5rem auto;
+
+        svg {
+            fill: $c-blue;
+        }
+
+        img {
+            display: block;
+            width: 100%;
+            height: auto;
+            flex: 1;
+        }
+    }
+
+}
+
+.hosted-rancher-cta {
+    padding-top: 8rem;
+
+    .text-white {
+        color: white;
+    }
+}
+
+.rancher-screen2 {
+    .play-button {
+        background-color: #7bbfc7 !important;
+        border: none;
+        width: 95px;
+        height: 95px;
+        border-radius: 50%;
+        box-sizing: border-box;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        svg {
+            margin: 1rem;
+            fill: #fff;
+            transition: fill 150ms ease-in-out;
+            flex: 1;
+            transform: translateX(6px);
+        }
+
+        &:hover svg {
+            fill: #29669b;
+        }
+    }
+
+
+}

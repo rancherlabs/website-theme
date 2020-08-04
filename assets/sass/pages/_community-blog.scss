@@ -58,7 +58,7 @@
   .tag-item {
     position: relative;
     display: block;
-    
+
     justify-content: flex-start;
     align-content: flex-start;
 
@@ -107,6 +107,7 @@
     .user-container {
       position: relative;
       display: flex;
+      flex-wrap: wrap;
 
       justify-content: flex-start;
       align-items: center;
@@ -116,6 +117,11 @@
       flex: 0 0 100%;
 
       margin-top: 17px;
+      margin-bottom: -10px;
+
+      > * {
+        margin-bottom: 10px;
+      }
 
       // margin-right: 30px;
       // margin-bottom: 20px;
@@ -295,7 +301,7 @@
       @include textElipsis(3, 1.775);
     }
 
-    .category-label, 
+    .category-label,
     .tag-item {
       padding-left: 0;
     }
@@ -915,7 +921,7 @@
   .tag-item {
     position: relative;
     display: block;
-    
+
     justify-content: flex-start;
     align-content: flex-start;
 
@@ -953,6 +959,10 @@
       display: block;
       padding: 1rem;
       line-height: 2;
+
+      .hl {
+        background: #696969;
+      }
     }
   }
 
@@ -1046,6 +1056,14 @@
 
     text-align: center;
 
+    > * {
+      margin-bottom: 10px;
+    }
+
+    > .tag-item {
+      margin-top: 10px;
+    }
+
     .user-thumbnail {
       position: relative;
       display: inline-block;
@@ -1090,6 +1108,16 @@
       font-weight: 800;
       letter-spacing: 1px;
       text-transform: uppercase;
+    }
+
+    .date-label-group {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+
+      .date-label + .date-label {
+        margin-top: 10px;
+      }
     }
 
     .date-label {
@@ -1178,30 +1206,46 @@
       margin-bottom: 50px;
     }
 
-    h1, h3 {
-      margin-bottom: 40px;
-
-      font-size: 25px;
-      font-weight: 400;
-      line-height: 1.4;
+    h1 {
+      font-size: 40px;
+      font-weight: 300;
+      margin-bottom: 20px;
+      margin-top: 0;
     }
 
     h2 {
-      line-height: 1.4;
+      font-size: 32px;
+      font-weight: 300;
+      margin-bottom: 20px;
+      margin-top: 0;
     }
 
     h3 {
-      font-size: 25px;
+      font-size: 28px;
+      font-weight: 300;
+      margin-bottom: 20px;
+      margin-top: 0;
     }
 
     h4 {
-      font-size: 20px;
+      font-size: 24px;
+      font-weight: 300;
+      margin-bottom: 10px;
+      margin-top: 0;
     }
 
     h5 {
-      margin-bottom: 1em;
-      font-size: 18px;
-      font-weight: bold;
+      font-size: 20px;
+      font-weight: 300;
+      margin-bottom: 10px;
+      margin-top: 0;
+    }
+
+    h6 {
+      font-size: 16px;
+      font-weight: 300;
+      margin-bottom: 10px;
+      margin-top: 0;
     }
 
     p {
@@ -1222,10 +1266,10 @@
       // color: $c-green;
       font-weight: bold;
     }
-  
+
     ul, ol {
       margin-bottom: 40px;
-  
+
       li {
         margin-bottom: 15px;
         margin-left: 1.5em;
@@ -1237,7 +1281,7 @@
     }
     ul {
       list-style: disc;
-    
+
       > li {
         margin-bottom: 10px;
 
@@ -1261,7 +1305,7 @@
 
     ol {
       list-style: decimal;
-      
+
       > li {
         list-style: decimal;
       }
@@ -1668,9 +1712,9 @@
         }
         &:hover:before {
           bottom: -3px;
-  
+
           height: 1px;
-  
+
           background-color: rgba($c-sky-blue, 0.2);
         }
       }
@@ -1766,6 +1810,10 @@
     .author-wrap {
       padding-top: 100px;
       padding-bottom: 60px;
+
+      &.author2-wrap {
+        padding-top: 20px;
+      }
     }
 
     .author-item {
@@ -1894,31 +1942,28 @@
       p {
         margin-bottom: 20px;
       }
-  
-      h2 {
-        font-weight: 300;
-      }
+
     }
-  
+
     .title-label {
       margin-top: 25px;
       margin-bottom: 25px;
     }
-  
+
     .thumbnail-container {
       height: auto;
       min-height: 0;
-  
+
       .thumbnail-wrap {
         height: auto;
-  
+
         .thumbnail {}
       }
     }
-  
+
     .user-container {
       display: inline-block;
-  
+
       margin-bottom: 40px;
     }
     .user-container .user-thumbnail {
@@ -1930,9 +1975,9 @@
     }
     .user-container .date-label {
       display: block;
-  
+
       margin-top: 20px;
-  
+
       text-align: center;
     }
     .user-container .date-label .icon {
@@ -1942,26 +1987,26 @@
     .user-container .tag-item {
       margin-top: 45px;
     }
-  
+
     .article-contents .cta-container {
       margin-bottom: 40px;
       padding: 40px 20px;
     }
     .cta-wrap {
       align-items: flex-start !important;
-  
+
       text-align: center;
-  
+
       .buttons-container a {
         display: inline-block;
-  
+
         width: auto;
-  
+
         margin-top: 20px;
         padding: 0 20px;
-  
+
         height: 40px;
-  
+
         font-size: 14px;
         line-height: 40px;
       }
@@ -1998,10 +2043,6 @@
       .wrap,
       p {
         margin-bottom: 20px;
-      }
-
-      h2 {
-        font-weight: 300;
       }
     }
 
@@ -2297,7 +2338,7 @@
   .article-item-wrap .information-container .user-container {
     margin-top: 0;
   }
-  .article-item-wrap .information-container .user-container .date-label, 
+  .article-item-wrap .information-container .user-container .date-label,
   .article-item-wrap .information-container .user-container .read-time-label {
     flex: 0 0 100%;
 
