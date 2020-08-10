@@ -1,5 +1,4 @@
 .popup-notification {
-  background-color: #82c340;
   overflow: hidden; 
   display: none;
   -webkit-box-shadow: 0 0 5px black;
@@ -10,13 +9,21 @@
     line-height: 2.5;
     text-align: center;
   }
-  span{
+
+  a {
     color: #fff;
+    background-color: #82c340;
+    display: block;
+    transition: all 400ms ease-in-out;
+
+    &:hover {
+      background-color: darken(#82c340, 5%);
+      transform: scale(1.1);
+      padding: 3rem;
+    }
   }
-  .dash-break {
-    margin: 0 10px;
-  }
-  b{
+
+  b {
    font-weight: 600;
   }
 }
