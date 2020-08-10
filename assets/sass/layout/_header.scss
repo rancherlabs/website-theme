@@ -4,16 +4,16 @@
   -webkit-box-shadow: 0 0 5px black;
   -moz-box-shadow:    0 0 5px black;
   box-shadow:         0 0 5px black;
-  p {
-    margin: 0;
-    line-height: 2.5;
-    text-align: center;
-  }
+  text-align: center;
 
   a {
     color: #fff;
     background-color: #82c340;
     display: block;
+    font-weight: 600;
+    font-size: 18px;
+    padding: 1rem;
+
     transition: all 400ms ease-in-out;
 
     &:hover {
@@ -21,10 +21,6 @@
       transform: scale(1.1);
       padding: 3rem;
     }
-  }
-
-  b {
-   font-weight: 600;
   }
 }
 
