@@ -732,6 +732,26 @@
     }
 }
 
+section.products-rke-screeen-RKE-Federal {
+    padding: 100px 0 60px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .title-label-rke-federal {
+        text-align: center;
+        padding-top: 10px;
+    }
+
+    .content-rke-federal {
+        padding-top: 10px;  
+        .desctiption-rke {
+            text-align: center;
+        }
+    }
+
+}
+
 .products-rke-screeen4 {
     .get-started-items-container {
         .texts-container {
