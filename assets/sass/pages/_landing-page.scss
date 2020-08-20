@@ -1,3 +1,52 @@
 .rancher-2_5-hero .lower-container{
     pointer-events: none;
 }
+.rancher-2_5-testimonial{
+    .testimonial{
+        display: flex;
+        .quoteImg{
+            img{
+                width: 80px;
+                height: 80px;
+            }
+        }
+        .label{
+            font-size: 14px;
+        }
+        .quote{
+            margin: 30px 0 0 30px;
+            h2 {
+                font-style: italic;
+            }
+        }
+    }
+}
+
+.rancher-2_5-features{
+    color: #ffffff;
+    .texts-container{
+        margin-bottom: 40px;
+    }
+    img {
+        width: 100%;
+    }
+    .title{
+        text-align: center;
+    }
+    .feature{
+        padding: 30px 0;
+        .label{
+            font-size: 18px;
+            margin-bottom: 20px;
+        }
+        p{
+            margin-bottom: 40px;
+        }
+    }
+}
+
+.rancher-2_5-other-info{
+    p{
+        margin: 20px 0 40px 0;
+    }
+}
