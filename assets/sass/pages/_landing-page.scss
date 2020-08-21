@@ -1,6 +1,58 @@
-.rancher-2_5-hero .lower-container{
-    pointer-events: none;
+.rancher-2_5-hero {
+    h4{
+        line-height: normal;
+    }
+    .texts-wrap {
+        margin-bottom: 0;
+        h3{
+           font-weight: 600;
+        }
+    }
+    .content-wrapper {
+        margin-bottom: 120px;
+    }
+    .label{
+        font-size: 14px;
+    }
+    .lower-container{
+        pointer-events: none;
+    }
+    .hero-buttons a{
+        display: inline-block;
+        margin-bottom: 20px;
+        height: auto;
+        padding: 1.5em;
+        white-space: normal;
+        line-height: normal;
+    }
+    
 }
+
+.rancher-2_5-whats-new {
+    article {
+        padding: 20px;
+        p {
+            margin-bottom: 40px;
+        }
+        a {
+            display: inline-block;
+            height: auto;
+            padding: 1.5em;
+        }
+        h4{
+            font-weight: 400;
+        }
+    }
+    .title-label {
+        padding-bottom: 20px;
+    }    
+    .button {
+        @media (max-width: 576px) {
+            text-align: center;
+        }
+    }
+}
+
 .rancher-2_5-testimonial{
     .testimonial{
         display: flex;
@@ -29,11 +81,13 @@
     }
     img {
         width: 100%;
+        height: auto;
     }
     .title{
         text-align: center;
     }
     .feature{
+        align-items: center;
         padding: 30px 0;
         .label{
             font-size: 18px;
@@ -42,11 +96,26 @@
         p{
             margin-bottom: 40px;
         }
+        .feature-text-wrapper{
+            margin-bottom: 40px;
+        }
     }
 }
 
 .rancher-2_5-other-info{
+    article{
+        margin-bottom: 20px;
+    }
+    a{
+        display: inline-block;
+        height: auto;
+        padding: 1.5em;
+    }
+    h4{
+        font-weight: 400;
+        line-height: normal;
+    }
     p{
-        margin: 20px 0 40px 0;
+        margin: 20px 0;
     }
 }
