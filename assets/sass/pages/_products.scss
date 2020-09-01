@@ -49,6 +49,9 @@
 
 
 .hosted-rancher-hero.community-ebooks-screen1 {
+    .position-relative {
+        position: relative;
+    }
     h4{
         line-height: normal;
     }
@@ -85,12 +88,13 @@
         right: 0;
         left: auto;
         bottom: 0;
-        width: 30%;
-        @media (max-width: 575px) {
+        width: 200%;
+        transform: translateX(50%);
+            @media (max-width: 767px) {
             position: relative;
             padding-top: 0;
             width: 100%;
-            padding-left: 30%;
+            transform: translateX(0%);
         }
     }
 }
@@ -121,10 +125,15 @@
         margin-top: 20px;
 
         .developer_icons{
-            padding: 20px;
+            padding: 25px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
             img {
-                width: 50%;
+                width: 100%;
                 height: auto;
+                max-height: 120px;
+                max-width: 175px;
             }
 
             @media (max-width: 768px) {
@@ -147,9 +156,7 @@
 
     .head-ground {
         bottom: initial;
-
         height: 100px;
-
         background-color: #fff;
     }
 
@@ -752,7 +759,6 @@ body.products-rancher {
         color: white;
     }
 }
-
 .rancher-screen2 {
     .play-button {
         background-color: #7bbfc7 !important;
@@ -777,6 +783,4 @@ body.products-rancher {
             fill: #29669b;
         }
     }
-
-
 }
