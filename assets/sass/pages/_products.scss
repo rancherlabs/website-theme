@@ -1,3 +1,6 @@
+.products .main>header {
+    position: relative;
+}
 .text-center-sm {
     @media (max-width: 768px) {
         text-align: center;
@@ -47,16 +50,20 @@
     }
 }
 
-
 .hosted-rancher-hero.community-ebooks-screen1 {
+    &.bg-primary {
+        background-color: $c-blue;
+    }
     .position-relative {
         position: relative;
     }
     h4{
         line-height: normal;
+        color: white !important;
     }
     .texts-wrap {
         margin-bottom: 0;
+        color: white;
         h3{
            font-weight: 600;
         }
@@ -82,6 +89,7 @@
         padding: 1.5em;
         white-space: normal;
         line-height: normal;
+        border: 2px solid $c-green;
     }
     .hosted-rancher {
         position: absolute;
