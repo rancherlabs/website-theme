@@ -52,11 +52,17 @@
 
 .hosted-rancher-hero.community-ebooks-screen1 {
     &.bg-primary {
-        background-color: $c-blue;
+        background-color: #3e98d3;
     }
     .position-relative {
         position: relative;
     }
+    .floating-top {
+        top: -300%;
+        width: 200px;
+        opacity: 0.4;
+    }
+
     h4{
         line-height: normal;
         color: white !important;
@@ -89,7 +95,6 @@
         padding: 1.5em;
         white-space: normal;
         line-height: normal;
-        border: 2px solid $c-green;
     }
     .hosted-rancher {
         position: absolute;
