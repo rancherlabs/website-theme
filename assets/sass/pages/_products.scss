@@ -4,6 +4,38 @@
     }
 }
 
+
+.k3s-rancher-hero.community-ebooks-screen1 {
+    .position-relative {
+        position: relative;
+    }
+    .artwork {
+        position: absolute;
+        right: 0;
+        left: auto;
+        bottom: 0;
+        width: 200%;
+        transform: translateX(50%);
+            @media (max-width: 767px) {
+            position: relative;
+            padding-top: 0;
+            width: 100%;
+            transform: translateX(0%);
+        }
+    }
+}
+
+.k3s-rancher-description{
+    padding: 4rem 0;
+    .row{
+        align-items: center;
+    }
+    img{
+        width: 100%;
+        height: auto;
+    }
+}
+
 .hosted-rancher-faq {
     .accordion {
         .card {
