@@ -273,12 +273,14 @@ button.button {
     color: #fff;
 
     background-color: $c-green;
+    border: 2px solid $c-green;
   }
 
   &.c-blue {
     color: #fff;
 
     background-color: $c-blue;
+    border: 2px solid $c-blue;
 
     &:hover {}
   }
@@ -949,7 +951,6 @@ button[disabled="disabled"] {
 
     .buttons-container {
       margin-top: 15px;
-
       text-align: center;
     }
     .buttons-container .button {
