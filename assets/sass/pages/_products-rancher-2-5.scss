@@ -1,0 +1,153 @@
+@media (min-width: 768px) {
+    .products header {
+    position: relative;
+  }
+}
+
+.rancher-2_5-hero {
+    &.bg-primary {
+      color: white;
+      background-color: $c-blue;
+      padding-top: 6rem;
+    }
+    h4 {
+        line-height: normal;
+        margin-bottom: 40px;
+    }
+    .texts-wrap {
+        margin-bottom: 0;
+        h3{
+           font-weight: 600;
+        }
+    }
+    .content-wrapper {
+        margin-bottom: 3rem;
+    }
+    .label{
+        font-size: 14px;
+    }
+    .lower-container {
+        pointer-events: none;
+    }
+    .hero-buttons a {
+        display: inline-block;
+        margin-bottom: 20px;
+        height: auto;
+        padding: 1.5em;
+        white-space: normal;
+        line-height: normal;
+    }
+    
+    .rancher-2_5-badge-animation {
+      width: 300%;
+
+      @media (min-width: 768px) {
+        position: absolute;
+        left: 0;
+        bottom: 3rem;
+      }
+    }
+  }
+
+.rancher-2_5-whats-new {
+    article {
+        padding: 20px;
+        a {
+            display: inline-block;
+            height: auto;
+            padding: 1.5em;
+        }
+        h4{
+            font-weight: 400;
+        }
+    }
+    .title-label {
+        padding-bottom: 20px;
+    }    
+    .button {
+        @media (max-width: 576px) {
+            text-align: center;
+        }
+    }
+}
+
+.rancher-2_5-testimonial{
+    .testimonial{
+        display: flex;
+        .quoteImg{
+            img{
+                width: 80px;
+                height: 80px;
+            }
+        }
+        .label{
+            font-size: 14px;
+        }
+        .quote{
+            margin: 30px 0 0 30px;
+            h2 {
+                font-style: italic;
+            }
+        }
+    }
+}
+
+.rancher-2_5-features{
+    color: #fff;
+    .texts-container{
+        margin-bottom: 40px;
+    }
+    img {
+        width: 100%;
+        height: auto;
+    }
+    .title{
+        text-align: center;
+    }
+
+    ul {
+      list-style: square;
+      padding-left: 1rem;
+
+      li {
+        list-style: inherit;
+        font-family: 'Poppins', sans-serif;
+        font-weight: 300;
+        line-height: 1.66;
+      }
+    }
+    .feature{
+        align-items: center;
+        padding: 30px 0;
+        .label{
+            font-size: 18px;
+            margin-bottom: 20px;
+        }
+        .feature-text-wrapper{
+            margin-bottom: 40px;
+        }
+        .feature-content {
+          @extend p;
+
+          margin-bottom: 40px;
+        }
+    }
+}
+
+.rancher-2_5-other-info {
+    article{
+        margin-bottom: 20px;
+    }
+    a{
+        display: inline-block;
+        height: auto;
+        padding: 1.5em;
+    }
+    h4{
+        font-weight: 400;
+        line-height: normal;
+    }
+    p{
+        margin: 20px 0;
+    }
+}
