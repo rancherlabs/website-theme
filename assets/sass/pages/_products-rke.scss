@@ -1,3 +1,7 @@
+.img-fluid {
+    width: 100%;
+    height: auto;
+}
 .products-rke-screeen1 {
     overflow: hidden;
 
@@ -732,24 +736,26 @@
     }
 }
 
-section.products-rke-screeen-RKE-Federal {
+section.products-rke-screeen-RKE-government {
     padding: 100px 0 60px;
     display: flex;
     flex-direction: column;
     align-items: center;
 
-    .title-label-rke-federal {
-        text-align: center;
+    &.bg-primary {
+        background-color: $c-blue-dark1;
+        color: white;
+    }
+
+    .rke-logo-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .title-label-rke-government {
         padding-top: 10px;
     }
-
-    .content-rke-federal {
-        padding-top: 10px;  
-        .desctiption-rke {
-            text-align: center;
-        }
-    }
-
 }
 
 .products-rke-screeen4 {
