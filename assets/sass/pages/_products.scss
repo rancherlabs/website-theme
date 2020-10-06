@@ -1,16 +1,177 @@
+.products .main>header {
+    position: relative;
+}
+.text-center-sm {
+    @media (max-width: 768px) {
+        text-align: center;
+    }
+}
+
+.hosted-rancher-faq {
+    .accordion {
+        .card {
+            .card-header {
+                border-bottom: solid 1px #ddd;
+                padding: 20px 0;
+                position: relative;
+                button {
+                    background: transparent;
+                    border: 0;
+                }
+                &::after {
+                    content: '\203A';
+                    position: absolute;
+                    top: 30%;
+                    font-size: 2em;
+                    right: 20px;
+                    transform: rotate(90deg);
+                }
+            }
+            .collapse {
+                display: none;
+                &.show {
+                    display: block;
+                }
+            }
+            
+            &:last-child {
+                .card-header {
+                    border-bottom: none;
+                }
+            }
+
+            .card-body {
+                padding: 30px 15px;
+                h4 {
+                    font-weight: bold;
+                }
+            }
+        }
+    }
+}
+
+.hosted-rancher-hero.community-ebooks-screen1 {
+    &.bg-primary {
+        background-color: #3e98d3;
+    }
+    .position-relative {
+        position: relative;
+    }
+    .floating-top {
+        top: -300%;
+        width: 200px;
+        opacity: 0.4;
+    }
+
+    h4{
+        line-height: normal;
+        color: white !important;
+    }
+    .texts-wrap {
+        margin-bottom: 0;
+        color: white;
+        h3{
+           font-weight: 600;
+        }
+    }
+    .content-wrapper {
+        margin-bottom: 60px;
+    }
+    .label{
+        font-size: 14px;
+    }
+    .lower-container{
+        pointer-events: none;
+        @media (max-width: 575px) {
+            position: static;
+            height: auto;
+            margin-top: -80px;
+        }
+    }
+    .hero-buttons a{
+        display: inline-block;
+        margin-bottom: 20px;
+        height: auto;
+        padding: 1.5em;
+        white-space: normal;
+        line-height: normal;
+    }
+    .hosted-rancher {
+        position: absolute;
+        right: 0;
+        left: auto;
+        bottom: 0;
+        width: 200%;
+        transform: translateX(50%);
+            @media (max-width: 767px) {
+            position: relative;
+            padding-top: 0;
+            width: 100%;
+            transform: translateX(0%);
+        }
+    }
+}
+.hosted-rancher-testimonial{
+    .testimonial{
+        display: flex;
+        .quoteImg{
+            img{
+                width: 80px;
+                height: 80px;
+            }
+        }
+        .label{
+            font-size: 14px;
+        }
+        .quote{
+            margin: 30px 0 0 30px;
+            h3 {
+                font-style: italic;
+            }
+        }
+    }
+
+}
+
+.hosted-rancher-developer-services{
+    .developer_icons_wrapper{
+        margin-top: 20px;
+
+        .developer_icons{
+            padding: 25px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            img {
+                width: 100%;
+                height: auto;
+                max-height: 120px;
+                max-width: 175px;
+            }
+
+            @media (max-width: 768px) {
+                display: flex;
+                justify-content: center;
+            }
+        }
+    }
+}
+
+.hosted-rancher-architecture {
+    img {
+        max-width: 100%;
+    }
+}
+
 .simple-text-hero {
     padding-top: 100px;
     background-color: $c-gray-base-light;
 
     .head-ground {
         bottom: initial;
-
         height: 100px;
-
         background-color: #fff;
     }
-
-    .contents-container {}
 
     .decoration-cloud-top {
         z-index: 1;
@@ -566,6 +727,7 @@ body.products-rancher {
         border-radius: 50%;
         padding: 1rem;
         margin: 0;
+        display: flex;
 
         img {
             width: 100%;
@@ -613,7 +775,6 @@ body.products-rancher {
         color: white;
     }
 }
-
 .rancher-screen2 {
     .play-button {
         background-color: #7bbfc7 !important;
@@ -638,6 +799,4 @@ body.products-rancher {
             fill: #29669b;
         }
     }
-
-
 }

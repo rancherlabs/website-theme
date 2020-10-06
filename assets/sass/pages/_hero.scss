@@ -1309,8 +1309,8 @@
 
 .cta-banner {
   padding: 8px 30px 8px 77px;
-  height: 65px;
-  border-radius: 32px;
+  min-height: 65px;
+  border-radius: 100px;
   background-color: $c-blue-dark1;
   box-shadow: 15px 25px 75px rgba($c-blue-dark1, .1);
   text-align: center;
@@ -1319,6 +1319,7 @@
   margin: 25px 0;
   display: flex;
   align-items: center;
+  box-sizing: border-box;
 
   &:before {
     content: '';
@@ -1328,8 +1329,8 @@
     border-radius: 50%;
     background: $c-gray-light;
     position: absolute;
-    top: 8px;
-    left: 8px;
+    left: 0;
+    margin: 8px;
   }
 
   &:after {
@@ -1342,8 +1343,12 @@
     background-position: center center;
     background-size: 36px 30px;
     position: absolute;
-    top: 8px;
-    left: 8px;
+    left: 0;
+    margin: 8px;
+  }
+
+  @media (max-width: 767px) {
+    flex-direction: column;
   }
 
   p {
