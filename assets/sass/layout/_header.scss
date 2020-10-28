@@ -1,5 +1,5 @@
 .popup-notification {
-  overflow: hidden; 
+  overflow: hidden;
   display: none;
   -webkit-box-shadow: 0 0 5px black;
   -moz-box-shadow:    0 0 5px black;
@@ -268,7 +268,7 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    
+
     .menu-sub-block {
       .articles-container {
         padding-bottom: 20px;
@@ -936,9 +936,8 @@
     .article-item {
       .article-thumbmail {
         overflow: hidden;
-
+        max-width: 450px;
         max-height: 150px;
-
         line-height: 0;
       }
 
@@ -1400,7 +1399,7 @@
 }
 .nav-mobile-menus {
   width: 100%;
-  
+
   -webkit-overflow-scrolling: touch;
 
   .mobile-menu {
