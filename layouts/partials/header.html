@@ -11,7 +11,7 @@
   {{- end -}}
 {{- end -}}
 
-<body lang="en" class="{{ replaceRE "/.*" "" ($.Scratch.Get "topLevel").Dir }}">
+<body lang="en" class="{{ replaceRE "/.*" "" ($.Scratch.Get "topLevel").Dir }} {{ .Params.section }}">
     <!-- Google Tag Manager (noscript) -->
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-57KS2MW"
     height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
@@ -20,6 +20,9 @@
 
 
 <div class="main"> <!--container ends in footer html-->
+    {{ if templates.Exists "partials/header_notification.html" }}
+        {{ partial "header_notification.html" . }}
+    {{ end }}
     <header>
         <nav>
             <div class="mobile-header-container">
@@ -55,8 +58,9 @@
                             <ul class="submenu submenus-wrap">
                                 <li><a href="/products/">Overview</a></li>
                                 <li><a href="/products/rancher/">Rancher</a></li>
-                                <li><a href="https://k3s.io" target="_blank">k3s</a></li>
-                                <li><a href="https://rio.io" target="_blank">Rio</a></li>
+                                <li><a href="/products/hosted-rancher/">Hosted Rancher</a></li>
+                                <li><a href="/products/k3s/">k3s</a></li>
+                                <li><a href="/products/longhorn/" target="">Longhorn</a></li>
                                 <li><a href="/request-a-demo/">Request a demo</a></li>
                             </ul>
                         </li>
@@ -64,10 +68,10 @@
                             <a class="mobile-menu" href="#">Customers</a>
 
                             <ul class="submenu submenus-wrap">
-                                <li><a href="/customers/illumina/">Illumina</a></li>
-                                <li><a href="/customers/sling/">Sling TV</a></li>
-                                <li><a href="/customers/eoc/">EOC</a></li>
-                                <li><a href="/customers/deutsche-bahn/">Deutsche Bahn</a></li>
+                                <li><a href="/customers/continental/">Continental</a></li>
+                                <li><a href="/customers/ubisoft/">Ubisoft</a></li>
+                                <li><a href="/customers/schneider-electric/">Schneider Electric</a></li>
+                                <li><a href="/customers/mpac/">MPAC</a></li>
                                 <li><a href="/customers/">See All Customer Stories</a></li>
                             </ul>
                         </li>
@@ -83,6 +87,7 @@
                                 <li><a href="/online-meetups/">Online Meetups</a></li>
                                 <li><a href="/rodeos/">Rancher Rodeos</a></li>
                                 <li><a href="/kubernetes-master-class/">Kubernetes Master Classes</a></li>
+                                <li><a href="https://academy.rancher.com/">Get Certified!</a></li>
                                 <!-- <li><a href="/writing-program/">Rancher Writing Program</a></li> -->
                                 <li><a href="/quick-start/">Getting Started Guide</a></li>
                                 <li><a href="https://forums.rancher.com/">Forums</a></li>
@@ -107,8 +112,8 @@
                         <a class="mobile-menu" href="#">Projects</a>
 
                             <ul class="submenu submenus-wrap">
-                                <li><a href="/rancher-os/">RancherOS</a></li>
                                 <li><a href="http://k3os.io/" target="_blank">k3OS</a></li>
+                                <li><a href="http://rio.io/" target="_blank">Rio</a></li>
                                 <li><a href="http://submariner.io/" target="_blank">Submariner</a></li>
                                 <li><a href="https://longhorn.io/" target="_blank">Longhorn</a></li>
                             </ul>
@@ -217,61 +222,62 @@
                                                         <li class="menus-container">
                                                             <a href="/products">
                                                                 <span>Overview</span>
-                                                            <svg class="icon right" enable-background="new 0 0 34 34" viewBox="0 0 34 34" xmlns="http://www.w3.org/2000/svg">
-                                                                <g class="svg-linear" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10">
-                                                                    <path d="m19.5 12 5 5-5 5"></path>
-                                                                    <path d="m24.5 17h-15"></path>
-                                                                </g>
-                                                            </svg>
-                                                        </a>
+                                                                <svg class="icon right" enable-background="new 0 0 34 34" viewBox="0 0 34 34" xmlns="http://www.w3.org/2000/svg">
+                                                                    <g class="svg-linear" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10">
+                                                                        <path d="m19.5 12 5 5-5 5"></path>
+                                                                        <path d="m24.5 17h-15"></path>
+                                                                    </g>
+                                                                </svg>
+                                                            </a>
                                                             <a href="/products/rancher/" class="menu-sub-block-item">
                                                                 <span>Rancher</span>
-                                                            <svg class="icon right" enable-background="new 0 0 34 34" viewBox="0 0 34 34" xmlns="http://www.w3.org/2000/svg">
-                                                                <g class="svg-linear" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10">
-                                                                    <path d="m19.5 12 5 5-5 5"></path>
-                                                                    <path d="m24.5 17h-15"></path>
-                                                                </g>
-                                                            </svg>
+                                                                <svg class="icon right" enable-background="new 0 0 34 34" viewBox="0 0 34 34" xmlns="http://www.w3.org/2000/svg">
+                                                                    <g class="svg-linear" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10">
+                                                                        <path d="m19.5 12 5 5-5 5"></path>
+                                                                        <path d="m24.5 17h-15"></path>
+                                                                    </g>
+                                                                </svg>
+                                                            </a>
+                                                            <a href="/products/hosted-rancher/" class="menu-sub-block-item">
+                                                                <span>Hosted Rancher</span>
+                                                                <svg class="icon right" enable-background="new 0 0 34 34" viewBox="0 0 34 34" xmlns="http://www.w3.org/2000/svg">
+                                                                    <g class="svg-linear" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10">
+                                                                        <path d="m19.5 12 5 5-5 5"></path>
+                                                                        <path d="m24.5 17h-15"></path>
+                                                                    </g>
+                                                                </svg>
                                                             </a>
                                                             <a href="/products/rke/" class="menu-sub-block-item">
                                                                 <span>RKE</span>
 
-                                                            <svg class="icon right" enable-background="new 0 0 34 34" viewBox="0 0 34 34" xmlns="http://www.w3.org/2000/svg">
-                                                                <g class="svg-linear" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10">
-                                                                    <path d="m19.5 12 5 5-5 5"></path>
-                                                                    <path d="m24.5 17h-15"></path>
-                                                                </g>
-                                                            </svg>
+                                                                <svg class="icon right" enable-background="new 0 0 34 34" viewBox="0 0 34 34" xmlns="http://www.w3.org/2000/svg">
+                                                                    <g class="svg-linear" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10">
+                                                                        <path d="m19.5 12 5 5-5 5"></path>
+                                                                        <path d="m24.5 17h-15"></path>
+                                                                    </g>
+                                                                </svg>
                                                             </a>
 
-                                                            <a href="https://k3s.io" class="menu-sub-block-item" target="_blank">
-                                                                <span>K3s <svg class='icon-horizontal-center' style="width:24px;height:24px" viewBox="0 0 24 24">
-                                                                <path fill="currentColor" d="M14,3V5H17.59L7.76,14.83L9.17,16.24L19,6.41V10H21V3M19,19H5V5H12V3H5C3.89,3 3,3.9 3,5V19A2,2 0 0,0 5,21H19A2,2 0 0,0 21,19V12H19V19Z" />
-                                                            </svg>
-                                                            </span>
+                                                            <a href="/products/longhorn/" class="menu-sub-block-item">
+                                                                <span>Longhorn</span>
 
-                                                            <svg class="icon right" enable-background="new 0 0 34 34" viewBox="0 0 34 34" xmlns="http://www.w3.org/2000/svg">
-                                                                <g class="svg-linear" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10">
-                                                                    <path d="m19.5 12 5 5-5 5"></path>
-                                                                    <path d="m24.5 17h-15"></path>
-                                                                </g>
-                                                            </svg>
+                                                                <svg class="icon right" enable-background="new 0 0 34 34" viewBox="0 0 34 34" xmlns="http://www.w3.org/2000/svg">
+                                                                    <g class="svg-linear" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10">
+                                                                        <path d="m19.5 12 5 5-5 5"></path>
+                                                                        <path d="m24.5 17h-15"></path>
+                                                                    </g>
+                                                                </svg>
                                                             </a>
-                                                            <a href="https://rio.io" class="menu-sub-block-item" target="_blank">
-                                                                <span>Rio <svg class='icon-horizontal-center' style="width:24px;height:24px" viewBox="0 0 24 24">
-                                                                <path fill="currentColor" d="M14,3V5H17.59L7.76,14.83L9.17,16.24L19,6.41V10H21V3M19,19H5V5H12V3H5C3.89,3 3,3.9 3,5V19A2,2 0 0,0 5,21H19A2,2 0 0,0 21,19V12H19V19Z" /></span>
-
-
-                                                            <svg class="icon right" enable-background="new 0 0 34 34" viewBox="0 0 34 34" xmlns="http://www.w3.org/2000/svg">
-                                                                <g class="svg-linear" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10">
-                                                                    <path d="m19.5 12 5 5-5 5"></path>
-                                                                    <path d="m24.5 17h-15"></path>
-                                                                </g>
-                                                            </svg>
+                                                            <a href="/products/k3s/" class="menu-sub-block-item">
+                                                                <span>K3s</span>
+                                                                <svg class="icon right" enable-background="new 0 0 34 34" viewBox="0 0 34 34" xmlns="http://www.w3.org/2000/svg">
+                                                                    <g class="svg-linear" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10">
+                                                                        <path d="m19.5 12 5 5-5 5"></path>
+                                                                        <path d="m24.5 17h-15"></path>
+                                                                    </g>
+                                                                </svg>
                                                             </a>
-
                                                         </li>
-
                                                     </ul>
 
                                             <div class="primary-menu-blocks primary-menu-blocks-join">
@@ -296,14 +302,14 @@
 
                                                         <div class="article-item">
                                                             <div class="article-thumbmail">
-                                                                <img class="image" src="/img/header-customers-featured-thumbnail.png" alt="A Male Scientist in a White Lab Coat Looking Into a Microscope">
+                                                                <img class="image" src="/img/header-customers-featured-thumbnail.jpg" alt="A Male Scientist in a White Lab Coat Looking Into a Microscope">
                                                             </div>
 
                                                             <div class="article-texts">
-                                                                <a href="/customers/illumina/">
-                                                                    <h2 class="title-label">Illumina</h2>
+                                                                <a href="/customers/continental/">
+                                                                    <h2 class="title-label">Continental</h2>
                                                                     <p class="description-label">
-                                                                        Illumina Innovates with Rancher and Kubernetes
+                                                                        Continental Innovates with Rancher and Kubernetes
 
                                                                         <svg class="icon right" enable-background="new 0 0 34 34" viewBox="0 0 34 34" xmlns="http://www.w3.org/2000/svg">
                                                                             <g class="svg-linear" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10">
@@ -321,8 +327,8 @@
                                                     <li class="menus-container">
                                                         <div class="label">More Customers</div>
 
-                                                        <a href="/customers/sling/">
-                                                            <span>Sling TV</span>
+                                                        <a href="/customers/ubisoft/">
+                                                            <span>Ubisoft</span>
                                                             <svg class="icon right" enable-background="new 0 0 34 34" viewBox="0 0 34 34" xmlns="http://www.w3.org/2000/svg">
                                                                 <g class="svg-linear" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10">
                                                                     <path d="m19.5 12 5 5-5 5"/>
@@ -330,8 +336,8 @@
                                                                 </g>
                                                             </svg>
                                                         </a>
-                                                        <a href="/customers/eoc/">
-                                                            <span>EOC</span>
+                                                        <a href="/customers/schneider-electric/">
+                                                            <span>Schneider Electric</span>
                                                             <svg class="icon right" enable-background="new 0 0 34 34" viewBox="0 0 34 34" xmlns="http://www.w3.org/2000/svg">
                                                                 <g class="svg-linear" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10">
                                                                     <path d="m19.5 12 5 5-5 5"/>
@@ -339,8 +345,8 @@
                                                                 </g>
                                                             </svg>
                                                         </a>
-                                                        <a href="/customers/deutsche-bahn/">
-                                                            <span>Deutsche Bahn</span>
+                                                        <a href="/customers/mpac/">
+                                                            <span>MPAC</span>
                                                             <svg class="icon right" enable-background="new 0 0 34 34" viewBox="0 0 34 34" xmlns="http://www.w3.org/2000/svg">
                                                                 <g class="svg-linear" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10">
                                                                     <path d="m19.5 12 5 5-5 5"/>
@@ -375,6 +381,7 @@
                                                             <a href="/online-meetups/" class="menu-sub-block-item">Online Meetups</a>
                                                             <a href="/rodeos/" class="menu-sub-block-item">Hands-on Workshops</a>
                                                             <a href="/kubernetes-master-class/" class="menu-sub-block-item">Kubernetes Master Classes</a>
+                                                            <a href="https://academy.rancher.com/" class="menu-sub-block-item">Get Certified!</a>
                                                             <!-- <a href="/ranchcasts/" class="menu-sub-block-item">RanchCasts</a> -->
                                                         </li>
                                                     </ul>
@@ -398,9 +405,10 @@
                                                     <ul>
                                                         <li class="articles-container">
                                                             <div class="label">Projects</div>
-                                                            <a href="/rancher-os" class="menu-sub-block-item">RancherOS</a>
                                                             <a href="http://k3os.io" target="_blank" class="menu-sub-block-item">k3OS <svg class='icon-horizontal-center' style="width:24px;height:24px" viewBox="0 0 24 24">
                                                                 <path fill="currentColor" d="M14,3V5H17.59L7.76,14.83L9.17,16.24L19,6.41V10H21V3M19,19H5V5H12V3H5C3.89,3 3,3.9 3,5V19A2,2 0 0,0 5,21H19A2,2 0 0,0 21,19V12H19V19Z" /></a>
+                                                            <a href="https://rio.io" target="_blank" class="menu-sub-block-item">Rio <svg class='icon-horizontal-center' style="width:24px;height:24px" viewBox="0 0 24 24">
+                                                                    <path fill="currentColor" d="M14,3V5H17.59L7.76,14.83L9.17,16.24L19,6.41V10H21V3M19,19H5V5H12V3H5C3.89,3 3,3.9 3,5V19A2,2 0 0,0 5,21H19A2,2 0 0,0 21,19V12H19V19Z" /></a>
                                                             <a href="http://submariner.io" target="_blank" class="menu-sub-block-item">Submariner <svg class='icon-horizontal-center' style="width:24px;height:24px" viewBox="0 0 24 24">
                                                                 <path fill="currentColor" d="M14,3V5H17.59L7.76,14.83L9.17,16.24L19,6.41V10H21V3M19,19H5V5H12V3H5C3.89,3 3,3.9 3,5V19A2,2 0 0,0 5,21H19A2,2 0 0,0 21,19V12H19V19Z" /></a>
                                                             <a href="https://longhorn.io" target="_blank" class="menu-sub-block-item">Longhorn <svg class='icon-horizontal-center' style="width:24px;height:24px" viewBox="0 0 24 24">

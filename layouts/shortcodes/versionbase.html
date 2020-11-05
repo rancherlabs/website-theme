@@ -1,0 +1,2 @@
+{{- $parts := split .Page.Dir "/" -}}
+{{- .Site.BaseURL -}}{{- index $parts 0 -}}/{{- index $parts 1 -}}/{{- index $parts 2 -}}

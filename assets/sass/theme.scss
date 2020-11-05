@@ -27,6 +27,7 @@
 @import "components/card";
 @import "components/button";
 @import "components/tabs";
+@import "components/share";
 
 // 6. Page-specific styles
 @import "pages/common";
@@ -55,11 +56,14 @@
 @import "pages/products-rancher-control-all";
 @import "pages/products-rancher-os";
 @import "pages/products-rke";
+@import "pages/products-longhorn";
 @import "pages/products-rancher-2_2";
+@import "pages/products-rancher-2-5";
 @import "pages/products-training";
 @import "pages/products-support";
 @import "pages/products-support-cta";
 @import "pages/products-pricing-cta";
+@import "pages/products-k3s";
 @import "pages/products-request-a-demo-cta";
 @import "pages/community";
 @import "pages/community-online-meetups";
@@ -89,3 +93,4 @@
 @import "pages/brand-guidelines";
 @import "pages/learning-paths";
 @import "pages/resources";
+@import "pages/404";

@@ -1,8 +1,14 @@
 // -----------------------------------------------------------------------------
-// This file contains styles that are specific to the home page.
+// This file contains styles that are specific to the 404 page.
 // -----------------------------------------------------------------------------
 
 
-.pg-404 {
-  height: 50vh;
+.error-404 {
+  padding: 130px 0 50px;
+  text-align: center;
+  .button {
+    display: inline-block;
+    margin-top: 20px;
+    font-size: 16px;
+  }
 }
