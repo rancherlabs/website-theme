@@ -546,6 +546,11 @@ body {
 
     .title-label {
       color: $c-blue-dark1;
+
+      &.title-sublabel {
+        color: $c-blue;
+        margin-bottom: 50px;
+      }
     }
   }
 
@@ -553,6 +558,10 @@ body {
     padding-right: 0;
     padding-bottom: 150px;
     padding-left: 0;
+
+    &.future-cards {
+      padding-bottom: 75px;
+    }
   }
 
   .cards-wrap {

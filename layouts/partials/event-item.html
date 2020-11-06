@@ -1,7 +1,7 @@
 <div
   class="col-xl-4 col-lg-4 col-md-6 col-sm-6 col-xs-12 col-12 card-container"
 >
-  <a href="{{ .link }}" target="_blank" class="card-item box-hover">
+  <a href="{{ .link }}" target="_blank" class="card-item box-hover card-{{ $.sectionName }}">
     <div class="card-image">
       <img src="{{ .image }}" alt="{{ .title }}" />
     </div>
@@ -15,6 +15,10 @@
             src="/imgs/products/training/icon-calendar-green.svg"
           />
           <span>{{ .dateText }}</span>
+        </p>
+        <p class="date-label">
+          <img class="icon" src="/imgs/company/press/icon-time-green.svg" />
+          <span>{{ .timeText}}</span>
         </p>
       </div>
     </div>
