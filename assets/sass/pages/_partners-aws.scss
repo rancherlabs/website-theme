@@ -1,47 +1,92 @@
 .aws-rancher-hero {
   background-color: $c-blue;
   position: relative;
-  margin-top: 135px;
-  padding: 4rem 0;
+  padding: 6rem 0;
 
+  @media(min-width: 768px) {
+    margin-top: 135px;
+  }
+.description-label {
+    color: white;
+    font-size: 50px;
+}
+
+.description-text {
+    color: white;
+    font-size: 20px;
+    line-height: 1.5;
+}
   .texts-container .texts-wrap .description-label{
       color: #fff;
   }
 
   img.cloud.floating-top {
     height: 189px;
-    opacity: 0.5;
+    opacity: 0.3;
+    right: 0;
+    top: -120px;
+    position: absolute;
   }
 
   img.cloud.floating-bottom {
       height: 110px;
       opacity: .4;
+      position: absolute;
+      bottom: -100px;
+      left: 0;
   }
 
   .artwork {
-      position: absolute;
-      bottom: -68px;
-      right: 0;
+      position: relative;
       width: 100%;
+
+      @media(max-width: 768px) {
+        margin-top: 3rem;
+        height: 200px;
+      }
+
+    .clouds-1 {
+        display: block;
+        position: absolute;
+        bottom: -68px;
+        right: 30%;
+        top: 0;
+        width: 105px;
+    }
+
+    .clouds-2 {
+        position: absolute;
+        bottom: -68px;
+        left: 0;
+        top: -30px;
+        width: 375px;
+    }
+    .clouds-3 {
+        position: absolute;
+        bottom: -68px;
+        right: 100px;
+        top: 100px;
+        width: 100px;
+    }
   }
 } 
+
+.aws-rancher-description {
+    background-color: $c-blue-light;
+    margin: 0 auto;
+    padding: 3rem;
+}
 
 .aws-rancher-features{
     .row{
           align-items: center;
-          padding: 4rem 0;
+          padding: 3rem 0;
       }
     img{
-        max-width: 100%;
-        height: auto;
+        border: 1px solid rgb(201, 201, 201);
+        border-radius: 4px;
+        padding: 0.5rem;
     }
-
-    .grid-container:nth-child(2) {
-      background-color: #efefef;
-      .row {
-        flex-direction: row-reverse;
-      }
-  }
 }
 .aws-rancher-articles{
     .no-gutter{
@@ -63,26 +108,57 @@
         padding: 30px;
     }
     .type-study{
+        padding: 3rem 0;
+        background-color: #38475b;
+        color: #fff;
+
+        &::before {
+            content: '';
+            position: absolute;
+            height: 100%;
+            top: 0;
+            right: 98%;
+            background-color: #38475b;
+            width: calc(100vw/2);
+        }
+
         h2{
             color: #90c741; 
         }
-        background-color: #38475b;
-        color: #fff;
+
         .button.text span::before{
             background-color: rgba(144,199,65,0.1);
         }
+
         a, a:hover{
             color: #90c741;       
+        }
+
+        &-image {
+            background: $c-blue-light;
+            padding: 3rem;
+            display: flex;
+
+            img {
+                width: 60%;
+                margin: auto;
+            }
+
+            &::after {
+                content: "";
+                position: absolute;
+                left: 98%;
+                top: 0;
+                background-color: $c-blue-light;
+                width: calc(100vw/2);
+                height: 100%;
+            }
         }
     }
 }
 
 .aws-rancher-features, .aws-rancher-articles{
     padding-bottom: 4rem;    
-}
-
-.aws-rancher-description{
-    margin: 4rem 0;
 }
 
 .aws-rancher-hero.community-ebooks-screen1{
