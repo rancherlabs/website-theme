@@ -79,6 +79,38 @@
   }
 } // mixin
 
+// day-1 suse announcement
+.suse-green {
+	color:#30ba78;
+}
+
+.suse-green-dark {
+	color:#0C322C;
+}
+
+.font-weight-bold {
+	font-weight: 900;
+}
+
+.btn-suse {
+	color: white;
+	border-radius: 30px;
+	border: 2px solid #30ba78;
+	background: #30ba78;
+	display: inline-flex;
+	align-items: center;
+
+	svg {
+		width: 60px;
+		margin-left: -20px;
+	}
+
+	&:hover {
+		background: #0C322C;
+		border-color: #0C322C;
+	}
+}
+
 .homepage-reviews {
 	.review-wrapper {
 		padding: 30px;
