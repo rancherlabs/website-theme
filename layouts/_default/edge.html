@@ -1,0 +1,222 @@
+{{ block "header-edge" .}}
+  {{- partial "header-edge.html" . -}}
+{{ end }}
+
+{{ block "hero" .}}
+<section class="hero-type1">
+        <div class="grid-container">
+            <div class="row">
+                <div class="col-xl-12 col-12 texts-container">
+                    <div class="decoration cloud-big">
+                        <img class="image" src="/imgs/why-rancher/decoration-cloud-big-white.svg">
+                    </div>
+
+                    <div class="texts-wrap">
+                        {{ with .Title }}
+                            <h1 class="title-label">{{ . }}</h1>
+                        {{end}}
+
+                        {{ with .Params.description }}
+                            <h4 class="description-label">
+                                {{ . }}
+                            </h4>
+                        {{end}}
+
+                        {{ partial "edge-cta" . }}
+                    </div>
+
+                    <div class="decoration rancher-ground">
+                        <img class="ground" src="/imgs/decoration-rancher-ground.svg">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+{{ end }}
+
+<div class="grid-container">
+    {{ range .Site.Data.edge.innovate.cluster }}
+        <div class="row max-sized edge-section">
+            <div class="col-12">
+                <h2 class="title-label text-center">{{ .title }}</h2>
+            </div>
+            <div class="texts-container">
+                <div class="row">
+                    <div class="col-md-6 col-12 detail-container">
+                        <p class="description-label">
+                            {{ .content }}
+                        </p>
+                    </div>
+                    <div class="col-md-6 col-12 image-container">
+                        <img src="{{ .image }}">
+                    </div>
+                </div>
+            </div>
+        </div>
+    {{ end }}
+</div>
+
+<div class="grid-container has-light-bg">
+    {{ range .Site.Data.edge.innovate.whitepaper }}
+        <div class="row max-sized edge-section">
+            <div class="texts-container">
+                <div class="row">
+                    <div class="col-md-6 col-12 image-container">
+                        <img src="{{ .image }}">
+                    </div>
+                    <div class="col-md-6 col-12 detail-container">
+                        <h2 class="title-label">{{ .title }}</h2>
+                        <p class="description-label">
+                            {{ .content }}
+                        </p>
+                        <a class="btn-green" href={{ .buttonLink }}>{{ .buttonText }}</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    {{ end }}
+</div>
+
+<div class="grid-container">
+    {{ range .Site.Data.edge.innovate.customers }}
+        <div class="row max-sized edge-section">
+            <div class="col-12">
+                <h2 class="title-label text-center">{{ .title }}</h2>
+                <div class="customers-grid">
+                    {{ range .customer }}
+                        <a href="{{ .link }}"><img src="{{ .logo }}" alt="{{ .name }}" /></a>
+                    {{ end }}
+                </div>
+            </div>
+        </div>
+    {{ end }}
+</div>
+
+<div class="grid-container has-slider">
+    {{ range .Site.Data.edge.innovate.testimonial }}
+        <div class="has-slider-bg" style="background-color: {{ .color }}; background-image: url({{ .bg }});">
+            <div class="row max-sized edge-section">
+                <div class="texts-container">
+                    <div class="row">
+                        <div class="col-md-6 col-12 detail-container">
+                            <img src="{{ .logo }}" alt="{{ .name }}" />
+                            <p class="description-label">
+                                {{ .content }}
+                            </p>
+                            <h4 class="title-label">{{ .author }}</h4>
+                            <a href={{ .buttonLink }}>{{ .buttonText }}</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    {{ end }}
+</div>
+
+{{ range .Site.Data.edge.innovate.video }}
+    <section class="homepage-screen2 edge-play" id="more">
+        <div class="grid-container has-light-bg video-padding">
+            <div class="row max-sized">
+                <div class="col-12">
+                    <h2 class="title-label text-center">{{ .title }}</h2>
+                </div>
+                <div class="col-12 order-md-1 order-sm-1 order-2 sliders-container d-flex align-items-center">
+                    <div class="browser-item-full">
+                        <img class="img-fluid" src="{{ .cover }}" alt="Video Cover Thumbnail">
+                        <a class="play-button modal-open" data-launch-id="video_animation">
+                            <svg class="icon linear-round" enable-background="new 0 0 14.2 14.2" viewBox="0 0 14.2 14.2"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path class="svg-face" d="m5.2 4.9v4.7l5.1-2.3z"></path>
+                            </svg>
+                        </a>
+                    </div>
+                    <div class="modal-content" id="video_animation">
+                        <div class="content">
+                            <div class="modal-iframe-container">
+                                <iframe data-src="{{ .video }}" class="modal-iframe" allowfullscreen frameborder="0" title="Customer Story" showinfo=0></iframe>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+{{ end }}
+
+<div class="grid-container has-slider is-dark edge-kubernetes">
+    {{ range .Site.Data.edge.innovate.kubernetes }}
+        <div class="has-slider-bg" style="background-color: {{ .bg }};">
+            <div class="row-full edge-section">
+                <div class="texts-container">
+                    <div class="row">
+                        <div class="col-md-4">
+                            <img src="{{ .logo }}" alt="{{ .name }}" />
+                        </div>
+                        <div class="col-md-8 col-12 detail-container">
+                            <h2 class="title-label">{{ .title }}</h2>
+                            <p class="description-label">
+                                {{ .content }}
+                            </p>
+                            <a class="btn-white" href={{ .buttonLink }}>{{ .buttonText }}</a>
+                            <div class="sponsors">
+                                <p>{{ .sponsoreText }}</p>
+                                <ul>
+                                    {{ range .sponsor }}
+                                        <li><a href="{{ .link }}"><img src="{{ .logo }}" alt="{{ .name }}" /></a></li>
+                                    {{ end }}
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    {{ end }}
+</div>
+
+
+<div class="grid-container edge-solutions has-slider">
+    {{ range .Site.Data.edge.innovate.solutions }}
+        <div class="row max-full">
+            <div class="col-12">
+                <h2 class="text-center">{{ .title }}</h2>
+            </div>
+            <div class="grid-container m-auto">
+                <div class="row max-sized">
+                    {{ range .solution }}
+                        <div class="col-4">
+                            <article class="edge-solution">
+                                <figure>
+                                    <img src="{{ .logo }}" alt="{{ .title }}" />
+                                </figure>
+                                <h3 class="text-center">{{ .title }}</h3>
+                                <div class="desc">
+                                    {{ .content }}
+                                </div>
+                                <a href="{{ .link }}">More on {{ .title }}</a>
+                            </article>
+                        </div>
+                    {{ end }}
+                </div>
+            </div>
+        </div>
+    {{ end }}
+</div>
+
+{{ block "main" . }}
+  <!-- The part of the page that begins to differ between templates -->
+             
+{{ end }}
+
+{{ block "prefooter" . }}
+{{ end }}
+
+{{ block "footer" . }}
+<!-- More shared code, perhaps a footer but that can be overridden if need be in  -->
+  <!--cta banner-->
+  {{ if and (.Params.ctaBanner) }}
+    {{ partial "footer-cta.html" (dict "theme" .Params.ctaBannerTheme)}}
+  {{end}}
+  
+  {{- partial "footer.html" . -}}
+{{ end }}

@@ -1,0 +1,21 @@
+{{ block "header-edge" .}}
+  {{- partial "header-edge.html" . -}}
+{{ end }}
+
+{{ block "main" . }}
+  <!-- The part of the page that begins to differ between templates -->
+             
+{{ end }}
+
+{{ block "prefooter" . }}
+{{ end }}
+
+{{ block "footer" . }}
+<!-- More shared code, perhaps a footer but that can be overridden if need be in  -->
+  <!--cta banner-->
+  {{ if and (.Params.ctaBanner) }}
+    {{ partial "footer-cta.html" (dict "theme" .Params.ctaBannerTheme)}}
+  {{end}}
+  
+  {{- partial "footer.html" . -}}
+{{ end }}
