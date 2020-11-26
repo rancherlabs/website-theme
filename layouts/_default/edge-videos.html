@@ -3,6 +3,138 @@
   {{- partial "header-edge.html" . -}}
 {{ end }}
 
+<div class="sections-wrapper">
+  {{ range .Site.Data.edge.videos.sticky }}
+    <div class="grid-container edge-videos-wrapper">
+      <div class="row max-sized">
+        <div class="col-12">
+          <h2 class="section-title">{{ .title }}</h2>
+        </div>
+      </div>
+      <div class="row max-sized">
+        {{ range $elem_index, $elem_val := .video }}
+        <div class="col-12">
+          <article class="edge-video edge-play">
+            <div class="row">
+              <div class="col-6">
+                <figure>
+                  <img class="img-fluid" src="https://placehold.it/536x300" alt="Video Cover Thumbnail">
+                  <a class="small-play play-button modal-open" data-launch-id="edge-video-{{ $elem_index }}">
+                      <svg class="icon linear-round" enable-background="new 0 0 14.2 14.2" viewBox="0 0 14.2 14.2"
+                      xmlns="http://www.w3.org/2000/svg">
+                      <path class="svg-face" d="m5.2 4.9v4.7l5.1-2.3z"></path>
+                      </svg>
+                  </a>
+                </figure>
+                <div class="modal-content" id="edge-video-{{ $elem_index }}">
+                    <div class="content">
+                        <div class="modal-iframe-container">
+                            <iframe data-src="{{ .url }}" class="modal-iframe" allowfullscreen frameborder="0" title="Customer Story" showinfo=0></iframe>
+                        </div>
+                    </div>
+                </div>
+              </div>
+              <div class="col-6">
+                <div class="post-content">
+                  <h3>{{ .title }}</h3>
+                  <p class="post-date">{{ .date }}</p>
+                  {{ range .author }}
+                    <div class="author-info">
+                      <div class="author-image">
+                        <img src="/img/author-image/{{ .image }}" alt="{{ .name }}">
+                      </div>
+                      <div class="author-info-content">
+                        <h5 class="author-name">{{ .name }}</h5>
+                        <p class="author-title">{{ .title }}</p>
+                        <p class="author-company">{{ .company }}</p>
+                        <div class="author-socials">
+                          {{ with .linkedin }}
+                            <a class="edge-video-social" href="{{.}}" target="_blank">
+                              <img class="service-icon" src="/imgs/icon-linkedin.svg">
+                            </a>
+                          {{ end }}
+                          {{ with .twitter }}
+                            <a class="edge-video-social" href="{{.}}" target="_blank">
+                              <img class="service-icon" src="/imgs/icon-twitter.svg">
+                            </a>
+                          {{ end }}
+                        </div>
+                      </div>
+                    </div>
+                  {{ end }}
+                </div>
+              </div>
+            </div>
+          </article>
+        </div>
+        {{ end }}
+      </div>
+    </div>
+  {{ end }}
+
+  {{ range .Site.Data.edge.videos.section }}
+    <div class="grid-container edge-videos-wrapper">
+      <div class="row max-sized">
+        <div class="col-12">
+          <h2 class="section-title">{{ .title }}</h2>
+        </div>
+      </div>
+      <div class="row max-sized">
+        {{ range $elem_index, $elem_val := .video }}
+        <div class="col-md-4 col-12">
+          <article class="edge-video edge-play">
+            <figure>
+              <img class="img-fluid" src="https://placehold.it/536x300" alt="Video Cover Thumbnail">
+              <a class="small-play play-button modal-open" data-launch-id="edge-video-{{ $elem_index }}">
+                  <svg class="icon linear-round" enable-background="new 0 0 14.2 14.2" viewBox="0 0 14.2 14.2"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <path class="svg-face" d="m5.2 4.9v4.7l5.1-2.3z"></path>
+                  </svg>
+              </a>
+            </figure>
+            <div class="modal-content" id="edge-video-{{ $elem_index }}">
+                <div class="content">
+                    <div class="modal-iframe-container">
+                        <iframe data-src="{{ .url }}" class="modal-iframe" allowfullscreen frameborder="0" title="Customer Story" showinfo=0></iframe>
+                    </div>
+                </div>
+            </div>
+            <div class="post-content">
+              <h3>{{ .title }}</h3>
+              <p class="post-date">{{ .date }}</p>
+              {{ range .author }}
+                <div class="author-info">
+                  <div class="author-image">
+                    <img src="/img/author-image/{{ .image }}" alt="{{ .name }}">
+                  </div>
+                  <div class="author-info-content">
+                    <h5 class="author-name">{{ .name }}</h5>
+                    <p class="author-title">{{ .title }}</p>
+                    <p class="author-company">{{ .company }}</p>
+                    <div class="author-socials">
+                      {{ with .linkedin }}
+                        <a class="edge-video-social" href="{{.}}" target="_blank">
+                          <img class="service-icon" src="/imgs/icon-linkedin.svg">
+                        </a>
+                      {{ end }}
+                      {{ with .twitter }}
+                        <a class="edge-video-social" href="{{.}}" target="_blank">
+                          <img class="service-icon" src="/imgs/icon-twitter.svg">
+                        </a>
+                      {{ end }}
+                    </div>
+                  </div>
+                </div>
+              {{ end }}
+            </div>
+          </article>
+        </div>
+        {{ end }}
+      </div>
+    </div>
+  {{ end }}
+</div>
+
 {{ block "main" . }}
   <!-- The part of the page that begins to differ between templates -->
              

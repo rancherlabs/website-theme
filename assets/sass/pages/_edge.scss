@@ -208,5 +208,83 @@ header.edge-header {
                 fill: #3575a8;
             }
         }
+        &.small-play {
+            width: 75px;
+            height: 75px;
+        }
+    }
+}
+
+.sections-wrapper {
+    padding-top: 180px;
+}
+
+.edge-videos-wrapper {
+    margin-bottom: 60px;
+    .section-title {
+        font-size: 44px;
+        color: #3B5268;
+        font-weight: 600;
+    }
+    article.edge-video {
+        margin-bottom: 40px;
+        figure {
+            position: relative;
+            margin: 0 0 20px;
+            img {
+                width: 100%;
+            }
+        }
+        .post-content {
+            h3 {
+                letter-spacing: 0px;
+                color: #3B5268;
+                font-weight: bold;
+                line-height: 1.2;
+            }
+            h5 {
+                font-size: 22px;
+                line-height: normal;
+                margin: 0 0 10px;
+                font-weight: bold;
+            }
+            p {
+                font-size: 22px;
+                line-height: normal;
+                margin: 0 0 10px;
+            }
+            .post-date {
+                font-size: 16px;
+                font-weight: 600;
+                margin-left: 70px;
+            }
+            .author-info {
+                margin-bottom: 15px;
+                display: flex;
+                .author-image img {
+                    width: 50px;
+                    margin-right: 20px;
+                    border-radius: 50%;
+                }
+                .author-socials {
+                    margin-top: 20px;
+                    display: flex;
+                    .edge-video-social {
+                        background-color: #000;
+                        width: 30px;
+                        height: 30px;
+                        display: flex;
+                        margin-right: 10px;
+                        margin-bottom: 10px;
+                        border-radius: 4px;
+                        justify-content: center;
+                        align-items: center;
+                        img {
+                            width: 26px;
+                        }
+                    }
+                }
+            }
+        }
     }
 }
