@@ -2,6 +2,59 @@
   {{- partial "header-edge.html" . -}}
 {{ end }}
 
+<div class="sections-wrapper company-contact-us-screen1">
+    <div class="grid-container edge-videos-wrapper">
+      <div class="row max-sized">
+        <div class="col-12">
+          <h2 class="section-title">{{ .Title }}</h2>
+        </div>
+        <div class="col-12 form-container">
+          <div class="form-wrap">
+            <!--[if lte IE 8]>
+              <script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/v2-legacy.js"></script>
+            <![endif]-->
+            <script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/v2.js"></script>
+            <script>
+              hbspt.forms.create({
+                portalId: "468859",
+                formId: "43adfc28-e322-4c1e-b158-904f735ac8d4"
+              });
+            </script>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="grid-container edge-solutions has-slider">
+    {{ range .Site.Data.edge.innovate.solutions }}
+        <div class="row max-full">
+            <div class="col-12">
+                <h2 class="text-center">{{ .title }}</h2>
+            </div>
+            <div class="grid-container m-auto">
+                <div class="row max-sized">
+                    {{ range .solution }}
+                        <div class="col-4">
+                            <article class="edge-solution">
+                                <figure>
+                                    <img src="{{ .logo }}" alt="{{ .title }}" />
+                                </figure>
+                                <h3 class="text-center">{{ .title }}</h3>
+                                <div class="desc">
+                                    {{ .content }}
+                                </div>
+                                <a href="{{ .link }}">More on {{ .title }}</a>
+                            </article>
+                        </div>
+                    {{ end }}
+                </div>
+            </div>
+        </div>
+    {{ end }}
+</div>
+
 {{ block "main" . }}
   <!-- The part of the page that begins to differ between templates -->
              

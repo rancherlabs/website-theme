@@ -18,15 +18,15 @@
             <div class="row">
               <div class="col-6">
                 <figure>
-                  <img class="img-fluid" src="https://placehold.it/536x300" alt="Video Cover Thumbnail">
-                  <a class="small-play play-button modal-open" data-launch-id="edge-video-{{ $elem_index }}">
+                  <img class="img-fluid" src="{{ .image }}" alt="Video Cover Thumbnail">
+                  <a class="small-play play-button modal-open" data-launch-id="edge-video-sticky-{{ $elem_index }}">
                       <svg class="icon linear-round" enable-background="new 0 0 14.2 14.2" viewBox="0 0 14.2 14.2"
                       xmlns="http://www.w3.org/2000/svg">
                       <path class="svg-face" d="m5.2 4.9v4.7l5.1-2.3z"></path>
                       </svg>
                   </a>
                 </figure>
-                <div class="modal-content" id="edge-video-{{ $elem_index }}">
+                <div class="modal-content" id="edge-video-sticky-{{ $elem_index }}">
                     <div class="content">
                         <div class="modal-iframe-container">
                             <iframe data-src="{{ .url }}" class="modal-iframe" allowfullscreen frameborder="0" title="Customer Story" showinfo=0></iframe>
@@ -73,7 +73,7 @@
   {{ end }}
 
   {{ range .Site.Data.edge.videos.section }}
-    <div class="grid-container edge-videos-wrapper">
+    <div class="grid-container edge-videos-wrapper edge-form-white">
       <div class="row max-sized">
         <div class="col-12">
           <h2 class="section-title">{{ .title }}</h2>
@@ -84,19 +84,34 @@
         <div class="col-md-4 col-12">
           <article class="edge-video edge-play">
             <figure>
-              <img class="img-fluid" src="https://placehold.it/536x300" alt="Video Cover Thumbnail">
-              <a class="small-play play-button modal-open" data-launch-id="edge-video-{{ $elem_index }}">
+              <img class="img-fluid" src="{{ .image }}" alt="Video Cover Thumbnail">
+              <a class="small-play play-button modal-open" data-launch-id="edge-video-additional-{{ $elem_index }}">
                   <svg class="icon linear-round" enable-background="new 0 0 14.2 14.2" viewBox="0 0 14.2 14.2"
                   xmlns="http://www.w3.org/2000/svg">
                   <path class="svg-face" d="m5.2 4.9v4.7l5.1-2.3z"></path>
                   </svg>
               </a>
             </figure>
-            <div class="modal-content" id="edge-video-{{ $elem_index }}">
+            <div class="modal-content" id="edge-video-additional-{{ $elem_index }}">
                 <div class="content">
-                    <div class="modal-iframe-container">
-                        <iframe data-src="{{ .url }}" class="modal-iframe" allowfullscreen frameborder="0" title="Customer Story" showinfo=0></iframe>
+                  <div class="form-container">
+                    <div class="form-wrap">
+                        <!--[if lte IE 8]>
+                        <script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/v2-legacy.js"></script>
+                        <![endif]-->
+
+                        <script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/v2.js"></script>
+                        <script>
+                        hbspt.forms.create({
+                        portalId: "468859",
+                        formId: "58f5c3d4-6c19-4bcb-9473-ad17c6f23094"
+                        });
+                        </script>
                     </div>
+                  </div>
+                  <!-- <div class="modal-iframe-container">
+                      <iframe data-src="{{ .url }}" class="modal-iframe" allowfullscreen frameborder="0" title="Customer Story" showinfo=0></iframe>
+                  </div> -->
                 </div>
             </div>
             <div class="post-content">

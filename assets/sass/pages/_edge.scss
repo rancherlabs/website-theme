@@ -231,8 +231,20 @@ header.edge-header {
         figure {
             position: relative;
             margin: 0 0 20px;
+            width: 100%;
+            height: 0;
+            overflow: hidden;
+            padding-top: 56.25%;
             img {
+                position: absolute;
                 width: 100%;
+                height: 100%;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                object-fit: cover;
+                transform: scale(1.05);
             }
         }
         .post-content {
@@ -287,4 +299,8 @@ header.edge-header {
             }
         }
     }
+}
+
+.edge .tingle-modal {
+    background-color: rgba(44, 61, 79, .95);
 }
