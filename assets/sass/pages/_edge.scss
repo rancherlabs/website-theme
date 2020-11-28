@@ -304,3 +304,17 @@ header.edge-header {
 .edge .tingle-modal {
     background-color: rgba(44, 61, 79, .95);
 }
+
+.decoration.rancher-ground.edge-hero-bg {
+    margin-top: -300px;
+}
+
+.edge .hero-type1 .texts-container .texts-wrap {
+    position: relative;
+    z-index: 2;
+}
+
+.edge .primary-menus-wrap .primary-menu-item.active .primary-menu:before, 
+.edge .primary-menus-wrap .primary-menu-item:hover .primary-menu:before {
+    background-color: transparent;
+}
