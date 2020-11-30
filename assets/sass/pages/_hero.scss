@@ -1387,20 +1387,21 @@
 
 .edge-cta-banner {
   a {
-    background-color: $primary;
+    background-color: #112029;
     color: $contrasted-light-default;
     display: flex;
     align-items: center;
     justify-content: center;
     border-radius: 40px;
-    padding: 10px 30px;
+    padding: 20px 60px;
     margin: 30px 0 0 0;
-    font-weight: bold;
-    font-size: 1.4em;
+    font-weight: 500;
     cursor: pointer;
     position: relative;
     z-index: 2;
     line-height: normal;
+    font-size: 20px;
+    font-family: Poppins;
   }
 }
 

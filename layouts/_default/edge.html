@@ -44,7 +44,9 @@
                 <div class="row">
                     <div class="col-md-6 col-12 detail-container">
                         <p class="description-label">
-                            {{ .content }}
+                            {{ range .content }}
+                                <p>{{ . }}</p>
+                            {{ end }}
                         </p>
                     </div>
                     <div class="col-md-6 col-12 image-container">
@@ -77,45 +79,9 @@
     {{ end }}
 </div>
 
-<div class="grid-container">
-    {{ range .Site.Data.edge.innovate.customers }}
-        <div class="row max-sized edge-section">
-            <div class="col-12">
-                <h2 class="title-label text-center">{{ .title }}</h2>
-                <div class="customers-grid">
-                    {{ range .customer }}
-                        <a href="{{ .link }}"><img src="{{ .logo }}" alt="{{ .name }}" /></a>
-                    {{ end }}
-                </div>
-            </div>
-        </div>
-    {{ end }}
-</div>
-
-<div class="grid-container has-slider">
-    {{ range .Site.Data.edge.innovate.testimonial }}
-        <div class="has-slider-bg" style="background-color: {{ .color }}; background-image: url({{ .bg }});">
-            <div class="row max-sized edge-section">
-                <div class="texts-container">
-                    <div class="row">
-                        <div class="col-md-6 col-12 detail-container">
-                            <img src="{{ .logo }}" alt="{{ .name }}" />
-                            <p class="description-label">
-                                {{ .content }}
-                            </p>
-                            <h4 class="title-label">{{ .author }}</h4>
-                            <a href={{ .buttonLink }}>{{ .buttonText }}</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    {{ end }}
-</div>
-
 {{ range .Site.Data.edge.innovate.video }}
     <section class="homepage-screen2 edge-play" id="more">
-        <div class="grid-container has-light-bg video-padding">
+        <div class="grid-container has-dark-bg video-padding">
             <div class="row max-sized">
                 <div class="col-12">
                     <h2 class="title-label text-center">{{ .title }}</h2>
@@ -143,28 +109,73 @@
     </section>
 {{ end }}
 
-<div class="grid-container has-slider is-dark edge-kubernetes">
-    {{ range .Site.Data.edge.innovate.kubernetes }}
-        <div class="has-slider-bg" style="background-color: {{ .bg }};">
-            <div class="row-full edge-section">
+<div class="grid-container">
+    {{ range .Site.Data.edge.innovate.customers }}
+        <div class="row edge-section">
+            <div class="col-12">
+                <h2 class="title-label title-thin text-center">{{ .title }}</h2>
+                <div class="customers-grid">
+                    {{ range .customer }}
+                        <a href="{{ .link }}"><img src="{{ .logo }}" alt="{{ .name }}" /></a>
+                    {{ end }}
+                </div>
+            </div>
+        </div>
+    {{ end }}
+</div>
+
+<div class="grid-container has-slider testimonials-slider">
+    {{ range .Site.Data.edge.innovate.testimonial }}
+        <div class="has-slider-bg" style="background-color: {{ .color }}; background-image: url({{ .bg }});">
+            <div class="row max-sized edge-section">
                 <div class="texts-container">
                     <div class="row">
-                        <div class="col-md-4">
+                        <div class="col-md-6 col-12 detail-container">
                             <img src="{{ .logo }}" alt="{{ .name }}" />
-                        </div>
-                        <div class="col-md-8 col-12 detail-container">
-                            <h2 class="title-label">{{ .title }}</h2>
                             <p class="description-label">
                                 {{ .content }}
                             </p>
-                            <a class="btn-white" href={{ .buttonLink }}>{{ .buttonText }}</a>
-                            <div class="sponsors">
-                                <p>{{ .sponsoreText }}</p>
-                                <ul>
-                                    {{ range .sponsor }}
-                                        <li><a href="{{ .link }}"><img src="{{ .logo }}" alt="{{ .name }}" /></a></li>
-                                    {{ end }}
-                                </ul>
+                            <h4 class="title-label">{{ .author }}</h4>
+                            <a class="btn-green" href={{ .buttonLink }}>{{ .buttonText }}</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    {{ end }}
+</div>
+
+
+<div class="grid-container has-slider is-dark edge-kubernetes">
+    {{ range .Site.Data.edge.innovate.kubernetes }}
+        <div class="has-slider-bg" style="background-color: {{ .bg }};">
+            <div class="rowfull edge-section">
+                <div class="grid-container">
+                    <div class="row max-sized">
+                        <div class="texts-container">
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <img src="{{ .logo }}" alt="{{ .name }}" />
+                                </div>
+                                <div class="col-md-8 col-12 detail-container">
+                                    <h2 class="title-label">{{ .title }}</h2>
+                                    <p class="description-label">
+                                        {{ .content }}
+                                    </p>
+                                    <a class="btn-white" href={{ .buttonLink }}>{{ .buttonText }}</a>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-12">
+                                    <div class="sponsors">
+                                        <p>{{ .sponsoreText }}</p>
+                                        <ul>
+                                            {{ range .sponsor }}
+                                                <li><a href="{{ .link }}"><img src="{{ .logo }}" alt="{{ .name }}" /></a></li>
+                                            {{ end }}
+                                        </ul>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -189,11 +200,11 @@
                                 <figure>
                                     <img src="{{ .logo }}" alt="{{ .title }}" />
                                 </figure>
-                                <h3 class="text-center">{{ .title }}</h3>
+                                <h3>{{ .title }}</h3>
                                 <div class="desc">
                                     {{ .content }}
                                 </div>
-                                <a href="{{ .link }}">More on {{ .title }}</a>
+                                <a class="btn-green" href="{{ .link }}">More on {{ .title }}</a>
                             </article>
                         </div>
                     {{ end }}

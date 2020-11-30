@@ -41,11 +41,11 @@
                                 <figure>
                                     <img src="{{ .logo }}" alt="{{ .title }}" />
                                 </figure>
-                                <h3 class="text-center">{{ .title }}</h3>
+                                <h3>{{ .title }}</h3>
                                 <div class="desc">
                                     {{ .content }}
                                 </div>
-                                <a href="{{ .link }}">More on {{ .title }}</a>
+                                <a class="btn-green" href="{{ .link }}">More on {{ .title }}</a>
                             </article>
                         </div>
                     {{ end }}

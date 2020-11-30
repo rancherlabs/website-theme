@@ -37,31 +37,38 @@
               <div class="col-6">
                 <div class="post-content">
                   <h3>{{ .title }}</h3>
-                  <p class="post-date">{{ .date }}</p>
-                  {{ range .author }}
-                    <div class="author-info">
-                      <div class="author-image">
-                        <img src="/img/author-image/{{ .image }}" alt="{{ .name }}">
-                      </div>
-                      <div class="author-info-content">
-                        <h5 class="author-name">{{ .name }}</h5>
-                        <p class="author-title">{{ .title }}</p>
-                        <p class="author-company">{{ .company }}</p>
-                        <div class="author-socials">
-                          {{ with .linkedin }}
-                            <a class="edge-video-social" href="{{.}}" target="_blank">
-                              <img class="service-icon" src="/imgs/icon-linkedin.svg">
-                            </a>
-                          {{ end }}
-                          {{ with .twitter }}
-                            <a class="edge-video-social" href="{{.}}" target="_blank">
-                              <img class="service-icon" src="/imgs/icon-twitter.svg">
-                            </a>
-                          {{ end }}
-                        </div>
-                      </div>
-                    </div>
-                  {{ end }}
+                    <p class="post-date">{{ dateFormat "January 2, 2006" .date }}</p>
+                    <ul class="author-info-wrapper">
+                      {{ range .author }}
+                        <li>
+                          <h4>{{ .name }}</h4>
+                          <div class="author-info">
+                            <div class="author-popup-header">
+                              <div class="author-image">
+                                <img src="/img/author-image/{{ .image }}" alt="{{ .name }}">
+                              </div>
+                              <h5 class="author-name">{{ .name }}</h5>
+                            </div>
+                            <div class="author-info-content">
+                              <p class="author-title">{{ .title }}</p>
+                              <p class="author-company">{{ .company }}</p>
+                              <div class="author-socials">
+                                {{ with .linkedin }}
+                                  <a class="edge-video-social" href="{{.}}" target="_blank">
+                                    <img class="service-icon" src="/imgs/icon-linkedin.svg">
+                                  </a>
+                                {{ end }}
+                                {{ with .twitter }}
+                                  <a class="edge-video-social" href="{{.}}" target="_blank">
+                                    <img class="service-icon" src="/imgs/icon-twitter.svg">
+                                  </a>
+                                {{ end }}
+                              </div>
+                            </div>
+                          </div>
+                        </li>
+                      {{ end }}
+                    </ul>
                 </div>
               </div>
             </div>
@@ -102,10 +109,10 @@
 
                         <script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/v2.js"></script>
                         <script>
-                        hbspt.forms.create({
-                        portalId: "468859",
-                        formId: "58f5c3d4-6c19-4bcb-9473-ad17c6f23094"
-                        });
+                          hbspt.forms.create({
+                            portalId: "468859",
+                            formId: "58f5c3d4-6c19-4bcb-9473-ad17c6f23094"
+                          });
                         </script>
                     </div>
                   </div>
@@ -116,31 +123,38 @@
             </div>
             <div class="post-content">
               <h3>{{ .title }}</h3>
-              <p class="post-date">{{ .date }}</p>
-              {{ range .author }}
-                <div class="author-info">
-                  <div class="author-image">
-                    <img src="/img/author-image/{{ .image }}" alt="{{ .name }}">
-                  </div>
-                  <div class="author-info-content">
-                    <h5 class="author-name">{{ .name }}</h5>
-                    <p class="author-title">{{ .title }}</p>
-                    <p class="author-company">{{ .company }}</p>
-                    <div class="author-socials">
-                      {{ with .linkedin }}
-                        <a class="edge-video-social" href="{{.}}" target="_blank">
-                          <img class="service-icon" src="/imgs/icon-linkedin.svg">
-                        </a>
-                      {{ end }}
-                      {{ with .twitter }}
-                        <a class="edge-video-social" href="{{.}}" target="_blank">
-                          <img class="service-icon" src="/imgs/icon-twitter.svg">
-                        </a>
-                      {{ end }}
-                    </div>
-                  </div>
-                </div>
-              {{ end }}
+                <p class="post-date">{{ dateFormat "January 2, 2006" .date }}</p>
+                <ul class="author-info-wrapper">
+                  {{ range .author }}
+                    <li>
+                      <h4>{{ .name }}</h4>
+                      <div class="author-info">
+                        <div class="author-popup-header">
+                          <div class="author-image">
+                            <img src="/img/author-image/{{ .image }}" alt="{{ .name }}">
+                          </div>
+                          <h5 class="author-name">{{ .name }}</h5>
+                        </div>
+                        <div class="author-info-content">
+                          <p class="author-title">{{ .title }}</p>
+                          <p class="author-company">{{ .company }}</p>
+                          <div class="author-socials">
+                            {{ with .linkedin }}
+                              <a class="edge-video-social" href="{{.}}" target="_blank">
+                                <img class="service-icon" src="/imgs/icon-linkedin.svg">
+                              </a>
+                            {{ end }}
+                            {{ with .twitter }}
+                              <a class="edge-video-social" href="{{.}}" target="_blank">
+                                <img class="service-icon" src="/imgs/icon-twitter.svg">
+                              </a>
+                            {{ end }}
+                          </div>
+                        </div>
+                      </div>
+                    </li>
+                  {{ end }}
+                </ul>
             </div>
           </article>
         </div>
