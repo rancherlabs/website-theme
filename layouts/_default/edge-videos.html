@@ -16,7 +16,7 @@
         <div class="col-12">
           <article class="edge-video edge-play">
             <div class="row">
-              <div class="col-6">
+              <div class="col-md-6 col-12">
                 <figure>
                   <img class="img-fluid" src="{{ .image }}" alt="Video Cover Thumbnail">
                   <a class="small-play play-button modal-open" data-launch-id="edge-video-sticky-{{ $elem_index }}">
@@ -34,7 +34,7 @@
                     </div>
                 </div>
               </div>
-              <div class="col-6">
+              <div class="col-md-6 col-12">
                 <div class="post-content">
                   <h3>{{ .title }}</h3>
                     <p class="post-date">{{ dateFormat "January 2, 2006" .date }}</p>
@@ -103,15 +103,16 @@
                 <div class="content">
                   <div class="form-container">
                     <div class="form-wrap">
-                        <!--[if lte IE 8]>
+                        <!-- [if lte IE 8]>
                         <script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/v2-legacy.js"></script>
-                        <![endif]-->
+                        <![endif] -->
 
                         <script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/v2.js"></script>
                         <script>
                           hbspt.forms.create({
                             portalId: "468859",
-                            formId: "58f5c3d4-6c19-4bcb-9473-ad17c6f23094"
+                            formId: "58f5c3d4-6c19-4bcb-9473-ad17c6f23094",
+                            onFormSubmit: (x, y) => { console.log(x, y) }
                           });
                         </script>
                     </div>

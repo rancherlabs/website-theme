@@ -1,5 +1,8 @@
 .edge-section {
     padding: 60px 0;
+    @media (max-width: 992px) {
+        padding: 20px 0;
+    }
     .title-label.text-center {
         margin-bottom: 40px;
         font-weight: 600;
@@ -13,10 +16,29 @@
         justify-content: center;
         flex-wrap: wrap;
         align-items: center;
-        a {
+        @media (max-width: 992px) {
+            margin-top: 30px;
+        }
+        img {
             display: block;
             padding: 0 30px 30px;
             flex: 0;
+            @media (max-width: 992px) {
+                width: 300px;
+                height: 75px;
+                display: block;
+                object-fit: contain;
+            }
+        }
+    }
+    @media (max-width: 992px) {
+        .texts-container {
+            width: 100%;
+            padding-left: 15px;
+            padding-right: 15px;
+            img {
+                max-width: 100%;
+            }
         }
     }
 }
@@ -36,17 +58,25 @@
     border-radius: 40px;
     font-size: 15px;
     display: inline-block;
+    transition: all .2s ease;
     &:hover {
         color: $contrasted-light-default;
+        background-color: #2c3d4f;
+    }
+    @media (max-width: 768px) {
+        padding: 10px 20px;
     }
 }
 
 .has-slider {
     .has-slider-bg {
         padding: 90px 0;
-        background-size: 40% 100%;
+        background-size: auto 100%;
         background-position: top right;
         background-repeat: no-repeat;
+        @media (max-width: 992px) {
+            padding: 40px 0;
+        }
     }
 }
 .homepage-screen2 .browser-item-full {
@@ -56,10 +86,17 @@
 }
 .video-padding {
     padding: 90px 0;
+    @media (max-width: 992px) {
+        padding: 30px 0;
+    }
     h2 {
         margin-bottom: 40px;
         font-size: 40px;
         font-weight: 500;
+        @media (max-width: 992px) {
+            font-size: 30px;
+            margin-bottom: 20px;
+        }
     }
 }
 .is-dark {
@@ -73,6 +110,14 @@
         font-size: 1.4em;
         font-weight: 600;
         margin-bottom: 30px;
+        transition: all .2s ease;
+        &:hover {
+            background-color:#3575a8;
+            color: white;
+        }
+        @media (max-width: 992px) {
+            font-size: .8em;
+        }
     }
 }
 
@@ -80,21 +125,37 @@
     h2.title-label {
         font-size: 5.5em;
         font-weight: bold;
+        @media (max-width: 992px) {
+            font-size: 2.5em;
+        }
     }
     .sponsors {
         display: flex;
         align-items: center;
         margin-top: 60px;
         justify-content: flex-start;
+        @media (max-width: 768px) {
+            margin-top: 0;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
         p {
             margin-right: 15px;
             flex-shrink: 0;
             margin-bottom: 0;
             font-size: 30px;
+            @media (max-width: 768px) {
+                font-size: 16px;
+                margin-bottom: 20px;
+                margin-right: 0;
+            }
         }
         ul {
             width: 100%;
             display: flex;
+            @media (max-width: 768px) {
+                flex-direction: column;
+            }
             li {
                 flex: 0;
             }
@@ -102,12 +163,34 @@
                 display: block;
                 width: 100%;
                 margin: 0 15px;
+                @media (max-width: 768px) {
+                    margin: 0;
+                }
+            }
+            @media (max-width: 768px) {
+                li {
+                    margin-bottom: 20px;
+                    img {
+                        width: 150px;
+                        height: 75px;
+                        display: block;
+                        margin: 0 auto;
+                        object-fit: contain;
+                    }
+                }
             }
         }
     }
     .detail-container {
         background: #11202966 0% 0% no-repeat padding-box;
         padding: 30px;
+    }
+    @media (max-width: 768px) {
+        img {
+            width: 150px;
+            display: block;
+            margin: 0 auto;
+        }
     }
 }
 
@@ -122,10 +205,16 @@
         color: #3B5268;
         font-size: 50px;
         font-weight: 600;
+        @media (max-width: 992px) {
+            font-size: 2em;
+        }
     }
     .row {
         padding: 80px 0;
         margin: 0;
+        @media (max-width: 992px) {
+            padding: 20px 0;
+        }
         &::before {
             content: '';
             background-color: #F2F5F5;
@@ -148,6 +237,11 @@
         height: 100%;
         border-radius: 12px;
         box-shadow: 15px 25px 75px #00374F1A;
+        position: relative;
+        @media (max-width: 768px) {
+            margin-bottom: 30px;
+            height: auto;
+        }
         figure {
                 text-align: center;
         }
@@ -170,14 +264,18 @@
             font-weight: 300;
             line-height: 1.4;
             margin-bottom: 20px;
+            padding-bottom: 60px;
         }
         a {
-            display: inline-block;
+            display: block;
             margin-bottom: 20px;
-            width: 100%;
             text-align: center;
             font-weight: 500;
             padding: 15px;
+            position: absolute;
+            bottom: 0;
+            left: 30px;
+            width: calc(100% - 60px);
         }
     }
 }
@@ -247,11 +345,18 @@ header.edge-header {
         width: 170px;
         height: 170px;
         border: solid 8px #112029;
-        background: #FFFFFFE6 0% 0% no-repeat padding-box;
+        background-color: #ffffffd9;
         box-shadow: 0px 3px 6px #00000029;
+        transition: all .2s ease;
+        @media (max-width: 992px) {
+            width: 70px;
+            height: 70px;
+            top: 60%;
+        }
         .icon.linear-round {
             border: none;
-            transform: scale(1.5);
+            transform: scale(1.3);
+            transition: all .2s ease;
         }
         .icon {
             .svg-face {
@@ -261,6 +366,15 @@ header.edge-header {
         &.small-play {
             width: 75px;
             height: 75px;
+            @media (max-width: 768px) {
+                top: 50%;
+            }
+        }
+        &:hover {
+            background-color: #FFFFFF;
+            .icon.linear-round {
+                transform: scale(1.5);
+            }
         }
     }
 }
@@ -376,6 +490,10 @@ header.edge-header {
                     top: -8px;
                     left: 50%;
                     transform: translateX(-50%);
+                    @media (max-width: 768px) {
+                        left: 20px;
+                        transform: none;
+                    }
                 }
             }
         }
@@ -405,6 +523,10 @@ header.edge-header {
                     background-color: #F2F5F5;
                     border-radius: 8px;
                     transition: opacity .4s ease;
+                    @media (max-width: 992px) {
+                        left: 0;
+                        transform: none;
+                    }
                 }
                 &:last-child h4::after {
                     content: none;
@@ -421,7 +543,7 @@ header.edge-header {
 }
 
 .edge .tingle-modal {
-    background-color: rgba(44, 61, 79, .95);
+    background-color: rgba(44, 61, 79, .55);
 }
 
 .decoration.rancher-ground.edge-hero-bg {
@@ -444,15 +566,29 @@ header.edge-header {
     .hero-type1 .texts-container .texts-wrap .title-label {
         font-weight: bold;
         font-size: 64px;
+        @media (max-width: 992px) {
+            font-size: 30px;
+        }
     }
     .title-label.title-thin {
         font-weight: normal;
         color: #3B5268;
     }
+    .primary-menus-wrap .primary-menu-item.get-started a:hover {
+        background-color:#34485d;
+    }
 }
 
 .testimonials-slider {
+    .texts-container {
+        @media (max-width: 768px) {
+            margin: 0 15px;
+        }
+    }
     .detail-container {
+        background-color: rgba(232, 255, 242, .8);
+        padding: 30px;
+        border-radius: 2px;
         img {
             margin-bottom: 20px;
         }
@@ -460,5 +596,15 @@ header.edge-header {
     .title-label {
         text-transform: uppercase;
         margin-bottom: 30px;
+    }
+}
+
+@media (max-width: 992px) {
+    .grid-container.has-light-bg {
+        .image-container img {
+            max-width: 200px;
+            margin: 0 auto 30px;
+            display: block;
+        }
     }
 }

@@ -1870,3 +1870,31 @@
 .jquery-accordion-menu>ul>li>a>.ink {
   background: rgba(0, 0, 0, 0.1);
 }
+
+.edge-header {
+  .mobile-nav-header,
+  .mobile-header-container.active,
+  .nav-mobile-menus .mobile-menu {
+    background-color:#2c3d4f;
+    color: white;
+  }
+  .mobile-header-container.add-blinder {
+    background-color:#2c3d4f;
+    box-shadow: 0 0 20px rgba(0,0,0,0.075);
+  }
+  .mobile-nav-header .mobile-menu-opener span {
+    background-color: white;
+  }
+  .nav-mobile-menus .mobile-menu-item a {
+    text-transform: none;
+  }
+  .nav-mobile-menus .mobile-menu-item.get-started a {
+    padding: 10px 20px;
+    background-color: #3575a8;
+    color: white;
+    border: none;
+    line-height: normal;
+    border: solid 1px white;
+    font-size: 1em;
+  }
+}
