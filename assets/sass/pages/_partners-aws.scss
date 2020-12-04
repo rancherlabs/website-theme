@@ -1,23 +1,29 @@
+.align-center {
+  display: flex;
+  align-items: center;
+}
 .aws-rancher-hero {
   background-color: $c-blue;
   position: relative;
-  padding: 6rem 0;
+  padding: 6rem 0 2rem;
 
-  @media(min-width: 768px) {
+  @media (min-width: 768px) {
     margin-top: 135px;
   }
-.description-label {
+
+  .description-label {
     color: white;
     font-size: 50px;
-}
+  }
 
-.description-text {
+  .description-text {
     color: white;
     font-size: 20px;
     line-height: 1.5;
-}
-  .texts-container .texts-wrap .description-label{
-      color: #fff;
+  }
+
+  .texts-container .texts-wrap .description-label {
+    color: #fff;
   }
 
   img.cloud.floating-top {
@@ -29,171 +35,226 @@
   }
 
   img.cloud.floating-bottom {
-      height: 110px;
-      opacity: .4;
-      position: absolute;
-      bottom: -100px;
-      left: 0;
+    height: 110px;
+    opacity: 0.4;
+    position: absolute;
+    bottom: -100px;
+    left: 0;
+  }
+
+  .button {
+      position: relative;
+      z-index: 2;
+      margin-top: 1rem;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
   }
 
   .artwork {
-      position: relative;
-      width: 100%;
-
-      @media(max-width: 768px) {
-        margin-top: 3rem;
-        height: 200px;
-      }
+    @media (max-width: 768px) {
+      margin-top: 3rem;
+      height: 200px;
+    }
 
     .clouds-1 {
-        display: block;
-        position: absolute;
-        bottom: -68px;
-        right: 30%;
-        top: 0;
-        width: 105px;
+      display: block;
+      position: absolute;
+      top: 0;
+      right: 30%;
+      width: 105px;
     }
 
     .clouds-2 {
-        position: absolute;
-        bottom: -68px;
-        left: 0;
-        top: -30px;
-        width: 375px;
+      position: absolute;
+      left: 0;
+      top: 70px;
+      width: 375px;
     }
     .clouds-3 {
-        position: absolute;
-        bottom: -68px;
-        right: 100px;
-        top: 100px;
-        width: 100px;
+      position: absolute;
+      right: 50px;
+      top: 133px;
+      width: 130px;
+    }
+
+    @media (max-width: 576px) {
+        .clouds-2 {
+            top: 0;
+            z-index: 99;
+        }
+        .clouds-3 {
+            display: none;
+        }
     }
   }
-} 
+}
+
+.aws .type-link-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    img {
+      max-width: 250px;
+      display: block;
+      margin: 6rem auto;
+    }
+  }
 
 .aws-rancher-description {
-    background-color: $c-blue-light;
-    margin: 0 auto;
-    padding: 3rem;
+  background-color: $c-blue-light;
+  margin: 0 auto;
+  padding: 3rem;
 }
 
-.aws-rancher-features{
-    .row{
-          align-items: center;
-          padding: 3rem 0;
+.aws-rancher-features {
+  .row {
+    align-items: center;
+    padding: 3rem 0;
+  }
+  img {
+    border: 1px solid rgb(201, 201, 201);
+    border-radius: 4px;
+    padding: 0.5rem;
+  }
+}
+.aws-rancher-articles {
+  .no-gutter {
+    & > div {
+      padding-left: 0;
+      padding-right: 0;
+    }
+  }
+  img {
+    width: 100%;
+    height: auto;
+  }
+  .item-center {
+    display: flex;
+    align-items: center;
+  }
+  .content {
+    padding: 30px;
+  }
+  .type-study {
+    padding: 3rem 0;
+    background-color: #38475b;
+    color: #fff;
+
+    &::before {
+      content: "";
+      position: absolute;
+      height: 100%;
+      top: 0;
+      right: 98%;
+      background-color: #38475b;
+      width: calc(100vw / 2);
+    }
+
+    h2 {
+      color: #90c741;
+    }
+
+    .button.text span::before {
+      background-color: rgba(144, 199, 65, 0.1);
+    }
+
+    a,
+    a:hover {
+      color: #90c741;
+    }
+
+    &-image {
+      background: $c-blue-light;
+      padding: 3rem;
+      display: flex;
+
+      img {
+        width: 60%;
+        margin: auto;
       }
-    img{
-        border: 1px solid rgb(201, 201, 201);
-        border-radius: 4px;
-        padding: 0.5rem;
-    }
-}
-.aws-rancher-articles{
-    .no-gutter{
-        padding: 0 15px;
-        & > div {
-            padding-left: 0;
-            padding-right: 0;
-        }
-    }
-    img{
-        width: 100%;
-        height: auto;
-    }
-    .item-center{
-        display: flex;
-        align-items: center;
-    }
-    .content{
-        padding: 30px;
-    }
-    .type-study{
-        padding: 3rem 0;
-        background-color: #38475b;
-        color: #fff;
 
-        &::before {
-            content: '';
-            position: absolute;
-            height: 100%;
-            top: 0;
-            right: 98%;
-            background-color: #38475b;
-            width: calc(100vw/2);
-        }
-
-        h2{
-            color: #90c741; 
-        }
-
-        .button.text span::before{
-            background-color: rgba(144,199,65,0.1);
-        }
-
-        a, a:hover{
-            color: #90c741;       
-        }
-
-        &-image {
-            background: $c-blue-light;
-            padding: 3rem;
-            display: flex;
-
-            img {
-                width: 60%;
-                margin: auto;
-            }
-
-            &::after {
-                content: "";
-                position: absolute;
-                left: 98%;
-                top: 0;
-                background-color: $c-blue-light;
-                width: calc(100vw/2);
-                height: 100%;
-            }
-        }
-    }
-}
-
-.aws-rancher-features, .aws-rancher-articles{
-    padding-bottom: 4rem;    
-}
-
-.aws-rancher-hero.community-ebooks-screen1{
-    background-color: #3e98d3;
-    .position-relative {
-        position: relative;
-    }
-    h4{
-        line-height: normal;
-    }
-
-    .texts-wrap {
-        margin-bottom: 0;
-        h3{
-           font-weight: 600;
-        }
-    }
-    .content-wrapper {
-        margin-bottom: 60px;
-    }
-    .label{
-        font-size: 14px;
-    }
-    .artwork {
+      &::after {
+        content: "";
         position: absolute;
-        right: 0;
-        left: auto;
-        bottom: 0;
-        width: 200%;
-        transform: translateX(50%);
-            @media (max-width: 767px) {
-            position: relative;
-            padding-top: 0;
-            width: 100%;
-            transform: translateX(0%);
-        }
+        left: 98%;
+        top: 0;
+        background-color: $c-blue-light;
+        width: calc(100vw / 2);
+        height: 100%;
+      }
     }
+  }
+}
+
+.bg-light {
+    background-color: $c-blue-light;
+    position: relative;
+
+    &::before {
+        content: "";
+        position: absolute;
+        left: 98%;
+        top: 0;
+        background-color: $c-blue-light;
+        width: calc(100vw / 2);
+        height: 100%;
+    }
+
+    &::after {
+        content: "";
+        position: absolute;
+        right: 98%;
+        top: 0;
+        background-color: $c-blue-light;
+        width: calc(100vw / 2);
+        height: 100%; 
+    }
+}
+
+.aws-rancher-features,
+.aws-rancher-articles {
+  padding-bottom: 4rem;
+
+  &:last-of-type {
+      padding-bottom: 10rem;
+  }
+}
+
+.aws-rancher-hero.community-ebooks-screen1 {
+  background-color: #3e98d3;
+  .position-relative {
+    position: relative;
+  }
+  h4 {
+    line-height: normal;
+  }
+
+  .texts-wrap {
+    margin-bottom: 0;
+    h3 {
+      font-weight: 600;
+    }
+  }
+  .content-wrapper {
+    margin-bottom: 60px;
+  }
+  .label {
+    font-size: 14px;
+  }
+  .artwork {
+    position: absolute;
+    right: 0;
+    left: auto;
+    bottom: 0;
+    width: 200%;
+    transform: translateX(50%);
+    @media (max-width: 767px) {
+      position: relative;
+      padding-top: 0;
+      width: 100%;
+      transform: translateX(0%);
+    }
+  }
 }
