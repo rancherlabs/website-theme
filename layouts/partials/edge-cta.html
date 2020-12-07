@@ -1,0 +1,10 @@
+<!--cta Header-->
+{{ if and (.Page.Params.ctaHeader) }}
+{{ with index .Site.Data.cta .Page.Params.ctaHeader }}
+<div class="cta-banner-holder">
+  <div class="edge-cta-banner center-xs middle-xs">
+    <a href="{{ .link }}">{{ .header }}</a>
+  </div>
+</div>
+{{end}}
+{{end}}

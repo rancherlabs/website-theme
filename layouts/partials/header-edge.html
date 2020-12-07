@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html class="" lang="en-US" prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb#">
+{{ partial "head.html" . }}
+
+{{- $.Scratch.Set "topLevel" . -}}
+{{ range $page := $.Site.Sections }}
+  {{- if $.CurrentSection -}}
+    {{- if $page.IsAncestor $.CurrentSection -}}
+      {{- $.Scratch.Set "topLevel" . -}}
+    {{- end -}}
+  {{- end -}}
+{{- end -}}
+
+<body lang="en" class="{{ replaceRE "/.*" "" ($.Scratch.Get "topLevel").Dir }} {{ .Params.section }}">
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-57KS2MW"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+  <a name="top"></a>
+
+
+<div class="main"> <!--container ends in footer html-->
+    {{ if templates.Exists "partials/header_notification.html" }}
+        {{ partial "header_notification.html" . }}
+    {{ end }}
+    <header class="edge-header">
+        <nav>
+            <div class="mobile-header-container">
+                <div class="mobile-nav-header">
+                    <div class="logo">
+                        <a href="/"><img class="logo-image" src="/img/brand-guidelines/assets/logos/png/white/rancher-logo-horiz-white.png" alt="The Logo of Rancher: an Open Source Kubernetes Multi Cluster Management Platform"></a>
+                    </div>
+
+                    <div class="mobile-search"><a href="#" class="search-open" data-launch-id="open-search"><img class="icon" src="/imgs/icon-search-mobile.svg" alt="Gray Search Icon"></a></div>
+
+                    <div class="mobile-menu-opener">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </div>
+
+                <div class="nav-mobile-menus jquery-accordion-menu">
+                    <ul class="mobile-menus-wrap">
+                        <li class="mobile-menu-item"><a class="mobile-menu" href="/edge/">Innovate at the Edge</a></li>
+                        <li class="mobile-menu-item"><a class="mobile-menu" href="/edge/videos/">Videos</a></li>
+                        <li class="mobile-menu-item option-menu get-started"><a href="/edge/get-started/">Get started</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="header-container header-dark">
+                <div class="header-wrap">
+                    <div class="header-primary-menus">
+                        <div class="logo">
+                            <a href="/"><img class="logo-image" src="/img/brand-guidelines/assets/logos/png/white/rancher-logo-horiz-white.png" alt="The Logo of Rancher: an Open Source Kubernetes Multi Cluster Management Platform"></a>
+                        </div>
+
+                        <div class="primary-menus edge-menu">
+                            <ul class="primary-menus-wrap">
+                                <li class='primary-menu-item {{ if eq .Params.section "overview" }}active{{ end }}'>
+                                    <a class="primary-menu" href="/edge/"><span>Innovate at the Edge</span></a>
+                                </li>
+                                <li class='primary-menu-item {{ if eq .Params.section "overview" }}active{{ end }}'>
+                                    <a class="primary-menu" href="/edge/videos/"><span>Videos</span></a>
+                                </li>
+                                <li class="primary-menu-item menu-get_started get-started">
+                                    <a href="/edge/get-started/">Get started</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
