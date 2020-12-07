@@ -608,3 +608,27 @@ header.edge-header {
         }
     }
 }
+
+.tingle-modal {
+	.content {
+		.modal-iframe-container {
+            display: none;
+            &.always-display {
+                display: block;
+            }
+		}
+		.form-container {
+			display: block;
+		}
+	}
+}
+body.formSubmitted {
+	.content {
+		.modal-iframe-container {
+			display: block;
+		}
+		.form-container {
+			display: none;
+		}
+	}
+}
