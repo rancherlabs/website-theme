@@ -563,6 +563,9 @@ header.edge-header {
 .edge {
     font-family: Poppins;
     color: #707070;
+    .main {
+        overflow: hidden;
+    }
     .hero-type1 .texts-container .texts-wrap .title-label {
         font-weight: bold;
         font-size: 64px;
@@ -607,4 +610,28 @@ header.edge-header {
             display: block;
         }
     }
+}
+
+.tingle-modal {
+	.content {
+		.modal-iframe-container {
+            display: none;
+            &.always-display {
+                display: block;
+            }
+		}
+		.form-container {
+			display: block;
+		}
+	}
+}
+body.formSubmitted {
+	.content {
+		.modal-iframe-container {
+			display: block;
+		}
+		.form-container {
+			display: none;
+		}
+	}
 }
