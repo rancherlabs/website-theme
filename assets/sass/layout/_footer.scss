@@ -62,12 +62,15 @@
   }
 
   .legal-consent-container {
-    display: none;
+    // display: none;
+    position: absolute;
+    bottom: -10px;
   }
 
   .hs-form {
     position: relative;
     display: flex;
+    padding-bottom: 50px;
 
     .label {
       display: none;
