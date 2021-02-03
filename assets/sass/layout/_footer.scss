@@ -65,6 +65,15 @@
     // display: none;
     position: absolute;
     bottom: -10px;
+
+    a {
+      color: white;
+      opacity: 0.5;
+
+      &:hover {
+        opacity: 1;
+      }
+    }
   }
 
   .hs-form {
