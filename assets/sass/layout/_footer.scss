@@ -53,22 +53,42 @@
     margin-bottom: 50px;
   }
 }
+
 .footer-news-letter-form {
   position: relative;
 
-  @media (min-width: 576px) and (max-width: 767.98px) {
-    width: 50%;
+  .hs-button {
+    font-size: 0 !important;
+  }
 
-    margin-right: 0;
+  .legal-consent-container {
+    // display: none;
+    position: absolute;
+    bottom: -10px;
+
+    a {
+      color: white;
+      opacity: 0.5;
+
+      &:hover {
+        opacity: 1;
+      }
+    }
   }
 
   .hs-form {
     position: relative;
     display: flex;
+    padding-bottom: 50px;
 
     .label {
       display: none;
     }
+  }
+
+  @media (min-width: 576px) and (max-width: 767.98px) {
+    width: 50%;
+    margin-right: 0;
   }
 
   @media (max-width: 575.98px) {
@@ -213,7 +233,6 @@
 
       align-items: center;
     }
-
 
     li {
       position: relative;
