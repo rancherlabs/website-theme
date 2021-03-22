@@ -36,6 +36,12 @@
     {{ $appJs := slice $base $local  | resources.Concat "js/app.js" | minify }}
   <script charset="utf-8" type="text/javascript" src="{{ $appJs.Permalink}}?{{ $cache}}"></script>
 
+  <!-- OneTrust Cookies Consent Notice start for rancher.com -->
+  <script src="https://cdn.cookielaw.org/scripttemplates/otSDKStub.js"  type="text/javascript" charset="UTF-8" data-domain-script="0f98beb0-fc4c-417d-a42e-564e2cae42d2" ></script>
+  <script type="text/javascript">
+  function OptanonWrapper() { }
+  </script>
+  <!-- OneTrust Cookies Consent Notice end for rancher.com -->
 
   <!-- Google Tag Manager -->
   <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
