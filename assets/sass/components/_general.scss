@@ -297,6 +297,31 @@ button.button {
     }
   }
 
+  &.c-blue-ribbon {
+    color: #fff;
+
+    background-color: $c-blue-ribbon;
+
+    &:hover {
+      color: $c-blue-ribbon;
+
+      background-color: #fff;
+    }
+  }
+
+  &.c-pale-blue {
+    color: $c-blue-ribbon;
+
+    background-color: $c-pale-blue;
+
+    &:hover {
+      color: #fff;
+
+      background-color: $c-blue-ribbon;
+    }
+  }
+
+
   &.linear {
     color: $c-green;
 

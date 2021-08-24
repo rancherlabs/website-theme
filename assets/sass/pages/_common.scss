@@ -324,9 +324,14 @@
     background-color: $c-blue;
   }
 }
-
+.background-green-dark {
+  background: $c-dark-green;
+}
 .background-blue-dark {
   background-color: $c-blue-dark1;
+}
+.background-blue-lucky-point {
+  background-color: $c-blue-lucky-point;
 }
 .background-blue-dark-side {
   position: relative;
