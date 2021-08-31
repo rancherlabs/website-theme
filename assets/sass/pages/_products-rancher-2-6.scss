@@ -326,3 +326,16 @@
     font-size: 24px;
   }
 }
+
+.rancher-2_6-architectural-overview .row {
+  align-items: center;
+
+  
+  .img-col {
+    text-align: center;
+    img {
+      max-width: 300px;
+      border: 1px solid #bbb;
+    }
+  }
+}
