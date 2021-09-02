@@ -1765,19 +1765,55 @@
 
     .docs-container .texts-container {
         h1 {
+            margin-bottom: 40px;
+            font-size: 40px;
+            font-weight: 300;
             font-size: 25px;
+            margin-bottom: 20px;
+            font-weight: 400;
+            margin-top: 0;
             line-height: 1.4;
         }
-
+      
         h2 {
-            font-size: 23px;
             line-height: 1.4;
+            font-size: 32px;
+            font-weight: 300;
+            margin-bottom: 20px;
+            margin-top: 0;
         }
-
-        h3, h4 {
+      
+        h3 {
+            font-size: 25px;
+            font-size: 28px;
+            font-weight: 300;
+            margin-bottom: 20px;
+            margin-top: 0;
+        }
+      
+        h4 {
+            font-size: 20px;
+            font-size: 24px;
+            font-weight: 300;
             margin-bottom: 10px;
-
-            font-size: 22px;
+            margin-top: 0;
+        }
+      
+        h5 {
+            margin-bottom: 1em;
+            font-size: 20px;
+            font-size: 18px;
+            font-weight: 300;
+            font-weight: bold;
+            margin-bottom: 10px;
+            margin-top: 0;
+        }
+      
+        h6 {
+            font-size: 16px;
+            font-weight: 300;
+            margin-bottom: 10px;
+            margin-top: 0;
         }
 
         hr {
