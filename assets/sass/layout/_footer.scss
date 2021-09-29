@@ -12,15 +12,12 @@
   background-color: $c-blue-dark1;
 
   .label {
-    height: 30px;
-
+    height: 22px;
     margin-bottom: 0;
-
-    color: $c-green;
-    font-size: 12px;
+    color: #30ba78;
+    font-size: 14px;
     font-weight: 700;
-    letter-spacing: 0.5px;
-
+    letter-spacing: 1.17px;
     text-transform: uppercase;
   }
 
@@ -263,8 +260,8 @@
     }
 
     img {
-      width: 15px;
-      height: 15px;
+      width: 22px;
+      height: 22px;
 
       @media (max-width: 575.98px) {
         width: 46%;
@@ -292,13 +289,11 @@
     li {
       position: relative;
       display: block;
-
-      // height: 28px;
-
       padding-bottom: 12px;
-
-      color: rgba(#fff, 0.75);
-      font-size: 15px;
+      color: #fff;
+      font-size: 14px;
+      font-weight: 600;
+      font-family: "Poppins",sans-serif;
 
       &:last-child {
         height: auto;
@@ -307,9 +302,11 @@
   }
 
   a {
-    color: rgba(#fff, 0.75);
+    color: #fff;
     text-decoration: none;
     line-height: 1.2;
+    letter-spacing: 1.17px;
+
 
     &:hover {
       color: #fff;
@@ -328,7 +325,6 @@
 }
 
 .footer-copyright {
-  background-color: $c-blue-dark2;
 
   .text {
     color: rgba(#fff, 0.5);
