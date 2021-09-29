@@ -1151,25 +1151,49 @@
     .docs-wrap {}
 
     .texts-container {
-        h1, h5 {
-            margin-top: 5px;
-            padding-bottom: 0;
-
-            color: $c-blue-dark1;
-            font-family: 'Poppins';
+        h1 {
             font-size: 40px;
-            font-weight: 200;
+            margin-bottom: 20px;
+            font-weight: 400;
+            margin-top: 0;
+            line-height: 1.4;
+        }
+      
+        h2 {
+            line-height: 1.4;
+            font-size: 32px;
+            font-weight: 400;
+            margin-bottom: 20px;
+            margin-top: 0;
         }
 
-        h3,
-        h4 {
-            margin-bottom: 15px;
-            padding-top: 5px;
+        h3 {
+            font-size: 28px;
+            font-weight: 400;
+            margin-bottom: 20px;
+            margin-top: 0;
+        }
 
-            color: $c-blue-dark1;
-            font-family: 'Poppins';
-            font-size: 25px;
+        h4 {
+            font-size: 24px;
+            font-weight: 400;
+            margin-bottom: 10px;
+            margin-top: 0;
+        }
+
+        h5 {
+            margin-bottom: 1em;
+            font-size: 18px;
+            font-weight: 600;
+            margin-bottom: 10px;
+            margin-top: 0;
+        }
+
+        h6 {
+            font-size: 16px;
             font-weight: 300;
+            margin-bottom: 10px;
+            margin-top: 0;
         }
 
         h1, h2, h3, h4, h5 {
