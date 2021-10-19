@@ -637,9 +637,8 @@ button[disabled="disabled"] {
 
 // default get started container.
 .get-started-container {
-  margin-bottom: -1px;
-
-  line-height: 0;
+    margin-bottom: -2px;
+    line-height: 0;
 
   @media (max-width: 575.98px) {
     margin-bottom: -1px;
@@ -664,8 +663,7 @@ button[disabled="disabled"] {
   }
 
   .rancher-logo {
-    padding: 50px 0;
-
+    padding: 35.5px 0;
     text-align: center;
 
     @media (max-width: 575.98px) {
@@ -689,9 +687,9 @@ button[disabled="disabled"] {
 
     img {
       position: relative;
-
-      width: auto;
-      height: 50px;
+      width: 100%;
+      max-width: 157px;
+      height: 74px;
 
       @media (max-width: 575.98px) {
         width: 40%;
@@ -701,10 +699,9 @@ button[disabled="disabled"] {
   }
 
   .get-started-wrap {
-    padding: 50px 0;
+    padding: 47px 0;
     padding-right: 0;
     padding-left: 0;
-
     background-color: $c-blue-dark1;
 
     @media (max-width: 575.98px) {

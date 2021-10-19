@@ -28,7 +28,7 @@
             <div class="mobile-header-container">
                 <div class="mobile-nav-header">
                     <div class="logo">
-                        <a href="/"><img class="logo-image" src="/imgs/rancher-logo-horiz-color.png" alt="The Logo of Rancher: an Open Source Kubernetes Multi Cluster Management Platform"></a>
+                        <a href="/"><img class="logo-image" src="/imgs/rancher-logo-horiz-color.svg" alt="The Logo of Rancher: an Open Source Kubernetes Multi Cluster Management Platform"></a>
                     </div>
 
                     <div class="mobile-search"><a href="#" class="search-open" data-launch-id="open-search"><img class="icon" src="/imgs/icon-search-mobile.svg" alt="Gray Search Icon"></a></div>
@@ -132,7 +132,7 @@
                         </li>
 
                         <li class="mobile-menu-item option-menu"><a href="/docs/">Docs</a></li>
-                        <li class="mobile-menu-item option-menu"><a href="/support">Support</a></li>
+                        <!-- <li class="mobile-menu-item option-menu"><a href="/support">Support</a></li> -->
                         <li class="mobile-menu-item option-menu"><a href="/request-a-demo/">Request a demo</a></li>
                         <li class="mobile-menu-item option-menu"><a href="/contact/">Contact</a></li>
                         <li class="mobile-menu-item option-menu"><a href="/pricing/">Pricing</a></li>
@@ -148,7 +148,7 @@
                             <li><a href="/docs/">Docs</a></li>
                             <li><a href="/request-a-demo/">Request a demo</a></li>
                             <li><a href="/pricing/">Pricing</a></li>
-                            <li><a href="/support">Support</a></li>
+                            <!-- <li><a href="/support">Support</a></li> -->
                             <li><a href="/contact/">Contact</a></li>
                             <li class="search"><a href="#" class="search-open" data-launch-id="open-search"><img class="icon" src="/imgs/icon-search.svg"></a></li>
                         </ul>
@@ -156,20 +156,21 @@
 
                     <div class="header-primary-menus">
                         <div class="logo">
-                            <a href="/"><img class="logo-image" src="/imgs/rancher-logo-horiz-color.png" alt="Rancher Logo"></a>
+                            <a href="/"><img class="logo-image" src="/imgs/rancher-logo-horiz-color.svg" alt="Rancher Logo"></a>
                         </div>
 
+                        <!--    PRIMARY MENUS HERE --> 
                         <div class="primary-menus">
                             <ul class="primary-menus-wrap">
-                                <li class='primary-menu-item menu-why_rancher {{ if eq .Params.section "overview" }}active{{ end }}'>
-                                    <a class="primary-menu" href="/why-rancher/">Why RANCHER?</a>
-
+                                <li class="primary-menu-item menu-why_rancher ">
+                                    <a class="primary-menu" href="https://ranchercomstg.eks-prod.suse.com/why-rancher" rel="noopener">Why RANCHER?</a>
+                        
                                     <ul class="primary-menus-sub">
                                         <div class="grid-container">
                                             <div class="row">
                                                 <div class="col">
                                                     <li class="menus-container">
-                                                        <a href="/why-rancher/">
+                                                        <a href="https://ranchercomstg.eks-prod.suse.com/why-rancher" rel="noopener" class="">
                                                             <span>Why Rancher?</span>
                                                             <svg class="icon right" enable-background="new 0 0 34 34" viewBox="0 0 34 34" xmlns="http://www.w3.org/2000/svg">
                                                                 <g class="svg-linear" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10">
@@ -178,7 +179,7 @@
                                                                 </g>
                                                             </svg>
                                                         </a>
-                                                        <a href="/kubernetes/">
+                                                        <a href="https://ranchercomstg.eks-prod.suse.com/kubernetes" rel="noopener" class="">
                                                             <span>Why Kubernetes?</span>
                                                             <svg class="icon right" enable-background="new 0 0 34 34" viewBox="0 0 34 34" xmlns="http://www.w3.org/2000/svg">
                                                                 <g class="svg-linear" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10">
@@ -187,8 +188,8 @@
                                                                 </g>
                                                             </svg>
                                                         </a>
-                                                        <a href="/why-rancher/rancher-strengthens-kubernetes/">
-                                                            <span>How Rancher Strengthens Kubernetes</span>
+                                                        <a href="https://ranchercomstg.eks-prod.suse.com/why-rancher/rancher-strengthens-kubernetes" class="">
+                                                            <span>How We strengthen Kubernetes&ZeroWidthSpace;</span>
                                                             <svg class="icon right" enable-background="new 0 0 34 34" viewBox="0 0 34 34" xmlns="http://www.w3.org/2000/svg">
                                                                 <g class="svg-linear" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10">
                                                                     <path d="m19.5 12 5 5-5 5"></path>
@@ -196,8 +197,8 @@
                                                                 </g>
                                                             </svg>
                                                         </a>
-                                                        <a href="/why-rancher/rancher-difference/">
-                                                            <span>The Rancher Difference </span>
+                                                        <a href="https://ranchercomstg.eks-prod.suse.com/why-rancher/rancher-difference" class="">
+                                                            <span>Our Difference&ZeroWidthSpace; </span>
                                                             <svg class="icon right" enable-background="new 0 0 34 34" viewBox="0 0 34 34" xmlns="http://www.w3.org/2000/svg">
                                                                 <g class="svg-linear" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10">
                                                                     <path d="m19.5 12 5 5-5 5"></path>
@@ -211,17 +212,16 @@
                                         </div>
                                     </ul>
                                 </li>
-                                <li class='primary-menu-item menu-products {{ if eq .Params.section "products" }}active{{ end }}'>
-                                    <a class="primary-menu" href="/products">Products</a>
+                                <li class="primary-menu-item menu-products ">
+                                    <a class="primary-menu" href="https://ranchercomstg.eks-prod.suse.com/products" rel="noopener">Software</a>
                                     <ul class="primary-menus-sub">
                                         <div class="grid-container">
                                             <div class="row">
                                                 <div class="col-12 right">
-
                                                     <ul>
                                                         <li class="menus-container">
-                                                            <a href="/products">
-                                                                <span>Overview</span>
+                                                            <a href="https://ranchercomstg.eks-prod.suse.com/products" class="menu-sub-block-item ">
+                                                                <span>All Products</span>
                                                                 <svg class="icon right" enable-background="new 0 0 34 34" viewBox="0 0 34 34" xmlns="http://www.w3.org/2000/svg">
                                                                     <g class="svg-linear" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10">
                                                                         <path d="m19.5 12 5 5-5 5"></path>
@@ -229,7 +229,7 @@
                                                                     </g>
                                                                 </svg>
                                                             </a>
-                                                            <a href="/products/rancher/" class="menu-sub-block-item">
+                                                            <a href="https://ranchercomstg.eks-prod.suse.com/products/rancher" class="menu-sub-block-item ">
                                                                 <span>Rancher</span>
                                                                 <svg class="icon right" enable-background="new 0 0 34 34" viewBox="0 0 34 34" xmlns="http://www.w3.org/2000/svg">
                                                                     <g class="svg-linear" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10">
@@ -238,7 +238,7 @@
                                                                     </g>
                                                                 </svg>
                                                             </a>
-                                                            <a href="/products/hosted-rancher/" class="menu-sub-block-item">
+                                                            <a href="https://www.suse.com/products/suse-rancher-hosted/" target="_blank" class="menu-sub-block-item">
                                                                 <span>Hosted Rancher</span>
                                                                 <svg class="icon right" enable-background="new 0 0 34 34" viewBox="0 0 34 34" xmlns="http://www.w3.org/2000/svg">
                                                                     <g class="svg-linear" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10">
@@ -247,9 +247,8 @@
                                                                     </g>
                                                                 </svg>
                                                             </a>
-                                                            <a href="/products/rke/" class="menu-sub-block-item">
+                                                            <a href="https://ranchercomstg.eks-prod.suse.com/products/rke" class="menu-sub-block-item ">
                                                                 <span>RKE</span>
-
                                                                 <svg class="icon right" enable-background="new 0 0 34 34" viewBox="0 0 34 34" xmlns="http://www.w3.org/2000/svg">
                                                                     <g class="svg-linear" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10">
                                                                         <path d="m19.5 12 5 5-5 5"></path>
@@ -257,10 +256,8 @@
                                                                     </g>
                                                                 </svg>
                                                             </a>
-
-                                                            <a href="/products/longhorn/" class="menu-sub-block-item">
+                                                            <a href="https://ranchercomstg.eks-prod.suse.com/products/longhorn" class="menu-sub-block-item ">
                                                                 <span>Longhorn</span>
-
                                                                 <svg class="icon right" enable-background="new 0 0 34 34" viewBox="0 0 34 34" xmlns="http://www.w3.org/2000/svg">
                                                                     <g class="svg-linear" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10">
                                                                         <path d="m19.5 12 5 5-5 5"></path>
@@ -268,7 +265,7 @@
                                                                     </g>
                                                                 </svg>
                                                             </a>
-                                                            <a href="/products/k3s/" class="menu-sub-block-item">
+                                                            <a href="https://ranchercomstg.eks-prod.suse.com/products/k3s" class="menu-sub-block-item ">
                                                                 <span>K3s</span>
                                                                 <svg class="icon right" enable-background="new 0 0 34 34" viewBox="0 0 34 34" xmlns="http://www.w3.org/2000/svg">
                                                                     <g class="svg-linear" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10">
@@ -279,233 +276,143 @@
                                                             </a>
                                                         </li>
                                                     </ul>
-
-                                            <div class="primary-menu-blocks primary-menu-blocks-join">
-                                                <div class="menus-container menu-container-button">
-                                                    <a class="box" href="/request-a-demo/">
-                                                        <span>Request a demo</span>
-                                                    </a>
                                                 </div>
                                             </div>
                                         </div>
                                     </ul>
                                 </li>
-                                <li class='primary-menu-item menu-customers {{ if eq .Params.section "customers" }}active{{ end }}'>
-                                    <a class="primary-menu" href="/customers">Customers</a>
-
+                                <li class="primary-menu-item menu-products ">
+                                    <a class="primary-menu" href="https://ranchercomstg.eks-prod.suse.com/learn-the-basics">Learn</a>
                                     <ul class="primary-menus-sub">
                                         <div class="grid-container">
                                             <div class="row">
-                                                <div class="col left">
-                                                    <li class="feature-container single split-half">
-                                                        <div class="label">Featured</div>
-
-                                                        <div class="article-item">
-                                                            <div class="article-thumbmail">
-                                                                <img class="image" src="/img/header-customers-featured-thumbnail.jpg" alt="A Male Scientist in a White Lab Coat Looking Into a Microscope">
-                                                            </div>
-
-                                                            <div class="article-texts">
-                                                                <a href="/customers/continental/">
-                                                                    <h2 class="title-label">Continental</h2>
-                                                                    <p class="description-label">
-                                                                        Continental Innovates with Rancher and Kubernetes
-
-                                                                        <svg class="icon right" enable-background="new 0 0 34 34" viewBox="0 0 34 34" xmlns="http://www.w3.org/2000/svg">
-                                                                            <g class="svg-linear" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10">
-                                                                                <path d="m19.5 12 5 5-5 5"/>
-                                                                                <path d="m24.5 17h-15"/>
-                                                                            </g>
-                                                                        </svg>
-                                                                    </p>
-                                                                </a>
-                                                            </div>
-                                                        </div>
-                                                    </li>
-                                                </div>
-                                                <div class="col right">
-                                                    <li class="menus-container">
-                                                        <div class="label">More Customers</div>
-
-                                                        <a href="/customers/ubisoft/">
-                                                            <span>Ubisoft</span>
-                                                            <svg class="icon right" enable-background="new 0 0 34 34" viewBox="0 0 34 34" xmlns="http://www.w3.org/2000/svg">
-                                                                <g class="svg-linear" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10">
-                                                                    <path d="m19.5 12 5 5-5 5"/>
-                                                                    <path d="m24.5 17h-15"/>
-                                                                </g>
-                                                            </svg>
-                                                        </a>
-                                                        <a href="/customers/schneider-electric/">
-                                                            <span>Schneider Electric</span>
-                                                            <svg class="icon right" enable-background="new 0 0 34 34" viewBox="0 0 34 34" xmlns="http://www.w3.org/2000/svg">
-                                                                <g class="svg-linear" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10">
-                                                                    <path d="m19.5 12 5 5-5 5"/>
-                                                                    <path d="m24.5 17h-15"/>
-                                                                </g>
-                                                            </svg>
-                                                        </a>
-                                                        <a href="/customers/mpac/">
-                                                            <span>MPAC</span>
-                                                            <svg class="icon right" enable-background="new 0 0 34 34" viewBox="0 0 34 34" xmlns="http://www.w3.org/2000/svg">
-                                                                <g class="svg-linear" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10">
-                                                                    <path d="m19.5 12 5 5-5 5"/>
-                                                                    <path d="m24.5 17h-15"/>
-                                                                </g>
-                                                            </svg>
-                                                        </a>
-                                                        <a class="box" href="/customers/">
-                                                            <span>See All Customer Stories</span>
-                                                        </a>
-                                                    </li>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </ul>
-                                </li>
-                                <li class='primary-menu-item menu-community {{ if eq .Params.section "resources" }}active{{ end }}'>
-                                    <a class="primary-menu" href="/resources/">RESOURCES</a>
-
-                                    <ul class="primary-menus-sub">
-                                        <div class="grid-container">
-                                            <div class="primary-menu-blocks">
-                                                <div class="menu-sub-block">
+                                                <div class="col-12 right">
                                                     <ul>
-                                                        <li class="articles-container">
-                                                            <div class="label">Community</div>
-                                                            <a href="/community/" class="menu-sub-block-item">Community Overview</a>
-                                                            <a href="/quick-start/" class="menu-sub-block-item">Getting Started Guide</a>
-                                                            <a href="/learning-paths/" class="menu-sub-block-item">Learning Paths</a>
-                                                            <a href="/training/" class="menu-sub-block-item">Introductory Training</a>
-                                                            <a href="/tutorials/" class="menu-sub-block-item">Tutorials</a>
-                                                            <a href="/online-meetups/" class="menu-sub-block-item">Online Meetups</a>
-                                                            <a href="/rodeos/" class="menu-sub-block-item">Hands-on Workshops</a>
-                                                            <a href="/kubernetes-master-class/" class="menu-sub-block-item">Kubernetes Master Classes</a>
-                                                            <a href="https://academy.rancher.com/" class="menu-sub-block-item">Get Certified!</a>
-                                                            <!-- <a href="/ranchcasts/" class="menu-sub-block-item">RanchCasts</a> -->
-                                                        </li>
-                                                    </ul>
-                                                </div>
-                                                <div class="menu-sub-block">
-                                                    <ul>
-                                                        <li class="articles-container">
-                                                            <div class="label">Content Library</div>
-                                                            <a href="/docs" class="menu-sub-block-item">Docs</a>
-                                                            <a href="/resources/#analyst-reports" class="menu-sub-block-item">Analyst Reports</a>
-                                                            <a href="/resources/#whitepapers" class="menu-sub-block-item">
-                                                            White Papers</a>
-                                                            <a href="/resources/#ebooks" class="menu-sub-block-item">Ebooks</a>
-                                                            <a href="/resources/#videos" class="menu-sub-block-item">Videos</a>
-                                                            <a href="/resources/#podcasts" class="menu-sub-block-item">Podcasts</a>
-                                                            <a href="/blog/" class="menu-sub-block-item">Blog</a>
-                                                        </li>
-                                                    </ul>
-                                                </div>
-                                                <div class="menu-sub-block">
-                                                    <ul>
-                                                        <li class="articles-container">
-                                                            <div class="label">Projects</div>
-                                                            <a href="http://k3os.io" target="_blank" class="menu-sub-block-item">k3OS <svg class='icon-horizontal-center' style="width:24px;height:24px" viewBox="0 0 24 24">
-                                                                <path fill="currentColor" d="M14,3V5H17.59L7.76,14.83L9.17,16.24L19,6.41V10H21V3M19,19H5V5H12V3H5C3.89,3 3,3.9 3,5V19A2,2 0 0,0 5,21H19A2,2 0 0,0 21,19V12H19V19Z" /></a>
-                                                            <a href="https://rio.io" target="_blank" class="menu-sub-block-item">Rio <svg class='icon-horizontal-center' style="width:24px;height:24px" viewBox="0 0 24 24">
-                                                                    <path fill="currentColor" d="M14,3V5H17.59L7.76,14.83L9.17,16.24L19,6.41V10H21V3M19,19H5V5H12V3H5C3.89,3 3,3.9 3,5V19A2,2 0 0,0 5,21H19A2,2 0 0,0 21,19V12H19V19Z" /></a>
-                                                            <a href="http://submariner.io" target="_blank" class="menu-sub-block-item">Submariner <svg class='icon-horizontal-center' style="width:24px;height:24px" viewBox="0 0 24 24">
-                                                                <path fill="currentColor" d="M14,3V5H17.59L7.76,14.83L9.17,16.24L19,6.41V10H21V3M19,19H5V5H12V3H5C3.89,3 3,3.9 3,5V19A2,2 0 0,0 5,21H19A2,2 0 0,0 21,19V12H19V19Z" /></a>
-                                                            <a href="https://longhorn.io" target="_blank" class="menu-sub-block-item">Longhorn <svg class='icon-horizontal-center' style="width:24px;height:24px" viewBox="0 0 24 24">
-                                                                <path fill="currentColor" d="M14,3V5H17.59L7.76,14.83L9.17,16.24L19,6.41V10H21V3M19,19H5V5H12V3H5C3.89,3 3,3.9 3,5V19A2,2 0 0,0 5,21H19A2,2 0 0,0 21,19V12H19V19Z" /></a>
-                                                        </li>
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                            <div class="primary-menu-blocks primary-menu-blocks-join">
-                                                <div class="menu-sub-block">
-                                                    <ul>
-                                                        <li class="articles-container">
-                                                            <div class="label">Join the Community</div>
-                                                            <div class="menu-sub-items">
-                                                                <a href="https://forums.rancher.com/" class="menu-sub-block-item">Forums</a>
-                                                                <span class="menu-sub-block-item">|</span>
-                                                                <a href="http://slack.rancher.io/" class="menu-sub-block-item">Slack</a>
-                                                                <span class="menu-sub-block-item">|</span>
-                                                                <a href="https://github.com/rancher" class="menu-sub-block-item">Github</a>
-                                                            </div>
+                                                        <li class="menus-container">
+                                                            <a href="https://ranchercomstg.eks-prod.suse.com/learn-the-basics" class="menu-sub-block-item ">
+                                                                <span>Learn the Basics</span>
+                                                                <svg class="icon right" enable-background="new 0 0 34 34" viewBox="0 0 34 34" xmlns="http://www.w3.org/2000/svg">
+                                                                    <g class="svg-linear" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10">
+                                                                        <path d="m19.5 12 5 5-5 5"></path>
+                                                                        <path d="m24.5 17h-15"></path>
+                                                                    </g>
+                                                                </svg>
+                                                            </a>
+                                                            <a href="https://ranchercomstg.eks-prod.suse.com/grow-your-skills" class="menu-sub-block-item ">
+                                                                <span>Grow Your Skills</span>
+                                                                <svg class="icon right" enable-background="new 0 0 34 34" viewBox="0 0 34 34" xmlns="http://www.w3.org/2000/svg">
+                                                                    <g class="svg-linear" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10">
+                                                                        <path d="m19.5 12 5 5-5 5"></path>
+                                                                        <path d="m24.5 17h-15"></path>
+                                                                    </g>
+                                                                </svg>
+                                                            </a>
+                                                            <a href="https://training.suse.com/certification/sca-rancher-2-5/" class="menu-sub-block-item">
+                                                                <span>Get Certified</span>
+                                                                <svg class="icon right" enable-background="new 0 0 34 34" viewBox="0 0 34 34" xmlns="http://www.w3.org/2000/svg">
+                                                                    <g class="svg-linear" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10">
+                                                                        <path d="m19.5 12 5 5-5 5"></path>
+                                                                        <path d="m24.5 17h-15"></path>
+                                                                    </g>
+                                                                </svg>
+                                                            </a>
+                                                            <a href="https://rancher.com/docs/" class="menu-sub-block-item">
+                                                                <span>Access Documentation</span>
+                                                                <svg class="icon right" enable-background="new 0 0 34 34" viewBox="0 0 34 34" xmlns="http://www.w3.org/2000/svg">
+                                                                    <g class="svg-linear" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10">
+                                                                        <path d="m19.5 12 5 5-5 5"></path>
+                                                                        <path d="m24.5 17h-15"></path>
+                                                                    </g>
+                                                                </svg>
+                                                            </a>
+                                                            <a href="https://www.suse.com/c/rancherblog/" class="menu-sub-block-item">
+                                                                <span>Read the Blogs</span>
+                                                                <svg class="icon right" enable-background="new 0 0 34 34" viewBox="0 0 34 34" xmlns="http://www.w3.org/2000/svg">
+                                                                    <g class="svg-linear" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10">
+                                                                        <path d="m19.5 12 5 5-5 5"></path>
+                                                                        <path d="m24.5 17h-15"></path>
+                                                                    </g>
+                                                                </svg>
+                                                            </a>
+                                                            <a href="https://ranchercomstg.eks-prod.suse.com/content-library" class="menu-sub-block-item ">
+                                                                <span>Content Library</span>
+                                                                <svg class="icon right" enable-background="new 0 0 34 34" viewBox="0 0 34 34" xmlns="http://www.w3.org/2000/svg">
+                                                                    <g class="svg-linear" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10">
+                                                                        <path d="m19.5 12 5 5-5 5"></path>
+                                                                        <path d="m24.5 17h-15"></path>
+                                                                    </g>
+                                                                </svg>
+                                                            </a>
                                                         </li>
                                                     </ul>
                                                 </div>
                                             </div>
                                         </div>
                                     </ul>
+                        
                                 </li>
-                                <li class='primary-menu-item menu-company {{ if eq .Params.section "company" }}active{{ end }}'>
-                                    <a class="primary-menu" href="/about/">Company</a>
-
+                                <li class="primary-menu-item menu-company ">
+                                    <a class="primary-menu" href="https://ranchercomstg.eks-prod.suse.com/Community" rel="noopener">Community</a>
                                     <ul class="primary-menus-sub">
                                         <div class="grid-container">
                                             <div class="row">
-                                                <div class="col">
-                                                    <li class="menus-container">
-                                                        <a href="/about/">
-                                                            <span>About us</span>
-                                                            <svg class="icon right" enable-background="new 0 0 34 34" viewBox="0 0 34 34" xmlns="http://www.w3.org/2000/svg">
-                                                                <g class="svg-linear" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10">
-                                                                    <path d="m19.5 12 5 5-5 5"/>
-                                                                    <path d="m24.5 17h-15"/>
-                                                                </g>
-                                                            </svg>
-                                                        </a>
-                                                        <a href="/partners/">
-                                                            <span>Partners</span>
-                                                            <svg class="icon right" enable-background="new 0 0 34 34" viewBox="0 0 34 34" xmlns="http://www.w3.org/2000/svg">
-                                                                <g class="svg-linear" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10">
-                                                                    <path d="m19.5 12 5 5-5 5"/>
-                                                                    <path d="m24.5 17h-15"/>
-                                                                </g>
-                                                            </svg>
-                                                        </a>
-                                                        <a href="/press/">
-                                                            <span>Press</span>
-                                                            <svg class="icon right" enable-background="new 0 0 34 34" viewBox="0 0 34 34" xmlns="http://www.w3.org/2000/svg">
-                                                                <g class="svg-linear" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10">
-                                                                    <path d="m19.5 12 5 5-5 5"/>
-                                                                    <path d="m24.5 17h-15"/>
-                                                                </g>
-                                                            </svg>
-                                                        </a>
-                                                        <a href="/events/">
-                                                            <span>Events</span>
-                                                            <svg class="icon right" enable-background="new 0 0 34 34" viewBox="0 0 34 34" xmlns="http://www.w3.org/2000/svg">
-                                                                <g class="svg-linear" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10">
-                                                                    <path d="m19.5 12 5 5-5 5"/>
-                                                                    <path d="m24.5 17h-15"/>
-                                                                </g>
-                                                            </svg>
-                                                        </a>
-                                                        <a href="/careers/">
-                                                            <span>Careers</span>
-                                                            <svg class="icon right" enable-background="new 0 0 34 34" viewBox="0 0 34 34" xmlns="http://www.w3.org/2000/svg">
-                                                                <g class="svg-linear" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10">
-                                                                    <path d="m19.5 12 5 5-5 5"/>
-                                                                    <path d="m24.5 17h-15"/>
-                                                                </g>
-                                                            </svg>
-                                                        </a>
-                                                        <a href="/blog/">
-                                                            <span>Blog</span>
-                                                            <svg class="icon right" enable-background="new 0 0 34 34" viewBox="0 0 34 34" xmlns="http://www.w3.org/2000/svg">
-                                                                <g class="svg-linear" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10">
-                                                                    <path d="m19.5 12 5 5-5 5"/>
-                                                                    <path d="m24.5 17h-15"/>
-                                                                </g>
-                                                            </svg>
-                                                        </a>
-                                                    </li>
+                                                <div class="col-12 right">
+                                                    <ul>
+                                                        <li class="menus-container">
+                                                            <a href="https://ranchercomstg.eks-prod.suse.com/about" class="menu-sub-block-item ">
+                                                                <span>About Us</span>
+                                                                <svg class="icon right" enable-background="new 0 0 34 34" viewBox="0 0 34 34" xmlns="http://www.w3.org/2000/svg">
+                                                                    <g class="svg-linear" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10">
+                                                                        <path d="m19.5 12 5 5-5 5"></path>
+                                                                        <path d="m24.5 17h-15"></path>
+                                                                    </g>
+                                                                </svg>
+                                                            </a>
+                                                            <a href="https://www.suse.com/community" class="menu-sub-block-item">
+                                                                <span>Join the Community</span>
+                                                                <svg class="icon right" enable-background="new 0 0 34 34" viewBox="0 0 34 34" xmlns="http://www.w3.org/2000/svg">
+                                                                    <g class="svg-linear" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10">
+                                                                        <path d="m19.5 12 5 5-5 5"></path>
+                                                                        <path d="m24.5 17h-15"></path>
+                                                                    </g>
+                                                                </svg>
+                                                            </a>
+                                                            <a href="https://forums.rancher.com/" class="menu-sub-block-item">
+                                                                <span>Forums</span>
+                                                                <svg class="icon right" enable-background="new 0 0 34 34" viewBox="0 0 34 34" xmlns="http://www.w3.org/2000/svg">
+                                                                    <g class="svg-linear" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10">
+                                                                        <path d="m19.5 12 5 5-5 5"></path>
+                                                                        <path d="m24.5 17h-15"></path>
+                                                                    </g>
+                                                                </svg>
+                                                            </a>
+                                                            <a href="https://slack.rancher.io/" class="menu-sub-block-item">
+                                                                <span>Slack</span>
+                                                                <svg class="icon right" enable-background="new 0 0 34 34" viewBox="0 0 34 34" xmlns="http://www.w3.org/2000/svg">
+                                                                    <g class="svg-linear" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10">
+                                                                        <path d="m19.5 12 5 5-5 5"></path>
+                                                                        <path d="m24.5 17h-15"></path>
+                                                                    </g>
+                                                                </svg>
+                                                            </a>
+                                                            <a href="https://ranchercomstg.eks-prod.suse.com/events" class="menu-sub-block-item ">
+                                                                <span>Events &amp; Webinars</span>
+                                                                <svg class="icon right" enable-background="new 0 0 34 34" viewBox="0 0 34 34" xmlns="http://www.w3.org/2000/svg">
+                                                                    <g class="svg-linear" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10">
+                                                                        <path d="m19.5 12 5 5-5 5"></path>
+                                                                        <path d="m24.5 17h-15"></path>
+                                                                    </g>
+                                                                </svg>
+                                                            </a>
+                                                        </li>
+                                                    </ul>
                                                 </div>
                                             </div>
                                         </div>
                                     </ul>
                                 </li>
                                 <li class="primary-menu-item menu-get_started get-started">
-                                    <a href="/quick-start/">Get started</a>
+                                    <a href="https://ranchercomstg.eks-prod.suse.com/quick-start">Get started</a>
                                 </li>
                             </ul>
                         </div>
