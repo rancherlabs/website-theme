@@ -129,7 +129,7 @@
     font-family: 'Poppins';
     font-size: 15px;
     font-weight: 700;
-    letter-spacing: 1.5px;
+    letter-spacing: 0;
     text-decoration: none;
 
     text-transform: uppercase;
@@ -257,7 +257,7 @@
 
   top: 60px;
 
-  min-width: 350px;
+  min-width: 270px;
   height: auto;
   height: unset;
 
@@ -368,11 +368,11 @@
 
     a {
       position: relative;
-      color: $c-green;
-      font-size: 18px;
+      color: #000;
+        font-size: 16px;
+        line-height: 1;
       font-weight: 500;
       text-transform: initial;
-      line-height: 1.55;
       letter-spacing: -0.25px;
 
       &:before {
@@ -384,9 +384,8 @@
   .menus-container {
     height: 100%;
 
-    padding: 30px;
-
-    background-color: $c-blue-dark2;
+    background-color: #d9e8ed;
+      padding: 30px 15px;
 
     .label {
       margin: 0;
@@ -438,7 +437,8 @@
 
         .svg-linear {
           fill: none;
-          stroke: $c-green;
+          stroke: #30ba78;
+            color: #000;
           stroke-linecap: round;
           stroke-linejoin: round;
           stroke-miterlimit: 10;
@@ -448,7 +448,7 @@
       }
 
       &:hover {
-        color: #fff;
+        color: #000;
 
         // background-color: $c-green;
 
