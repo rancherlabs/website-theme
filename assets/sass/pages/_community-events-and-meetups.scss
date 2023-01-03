@@ -1,3 +1,105 @@
+body {
+  overflow-x: unset;
+  height: unset;
+}
+
+.community-events-quick-links {
+  position: sticky;
+  top: 116px;
+  z-index: 9;
+
+  background-color: $c-gray-base-light;
+
+  .contents-container {
+    padding-top: 130px;
+  }
+  .in-page-menus-container {
+    position: relative;
+    display: block;
+
+    margin-top: 40px;
+
+    .menus-wrap {
+      position: relative;
+      display: flex;
+    }
+
+    .menu-item {
+      position: relative;
+      display: inline-block;
+
+      flex: 1;
+
+      background-color: $c-gray-mid-light;
+      border-right: 1px solid $c-gray-light;
+
+      background-color: #0075a8;
+
+      &:last-child {
+        border-right: 0;
+      }
+
+      a {
+        position: relative;
+        display: block;
+
+        color: #fff;
+        font-family: "Poppins";
+        font-size: 12px;
+        font-weight: 800;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+        line-height: 50px;
+        text-align: center;
+      }
+
+      &:hover,
+      &.active {
+        background-color: $c-blue;
+
+        a {
+          color: #fff;
+        }
+      }
+    }
+  }
+
+  @media (max-width: 575.98px) {
+    padding-top: 25px;
+
+    .in-page-menus-container {
+      position: absolute;
+
+      margin-top: 50px;
+      padding-right: $mobile-side-space;
+      padding-left: $mobile-side-space;
+
+      .menus-wrap {
+        flex-wrap: wrap;
+      }
+      .menu-item {
+        flex: 0 0 50%;
+
+        border-bottom: 1px solid $c-gray-base-light;
+
+        &:last-child {
+          border-right: 1px solid $c-gray-light;
+        }
+      }
+    }
+  }
+  @media (min-width: 576px) and (max-width: 767.98px) {
+  }
+  @media (min-width: 768px) and (max-width: 991.98px) {
+  }
+  @media (min-width: 992px) and (max-width: 1199.98px) {
+    .lastest-container {
+      padding-right: $mobile-side-space;
+      padding-left: $mobile-side-space;
+    }
+  }
+}
+
 .community-events-and-meetups-screen1 {
   .set-ground {
     z-index: -1;
@@ -8,7 +110,7 @@
   }
   .contents-wrap {
     background-color: $c-blue;
-    background-image: url('/imgs/community/events-and-meetups/screen1-background.png');
+    background-image: url("/imgs/community/events-and-meetups/screen1-background.png");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -23,8 +125,8 @@
     .texts-wrap {
       z-index: 1;
 
-      margin-top: 130px;
-      margin-bottom: 130px;
+      margin-top: 30px;
+      margin-bottom: 30px;
 
       .title-label {
         margin-bottom: 20px;
@@ -64,7 +166,7 @@
           line-height: 1.5;
         }
         .description-label {
-          font-size: .95em;
+          font-size: 0.95em;
         }
       }
     }
@@ -214,10 +316,9 @@
       height: 180px;
       background-position: center;
       background-size: cover;
-      background-image: url('/imgs/Events_default.jpg');
+      background-image: url("/imgs/Events_default.jpg");
 
       margin-right: 30px;
-
 
       .thumbnail {
         position: relative;
@@ -277,8 +378,8 @@
 
       margin: 1.5em 0;
 
-      border: 0px none rgba(#fff, .25);
-      border-top: 1px solid rgba(#fff, .25);
+      border: 0px none rgba(#fff, 0.25);
+      border-top: 1px solid rgba(#fff, 0.25);
     }
 
     .description-label {
@@ -444,6 +545,52 @@
 
     .title-label {
       color: $c-blue-dark1;
+
+      &.title-sublabel {
+        color: $c-blue;
+        margin-bottom: 50px;
+      }
+    }
+  }
+
+  .user-container {
+    position: relative;
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    margin-top: 10px;
+
+    .thumbnail-container {
+      position: relative;
+      flex: 0 0 50px;
+      height: 50px;
+      width: 50px;
+      margin-right: 20px;
+      background-color: rgba($c-gray-mid-light, 0.5);
+      border-radius: 50%;
+    }
+
+    .thumbnail {
+      border-radius: 50%;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .information-container {
+      position: relative;
+      display: inline-block;
+      flex: 1;
+    }
+
+    .label {
+      margin-bottom: 0;
+      color: #fff;
+      line-height: 1.5;
+    }
+
+    .name-label {
+      color: $c-emerald;
     }
   }
 
@@ -451,6 +598,10 @@
     padding-right: 0;
     padding-bottom: 150px;
     padding-left: 0;
+
+    &.future-cards {
+      padding-bottom: 75px;
+    }
   }
 
   .cards-wrap {
@@ -458,6 +609,7 @@
   }
 
   .card-container {
+    height: 100%;
     margin-bottom: 30px;
     display: flex;
 
@@ -505,6 +657,15 @@
       margin-bottom: 10px;
     }
 
+    .thumbnail-image {
+      width: 100%;
+    }
+
+    .text-subtitle {
+      color: #78c9cf;
+      margin-bottom: 10px;
+    }
+
     .thumbnail-wrap {
       position: relative;
       display: inline-block;
@@ -523,7 +684,7 @@
         width: 100%;
         height: 1px;
 
-        background-color: rgba(#fff, .1);
+        background-color: rgba(#fff, 0.1);
       }
 
       .thumbnail {
@@ -541,7 +702,7 @@
       margin-bottom: 0;
 
       color: #fff;
-      font-family: 'Poppins';
+      font-family: "Poppins";
       font-size: 22px;
       font-weight: 400;
       line-height: 1.455;
@@ -554,8 +715,8 @@
 
       margin: 1.5em 0;
 
-      border: 0px none rgba(#fff, .25);
-      border-top: 1px solid rgba(#fff, .25);
+      border: 0px none rgba(#fff, 0.25);
+      border-top: 1px solid rgba(#fff, 0.25);
     }
 
     .date-label {
@@ -660,7 +821,6 @@
       padding-top: 90px;
     }
 
-
     .cards-wrap {
       padding-right: 30px;
       padding-left: 30px;
@@ -717,7 +877,7 @@
     }
 
     .description-label {
-      color: rgba($c-blue-dark1, .75);
+      color: rgba($c-blue-dark1, 0.75);
 
       &:last-child {
         margin-bottom: 0;
@@ -734,7 +894,7 @@
   }
 
   .list-container {
-    >.buttons-container {
+    > .buttons-container {
       margin-top: 80px;
       margin-bottom: 80px;
 
@@ -748,7 +908,7 @@
     margin-top: 40px;
     padding-top: 40px;
 
-    border-top: 1px solid rgba($c-blue-dark1, .25);
+    border-top: 1px solid rgba($c-blue-dark1, 0.25);
 
     &.hidden {
       display: none;
@@ -814,7 +974,7 @@
 
       .texts-container {
         padding-left: $mobile-side-space;
-        padding-bottom: 20px;;
+        padding-bottom: 20px;
 
         .title-label {
           margin-bottom: 15px;
@@ -929,7 +1089,7 @@
     }
 
     .description-label {
-      color: rgba($c-gray, .75);
+      color: rgba($c-gray, 0.75);
       font-weight: 300;
 
       &:last-child {
@@ -945,7 +1105,8 @@
       text-align: left;
     }
 
-    .list-wrap {}
+    .list-wrap {
+    }
 
     .list-item {
       margin-bottom: 40px;
@@ -956,7 +1117,7 @@
 
       .title-label {
         color: $c-blue-dark1;
-        font-family: 'Poppins';
+        font-family: "Poppins";
         font-size: 22px;
         font-weight: 300;
         line-height: 1.455;
@@ -985,7 +1146,6 @@
   }
 
   .contents-container.half.background-base-gray-side {
-
     &:before,
     &:after {
       height: 150px;
@@ -1027,7 +1187,7 @@
     }
   }
   @media (min-width: 576px) and (max-width: 767.98px) {
-    .texts-container  {
+    .texts-container {
       padding-top: 60px;
 
       .buttons-container {
@@ -1068,7 +1228,7 @@
     }
 
     .description-label {
-      color: rgba(#fff, .75);
+      color: rgba(#fff, 0.75);
 
       &:last-child {
         margin-bottom: 0;
@@ -1109,10 +1269,10 @@
     margin-right: 30px;
     outline: none;
 
-    @include transition(opacity .25s);
+    @include transition(opacity 0.25s);
 
     &[aria-hidden="true"] {
-      opacity: .5;
+      opacity: 0.5;
     }
 
     &[aria-hidden="false"] {
@@ -1200,8 +1360,8 @@
 
       margin: 1.5em 0;
 
-      border: 0px none rgba(#fff, .25);
-      border-top: 1px solid rgba(#fff, .25);
+      border: 0px none rgba(#fff, 0.25);
+      border-top: 1px solid rgba(#fff, 0.25);
     }
 
     .description-label {
@@ -1247,7 +1407,7 @@
 
     cursor: pointer;
 
-    @include transition(background-color .25s);
+    @include transition(background-color 0.25s);
 
     @media (max-width: 575.98px) {
       flex: 0 0 45px;
@@ -1277,7 +1437,7 @@
         stroke-linejoin: round;
         stroke-miterlimit: 10;
 
-        @include transition(stroke .25s);
+        @include transition(stroke 0.25s);
       }
     }
 
@@ -1555,7 +1715,6 @@
   }
 }
 
-
 .community-events-and-meetups-view {
   .set-ground {
     z-index: -1;
@@ -1608,7 +1767,7 @@
 
     text-align: center;
 
-    >div {
+    > div {
       margin-right: 50px;
       padding-top: 7px;
       padding-right: 50px;
@@ -1738,7 +1897,8 @@
 
       width: 100%;
 
-      .share-wrap {}
+      .share-wrap {
+      }
 
       ul {
         text-align: right;
@@ -1754,7 +1914,7 @@
         margin-right: 2px;
         padding: 8px;
 
-        background-color: rgba($c-blue-gray, .5);
+        background-color: rgba($c-blue-gray, 0.5);
         border-radius: 5px;
 
         &:last-child {
