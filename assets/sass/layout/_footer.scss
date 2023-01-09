@@ -13,30 +13,78 @@
 
   .label {
     height: 22px;
+
     margin-bottom: 0;
-    color: #30ba78;
+
+    color: $c-green;
     font-size: 14px;
     font-weight: 700;
     letter-spacing: 1.17px;
+
     text-transform: uppercase;
   }
 
   .informations {
-    padding: 100px 0;
+    position: relative;
+    padding: 75px 0 30px;
 
-    background-size: 42.5% auto;
-    background-image: url("/imgs/footer-background.svg");
+    background-size: 35% auto;
+    background-image: url('https://rancher.com/assets/img/page-banners/footer.png');
     background-repeat: no-repeat;
     background-position: left bottom;
 
-    @media (max-width: 575.98px) {
-      padding: 40px 0 160px;
-
-      background-size: 90% auto;
-      background-position: -140% bottom;
+   
+    &:after {
+      content: "";
+      position: absolute;
+      width: 100%;
+      max-width: 820px;
+      height: 100%;
+      max-height: 282px;
+      bottom: 9%;
+      right: 0;
+      opacity: 0.8;
+      background-image: url('https://rancher.com/assets/img/page-banners/illustrations-clouds.png');
+      background-size: contain;
+      background-position: right bottom;
+      background-repeat: no-repeat;
+      user-select: none;
+      z-index: -1;
     }
-    @media (min-width: 576px) and (max-width: 767.98px) {
-      padding: 50px 0;
+
+    @media (min-width: 1800px) {
+      background-size: 35% auto;
+    }
+
+    @media (max-width: 1440px) {
+      &:before {
+        top: 0;
+      }
+      &:before,
+      &:after {
+        background-size: 35%;
+      }
+    }
+
+    @media (max-width: 1200px) {
+      padding: 75px 0 200px;
+
+      background-size: 40% auto;
+      background-position: 0 bottom;
+
+      &:after {
+        bottom: 25%;
+      }
+    }
+    @media (max-width: 767.98px) {
+      padding: 50px 0 160px;
+    }
+    @media (max-width: 576px) {
+      padding: 40px 0 120px;
+
+      &:after {
+        bottom: 20%;
+      }
     }
   }
 }
@@ -49,10 +97,28 @@
 
     margin-bottom: 50px;
   }
+  .button.c-pine{
+    color: $c-white;
+    display: inline-block;
+  }
 }
 
 .footer-news-letter-form {
   position: relative;
+
+  .label {
+    height: unset;
+    margin-bottom: 21px;
+  }
+
+  .button {
+    @media (max-width: 575.98px) {
+      display: block;
+      text-align: center;
+      font-size: 13px;
+      height: unset;
+    }
+  }
 
   .hs-button {
     font-size: 0 !important;
@@ -73,10 +139,11 @@
     }
   }
 
-  .hs-form {
+  .hs-form,
+  .news-form-main {
     position: relative;
     display: flex;
-    padding-bottom: 50px;
+    padding-bottom: 30px;
 
     .label {
       display: none;
@@ -99,24 +166,54 @@
     width: 100% !important;
   }
 
-  .hs-input {
+  .hs-input,
+  #news-letter-email {
     position: relative;
     display: inline-block;
     border-radius: 0;
 
     flex: 0 0 auto;
 
-    width: 100%;
-    max-width: 260px;
-    height: 50px;
+    width: 85%;
+    // max-width: 260px;
+    height: 60px;
 
     padding: 0 20px;
 
-    font-size: 15px;
+    font-size: 16px;
+    line-height: 22px;
+    font-weight: 400;
 
     border: 0;
 
+    outline: none;
+
     box-sizing: border-box;
+    
+    &::placeholder {
+      color: #C0C2C4;
+      opacity: 1; /* Firefox */
+    }
+
+    &:-ms-input-placeholder {
+      /* Internet Explorer 10-11 */
+      color: #C0C2C4;
+    }
+
+    &::-ms-input-placeholder {
+      /* Microsoft Edge */
+      color: #C0C2C4;
+    }
+
+
+    @media (max-width:1200px){
+      width: 78%;
+    }
+
+    @media (max-width:991px){
+      height: 45px;
+      width: 80%;
+    }
 
     @media (max-width: 575.98px) {
       max-width: 100%;
@@ -126,14 +223,15 @@
     }
   }
 
-  .hs-button {
+  .hs-button,
+  .news-letter-btn {
     position: relative;
     display: inline-block;
 
     flex: 0 0 auto;
 
-    width: 50px;
-    height: 50px;
+    width: 60px;
+    height: 60px;
 
     margin-top: 0;
     padding: 0;
@@ -142,6 +240,11 @@
     border-radius: 0 !important;
 
     border: 0;
+
+    @media (max-width: 991px) {
+      width: 45px;
+      height: 45px;
+    }
 
     @media (max-width: 575.98px) {
       width: 46px;
@@ -164,21 +267,15 @@
     &:after {
       content: "";
       position: absolute;
-      top: 0;
-      left: 0;
+      top: 50%;
+      left: 50%;
       pointer-events: none;
-      background: url("/imgs/button-arrow.png") center no-repeat;
-
-      width: 36px;
-      height: 36px;
-
-      margin: 7px;
-
+      background: url('https://rancher.com/assets/img/icons/button-arrow.png') center no-repeat;
+      transform: translate(-50%, -50%);
+      width: 18px;
+      height: 11px;
+      margin: 0;
       @include transition(all 0.04s);
-
-      @media (max-width: 575.98px) {
-        transform: translate3d(-2px, -2px, 0);
-      }
 
       .svg-linear {
         fill: none;
@@ -206,28 +303,25 @@
 .footer-connect-sns {
   position: relative;
 
-  margin-top: 80px;
+  margin-top: 84px;
+  // margin-top: 30px;
 
   @media (max-width: 575.98px) {
-    margin-top: 50px;
+    margin-top: 45px;
   }
   @media (min-width: 576px) and (max-width: 767.98px) {
     flex: 1;
 
     margin-top: 0;
+    margin-left: 2%;
   }
 
   ul {
     position: relative;
-
-    @media (max-width: 575.98px) {
-      display: flex;
-    }
+    margin-top: 9px;
+    display: flex !important;
     @media (min-width: 576px) and (max-width: 767.98px) {
-      display: flex;
-
       height: 50px;
-
       align-items: center;
     }
 
@@ -236,7 +330,9 @@
       display: inline-block;
 
       margin-right: 17px;
-
+      @media (max-width: 1024px) {
+        margin-right: 14px;
+      }
       @media (max-width: 575.98px) {
         flex: 0 0 auto;
 
@@ -262,7 +358,10 @@
     img {
       width: 22px;
       height: 22px;
-
+      @media (max-width: 991px) {
+        width: 20px;
+        height: 20px;
+      }
       @media (max-width: 575.98px) {
         width: 46%;
         height: auto;
@@ -290,10 +389,10 @@
       position: relative;
       display: block;
       padding-bottom: 12px;
-      color: #fff;
+      color: $c-white;
       font-size: 14px;
       font-weight: 600;
-      font-family: "Poppins",sans-serif;
+      font-family: "Poppins", sans-serif;
 
       &:last-child {
         height: auto;
@@ -302,20 +401,24 @@
   }
 
   a {
-    color: #fff;
+    color: $c-white;
     text-decoration: none;
     line-height: 1.2;
     letter-spacing: 1.17px;
-
-
     &:hover {
-      color: #fff;
+      color: $c-green;
+    }
+    .icon{
+      background-image: url('https://rancher.com/assets/img/icons/external-link-green.svg');
+      display: inline-block;
+      width: 10px;
+      height: 10px;
+      background-repeat: no-repeat;
+      background-size: contain;
     }
   }
 
   @media (max-width: 575.98px) {
-    // display: none;
-
     margin-top: 40px;
 
     ul {
@@ -325,10 +428,14 @@
 }
 
 .footer-copyright {
+  @media (min-width: 1280px) {
+    padding-top: 130px;
+  }
 
   .text {
-    color: rgba(#fff, 0.5);
-    font-size: 12px;
+    color: #fff;
+    font-size: 11px;
+    line-height: 18px;
   }
 
   ul {
@@ -336,7 +443,9 @@
 
     width: 100%;
 
-    text-align: right;
+    text-align: left;
+
+    font-family: "Poppins", sans-serif;
 
     li {
       position: relative;
@@ -351,19 +460,24 @@
       &.text {
         margin-right: auto;
         margin-left: 0;
+        @media (max-width: 767.98px) {
+          width: 100%;
+          margin: 0 !important;
+        }
       }
     }
   }
 
   a {
-    color: rgba(#fff, 0.5);
-    font-size: 12px;
+    color: $c-white;
+    font-size: 11px;
     text-decoration: none;
-    letter-spacing: 0.25px;
-    line-height: 75px;
+    letter-spacing: 0;
+    line-height: 18px;
+    font-weight: 700;
 
     &:hover {
-      color: rgba(#fff, 1);
+      color: $c-green;
     }
   }
 
@@ -388,7 +502,7 @@
         }
       }
 
-      li:first-child {
+      li:nth-child(2) {
         margin-left: 0;
       }
     }
@@ -396,13 +510,9 @@
   @media (min-width: 576px) and (max-width: 767.98px) {
     .text {
       padding: 25px 10px 10px;
-
-      text-align: center;
     }
     .sub-menus ul {
       padding-bottom: 5px;
-
-      text-align: center;
 
       li {
         line-height: 1;
@@ -412,13 +522,21 @@
         }
       }
 
-      li:first-child {
+      li:nth-child(2) {
         margin-left: 0;
       }
     }
   }
-  @media (min-width: 768px) and (max-width: 991.98px) {
+  @media (max-width: 1200px) {
+    .sub-menus ul {
+      text-align: center; 
+    }
   }
-  @media (min-width: 992px) and (max-width: 1199.98px) {
+  @media (min-width: 1280px) {
+    .sub-menus ul {
+      li:nth-child(2) {
+        margin-left: 85px;
+      }
+    }
   }
 }
