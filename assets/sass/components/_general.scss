@@ -182,7 +182,58 @@ button {
 		cursor: pointer;
 	}
 }
-
+.button-2023{
+	border-radius: 35px;
+	font-weight: 500;
+	vertical-align: middle;
+	padding: .7em 2em;
+	font-family: "Poppins";
+	font-size: 16px;
+	box-sizing: border-box;
+	text-align: center;
+	display: inline-block;
+	line-height: 1;
+	letter-spacing: 1px;
+	text-decoration: none;
+	white-space: nowrap;
+	@media screen and (max-width:500px) {
+		white-space: normal;
+	}
+	border: 3px solid $c-blue;
+	&.c-blue{
+		
+		&--primary{
+			color: #fff;
+			background-color: $c-blue;
+			-webkit-transition: background-color 1s linear;  
+			-moz-transition: background-color 1s linear;  
+			-o-transition: background-color 1s linear;  
+			transition: background-color 1s linear;
+			&:hover{
+				background-color: transparent;
+				color: $c-blue;
+			}
+		}
+		&--secondary{
+			background-color: transparent;
+			color: $c-blue;
+			-webkit-transition: background-color 1s linear;  
+			-moz-transition: background-color 1s linear;  
+			-o-transition: background-color 1s linear;  
+			transition: background-color 1s linear;
+			&:hover{
+				background-color: $c-blue;
+				color: $c-white;
+			}
+		}
+		&--fixed{
+			width: 320px;
+		}
+		&--max{
+			max-width: 24ch;
+		}
+	}
+}
 .button,
 button.button {
 	// vertical-align: top;
@@ -199,7 +250,7 @@ button.button {
 	background-color: $c-blue-30;
 	box-sizing: border-box;
 	text-align: center;
-
+	display: inline-block;
 	&--secondary {
 		vertical-align: middle;
 		border: 2px solid $c-blue-30;
@@ -514,7 +565,7 @@ button.button {
 		background-color: transparent;
 		box-shadow: none;
 		border: 0;
-
+		line-height: 1.4;
 		@media (max-width: 575.98px) {
 			margin-bottom: 0;
 			height: 30px;
@@ -1236,9 +1287,10 @@ button[disabled="disabled"] {
 	.btn-list {
 		width: 80% !important;
 		padding: 0 0 0 20px;
-		margin-top: -80px;
+		margin-top: -20px;
 		ul {
 			width: 100% !important;
+			padding-bottom: 0;
 		}
 	}
 }
@@ -1276,5 +1328,81 @@ button[disabled="disabled"] {
 .buttons-container {
 	.button {
 		display: inline-block;
+	}
+}
+.l-flex {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+	&--align-unset {
+		align-items: unset;
+	}
+	&__item--display-flex {
+		display: inline-flex;
+	}
+}
+.u-margin-lr-negative {
+    margin-left: -15px;
+    margin-right: -15px;
+}
+.c1-card{
+	padding-bottom: 1.3rem;
+    position: relative;
+    width: 100%;
+
+	&__content {
+		padding: 2.6rem 2.6rem;
+		padding-bottom: 2rem;
+		height: 100%;
+		.links{
+			&.align-bottom-link {
+				bottom: 2.6rem;
+				left: 2.6rem;
+				position: absolute;
+				width: auto;
+			}
+		}
+	}
+	&__icon {
+		display: inline-block;
+		margin-bottom: 20px;
+	}
+}
+.u-bkg-light-grey{
+	background-color: $c-gray-border;
+}
+.u-padding-top-bottom-mid-40 {
+    padding-bottom: 40px;
+    padding-top: 40px;
+}
+.u-padding-bottom-mid{
+	padding-bottom: 40px;
+}
+.u-center-text {
+    text-align: center;
+}
+.u-max-width-900 {
+    max-width: 900px !important;
+}
+.u-padding-bottom-mid-50 {
+    padding-bottom: 50px;
+}
+.u-bkg-light-icon{
+	background-color: transparent;
+}
+.u-bkg-light-icon-grey{
+	background-color: $c-gray-mid-light1;
+}
+.u-bkg-banner-grey{
+	background-color: $c-grey-products-banner;
+}
+.u-bkg-shadow{
+	box-shadow: 0px 0px 128px rgba(0,0,0,.1);
+}
+@media (min-width: 767px) and (max-width: 991.98px){
+	.docs-screen2 .cards-container {
+		padding-top: 100px;
+		padding-bottom: 140px;
 	}
 }
