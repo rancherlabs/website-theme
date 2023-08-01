@@ -7,16 +7,16 @@
   z-index: 5;
   position: relative;
 
-  color: #fff;
+  color: $c-black;
 
-  background-color: $c-blue-dark1;
+  background-color: $c-grey-products-banner;
 
   .label {
     height: 22px;
 
     margin-bottom: 0;
 
-    color: $c-green;
+    color: $c-blue;
     font-size: 14px;
     font-weight: 700;
     letter-spacing: 1.17px;
@@ -26,14 +26,7 @@
 
   .informations {
     position: relative;
-    padding: 75px 0 30px;
-
-    background-size: 35% auto;
-    background-image: url('https://rancher.com/assets/img/page-banners/footer.png');
-    background-repeat: no-repeat;
-    background-position: left bottom;
-
-   
+    padding: 75px 0 30px;   
     &:after {
       content: "";
       position: absolute;
@@ -44,7 +37,7 @@
       bottom: 9%;
       right: 0;
       opacity: 0.8;
-      background-image: url('https://rancher.com/assets/img/page-banners/illustrations-clouds.png');
+      background-image: url('https://www.rancher.com/assets/img/banners/clouds.png');
       background-size: contain;
       background-position: right bottom;
       background-repeat: no-repeat;
@@ -75,6 +68,9 @@
       &:after {
         bottom: 25%;
       }
+    }
+    @media only screen and (max-width: 1200px) and (orientation: landscape){
+      padding: 75px 0 20px;
     }
     @media (max-width: 767.98px) {
       padding: 50px 0 160px;
@@ -130,7 +126,7 @@
     bottom: -10px;
 
     a {
-      color: white;
+      color: $c-black;
       opacity: 0.5;
 
       &:hover {
@@ -270,7 +266,7 @@
       top: 50%;
       left: 50%;
       pointer-events: none;
-      background: url('https://rancher.com/assets/img/icons/button-arrow.png') center no-repeat;
+      background: url('https://www.rancher.com/assets/img/icons/button-arrow.png') center no-repeat;
       transform: translate(-50%, -50%);
       width: 18px;
       height: 11px;
@@ -302,9 +298,7 @@
 
 .footer-connect-sns {
   position: relative;
-
-  margin-top: 84px;
-  // margin-top: 30px;
+  margin-bottom: 20px;
 
   @media (max-width: 575.98px) {
     margin-top: 45px;
@@ -358,6 +352,8 @@
     img {
       width: 22px;
       height: 22px;
+       filter: invert(1);
+      fill: #000;
       @media (max-width: 991px) {
         width: 20px;
         height: 20px;
@@ -372,6 +368,9 @@
         height: auto;
       }
     }
+  }
+  .label{
+    margin-bottom: 10px;
   }
 }
 
@@ -401,20 +400,21 @@
   }
 
   a {
-    color: $c-white;
+    color: $c-black;
     text-decoration: none;
     line-height: 1.2;
     letter-spacing: 1.17px;
     &:hover {
-      color: $c-green;
+      color: $c-blue;
     }
     .icon{
-      background-image: url('https://rancher.com/assets/img/icons/external-link-green.svg');
+      background-image: url('https://www.rancher.com/assets/img/icons/external-link-green.svg');
       display: inline-block;
       width: 10px;
       height: 10px;
       background-repeat: no-repeat;
       background-size: contain;
+      filter: brightness(0) saturate(100%) invert(28%) sepia(97%) saturate(2413%) hue-rotate(222deg) brightness(93%) contrast(119%);
     }
   }
 
@@ -433,7 +433,7 @@
   }
 
   .text {
-    color: #fff;
+    color: $c-black;
     font-size: 11px;
     line-height: 18px;
   }
@@ -469,7 +469,7 @@
   }
 
   a {
-    color: $c-white;
+    color: $c-black;
     font-size: 11px;
     text-decoration: none;
     letter-spacing: 0;
@@ -477,7 +477,7 @@
     font-weight: 700;
 
     &:hover {
-      color: $c-green;
+      color: $c-blue;
     }
   }
 
