@@ -23,309 +23,306 @@
     {{ if templates.Exists "partials/header_notification.html" }}
         {{ partial "header_notification.html" . }}
     {{ end }}
-      <!-- Header Start -->
-      <header>
-        <nav>
-          <div class="mobile-header-container">
-            <div class="mobile-nav-header">
-              <div class="logo">
-                <a href="https://www.rancher.com/">
-                  <img
-                    class="logo-image"
-                    src="https://www.rancher.com/assets/img/logos/rancher-suse-logo-horizontal-color.svg', env('APP_USE_SECURE'))}}"
-                    alt="The Logo of Rancher: an Open Source Kubernetes Multi Cluster Management Platform"
-                  />
-                </a>
-              </div>
-              <div class="mobile-search">
-              </div>
-              <div class="mobile-menu-opener">
-                <span></span>
-                <span></span>
-                <span></span>
-              </div>
+    <!-- Header Start -->
+    <header>
+      <nav>
+        <div class="mobile-header-container">
+          <div class="mobile-nav-header">
+            <div class="logo">
+              <a href="https://www.rancher.com/">
+                <img
+                  class="logo-image"
+                  src="https://www.rancher.com/assets/img/logos/rancher-suse-logo-horizontal-color.svg"
+                  alt="The Logo of Rancher: an Open Source Kubernetes Multi Cluster Management Platform"
+                />
+              </a>
             </div>
-            <div class="nav-mobile-menus jquery-accordion-menu">
-              <ul class="mobile-menus-wrap">
-                <li class="mobile-menu-item">
-                  <a class="mobile-menu" href="javascript:void(0)">Why Rancher?</a>
-                  <ul class="submenu submenus-wrap">
-                    <li class=""><a href="https://www.rancher.com/why-rancher" rel="noopener">Why Rancher?</a></li>
-                    <li class=""><a href="https://www.rancher.com/kubernetes" rel="noopener">Why Kubernetes?</a></li>
-                    <li class="">
-                      <a href="https://www.rancher.com/why-rancher/rancher-strengthens-kubernetes" rel="noopener">How We strengthen Kubernetes​</a>
-                    </li>
-                    <li class="">
-                      <a href="https://www.rancher.com/why-rancher/rancher-difference" rel="noopener">Our Difference​</a>
-                    </li>
-                  </ul>
-                </li>
-                <li class="mobile-menu-item">
-                  <a class="mobile-menu" href="javascript:void(0)">Products</a>
-                  <ul class="submenu submenus-wrap">
-                    <li><a href="https://www.rancher.com/products/rancher" rel="noopener">Rancher</a></li>
-                    <li><a href="https://www.rancher.com/products/k3s" rel="noopener">K3s</a></li>
-                    <li><a href="https://www.rancher.com/products/rke" rel="noopener">RKE</a></li>
-                    <li><a href="https://www.rancher.com/products/harvester"  rel="noopener">Harvester</a></li>
-                    <li><a href="https://www.rancher.com/products/longhorn"   rel="noopener">Longhorn</a></li>
+            <div class="mobile-search">
+            </div>
+            <div class="mobile-menu-opener">
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+          </div>
+          <div class="nav-mobile-menus jquery-accordion-menu">
+            <ul class="mobile-menus-wrap">
+              <li class="mobile-menu-item">
+                <a class="mobile-menu" href="javascript:void(0)">Why Rancher?</a>
+                <ul class="submenu submenus-wrap">
+                  <li class=""><a href="https://www.rancher.com/why-rancher" rel="noopener">Why Rancher?</a></li>
+<li class=""><a href="https://www.rancher.com/kubernetes" rel="noopener">Why Kubernetes?</a></li>
+                  <li class="">
+                    <a href="https://www.rancher.com//use-cases" rel="noopener">Use cases​</a>
+                  </li>
+                  <li class="">
+                    <a href="https://www.rancher.com/why-rancher/rancher-difference" rel="noopener">Our Difference​</a>
+                  </li>
                 </ul>
-                </li>
-                <li class="mobile-menu-item">
-                  <a class="mobile-menu" href="https://www.rancher.com/support">Support</a>
-                    <ul class="submenu submenus-wrap">
-                      <li class="menus-container">
-                        <a href="https://www.rancher.com/support" class="menu-sub-block-item">
-                          <span>Rancher Support</span>
-                        </a>
-                        <a href="https://www.scc.suse.com/" class="menu-sub-block-item">
-                          <span>Support Request</span>
-                        </a>
-                        <a href="https://www.rancher.com/docs/" class="menu-sub-block-item">
-                          <span>Documentation</span>
-                        </a>
-                      </li>
-                    </ul>
-                </li>
-                <li class="mobile-menu-item">
-                  <a class="mobile-menu" href="javascript:void(0)">Learn</a>
-
+              </li>
+              <li class="mobile-menu-item">
+                <a class="mobile-menu" href="javascript:void(0)">Our Platform</a>
+                <ul class="submenu submenus-wrap">
+                  <li><a href="https://www.rancher.com/rancher-platform" rel="noopener">Overview of Rancher Prime</a></li>
+                  <li><a href="https://www.rancher.com/categories/cloud-native-infrastructure" rel="noopener">Cloud-Native Infrastructure</a></li>
+                  <li><a href="https://www.rancher.com/categories/security-observability" rel="noopener">Security & Performance</a></li>
+                  <li><a href="https://www.rancher.com/categories/app-deployment" rel="noopener">Application Development</a></li>
+                  <li><a href="https://www.rancher.com/categories/distributions" rel="noopener">Kubernetes Distributions</a></li>
+              </ul>
+              </li>
+              <li class="mobile-menu-item">
+                <a class="mobile-menu" href="https://www.rancher.com/support">Support</a>
                   <ul class="submenu submenus-wrap">
-                    <li><a href="https://www.rancher.academy">Rancher Academy</a></li>
-                    <li><a href="https://www.training.suse.com/certification/sca-rancher-2-5/">Get Certified</a></li>
-                    <li><a href="https://www.rancher.com/docs/">Documentation</a></li>
-                   </ul>
-                </li>
-                <li class="mobile-menu-item">
-                  <a class="mobile-menu" href="https://www.rancher.com/community"  rel="noopener">Community</a>
-                  <ul class="submenu submenus-wrap">
-					<li><a href="https://www.slack.rancher.io/">Slack</a></li>
-					<li><a href="https://www.suse.com/c/rancherblog/">Blogs</a></li>
-                    <li><a href="https://www.rancher.com/community">Join the Community</a></li>
-                    <li><a href="https://www.github.com/rancher/rancher">GitHub</a></li>
-                    <li><a href="https://www.rancher.com/events">Events & Webinars</a></li>
-					<li><a href="https://www.rancher.com/projects">Community Projects</a></li>
+                    <li class="menus-container">
+                      <a href="https://www.rancher.com/support" class="menu-sub-block-item">
+                        <span>Rancher Support</span>
+                      </a>
+                      <a href="https://scc.suse.com/" class="menu-sub-block-item">
+                        <span>Support Request</span>
+                      </a>
+                      <a href="https://www.rancher.com/docs/" class="menu-sub-block-item">
+                        <span>Documentation</span>
+                      </a>
+                    </li>
                   </ul>
-                </li>
+              </li>
+              <li class="mobile-menu-item">
+                <a class="mobile-menu" href="javascript:void(0)">Learn</a>
 
-                <li class="mobile-menu-item option-menu">
-                  <a href="https://www.rancher.com/government" onclick="if (confirm('You\'re leaving Rancher and opening RGS?')){return true;}else{event.stopPropagation(); event.preventDefault();};" rel="noopener">Government</a>
-                </li>
-                <li class="mobile-menu-item option-menu">
-                  <a href="https://www.rancher.com/pricing" rel="noopener">Pricing</a>
-                </li>
-                <li class="mobile-menu-item option-menu get-started">
-                  <a href="https://www.rancher.com/quick-start" rel="noopener">Get started</a>
-                </li>
+                <ul class="submenu submenus-wrap">
+                  <li><a href="https://www.rancher.academy">Rancher Academy</a></li>
+                  <li><a href="https://www.suse.com/training/exam/sca-rancher-2-7/">Get Certified</a></li>
+                  <li><a href="https://www.rancher.com/docs/">Documentation</a></li>
+                 </ul>
+              </li>
+              <li class="mobile-menu-item">
+                <a class="mobile-menu" href="https://www.rancher.com/community"  rel="noopener">Community</a>
+                <ul class="submenu submenus-wrap">
+        <li><a href="https://slack.rancher.io/">Slack</a></li>
+        <li><a href="https://www.suse.com/c/rancherblog/">Blogs</a></li>
+                  <li><a href="https://www.rancher.com/community">Join the Community</a></li>
+                  <li><a href="https://www.github.com/rancher/rancher">GitHub</a></li>
+                  <li><a href="https://www.rancher.com/events">Events & Webinars</a></li>
+        <li><a href="https://www.rancher.com/projects">Community Projects</a></li>
+                </ul>
+              </li>
+
+              <li class="mobile-menu-item option-menu">
+                <a href="https://www.rancher.com/government" onclick="if (confirm('You\'re leaving Rancher and opening RGS?')){return true;}else{event.stopPropagation(); event.preventDefault();};" rel="noopener">Government</a>
+              </li>
+              <li class="mobile-menu-item option-menu">
+                <a href="https://www.rancher.com/pricing" rel="noopener">Pricing</a>
+              </li>
+              <li class="mobile-menu-item option-menu get-started">
+                <a href="https://www.rancher.com/quick-start" rel="noopener">Get started</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="header-container">
+          <div class="header-wrap">
+            <div class="header-option-menus">
+              <ul>
+                <li><a href="https://www.rancher.com/government" onclick="if (confirm('You\'re leaving Rancher and opening RGS?')){return true;}else{event.stopPropagation(); event.preventDefault();};" rel="noopener">Government</a></li>
+                <li><a href="https://www.rancher.com/pricing">Pricing</a></li>
               </ul>
             </div>
-          </div>
 
-          <div class="header-container">
-            <div class="header-wrap">
-              <div class="header-option-menus">
-                <ul>
-                  <li><a href="https://www.rancher.com/government" onclick="if (confirm('You\'re leaving Rancher and opening RGS?')){return true;}else{event.stopPropagation(); event.preventDefault();};" rel="noopener">Government</a></li>
-                  <li><a href="https://www.rancher.com/pricing">Pricing</a></li>
-                </ul>
+            <div class="header-primary-menus">
+              <div class="logo">
+                <a href="https://www.rancher.com/">
+                  <img class="logo-image" src="https://www.rancher.com/assets/img/logos/rancher-suse-logo-horizontal-color.svg" alt="Rancher Logo"/>
+                </a>
               </div>
 
-              <div class="header-primary-menus">
-                <div class="logo">
-                  <a href="https://www.rancher.com/">
-                    <img class="logo-image" src="https://www.rancher.com/assets/img/logos/rancher-suse-logo-horizontal-color.svg" alt="Rancher Logo"/>
-                  </a>
-                </div>
+              <div class="primary-menus">
+                <ul class="primary-menus-wrap">
+                  <li class="primary-menu-item menu-why_rancher">
+                    <a class="primary-menu" href="https://www.rancher.com/why-rancher" rel="noopener">Why Rancher?</a>
 
-                <div class="primary-menus">
-                  <ul class="primary-menus-wrap">
-                    <li class="primary-menu-item menu-why_rancher">
-                      <a class="primary-menu" href="https://www.rancher.com/why-rancher" rel="noopener">Why Rancher?</a>
-
-                      <ul class="primary-menus-sub">
-                        <div class="grid-container">
-                          <div class="row">
-                            <div class="col">
+                    <ul class="primary-menus-sub">
+                      <div class="grid-container">
+                        <div class="row">
+                          <div class="col">
+                            <li class="menus-container">
+                              <a href="https://www.rancher.com/why-rancher" rel="noopener">
+                <img class="icon" src="https://www.rancher.com/assets/img/icons/why-rancher-nav/nav-icon-1.svg" alt="Why Rancher">
+                <span>Why Rancher?</span>
+                <span class="info">How Rancher makes container adoption simple.</span>
+                              </a>
+                              <a href="https://www.rancher.com/use-cases">
+                <img class="icon" src="https://www.rancher.com/assets/img/icons/why-rancher-nav/nav-icon-3.svg" alt="How We strengthen Kubernetes">
+                <span class="two-rows-ttl">Use cases​</span>
+                <span class="info">How we are different than our competitors.</span>
+                              </a>
+                              <a href="https://www.rancher.com/why-rancher/rancher-difference">
+                <img class="icon" src="https://www.rancher.com/assets/img/icons/why-rancher-nav/nav-icon-4.svg" alt="Our Difference​ ">
+                <span>Our Difference​ </span>
+                <span class="info">Learn about our support offerings for Rancher.</span>
+                              </a>
+                            </li>
+                          </div>
+                        </div>
+                      </div>
+                    </ul>
+                  </li>
+                  <li class="primary-menu-item menu-products">
+                    <a class="primary-menu" href="https://www.rancher.com/products" rel="noopener">Our Platform</a>
+                    <ul class="primary-menus-sub">
+                      <div class="grid-container">
+                        <div class="row">
+                          <div class="col-12 right">
+                            <ul>
+                              <li class="menu-products-title"><a href="https://www.rancher.com/products/rancher-platform"><img class="icon" src="https://www.rancher.com/assets/img/icons/rancher-prime.svg" alt="Overview of Rancher Prime"><span>Overview of Rancher Prime</span></a></li>
                               <li class="menus-container">
-                                <a href="https://www.rancher.com/why-rancher" rel="noopener">
-									<img class="icon" src="https://www.rancher.com/assets/img/icons/why-rancher-nav/nav-icon-1.svg" alt="Why Rancher">
-									<span>Why Rancher?</span>
-								  <span class="info">How Rancher makes container adoption simple.</span>
-                                </a>
-                                <a href="https://www.rancher.com/kubernetes" rel="noopener">
-									<img class="icon" src="https://www.rancher.com/assets/img/icons/why-rancher-nav/nav-icon-2.svg" alt="Why Kubernetes">
-									<span>Why Kubernetes?</span>
-								  <span class="info">Discover the benefits of Kubernetes.</span>
-                                </a>
-                                <a href="https://www.rancher.com/why-rancher/rancher-strengthens-kubernetes">
-									<img class="icon" src="https://www.rancher.com/assets/img/icons/why-rancher-nav/nav-icon-3.svg" alt="How We strengthen Kubernetes">
-									<span class="two-rows-ttl">How We strengthen Kubernetes​</span>
-								  <span class="info">How we are different than our competitors.</span>
-                                </a>
-                                <a href="https://www.rancher.com/why-rancher/rancher-difference">
-									<img class="icon" src="https://www.rancher.com/assets/img/icons/why-rancher-nav/nav-icon-4.svg" alt="Our Difference​ ">
-									<span>Our Difference​ </span>
-								  <span class="info">Learn about our support offerings for Rancher.</span>
-                                </a>
-                              </li>
-                            </div>
-                          </div>
-                        </div>
-                      </ul>
-                    </li>
-                    <li class="primary-menu-item menu-products">
-                      <a class="primary-menu" href="https://www.rancher.com/products" rel="noopener">Products</a>
-                      <ul class="primary-menus-sub">
-                        <div class="grid-container">
-                          <div class="row">
-                            <div class="col-12 right">
-                              <ul>
-                                <li class="menus-container">
-                                  <a href="https://www.rancher.com/products/rancher" class="menu-sub-block-item">
-										<img class="icon" src="https://www.rancher.com/assets/img/logos/rancher-logo-horiz-color.svg" alt="Rancher Cow Logo in color ">
-										<span class="info">The world's most popular Kubernetes Management platform.</span>
-									</a>
-								  <a href="https://www.rancher.com/products/k3s" class="menu-sub-block-item">
-									<img class="icon" src="https://www.rancher.com/assets/img/icons/products22/k3s/logo-horizontal-k3s.svg" alt="k3s ">
-									<span class="info">Lightweight production-grade Kubernetes built for the edge.</span>
+                                <div>
+                                  <a href="https://www.rancher.com/categories/cloud-native-infrastructure">
+                                    <img class="icon" src="https://www.rancher.com/assets/img/icons/why-rancher-nav/infra.svg" alt="Rancher capabilites logo">
+                                    <span>Cloud-Native Infrastructure</span>
+                                    <span class="info">Manage your entire cloud-native stack with Rancher Prime, covering OS, storage, VMs, containers, and more — on one platform.</span>
                                   </a>
-								  <a href="https://www.rancher.com/products/rke" class="menu-sub-block-item">
-									<img class="icon" src="https://www.rancher.com/assets/img/icons/products22/rke/logo-horizontal-rke.svg" alt="rke">
-                                    <span class="info">Rancher Kubernetes Engine built for hybrid environments.</span>
+                                  <a href="https://www.rancher.com/categories/security-observability">
+                                    <img class="icon" src="https://www.rancher.com/assets/img/icons/why-rancher-nav/security.svg" alt="Rancher capabilites logo">
+                                    <span>Security & Performance</span>
+                                    <span class="info">Secure your Kubernetes with Rancher Prime with zero-trust full lifecycle container management, advanced policy management and insights.</span>
                                   </a>
-                                  <a href="https://www.rancher.com/products/harvester" class="menu-sub-block-item">
-									<img class="icon" src="https://www.rancher.com/assets/img/icons/products22/Harvester/logo-horizontal-harvester.svg" alt="Harvester">
-									<span class="info">A Kubernetes-native Hyperconverged infrastructure.</span>
+                                  <a href="https://www.rancher.com/categories/app-deployment">
+                                    <img class="icon" src="https://www.rancher.com/assets/img/icons/why-rancher-nav/application.svg" alt="Rancher capabilites logo">
+                                    <span>Application Development</span>
+                                    <span class="info">Improve developer productivity with Rancher Prime. Optimize workflows for better reliability across container-based applications.</span>
                                   </a>
-                                  <a href="https://www.rancher.com/products/longhorn" class="menu-sub-block-item">
-									<img class="icon longhorn" src="https://www.rancher.com/assets/img/icons/products22/longhorn/logo-horizontal-longhorn.svg" alt="Longhorn">
-									<span class="info">Cloud-native distributed storage platform for Kubernetes.</span>
+                                  <a href="https://www.rancher.com/categories/distributions">
+                                    <img class="icon" src="https://www.rancher.com/assets/img/icons/why-rancher-nav/kubernetes.svg" alt="Rancher capabilites logo">
+                                    <span>Kubernetes Distributions</span>
+                                    <span class="info">Establish your Kubernetes environment on Rancher’s certified and secure distributions, ideal for sensitive and edge workloads.</span>
                                   </a>
-
-                                </li>
-                              </ul>
-                            </div>
-                          </div>
-                        </div>
-                      </ul>
-                    </li>
-                    <li class="primary-menu-item menu-support">
-                      <a class="primary-menu" href="https://www.rancher.com/support">Support</a>
-                        <ul class="primary-menus-sub">
-                          <div class="grid-container">
-                            <div class="row">
-                              <div class="col-12 right">
-                                <ul>
-                                  <li class="menus-container">
-                                    <a href="https://www.rancher.com/support" class="menu-sub-block-item">
-                                      <img class="icon" src="https://www.rancher.com/assets/img/icons/why-rancher-nav/support.svg" alt="Rancher Support icon">
-                                      <span>Rancher Support</span>
-                                      <span class="info">Learn more about Rancher Prime support and access free support tools.</span>
-                                    </a>
-                                    <a href="https://www.scc.suse.com/" class="menu-sub-block-item">
-                                      <img class="icon" src="https://www.rancher.com/assets/img/icons/why-rancher-nav/request.svg" alt="Support Request icon">
-                                      <span>Support Request</span>
-                                      <span class="info">Submit a support case in SUSE Customer Center. </span>
-                                    </a>
-                                    <a href="https://www.rancher.com/docs/" class="menu-sub-block-item">
-                                      <img class="icon" src="https://www.rancher.com/assets/img/icons/why-rancher-nav/nav-icon-6.svg" alt="rke">
-                                      <span>Documentation</span>
-                                      <span class="info">Technical documentation and quick start guides.</span>
-                                    </a>
-                                  </li>
-                                </ul>
-                              </div>
-                            </div>
-                          </div>
-                        </ul>
-                    </li>
-                    <li class="primary-menu-item menu-learn">
-                      <a class="primary-menu" href="https://www.rancher.com/learn-the-basics">Learn</a>
-                      <ul class="primary-menus-sub">
-                        <div class="grid-container">
-                          <div class="row">
-                            <div class="col-12 right">
-                              <ul>
-                                <li class="menus-container">
-                                  <a href="https://www.rancher.academy" class="menu-sub-block-item image">
-									<img class="icon" src="https://www.rancher.com/assets/img/rancher-academy-logo.png" alt="Slack" />
-									<span class="info">Foundational knowledge to get you started with Kubernetes.</span>
-                                  </a>
-                                    <a href="https://www.training.suse.com/certification/sca-rancher-2-5/" class="menu-sub-block-item">
-										<img class="icon" src="https://www.rancher.com/assets/img/icons/why-rancher-nav/nav-icon-9.svg" alt="Slack" />
-										<span>Get Certified</span>
-										<span class="info">Certified Administrator course for Rancher.</span>
-                                    </a>
-                                    <a href="https://www.rancher.com/docs/" class="menu-sub-block-item">
-										<img class="icon" src="https://www.rancher.com/assets/img/icons/why-rancher-nav/nav-icon-6.svg" alt="Slack" />
-										<span>Documentation</span>
-										<span class="info">Technical documentation and quick start guides.</span>
-                                    </a>
-                                </li>
-                              </ul>
-                            </div>
-                          </div>
-                        </div>
-                      </ul>
-
-                    </li>
-                    <li class="primary-menu-item menu-community">
-                      <a class="primary-menu" href="https://www.rancher.com/community" rel="noopener">Community</a>
-                        <ul class="primary-menus-sub">
-                            <div class="grid-container">
-                                <div class="row">
-                                    <div class="col-12 right">
-                                        <ul>
-                                            <li class="menus-container">
-                                             	<a href="https://www.slack.rancher.io/" class="menu-sub-block-item">
-													<img class="icon-slack" src="https://www.rancher.com/assets/img/icons/slack.svg" alt="Slack" />
-													<span>Slack</span>
-													<span class="info">Join the Rancher Slack Channel.</span>
-                                                </a>
-                                                <a href="https://www.suse.com/c/rancherblog" class="menu-sub-block-item">
-													<img class="icon" src="https://www.rancher.com/assets/img/icons/why-rancher-nav/nav-icon-8.svg" alt="Blogs" />
-													<span>Blogs</span>
-													<span class="info">Articles and industry knowledge from experts and guest authors.</span>
-                                                </a>
-                                               <a href="https://www.github.com/rancher/rancher" class="menu-sub-block-item">
-													<img class="icon" src="https://www.rancher.com/assets/img/icons/github.svg" alt="GitHub" />
-													<span>GitHub</span>
-													<span class="info">Join the Rancher GitHub.</span>
-                                                </a>
-                                                <a href="https://www.rancher.com/events" class="menu-sub-block-item">
-													<img class="icon" src="https://www.rancher.com/assets/img/icons/icon-calendar.svg" alt="Events & Webinars" />
-													<span>Events & Webinars</span>
-													<span class="info">Rancher events, online trainings and webinars.</span>
-                                                </a>
-                                            </li>
-                                            <li class="menu-highlight">
-                                              <img class="icon" src="https://www.rancher.com/assets/img/icons/communities.svg" alt="Events & Webinars" />
-                                              <p class="title-type"><a href="https://www.rancher.com/projects">Community Projects</a></p>
-                                              <span class="info">See more fully-certified CNCF projects from Rancher.</span>
-                                              <ul class="project-list">
-                                                <li><a href="https://www.k3s.io/">K3s</a>  </li>
-                                                <li><a href="https://www.longhorn.io/">Longhorn</a> </li>
-                                                <li><a href="https://www.kubewarden.io/">Kubewarden</a> </li>
-                                                <li><a href="https://www.rancherdesktop.io/">Rancher Desktop</a></li>
-                                                <li><a href="https://www.epinio.io/">Epinio</a></li>
-                                              </ul>
-                                            </li>
-                                        </ul>
-                                    </div>
                                 </div>
+
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                    </ul>
+                  </li>
+                  <li class="primary-menu-item menu-support">
+                    <a class="primary-menu" href="https://www.rancher.com/support">Support</a>
+                      <ul class="primary-menus-sub">
+                        <div class="grid-container">
+                          <div class="row">
+                            <div class="col-12 right">
+                              <ul>
+                                <li class="menus-container">
+                                  <a href="https://www.rancher.com/support" class="menu-sub-block-item">
+                                    <img class="icon" src="https://www.rancher.com/assets/img/icons/why-rancher-nav/support.svg" alt="Rancher Support icon">
+                                    <span>Rancher Support</span>
+                                    <span class="info">Learn more about Rancher Prime support and access free support tools.</span>
+                                  </a>
+                                  <a href="https://scc.suse.com/" class="menu-sub-block-item">
+                                    <img class="icon" src="https://www.rancher.com/assets/img/icons/why-rancher-nav/request.svg" alt="Support Request icon">
+                                    <span>Support Request</span>
+                                    <span class="info">Submit a support case in SUSE Customer Center. </span>
+                                  </a>
+                                  <a href="https://www.rancher.com/docs/" class="menu-sub-block-item">
+                                    <img class="icon" src="https://www.rancher.com/assets/img/icons/why-rancher-nav/nav-icon-6.svg" alt="rke">
+                                    <span>Documentation</span>
+                                    <span class="info">Technical documentation and quick start guides.</span>
+                                  </a>
+                                </li>
+                              </ul>
                             </div>
-                        </ul>
-                    </li>
-                    <li class="primary-menu-item menu-get_started get-started">
-                      <a href="https://www.rancher.com/quick-start" class="button-2023 c-blue--primary">Get started</a>
-                    </li>
-                  </ul>
-                </div>
+                          </div>
+                        </div>
+                      </ul>
+                  </li>
+                  <li class="primary-menu-item menu-learn">
+                    <a class="primary-menu" href="https://www.rancher.com/learn-the-basics">Learn</a>
+                    <ul class="primary-menus-sub">
+                      <div class="grid-container">
+                        <div class="row">
+                          <div class="col-12 right">
+                            <ul>
+                              <li class="menus-container">
+                                <a href="https://www.rancher.academy" class="menu-sub-block-item image">
+                <img class="icon" src="https://www.rancher.com/assets/img/rancher-academy-logo.png" alt="Slack" />
+                <span class="info">Foundational knowledge to get you started with Kubernetes.</span>
+                                </a>
+                                  <a href="https://www.suse.com/training/exam/sca-rancher-2-7/" class="menu-sub-block-item">
+                  <img class="icon" src="https://www.rancher.com/assets/img/icons/why-rancher-nav/nav-icon-9.svg" alt="Slack" />
+                  <span>Get Certified</span>
+                  <span class="info">Certified Administrator course for Rancher.</span>
+                                  </a>
+                                  <a href="https://www.rancher.com/docs/" class="menu-sub-block-item">
+                  <img class="icon" src="https://www.rancher.com/assets/img/icons/why-rancher-nav/nav-icon-6.svg" alt="Slack" />
+                  <span>Documentation</span>
+                  <span class="info">Technical documentation and quick start guides.</span>
+                                  </a>
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                    </ul>
+
+                  </li>
+                  <li class="primary-menu-item menu-community">
+                    <a class="primary-menu" href="https://www.rancher.com/community" rel="noopener">Community</a>
+                      <ul class="primary-menus-sub">
+                          <div class="grid-container">
+                              <div class="row">
+                                  <div class="col-12 right">
+                                      <ul>
+                                          <li class="menus-container">
+                                             <a href="https://slack.rancher.io/" class="menu-sub-block-item">
+                        <img class="icon-slack" src="https://www.rancher.com/assets/img/icons/slack.svg" alt="Slack" />
+                        <span>Slack</span>
+                        <span class="info">Join the Rancher Slack Channel.</span>
+                                              </a>
+                                              <a href="https://www.suse.com/c/rancherblog" class="menu-sub-block-item">
+                        <img class="icon" src="https://www.rancher.com/assets/img/icons/why-rancher-nav/nav-icon-8.svg" alt="Blogs" />
+                        <span>Blogs</span>
+                        <span class="info">Articles and industry knowledge from experts and guest authors.</span>
+                                              </a>
+                                             <a href="https://www.github.com/rancher/rancher" class="menu-sub-block-item">
+                        <img class="icon" src="https://www.rancher.com/assets/img/icons/github.svg" alt="GitHub" />
+                        <span>GitHub</span>
+                        <span class="info">Join the Rancher GitHub.</span>
+                                              </a>
+                                              <a href="https://www.rancher.com/events" class="menu-sub-block-item">
+                        <img class="icon" src="https://www.rancher.com/assets/img/icons/icon-calendar.svg" alt="Events & Webinars" />
+                        <span>Events & Webinars</span>
+                        <span class="info">Rancher events, online trainings and webinars.</span>
+                                              </a>
+                                          </li>
+                                          <li class="menu-highlight">
+                                            <img class="icon" src="https://www.rancher.com/assets/img/icons/communities.svg" alt="Events & Webinars" />
+                                            <p class="title-type"><a href="https://www.rancher.com/projects">Community Projects</a></p>
+                                            <span class="info">See more fully-certified CNCF projects from Rancher.</span>
+                                            <ul class="project-list">
+                                              <li><a href="https://k3s.io/">K3s</a>  </li>
+                                              <li><a href="https://longhorn.io/">Longhorn</a> </li>
+                                              <li><a href="https://www.kubewarden.io/">Kubewarden</a> </li>
+                                              <li><a href="https://rancherdesktop.io/">Rancher Desktop</a></li>
+                                            </ul>
+                                          </li>
+                                      </ul>
+                                  </div>
+                              </div>
+                          </div>
+                      </ul>
+                  </li>
+                  <li class="primary-menu-item menu-get_started get-started">
+                    <a href="https://www.rancher.com/quick-start" class="button-2023 c-blue--primary">Get started</a>
+                  </li>
+                </ul>
               </div>
             </div>
           </div>
-        </nav>
-      </header>
-      <!-- Header End -->
+        </div>
+      </nav>
+    </header>
+    <!-- Header End -->
 
     <!-- Modal Start -->
     <div class="modal-content" id="open-search">
