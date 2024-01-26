@@ -347,6 +347,11 @@
       &:last-child {
         margin-right: 0;
       }
+      &.twitter{
+        img{
+          scale: 0.8;
+        }
+      }
     }
 
     img {

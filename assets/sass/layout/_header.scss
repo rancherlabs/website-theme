@@ -949,15 +949,15 @@
 .menu-products {
 	.primary-menus-sub {
 		.menus-container{
+			padding: 0 15px 15px 15px;
 			a{
 				display: inline-block;
-				width: 30%;
+				width: 45%;
 
 				.icon {
 					max-width: 70%;
 					height: 22px;
 					margin-bottom: 10px;
-					display: block;
 				}
 
 				.info {
@@ -965,6 +965,31 @@
 				}
 			}
 
+		}
+		.grid-container{
+			 ul{
+				flex-direction: column;
+				.menu-products-title{
+					background: $c-gray-mid-light1;
+					padding: 20px 40px;
+					a{
+						width: 100%;
+						font-size: 18px;
+						font-weight: 600;
+						color: $c-blue;
+						display: inline-block;
+						padding: 0;
+						&.link_active{
+							color: $c-green;
+						}
+						img{
+							vertical-align: middle;
+							margin-right: 15px;
+							height: 20px;
+						}
+					}
+				}
+			}
 		}
 	}
 }
